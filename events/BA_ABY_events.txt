@@ -3780,14 +3780,15 @@ country_event = {
 			limit = {
 				has_idea = german
 			}
-			retire_character = ABY_german
-			activate_advisor = ABY_german_CH
+			hidden_effect = {
+				retire_character = ABY_german
+			}
+			activate_advisor = henrein
 		}
 		custom_effect_tooltip = ABY_retire_czech_tt
 		hidden_effect = {
 			retire_character = ABY_german
 		}
-		set_country_flag = ABY_czech_dead
 	}
 }
 
@@ -10361,9 +10362,11 @@ country_event = {
 	option = {
 		name = ABY_new_event.210.a
 		ai_chance = { factor = 100 }
-		country_event = {
-			id = ABY_new_event.35
-			days = 40
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.35
+				days = 40
+			}
 		}
 	}
 }

@@ -4984,6 +4984,7 @@ ideas = {
 			removal_cost = -1 
 			# picture = 
 			modifier = {
+				political_power_factor = 0.25
 				conscription = 0.03
 				industrial_capacity_factory = 0.3
 				stability_factor = -0.5

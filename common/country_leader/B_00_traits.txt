@@ -860,7 +860,7 @@ leader_traits = {
 	}
 	ABY_trait_eocordnldnjsghl = { #"대책위원회"
 		random = no
-		political_power_gain = 0.3
+		political_power_gain = 0.5
 	}
 	ABY_trait_smart_ayane = {	#"통합 이론가"
 		random = no
@@ -916,6 +916,12 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.10
 		conscription_factor = 0.15
+	}
+	ABY_trait_unitist = { #"연방주의자"
+		random = no
+		stability_factor = 0.10
+		conscription_factor = -0.15
+		compliance_gain = 0.1
 	}
  	ABY_trait_neptis = { #"네프티스 경제 전문가"
 		random = no
@@ -3748,7 +3754,7 @@ leader_traits = {
 			stability_factor = 0.1
 	}
 	ABY_trait_eocordnldnjsghl_first = {
-			political_power_gain = 0.3
+			political_power_gain = 0.5
 	}
 	ABY_trait_road = {
 			production_speed_infrastructure_factor = 0.25

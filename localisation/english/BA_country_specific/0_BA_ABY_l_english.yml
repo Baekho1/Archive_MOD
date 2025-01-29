@@ -131,6 +131,7 @@ ABY_guide: "목표\n\n£white_dot 연립정부를 설립하십시오.\n£white_d
  ABY_trait_czech_father:0 "체코슬로바키아의 아버지"
  ABY_trait_president:0 "대통령"
  ABY_trait_resistance:0 "저항운동가"
+ ABY_trait_unitist:0 "연방주의자"
  ABY_trait_neptis:0 "네프티스 경제 전문가"
  ABY_trait_abydos_leader:0 "아비도스 학생대표"
  ABY_trait_eotlqk:0 "아량넓은 신사"
@@ -1306,8 +1307,8 @@ ABY_briten_tt:0 "£decision_icon_small §Y결정 해금§!:영국 임시정부�
 ABY_scandinavia_tt:0 "§Y노르드 국가들의 영토를 정상화하기 위한 디시전이 해금됩니다.§!"
 ABY_benelux_tt:0 "£decision_icon_small §Y결정 해금§!:벨기에에 제안\n£decision_icon_small §Y결정 해금§!:네덜란드에 제안\n£decision_icon_small §Y결정 해금§!:룩셈부르크 해방"
 
-ABY_retire_masaryk_tt:0 "§Y아비도스 고등학교§!에서 §Y토마시 마사리크§! 사망"
-ABY_retire_czech_tt:0 "§Y아비도스 고등학교§!에서 §Y루트비히 체흐§! 사망"
+ABY_retire_masaryk_tt:0 "§Y[ABY.GetName]§!에서 §Y토마시 마사리크§! 사망"
+ABY_retire_czech_tt:0 "§Y[ABY.GetName]§!에서 §Y루트비히 체흐§! 사망"
 ABY_flag_accept_slovakia:0 "슬로바키아 공화국이 [ABY.GetName]과의 통합에 찬성함"
 ABY_german_empire_tt:0 "§Y독일 제국을 해방합니다.§!"
 ABY_state_recuit_tt:0 "£decision_icon_small §Y결정 해금§!:§Y키보토스§! 주에서 학생 모집"
