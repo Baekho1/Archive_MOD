@@ -7,6 +7,36 @@ add_namespace = RED_missions
 add_namespace = RED_missions_char
 add_namespace = RED_marina_event
 add_namespace = RED_generic
+add_namespace = RED_tro_event
+
+country_event = {
+	id = RED_tro_event.1
+	title = RED_tro_event.1.t
+	desc = RED_tro_event.1.d
+	is_triggered_only = yes
+	option = { #
+		name = RED_tro_event.1.a
+		unlock_decision_category_tooltip = RED_snake_game_decision
+	}
+}
+country_event = { #트로츠키의 사망
+	id = RED_tro_event.2
+	title = RED_tro_event.2.t
+	desc = RED_tro_event.2.d
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = flag_trotsky_dead
+		}
+		has_completed_focus = RED_accept_trotskism
+	}
+	option = { #
+		name = RED_tro_event.2.a
+		remove_power_balance = {
+			id = RED_power_balance
+		}
+	}
+}
 
 country_event = {
 	id = RED_generic.1
@@ -159,6 +189,7 @@ country_event = { #재건채권 만료
 		remove_dynamic_modifier = {
 			modifier = RED_investment_modifier
 		}
+		activate_mission = RED_your_economy_normalize
 	}
 	option = { #나중에 갚자
 		name = RED_generic.5.b
@@ -213,10 +244,10 @@ country_event = { #돈 갚음
 			limit = {
 				is_core_of = ROOT
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 			}
 		}
 	}
@@ -260,6 +291,36 @@ country_event = { #너 곧 좆됨
 		name = RED_generic.9.a
 		activate_mission = RED_your_economy_fucked
 		custom_effect_tooltip = RED_generic.9_tt
+	}
+}
+country_event = { #돈 갚기 알림
+	id = RED_generic.10
+	title = RED_generic.10.t
+	desc = RED_generic.10.d
+	is_triggered_only = yes
+	option = { #ㅇㅋ
+		name = RED_generic.10.a
+		custom_effect_tooltip =  RED_generic.10_tt
+	}
+}
+country_event = { #현지 기술관료 등용
+	id = RED_generic.11
+	title = RED_generic.11.t
+	desc = RED_generic.11.d
+	is_triggered_only = yes
+	option = { #후
+		name = RED_generic.11.a
+		add_political_power = 10
+	}
+}
+country_event = { #대안 경제 정책
+	id = RED_generic.12
+	title = RED_generic.12.t
+	desc = RED_generic.12.d
+	is_triggered_only = yes
+	option = { #후
+		name = RED_generic.12.a
+		add_political_power = 10
 	}
 }
 
@@ -3775,6 +3836,7 @@ country_event = { #민트초코해방전선의 쿠데타
 				days = 5
 			}
 		}
+		custom_effect_tooltip = RED_event.24_tt
 	}
 }
 country_event = { #가라아게에 레몬을 반대하는 혁명가들의 모임 쿠데타
@@ -3793,6 +3855,7 @@ country_event = { #가라아게에 레몬을 반대하는 혁명가들의 모임
 				days = 5
 			}
 		}
+		custom_effect_tooltip = RED_event.24_tt
 	}
 }
 country_event = { #한겨울냉수마찰총연맹 쿠데타
@@ -3811,6 +3874,7 @@ country_event = { #한겨울냉수마찰총연맹 쿠데타
 				days = 5
 			}
 		}
+		custom_effect_tooltip = RED_event.24_tt
 	}
 }
 country_event = { #진압

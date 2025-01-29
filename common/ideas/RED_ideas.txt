@@ -20,6 +20,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_start_efficiency_factor = 0.05
 				line_change_production_efficiency_factor = 0.05
+				communism_drift = 0.05
 			}
 		}
 		RED_no_currency = { #화폐 폐지의 여파

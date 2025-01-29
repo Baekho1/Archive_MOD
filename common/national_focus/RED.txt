@@ -940,6 +940,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+
+			add_dynamic_modifier = {
+				modifier = RED_investment_modifier
+			}
+			activate_mission = RED_mission_rebuild_bill_outdate
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
 			effect_tooltip = {
 				every_other_country = {
@@ -952,11 +958,12 @@ focus_tree = {
 					}
 				}
 			}
-
-			add_dynamic_modifier = {
-				modifier = RED_investment_modifier
+			hidden_effect = {
+				country_event = {
+					id = RED_generic.10
+					days = 1
+				}
 			}
-			activate_mission = RED_mission_rebuild_bill_outdate
 		}
 	}
 	focus = { # 카이저로부터의 대출
@@ -1071,7 +1078,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = RED_property_ceiling
+			add_timed_idea = {
+				idea = RED_property_ceiling
+				years = 2
+			}
 		}
 	}
 	focus = { # 노동전표 도입
@@ -1281,6 +1291,12 @@ focus_tree = {
 			show_ideas_tooltip = DEN_vilhelm_buhl
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SWE_ernst_wigforss
+			hidden_effect = {
+				country_event = {
+					id = RED_generic.11
+					days = 2
+				}
+			}
 		}
 	}
 	focus = { #농촌 계획
@@ -1537,6 +1553,12 @@ focus_tree = {
 				idea = RED_first_AEP
 				years = 2
 			}
+			hidden_effect = {
+				country_event = {
+					id = RED_generic.12
+					days = 1
+				}
+			}
 		}
 	}
 	focus = { #민간 사업체 지원
@@ -1555,9 +1577,6 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			has_idea = RED_first_AEP
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
-			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1767,9 +1786,6 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			NOT = { OR = {has_idea = RED_first_AEP_1 has_idea = RED_first_AEP} }
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
-			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -1792,9 +1808,6 @@ focus_tree = {
    
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-			}
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1831,9 +1844,6 @@ focus_tree = {
    
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-			}
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1873,9 +1883,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
-			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -1912,9 +1919,6 @@ focus_tree = {
 			}
 			RED_arnold_peter_moller = {
 				is_political_advisor = yes
-			}
-			NOT = {
-				has_completed_focus = RED_trotsky_s_world_revolution
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2625,6 +2629,10 @@ focus_tree = {
 
 			custom_effect_tooltip = RED_accept_trotskism_tt
 			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.1
+					days = 1
+				}
 				activate_advisor = RED_lev_trotsky_mil
 				activate_advisor = RED_lev_trotsky_pol
 			}
@@ -3615,6 +3623,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			NOT = {
+				has_global_flag = flag_trotsky_dead
+			}
 		}
 		prerequisite = {
 			focus = RED_the_fourth_international
@@ -4044,6 +4055,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			NOT = {
+				has_global_flag = flag_trotsky_dead
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = RED_the_politburo_effects_tt
@@ -4068,11 +4082,9 @@ focus_tree = {
 		prerequisite = { focus = RED_all_power_to_redwinter }
 		mutually_exclusive = { focus = RED_cherino_s_systemic_revolution }
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = { has_global_flag = flag_trotsky_dead }
 		}
 		x = -2
 		y = 1
