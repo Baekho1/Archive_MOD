@@ -90,6 +90,8 @@ set_variable = {ABY_unite_progress_var = 0}
 set_variable = {ABY_industry_cost_var = 50}
 set_variable = {ABY_rebuild_cost_var = 50}
 set_variable = {ABY_unite_cost_var = 50}
+set_variable = {ABY_government_cost_var = 100}
+set_variable = {ABY_government_var = 0}
 
 every_state = {
     limit = {

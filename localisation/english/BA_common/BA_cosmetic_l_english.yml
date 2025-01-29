@@ -524,6 +524,14 @@
  SHE_student_council: "키보토스 총학생회"
  SHE_student_council_DEF: "키보토스 총학생회"
  SHE_student_council_ADJ: "키보토스 총학생회"
+ 
+ EGY_arab_united_republic: "아랍 연합 공화국"
+ EGY_arab_united_republic_DEF: "아랍 연합 공화국"
+ EGY_arab_united_republic_ADJ: "아랍"
+ 
+ EGY_ABYDOS: "아비도스 케메트 제국"
+ EGY_ABYDOS_DEF: "아비도스 케메트 제국"
+ EGY_ABYDOS_ADJ: "아비도스"
 
  ABY_provisional_government_fascism: "아비도스 주데텐 공화국"
  ABY_provisional_government_fascism_DEF: "아비도스 주데텐 공화국"
@@ -750,9 +758,9 @@
  ABY_highlander_nation_2_DEF: "아비도스-하이랜더 연합학교"
  ABY_highlander_nation_2_ADJ: "아비도스-하이랜더"
 
- ABY_revolution: "아비도스 제국혁명위원회"
- ABY_revolution_DEF: "아비도스 제국혁명위원회"
- ABY_revolution_ADJ: "제국혁명위원회"
+ ABY_revolution: "도나우 연합정부"
+ ABY_revolution_DEF: "도나우 연합정부"
+ ABY_revolution_ADJ: "연합정부"
 
  ABY_federated_republic: "아비도스 연방공화국"
  ABY_federated_republic_DEF: "아비도스 연방공화국"

@@ -1867,6 +1867,55 @@ country_event = {
 	option = {
 		name = ABY_new_event.20.a
 		ai_chance = { factor = 0 }
+		trigger = {
+			has_completed_focus = ABY_focus_great_donau
+		}
+		986 = { set_demilitarized_zone = no }
+		4 = { set_demilitarized_zone = no }
+		972 = { set_demilitarized_zone = no }
+		153 = { set_demilitarized_zone = no }
+		74 = { set_demilitarized_zone = no }
+		set_country_flag = ABY_flag_collapsed_government
+		set_cosmetic_tag = ABY_revolution
+		set_power_balance = {
+			id = ABY_power_balance
+            left_side = ABY_government_side
+            right_side = ABY_neptis_side
+			set_default = yes # whether or not to reset the power balance to the initial value, default = no
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_country_flag = ABY_flag_collapse_end
+	}
+
+	option = {
+		name = ABY_new_event.20.b
+		ai_chance = { factor = 0 }
+		trigger = {
+			has_completed_focus = ABY_focus_unite_front
+		}
+		986 = { set_demilitarized_zone = no }
+		4 = { set_demilitarized_zone = no }
+		972 = { set_demilitarized_zone = no }
+		153 = { set_demilitarized_zone = no }
+		74 = { set_demilitarized_zone = no }
+		set_country_flag = ABY_flag_collapsed_government
+		set_cosmetic_tag = ABY_revolution
+		set_country_flag = ABY_flag_revolution
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_country_flag = ABY_flag_collapse_end
+		complete_national_focus = ABY_focus_bohemia_wldurqkddnldnldnjsghl
 	}
 }
 
@@ -1880,6 +1929,19 @@ country_event = {
 	option = {
 		name = ABY_new_event.21.a
 		ai_chance = { factor = 0 }
+		trigger = {
+			has_country_flag = ABY_flag_native_way
+		}
+		complete_national_focus = ABY_focus_prove_austria
+	}
+
+	option = {
+		name = ABY_new_event.21.b
+		ai_chance = { factor = 0 }
+		trigger = {
+			NOT = {has_country_flag = ABY_flag_native_way}
+		}
+		complete_national_focus = ABY_focus_keep_federal_goverment
 	}
 }
 
@@ -1922,20 +1984,11 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = ABY
-		ABY = {
-			controls_state = 9
-		}
-		HYA = {
-			exists = no
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = ABY_new_event.29.a
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_descision
 		
 	}
 }
@@ -2035,9 +2088,19 @@ country_event = {
 	option = {
 		name = ABY_new_event.35.a
 		ai_chance = { factor = 100 }
-		swap_ideas = {
-			remove_idea = ABY_idea_no_command
-			add_idea = ABY_idea_no_command_2
+		delete_unit_template_and_units = {
+		    division_template = "German milita"
+		    disband = yes #will refund equipment and manpower
+		}
+		delete_unit_template_and_units = {
+		    division_template = "German resistances"
+		    disband = yes #will refund equipment and manpower
+		}
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.36
+				days = 20
+			}
 		}
 	}
 }
@@ -2053,9 +2116,15 @@ country_event = {
 	option = {
 		name = ABY_new_event.36.a
 		ai_chance = { factor = 100 }
-		swap_ideas = {
-			remove_idea = ABY_idea_no_command_2
-			add_idea = ABY_idea_no_command_3
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.37
+				days = 20
+			}
 		}
 	}
 }
@@ -2071,9 +2140,18 @@ country_event = {
 	option = {
 		name = ABY_new_event.37.a
 		ai_chance = { factor = 100 }
-		swap_ideas = {
-			remove_idea = ABY_idea_no_command_3
-			add_idea = ABY_idea_no_command_4
+		986 = { set_demilitarized_zone = yes }
+		4 = { set_demilitarized_zone = yes }
+		972 = { set_demilitarized_zone = yes }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.38
+				days = 20
+			}
 		}
 	}
 }
@@ -2089,9 +2167,17 @@ country_event = {
 	option = {
 		name = ABY_new_event.38.a
 		ai_chance = { factor = 100 }
-		swap_ideas = {
-			remove_idea = ABY_idea_no_command_4
-			add_idea = ABY_idea_no_command_5
+		153 = { set_demilitarized_zone = yes }
+		74 = { set_demilitarized_zone = yes }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = ABY_new_event.39
+				days = 20
+			}
 		}
 	}
 }
@@ -2107,10 +2193,13 @@ country_event = {
 	option = {
 		name = ABY_new_event.39.a
 		ai_chance = { factor = 100 }
-		swap_ideas = {
-			remove_idea = ABY_idea_no_command_5
-			add_idea = ABY_idea_no_command_6
-		}
+		complete_national_focus = ABY_focus_great_donau
+	}
+
+	option = {
+		name = ABY_new_event.39.b
+		ai_chance = { factor = 100 }
+		complete_national_focus = ABY_focus_unite_front
 	}
 }
 
@@ -5099,7 +5188,6 @@ country_event = {
 				owner = ABY
 			}
 		}
-		complete_national_focus = ABY_focus_sha_war
 	}
 }
 
@@ -9144,36 +9232,6 @@ country_event = {
 	option = {
 		name = ABY_new_event.185.a
 		ai_chance = { factor = 100 }
-		country_event = {
-			id = ABY_new_event.186
-			days = 7
-		}
-		add_stability = -0.1
-		retire_character = ABY_czech_TM
-		retire_character = ABY_czech_EV
-		retire_character = ABY_czech_SO
-		retire_character = ABY_czech_PC
-		retire_character = ABY_czech_SKN
-		retire_character = ABY_czech_YT
-		retire_character = ABY_czech_GH
-		retire_character = ABY_czech_KB
-		retire_character = ABY_czech_AB
-		retire_character = ABY_czech_YG
-		retire_character = ABY_czech_YP
-		retire_character = ABY_czech_KK
-		retire_character = ABY_czech_FH
-		retire_character = ABY_czech_CK
-		retire_character = ABY_czech_RK
-		retire_character = ABY_czech_LS
-		retire_character = ABY_czech_AE
-		retire_character = ABY_czech_RV
-		retire_character = ABY_czech_AH
-		retire_character = ABY_czech_KJ
-		retire_character = ABY_czech_JP
-		retire_character = ABY_czech_VR
-		retire_character = ABY_czech_JS
-		retire_character = ABY_czech_LT
-		retire_character = ABY_czech_SB
 	}
 }
 
@@ -10303,6 +10361,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.210.a
 		ai_chance = { factor = 100 }
+		country_event = {
+			id = ABY_new_event.35
+			days = 40
+		}
 	}
 }
 
@@ -11593,28 +11655,11 @@ country_event = {
 	desc = ABY_new_event.249.d
 
 	fire_only_once = yes
-
-	trigger = {
-		TAG = ABY
-		ABY = {
-			controls_state = 9
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = ABY_new_event.249.a
 		ai_chance = { factor = 100 }
-		9 = {
-			create_unit = {
-				division = "name = \"Czech milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ABY
-			}
-			create_unit = {
-				division = "name = \"Czech milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ABY
-			}
-		}
-		complete_national_focus = ABY_focus_sha_war
 	}
 }
 
@@ -11624,23 +11669,11 @@ country_event = {
 	desc = ABY_new_event.250.d
 
 	fire_only_once = yes
-
-	trigger = {
-		TAG = ABY
-		ABY = {
-			controls_state = 72
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = ABY_new_event.250.a
 		ai_chance = { factor = 100 }
-		72 = {
-			create_unit = {
-				division = "name = \"Czech milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ABY
-			}
-		}
 	}
 }
 
@@ -11650,23 +11683,11 @@ country_event = {
 	desc = ABY_new_event.251.d
 
 	fire_only_once = yes
-
-	trigger = {
-		TAG = ABY
-		ABY = {
-			controls_state = 75
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = ABY_new_event.251.a
 		ai_chance = { factor = 100 }
-		75 = {
-			create_unit = {
-				division = "name = \"Czech milita\" division_template = \"German milita\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ABY
-			}
-		}
 	}
 }
 

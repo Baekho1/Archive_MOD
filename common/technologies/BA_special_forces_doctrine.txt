@@ -1439,6 +1439,13 @@ technologies = {
 			supply_consumption = -0.02
 			soft_attack = 0.05
 		}
+		
+		allow = { 
+			AND = {
+				has_tech = kivotos_halo_special_forces 
+				can_unlock_new_special_forces_tree = yes
+			}
+		}
 
 		folder = {
 			name = special_forces_doctrine_folder

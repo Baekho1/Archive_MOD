@@ -3485,8 +3485,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = KAI
-				CIC_TO_TARGET_FACTOR = 0.25
-				MIC_TO_TARGET_FACTOR = 0.25
+				CIC_TO_TARGET_FACTOR = 0.1
+				MIC_TO_TARGET_FACTOR = 0.1
 			}
 		}
 		ABY_idea_cornjs_give = {
