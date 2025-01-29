@@ -4090,8 +4090,7 @@ RED_debt = {
 		days_mission_timeout = 90
 		available = {
 			OR = {
-				has_completed_focus = RED_new_economy_focus_10
-				has_completed_focus = RED_new_economy_focus_11
+				has_completed_focus = RED_new_economy_focus_9
 			}
 		}
 		activation = {
@@ -4170,6 +4169,47 @@ RED_debt = {
 					level = 3
 				}
 			}
+		}
+	}
+	RED_your_economy_normalize = { #채권 상환
+		days_mission_timeout = 365
+		icon = GFX_decision_generic_wreckers
+		activation = {
+			always = no
+		}
+		available = {
+			OR = {
+				has_completed_focus = RED_new_economy_focus_9
+			}
+		}
+		timeout_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = I_have_invested_RED_flag
+				}
+				country_event = RED_generic.6
+			}
+			
 		}
 	}
 }
