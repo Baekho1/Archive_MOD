@@ -110,7 +110,6 @@ ideas = {
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
-				production_speed_buildings_factor = -0.1
 				recruitable_population_factor = -0.1
 			}
 		}
@@ -118,7 +117,6 @@ ideas = {
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
-				production_speed_buildings_factor = -0.2
 				recruitable_population_factor = -0.2
 			}
 		}
@@ -126,7 +124,6 @@ ideas = {
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
-				production_speed_buildings_factor = -0.3
 				recruitable_population_factor = -0.3
 			}
 		}
@@ -134,7 +131,6 @@ ideas = {
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
-				production_speed_buildings_factor = -0.4
 				recruitable_population_factor = -0.4
 			}
 		}
@@ -142,7 +138,6 @@ ideas = {
 			name = RED_corruption_0
 			picture = ARG_political_corruption_modifier
 			modifier = {
-				production_speed_buildings_factor = -0.5
 				recruitable_population_factor = -0.5
 			}
 		}
@@ -878,6 +873,7 @@ ideas = {
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = 0.05
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
 				army_speed_factor = -0.05
@@ -896,6 +892,7 @@ ideas = {
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = 0.25
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10
 				army_speed_factor = -0.15

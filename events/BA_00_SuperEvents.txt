@@ -499,7 +499,7 @@ country_event = {	# 백산전쟁
 	
 	option = {
 		name = BA_super.1.a
-		scoped_play_song = "BA_Hohei_no_Honryo"
+		scoped_play_song = "BA_HYA_SHA_war_music"
 		set_country_flag = {
 			flag = BA_Super_Event_Visible
 			value = 20

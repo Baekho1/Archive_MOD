@@ -3280,17 +3280,17 @@ leader_traits = {
 	}
 	RED_takane_trait_1 = { #자유 언론인
 		sprite = 13
-		random = no
-		political_power_factor = 0.1
-		stability_factor = 0.1
-	}
-	RED_takane_trait_2 = { #민중 언론인
-		sprite = 13
-		random = no
 		political_power_factor = 0.05
 		stability_factor = 0.05
 		war_support_factor = 0.05
 		production_factory_efficiency_gain_factor = 0.05
+		random = no
+	}
+	RED_takane_trait_2 = { #민중 언론인
+		sprite = 13
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		random = no
 	}
 	RED_yakumo_trait_col = { #집산주의 선전의 조직자
 		sprite = 13

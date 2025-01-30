@@ -169,7 +169,6 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
-	panzerschiffe = 1
 }
 
 set_stability = 0.4

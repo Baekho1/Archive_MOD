@@ -4229,7 +4229,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.05
+				value = -0.01
 			}
 		}
 		cost = 5
@@ -4249,7 +4249,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.05
+				value = -0.01
 			}
 		}
 		cost = 5
@@ -4269,7 +4269,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.05
+				value = -0.01
 			}
 		}
 		cost = 5
@@ -4289,7 +4289,82 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.05
+				value = -0.01
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_quit_cleaner = { #미화부장 안하기
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+				has_trait = RED_cherino_cleaner
+			}
+		}
+		complete_effect = {
+			RED_cherino = {
+				remove_country_leader_trait = RED_cherino_cleaner
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.01
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_quit_meal = { #급식부장 안하기
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+					has_trait = RED_cherino_meal
+				
+			}
+		}
+		complete_effect = {
+			RED_cherino = {
+				remove_country_leader_trait = RED_cherino_meal
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.01
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_quit_prefect = { #선도부장 안하기
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+					has_trait = RED_cherino_prefect
+				
+			}
+		}
+		complete_effect = {
+			RED_cherino = {
+				remove_country_leader_trait = RED_cherino_prefect
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.01
+			}
+		}
+		cost = 5
+	}
+	RED_cherino_quit_gym = { #체육부장 안하기
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			RED_cherino = {
+					has_trait = RED_cherino_gym
+				
+			}
+		}
+		complete_effect = {
+			RED_cherino = {
+				remove_country_leader_trait = RED_cherino_gym
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.01
 			}
 		}
 		cost = 5
