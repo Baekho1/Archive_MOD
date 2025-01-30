@@ -1648,14 +1648,20 @@ leader_traits = {
 	MIL_starchaser = { #별을 쫓는 자
 		random = no
 		sprite = 13
-        war_support_factor = 0.10
-		stability_factor = 0.10
-		research_speed_factor = 0.05
+        war_support_factor = -0.10
+		sp_rockets_flying_bomb_speed_factor = 0.20
+		sp_rockets_ballistic_missile_speed_factor = 0.20
+		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.20
+		sp_rockets_long_range_ballistic_missile_speed_factor = 0.20
 	}
 	MIL_atomic_exploration = { #원자의 탐구자
 		random = no
 		sprite = 13
 		research_speed_factor = -0.15
+		sp_nuclear_reactor_speed_factor = 0.20
+		sp_nuclear_bomb_speed_factor = 0.20
+		sp_nuclear_engines_speed_factor = 0.20
+		sp_nuclear_warheads_speed_factor = 0.20
 	}
 	MIL_bigsister = { #빅 시스터
 		random = no
