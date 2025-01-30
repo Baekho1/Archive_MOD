@@ -20331,7 +20331,7 @@ ABY_descision_category_abydos_highschool = {
 }
 ABY_descision_category_federal_government = {
 	ABY_descision_fall_government = {
-		days_mission_timeout = 30 
+		days_mission_timeout = 45 
 		fire_only_once = yes
 		priority = 1
 		activation = {
@@ -20491,6 +20491,7 @@ ABY_descision_category_federal_government = {
 	} 
 	ABY_descision_with_labor = {
         priority = 1
+		fire_only_once = yes
 
         allowed = {
             tag = ABY
@@ -20524,10 +20525,12 @@ ABY_descision_category_federal_government = {
 				popularity = -1
 			}
 			add_to_variable = { ABY_government_var = 1 }
+			custom_effect_tooltip = ABY_posup_tt
         }
 	}
 	ABY_descision_with_democratic = {
         priority = 1
+		fire_only_once = yes
 
         allowed = {
             tag = ABY
@@ -20558,10 +20561,12 @@ ABY_descision_category_federal_government = {
 				popularity = 0.1
 			}
 			add_to_variable = { ABY_government_var = 1 }
+			custom_effect_tooltip = ABY_posup_tt
         }
 	}
 	ABY_descision_with_austria = {
         priority = 1
+		fire_only_once = yes
 
         allowed = {
             tag = ABY
@@ -20587,15 +20592,25 @@ ABY_descision_category_federal_government = {
 				mission = ABY_descision_fall_government
 				days = 15
 			} 
-			add_stability = 0.1
-			add_war_support = 0.1
+			custom_effect_tooltip = ABY_flag_austria_unite_tt
+			hidden_effect = {
+				ABY_4_unite_effect = yes
+				ABY_152_unite_effect = yes
+				ABY_153_unite_effect = yes
+				ABY_986_unite_effect = yes
+				ABY_975_unite_effect = yes
+				ABY_848_unite_effect = yes
+				ABY_976_unite_effect = yes
+			}
 			add_to_variable = { ABY_government_var = 1 }
 			set_country_flag = ABY_flag_native_way
 			custom_effect_tooltip = ABY_native_tt
+			custom_effect_tooltip = ABY_posup_tt
         }
 	}
 	ABY_descision_with_hapsburg = {
         priority = 1
+		fire_only_once = yes
 
         allowed = {
             tag = ABY
@@ -20629,6 +20644,7 @@ ABY_descision_category_federal_government = {
 			add_to_variable = { ABY_government_var = 1 }
 			set_country_flag = ABY_flag_hapsburg_way
 			custom_effect_tooltip = ABY_hapsburg_tt
+			custom_effect_tooltip = ABY_posup_tt
         }
 	}
 	ABY_descision_keep_federal_government = {

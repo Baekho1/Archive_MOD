@@ -1891,6 +1891,9 @@ country_event = {
 			ruling_party = fascism
 		}
 		set_country_flag = ABY_flag_collapse_end
+		remove_ideas = {
+			ABY_idea_bohemia_and_austria
+		}
 	}
 
 	option = {
@@ -1916,6 +1919,9 @@ country_event = {
 		}
 		set_country_flag = ABY_flag_collapse_end
 		complete_national_focus = ABY_focus_bohemia_wldurqkddnldnldnjsghl
+		remove_ideas = {
+			ABY_idea_bohemia_and_austria
+		}
 	}
 }
 
@@ -1933,6 +1939,16 @@ country_event = {
 			has_country_flag = ABY_flag_native_way
 		}
 		complete_national_focus = ABY_focus_prove_austria
+		custom_effect_tooltip = ABY_flag_austria_unite_tt
+		hidden_effect = {
+			ABY_4_unite_effect = yes
+			ABY_152_unite_effect = yes
+			ABY_153_unite_effect = yes
+			ABY_986_unite_effect = yes
+			ABY_975_unite_effect = yes
+			ABY_848_unite_effect = yes
+			ABY_976_unite_effect = yes
+		}
 	}
 
 	option = {
@@ -2099,7 +2115,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ABY_new_event.36
-				days = 20
+				days = 15
 			}
 		}
 	}
@@ -2123,7 +2139,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ABY_new_event.37
-				days = 20
+				days = 15
 			}
 		}
 	}
@@ -2150,7 +2166,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ABY_new_event.38
-				days = 20
+				days = 15
 			}
 		}
 	}
@@ -2176,7 +2192,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ABY_new_event.39
-				days = 20
+				days = 15
 			}
 		}
 	}
@@ -3347,7 +3363,7 @@ country_event = {
 			has_war_with = SHA
 		}
 		NOT = {
-			has_completed_focus = ABY_focus_operation_falling_flower
+			has_completed_focus = ABY_focus_operation_falling_flower_2
 		}
 	}
 
@@ -9233,6 +9249,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.185.a
 		ai_chance = { factor = 100 }
+		add_stability = 0.25
 	}
 }
 
@@ -10295,9 +10312,6 @@ country_event = {
 		name = ABY_new_event.207.a
 		ai_chance = { factor = 100 }
 		ABY = {
-			96 = {
-				transfer_state_to = TRM
-			}
 			diplomatic_relation = { 
 				country = TRM
 				relation = non_aggression_pact 
@@ -10307,6 +10321,9 @@ country_event = {
 				state = 986
 				remember_old_capital = yes
 			}
+		}
+		69 = {
+			transfer_state_to = TRM
 		}
 	}
 	option = {
@@ -10365,7 +10382,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = ABY_new_event.35
-				days = 40
+				days = 15
 			}
 		}
 	}

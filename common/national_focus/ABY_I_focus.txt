@@ -334,6 +334,8 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_completed_focus = ABY_focus_unite_school_2
+			has_completed_focus = ABY_focus_helmet_no
 			#중점 선행조건
 		}
 
@@ -484,6 +486,8 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_completed_focus = ABY_focus_unite_school_2
+			has_completed_focus = ABY_focus_helmet_no
 			#중점 선행조건
 		}
 
@@ -1546,6 +1550,7 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_country_flag = GAEBALJUNG
 			#중점 선행조건
 		}
 
@@ -9367,6 +9372,16 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_flag_austria_unite_tt
+			hidden_effect = {
+				ABY_4_unite_effect = yes
+				ABY_152_unite_effect = yes
+				ABY_153_unite_effect = yes
+				ABY_986_unite_effect = yes
+				ABY_975_unite_effect = yes
+				ABY_848_unite_effect = yes
+				ABY_976_unite_effect = yes
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
