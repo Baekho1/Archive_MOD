@@ -33,6 +33,19 @@ set_technology = {
 	basic_train = 1 #기차
 	superior_firepower = 1 #화력우세
 	air_superiority = 1 #공군전술
+
+	# 룩셈부르크 헌병대
+	tech_mountaineers = 1
+	tech_military_police = 1
+}
+
+# 스토리 아카이브 사용 시 정의
+set_variable = {
+	story_archive = 0
+}
+
+set_variable = {
+	story_event_var = 1
 }
 
 set_power_balance = {
