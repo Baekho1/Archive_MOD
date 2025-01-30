@@ -6709,7 +6709,7 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 100
-			tag = TRM
+			tag = TGH
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2300 }
