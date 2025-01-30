@@ -1894,6 +1894,10 @@ country_event = {
 		remove_ideas = {
 			ABY_idea_bohemia_and_austria
 		}
+		retire_character = ABY_czech_EV
+		hidden_effect = {
+			retire_character = ABY_czech_EV_2
+		}
 	}
 
 	option = {
@@ -1921,6 +1925,10 @@ country_event = {
 		complete_national_focus = ABY_focus_bohemia_wldurqkddnldnldnjsghl
 		remove_ideas = {
 			ABY_idea_bohemia_and_austria
+		}
+		retire_character = ABY_czech_EV
+		hidden_effect = {
+			retire_character = ABY_czech_EV_2
 		}
 	}
 }

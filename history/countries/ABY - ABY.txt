@@ -173,6 +173,7 @@ set_technology = {
 }
 
  recruit_character = ABY_german
+ recruit_character = ABY_german_CH
  recruit_character = ABYDOS_KHF
  recruit_character = ABY_czech_EV_2
 
@@ -230,7 +231,6 @@ set_technology = {
  recruit_character = ABYDOS_neptis_council
  recruit_character = ABYDOS_pre_gov
  recruit_character = ABYDO_Yume
- recruit_character = ABY_german_CH
  recruit_character = ABY_czech_EH
  recruit_character = ABY_czech_RR
  recruit_character = ABY_AUS_karl_eglseer

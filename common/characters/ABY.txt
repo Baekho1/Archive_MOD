@@ -1379,6 +1379,9 @@ characters={
 			can_be_fired = no
 			available = {
 				NOT = { has_idea = german }
+				ABY_german_CH = {
+					is_country_leader = no
+				}
 			}
 			allowed  = {
 				original_tag  = ABY
@@ -1389,6 +1392,11 @@ characters={
 			ai_will_do  = {
 				factor  = 1.000
 			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ ABY_trait_sudeten_nationalist }
+			expire="1965.1.1.1"
 		}
 	} #"주데텐 위원회"
 
