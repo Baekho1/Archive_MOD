@@ -1,5 +1,5 @@
 HEU_INF_01 = {
-	name = "Problem Solver 68"
+	name = "Benriya 68 Division"
 
 	for_countries = { HEU }
 
@@ -7,6 +7,115 @@ HEU_INF_01 = {
 
 	division_types = { "infantry" "low_halo_infantry" "halo_infantry" }
 
-	fallback_name = "%d. Problem Solver 68 Division"
+	fallback_name = "%d. Benriya 68 Division"
 
+}
+
+HEU_INF_02 = {
+	name = "Grand Ducal Gendarmerie"
+
+	for_countries = { HEU }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Groussherzoglech Gendarmerie-Division"
+
+	ordered = {
+		1 = { "A. Groussherzoglech Gendarmerie-Division" }
+		2 = { "B. Groussherzoglech Gendarmerie-Division" }
+		3 = { "C. Groussherzoglech Gendarmerie-Division" }
+		4 = { "D. Groussherzoglech Gendarmerie-Division" }
+		5 = { "E. Groussherzoglech Gendarmerie-Division" }
+		6 = { "F. Groussherzoglech Gendarmerie-Division" }
+		7 = { "G. Groussherzoglech Gendarmerie-Division" }
+		8 = { "H. Groussherzoglech Gendarmerie-Division" }
+		9 = { "I. Groussherzoglech Gendarmerie-Division" }
+		10 = { "J. Groussherzoglech Gendarmerie-Division" }
+		11 = { "K. Groussherzoglech Gendarmerie-Division" }
+		12 = { "L. Groussherzoglech Gendarmerie-Division" }
+		13 = { "M. Groussherzoglech Gendarmerie-Division" }
+		14 = { "N. Groussherzoglech Gendarmerie-Division" }
+		15 = { "O. Groussherzoglech Gendarmerie-Division" }
+		16 = { "P. Groussherzoglech Gendarmerie-Division" }
+		17 = { "Q. Groussherzoglech Gendarmerie-Division" }
+		18 = { "R. Groussherzoglech Gendarmerie-Division" }
+		19 = { "S. Groussherzoglech Gendarmerie-Division" }
+		20 = { "T. Groussherzoglech Gendarmerie-Division" }
+		21 = { "U. Groussherzoglech Gendarmerie-Division" }
+		22 = { "V. Groussherzoglech Gendarmerie-Division" }
+		23 = { "W. Groussherzoglech Gendarmerie-Division" }
+		24 = { "X. Groussherzoglech Gendarmerie-Division" }
+		25 = { "Y. Groussherzoglech Gendarmerie-Division" }
+		26 = { "Z. Groussherzoglech Gendarmerie-Division" }
+	}
+}
+
+HEU_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { HEU }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper"  }
+
+	fallback_name = "%d. Fallschirmjäger-Division"
+
+	# Names with numbers (only one number per entry)
+	ordered = {
+		1 = { "%d. Fallschirmjäger-Division" }
+		2 = { "%d. Fallschirmjäger-Division" }
+		3 = { "%d. Fallschirmjäger-Division" }
+		4 = { "%d. Fallschirmjäger-Division" }
+		5 = { "%d. Fallschirmjäger-Division" }
+		6 = { "%d. Fallschirmjäger-Division" }
+		7 = { "%d. Fallschirmjäger-Division" }
+		8 = { "%d. Fallschirmjäger-Division" }
+		9 = { "%d. Fallschirmjäger-Division" }
+		10 = { "%d. Fallschirmjäger-Division" }
+		11 = { "%d. Fallschirmjäger-Division" }
+		20 = { "%d. Fallschirmjäger-Division" }
+		
+		# sadly had to leave out 7. Flieger-Division, the original name of 1. FJD, as it wouldn't be worth the interface clutter to have an alternate name list with one division in it. Put it first in the name list despite formally receiving the 1. FJD designation after 2. Fallschirm-Division was formed, so at least it gets built first. 
+		# considered making 5th Division and above actually part of the infantry list since historically they had almost no jump trained personnel, but since this would conflict with players who might invest in a larger than historical airborne arm, decided against this.
+		# deleted Fallschirm-Division Erdmann as it was an unusually large Kampfgruppe raised in response to an operational crisis (Market-Garden), and not a properly planned and raised division. It was soon renamed 7. FJD.
+	}
+}
+
+HEU_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { HEU }
+
+	can_use = { always = yes }
+
+	division_types = { "marine"  }
+
+	fallback_name = "%d. Seelande-Division"
+}
+
+HEU_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { HEU }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry"  }
+
+	fallback_name = "%d. Volontaires-Division"
+}
+
+HEU_Arm_01 = {
+	name = "Panzer Divisions"
+
+	for_countries = { HEU }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Panzer-Division"
 }
