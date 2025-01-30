@@ -69,7 +69,6 @@
  KR_welcome_splash_tab_2_reveal_spoilers_button: "目標確認"
  KR_welcome_splash_tab_2_header: "[ROOT.GetNameDefCap]"
  KR_welcome_splash_tab_2_content: "[GetCountryGuide]"
- BA_autocomplet_focus:0 "§Yこの焦点§!は、§Y特定のイベント§!で自動完了されます。"
  
   #ブックマーク
  BA_GATHERING_STORM_NAME:0 "新しい世界で50日"

@@ -69,7 +69,6 @@
  KR_welcome_splash_tab_2_reveal_spoilers_button: "查看目标"
  KR_welcome_splash_tab_2_header: "[ROOT.GetNameDefCap]"
  KR_welcome_splash_tab_2_content: "[GetCountryGuide]"
- BA_autocomplet_focus:0 "§Y该重点§! 将会 §Y自动完成§!。"
  
   #书签
  BA_GATHERING_STORM_NAME:0 "新世界 50 天"

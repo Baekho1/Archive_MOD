@@ -967,7 +967,6 @@ focus_tree = {
 		relative_position_id = SHA_Kisaki_Suppression
 
 		completion_reward = {
-			custom_effect_tooltip = SHA_conservative_is_not_work
 			add_political_power = 100
 			add_stability = 0.1
 			effect_tooltip = {
@@ -1496,16 +1495,12 @@ focus_tree = {
 		mutually_exclusive = { focus = SHA_ascension }
 
 		available = {
-			#OR = {
-			#	NOT = { country_exists = HYA  }
-			#owns_state = 972
-			#}
-			#NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
-			#has_completed_focus = SHA_Cabinet_Secretariat
-			custom_trigger_tooltip = {
-				tooltip = GAEBALJUNG
-				always = no
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
 			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+			has_completed_focus = SHA_Cabinet_Secretariat
 		}
 		bypass = { }
 
@@ -1540,12 +1535,16 @@ focus_tree = {
 		mutually_exclusive = { }
 
 		available = {
+			has_completed_focus = SHA_Democratic_Culture_Censorship
 		}
 		bypass = {
 		}
 
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = SHA_corporate_state_idea_2
+				add_idea = SHA_corporate_state_idea_3
+			}
 		}
 	}
 
@@ -1569,7 +1568,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# add_country_leader_trait
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_corporate_state_idea_3
+					add_idea = SHA_corporate_state_idea_4
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = SHA_corporate_state_idea_3 }
+					swap_ideas = {
+						remove_idea = SHA_corporate_state_idea_3
+						add_idea = SHA_corporate_state_idea_4
+					}
+				}
+				if = {
+					limit = { has_idea = SHA_corporate_state_idea_5 }
+					swap_ideas = {
+						remove_idea = SHA_corporate_state_idea_5
+						add_idea = SHA_corporate_state_idea_6
+					}
+				}
+			}
 		}
 	}
 
@@ -1593,7 +1613,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SHA_corporate_state_idea_3
+					add_idea = SHA_corporate_state_idea_5
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = SHA_corporate_state_idea_3 }
+					swap_ideas = {
+						remove_idea = SHA_corporate_state_idea_3
+						add_idea = SHA_corporate_state_idea_5
+					}
+				}
+				if = {
+					limit = { has_idea = SHA_corporate_state_idea_4 }
+					swap_ideas = {
+						remove_idea = SHA_corporate_state_idea_4
+						add_idea = SHA_corporate_state_idea_6
+					}
+				}
+			}
 		}
 	}
 
@@ -1760,7 +1801,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
 			add_to_variable = {
-				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.1
+				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.15
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			add_to_variable = {
@@ -1841,7 +1882,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
 			add_to_variable = {
-				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.1
+				SHA_Shanhaijinfascism_production_lack_of_resource_penalty_factor = -0.15
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			custom_effect_tooltip = tooltip_white_line

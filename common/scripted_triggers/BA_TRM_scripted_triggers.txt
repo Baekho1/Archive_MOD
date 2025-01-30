@@ -24,3 +24,22 @@ TRM_focus_locked_available = {
 		NOT = { has_country_flag = TRM_industry_focus_locked_flag }
 	}
 }
+
+# 조건 주 스크립트 씨발련들아 오타 존나 나네
+TRM_is_state_Trinity_want = {
+	OR = {
+		state = 59
+		state = 56
+		state = 57
+		state = 55
+		state = 51
+		state = 987
+		state = 990
+		state = 42
+		state = 978
+		state = 50
+		state = 54
+		state = 53
+		state = 52
+	}
+}

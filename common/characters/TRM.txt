@@ -115,7 +115,10 @@ characters={
 			logistics_skill=1
 			desc = TRN_Seia_advisor_desc
             visible = {
-                NOT = { has_country_flag = TRM_event_59_flag }
+				OR = {
+					NOT = { has_character_flag = TRN_fake_death_flag }
+                	NOT = { has_country_flag = TRM_event_59_flag }
+				}
             }
 		}
 		country_leader={
@@ -131,6 +134,9 @@ characters={
 			can_be_fired = no
 			allowed = {
 				original_tag = TRM
+			}
+			visible = {
+				NOT = { has_character_flag = TRN_fake_death_flag }
 			}
 			available = {
 				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
@@ -1144,6 +1150,22 @@ characters={
 			cost = 50
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+	}
+	TRN_chika_amabe={
+		name=TRN_chika_amabe
+		portraits={
+			civilian = {
+				large = GFX_Portrait_BlueArchive_TRM_Generic_2
+			}
+		}
+	}
+	TRN_Natsuki_Kato={
+		name=TRN_Natsuki_Kato
+		portraits={
+			civilian = {
+				large = GFX_Portrait_BlueArchive_TRM_Generic_3
 			}
 		}
 	}

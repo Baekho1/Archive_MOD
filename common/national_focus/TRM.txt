@@ -6709,7 +6709,7 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 100
-			tag = TGH
+			tag = TRM
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2300 }
@@ -6730,6 +6730,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 
+		}
+		select_effect = {
+			country_event = { id = trinity.12 days = 08 }
 		}
 		completion_reward = {
 			country_event = trinity.1

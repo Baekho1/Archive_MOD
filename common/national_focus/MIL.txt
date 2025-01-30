@@ -8675,7 +8675,7 @@ focus_tree = {
 		prerequisite = { focus = MIL_millennium_science_school }
 		available = {
 			OR = {
-				has_country_flag = BA_autocomplet_focus
+				has_country_flag = BA_Auto_complete_tt
 				has_war_with = FRA
 			}
 		}

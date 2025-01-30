@@ -1011,6 +1011,118 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 			}
 		}
+		
+		# 유기적 국가 건설 - 3
+		SHA_corporate_state_idea_3 = {
+			name = SHA_corporate_state_idea
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.5
+				neutrality_drift = 0.5
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				custom_modifier_tooltip = SHA_daily_ideologiy_excluding_neutrality
+				hidden_modifier = {
+					fascism_drift = -0.05
+					democratic_drift = -0.05
+					communism_drift = -0.05
+				}
+			}
+		}
+		
+		# 유기적 국가 건설 - 산해경 영혼의 부활
+		SHA_corporate_state_idea_4 = {
+			name = SHA_corporate_state_idea
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.5
+				neutrality_drift = 0.5
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				compliance_growth = 0.05
+				
+				custom_modifier_tooltip = SHA_daily_ideologiy_excluding_neutrality
+				hidden_modifier = {
+					fascism_drift = -0.05
+					democratic_drift = -0.05
+					communism_drift = -0.05
+				}
+			}
+		}
+		
+		# 유기적 국가 건설 - 학원 평의회 설립
+		SHA_corporate_state_idea_5 = {
+			name = SHA_corporate_state_idea
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.25
+				party_popularity_stability_factor = 0.5
+				neutrality_drift = 0.5
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				conscription_factor = 0.3
+
+				custom_modifier_tooltip = SHA_daily_ideologiy_excluding_neutrality
+				hidden_modifier = {
+					fascism_drift = -0.05
+					democratic_drift = -0.05
+					communism_drift = -0.05
+				}
+			}
+		}
+		
+		# 유기적 국가 건설 - 학원 평의회 설립 + 산해경 영혼의 부활
+		SHA_corporate_state_idea_6 = {
+			picture = SHA_corporate_state
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_power_factor = 0.25
+				party_popularity_stability_factor = 0.5
+				neutrality_drift = 0.5
+				stability_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				conscription_factor = 0.3
+				compliance_growth = 0.05
+
+				custom_modifier_tooltip = SHA_daily_ideologiy_excluding_neutrality
+				hidden_modifier = {
+					fascism_drift = -0.05
+					democratic_drift = -0.05
+					communism_drift = -0.05
+				}
+			}
+		}
+		
+		# 문명의 충돌
+		SHA_clash_of_civilizations_idea = {
+			picture = SWI_spirit_of_helvetia_aggressive_war
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_loss_factor = -0.25
+				supply_consumption_factor = -0.15
+				non_core_manpower = 0.03
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
 
 		# 현무상회
 		SHA_Black_Tortoise_Promenade = {

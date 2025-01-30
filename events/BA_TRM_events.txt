@@ -7,6 +7,7 @@ add_namespace = TRM_ironsword_event
 
 add_namespace = trnstory
 add_namespace = trinity
+add_namespace = trinitynews
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -1388,11 +1389,10 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	option = { #
+	option = { # 
 		name = TRM_event.59.a
 		complete_national_focus = TRN_yurijono_seia
 		custom_effect_tooltip = TRM_sanctus_popularity__20_tt
-        set_country_flag = TRM_event_59_flag
 		hidden_effect = {
 			news_event = { id = BA_news.12 hours = 1 }
 			add_popularity = {
@@ -1408,6 +1408,7 @@ country_event = {
 					ideology = marxism
 				}
 			}
+        	set_country_flag = TRM_event_59_flag
 			add_to_variable = { TRM_sanctus_popularity = -30 }
 			TRM_internal_factions_popularity_change = yes
 			country_event = { id = TRM_event.71 hours = 480 }
@@ -6762,6 +6763,7 @@ country_event = {
 		add_stability = 0.05
 
 		set_country_flag = TRN_return_of_yuriy_seya_flag
+		TRN_tpdldk = { clr_character_flag = TRN_fake_death_flag }
 		mark_focus_tree_layout_dirty = yes
 		complete_national_focus = TRN_return_of_yuriy_seya
 
@@ -8415,13 +8417,16 @@ country_event = { # 티파티 통제
 			slot = political_advisor
 			trait = b_cjstkdmldusgkq
 		}
+		hidden_effect = {
+			country_event = { id = trinity.2 days = 04 }
+		}
     }
 }
 country_event = { # 바시스 스콜라 시위
 	id = trinity.2
 	title = trinity.2.t
 	desc = trinity.2.desc
-	picture = GFX_report_event_iww_demonstration
+	picture = GFX_event_Trinity_Campus
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8446,7 +8451,7 @@ country_event = { # 트리니티 헌법법
 	id = trinity.3
 	title = trinity.3.t
 	desc = trinity.3.desc
-	picture = GFX_report_event_generic_conference
+	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8459,11 +8464,11 @@ country_event = { # 트리니티 헌법법
 		}
     }
 }
-country_event = { # 트리니티 헌법
+country_event = { # 미소노 미카 법
 	id = trinity.4
 	title = trinity.4.t
 	desc = trinity.4.desc
-	picture = GFX_report_event_generic_conference
+	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8513,6 +8518,18 @@ country_event = { # 호스트 선출
 	option = {
 		name = trinity.7.a
 		country_event = { id = trinity.8 days = 04 }
+		add_country_leader_role = {
+			character = TRN_tpdldk
+			promote_leader = yes
+			country_leader = {
+				ideology = tea_party_ideology
+				expire = "1965.1.1.1"
+				traits = {
+					TRN_seia_trait 
+					TRM_sanctus_faction 
+				}
+			}
+		}
     }
 }
 country_event = { # 다락방의 공주님
@@ -8526,22 +8543,238 @@ country_event = { # 다락방의 공주님
 
 	option = {
 		name = trinity.8.a
-	
+		country_event = { id = trinity.9 days = 03 }
     }
 }
 country_event = { # 가슴에 3발
 	id = trinity.9
 	title = trinity.9.t
 	desc = trinity.9.desc
-	picture = GFX_report_event_generic_communist_congress
+	picture = GFX_report_event_tur_ataturk_impassioned_speech
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trinity.9.a
-	
+		add_stability = -0.05
+		swap_ideas = {
+			remove_idea = TRM_safe_trinity
+			add_idea = TRM_great_depression
+		}
+		add_trait = {
+			character = TRN_tpdldk
+			slot = political_advisor
+			trait = TRN_Hurt_Seia
+		}
+		country_event = { id = trinity.10 days = 04 }
+		hidden_effect = {
+			remove_trait = {
+				character = TRN_tpdldk
+				slot = political_advisor
+				trait = b_dPdjsdmleocjstk
+			}
+			news_event = {
+				id = trinitynews.1
+			}
+		}
+        set_country_flag = TRM_event_59_flag
+		custom_effect_tooltip = TRM_sanctus_popularity__20_tt
+		add_to_variable = { TRM_sanctus_popularity = -30 }
+		TRM_internal_factions_popularity_change = yes
+		add_country_leader_role = {
+			character = TRN_empty
+			promote_leader = yes
+			country_leader = {
+				ideology = tea_party_ideology
+				expire = "1965.1.1.1"
+				traits = {
+
+				}
+			}
+		}
+		add_country_leader_role = {
+			character = TRN_chika_amabe
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				expire = "1965.1.1.1"
+				traits = {
+
+				}
+			}
+		}
     }
+}
+country_event = { # 사망 선언
+	id = trinity.10
+	title = trinity.10.t
+	desc = trinity.10.desc
+	picture = GFX_event_Trinity_Hospital
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.10.a
+		effect_tooltip = {
+			country_event = { id = trinity.11 days = 03 }
+		}
+		hidden_effect = {
+			TRN_tpdldk = {
+				set_character_flag = TRN_fake_death_flag
+			}
+			TRN_alzk = {
+				unit_leader_event = {
+					id = trinity.11
+					days = 03
+				}
+			}
+		}
+		add_country_leader_role = {
+			character = TRN_Natsuki_Kato
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				expire = "1965.1.1.1"
+				traits = {
+
+				}
+			}
+		}
+		effect_tooltip = {
+			TRN_tpdldk = { custom_effect_tooltip = kill_character_tt }
+		}
+    }
+}
+unit_leader_event = { # 미카의 호스트 취임
+	id = trinity.11
+	title = trinity.11.t
+	desc = trinity.11.desc
+	picture = GFX_event_none_picture
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.11.a
+		add_country_leader_role = {
+			character = TRN_alzk
+			promote_leader = yes
+			country_leader = {
+				ideology = tea_party_ideology
+				expire = "1965.1.1.1"
+				traits = {
+					TRM_pater_faction
+				}
+			}
+		}
+		effect_tooltip = {
+			country_event = { id = trinity.13 days = 04 }
+		}
+		hidden_effect = {
+			TRN_cmfnrl = {
+				unit_leader_event = { id = trinity.13 days = 04 }
+			}
+		}
+    }
+}
+country_event = { # 필리우스 음모론
+	id = trinity.12
+	title = trinity.12.t
+	desc = trinity.12.desc
+	picture = GFX_report_event_soviet_purge_officers_02
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.12.a
+    }
+}
+unit_leader_event = { # 정의실현부의 음모?
+	id = trinity.13
+	title = trinity.13.t
+	desc = trinity.13.desc
+	picture = GFX_report_event_soviet_purge_officers_02
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.13.a
+    }
+}
+news_event = {
+	id = trinitynews.1
+	title = trinitynews.1.t
+	desc = trinitynews.1.desc
+	picture = GFX_event_seia_cut
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = TRM_flag_seia_cut
+	}
+
+	option = {
+		name = trinitynews.1.a
+		trigger = {
+			TAG = TRM
+		}
+		unlock_decision_tooltip = TRN_who_is_criminal
+		set_country_flag = TRN_who_is_criminal_start
+	}
+	option = {
+		name = trinitynews.1.b
+		trigger = {
+			NOT = { tag = TRM }
+			OR = {
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+			}
+		}
+	}
+	option = {
+		name = BA_news.1.d
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+				}
+			}
+		}
+	}
 }
 country_event = {
 	id = trnstory.0

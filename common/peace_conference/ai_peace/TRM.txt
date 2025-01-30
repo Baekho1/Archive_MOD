@@ -14,26 +14,18 @@ peace_ai_desires = {
 		}
 		ai_desire = 1000
 	}
-	mika_annex_gehenna = {
+	TRM_take_gehenna_state = {
 		peace_action_type = take_states
 		enable = {
-			ROOT = {
-				original_tag = TRM
-				has_completed_focus = TRM_war_with_gehenna
-			}
-			ROOT.FROM = {
-				tag = ROOT
-			}
 			FROM.FROM.FROM = {
-				OR = {
-					is_core_of = GEH
-					is_core_of = GEM
-					is_core_of = GEK
-					is_core_of = GER
-				}
+				TRM_is_state_Trinity_want = yes
+			}
+			ROOT = { 
+				original_tag = TRM
+				has_completed_focus = TRM_newfocus_27
 			}
 		}
-		ai_desire = 300
+        ai_desire = 300
 	}
 	NSD_annex_TRM = {
 		peace_action_type = take_states

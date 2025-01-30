@@ -167,6 +167,10 @@ recruit_character = TRN_dktkrkdhgkskdp
 recruit_character = TRN_dnwkdhkfpdltk
 recruit_character = TRN_Shirasu_Azusa_Swim
 
+# 가상 인물
+recruit_character = TRN_chika_amabe 
+recruit_character = TRN_Natsuki_Kato
+
 # 독일
 recruit_character = TRN_hjalmar_schacht
 recruit_character = TRN_Carl_Schmitt

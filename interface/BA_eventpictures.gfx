@@ -16,15 +16,6 @@ spriteTypes = {
 		name = "GFX_event_KAP_declared"
 		texturefile = "gfx/event_pictures/KAP/event_KAP_declared.dds"
 	}
-
-	spriteType = {
-		name = "GFX_event_TRM_event_373"
-		texturefile = "gfx/event_pictures/TRM/TRM_event_373.tga"
-	}
-	spriteType = {
-		name = "GFX_event_TRM_event_374"
-		texturefile = "gfx/event_pictures/TRM/TRM_event_374.tga"
-	}
 	spriteType = {
 		name = "GFX_event_BA_news_event_101"
 		texturefile = "gfx/event_pictures/BA_news_event_101.tga"
@@ -497,6 +488,14 @@ spriteTypes = {
       name = "GFX_event_BA_generic_event_13"
        texturefile = "gfx/event_pictures/BA_generic_event_13.tga"
     } 
+	spriteType = {
+		name = "GFX_event_TRM_event_373"
+		texturefile = "gfx/event_pictures/TRM/TRM_event_373.tga"
+	}
+	spriteType = {
+		name = "GFX_event_TRM_event_374"
+		texturefile = "gfx/event_pictures/TRM/TRM_event_374.tga"
+	}
     spriteType = {
        name = "GFX_event_TRM_event_15"
        texturefile = "gfx/event_pictures/TRM/TRM_event_15.tga"
@@ -512,6 +511,18 @@ spriteTypes = {
     spriteType = {
        name = "GFX_event_Mika_memories"
        texturefile = "gfx/event_pictures/TRM/Mika_memories.tga"
+    }
+    spriteType = {
+       name = "GFX_event_teaparty"
+       texturefile = "gfx/event_pictures/TRM/teaparty.tga"
+    }
+    spriteType = {
+       name = "GFX_event_Trinity_Campus"
+       texturefile = "gfx/event_pictures/TRM/Trinity_Campus.tga"
+    }
+    spriteType = {
+       name = "GFX_event_Trinity_Hospital"
+       texturefile = "gfx/event_pictures/TRM/Trinity_Hospital.tga"
     }
     spriteType = {
       name = "GFX_event_BA_Poland_Flag"
