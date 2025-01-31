@@ -118,7 +118,7 @@
  HND_liberation:0 "인민해방전선"
  HND_anti_imp_march:0 "반제국주의 행진"
  HND_subcontinent:0 "아대륙의 기상"
- HND_liberation_1:0 "§t마지막 인민을 해방할 때까지!§!"
+ HND_liberation_1:0 "§T마지막 인민을 해방할 때까지!§!"
  HND_3_year:0 "3개년 계획"
  HND_3_year_tt:0 "§Y3개년 계획§!이 종료될 시 소련의 §Y경제 고문§!은 철수할 것입니다."
  HND_people_bank:0 "인민은행"
@@ -153,7 +153,7 @@
  HND_focus_com_4:0 "토착 지주 타격"
  HND_focus_com_5:0 "혁명군 개편"
  HND_focus_com_6:0 "민족해방론"
- HND_focus_com_6_tt:0 "\n§t우리는 일본 제국주의에 맞서 중국을 도울 것입니다.§!"
+ HND_focus_com_6_tt:0 "\n§T우리는 일본 제국주의에 맞서 중국을 도울 것입니다.§!"
  HND_focus_com_7:0 "전당대회"
  HND_focus_com_8:0 "국민회의 인정"
  HND_focus_com_9:0 "전위당론 고수"
@@ -203,7 +203,7 @@
  
 
 
- HND_agari_small_tt:0 "§Y농업사회§!의 §Y징병 가능 인구 획득치§! 감소 효과가 §t소폭§! 완화됩니다."
+ HND_agari_small_tt:0 "§Y농업사회§!의 §Y징병 가능 인구 획득치§! 감소 효과가 §T소폭§! 완화됩니다."
  HND_agari_tt:0 "§Y농업사회§!의 §Y징병 가능 인구 획득치§! 감소 효과가 완화됩니다."
  HND_agari_much_tt:0 "§Y농업사회§!의 §Y징병 가능 인구 획득치§! 감소 효과가 §G크게§! 완화됩니다."
  HND_focus_com_ind_0:0 "대중 동원"

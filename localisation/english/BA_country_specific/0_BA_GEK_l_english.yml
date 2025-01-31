@@ -161,9 +161,9 @@
  GEK_legitimacy: "독일 정통성: §R잔당§!"
  GEK_legitimacy_1: "독일 정통성: §3해방군§!"
  GEK_legitimacy_2: "독일 정통성: §g군사정부§!"
- GEK_legitimacy_weimar: "독일 정통성 : §t공화국의 잔광§!"
- GEK_legitimacy_weimar_1: "독일 정통성 : §t공화국의 유산§!"
- GEK_legitimacy_weimar_2: "독일 정통성 : §t'바이마르 공화국'§!"
+ GEK_legitimacy_weimar: "독일 정통성 : §T공화국의 잔광§!"
+ GEK_legitimacy_weimar_1: "독일 정통성 : §T공화국의 유산§!"
+ GEK_legitimacy_weimar_2: "독일 정통성 : §T'바이마르 공화국'§!"
  GEK_legitimacy_empire: "독일 정통성 : §g군주정의 잔광§!"
  GEK_legitimacy_empire_1: "독일 정통성 : §g프로이센의 유산§!"
  GEK_legitimacy_empire_2: "독일 정통성 : §g'독일 제국'§!"
@@ -171,7 +171,7 @@
  GEK_legitimacy_nazi_1: "독일 정통성 : §L제3제국의 유산§!"
  GEK_legitimacy_nazi_2: "독일 정통성 : §L'제3제국'§!"
 
- GEK_enhance_spd_tt: "\n§t[GEK.getname]의 정통성 논쟁이 종료됩니다.§!"
+ GEK_enhance_spd_tt: "\n§T[GEK.getname]의 정통성 논쟁이 종료됩니다.§!"
 
  GEK_well_planned:0 "수복 계획"
  GEK_german_nationalism:0 "독일 민족주의"

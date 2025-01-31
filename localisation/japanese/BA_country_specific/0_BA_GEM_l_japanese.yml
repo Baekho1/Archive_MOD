@@ -367,7 +367,7 @@ GEH_win_global_flag:0 "内戦で§3風紀委員会§!が勝利した。"
 GEM_win_global_flag:0 "内戦で§O万魔殿§!が勝利した。"
 # # # # ゲヘナ学園ディシジョン # # # #
 GEH_nege_end_tooltip:0 "§Y交渉§!が終了します。"
-GEH_NEGO_DANGER:0 "§t交渉が妨害された。§!"
+GEH_NEGO_DANGER:0 "§T交渉が妨害された。§!"
 GEH_nego_wehrmacht_decisions:0 "国防軍と交渉"
 GEH_nego_wehrmacht_decisions_desc:0 "国防軍はドイツと呼ばれていた集団の武力手段です。我々がドイツの地に上陸すると、彼らは我々と対立して敵意をむき出しにし始め、我々の生徒に危害を加えるなど、様々な問題を引き起こしました。しかし、国防軍とよく交渉して我々と共通点を見つけ出すことができれば、我々は共生関係になることができます。"
 GEH_State_government_dismantlement_work_category: "ゲヘナ学園のドイツ州政府"

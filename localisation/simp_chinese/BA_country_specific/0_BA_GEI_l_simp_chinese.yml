@@ -46,7 +46,7 @@
  GEI_jeobchog:0 "接触"
  GEI_jeobchog_desc:0 "次元穿孔装置的研究已经结束，我们终于迎来了第一次实验。我们将打开一个小小的次元孔洞，暂时连接"另一个地方"和这里，并实验通过这个小孔洞是否可以传递奥秘。也许，一切都在掌控之中，并且是完全安全的。"
  GEI_uisigneomeolo:0 "仪式之外"
- GEI_uisigneomeolo_desc:0 "次元穿孔机运转完美……也许吧。贝阿特丽切现在将利用巨大的奥秘进行第二次仪式。通往完美的道路比我们想象的更近了。\n\n§t升天！§！"
+ GEI_uisigneomeolo_desc:0 "次元穿孔机运转完美……也许吧。贝阿特丽切现在将利用巨大的奥秘进行第二次仪式。通往完美的道路比我们想象的更近了。\n\n§T升天！§！"
  GEI_no:0 ""
  GEI_no_desc:0 ""
  #盖马特里亚其他说明
@@ -56,7 +56,7 @@
  GEI_gingeubcheolsu_tt:0 "§R[120.GetName]的所有民用工厂、军工厂和造船厂都将被摧毁。§！"
  GEI_Beatrice_win_flag:0 "§O贝阿特丽切§！获胜"
  GEI_Secure_Royal_Blood:0 "§9皇家血统已获取。§！"
- GEI_Fail_Royal_Blood:0 "§t阿里乌斯小队逃跑了。§！"
+ GEI_Fail_Royal_Blood:0 "§T阿里乌斯小队逃跑了。§！"
  GEI_loyeolbeulleodeuhwagbo_tt:0 "将解锁§9皇家血统§！的§Y搜寻§！、§Y接触§！和§Y绑架§！决策。"
  #色彩焦点
  revolt_of_the_crazy_flag:0 "'§0疯子们的叛乱§!'事件发生"
