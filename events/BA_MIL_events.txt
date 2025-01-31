@@ -1178,21 +1178,23 @@ country_event = {
         
         if = {
             limit = {
-                NOT = {
-                    ROOT = {
-                        has_template = "French Resistance" 
-                    }
+                ROOT = {
+                    has_template = "French Resistance" 
                 }
             }
             ROOT = {
-                division_template = {
-                    name = "French Resistance"		
-                    division_names_group = FRA_INF_01
-					is_locked = yes
-                    regiments = {
-                        militia = { x = 0 y = 0 }
-                        militia = { x = 0 y = 1 }
-                    }
+                delete_unit_template_and_units = {
+                    division_template = "French Resistance"
+                }
+            }
+        }
+        ROOT = {
+            division_template = {
+                name = "French Resistance"
+                priority = 0
+                regiments = {
+                    militia = { x = 0 y = 0 }
+                    militia = { x = 0 y = 1 }
                 }
             }
         }
@@ -1213,48 +1215,32 @@ country_event = {
                     allow_spawning_on_enemy_provs = yes
                 }
             }
-            random_list = {
-                30 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 785 15 30 24 16 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+            if = {
+                limit = { ROOT = { original_tag = FRA } }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
+                    }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
-                20 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 785 15 30 24 16 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
                     }
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 785 15 30 24 16 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
             }
@@ -1276,48 +1262,32 @@ country_event = {
                     allow_spawning_on_enemy_provs = yes
                 }
             }
-            random_list = {
-                30 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 17 18 27 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+            if = {
+                limit = { ROOT = { original_tag = FRA } }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
+                    }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
-                20 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 17 18 27 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
                     }
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 17 18 27 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
             }
@@ -1339,48 +1309,32 @@ country_event = {
                     allow_spawning_on_enemy_provs = yes
                 }
             }
-            random_list = {
-                30 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 23 33 25 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+            if = {
+                limit = { ROOT = { original_tag = FRA } }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
+                    }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
-                20 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 23 33 25 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
                     }
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 23 33 25 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
             }
@@ -1402,48 +1356,32 @@ country_event = {
                     allow_spawning_on_enemy_provs = yes
                 }
             }
-            random_list = {
-                30 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 26 20 22 32 21 992 851 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+            if = {
+                limit = { ROOT = { original_tag = FRA } }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
+                    }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
-                20 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 26 20 22 32 21 992 851 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
                     }
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 26 20 22 32 21 992 851 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
             }
@@ -1465,48 +1403,32 @@ country_event = {
                     allow_spawning_on_enemy_provs = yes
                 }
             }
-            random_list = {
-                30 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 19 31 806 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+            if = {
+                limit = { ROOT = { original_tag = FRA } }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
+                    }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
-                20 = {
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 19 31 806 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                random_state = {
+                    limit = {
+                        is_controlled_by = MIL
+                        is_capital = no
+                        is_in_home_area = yes
                     }
-                    random_state = {
-                        limit = {
-                            is_controlled_by = MIL
-                            is_capital = no
-                            is_in_home_area = yes
-                        }
-                        prioritize = { 19 31 806 }
-                        create_unit = {
-                            division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
-                            owner = ROOT
-                            allow_spawning_on_enemy_provs = yes
-                        }
+                    prioritize = { 785 15 30 24 16 }
+                    create_unit = {
+                        division = "division_template = \"French Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.6" 
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = yes
                     }
                 }
             }
@@ -1517,10 +1439,10 @@ country_event = {
                 limit = {
                     tag = FRA
                 }
-                country_event = { id = MIL_event.59 random_days = 25 days = 70 }
+                country_event = { id = MIL_event.59 random_days = 10 days = 70 }
             }
             else = {
-                country_event = { id = MIL_event.58 random_days = 25 days = 70 }
+                country_event = { id = MIL_event.58 random_days = 10 days = 35 }
             }
         }
     }
@@ -2686,10 +2608,8 @@ country_event = {
 
     option = {
         name = MIL_event.58.a
-        delete_unit_template_and_units = {
-            division_template = "French Resistance"
-            disband = no #will refund equipment and manpower
-        }
+        add_war_support = 0.01
+        add_manpower = -125
     }
 }
 country_event = {
@@ -2707,6 +2627,10 @@ country_event = {
             disband = yes #will refund equipment and manpower
         }
         add_manpower = 5000
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_0
+            amount = 750
+        }
     }
     option = {
         name = MIL_event.59.b

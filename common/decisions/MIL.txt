@@ -2208,6 +2208,9 @@ FRA_prepare_war = {
 				has_country_flag = MIL_resistance_suppression_decisions_flag
 				has_global_flag = STOP_FRA_prepare_war_flag
 			}
+			any_enemy_country = {
+				NOT = { has_country_flag = MIL_french_resistance_flag }
+			}
 		}
 		cancel_trigger = {
 			has_country_flag = MIL_resistance_suppression_decisions_flag
@@ -2260,14 +2263,13 @@ FRA_prepare_war = {
 				limit = { MIL = { has_war_with = FRA } }
 				FRA = {
 					country_event = { id = MIL_event.17 hours = 4 }
+					set_country_flag = MIL_french_resistance_flag
 				}
 			}
 			else = {
-				random_country = {
-					limit = {
-						has_war_with = MIL
-					}
+				random_enemy_country = {
 					country_event = { id = MIL_event.17 hours = 4 }
+					set_country_flag = MIL_french_resistance_flag
 				}
 			}
 		}
