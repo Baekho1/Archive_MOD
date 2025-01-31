@@ -569,7 +569,7 @@ country_event = {
     id = MIL_event.1
     title = MIL_event.1.t
     desc = MIL_event.1.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     fire_only_once = yes
     is_triggered_only = yes
@@ -590,7 +590,7 @@ country_event = {
     id = MIL_event.2
     title = MIL_event.2.t
     desc = MIL_event.2.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     fire_only_once = yes
     is_triggered_only = yes
@@ -619,7 +619,7 @@ country_event = {
     id = MIL_event.3
     title = MIL_event.3.t
     desc = MIL_event.3.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     fire_only_once = yes
     is_triggered_only = yes
@@ -638,7 +638,7 @@ country_event = {
     id = MIL_event.4
     title = MIL_event.4.t
     desc = MIL_event.4.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     fire_only_once = yes
     is_triggered_only = yes
@@ -1115,7 +1115,7 @@ country_event = {
     id = MIL_event.14
     title = MIL_event.14.t
     desc = MIL_event.14.d
-    picture = none
+    picture = GFX_report_event_physics_lab_01
     
     fire_only_once = no
     is_triggered_only = yes  
@@ -1169,7 +1169,7 @@ country_event = {
     id = MIL_event.17
     title = MIL_event.17.t
     desc = MIL_event.17.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
     
     is_triggered_only = yes  
 
@@ -1775,7 +1775,7 @@ country_event = {
     id = MIL_event.30
     title = MIL_event.30.t
     desc = MIL_event.30.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     fire_only_once = yes
 
@@ -1820,7 +1820,7 @@ country_event = {
     id = MIL_event.31
     title = MIL_event.31.t
     desc = MIL_event.31.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -1863,7 +1863,7 @@ country_event = {
     id = MIL_event.32
     title = MIL_event.32.t
     desc = MIL_event.32.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -1885,7 +1885,7 @@ country_event = {
     id = MIL_event.33
     title = MIL_event.33.t
     desc = MIL_event.33.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -1902,7 +1902,7 @@ country_event = {
     id = MIL_event.34
     title = MIL_event.34.t
     desc = MIL_event.34.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -1967,7 +1967,7 @@ country_event = {
     id = MIL_event.35
     title = MIL_event.35.t
     desc = MIL_event.35.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -1984,7 +1984,7 @@ country_event = {
     id = MIL_event.36
     title = MIL_event.36.t
     desc = MIL_event.36.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2001,7 +2001,7 @@ country_event = {
     id = MIL_event.37
     title = MIL_event.37.t
     desc = MIL_event.37.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2034,7 +2034,7 @@ country_event = {
     id = MIL_event.38
     title = MIL_event.38.t
     desc = MIL_event.38.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2054,7 +2054,7 @@ country_event = {
     id = MIL_event.39
     title = MIL_event.39.t
     desc = MIL_event.39.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2066,7 +2066,7 @@ country_event = {
     id = MIL_event.40
     title = MIL_event.40.t
     desc = MIL_event.40.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2096,7 +2096,7 @@ country_event = {
     id = MIL_event.41
     title = MIL_event.41.t
     desc = MIL_event.41.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2135,7 +2135,7 @@ country_event = {
     id = MIL_event.42
     title = MIL_event.42.t
     desc = MIL_event.42.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2147,7 +2147,7 @@ country_event = {
     id = MIL_event.43
     title = MIL_event.43.t
     desc = MIL_event.43.d
-    picture = none
+    picture = GFX_event_MIL_event_logo
 
     is_triggered_only = yes 
 
@@ -2249,7 +2249,7 @@ country_event = {
     id = MIL_event.48
     title = MIL_event.48.t
     desc = MIL_event.48.d
-    picture = none
+    picture = GFX_event_MIL_KurosakiKoyuki_event
 
     fire_only_once = yes
 
@@ -2602,7 +2602,7 @@ country_event = {
     id = MIL_event.58
     title = MIL_event.58.t
     desc = MIL_event.58.d
-    picture = none
+    picture = GFX_report_event_polish_army
 
     is_triggered_only = yes 
 
@@ -2616,7 +2616,7 @@ country_event = {
     id = MIL_event.59
     title = MIL_event.59.t
     desc = MIL_event.59.d
-    picture = none
+    picture = GFX_report_event_polish_army
 
     is_triggered_only = yes 
 
@@ -2843,7 +2843,19 @@ country_event = { #밀레니엄의 국가 유지 요청 ㄴㄴ
     }
 }
 
+country_event = {
+    id = MIL_event.68
+    title = MIL_event.68.t
+    desc = MIL_event.68.d
+    picture = GFX_report_event_france_tank_production
 
+    is_triggered_only = yes 
+
+    option = {
+        name = MIL_event.68.a
+        add_stability = 0.02
+    }
+}
 
 
 
