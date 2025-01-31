@@ -370,7 +370,7 @@ GEM_win_global_flag:0 "内战中§O万魔殿§!获胜。"
 
 ### ### ### 盖恩纳学院决议 ### ### ###
 GEH_nege_end_tooltip:0 "§Y协商§!结束。"
-GEH_NEGO_DANGER:0 "§T协商受阻。§!"
+GEH_NEGO_DANGER:0 "§t协商受阻。§!"
 GEH_nego_wehrmacht_decisions:0 "与国防军协商"
 GEH_nego_wehrmacht_decisions_desc:0 "国防军是曾经被称为德国的集团的武力。当我们登陆德国领土时，他们开始与我们对抗，表现出敌意，并对我们的学生造成伤害等各种问题。但是，如果与国防军进行良好的协商，找到共同点，我们就能建立共生关系。"
 GEH_State_government_dismantlement_work_category: "盖恩纳学院的德国州政府"
