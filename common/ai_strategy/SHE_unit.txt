@@ -85,6 +85,23 @@ SHE_cut_kai_team = {
         value = -500
     }
 }
+SHE_cut_trm_kai_team = {
+	allowed = {
+		original_tag = SHE
+	}
+	enable = {
+		TRM = { is_in_faction_with = KAI }
+	}
+	abort = {
+		always = no
+	}
+
+    ai_strategy = {
+        type = alliance
+        id = "TRM"
+        value = -300
+    }
+}
 SHE_cut_trm_team = {
 	allowed = {
 		original_tag = SHE
