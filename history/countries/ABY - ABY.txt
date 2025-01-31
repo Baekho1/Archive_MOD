@@ -118,7 +118,40 @@ every_state = {
 		array = ROOT.recruitable_states
 	}
 }
-
+every_state = {
+    limit = {
+        OR = {
+            state = 66
+            state = 67
+            state = 762
+            state = 39
+            state = 850
+            state = 736
+            state = 852
+            state = 982
+            state = 853
+            state = 102
+            state = 160
+            state = 159
+			is_core_of = SWI
+			is_core_of = TRM
+			is_core_of = GEH
+			is_core_of = GEM
+            state = 991
+            state = 87
+            state = 98
+            state = 61
+			is_core_of = ARI
+            state = 988
+            state = 8
+            state = 28
+            state = 989
+        }
+    }
+    add_to_array = { 
+		array = ROOT.unite_states_1
+	}
+}
 add_timed_idea = {
     idea = BA_exiles_of_the_future
     days = 210

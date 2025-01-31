@@ -17747,6 +17747,27 @@ ABY_descision_category_debug = {
             } 
 		}
 	}
+	ABY_descision_debug_core = {  
+		priority = 1
+		
+		visible = {       
+			tag = ABY
+			is_debug = yes
+		}
+		                 
+        allowed = {
+            tag = ABY
+        }         
+		available = {
+			is_ai = no
+		}            
+
+		complete_effect = {
+			every_state = {
+				set_state_flag = ABY_state_flag_core
+			}
+		}
+	}
 	ABY_descision_debug_ohung_laita = {  
 		priority = 1
 		
@@ -19211,6 +19232,58 @@ ABY_descision_category_abydos_highschool = {
         complete_effect = {
 			central_map_calculate_frame = yes      
         }
+	}
+
+	ABY_descision_unite_states_1 = {
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = ABY
+		}
+
+		visible = {
+			has_country_flag = ABY_flag_core_state_1
+			FROM = {
+				has_state_flag = ABY_state_flag_core
+			}
+		}
+
+		available = { #No restraint on how many a player can do at the same time as that would have taken forever and I can already hear angry fans typing even considering that.
+			FROM = {
+				is_fully_controlled_by = ABY #can't integrate what you can't control
+			}
+		}
+
+		cost = 50
+
+		days_remove = 100
+
+		ai_will_do = {
+			base = 100
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only #map only to not clog the decision ui with a huge list.
+
+		target_array = ROOT.unite_states_1
+
+		target_trigger = {
+			
+			FROM = {
+				NOT = {
+					is_core_of = ABY
+				}
+			}	
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ABY
+			}
+		}
 	}
 	ABY_descision_develop_9 = {
         priority = 1

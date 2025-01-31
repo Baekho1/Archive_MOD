@@ -1895,6 +1895,7 @@ country_event = {
 			ABY_idea_bohemia_and_austria
 		}
 		retire_character = ABY_czech_EV
+		retire_character = ABY_czech_EH
 		hidden_effect = {
 			retire_character = ABY_czech_EV_2
 		}
@@ -1927,6 +1928,7 @@ country_event = {
 			ABY_idea_bohemia_and_austria
 		}
 		retire_character = ABY_czech_EV
+		retire_character = ABY_czech_EH
 		hidden_effect = {
 			retire_character = ABY_czech_EV_2
 		}

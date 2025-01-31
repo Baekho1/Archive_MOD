@@ -1373,8 +1373,20 @@ focus_tree = {
 			country_event = {
 				id = ABY_new_event.209
 			}
-			set_country_flag = ABY_flag_core_state
+			set_country_flag = ABY_flag_core_state_1
 			custom_effect_tooltip = ABY_provisional_government_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+           					state = 66
+           					state = 67
+           					state = 762
+						}
+					}
+					set_state_flag = ABY_state_flag_core
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
