@@ -5893,7 +5893,7 @@ HEU_abgeordnetenkammer_decision_category = {
 		}
 
 		modifier = {
-			stability_weekly_factor = 0.003
+			stability_weekly = 0.003
 		}
 	}
 
@@ -6048,7 +6048,7 @@ HEU_abgeordnetenkammer_decision_category = {
 					HEU_add_influence_left_party = yes
 				}
 			}
-			
+
 			hidden_effect = {
 				activate_mission = HEU_abgeordnetenkammer_random_party
 			}
