@@ -984,6 +984,24 @@ ideas = {
                 stability_factor = -0.30
             }
         }
+        MIL_ff_event_3_idea = { #불안정한 치안
+            picture = hol_shell_shocked_spectator
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {	
+                consumer_goods_factor = 0.15
+                stability_factor = -0.15
+            }
+        }
         MIL_electric_sabotage = { #전기 사보타주
             picture = hol_shell_shocked_spectator
 
@@ -999,7 +1017,7 @@ ideas = {
 
             modifier = {	
                 consumer_goods_factor = 0.10
-                stability_factor = -0.10
+                stability_factor = -0.05
                 research_speed_factor = -0.10
             }
         }
