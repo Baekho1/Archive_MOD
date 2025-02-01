@@ -74,6 +74,10 @@ country_event = { #『공산당 선언』
 	is_triggered_only = yes
 	option = { #
 		name = RED_reading.1.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
 	}
 }
 

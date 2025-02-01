@@ -27,6 +27,10 @@ FRA_industrialize = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				has_political_power > 100
+				add = 100
+			}
+			modifier = {
 				neutrality < 0.45
 				add = 100
 			}
@@ -55,6 +59,10 @@ FRA_industrialize = {
 	FRA_press_propaganda_dem = {
 		ai_will_do = {
 			base = 0
+			modifier = {
+				has_political_power > 100
+				add = 100
+			}
 			modifier = {
 				democratic < 0.45
 				add = 100
@@ -85,6 +93,10 @@ FRA_industrialize = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				has_political_power > 100
+				add = 100
+			}
+			modifier = {
 				communism < 0.45
 				add = 100
 			}
@@ -113,6 +125,10 @@ FRA_industrialize = {
 	FRA_press_propaganda_fas = {
 		ai_will_do = {
 			base = 0
+			modifier = {
+				has_political_power > 100
+				add = 100
+			}
 			modifier = {
 				fascism < 0.45
 				add = 100
