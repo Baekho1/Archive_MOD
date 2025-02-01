@@ -1948,7 +1948,6 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-			set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
 		
 			hidden_effect = {
 				if = {
@@ -2360,6 +2359,7 @@ focus_tree = {
 				type = annex_everything
 				target = TRM
 			}
+			set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
 		}
 	}
 
@@ -7237,7 +7237,7 @@ focus_tree = {
 
 			custom_effect_tooltip = HEU_modify_luxembourg_army_intro
 			add_to_variable = {
-				HEU_luxembourg_army_terrain_penalty_reduction = -0.1
+				HEU_luxembourg_army_terrain_penalty_reduction = 0.1
 				tooltip = terrain_penalty_reduction_tt #편집
 			}
 		}
