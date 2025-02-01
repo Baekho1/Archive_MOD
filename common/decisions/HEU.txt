@@ -561,9 +561,7 @@ HEU_aru_persona_decision_category = {
 
 		complete_effect = {
 			HEU_aru = {
-				add_trait = {
-					add_trait = { trait = front_line_general }
-				}
+				add_trait = { trait = front_line_general }
 			}
 		}
 	}
