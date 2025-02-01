@@ -363,6 +363,16 @@ country_event = { #대안 경제 정책
 		add_political_power = 10
 	}
 }
+country_event = { #방위위원회 패배
+	id = RED_generic.13
+	title = RED_generic.13.t
+	desc = RED_generic.13.d
+	is_triggered_only = yes
+	option = { #후
+		name = RED_generic.13.a
+		add_political_power = -1
+	}
+}
 
 country_event = { #피로한 마리나 - 1
 	id = RED_marina_event.1

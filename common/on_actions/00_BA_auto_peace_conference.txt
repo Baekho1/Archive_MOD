@@ -7,10 +7,21 @@ on_actions = {
 					has_war_with = FIN
 					date < 1940.1.1
 				}
+				RED = {
+					country_event = {
+						id = RED_generic.13
+						days = 1
+					}
+				}
 				RE4 = {
 					white_peace = FIN
 					every_owned_state = {
-						limit = { is_core_of = FIN }
+						limit = {
+							is_core_of = FIN
+							NOT = {
+								is_owned_by = FIN
+							}
+						}
 						transfer_state_to = FIN
 					}
 					if = { 

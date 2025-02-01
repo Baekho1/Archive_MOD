@@ -3845,7 +3845,7 @@ RED_population_issue_cat = { #인구문제
 		available = {
 		}
 		cost = 30
-		days_remove = 100
+		days_remove = 50
 		modifier = {
 			consumer_goods_expected_value = 0.15
 		}
@@ -3940,7 +3940,6 @@ RED_population_issue_cat = { #인구문제
 			consumer_goods_expected_value = 0.1
 		}
 		complete_effect = {
-			RED_population_solve = yes
 			add_days_mission_timeout = {
 				mission = RED_population_issue_no_food
 				days = 180

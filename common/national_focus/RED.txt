@@ -3217,7 +3217,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = { #출판부 확대
 		id = RED_expand_publishing_dep
 		icon = GFX_focus_generic_printing_press
