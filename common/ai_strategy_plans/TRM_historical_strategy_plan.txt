@@ -77,10 +77,6 @@ TRM_historical = {
 
         # 연합법 선언
         TRM_germany_union
-        
-        # 남부 공세
-        TRM_southern_offensive
-        TRM_SANHAIJING_offensive
 
         # 안찍은 군사 중점 2
         TRM_Empower_the_Generals
@@ -89,6 +85,10 @@ TRM_historical = {
         
         # 마지막 내정 중점
         TRN_gyungje_hyu_ul_bub
+        
+        # 남부 공세
+        TRM_southern_offensive
+        TRM_SANHAIJING_offensive
         
         # 공군 중점
         TRN_Luftwaffe
