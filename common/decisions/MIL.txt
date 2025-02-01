@@ -2065,73 +2065,80 @@ FRA_prepare_war = {
 		is_good = no
 		days_mission_timeout = 210
 
+		complete_effect = {
+			country_event = { id = MIL_event.68 hours = 2 }
+		}
+
 		timeout_effect = {
 			MIL_Resistance_idea_up = yes
-			create_dynamic_country = {
-				original_tag = FRA
-				copy_tag = FRA
-				set_popularities = {
-					democratic = 10
-					neutrality = 0
-					fascism = 40
-					communism = 50
-				}
-				random_list = {
-					1 = {
-						set_politics = {
-							ruling_party = communism
+			custom_effect_tooltip = MIL_resistance_great_uprising_tt
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = FRA
+					copy_tag = FRA
+					set_popularities = {
+						democratic = 10
+						neutrality = 0
+						fascism = 40
+						communism = 50
+					}
+					random_list = {
+						1 = {
+							set_politics = {
+								ruling_party = communism
+							}
+						}
+						1 = {
+							set_politics = {
+								ruling_party = fascism
+							}
 						}
 					}
-					1 = {
-						set_politics = {
-							ruling_party = fascism
+					transfer_state = 21
+					transfer_state = 851
+					transfer_state = 992
+					transfer_state = 32
+					transfer_state = 20
+					transfer_state = 22
+					transfer_state = 19
+					transfer_state = 806
+					transfer_state = 17
+					transfer_state = 18
+					division_template = {
+						name = "Elite Resistance"
+						priority = 1
+						division_names_group = FRA_INF_01
+						is_locked = no
+		
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
 						}
 					}
-				}
-				transfer_state = 21
-				transfer_state = 851
-				transfer_state = 992
-				transfer_state = 32
-				transfer_state = 20
-				transfer_state = 22
-				transfer_state = 19
-				transfer_state = 806
-				transfer_state = 17
-				transfer_state = 18
-				division_template = {
-					name = "Elite Resistance"
-					priority = 1
-					division_names_group = FRA_INF_01
-					is_locked = no
-	
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
+					every_controlled_state = {
+						create_unit = {
+							division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.8 start_equipment_factor = 0.50"
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.30"
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.5 start_equipment_factor = 0.20"
+							owner = PREV
+						}
 					}
-				}
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.8 start_equipment_factor = 0.50"
-						owner = PREV
+					declare_war_on = {
+						target = MIL
+						type = annex_everything
 					}
-					create_unit = {
-						division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.7 start_equipment_factor = 0.30"
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Elite Resistance\" division_template = \"Elite Resistance\" start_experience_factor = 0.5 start_equipment_factor = 0.20"
-						owner = PREV
-					}
+					add_ideas = FRA_mil_incuser_resistance
 				}
-				declare_war_on = {
-					target = MIL
-					type = annex_everything
-				}
-				add_ideas = FRA_mil_incuser_resistance
 			}
 			news_event = BA_news.69
 		}
@@ -2208,6 +2215,9 @@ FRA_prepare_war = {
 				has_country_flag = MIL_resistance_suppression_decisions_flag
 				has_global_flag = STOP_FRA_prepare_war_flag
 			}
+			any_enemy_country = {
+				NOT = { has_country_flag = MIL_french_resistance_flag }
+			}
 		}
 		cancel_trigger = {
 			has_country_flag = MIL_resistance_suppression_decisions_flag
@@ -2260,14 +2270,13 @@ FRA_prepare_war = {
 				limit = { MIL = { has_war_with = FRA } }
 				FRA = {
 					country_event = { id = MIL_event.17 hours = 4 }
+					set_country_flag = MIL_french_resistance_flag
 				}
 			}
 			else = {
-				random_country = {
-					limit = {
-						has_war_with = MIL
-					}
+				random_enemy_country = {
 					country_event = { id = MIL_event.17 hours = 4 }
+					set_country_flag = MIL_french_resistance_flag
 				}
 			}
 		}

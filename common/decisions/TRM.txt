@@ -4449,7 +4449,15 @@ TRN_after_war_decisions = {
             }
         } 
 		ai_will_do = { 
-            base = 100
+            base = 0
+			modifier = {
+				add = 1000
+				FRM = { exists = yes }
+				AND = {
+					988 = { is_owned_by = FRM }
+					28 = { is_owned_by = FRM }
+				}
+			}
         }
         visible = { 
             988 = {
