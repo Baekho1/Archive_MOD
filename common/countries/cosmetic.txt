@@ -2072,8 +2072,8 @@ EGY_NOT_ENG = {
 	color_ui = rgb { 230 230 70 }
 }
 EGY_arab_united_republic = {
-	color = rgb { 100 100 50 }
-	color_ui = rgb { 100 100 50 }
+	color = rgb { 85 102 0 }
+	color_ui = rgb { 85 102 0 }
 }
 EGY_ABYDOS = {
 	color = rgb { 50 0 75 }

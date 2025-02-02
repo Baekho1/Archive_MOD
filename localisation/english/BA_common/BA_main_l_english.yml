@@ -327,6 +327,12 @@
  BA_greater_ABY_category: "대아비도스 재건"
  BA_greater_ABY_category_desc: "아비도스 고등학교의 영토는 주로 카이저에 판매되었지만...(중략)트리니티와 게헨나의 영토 역시 포함되어...(중략)시골지역이던 에덴과 게헨나 중앙구는 발전...(후략)"
 
+ EGY_form_arabia_moritany: "모리타니 통합"
+ EGY_form_arabia_eritrea: "에리트레아 통합"
+ EGY_form_arabia_somalia: "소말리아 통합"
+ EGY_form_arabia_north_ethiopia: "북에티오피아 통합"
+ EGY_form_arabia_south_ethiopia: "남에티오피아 통합"
+
  BA_super.1.t: "미카의 집권"
  BA_super.1.d: "달성 조건 : 트리니티가 강철의 라이히 중점을 완료함.\n\n노래 제목 : 무소륵스키 의 'Night on Bald Mountain' 00:16초 ~ 00:24초\nhttps://youtu.be/iCEDfZgDPS8?t=16\n\n미카짱 아이시테루~"
  BA_super.1.a: "슈퍼이벤트 확인"

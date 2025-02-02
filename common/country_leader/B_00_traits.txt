@@ -1110,10 +1110,23 @@ leader_traits = {
 		democratic_drift = 0.05
 		political_power_factor = 0.10
 	}
+	ABY_trait_democratist = { #"임시정부"
+		random = no
+		drift_defence_factor = 0.25
+		democratic_drift = 0.1
+	}
 	ABY_trait_pre_government = { #"임시정부"
 		random = no
-		stability_factor = -0.05
-		war_support_factor = 0.10
+		political_power_factor = -0.15
+		drift_defence_factor = -0.15
+		stability_factor = -0.10
+		war_support_factor = -0.10
+	}
+	ABY_trait_pre_government_2 = { #"임시정부"
+		random = no
+		political_power_factor = -0.15
+		drift_defence_factor = -0.15
+		stability_factor = -0.10
 	}
 	ABY_trait_emergency_government = { #"비상위원회"
 		random = no
@@ -1164,11 +1177,11 @@ leader_traits = {
 	}
 	ABY_trait_school_leader = { #"학생회장"
 		random = no
-		political_power_gain = 0.5
+		political_power_factor = 0.15
 		democratic_drift = 0.15
-		party_popularity_stability_factor = 0.1
-		stability_factor = 0.15
-		stability_weekly = 0.005
+		party_popularity_stability_factor = 0.2
+		stability_factor = 0.1
+		drift_defence_factor = 0.25
 	}
 	ABY_trait_EU = { #"유럽 총회의"
 		random = no

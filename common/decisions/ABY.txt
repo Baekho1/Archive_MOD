@@ -16118,7 +16118,7 @@ ABY_descision_category_pay_dept = {
 		priority = 1
 		days_remove = 365
 
-		cost = 150
+		cost = 0
 		
 		visible = {       
 			tag = ABY
@@ -16134,6 +16134,7 @@ ABY_descision_category_pay_dept = {
 		}    
 
 		modifier = {
+			political_power_gain = -0.1
 		}      
 
 		complete_effect = {

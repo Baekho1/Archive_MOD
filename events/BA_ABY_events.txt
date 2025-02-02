@@ -2015,7 +2015,17 @@ country_event = {
 	option = {
 		name = ABY_new_event.29.a
 		ai_chance = { factor = 100 }
-		
+		complete_national_focus = ABY_focus_milita_keep
+		add_stability = -0.1
+		add_war_support = 0.1
+	}
+
+	option = {
+		name = ABY_new_event.29.a
+		ai_chance = { factor = 100 }
+		complete_national_focus = ABY_focus_milita_dismiss
+		add_stability = 0.1
+		add_war_support = -0.1
 	}
 }
 
@@ -9297,6 +9307,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.187.a
 		ai_chance = { factor = 100 }
+		ABY = {
+			country_event = ABY_new_event.188
+			hours = 8
+		}
 	}
 }
 
@@ -9325,6 +9339,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.189.a
 		ai_chance = { factor = 100 }
+		add_ideas = {
+			ABY_idea_wprnrtodehdusaod
+		}
+		set_country_flag = ABY_flag_wprnrtodehdusaod
 	}
 }
 
