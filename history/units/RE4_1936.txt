@@ -1,0 +1,80 @@
+division_template = {
+	name = "Redwinter Garde populaire"
+	division_names_group = RED_HAL_01
+	is_locked = yes
+	force_allow_recruiting = yes
+	division_cap = 16
+	regiments = {
+		halo_militia = { x = 0 y = 0 }
+		halo_militia = { x = 0 y = 1 }
+		halo_militia = { x = 0 y = 2 }
+		halo_militia = { x = 1 y = 0 }
+		halo_militia = { x = 1 y = 1 }
+		halo_militia = { x = 1 y = 2 }
+	}
+	support = {
+		halo_recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Redwinter Garde 1"
+	division_names_group = RED_HAL_01
+	is_locked = yes
+	force_allow_recruiting = yes
+	division_cap = 16
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = [
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1 
+        }
+        location = 11164
+        division_template = "Redwinter Garde populaire"
+        start_experience_factor = 1
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 2
+        }
+        location = 6087
+        division_template = "Redwinter Garde populaire"
+        start_experience_factor = 1
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 3
+        }
+        location = 11030
+        division_template = "Redwinter Garde populaire"
+        start_experience_factor = 1
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 4
+        }
+        location = 11204
+        division_template = "Redwinter Garde populaire"
+        start_experience_factor = 1
+    }
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 5
+        }
+        location = 9223
+        division_template = "Redwinter Garde populaire"
+        start_experience_factor = 1
+    }
+]
