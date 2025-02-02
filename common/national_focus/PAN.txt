@@ -46,6 +46,9 @@ focus_tree = {
         prerequisite = {
             focus = PAN_upcoming_eleciotn_day
         }
+        mutually_exclusive = {
+            focus = PAN_with_Popular_Front
+        }
 
         completion_reward = { #차후에 효과 추가 예정
             add_political_power = 50
