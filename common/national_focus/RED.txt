@@ -3272,7 +3272,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #출판부 확대
+	focus = { #출판부 확장
 		id = RED_expand_publishing_dep
 		icon = GFX_focus_generic_printing_press
 		prerequisite = { focus = RED_redbear_editorial }
@@ -3285,10 +3285,38 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = RED_expand_publishing_dep_tt
+					check_variable = {
+						var = RED_cherino_communism_knowledge
+						value = 6
+						compare = greater_than_or_equals
+					}
+				}
+			}
 		}
 
 		completion_reward = {
 			add_ideas = RED_publishing_idea
+			hidden_effect = {
+				if = {
+					limit = {
+						has_power_balance = {
+							id = RED_power_balance
+						}
+					}
+					country_event = {
+						id = RED_event.6 
+						days = 2
+					}
+				}
+			}
 		}
 	}
 	
@@ -3304,9 +3332,16 @@ focus_tree = {
 		mutually_exclusive = { focus = RED_kill_editorial }
 
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				has_country_flag = RED_edit_disagree_1
 			}
 		}
 
@@ -3345,14 +3380,13 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = {
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
 				has_country_flag = RED_edit_disagree
-			}
-		}
-		select_effect = {
-			country_event = {
-				id = RED_event.6 
-				days = 5
 			}
 		}
 		completion_reward = {

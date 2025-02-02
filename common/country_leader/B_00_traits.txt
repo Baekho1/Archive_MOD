@@ -3372,6 +3372,9 @@ leader_traits = {
 		random = no
 		army_morale_factor = 0.01
 	}
+	RED_cherino_learner = { #학생운동가
+		random = no
+	}
 		#붉은겨울은 맞는데, 국민정신용 트레잇으로 쓰일 거임
 	RED_syndicalism_politic = { #생디칼리즘 행정
 		random = no

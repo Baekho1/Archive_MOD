@@ -93,6 +93,33 @@ country_event = { #『공산당 선언』
 			ideology = communism
 			popularity = 0.01
 		}
+		add_country_leader_trait = RED_cherino_learner
+		effect_tooltip = {
+			RED_cherino = {
+				add_to_variable = {
+					var = RED_cherino_communism_knowledge
+					value = 1
+					tooltip = RED_cherino_communism_knowledge_tt
+				}
+				add_to_variable = {
+					var = RED_cherino_ideal_values
+					value = 1
+					tooltip = RED_cherino_ideal_values_tt
+				}
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = RED_cherino_communism_knowledge
+				value = 1
+				tooltip = RED_cherino_communism_knowledge_tt
+			}
+			add_to_variable = {
+				var = RED_cherino_ideal_values
+				value = 1
+				tooltip = RED_cherino_ideal_values_tt
+			}
+		}
 	}
 }
 
@@ -3369,21 +3396,24 @@ country_event = { #권력쟁투 시작
 		}
 	}
 }
-country_event = { #편집국의 반대
+country_event = { #트로츠키-체리노 대립 / 출판부
 	id = RED_event.6 
 	title = RED_event.6.t
 	desc = RED_event.6.d
 	hidden = no
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #ㅇㅋ
+	option = { #체리노 승
 		name = RED_event.6.a
-		add_political_power = 10
+		effect_tooltip = {
+			unlock_national_focus = RED_kill_editorial
+		}
 		set_country_flag = RED_edit_disagree
 	}
 	option = { #ㄴㄴ
 		name = RED_event.6.b
-		add_political_power = -10
+		effect_tooltip={unlock_national_focus = RED_socialist_press}
+		set_country_flag = RED_edit_disagree_1
 	}
 }
 

@@ -71,7 +71,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = SPR
-					value = 10
+					value > 10
 				}
 			}
 			has_equipment = {
@@ -114,7 +114,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = GEH
-					value = 10
+					value > 10
 				}
 			}
 			has_equipment = {
@@ -157,7 +157,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = GEH
-					value = 10
+					value > 10
 				}
 			}
 			has_equipment = {
@@ -198,7 +198,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = MIL
-					value = 10
+					value > 10
 				}
 			}
 			has_equipment = {
@@ -242,7 +242,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = COU
-					value = 10
+					value > 10
 				}
 			}
 			else_if = {
@@ -253,7 +253,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				network_strength = {
 					target = SHE
-					value = 10
+					value > 10
 				}
 			}
 		}
