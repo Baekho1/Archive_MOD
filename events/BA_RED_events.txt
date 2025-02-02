@@ -65,6 +65,21 @@ country_event = { #모미지를 찾아간 체리노
 		name = RED_tro_event.4.a
 	}
 }
+country_event = { #망명위원회 설립
+	id = RED_tro_event.5
+	title = RED_tro_event.5.t
+	desc = RED_tro_event.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #
+		name = RED_tro_event.5.a
+		unlock_decision_tooltip = RED_invite_ivan_smirnov_dec
+		unlock_decision_tooltip = RED_invite_ivar_smilga_dec
+		unlock_decision_tooltip = RED_invite_karl_radek_dec
+		unlock_decision_tooltip = RED_invite_yevgeny_preobrazhensky_dec
+		unlock_decision_tooltip = RED_invite_aleksandr_shlyapnikov_dec
+	}
+}
 add_namespace = RED_reading
 country_event = { #『공산당 선언』
 	id = RED_reading.1
@@ -3546,7 +3561,7 @@ country_event = { # 2번 선택지
 	}
 }
 
-country_event = { #망명위원회의 설립
+country_event = { #트로츠키주의자들 튀기
 	id = RED_event.14
 	title = RED_event.14.t
 	desc = RED_event.14.d
@@ -3556,7 +3571,70 @@ country_event = { #망명위원회의 설립
 		
 	option = {
 		name = RED_event.14.a
-		unlock_decision_category_tooltip = RED_invite_trotskists_dec_cat
+		if = {
+			limit = {
+				tag = SOV
+			}
+			SOV_paranoia_low_increase_effect = yes
+			if = {
+				limit = {
+					has_idea = trotskyite_plot_nsb
+				}
+				swap_ideas = {
+					remove_idea = trotskyite_plot_nsb
+					add_idea = RED_trotskyite_run
+				}
+			}
+			else = {
+				add_ideas = RED_trotskyite_run
+			}
+		}
+		SOV = {
+			effect_tooltip = {
+				SOV_ivan_smirnov = {
+					set_nationality = SPR
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_ivan_smirnov
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_ivar_smilga = {
+					set_nationality = GEM
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_ivar_smilga
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_karl_radek = {
+					set_nationality = GEM
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_karl_radek
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_yevgeny_preobrazhensky = {
+					set_nationality = MIL
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_yevgeny_preobrazhensky
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_aleksandr_shlyapnikov = {
+					set_nationality = COU
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_aleksandr_shlyapnikov
+			}
+		}
 	}
 }
 country_event = { #반파시즘 노동자전선

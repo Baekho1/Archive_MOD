@@ -819,6 +819,9 @@
  RED_tro_event.4.t: "지식해방전선"
  RED_tro_event.4.d: "아키이즈미 모미지는 지식해방전선에 소속되어 도서관의 사서로 일하고 있는 학생이다. 여느 때와 같이 모미지가 사서 일에 집중하고 있을 때, 돌연히 체리노가 보안위원 여럿을 데리고 등장하였다.\n\n \"흐엑, 체리노 회장? 왜 느닷없이 이곳에 오신 거죠?\"\n\n \"잘 물어보았다! 이 몸이 이곳에 온 이유는 -\"\n\n \"아니, 말씀하시지 않아도 알겠어요. 저희 지식해방전선의 소중한 장서들을 압수하러 오신 거죠?\"\n\n \"아니, 책을 압수하러 온 게 아니라 -\"\n\n \"하지만 이 책만큼은 안돼요! 아직 제대로 읽지도 못했단 말이에요!\"\n\n \"잠깐, 그러니까 이 몸이 여기 온 이유는 그런 시시한 책 때문이 아니라 지식을 얻고자 온 것이다!\"\n\n \"네..? 무슨 지식을 얻고 싶으시기에 이곳에?\"\n\n \"최근에 학원에서 내 자리를 위협하고 있는 트로츠키라는 작자보다 더 많은 지식을 얻어야 돼. 그 자는 엄청 똑똑해서 공산주의에 대해서는 말싸움을 이길 수 없단 말이야!\"\n\n \"그런 문제라면... 역시 책을 빌려드리죠. 공산주의를 배울 생각이라면 카를 마르크스의 '공산당 선언'이 입문으로 좋겠네요!\"\n\n 체리노는 책을 들고 사무국으로 돌아왔다."
  RED_tro_event.4.a: "잠깐, 무슨 내용인지 하나도 모르겠어?!"
+ RED_tro_event.5.t: "망명위원회의 설립"
+ RED_tro_event.5.d: "트로츠키가 우리의 문제를 해결하는 데 도움을 주었기에, 위대하신 체리노 동지께서는 새로운 동지의 친구들을 구하는 일에 도움을 주기로 약속하였습니다. 체리노 회장의 직속 명령으로 신속하게 세워진 이 위원회는 오염된 혁명정신을 따르는 스탈린주의자들에게 핍박받는 전 세계의 트로츠키주의자들을 붉은겨울로 안전하게 모셔 올 것입니다."
+ RED_tro_event.5.a: "이제 그들을 구하러 가보자고."
 
  RED_generic.1.t: "[RED.getname]의 투자 요청"
  RED_generic.1.d: "[RED.getname](으)로부터 자신들의 '재건 채권'을 매입해달라는 요청이 왔습니다. 기한이 지나면 우리는 투자금을 이자와 함께 회수할 수 있을 것입니다."
@@ -957,9 +960,10 @@
  RED_event.13.t: "2번 선택지의 결과"
  RED_event.13.d: "2번 선택지의 결과 설명"
  RED_event.13.a: "알겠다"
- RED_event.14.t: "망명위원회의 설립"
- RED_event.14.d: "트로츠키가 우리의 문제를 해결하는 데 도움을 주었기에, 위대하신 체리노 동지께서는 새로운 동지의 친구들을 구하는 일에 도움을 주기로 약속하였습니다. 체리노 회장의 직속 명령으로 신속하게 세워진 이 위원회는 오염된 혁명정신을 따르는 스탈린주의자들에게 핍박받는 전 세계의 트로츠키주의자들을 붉은 겨울로 안전하게 모셔 올 것입니다."
- RED_event.14.a: "이제 그들을 구하러 가보자고"
+ RED_event.14.t: "도주하는 트로츠키주의자!"
+ RED_event.14.d: "트로츠키 동지의 대의에 동의하는 소비에트 내 많은 지식인, 관료, 활동가들이 트로츠키가 [RED.getname]에서 활동을 재개한다는 소식을 접하자 소련을 벗어나 망명에 들었습니다. 운이 좋다면 체리노 동지께서 이들을 규합하실 수 있을 것입니다."
+ RED_event.14.a: "형세가 바뀌고 있다."
+ RED_event.14_tt: "\n"
  
 #이벤트(마리나)
  
@@ -1400,12 +1404,15 @@
  politics_RED_tomoe_desc: "용역부장"
  
 #디시전
- RED_invite_trotskists_dec_cat: "트로츠키주의자 초대"
- RED_invite_ivan_smirnov_dec: "이반 스미르노프 초대"
- RED_invite_ivar_smilga_dec: "이바르 스밀가 초대"
- RED_invite_karl_radek_dec: "카를 라데크 초대"
- RED_invite_yevgeny_preobrazhensky_dec: "예브게니 프레오브라젠스키 초대"
- RED_invite_aleksandr_shlyapnikov_dec: "알렉산드르 실랴프니코프 초대"
+ RED_invite_trotskists_dec_cat: "제4인터내셔널"
+ RED_invite_trotskists_dec_cat_desc: "제4인터내셔널에대한설명을적어주세요"
+ RED_invite_ivan_smirnov_dec: "$SOV_ivan_smirnov$ 초빙"
+ RED_invite_ivar_smilga_dec: "$SOV_ivar_smilga$ 초빙"
+ RED_invite_karl_radek_dec: "$SOV_karl_radek$ 초빙"
+ RED_invite_yevgeny_preobrazhensky_dec: "$SOV_yevgeny_preobrazhensky$ 초빙"
+ RED_invite_aleksandr_shlyapnikov_dec: "$SOV_aleksandr_shlyapnikov$ 초빙"
+
+
 
  RED_seek_allies_dec_cat: "동맹 모색"
  RED_seek_allies_dec: "공산주의 동맹 모색"

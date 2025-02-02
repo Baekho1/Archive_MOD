@@ -59,48 +59,31 @@ RED_seek_allies_dec_cat = {
 }
 
 RED_invite_trotskists_dec_cat = {
-	#트로츠키 주의자 초청
+	#트로츠키주의자 규합
 	RED_invite_ivan_smirnov_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
-			NOT = {
-				has_war_with = SOV
-			}
-			SOV = {
-				SOV_ivan_smirnov = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag
-					}
+			if = {
+				limit = {
+						SPR = {
+							exists = yes
+						}
+				}
+				network_strength = {
+					target = SPR
+					value = 10
 				}
 			}
 			has_equipment = {
-				infantry_equipment > 100
+				infantry_equipment > 99
 			}
 		}
 		fire_only_once = yes
 		days_remove = 35
-		modifier = {
-			civilian_factory_use = 3
-		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -100
-			}
-			SOV = {
-				if = {
-					limit = {
-						SOV_ivan_smirnov = {
-							has_character_flag = SOV_targeted_for_purge_flag
-							NOT = {
-								has_character_flag = SOV_safe_from_purge_flag
-							}
-						}
-					}
-					SOV_ivan_smirnov = {
-						set_character_flag = SOV_safe_from_purge_flag
-					}
-				}
 			}
 		}
 		remove_effect = {
@@ -111,14 +94,10 @@ RED_invite_trotskists_dec_cat = {
 					}
 				}
 			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				hidden_effect = {
-					retire_character = SOV_ivan_smirnov
-					ROOT = {
-						RED_ivan_smirnov = {
-							set_character_flag = RED_invited_trotskist
-						}
+			hidden_effect = {
+				ROOT = {
+					RED_ivan_smirnov = {
+						set_character_flag = RED_invited_trotskist
 					}
 				}
 			}
@@ -127,41 +106,27 @@ RED_invite_trotskists_dec_cat = {
 	RED_invite_ivar_smilga_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
-			NOT = {
-				has_war_with = SOV
-			}
-			SOV = {
-				SOV_ivar_smilga = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag
-					}
+			if = {
+				limit = {
+						GEH = {
+							exists = yes
+						}
+				}
+				network_strength = {
+					target = GEH
+					value = 10
 				}
 			}
 			has_equipment = {
-				infantry_equipment > 100
+				infantry_equipment > 99
 			}
 		}
 		fire_only_once = yes
 		days_remove = 35
-		modifier = {
-			civilian_factory_use = 3
-		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -100
-			}
-			SOV = {
-				if = {
-					limit = {
-						SOV_ivar_smilga = {
-							has_character_flag = SOV_targeted_for_purge_flag
-						}
-					}
-					SOV_ivar_smilga = {
-						set_character_flag = SOV_safe_from_purge_flag
-					}
-				}
 			}
 		}
 		remove_effect = {
@@ -172,17 +137,10 @@ RED_invite_trotskists_dec_cat = {
 					}
 				}
 			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				hidden_effect = {
-					retire_character = SOV_ivar_smilga
-					ROOT = {
-						RED_ivar_smilga = {
-							set_character_flag = RED_invited_trotskist
-						}
+			hidden_effect = {
+				ROOT = {
+					RED_ivar_smilga = {
+						set_character_flag = RED_invited_trotskist
 					}
 				}
 			}
@@ -191,41 +149,27 @@ RED_invite_trotskists_dec_cat = {
 	RED_invite_karl_radek_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
-			NOT = {
-				has_war_with = SOV
-			}
-			SOV = {
-				SOV_karl_radek = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag
-					}
+			if = {
+				limit = {
+						GEH = {
+							exists = yes
+						}
+				}
+				network_strength = {
+					target = GEH
+					value = 10
 				}
 			}
 			has_equipment = {
-				infantry_equipment > 100
+				infantry_equipment > 99
 			}
 		}
 		fire_only_once = yes
 		days_remove = 35
-		modifier = {
-			civilian_factory_use = 3
-		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -100
-			}
-			SOV = {
-				if = {
-					limit = {
-						SOV_karl_radek = {
-							has_character_flag = SOV_targeted_for_purge_flag
-						}
-					}
-					SOV_karl_radek = {
-						set_character_flag = SOV_safe_from_purge_flag
-					}
-				}
 			}
 		}
 		remove_effect = {
@@ -236,18 +180,9 @@ RED_invite_trotskists_dec_cat = {
 					}
 				}
 			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				hidden_effect = {
-					retire_character = SOV_karl_radek
-					ROOT = {
-						RED_karl_radek = {
-							set_character_flag = RED_invited_trotskist
-						}
-					}
+			ROOT = {
+				RED_karl_radek = {
+					set_character_flag = RED_invited_trotskist
 				}
 			}
 		}
@@ -255,41 +190,27 @@ RED_invite_trotskists_dec_cat = {
 	RED_invite_yevgeny_preobrazhensky_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
-			SOV = {
-				NOT = {
-					has_war_with = SOV
+			if = {
+				limit = {
+						MIL = {
+							exists = yes
+						}
 				}
-				SOV_yevgeny_preobrazhensky = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag
-					}
+				network_strength = {
+					target = MIL
+					value = 10
 				}
 			}
 			has_equipment = {
-				infantry_equipment > 100
+				infantry_equipment > 99
 			}
 		}
 		fire_only_once = yes
 		days_remove = 35
-		modifier = {
-			civilian_factory_use = 3
-		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -100
-			}
-			SOV = {
-				if = {
-					limit = {
-						SOV_yevgeny_preobrazhensky = {
-							has_character_flag = SOV_targeted_for_purge_flag
-						}
-					}
-					SOV_yevgeny_preobrazhensky = {
-						set_character_flag = SOV_safe_from_purge_flag
-					}
-				}
 			}
 		}
 		remove_effect = {
@@ -300,18 +221,9 @@ RED_invite_trotskists_dec_cat = {
 					}
 				}
 			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				hidden_effect = {
-					retire_character = SOV_yevgeny_preobrazhensky
-					ROOT = {
-						RED_yevgeny_preobrazhensky = {
-							set_character_flag = RED_invited_trotskist
-						}
-					}
+			ROOT = {
+				RED_yevgeny_preobrazhensky = {
+					set_character_flag = RED_invited_trotskist
 				}
 			}
 		}
@@ -319,41 +231,38 @@ RED_invite_trotskists_dec_cat = {
 	RED_invite_aleksandr_shlyapnikov_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
-			NOT = {
-				has_war_with = SOV
+			has_equipment = {
+				infantry_equipment > 99
 			}
-			SOV = {
-				SOV_aleksandr_shlyapnikov = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag
-					}
+			if = {
+				limit = {
+						COU = {
+							exists = yes
+						}
+				}
+				network_strength = {
+					target = COU
+					value = 10
 				}
 			}
-			has_equipment = {
-				infantry_equipment > 100
+			else_if = {
+				limit = {
+						SHE = {
+							exists = yes
+						}
+				}
+				network_strength = {
+					target = SHE
+					value = 10
+				}
 			}
 		}
 		fire_only_once = yes
 		days_remove = 35
-		modifier = {
-			civilian_factory_use = 3
-		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -100
-			}
-			SOV = {
-				if = {
-					limit = {
-						SOV_aleksandr_shlyapnikov = {
-							has_character_flag = SOV_targeted_for_purge_flag
-						}
-					}
-					SOV_aleksandr_shlyapnikov = {
-						set_character_flag = SOV_safe_from_purge_flag
-					}
-				}
 			}
 		}
 		remove_effect = {
@@ -364,18 +273,9 @@ RED_invite_trotskists_dec_cat = {
 					}
 				}
 			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-			}
-			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				hidden_effect = {
-					retire_character = SOV_aleksandr_shlyapnikov
-					ROOT = {
-						RED_aleksandr_shlyapnikov = {
-							set_character_flag = RED_invited_trotskist
-						}
-					}
+			ROOT = {
+				RED_aleksandr_shlyapnikov = {
+					set_character_flag = RED_invited_trotskist
 				}
 			}
 		}

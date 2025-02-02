@@ -13,9 +13,9 @@ RED_seek_allies_dec_cat = { #동맹 모색
 	}
 }
 
-RED_invite_trotskists_dec_cat = { #트로츠키주의자 초청
-	icon = GFX_decision_category_generic_independence
-
+RED_invite_trotskists_dec_cat = { #제4인터내셔널
+	icon = GFX_decision_category_SOV_permanent_revolution
+	picture = GFX_decision_cat_picture_soviet_civil_war
 	allowed = {
 		original_tag = RED
 	}
