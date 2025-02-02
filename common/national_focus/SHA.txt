@@ -1391,24 +1391,112 @@ focus_tree = {
 		}
 	}
 
+	# 현지 화합?
+	focus = {
+		id = SHA_local_harmony
+		icon = GFX_focus_AUS_diplomatic_effort
+		x = -7
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_Austrian_appeasement_policy }
+		mutually_exclusive = { focus = SHA_gathering_of_radicals }
+
+		available = {
+			has_country_flag = GAEBALJUNG
+		}
+		bypass = { }
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = SHA_gathering_of_radicals
+					has_completed_focus = SHA_Austrian_oppression_continues
+				}
+			}
+		}
+		offset = {
+			x = 7
+			trigger = {
+				has_completed_focus = SHA_local_harmony
+			}
+		}
+		relative_position_id = SHA_Austrian_appeasement_policy
+
+		completion_reward = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+
+		}
+	}
+
+
+	##############
+	####외교 중점####
+	##############
+
+	# 남키보토스
+	focus = {
+		id = SHA_Southern_Kivotos
+		icon = GFX_goal_SHA_Southern_Kivotos
+		x = 24
+		y = 0
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = SHA_gathering_of_radicals
+			}
+		}
+		offset = {
+			x = -25
+			trigger = {
+				has_completed_focus = SHA_Austrian_oppression_continues
+			}
+		}
+		relative_position_id = SHA_Austrian_appeasement_policy
+		search_filters = {  }
+		cost = 5
+
+		prerequisite = { }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+		}
+	}
+
 	# 비상 조치
 	focus = {
 		id = SHA_emergency_measures
 		icon = GFX_focus_generic_mass_production
 		x = 0
-		y = 3
+		y = 2
 		cost = 10
 
 		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
-			focus = SHA_conservative_revolution
+			focus = SHA_Southern_Kivotos
 		}
 		mutually_exclusive = {  }
 
 		available = { }
 		bypass = { }
 
-		relative_position_id = SHA_Kisaki_Suppression
+		relative_position_id = SHA_Southern_Kivotos
 
 		select_effect = {
 			add_timed_idea = {
@@ -1444,7 +1532,7 @@ focus_tree = {
 		id = SHA_invade_of_Hyakkiyako
 		icon = GFX_focus_attack_HYA
 		x = 0
-		y = 3
+		y = 2
 		cost = 10
 
 		prerequisite = { focus = SHA_emergency_measures }
@@ -1487,7 +1575,7 @@ focus_tree = {
 	focus = {
 		id = SHA_2nd_conservative_revolution
 		icon = GFX_goal_SHA_conservative_revolution_2nd
-		x = -4
+		x = 4
 		y = 1
 		cost = 10
 
@@ -1645,7 +1733,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SHA_Establishment_of_the_National_Council
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_Resurrection_of_the_Soul_of_Shanhaijing }
 		prerequisite = { focus = SHA_Establishment_of_the_National_Council }
@@ -1661,9 +1749,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_country_leader_trait = SHA_rider_of_revolution
-
-			set_rule = { can_create_factions = yes }
-			create_faction = Shanhaijing_faction
 		}
 	}
 
@@ -1747,7 +1832,7 @@ focus_tree = {
 	focus = {
 		id = SHA_ascension
 		icon = GFX_goal_SHA_ascend
-		x = 4
+		x = 8
 		y = 1
 		cost = 10
 
@@ -1926,7 +2011,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SHA_supremacy_of_will
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_supremacy_of_technology }
 		prerequisite = { focus = SHA_supremacy_of_will }
@@ -1941,9 +2026,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_country_leader_trait = SHA_revolutionary_genius
-
-			set_rule = { can_create_factions = yes }
-			create_faction = Shanhaijing_faction
 
 		}
 	}
@@ -1990,6 +2072,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SHA_ascension focus = SHA_2nd_conservative_revolution }
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
 		mutually_exclusive = { }
 
 		available = { 
@@ -2179,7 +2262,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_third_rome
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SHA_Establishment_of_the_Governor_General }
 		mutually_exclusive = { 
@@ -2196,9 +2279,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_country_leader_trait = SHA_herald_of_third_kivotos
-
-			set_rule = { can_create_factions = yes }
-			create_faction = Shanhaijing_faction
 			
 			#mark_focus_tree_layout_dirty = yes
 		}
@@ -2371,56 +2451,6 @@ focus_tree = {
 	#### 급진파 결집 - 산해경 승전 루트####
 	#########################
 
-	# 현지 화합?
-	focus = {
-		id = SHA_local_harmony
-		icon = GFX_focus_AUS_diplomatic_effort
-		x = -7
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_Austrian_appeasement_policy }
-		mutually_exclusive = { focus = SHA_gathering_of_radicals }
-
-		available = {
-			has_country_flag = GAEBALJUNG
-		}
-		bypass = { }
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = SHA_gathering_of_radicals
-					has_completed_focus = SHA_Austrian_oppression_continues
-				}
-			}
-		}
-		offset = {
-			x = 7
-			trigger = {
-				has_completed_focus = SHA_local_harmony
-			}
-		}
-		relative_position_id = SHA_Austrian_appeasement_policy
-
-		completion_reward = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-
-		}
-	}
 
 	
 	##############
@@ -2431,8 +2461,8 @@ focus_tree = {
 	focus = {
 		id = SHA_relief_work
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = 24
-		y = 0
+		x = 15
+		y = 12
 		offset = {
 			x = -6
 			trigger = {
@@ -3628,20 +3658,8 @@ focus_tree = {
 	focus = {
 		id = SHA_address_the_army
 		icon = GFX_goal_SHA_Army_Training
-		x = 27
-		y = 7
-		offset = {
-			x = -2
-			trigger = {
-				has_completed_focus = SHA_gathering_of_radicals
-			}
-		}
-		offset = {
-			x = -25
-			trigger = {
-				has_completed_focus = SHA_Austrian_oppression_continues
-			}
-		}
+		x = 0
+		y = 12
 		relative_position_id = SHA_Austrian_appeasement_policy
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		cost = 3

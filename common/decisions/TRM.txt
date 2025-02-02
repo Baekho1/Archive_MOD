@@ -74,7 +74,6 @@ TRN_country_collapse_decisions = {
 		
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
-			NOT = { has_global_flag = TRM_ban_on_political_party_activities_flag }
 		}
 		
 		fire_only_once = yes

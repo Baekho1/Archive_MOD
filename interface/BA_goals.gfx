@@ -69,6 +69,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRN_Ministry_of_Justice_on_leash.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_TRN_necessary_revenge"
+		texturefile = "gfx/interface/goals/TRN/TRN_necessary_revenge.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_TRN_declare_trinity_order_state"
 		texturefile = "gfx/interface/goals/TRN/TRN_declare_trinity_order_state.tga"
 	}
@@ -1860,6 +1864,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_SHA_clash_of_civilizations"
 		texturefile = "gfx/interface/goals/SHA/SHA_clash_of_civilizations.tga"  
+	}
+	SpriteType = {
+		name = "GFX_goal_SHA_Southern_Kivotos"
+		texturefile = "gfx/interface/goals/SHA/SHA_Southern_Kivotos.tga"  
 	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"

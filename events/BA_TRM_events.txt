@@ -8402,10 +8402,27 @@ country_event = {
 	}
 }
 country_event = { # 티파티 통제
+	id = trinity.10000
+	title = trinity.10000.t
+	desc = trinity.10000.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.10000.a
+		country_event = { id = trinity.6 days = 03 }
+		load_focus_tree = {
+			tree = Trinity_focus
+		}
+    }
+}
+country_event = { # 티파티 통제
 	id = trinity.1
 	title = trinity.1.t
 	desc = trinity.1.desc
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8417,6 +8434,7 @@ country_event = { # 티파티 통제
 			slot = political_advisor
 			trait = b_cjstkdmldusgkq
 		}
+
 		hidden_effect = {
 			country_event = { id = trinity.2 days = 04 }
 		}
@@ -8475,7 +8493,15 @@ country_event = { # 미소노 미카 법
 
 	option = {
 		name = trinity.4.a
-
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.20
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.20
+		}
+		set_politics = { ruling_party = fascism elections_allowed = no }
     }
 }
 country_event = { # 마지막 자유 발언
@@ -8550,7 +8576,7 @@ country_event = { # 가슴에 3발
 	id = trinity.9
 	title = trinity.9.t
 	desc = trinity.9.desc
-	picture = GFX_report_event_tur_ataturk_impassioned_speech
+	picture = GFX_report_walter_ppk
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8618,18 +8644,17 @@ country_event = { # 사망 선언
 	option = {
 		name = trinity.10.a
 		effect_tooltip = {
-			country_event = { id = trinity.11 days = 03 }
+			country_event = { id = trinity.11 days = 03 } # 미카 호스트 취임
 		}
 		hidden_effect = {
-			TRN_tpdldk = {
-				set_character_flag = TRN_fake_death_flag
-			}
+			TRN_tpdldk = { set_character_flag = TRN_fake_death_flag }
 			TRN_alzk = {
 				unit_leader_event = {
 					id = trinity.11
 					days = 03
 				}
 			}
+			country_event = { id = trinity.12 days = 10 } # 토마스 서머 수사
 		}
 		add_country_leader_role = {
 			character = TRN_Natsuki_Kato
@@ -8670,16 +8695,16 @@ unit_leader_event = { # 미카의 호스트 취임
 			}
 		}
 		effect_tooltip = {
-			country_event = { id = trinity.13 days = 04 }
+			country_event = { id = trinity.13 days = 04 } # 정의실현부 음모
 		}
 		hidden_effect = {
 			TRN_cmfnrl = {
-				unit_leader_event = { id = trinity.13 days = 04 }
+				unit_leader_event = { id = trinity.13 days = 04 } # 정의실현부 음모
 			}
 		}
     }
 }
-country_event = { # 필리우스 음모론
+country_event = { # 토마스 서머 수사
 	id = trinity.12
 	title = trinity.12.t
 	desc = trinity.12.desc
@@ -8690,6 +8715,11 @@ country_event = { # 필리우스 음모론
 
 	option = {
 		name = trinity.12.a
+		add_manpower = -1
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { id = trinity.15 days = 08 } # 세이아 장례식
+		}
     }
 }
 unit_leader_event = { # 정의실현부의 음모?
@@ -8703,6 +8733,101 @@ unit_leader_event = { # 정의실현부의 음모?
 
 	option = {
 		name = trinity.13.a
+		add_stability = -0.03
+    }
+}
+country_event = { # 정의실현부 작전
+	id = trinity.14
+	title = trinity.14.t
+	desc = trinity.14.desc
+	picture = GFX_report_justice_take_force
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.14.a
+		every_unit_leader = {
+			limit = {
+				OR = {
+					is_character = TRN_cmfnrl
+					is_character = TRN_gktmal
+				}
+			}
+			add_timed_unit_leader_trait = {
+				trait = reassigned 
+				days = 180
+			}
+			add_timed_unit_leader_trait = {
+				trait = disgruntled 
+				days = 180
+			}
+		}
+    }
+}
+country_event = { # 세이아 장례식
+	id = trinity.15
+	title = trinity.15.t
+	desc = trinity.15.desc
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.15.a
+		add_popularity = { 
+			ideology = communism 
+			popularity = 0.03
+		}
+    }
+}
+country_event = { # 상투스 분파의 절멸
+	id = trinity.16
+	title = trinity.16.t
+	desc = trinity.16.desc
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.16.a
+		add_popularity = { ideology = communism popularity = -0.06 }
+		custom_effect_tooltip = TRM_sanctus_del_tt
+		set_variable = { TRM_internal_factions_remove_var = 1 } #지울 세력 코드
+		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+    }
+}
+country_event = { # 필리우스 분파의 운명
+	id = trinity.17
+	title = trinity.17.t
+	desc = trinity.17.desc
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.17.a
+		add_popularity = { ideology = neutrality popularity = -0.06 }
+		custom_effect_tooltip = TRM_filius_del_tt
+		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
+		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+    }
+}
+country_event = { # 대법관 임명
+	id = trinity.18
+	title = trinity.18.t
+	desc = trinity.18.desc
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.18.a
+		
     }
 }
 news_event = {
@@ -8716,6 +8841,7 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = TRM_flag_seia_cut
+		
 	}
 
 	option = {
@@ -8750,6 +8876,68 @@ news_event = {
 	}
 	option = {
 		name = BA_news.1.d
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = trinitynews.1000
+	title = trinitynews.1000.t
+	desc = trinitynews.1000.desc
+	picture = GFX_news_MIL_Animated_Hatsune_Miku
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = trinitynews.1000.a
+		trigger = {
+			OR = {
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = TRM
+				TAG = GEH
+				TAG = GEM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+			}
+		}
+	}
+	option = {
+		name = trinitynews.1000.b
 		trigger = {
 			NOT = {
 				OR = {

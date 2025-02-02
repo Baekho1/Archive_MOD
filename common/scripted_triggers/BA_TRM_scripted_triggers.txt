@@ -25,7 +25,7 @@ TRM_focus_locked_available = {
 	}
 }
 
-# 조건 주 스크립트 씨발련들아 오타 존나 나네
+# 조건 주 스크립트
 TRM_is_state_Trinity_want = {
 	OR = {
 		state = 59

@@ -477,8 +477,12 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TRM/TRM_Event_14.tga"
 	}
     spriteType = {
-      name = "GFX_TRM_event_24"
+      name = "GFX_report_justice_take_force"
        texturefile = "gfx/event_pictures/TRM/TRM_event_24.tga"
+    }
+    spriteType = {
+      name = "GFX_report_walter_ppk"
+       texturefile = "gfx/event_pictures/TRM/report_walter_ppk.png"
     }
     spriteType = {
        name = "GFX_trnstory_4"
@@ -761,5 +765,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_MIL_KurosakiKoyuki_event"
 		texturefile = "gfx/event_pictures/MIL_KurosakiKoyuki_event.tga"
+	}
+}
+
+# 움직이는 사진
+
+spriteTypes = {
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_MIL_Animated_Hatsune_Miku"
+		texturefile = "gfx/event_animate_pictures/news_MIL_Animated_Hatsune_Miku.png"
+		noOfFrames = 33
+		loadType = "INGAME"
+		allwaystransparent = no
+		animation_rate_fps = 24
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
 	}
 }

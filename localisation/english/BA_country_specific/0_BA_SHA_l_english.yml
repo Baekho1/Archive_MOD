@@ -690,7 +690,7 @@
  SHA_union_control_desc: ""
  SHA_establish_the_VES: "중앙계획위원회 재편"
  SHA_establish_the_VES_desc: ""
- SHA_economic_health_2_tt: "§C대공황 단계§!가 §Y2§!보다 낮거나 같음"
+ SHA_economic_health_2_tt: "§Y대공황 단계§!가 §Y2§!보다 낮거나 같음"
  SHA_teleological_planning: "목적론적 산업 계획"
  SHA_teleological_planning_desc: ""
  SHA_solidarist_representation: "협동조합주의적 대표성"
@@ -870,6 +870,9 @@
  SHA_Utopia: "이상향"
  SHA_Utopia_desc: "피로 물든 싸움 아래에 남키보토스는 하나의 학원으로 통합되었고 모든 이들은 남키보토스 통합에 대해 축배를 들며 모두가 기뻐하고 있습니다. 모든 이들의 이상향에 도달하게 되었고 우리 모든 남키보토스인들은 풍요롭고 안전하게 살 것입니다."
 
+ # 외교
+ SHA_Southern_Kivotos: "남부 키보토스"
+
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
  SHA_Austrian_fascist_militia_desc: "산해경이 전이되면서 비무장 상태였던 오스트리아는 저항할 틈도 없이 속수무책으로 항복했습니다. 그러나 산해경의 지배는 오스트리아인들에게 또 다른 위협으로 다가왔습니다. 지배를 받아들이기를 거부한 이들은 무기를 들고 저항에 나섰고, 산발적인 게릴라전을 벌이며 산해경 체제에 끊임없는 혼란을 일으키고 있습니다."
@@ -900,7 +903,7 @@
  SHA_austria_unemployment_problem: "대공황"
  SHA_aup_modifier: "$SHA_austria_unemployment_problem$"
  SHA_austria_unemployment_problem_tt: "$MODIFIER_POLITICAL_POWER_COST$ [?SHA_aup_pp|-=]\n$MODIFIER_STABILITY_FACTOR$: [?SHA_aup_stability|+=%]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?SHA_aup_factory_output|+=%]"
- SHA_austria_unemployment_problem_desc: "§C대공황 단계§!: §Y[?SHA_aup_anger|0]§!\n1929년에 발생한 미국의 대공황은 머나먼 유럽의 오스트리아까지 영향을 미쳤습니다. 그러나 이전 오스트리아 정부의 무능과 정책 실패로 인해 이 문제의 부담은 산해경이 고스란히 떠안게 되었습니다.\n\n거리에는 실업자가 넘쳐나고, 노동자들은 빵을 요구하고 있습니다. 이러한 문제는 대공황이 계속되는 한 해결되지 않을 것입니다."
+ SHA_austria_unemployment_problem_desc: "§Y대공황 단계§!: §Y[?SHA_aup_anger|0]§!\n1929년에 발생한 미국의 대공황은 머나먼 유럽의 오스트리아까지 영향을 미쳤습니다. 그러나 이전 오스트리아 정부의 무능과 정책 실패로 인해 이 문제의 부담은 산해경이 고스란히 떠안게 되었습니다.\n\n거리에는 실업자가 넘쳐나고, 노동자들은 빵을 요구하고 있습니다. 이러한 문제는 대공황이 계속되는 한 해결되지 않을 것입니다."
  RUS_increase_pop_anger: "§R대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
  RUS_decrease_pop_anger: "§G대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
  SHA_supreme_economic_council: "중앙경제위원회"
