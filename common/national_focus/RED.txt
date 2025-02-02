@@ -321,6 +321,17 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.05
+				}
+			}
 		}
 	}
 	focus = { # 중공업 확장
@@ -826,6 +837,17 @@ focus_tree = {
 				mark_focus_tree_layout_dirty = yes
 			}
 			custom_effect_tooltip = RED_new_economy_focus_0_tt
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
+				}
+			}
 		}
 	}
 	focus = { # 완전고용을 향해
@@ -853,6 +875,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_new_economy_focus_1
 		cost = 4
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_3
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -878,7 +903,14 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_2
+		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_full_employment
+				add_idea = RED_full_employment_2
+			}
 			141 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2830,7 +2862,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			threat > 0.15
 			is_subject = no
 			
 		}
@@ -2865,11 +2896,10 @@ focus_tree = {
 			focus = RED_new_inteligence_agency
 		}
 		available = {
-   
+			threat > 0.15
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			has_intelligence_agency = yes
 		}
 		completion_reward = {
 			custom_effect_tooltip = RED_operative_effects1_tt
@@ -2890,6 +2920,7 @@ focus_tree = {
 			focus = RED_new_inteligence_agency
 		}
 		available = {
+			threat > 0.15
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -3027,20 +3058,19 @@ focus_tree = {
 					transfer_troops = yes
 				}
 			}
-			if = {
-				limit = {
-					RE4 = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				annex_country = {
-					target = RE4
-					transfer_troops = yes
-				}
-			}
 			unlock_decision_category_tooltip = RED_forced_relocation_policy
 			RED_population_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
+				}
+			}
 		}
 	}
 
@@ -3077,6 +3107,17 @@ focus_tree = {
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE2
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE3
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE4
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.05
+				}
+			}
 		}
 	}
 
@@ -3276,6 +3317,17 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_kill_editorial_tt
 			RED_corruption_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.05
+				}
+			}
 		}
 	}
 	focus = { #편집국 약화
@@ -3310,6 +3362,17 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_kill_editorial_tt
 			RED_corruption_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
+				}
+			}
 		}
 	}
 
@@ -3336,6 +3399,17 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_publishing_idea_soc
 				add_idea = RED_publishing_idea_soc_hero
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
+				}
 			}
 		}
 	}
@@ -3429,6 +3503,17 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_publishing_idea_soc
 				add_idea = RED_publishing_idea_soc_col
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.05
+				}
 			}
 		}
 	}
@@ -7595,6 +7680,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_rearming_focus_1
 		}
+		mutually_exclusive = {
+			focus = RED_rearming_focus_3
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -7632,6 +7720,9 @@ focus_tree = {
 		relative_position_id = RED_rearming_focus_1
 		ai_will_do = {
 			factor = 1
+		}
+		mutually_exclusive = {
+			focus = RED_rearming_focus_2
 		}
 		prerequisite = {
 			focus = RED_rearming_focus_1
@@ -8195,7 +8286,7 @@ focus_tree = {
 	}
 	focus = { #동원 강화
 		id = RED_strengthen_the_mobilization_plan
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_generic_limited_social_mobilization
 		x = -4
 		y = 1
 		relative_position_id = RED_rearming_focus_0
@@ -8242,6 +8333,17 @@ focus_tree = {
 			custom_effect_tooltip = RED_restore_cossack_units_tt
 			add_to_variable = { RED_winter_army_modifier_army_sub_unit_infantry_speed_factor = 0.05 }
 			add_to_variable = { RED_winter_army_army_infantry_attack_factor = 0.05 }
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.05
+				}
+			}
 		}
 	}
 	focus = { #열의
@@ -8269,6 +8371,17 @@ focus_tree = {
 			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
 			add_to_variable = { RED_winter_army_training_time_factor = 0.1 }
 			add_to_variable = { RED_winter_army_mobilization_speed = 0.05 }
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
+				}
+			}
 		}
 	}
 
@@ -10411,7 +10524,7 @@ focus_tree = {
 	}
 	focus = { #대규모 동원
 		id = RED_revolution_war_focus_8
-		icon = GFX_focus_generic_limited_social_mobilization
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 4
 		relative_position_id = RED_revolution_war_focus_0
 		x = -3

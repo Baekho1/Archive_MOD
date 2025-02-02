@@ -94,10 +94,18 @@ ideas = {
 			picture = ARG_construction_guilds
 			modifier = {
 				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+				political_power_factor = -0.05
+				conscription_factor = -0.1
+			}
+		}
+		RED_full_employment_2 = { #완전고용
+			name = RED_full_employment
+			picture = ARG_construction_guilds
+			modifier = {
 				production_speed_buildings_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
-				political_power_factor = -0.05
 				conscription_factor = -0.1
 			}
 		}

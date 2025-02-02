@@ -61,6 +61,17 @@ recruit_character = RED_herman_eriksson
 recruit_character = RED_johan_h_andresen
 recruit_character = RED_christmas_moller
 recruit_character = RED_central_labor_union
+#체리노의 성장 시스템
+set_variable = {
+	RED_cherino_communism_knowledge = 0
+}
+set_variable = {
+	RED_cherino_ideal_values = 0
+}
+set_variable = {
+	RED_cherino_social_analizing = 0
+}
+
 #대중의 요구 시스템
 set_variable = {
 	RED_public_mission_completed = 0
@@ -163,7 +174,6 @@ set_technology = {
 	motorised_infantry = 1
 	interwar_antiair = 1
 	basic_train = 1
-	mobile_warfare = 1
 	trade_interdiction = 1
 	formation_flying = 1
 	synth_oil_experiments = 1

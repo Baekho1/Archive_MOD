@@ -1349,7 +1349,6 @@ country_event = { #엄습하는 반혁명
 			promote_character = RED_cherino
 			puppet = RE1
 			puppet = RE3
-			puppet = RE4
 			hidden_effect={remove_ideas = { RED_democratic_resistancel_idea RED_democratic_resistancel_week_idea RED_academic_regime_dominance_idea RED_military_government_idea_1 RED_military_government_idea_2 RED_military_government_idea_3 RED_military_government_idea_4 RED_military_government_idea_exit }}
 			set_cosmetic_tag = RE2_antirevolution
 		}
