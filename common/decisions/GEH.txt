@@ -333,7 +333,7 @@ political_actions = {
 		}
     }
 }
-GEH_external_activities {
+GEH_external_activities = {
 	GEH_preparations_for_operation_countenance = { # Mission for SOV (or SOV + ENG) to prepare the invasion of Iran
 		priority = 50
 
