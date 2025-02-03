@@ -28,7 +28,13 @@
  GEH_rework_focus_3_desc: "시로미 이오리가 지휘하는 실행부는 선도부의 군사력을 관리하고 전투 훈련을 담당하는 핵심 부서입니다. 이들은 엄격한 훈련 프로그램을 통해 선도부원들의 전투 능력을 향상시키고, 필요시 신속하고 효과적인 군사 작전을 수행하여 선도부의 안전과 목표 달성을 보장합니다."
  GEH_fear_eyes: "풍기집행"
  GEH_fear_eyes_desc: "만마전이 우리를 적대시함은 확실해졌습니다.\n이렇게 된 이상 게헨나의 가장 문젯거리였던 만마전에게 \"풍기집행\"을 할 때가 되었습니다."
- 
+ GEH_fear_eyes_tt: "우리는 $GEH_operation_countenance$ 시작과 동시에 [GEM.GetNameDef]에 선전포고하기 전까지 §Y30일§! 동안 준비할 수 있을 것입니다. \n$GEH_fear_eyes_mission_tt$\n"
+ GEH_fear_eyes_mission_tt: "§Y$GEH_operation_countenance$§! 임무가 활성화되면 [GetOperationCountenanceTooltip] 부대가 [GEM.GetNameDef]측을 항복시키기까지 §Y60 일§!을 갖게 됩니다. 만약 이 기한이 지날 경우 그들은 다른 세력에 가담하려고 시도할 것이고, 우리 국민들은 우리의 군사력에 대해 걱정하기 시작할 것입니다."
+ GEH_shocked_by_surprise_attack: "기습 공격에 놀람"
+ GEH_shocked_by_surprise_attack_desc: "우리에 대항한 선도부의 전략, 풍기집행은 우리 만마전 전체를 충격에 빠지게 하였습니다. 우리 군은 압도되었고, 우리 연락망은 단절되었으며, 상대 측 책임자들을 불러 해명을 요구하는 것도 의미 없다는 것을 알았습니다. 우리 측이 이 사태를 파악하려는 동안, 우리의 외교 관계는 무력화 될 것입니다."
+ GEH_preparations_for_operation_countenance: "풍기집행 준비"
+ GEH_operation_countenance: "풍기집행"
+
  GEH_second_congress_focus: "제 2차 선도부 총회"
  GEM_Start_nego_tt: "@GEM§Y[GEM.GetAdjective]§!(이)가 @GEA§Y[GEA.GetName]§!(과)와 협상 중임"
 

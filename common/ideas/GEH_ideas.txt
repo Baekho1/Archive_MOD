@@ -41,6 +41,35 @@ ideas = {
 				custom_modifier_tooltip = kivotos_halo_remove6_tt
 			}
 		}
+
+		GEH_shocked_by_surprise_attack = {
+
+			picture = chi_incompetent_officers
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			on_add = {
+				set_rule = { can_join_factions = no }
+			}
+
+			on_remove = {
+				set_rule = { can_join_factions = yes }
+			}
+
+			modifier = {
+				mobilization_speed = 0.5
+				cannot_call_allies_or_join_wars = 1
+				custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
+			}
+		}
         
 		GEH_negotiation_with_german_delegation_idea = { # 바이에른 협상
 			picture = ger_rebuild_the_nation

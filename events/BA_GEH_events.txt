@@ -61,12 +61,6 @@ country_event = { # 중점 바뀌고 만마전에 선전포고
 	
 	option = { 
 		name = NextPhase.1.a 
-        #custom_effect_tooltip = NextPhase_1_tt
-		declare_war_on = {
-			target = GEM
-			type = annex_everything
-        }
-        scoped_play_song = "BA_to_battle"
 	}
 }
 country_event = { # 
@@ -193,7 +187,7 @@ country_event = { # 1차 총회 개막
             }
             country_event = { 
                 id = hina_assembly.7
-                days = 77
+                days = 74
             }
 
 			
@@ -207,15 +201,15 @@ country_event = { # 1차 총회 개막
             }
             country_event = { 
                 id = hina_assembly.10
-                days = 66
+                days = 65
             }
             country_event = { 
                 id = hina_assembly.11
-                days = 88
+                days = 83
             }
             country_event = { 
                 id = hina_assembly.12
-                days = 99
+                days = 89
             }
         }
 	}

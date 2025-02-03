@@ -28,6 +28,13 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
+			#Set Iranian initial states (for Anglo-Soviet invasion of Iran)
+			GEM = {
+				every_owned_state = {
+					limit = { is_core_of = GEM }
+					add_to_array = { GEH_gem_initial_states = PREV }
+				}
+			}
 			every_country = {
 				limit = {
 					Kivotos_tag = yes

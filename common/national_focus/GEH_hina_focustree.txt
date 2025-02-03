@@ -433,7 +433,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
-            country_event = { id = NextPhase.1 }
+			activate_mission = GEH_preparations_for_operation_countenance
+			custom_effect_tooltip = GEH_fear_eyes_tt
 		}
 	}
 
