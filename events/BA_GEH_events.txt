@@ -5,6 +5,8 @@ add_namespace = hina
 add_namespace = hina_assembly
 #총회 이벤트
 add_namespace = debug_hina
+#히든 이벤트
+add_namespace = GEH_hidden
 country_event = { # 선도부 소집
 	id = NextPhase.0
 	title = NextPhase.0.t
@@ -613,3 +615,117 @@ country_event = { # 디버그용
         }
 	}
 }
+
+country_event = { #선도부 중점 자동시작
+	id = GEH_hidden.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = GEH_Prefect_Team_muster }
+			}
+			activate_shine_on_focus = GEH_Prefect_Team_muster
+			set_country_flag = { flag = GEH_Prefect_Team_muster_in_progress_flag days = 35 value = 1 }
+			country_event = { id = GEH_hidden.2 days = 35 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GEH_rework_focus_1 }
+			}
+			activate_shine_on_focus = GEH_rework_focus_1
+			set_country_flag = { flag = GEH_rework_focus_1_in_progress_flag days = 35 value = 1 }
+			country_event = { id = GEH_hidden.2 days = 35 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GEH_rework_focus_2 }
+			}
+			activate_shine_on_focus = GEH_rework_focus_2
+			set_country_flag = { flag = GEH_rework_focus_2_in_progress_flag days = 35 value = 1 }
+			country_event = { id = GEH_hidden.2 days = 35 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GEH_rework_focus_3 }
+			}
+			activate_shine_on_focus = GEH_rework_focus_3
+			set_country_flag = { flag = GEH_rework_focus_3_in_progress_flag days = 35 value = 1 }
+			country_event = { id = GEH_hidden.2 days = 35 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+# GOEBBELS - Complete Focus
+country_event = {
+	id = GEH_hidden.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GEH_Prefect_Team_muster
+			}
+			complete_national_focus = {
+				focus = GEH_Prefect_Team_muster
+				use_side_message = yes
+				originator_name = GEH_hina
+			}
+			clr_country_flag = GEH_Prefect_Team_muster_in_progress_flag
+			country_event = { id = GEH_hidden.1 days = 5 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GEH_rework_focus_1
+			}
+			complete_national_focus = {
+				focus = GEH_rework_focus_1
+				use_side_message = yes
+				originator_name = GEH_hina
+			}
+			clr_country_flag = GEH_rework_focus_1_in_progress_flag
+			country_event = { id = GEH_hidden.1 days = 5 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GEH_rework_focus_2
+			}
+			complete_national_focus = {
+				focus = GEH_rework_focus_2
+				use_side_message = yes
+				originator_name = GEH_hina
+			}
+			clr_country_flag = GEH_rework_focus_2_in_progress_flag
+			country_event = { id = GEH_hidden.1 days = 5 }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GEH_rework_focus_3
+			}
+			complete_national_focus = {
+				focus = GEH_rework_focus_3
+				use_side_message = yes
+				originator_name = GEH_hina
+			}
+			clr_country_flag = GEH_rework_focus_3_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+

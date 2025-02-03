@@ -24,6 +24,9 @@ focus_tree = {
         select_effect = {
             country_event=hina.4
             add_political_power = 100
+			hidden_effect = {
+				country_event = { id = GEH_hidden.1 days = 2 }
+			}
         }
         ai_will_do = {
             base = 999
@@ -49,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = GEH_Nuremberg_Wehrmacht
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -68,7 +71,7 @@ focus_tree = {
 	focus = {
 		id = GEH_Regensburg_Wehrmacht
 		icon = GFX_focus_generic_conspiracy
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -135,7 +138,34 @@ focus_tree = {
 		id = GEH_Prefect_Team_muster
 		icon = GFX_goal_Prefect_Team_muster
 		cost = 5
-		available = { }
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_Prefect_Team_muster_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_Prefect_Team_muster_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
+		}
+		text_icon = GER_inner_circle_focus_style
         ai_will_do = {
             base = 200
         }
@@ -157,7 +187,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Ako
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_1_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_1_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         ai_will_do = {
             base = 333
         }
@@ -176,7 +232,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Chinatsu
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_2_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_2_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         prerequisite = {
             focus = GEH_Prefect_Team_muster
         }
@@ -195,7 +277,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Iori
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_3_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_3_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         prerequisite = {
             focus = GEH_Prefect_Team_muster
         }
