@@ -1,0 +1,506 @@
+form_arabia_category = {
+
+	form_arabia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				# Iraq
+				original_tag = IRQ
+				# Saudi Arabia
+				original_tag = SAU
+				# Yemen
+				original_tag = YEM
+				# Oman
+				original_tag = OMA
+				# Egypt
+				original_tag = EGY
+				# Libya
+				original_tag = LBA
+				# Jordan
+				original_tag = JOR
+				# Palestine
+				original_tag = PAL
+				# Lebanon
+				original_tag = LEB
+				# Syria
+				original_tag = SYR
+				# Kuwait
+				original_tag = KUW
+				# United Arab Emirates
+				original_tag = UAE
+				# Qatar
+				original_tag = QAT
+				# Tunisia
+				original_tag = TUN
+				# Algeria
+				original_tag = ALG
+				# Morocco
+				original_tag = MOR
+				# Sahrawi Arab Republic
+				original_tag = WES
+				# Mauretania
+				original_tag = MRT
+				# Sudan
+				original_tag = SUD
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Iraq
+				original_tag = IRQ
+				# Saudi Arabia
+				original_tag = SAU
+				# Yemen
+				original_tag = YEM
+				# Oman
+				original_tag = OMA
+				# Egypt
+				original_tag = EGY
+				# Libya
+				original_tag = LBA
+				# Jordan
+				original_tag = JOR
+				# Palestine
+				original_tag = PAL
+				# Lebanon
+				original_tag = LEB
+				# Syria
+				original_tag = SYR
+				# Kuwait
+				original_tag = KUW
+				# United Arab Emirates
+				original_tag = UAE
+				# Qatar
+				original_tag = QAT
+				# Tunisia
+				original_tag = TUN
+				# Algeria
+				original_tag = ALG
+				# Morocco
+				original_tag = MOR
+				# Sahrawi Arab Republic
+				original_tag = WES
+				# Mauretania
+				original_tag = MRT
+				# Sudan
+				original_tag = SUD
+			}
+			NOT = { has_global_flag = form_arabia_flag }
+		}
+
+		available = {
+			is_subject = no
+			# Spain: Northern Africa
+			controls_state = 290
+			# Iraq
+			custom_trigger_tooltip = {
+				tooltip = form_country_iraq_required_states_tt
+				controls_state = 676
+				controls_state = 675
+				controls_state = 291
+			}
+			# Saudi Arabia
+			custom_trigger_tooltip = {
+				tooltip = form_country_saudi_required_states_tt
+				controls_state = 292
+				controls_state = 679
+				controls_state = 678
+				controls_state = 857
+				controls_state = 858
+				controls_state = 854
+				controls_state = 855
+				controls_state = 856
+				controls_state = 859
+			}
+			# Italy: Libya
+			custom_trigger_tooltip = {
+				tooltip = form_arabia_italy_required_states_tt
+				controls_state = 448
+				controls_state = 661
+				controls_state = 449
+				controls_state = 662
+				controls_state = 450
+				controls_state = 451
+				controls_state = 663
+			}
+			# France: Syria, Northern Africa
+			custom_trigger_tooltip = {
+				tooltip = form_arabia_france_required_states_tt
+				# North Africa
+				controls_state = 458
+				controls_state = 665
+				controls_state = 460
+				controls_state = 513
+				controls_state = 459
+				controls_state = 461
+				controls_state = 462
+				# Syria
+				controls_state = 677
+				controls_state = 680
+				controls_state = 553
+				controls_state = 554
+				controls_state = 799 #Hatay
+			}
+			# Britain: Egypt, Middle East, Arabia
+			custom_trigger_tooltip = {
+				tooltip = form_arabia_britain_required_states_tt
+				controls_state = 452
+				controls_state = 447
+				controls_state = 446
+				controls_state = 456
+				controls_state = 457
+				controls_state = 453
+				controls_state = 551
+				controls_state = 454
+				controls_state = 455
+				controls_state = 656
+				controls_state = 658
+				controls_state = 659
+				controls_state = 907
+				controls_state = 883
+				controls_state = 765
+				controls_state = 293
+				controls_state = 294
+			}
+		}
+
+		complete_effect = {
+			ROOT = {
+				if = {
+					limit = {
+						original_tag = EGY
+					}
+					set_cosmetic_tag = EGY_arab_united_republic
+				}
+				else_if = {
+					set_cosmetic_tag = ARA_UNIFIED
+				}
+			}
+			290 = { add_core_of = ROOT }
+			783 = { add_core_of = ROOT }
+			699 = { add_core_of = ROOT }
+			413 = { add_core_of = ROOT }
+			# Iraq
+			custom_effect_tooltip = form_country_iraq_coring_states_tt
+			hidden_effect = {
+				676 = { add_core_of = ROOT }
+				675 = { add_core_of = ROOT }
+				291 = { add_core_of = ROOT }
+			}
+			# Saudi Arabia
+			custom_effect_tooltip = form_country_saudi_coring_states_tt
+			hidden_effect = {
+				292 = { add_core_of = ROOT }
+				679 = { add_core_of = ROOT }
+				678 = { add_core_of = ROOT }
+				857 = { add_core_of = ROOT }
+				858 = { add_core_of = ROOT }
+				854 = { add_core_of = ROOT }
+				855 = { add_core_of = ROOT }
+				856 = { add_core_of = ROOT }
+				859 = { add_core_of = ROOT }
+			}
+			# Italy
+			custom_effect_tooltip = form_arabia_italy_coring_states_tt
+			hidden_effect = {
+				448 = { add_core_of = ROOT }
+				661 = { add_core_of = ROOT }
+				449 = { add_core_of = ROOT }
+				662 = { add_core_of = ROOT }
+				450 = { add_core_of = ROOT }
+				451 = { add_core_of = ROOT }
+				663 = { add_core_of = ROOT }
+				273 = { add_core_of = ROOT }
+			}
+			# France
+			custom_effect_tooltip = form_arabia_france_coring_states_tt
+			hidden_effect = {
+				458 = { add_core_of = ROOT }
+				665 = { add_core_of = ROOT }
+				460 = { add_core_of = ROOT }
+				513 = { add_core_of = ROOT }
+				459 = { add_core_of = ROOT }
+				461 = { add_core_of = ROOT }
+				677 = { add_core_of = ROOT }
+				680 = { add_core_of = ROOT }
+				553 = { add_core_of = ROOT }
+				554 = { add_core_of = ROOT }
+				462 = { add_core_of = ROOT }
+				514 = { add_core_of = ROOT }
+				799 = { add_core_of = ROOT }
+			}
+			# Britain
+			custom_effect_tooltip = form_arabia_britain_coring_states_tt
+			hidden_effect = {
+				452 = { add_core_of = ROOT }
+				447 = { add_core_of = ROOT }
+				446 = { add_core_of = ROOT }
+				456 = { add_core_of = ROOT }
+				457 = { add_core_of = ROOT }
+				453 = { add_core_of = ROOT }
+				551 = { add_core_of = ROOT }
+				454 = { add_core_of = ROOT }
+				455 = { add_core_of = ROOT }
+				656 = { add_core_of = ROOT }
+				658 = { add_core_of = ROOT }
+				659 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
+				552 = { add_core_of = ROOT }
+				767 = { add_core_of = ROOT }
+				883 = { add_core_of = ROOT }
+				765 = { add_core_of = ROOT }
+				293 = { add_core_of = ROOT }
+				294 = { add_core_of = ROOT }
+				906 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.67 hours = 6 }
+				set_global_flag = form_arabia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	EGY_form_arabia_moritany = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 50
+
+		allowed = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_global_flag = form_arabia_flag
+		}
+
+		available = {
+			controls_state = 557
+			controls_state = 786
+		}
+
+		remove_effect = {
+			557 = { add_core_of = ROOT }
+			786 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	EGY_form_arabia_eritrea = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 25
+
+		allowed = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_global_flag = form_arabia_flag
+		}
+
+		available = {
+			controls_state = 550
+		}
+
+		remove_effect = {
+			550 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	EGY_form_arabia_somalia = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 50
+
+		allowed = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_global_flag = form_arabia_flag
+		}
+
+		available = {
+			controls_state = 844
+			controls_state = 559
+			controls_state = 269
+		}
+
+		remove_effect = {
+			844 = { add_core_of = ROOT }
+			559 = { add_core_of = ROOT }
+			269 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	EGY_form_arabia_north_ethiopia = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 100
+		days_remove = 100
+
+		allowed = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_global_flag = form_arabia_flag
+		}
+
+		available = {
+			controls_state = 838
+			controls_state = 839
+			controls_state = 840
+			controls_state = 841
+			controls_state = 842
+			controls_state = 843
+		}
+
+		remove_effect = {
+			838 = { add_core_of = ROOT }
+			839 = { add_core_of = ROOT }
+			840 = { add_core_of = ROOT }
+			841 = { add_core_of = ROOT }
+			842 = { add_core_of = ROOT }
+			843 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	EGY_form_arabia_south_ethiopia = {
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 100
+		days_remove = 100
+
+		allowed = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				# Egypt
+				original_tag = EGY
+			}
+			has_global_flag = form_arabia_flag
+		}
+
+		available = {
+			controls_state = 835
+			controls_state = 836
+			controls_state = 837
+			controls_state = 271
+		}
+
+		remove_effect = {
+			835 = { add_core_of = ROOT }
+			836 = { add_core_of = ROOT }
+			847 = { add_core_of = ROOT }
+			271 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

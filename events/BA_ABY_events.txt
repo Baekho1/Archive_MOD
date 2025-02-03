@@ -9308,8 +9308,7 @@ country_event = {
 		name = ABY_new_event.187.a
 		ai_chance = { factor = 100 }
 		ABY = {
-			country_event = ABY_new_event.188
-			hours = 8
+			country_event = {id = ABY_new_event.188}
 		}
 	}
 }
