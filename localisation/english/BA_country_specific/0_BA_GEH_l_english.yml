@@ -34,6 +34,8 @@
  GEH_shocked_by_surprise_attack_desc: "우리에 대항한 선도부의 전략, 풍기집행은 우리 만마전 전체를 충격에 빠지게 하였습니다. 우리 군은 압도되었고, 우리 연락망은 단절되었으며, 상대 측 책임자들을 불러 해명을 요구하는 것도 의미 없다는 것을 알았습니다. 우리 측이 이 사태를 파악하려는 동안, 우리의 외교 관계는 무력화 될 것입니다."
  GEH_preparations_for_operation_countenance: "풍기집행 준비"
  GEH_operation_countenance: "풍기집행"
+ GEH_external_activities: "선도부의 대외 활동"
+ GEH_external_activities_desc: "게헨나 선도부는 대전이 이전 게헨나 학원이라는 거대 학원의 사법 집행 기관이었습니다. 그러나 대전이 이후 각지의 수많은 분쟁을 해결하며 만마전과의 의견 불일치로 점차 분리되었고, 이내 게헨나 선도부는 독립적인 군벌 집단을 형성하기에 이르렀습니다. 그러기에 게헨나 선도부의 외교 활동은 게헨나 학원을 평정하고 단일 학원을 수립하는 것에 있습니다."
 
  GEH_second_congress_focus: "제 2차 선도부 총회"
  GEM_Start_nego_tt: "@GEM§Y[GEM.GetAdjective]§!(이)가 @GEA§Y[GEA.GetName]§!(과)와 협상 중임"

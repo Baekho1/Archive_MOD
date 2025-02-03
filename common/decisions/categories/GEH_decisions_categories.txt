@@ -26,3 +26,14 @@ GEH_State_government_dismantlement_work_category = {
     }
     visible_when_empty = yes
 }
+GEH_external_activities = {
+    icon = GFX_decision_category_ger_military_buildup
+    picture = GFX_decision_cat_picture_unite_germany
+    priority = 90
+    allowed = {
+        tag = GEH
+    }
+    visible = {
+        always = yes
+    }
+}
