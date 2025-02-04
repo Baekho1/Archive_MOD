@@ -29,6 +29,7 @@ SHA_historical = {
 		SHA_Sack_of_Rumi
 		SHA_Solving_the_Militia_Problem
 		SHA_consolidate_industries
+		SHA_Shanhaijing_fact
 		SHA_emergency_measures
 
 		SHA_architechtual_advancements

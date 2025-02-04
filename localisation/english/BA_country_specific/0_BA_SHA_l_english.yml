@@ -647,7 +647,8 @@
  SHA_non_history_path_shortcut: "정치: 찬성파"
  SHA_history_path_shortcut: "정치: 반대파"
  SHA_democracy_path_shortcut: "정치: 민주/공산"
- SHA_militray_path_shortcut: "$GER_military_doctrine_shortcut$"
+ SHA_dip_path_shortcut: "외교"
+ SHA_militray_path_shortcut: "군대"
 
  # 경제도 잘하고 문화도 잘하고 못하는게 없는데
  SHA_relief_work: "구제 사업 조직"
@@ -786,15 +787,6 @@
  SHA_Expansion_of_military_factories_desc: ""
  SHA_podium_room_expansion: "연단방 확장"
  SHA_podium_room_expansion_desc: "확장하면 좋습니다."
- 
- SHA_fascism_friend: "[TRM.GetAdjective]의 지원 모색"
- SHA_fascism_friend_desc: ""
- SHA_joint_military_training: "합동 군사 훈련"
- SHA_joint_military_training_desc: ""
- SHA_Austrian_industrial_centralization: "오스트리아 산업 중앙 집권화"
- SHA_Austrian_industrial_centralization_desc: ""
- SHA_black_sun_and_black_dragon: "검은 태양, 검은 용"
- SHA_black_sun_and_black_dragon_desc: "[TRM.GetAdjective] 와의 비공식적인 접촉은 있었지만, 구체적이고 법적인 구속력을 가진 것은 거의 합의 되지 않았습니다. [TRM.GetAdjective](이)가 퇴폐적인 문화에 맞선 투쟁을 지속할때 우리는 그들과 함께 연합전선을 결성해야합니다."
 
  SHA_ascension: "승천"
  SHA_ascension_desc: ""
@@ -803,7 +795,9 @@
  SHA_supremacy_of_will: "의지의 우월성"
  SHA_supremacy_of_technology: "기술의 우월성"
  SHA_Twilight_of_the_Gods: "신들의 황혼"
+ SHA_Twilight_of_the_Gods_desc: "불길이 거세게 타오르는 가운데, 라인강이 화장터를 휩쓴다. 그때, 라인강의 세 처녀가 불씨 가까이 모습을 드러낸다. 하겐은 그녀들이 반지를 찾으려 하자 무장을 풀고 홍수 속으로 뛰어든다. 그러나 두 처녀가 그를 깊은 물속으로 끌고 가고, 남은 한 명이 반지를 찾아 기뻐한다. 하늘이 붉게 물들며 점차 발할라의 형상이 나타난다. 신들과 영웅들이 앉아 있는 발할라는 거대한 불길에 휩싸이고, 불꽃이 모든 것을 삼키며 막이 내린다."
  SHA_Ragnarok: "라그나로크"
+ SHA_Ragnarok_desc: "검은 늑대 하늘을 삼키고 뱀의 독 바다를 물들이네.\n뿔나팔 울려 전쟁이 열리면 신들은 운명 속에 나아가리.\n\n불꽃의 말이 대지를 달리고 거인은 태양을 무너뜨리네.\n그러나 불길이 모든 걸 삼킨 후, 새로운 세계는 다시 피어나리."
 
 
  # 보수 혁명 루트
@@ -826,6 +820,8 @@
  SHA_New_Genryumon_Peking_Opera_Department_Relations_desc: ""
  SHA_Engine_of_conservative_revolution: "보수혁명의 원동기"
  SHA_Engine_of_conservative_revolution_desc: ""
+ SHA_people_conservatism: "대중보수주의 육성"
+ SHA_people_conservatism_desc: ""
  
  SHA_2nd_conservative_revolution: "제 2차 보수혁명"
  SHA_2nd_conservative_revolution_desc: "퇴폐의 20년이 지나고, 우리는 진정한 보수적 지도자를 만나 웅대한 보수혁명의 가치를 바로 세웠습니다. 또한, 백귀야행에게 빼앗겼던 영토를 되찾으며 보수혁명을 성공적으로 완수했습니다. 그러나 사회 곳곳에는 여전히 퇴폐적인 문화의 잔재가 남아 있습니다. 이러한 잔재를 완전히 없애고자 우리는 제2차 보수혁명을 시작해야 합니다. 이는 애국자들의 이상을 온전히 실현하기 위한 중요한 발걸음이 될 것입니다."
@@ -836,8 +832,9 @@
  SHA_Establishment_of_the_National_Council: "학원평의회 설립"
  SHA_Establishment_of_the_National_Council_desc: ""
  SHA_Kivotos_conservative: "보수혁명 전파"
+ SHA_Kivotos_conservative_desc: "키보토스의 자유주의와 사회주의는 모두 반산해경적 음모를 조장하는 역겨운 종양입니다. 이들은 키보토스 전역에 퍼져 있으며, 그 존재 자체가 분명한 위협이 되고 있습니다. 그렇기에 우리만의 혁명을 더욱 널리 퍼뜨려야 합니다. 이를 통해 진정한 보수적 가치를 실현하고, 키보토스를 올바른 길로 되돌려야 합니다."
  SHA_clash_of_civilizations: "문명의 충돌"
- SHA_clash_of_civilizations_desc: ""
+ SHA_clash_of_civilizations_desc: "거대한 충돌이 시작되자, 산해경의 학생들은 자발적으로 이 거대한 흐름에 뛰어들었습니다! 우리는 웅대한 보수혁명의 깃발 아래 단결하여, 자유주의와 사회주의라는 악성 종양으로부터 전 세계를 구해야 합니다. 이는 단순한 정치적 대립이 아니라, 문명의 미래를 결정짓는 운명적 싸움입니다!"
 
  # 공용
  SHA_Solving_the_Militia_Problem: "질서 회복"
@@ -854,8 +851,6 @@
  # 승전 공용
  SHA_Special_Military_Operation_for_Abydos: "아비도스 격퇴"
  SHA_Special_Military_Operation_for_Abydos_desc: ""
- SHA_Special_Military_Operation_for_slovakia: "슬로바키아 제압"
- SHA_Special_Military_Operation_for_slovakia_desc: ""
  SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
  SHA_Establishment_of_the_Governor_General_desc: ""
  SHA_Establishment_of_the_Governor_General_tt: "아무 §Y@HYA[HYA.GetAdjective]§! 핵심 주 소유중 일시 효과 발동."
@@ -872,6 +867,18 @@
 
  # 외교
  SHA_Southern_Kivotos: "남부 키보토스"
+ SHA_Southern_Kivotos_desc: "지미? 거기에 있어? 시간이 나면 여기에 있는 설명문을 조금 작성해줬으면 하는데.. 시간이 조금 난다면 연락 줘!"
+ SHA_Shanhaijing_fact: "산하이징 협정 창설"
+ SHA_Shanhaijing_fact_desc: ""
+ SHA_Diplomacy_with_Kivotos: "키보토스 외교"
+ SHA_Diplomacy_with_Kivotos_desc: ""
+ SHA_Diplomacy_with_hungary: "헝가리와 협력"
+ SHA_Diplomacy_with_hungary_desc: ""
+ SHA_Diplomacy_with_ITA: "이탈리아와 친선"
+ SHA_recognition_of_Hungarian_sovereignty: "헝가리 영유권 인정"
+ SHA_recognition_of_Hungarian_sovereignty_desc: ""
+ SHA_Intervention_in_the_Balkan_situation: "발칸 문제 개입"
+ SHA_Intervention_in_the_Balkan_situation_desc: ""
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
@@ -903,7 +910,7 @@
  SHA_austria_unemployment_problem: "대공황"
  SHA_aup_modifier: "$SHA_austria_unemployment_problem$"
  SHA_austria_unemployment_problem_tt: "$MODIFIER_POLITICAL_POWER_COST$ [?SHA_aup_pp|-=]\n$MODIFIER_STABILITY_FACTOR$: [?SHA_aup_stability|+=%]\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?SHA_aup_factory_output|+=%]"
- SHA_austria_unemployment_problem_desc: "§Y대공황 단계§!: §Y[?SHA_aup_anger|0]§!\n1929년에 발생한 미국의 대공황은 머나먼 유럽의 오스트리아까지 영향을 미쳤습니다. 그러나 이전 오스트리아 정부의 무능과 정책 실패로 인해 이 문제의 부담은 산해경이 고스란히 떠안게 되었습니다.\n\n거리에는 실업자가 넘쳐나고, 노동자들은 빵을 요구하고 있습니다. 이러한 문제는 대공황이 계속되는 한 해결되지 않을 것입니다."
+ SHA_austria_unemployment_problem_desc: "§C대공황 단계§!: §Y[?SHA_aup_anger|0]§!\n1929년에 발생한 미국의 대공황은 머나먼 유럽의 오스트리아까지 영향을 미쳤습니다. 그러나 이전 오스트리아 정부의 무능과 정책 실패로 인해 이 문제의 부담은 산해경이 고스란히 떠안게 되었습니다.\n\n거리에는 실업자가 넘쳐나고, 노동자들은 빵을 요구하고 있습니다. 이러한 문제는 대공황이 계속되는 한 해결되지 않을 것입니다."
  RUS_increase_pop_anger: "§R대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
  RUS_decrease_pop_anger: "§G대공황 단계가 [?SHA_anger_change]만큼 변화합니다.§!"
  SHA_supreme_economic_council: "중앙경제위원회"

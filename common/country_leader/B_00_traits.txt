@@ -2872,7 +2872,9 @@ leader_traits = {
 		sp_tag_rocket_speed_factor = 0.2
 		sp_tag_jet_speed_factor = 0.2
 		sp_air_intercontinental_bomber_speed_factor = 0.2
-		sp_air_mothership_aircraft_speed_factor = 0.2
+		sp_rockets_long_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_ballistic_missile_speed_factor = 0.2
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
