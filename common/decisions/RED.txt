@@ -1033,7 +1033,10 @@ RED_snake_game_decision = {
 			has_completed_focus = RED_accept_trotskism
 		}
 		available = {
-			has_global_flag = flag_trotsky_dead
+			OR = {
+				has_country_flag = RED_snake_game_end
+				has_global_flag = flag_trotsky_dead
+			}
 		}
 		allowed = {
 			original_tag = RED
@@ -1050,7 +1053,10 @@ RED_snake_game_decision = {
 		priority = 99
 		icon = GFX_decision_generic_arrest
 		remove_trigger = {
-			has_global_flag = flag_trotsky_dead
+			OR = {
+				has_global_flag = flag_trotsky_dead
+				has_country_flag = RED_snake_game_end
+			}
 		}
 		allowed = {
 			original_tag = RED
@@ -1060,7 +1066,7 @@ RED_snake_game_decision = {
 			consumer_goods_factor = 0.05
 		}
 		days_re_enable = snake_strengthen_security_measures_var
-		days_remove = 90
+		days_remove = 30
 		cost = 30
 		complete_effect = {
 			custom_effect_tooltip = snake_strengthen_security_measures_tt
@@ -3769,6 +3775,17 @@ RED_population_issue_cat = { #인구문제
 			base = 9999
 		}
 		available = {
+			OR = {
+				RE1 = {
+					exists = yes
+				}
+				RE2 = {
+					exists = yes
+				}
+				RE3 = {
+					exists = yes
+				}
+			}
 			AND = {
 				NOT = {
 					has_idea = disarmed_nation
@@ -3785,10 +3802,6 @@ RED_population_issue_cat = { #인구문제
 						is_owned_by = RE1
 						is_owned_by = RE2
 						is_owned_by = RE3
-						is_owned_by = RE4
-						is_core_of = NOR
-						is_core_of = FIN
-						is_core_of = DEN
 					}
 				}
 				add_manpower = 12500
@@ -4013,6 +4026,11 @@ RED_debt = {
 					modifier = RED_investment_bill_modifier
 				}
 			}
+			OR = {
+				has_completed_focus = RED_minori_diplo_0
+				has_completed_focus = RED_advance_security
+				has_completed_focus = RED_all_power_to_redwinter
+			}
 		}
 		visible = {
 			OR = {
@@ -4113,6 +4131,19 @@ RED_debt = {
 	}
 }
 RED_bop_category = {
+	RED_cherino_read_book = { #독서
+		icon = GFX_decision_generic_operation
+		visible = {
+			RED_cherino = {
+				has_trait = RED_cherino_learner
+			}
+			NOT = {
+				has_global_flag = flag_trotsky_dead
+			}
+		}
+		days_remove = 15
+		cost = 5
+	}
 	RED_cherino_become_cleaner = { #미화부장
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {

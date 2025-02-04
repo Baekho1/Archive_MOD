@@ -1827,7 +1827,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.01
+				conscription = 0.005
 				army_core_defence_factor = 0.1
 			}
 		}
@@ -1836,7 +1836,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.015
+				conscription = 0.01
 				training_time_factor = -0.3
 				army_core_defence_factor = 0.1
 			}
@@ -1846,7 +1846,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.015
+				conscription = 0.01
 				army_core_defence_factor = 0.1
 			}
 			equipment_bonus = {
@@ -1861,7 +1861,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.02
+				conscription = 0.015
 				training_time_factor = -0.3
 				army_core_defence_factor = 0.1
 			}
@@ -1877,7 +1877,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.025
+				conscription = 0.02
 				training_time_factor = -0.3
 				mobilization_speed = 0.15
 				recruitable_population = 0.1

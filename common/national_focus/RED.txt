@@ -930,8 +930,7 @@ focus_tree = {
 	focus = { # 봉사와 헌신
 		id = RED_new_economy_focus_4
 		icon = GFX_focus_generic_workers
-		prerequisite = { focus = RED_new_economy_focus_2 }
-		prerequisite = { focus = RED_new_economy_focus_3 }
+		prerequisite = { focus = RED_new_economy_focus_2 focus = RED_new_economy_focus_3 }
 		x = 0
 		y = 2
 		relative_position_id = RED_new_economy_focus_1
@@ -1076,6 +1075,11 @@ focus_tree = {
 		cost = 4
 		available = {
 			always = no
+			OR = {
+				has_completed_focus = RED_minori_diplo_0
+				has_completed_focus = RED_advance_security
+				has_completed_focus = RED_all_power_to_redwinter
+			}
 		}
 		completion_reward = {
 			if = {
@@ -3066,6 +3070,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = -0.05
@@ -3113,6 +3118,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = 0.05
@@ -3220,9 +3226,10 @@ focus_tree = {
 					add_ideas = RED_advanced_security_idea
 				}
 			}
+			custom_effect_tooltip = RED_advance_security_tt
+			set_country_flag = RED_snake_game_end
 		}
 	}
-
 	focus = { #반혁명의 종식
 		id = RED_end_of_counter_revolution
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
@@ -3358,6 +3365,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = 0.05
@@ -3402,6 +3410,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = -0.05
@@ -3440,6 +3449,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = -0.05
@@ -3544,6 +3554,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = 0.05
@@ -4159,6 +4170,14 @@ focus_tree = {
 		
 		cost = 4
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RED_all_power_to_redwinter_tt
+				check_variable = {
+					var = red_game_snake_tail
+					value = 10
+					compare = greater_than_or_equals
+				}
+			}
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -4181,6 +4200,8 @@ focus_tree = {
 			add_to_variable = {
 				RED_the_politburo_defensive_war_stability_factor = 0.20
 			}
+			custom_effect_tooltip = RED_advance_security_tt
+			set_country_flag = RED_snake_game_end
 		}
 	}
 	focus = { #트로츠키의 세계혁명
@@ -8373,6 +8394,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = 0.05
@@ -8411,6 +8433,7 @@ focus_tree = {
 						id = RED_power_balance
 					}
 				}
+				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
 					value = -0.05
@@ -8758,7 +8781,7 @@ focus_tree = {
 	}
 	focus = { #민주집중제 원리
 		id = RED_army_focus_7
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		x = 2
 		y = 5
 		cost = 4
@@ -10472,7 +10495,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #지역 훈련소
+	focus = { #지역 학생 훈련소
 		id = RED_revolution_war_focus_6
 		icon = GFX_focus_SMB_tierra_del_fuego_training
 		cost = 4
@@ -10500,11 +10523,12 @@ focus_tree = {
 					add_idea = RED_seawall_1
 				}
 			}
+			custom_effect_tooltip = RED_revolution_war_focus_6_tt
 			every_controlled_state = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
-					infrastructure > 2
+					infrastructure > 3
 					NOT = {
 						state = 914
 					}
@@ -10614,13 +10638,32 @@ focus_tree = {
 					}
 				}
 			}
-			every_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
-					NOT = {
-						state = 914
-					}
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_owned_by = RED
+					is_core_of = RED
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_owned_by = RED
+					is_core_of = RED
 				}
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
@@ -10639,17 +10682,15 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = RED_revolution_war_focus_8_tt_2
-				every_controlled_state = {
+				random_controlled_state = {
 					limit = {
 						is_owned_by = RED
 						is_core_of = RED
-						NOT = {
-							state = 914
-						}
 					}
 					create_unit = {
 						division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
 						owner = RED
+						count = 3
 					}
 				}
 			}
