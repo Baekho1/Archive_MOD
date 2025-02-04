@@ -2105,6 +2105,7 @@ HEU_luxembourg_pandemonium_alliance_decision_category = {
 			has_war_together_with = GEM
 			GEM = {
 				surrender_progress > 0.5
+				has_war_with_major = yes
 			}
 			country_exists = GEM
 		}
