@@ -388,36 +388,52 @@ focus_tree = {
 		}
 	}
 
-	# 오스트리아 민병대와 접촉
+	# 카이 추종
 	focus = {
-		id = SHA_Contact_with_Austrian_militia
-		icon = GFX_focus_AUS_osterreichische_bundesheer
+		id = SHA_Shintani_Kai_Follow
+		icon = GFX_goal_Shintani_Kai_Follow
 		x = 0
 		y = 1
-		cost = 5
-		relative_position_id = SHA_gathering_of_radicals
-
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+		cost = 2
 
 		prerequisite = { focus = SHA_gathering_of_radicals }
 		mutually_exclusive = {  }
-		available = {
-			NOT = { has_completed_focus = SHA_Solving_the_Militia_Problem }
-		}
 
 		available = { }
 		bypass = { }
 
+		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
-			# 무슨 효과를 넣어야 할지는 모르겠는데
-			# 보수혁명 경로를 진행하고 싶을때는 이 중점이 필요 없도록 느껴지는 효과를 넣어주세요.. 하투 하투~
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SHA_arthur_seyss_inquart_political_advisor
-			custom_effect_tooltip = tooltip_white_line 
-			swap_ideas = {
-				add_idea = SHA_Austrian_fascist_militia_weak
-				remove_idea = SHA_Austrian_fascist_militia
+			show_ideas_tooltip = SHA_KAI_political_advisor
+			add_corps_commander_role = {
+				Character = SHA_KAI
+				traits = {
+					harsh_leader
+					politically_connected
+					media_personality
+					inspirational_leader
+				}
+				skill=2
+				attack_skill=3 #+1
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=3
+			}
+			SHA_KAI = { 
+				add_country_leader_role = {
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						id = -1
+						traits = {
+							SHA_T3a
+							SHA_T4a
+						}
+					}
+					promote_leader = yes
+				}
 			}
 		}
 	}
@@ -523,73 +539,23 @@ focus_tree = {
 		}
 	}
 
-	# 카이 추종
-	focus = {
-		id = SHA_Shintani_Kai_Follow
-		icon = GFX_goal_Shintani_Kai_Follow
-		x = 3
-		y = 1
-		cost = 2
-
-		prerequisite = { focus = SHA_Kisaki_Suppression }
-		mutually_exclusive = { focus = SHA_conservative_revolution }
-
-		available = { }
-		bypass = { }
-
-		relative_position_id = SHA_Kisaki_Suppression
-
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SHA_KAI_political_advisor
-			add_corps_commander_role = {
-				Character = SHA_KAI
-				traits = {
-					harsh_leader
-					politically_connected
-					media_personality
-					inspirational_leader
-				}
-				skill=2
-				attack_skill=3 #+1
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=3
-			}
-			SHA_KAI = { 
-				add_country_leader_role = {
-					country_leader = {
-						ideology = fascism_ideology
-						expire = "1965.1.1.1"
-						id = -1
-						traits = {
-							SHA_T3a
-							SHA_T4a
-						}
-					}
-					promote_leader = yes
-				}
-			}
-		}
-	}
-
 	# 카구야 축출
 	focus = {
 		id = SHA_Kaguya_ousted
 		icon = GFX_goal_SHA_Kaguya_ousted
-		x = 2
+		x = 3
 		y = 1
 		cost = 5
 
-		prerequisite = { focus = SHA_Shintani_Kai_Follow }
-		mutually_exclusive = { }
+		prerequisite = { focus = SHA_Kisaki_Suppression }
+		mutually_exclusive = { focus = SHA_conservative_revolution }
 
 		available = {
 			fascism > 0.45
 		}
 		bypass = { }
 
-		relative_position_id = SHA_Shintani_Kai_Follow
+		relative_position_id = SHA_Kisaki_Suppression
 
 		completion_reward = {
 			set_politics = { ruling_party = fascism }
@@ -617,7 +583,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Shanhaijing_fascism
 		icon = GFX_focus_generic_fascist_troops
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
@@ -732,7 +698,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Eastern_Alchemy_Society_solidarity
 		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
-		x = 2
+		x = 5
 		y = 1
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
@@ -826,7 +792,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = SHA_Kisaki_Suppression }
-		mutually_exclusive = { focus = SHA_Shintani_Kai_Follow }
+		mutually_exclusive = { focus = SHA_Kaguya_ousted }
 
 		available = { }
 		bypass = { }
@@ -1195,31 +1161,27 @@ focus_tree = {
 	focus = {
 		id = SHA_Solving_the_Militia_Problem
 		icon = GFX_focus_AUS_legitimistische_jugend
-		x = -1
+		x = -2
 		y = 1
 		cost = 3
 
 		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_Kaguya_ousted 
 			focus = SHA_conservative_revolution
 		}
 		mutually_exclusive = {  }
 
 		available = {
-			NOT = { has_completed_focus = SHA_Contact_with_Austrian_militia }
+			
 		}
 		bypass = { 
 			NOT = { has_idea = SHA_Austrian_fascist_militia }
 		}
 
-		relative_position_id = SHA_Shintani_Kai_Follow
+		relative_position_id = SHA_Kaguya_ousted
 
 		completion_reward = {
 			remove_ideas = SHA_Austrian_fascist_militia
-			if = {
-				limit = { has_character = SHA_arthur_seyss_inquart }
-				SHA_arthur_seyss_inquart = { retire = yes }
-			}
 		}
 	}
 
@@ -1232,7 +1194,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = {
-			focus = SHA_Shintani_Kai_Follow 
+			focus = SHA_Kaguya_ousted 
 			focus = SHA_conservative_revolution
 		}
 		mutually_exclusive = {  }
@@ -1263,6 +1225,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SHA_strike_suppression
+			focus = SHA_Solving_the_Militia_Problem
 		}
 		mutually_exclusive = {  }
 
@@ -2154,9 +2117,11 @@ focus_tree = {
 			}
 			every_country = {
 				limit = { is_major = yes }
-				create_wargoal = {
-					target = { PREV }
-					type = annex_everything
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
 				}
 			}
 			every_country = {
@@ -4173,7 +4138,7 @@ focus_tree = {
 	focus = {
 		id = SHA_military_production
 		icon = GFX_focus_generic_reorient_production
-		x = -7
+		x = -9
 		y = 1
 		relative_position_id = SHA_address_the_army
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4190,7 +4155,14 @@ focus_tree = {
 			975 = { # 부르겐란트
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = { type = arms_factory level = 2 }
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes    
+					province = 3700 # 산하이징
+				}
 			}
+			unlock_military_industrial_organization_tooltip = mio:SHA_tank_equipment_organization
 		}
 	}
 
@@ -4198,9 +4170,9 @@ focus_tree = {
 	focus = {
 		id = SHA_Equipment_Development_Department
 		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
-		x = -9
-		y = 1
-		relative_position_id = SHA_address_the_army
+		x = 2
+		y = 0
+		relative_position_id = SHA_military_production
 		search_filters = {  }
 		cost = 5
 
@@ -4212,7 +4184,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			unlock_military_industrial_organization_tooltip = 	mio:SHA_infantry_equipment_organization
+			unlock_military_industrial_organization_tooltip = mio:SHA_infantry_equipment_organization
 			mio:SHA_infantry_equipment_organization = {
 				add_mio_size = 1
 			}
@@ -4237,9 +4209,42 @@ focus_tree = {
 
 
 		completion_reward = {
+			unlock_military_industrial_organization_tooltip = mio:SHA_artillery_equipment_organization
+			# MIO 지정 안해주면 코드명으로 출력 시키는거 같아서 날먹이 안되네 ;ㅅ;
+			mio:SHA_infantry_equipment_organization = {
+				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_soft_attack
+			}
+			mio:SHA_artillery_equipment_organization = {
+				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_soft_hard_attack
+			}
 			mio:SHA_tank_equipment_organization = {
 				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_breakthrough
-				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_factory_output
+			}
+		}
+	}
+
+	# 히르텐베르거 포 인수
+	focus = {
+		id = SHA_hirtenberger_artillery
+		icon = GFX_goal_generic_army_artillery
+		x = 1
+		y = 1
+		relative_position_id = SHA_Mortar_Development_Department
+		search_filters = {  }
+		cost = 5
+
+		prerequisite = { focus = SHA_Mortar_Development_Department }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			mio:SHA_artillery_equipment_organization = {
+				add_mio_size = 3
+				add_mio_funds = 500
+				add_mio_research_bonus = 0.1
 			}
 		}
 	}
@@ -4248,13 +4253,12 @@ focus_tree = {
 	focus = {
 		id = SHA_steyr_arms_MnA
 		icon = GFX_focus_AUS_steyr_arms_investment
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = SHA_military_production
+		relative_position_id = SHA_Equipment_Development_Department
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 8
 
-		prerequisite = { focus = SHA_military_production }
 		prerequisite = { focus = SHA_Equipment_Development_Department }
 		mutually_exclusive = { }
 
@@ -4271,18 +4275,17 @@ focus_tree = {
 		}
 	}
 
-	# 슈타이어 조병창 흡수
+	# 차량화 가속
 	focus = {
 		id = SHA_motorization_accelerate
 		icon = GFX_focus_generic_truck
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SHA_military_production
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 5
 
 		prerequisite = { focus = SHA_military_production }
-		prerequisite = { focus = SHA_Equipment_Development_Department }
 		mutually_exclusive = { }
 
 		available = { }
@@ -4291,15 +4294,72 @@ focus_tree = {
 
 		completion_reward = {
 			random_core_state = { 
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
 			}
 			add_tech_bonus = {
 				name = SHA_motorization_accelerate
-				bonus = 1
+				bonus = 2
 				uses = 1
-				category = cat_mechanized_equipment
 				category = motorized_equipment
+			}
+		}
+	}
+
+	# 기계화 부대
+	focus = {
+		id = SHA_mechanization
+		icon = GFX_focus_generic_mechanized
+		x = -1
+		y = 1
+		relative_position_id = SHA_motorization_accelerate
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_motorization_accelerate }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHA_motorization_accelerate
+				bonus = 2
+				uses = 2
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	# 전쟁기계
+	focus = {
+		id = SHA_tank_develop
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 2
+		relative_position_id = SHA_military_production
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_military_production }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHA_tank_develop
+				#ahead_reduction = 1
+				bonus = 2
+				uses = 3
+				category = cat_medium_armor
+			}
+			mio:SHA_tank_equipment_organization = {
+				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_factory_output
 			}
 		}
 	}

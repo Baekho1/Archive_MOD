@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_Shanhaijing_MIO_artill"
+		texturefile = "gfx/interface/ideas/SHA/MIO_산해경박겨포부.tga"
+	}
+	spriteType = {
 		name = "GFX_Shanhaijing_MIO_tank"
 		texturefile = "gfx/interface/ideas/SHA/MIO_산해경전차부.tga"
 	}
