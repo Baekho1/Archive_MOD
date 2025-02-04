@@ -1458,7 +1458,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Diplomacy_with_hungary
 		icon = GFX_focus_generic_befriend_hungary
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fact
 		search_filters = {  }
@@ -1482,9 +1482,9 @@ focus_tree = {
 	focus = {
 		id = SHA_Diplomacy_with_ITA
 		icon = GFX_focus_befriend_italy
-		x = 4
-		y = 1
-		relative_position_id = SHA_Shanhaijing_fact
+		x = 2
+		y = 0
+		relative_position_id = SHA_Diplomacy_with_hungary
 		search_filters = {  }
 		cost = 5
 
@@ -1584,7 +1584,7 @@ focus_tree = {
 	focus = {
 		id = SHA_emergency_measures
 		icon = GFX_focus_generic_mass_production
-		x = -2
+		x = -0
 		y = 1
 		cost = 10
 
@@ -2152,13 +2152,23 @@ focus_tree = {
 				SHA_Shanhaijinfascism_justify_war_goal_time = -0.75
 				tooltip = justify_war_goal_time_tt
 			}
-			create_wargoal = {
-				target = HUN
-				type = puppet_wargoal_focus
+			every_country = {
+				limit = { is_major = yes }
+				create_wargoal = {
+					target = { PREV }
+					type = annex_everything
+				}
 			}
-			create_wargoal = {
-				target = ITA
-				type = puppet_wargoal_focus
+			every_country = {
+				limit = { 
+					NOT = { 
+						is_puppet_of = ROOT
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SHA_menacing_ambition
+				}
 			}
 		}
 	}
