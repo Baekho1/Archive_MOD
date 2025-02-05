@@ -13,7 +13,7 @@
 
 focus_tree = {
 	id = SHA_focus_tree
-	continuous_focus_position = { x = 200 y = 900 } 
+	continuous_focus_position = { x = 0 y = 600 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -551,6 +551,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SHA_conservative_revolution }
 
 		available = {
+			has_completed_focus = SHA_Shintani_Kai_Follow
 			fascism > 0.45
 		}
 		bypass = { }
@@ -783,11 +784,39 @@ focus_tree = {
 		}
 	}
 
+	# 산해경 인민의 영도자
+	focus = {
+		id = SHA_leader_of_the_people
+		icon = GFX_focus_SHA_cavalry_charge
+		x = 3
+		y = 1
+		relative_position_id = SHA_Kaguya_ousted
+		cost = 5
+
+		prerequisite = { focus = SHA_Kaguya_ousted }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15
+				tooltip = party_popularity_stability_factor_tt
+			}
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_fascism_drift = 0.03 
+				tooltip = fascism_drift_tt
+			}
+		}
+	}
+
 	# 보수 혁명
 	focus = {
 		id = SHA_conservative_revolution
 		icon = GFX_goal_SHA_Shanhaijing_conservative_revolution
-		x = -2
+		x = -3
 		y = 1
 		cost = 5
 
@@ -889,7 +918,7 @@ focus_tree = {
 	focus = {
 		id = SHA_new_shanhaijing_conservatism
 		icon = GFX_goal_SHA_new_shanhaijing_conservatism
-		x = -3
+		x = -2
 		y = 1
 		cost = 5
 
@@ -910,7 +939,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Cabinet_Secretariat
 		icon = GFX_goal_SHA_Cabinet_Secretariat
-		x = -5
+		x = -4
 		y = 1
 		cost = 5
 
@@ -948,7 +977,7 @@ focus_tree = {
 	focus = {
 		id = SHA_organic_national_polity
 		icon = GFX_goal_SHA_Jingle_Bell_Rock
-		x = -1
+		x = 0
 		y = 1
 		cost = 5
 
@@ -1189,7 +1218,7 @@ focus_tree = {
 	focus = {
 		id = SHA_strike_suppression
 		icon = GFX_focus_SWE_attack_landsorganisationen
-		x = 1
+		x = 2
 		y = 1
 		cost = 5
 
@@ -1866,9 +1895,7 @@ focus_tree = {
 			}
 			every_country = {
 				limit = { 
-					NOT = { 
-						is_puppet_of = ROOT
-					}
+					Kivotos_school_tag = yes
 				}
 				add_opinion_modifier = {
 					target = ROOT

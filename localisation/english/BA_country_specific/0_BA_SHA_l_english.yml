@@ -779,6 +779,7 @@
  # 신타니 카이 루트
  SHA_Shintani_Kai_Follow: "신타니 카이 복권"
  SHA_Shintani_Kai_Follow_desc: "신타니 카이는 과거 산해경에서 여러 소동과 문제를 일으킨 문제아였지만, $SHA_KISAKI$의 폭거로 인해 정당한 절차조차 없이 퇴학당했습니다. 이제 그녀를 다시 불러들일 것입니다."
+ 
  SHA_Kaguya_ousted: "$SHA_KAGUYA$ 축출"
  SHA_Kaguya_ousted_desc: "경극부의 힘에 입어 $SHA_KISAKI$를 몰아내는데에 성공하였습니다. 그러나 이제 경극부는 쓸모없는 짐 덩어리에 불과합니다. 연단방과 협력해 경극부를 습격하여 $SHA_KAGUYA$를 문주의 자리에서 끌어내리고 현룡문의 문주 자리를 차지할 것입니다."
  SHA_Shanhaijing_fascism: "산해경 파시즘"
@@ -789,11 +790,12 @@
  SHA_consolidate_industries_desc: ""
  SHA_Sundan_dosage: "선단 투여"
  SHA_Sundan_dosage_desc: "우리의 군사적 목적 달성을 위해 \"선단\" 이라는 약품을 군인들에게 투여할 것입니다. 비록 약품이 완성되지 않았지만 산해경의 영광을 위해서라면 우리의 군인들은 감내할 것입니다.."
-
  SHA_Expansion_of_military_factories: "군수공장 확충"
  SHA_Expansion_of_military_factories_desc: ""
  SHA_podium_room_expansion: "연단방 확장"
  SHA_podium_room_expansion_desc: "확장하면 좋습니다."
+ SHA_leader_of_the_people: "산해경 인민의 영도자"
+ SHA_leader_of_the_people_desc: ""
 
  SHA_ascension: "승천"
  SHA_ascension_desc: ""

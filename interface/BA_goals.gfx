@@ -1869,6 +1869,10 @@ spriteTypes = {
 		name = "GFX_goal_SHA_Southern_Kivotos"
 		texturefile = "gfx/interface/goals/SHA/SHA_Southern_Kivotos.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_cavalry_charge"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_cavalry_charge.png"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

@@ -28,6 +28,7 @@
 				option = HIDE
 			}
 			has_completed_focus = SOV_the_centre
+			has_dlc = "No Step Back"
 		}
 	}
 	offset = {
@@ -39,7 +40,15 @@
 				option = HIDE
 			}
 			has_completed_focus = SOV_coup_detat
+			has_dlc = "No Step Back"
 		}
+	}
+	offset = {
+		trigger = {
+			NOT = { has_dlc = "No Step Back" }
+		}
+		x = -7
+		y = 1
 	}
 
 	available = {
