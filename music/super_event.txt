@@ -338,3 +338,9 @@ music = {
         factor = 0
     }
 }
+music = {
+    song = "BA_horse"
+    chance = {
+        factor = 0
+    }
+}

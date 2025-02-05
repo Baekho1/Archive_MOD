@@ -102,6 +102,11 @@
  leader_of_publicworks: "용역부장"
  office_commander: "보안위원장"
 
+ RED_speed_fight: "  §Y속도전§!"
+ RED_more_production: "  §Y증산의 불길§!"
+ RED_creating_n_inovation: "  §Y창조와 혁신§!"
+
+
  RED_syndicalism_politic: "  §Y생디칼리즘 행정§!"
  RED_syndicalism_economy: "  §Y생디칼리즘 경제§!"
  RED_syndicalism_infra: "  §Y건설노조§!"

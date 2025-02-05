@@ -7,7 +7,64 @@ ideas = {
 		}
 	}
     country = {
-		RED_property_ceiling = {
+		RED_red_horse_idea_all = { #붉은말 운동
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_more_production
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_cr_sp = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_pr_cr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_more_production
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_sp_pr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_more_production
+			}
+		}
+		RED_red_horse_idea_cr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_pr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_more_production
+			}
+		}
+		RED_red_horse_idea_sp = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+			}
+		}
+		RED_red_horse_idea = { #붉 말 운동
+			picture = FIN_socialist_welfare
+		}
+		RED_property_ceiling = { #재산상한제
 			picture = GER_economy_of_conquest
 			modifier = {
 				consumer_goods_expected_value = -0.1
@@ -295,12 +352,113 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		RED_market_socialism = { #시장사회주의
-			picture = new_economic_policy
+		RED_farming-fishing_town_capitalism_1 = { #농어촌 자본주의
+			name = RED_farming-fishing_town_capitalism
+			picture = ARG_rapid_militarization
 			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				local_building_slots_factor = 0.2
+				local_resources_factor = 0.1
+			}
+		}
+		RED_farming-fishing_town_capitalism = { #농어촌 자본주의
+			name = RED_farming-fishing_town_capitalism
+			picture = ARG_rapid_militarization
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		RED_corporatism_3 = { #협동조합경제 - 합친 거
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.15
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				industrial_capacity_factory = 0.075
+				consumer_goods_factor = -0.2
+			}
+		}
+		RED_corporatism_2 = { #협동조합경제 - 유연한 고용
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.075
+				consumer_goods_factor = -0.1
+			}
+		}
+		RED_corporatism_1 = { #협동조합경제 - 중앙은행
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.2
+			}
+		}
+		RED_corporatism = { #협동조합경제
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.1
+			}
+		}
+		RED_market_socialism_3 = { #시장사회주의 - 다합치기
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.075
+				stability_weekly = 0.004
+			}
+		}
+		RED_market_socialism_2 = { #시장사회주의 - 폴크헴메트
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.005
+			}
+		}
+		RED_market_socialism_1 = { #시장사회주의 - 유연한 고용
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.075
+				stability_weekly = 0.004
+			}
+		}
+		RED_market_socialism = { #시장사회주의
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
 				stability_weekly = 0.005
 			}
 		}
@@ -315,6 +473,22 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
 			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
+			}
 		}
 		RED_second_AEP_2 = { #제2차 대안경제정책
 			name = RED_second_AEP
@@ -328,6 +502,22 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
 			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
+			}
 		}
 		RED_second_AEP_1 = { #제2차 대안경제정책
 			name = RED_second_AEP
@@ -338,6 +528,22 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_second_AEP = { #제2차 대안경제정책
@@ -350,6 +556,22 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_first_AEP_1 = { #제1차 대안경제정책
@@ -364,6 +586,20 @@ ideas = {
 				production_speed_arms_factory_factor = -0.05
 				industrial_capacity_factory = 0.05
 			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_first_AEP
+							has_idea = RED_first_AEP_1
+						}
+					}
+					country_event = {
+						id = RED_generic.15
+						days = 2
+					}
+				}
+			}
 		}
 		RED_first_AEP = { #제1차 대안경제정책
 			name = RED_first_AEP
@@ -375,6 +611,20 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.05
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_first_AEP
+							has_idea = RED_first_AEP_1
+						}
+					}
+					country_event = {
+						id = RED_generic.15
+						days = 2
+					}
+				}
 			}
 		}
 		RED_consumer_goods_production = { #소비재 생산

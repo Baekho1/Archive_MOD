@@ -3868,7 +3868,7 @@ RED_service_n_dedication = { #봉사와 헌신
 		cost = 10
 		days_remove = 60
 		modifier = {
-			political_power_cost = 0.05
+			political_power_cost = 0.1
 		}
 		visible = {
 			OR = {
@@ -4127,6 +4127,167 @@ RED_debt = {
 				country_event = RED_generic.6
 			}
 			
+		}
+	}
+}
+RED_red_horse_category = {
+	RED_red_horse_sp = { #속도전
+		icon = GFX_decision_generic_civil_support
+		fire_only_once = yes
+		days_remove = 60
+		cost = 20
+		available = {
+			NOT = {
+				has_country_flag = RED_horse_in_progress
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RED_horse_in_progress
+			if = {
+				limit = {
+					has_idea = RED_red_horse_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea
+					add_idea = RED_red_horse_idea_sp
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_pr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_pr
+					add_idea = RED_red_horse_idea_sp_pr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_cr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_cr
+					add_idea = RED_red_horse_idea_cr_sp
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_pr_cr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_pr_cr
+					add_idea = RED_red_horse_idea_all
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = RED_horse_in_progress
+		}
+	}
+	RED_red_horse_pr = { #증산의 불길
+		icon = GFX_decision_generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		cost = 20
+		available = {
+			NOT = {
+				has_country_flag = RED_horse_in_progress
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RED_horse_in_progress
+			if = {
+				limit = {
+					has_idea = RED_red_horse_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea
+					add_idea = RED_red_horse_idea_pr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_sp
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_sp
+					add_idea = RED_red_horse_idea_sp_pr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_cr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_cr
+					add_idea = RED_red_horse_idea_pr_cr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_cr_sp
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_cr_sp
+					add_idea = RED_red_horse_idea_all
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = RED_horse_in_progress
+		}
+	}
+	RED_red_horse_cr = { #'창조와 혁신'
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		days_remove = 60
+		cost = 20
+		available = {
+			NOT = {
+				has_country_flag = RED_horse_in_progress
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RED_horse_in_progress
+			if = {
+				limit = {
+					has_idea = RED_red_horse_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea
+					add_idea = RED_red_horse_idea_cr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_sp
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_sp
+					add_idea = RED_red_horse_idea_cr_sp
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_pr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_pr
+					add_idea = RED_red_horse_idea_pr_cr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_red_horse_idea_sp_pr
+				}
+				swap_ideas = {
+					remove_idea = RED_red_horse_idea_sp_pr
+					add_idea = RED_red_horse_idea_all
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = RED_horse_in_progress
 		}
 	}
 }

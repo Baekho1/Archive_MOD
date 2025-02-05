@@ -3391,6 +3391,23 @@ leader_traits = {
 		random = no
 	}
 		#붉은겨울은 맞는데, 국민정신용 트레잇으로 쓰일 거임
+	RED_speed_fight = { #속도전
+		random = no
+		stability_factor = -0.05
+		production_speed_buildings_factor = 0.1
+	}
+	RED_more_production = { #증산의 불길
+		random = no
+		war_support_factor = -0.05
+		industrial_capacity_factory = 0.05
+	}
+	RED_creating_n_inovation = { #창조와 혁신
+		random = no
+		research_speed_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+	}
+
+
 	RED_syndicalism_politic = { #생디칼리즘 행정
 		random = no
 		drift_defence_factor = 0.15
@@ -3459,7 +3476,6 @@ leader_traits = {
 		random = no
 		industrial_capacity_factory = -0.5
 		monthly_population = 0.35
-		production_factory_efficiency_gain_factor = 0.4
 		production_factory_max_efficiency_factor = 0.4
 		research_speed_factor = 0.15
 		compliance_growth = 0.5
@@ -3468,7 +3484,6 @@ leader_traits = {
 		random = no
 		industrial_capacity_factory = -0.35
 		monthly_population = 0.15
-		production_factory_efficiency_gain_factor = 0.2
 		production_factory_max_efficiency_factor = 0.2
 		research_speed_factor = 0.075
 		compliance_growth = 0.25

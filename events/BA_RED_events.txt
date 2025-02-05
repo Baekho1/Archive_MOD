@@ -408,6 +408,15 @@ country_event = { #대안 경제 정책
 	option = { #후
 		name = RED_generic.12.a
 		add_political_power = 10
+		if = {
+			limit = {
+				has_completed_focus = RED_economy_focus_14
+			}
+			custom_effect_tooltip = RED_generic.12_tt_1
+		}
+		else = {
+			custom_effect_tooltip = RED_generic.12_tt
+		}
 	}
 }
 country_event = { #방위위원회 패배
@@ -418,6 +427,69 @@ country_event = { #방위위원회 패배
 	option = { #후
 		name = RED_generic.13.a
 		add_political_power = -1
+	}
+}
+country_event = { #방위위원회 승리
+	id = RED_generic.14
+	title = RED_generic.13.t
+	desc = RED_generic.13.d
+	is_triggered_only = yes
+	option = { #후
+		name = RED_generic.13.a
+		add_political_power = -1
+	}
+}
+country_event = { #제1차 AEP 평가
+	id = RED_generic.15
+	title = RED_generic.15.t
+	desc = RED_generic.15.d
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = RED_throw_aep_away
+	}
+	option = { #굿 = 유지
+		name = RED_generic.15.a
+		trigger = {
+			num_of_civilian_factories > 51
+		}
+		custom_effect_tooltip = RED_generic.15.a_tt
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = {
+			base = 4
+		}
+	}
+	option = { #배드 = 유지
+		name = RED_generic.15.c
+		custom_effect_tooltip = RED_generic.15.c_tt
+		add_political_power = -10
+		add_stability = -0.05
+		trigger = {
+			num_of_civilian_factories < 52
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = { #폐지
+		custom_effect_tooltip = RED_generic.15.b_tt
+		set_country_flag = RED_throw_aep_away
+		name = RED_generic.15.b
+
+		effect_tooltip = {
+			unlock_national_focus = RED_rearming_focus_5
+			unlock_national_focus = RED_rearming_focus_14
+			unlock_national_focus = RED_arms_industrial_optimize
+			unlock_national_focus = RED_army_production_improve
+		}
+		hidden_effect = {
+			complete_national_focus  = RED_steel_casting_industry
+			complete_national_focus = RED_new_economy_focus_1
+		}
+		add_political_power = -80
+		ai_chance = {
+			base = 1
+		}
 	}
 }
 
@@ -3901,7 +3973,7 @@ country_event = { #주 3일제
 		add_war_support = 0.05
 	}
 }
-country_event = { #대안경제정책에 대한 평가
+country_event = { #제2차 AEP 평가
 	id = RED_event.22
 	title = RED_event.22.t
 	desc = RED_event.22.d
@@ -3909,34 +3981,29 @@ country_event = { #대안경제정책에 대한 평가
 	is_triggered_only = yes
 	option = {
 		name = RED_event.22.a
-		swap_ideas = {
-			remove_idea = RED_second_AEP_3
-			add_idea = RED_market_socialism
-		}
 		if = {
 			limit = {
-				num_of_factories > 200
-				has_stability > 0.7
+				num_of_civilian_factories > 79
 			}
 		}
 		else = {
-			add_political_power = -200
 			custom_effect_tooltip = RED_event.22_tt_1
+			add_political_power = -100
 		}
+		set_country_flag = RED_corporatism_flag
 	}
 	option = {
 		name = RED_event.22.b
-		remove_ideas = RED_second_AEP_3
 		if = {
 			limit = {
-				num_of_factories > 200
-				has_stability > 0.7
+				num_of_civilian_factories > 79
 			}
-			add_political_power = -200
 			custom_effect_tooltip = RED_event.22_tt_2
+			add_political_power = -100
 		}
 		else = {
 		}
+		set_country_flag = RED_market_socialism_flag
 	}
 }
 country_event = { #쿠데타를 위한 무한반복 디시전
@@ -4356,20 +4423,6 @@ country_event = { #산업 호황
 							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_9
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_9
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_9
-						}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = RED_the_threats_abound
-								has_completed_focus = RED_trotsky_s_world_revolution
 							}
 						}
 					}

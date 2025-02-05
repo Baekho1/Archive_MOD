@@ -194,6 +194,11 @@ music = {
 	file = "super_event/USA_National_Anthem_But_Red.ogg"
 	volume =  0.7
 }
+music = {
+	name = "BA_horse"
+	file = "super_event/horse.ogg"
+	volume =  0.7
+}
 
 
 
