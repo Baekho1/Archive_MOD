@@ -236,7 +236,7 @@ characters = {
 			}
 
 			traits = {
-				communist_theorist
+				permanent_revolutionary
 			}
 		}
 		

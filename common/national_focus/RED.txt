@@ -962,9 +962,11 @@ focus_tree = {
 		}
 		allow_branch = {
 			OR = {
-				NOT = {
-					has_completed_focus = RED_new_economy_focus_0
-					has_completed_focus = RED_industrial_planning
+				AND = {
+					NOT = {
+						has_completed_focus = RED_new_economy_focus_0
+						has_completed_focus = RED_economy_focus_9
+					}
 				}
 				has_country_flag = RED_throw_aep_away
 			}
@@ -1701,15 +1703,7 @@ focus_tree = {
 			focus = RED_industrial_planning
 		}
 		available = {
-			if = {
-				limit = {
-					has_completed_focus = RED_accept_trotskism
-				}
-				OR = {
-					has_global_flag = flag_trotsky_dead
-					has_completed_focus = RED_cherino_s_systemic_revolution
-				}
-			}
+			has_idea = civilian_economy
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -1739,12 +1733,33 @@ focus_tree = {
 			add_timed_idea = {
 				idea = RED_first_AEP
 				years = 1
-				months = 6
+				months = 2
 			}
 			hidden_effect = {
 				country_event = {
 					id = RED_generic.12
 					days = 1
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 				}
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
@@ -1799,6 +1814,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = RED_first_aep_tt
+			upgrade_economy_law = yes
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = {
 					has_idea = RED_doomed_economy_idea_1
@@ -1847,7 +1864,6 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			num_of_civilian_factories > 40
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -1898,6 +1914,13 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = DEN_arnold_peter_moller
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2074,6 +2097,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
 					type = dockyard
 					level = 1
 				}
@@ -2091,6 +2124,7 @@ focus_tree = {
 		cost = 4
 
 		available = {
+			num_of_civilian_factories > 50
 			if = {
 				limit = {
 					NOT = {
@@ -2115,7 +2149,7 @@ focus_tree = {
 			add_timed_idea = {
 				idea = RED_second_AEP
 				years = 1
-				months = 6
+				months = 2
 			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			effect_tooltip = {
@@ -2262,6 +2296,7 @@ focus_tree = {
 		}
 
 		available = {
+			num_of_civilian_factories > 80
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -2291,6 +2326,7 @@ focus_tree = {
 			focus = RED_economy_focus_17
 		}
 		available = {
+			num_of_civilian_factories > 80
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -2539,6 +2575,17 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
 					NOT = {
 						has_state_category = enclave
 						has_state_category = rural
@@ -2594,6 +2641,17 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = RED_second_aep_tt
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					OR={has_state_category = rural
@@ -4774,8 +4832,8 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = RED_all_power_to_redwinter_tt
 				check_variable = {
-					var = red_game_snake_tail
-					value = 10
+					var = red_game_snake_tail_see
+					value = 5
 					compare = greater_than_or_equals
 				}
 			}

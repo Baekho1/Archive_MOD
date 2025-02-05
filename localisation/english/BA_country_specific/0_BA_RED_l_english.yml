@@ -17,6 +17,8 @@
  RED_focus_politic_2: "정치: 마리나"
  RED_focus_politic_3: "정치: 2월 총파업"
 
+ RED_cant_change_economy: "\n§R경제법 변경 불가§!"
+
 #산업
  RED_road_to_south: "남부 도로 재정비"
  RED_road_to_south_desc: "남부의 도로는 북부에 비하여 비교적 잘 구축되어 있습니다. 약간의 정비만 거치면 아주 유용하게 쓸 수 있을 것입니다."
@@ -207,7 +209,7 @@
  RED_international_frontline_desc: "전 세계는 부르주아들로 들끓고 있고, 노동자들은 소외되거나 핍박받고 있습니다. 혁명의 물결은 붉은겨울뿐만 아니라 전 세계에서 휘몰아쳐야 합니다."
  RED_all_power_to_redwinter: "모든 권력을 붉은겨울로"
  RED_all_power_to_redwinter_desc: "셀 수 없이 많은 반동분자를 숙청하여 혼란을 잠재웠지만, 우리가 모르는 곳에서 또 다른 쿠데타가 일어날 수 있습니다. 체리노 회장에게 모든 권력을 집중하여 이 혼란을 잠재워야 합니다. 오직 수염만이 남을 것이고, 오직 수염만이 영원할 것이다!"
- RED_all_power_to_redwinter_tt: "§Y꼬리 길이§!가 §Y10§! 이상"
+ RED_all_power_to_redwinter_tt: "§Y꼬리 길이§!가 §Y5§! 이상"
  RED_invite_trotskists: "트로츠키주의자 초대"
  RED_invite_trotskists_desc: "트로츠키에게는 그의 추종자들이 있습니다. 그들은 일찌감치 국외로 망명하거나 소련의 감시망을 피해 전 세계로 잠적하였습니다. 그들을 소집하여 이곳에서 그와 함께 일할 수 있도록 해야 합니다."
  RED_expand_publishing_dep: "출판부 확장"

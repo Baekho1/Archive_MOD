@@ -585,6 +585,13 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.05
 				industrial_capacity_factory = 0.05
+
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			rule = {
 			}
 			on_remove = {
 				if = {
@@ -611,6 +618,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.05
+				economy_cost_factor = 15
 			}
 			on_remove = {
 				if = {
