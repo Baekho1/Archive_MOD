@@ -111,6 +111,18 @@
  RED_economy_focus_18_desc: "농업은 단지 식량 자급만을 위하지 않습니다. 상품작물은 곧 부입니다."
  RED_economy_focus_19: "상업적 농업"
  RED_economy_focus_19_desc: "농업 경영을 상업관계자에게 맡김으로써 우리는 더 높은 자본 재생산을 꾀할 것입니다."
+ RED_economy_focus_20: "조선업 주력"
+ RED_economy_focus_21: "해외 전문가"
+ RED_economy_focus_22: "협동조합경제"
+ RED_economy_focus_23: "독립적인 중앙은행"
+ RED_economy_focus_24: "유연한 고용"
+ RED_economy_focus_25: "농어촌 자본주의"
+ RED_first_aep_tt: "이 중점은 §Y제1차 대안경제정책§!의 중점입니다.\n\n"
+ RED_second_aep_tt: "이 중점은 §Y제2차 대안경제정책§!의 중점입니다.\n\n"
+
+
+
+
  RED_club_focus_0: "붉은겨울 전산국"
  RED_club_focus_0_desc: "대전이로 기능이 멈춘 학원을 다시 복구해야 합니다. 우선 마비된 행정력을 복구할 필요가 있습니다."
  RED_club_focus_1: "급양부 재건"

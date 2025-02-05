@@ -164,7 +164,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = RED_land_research }
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -304,6 +304,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = RED_new_economy_focus_0
+			focus = RED_economy_focus_9
 		}
 
 		completion_reward = {
@@ -807,6 +808,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = RED_entice_publicworks
+			focus = RED_economy_focus_9
 		}
 		completion_reward = {
 			if = {
@@ -1255,7 +1257,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = RED_land_research }
-		x = 7
+		x = 8
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -1327,7 +1329,7 @@ focus_tree = {
 		id = RED_economy_focus_4
 		icon = GFX_goal_TRM_class_collaboration
 		prerequisite = { focus = RED_land_research }
-		x = 9
+		x = 6
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
@@ -1349,7 +1351,6 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1937.1.1
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -1384,7 +1385,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_farmland
 		prerequisite = { focus = RED_economy_focus_3 }
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 2
@@ -1427,11 +1428,10 @@ focus_tree = {
 	}
 	focus = { #농업 기계화 지원
 		id = RED_economy_focus_6
-
 		icon = GFX_focus_NZL_bob_semple_tank
 		prerequisite = { focus = RED_economy_focus_5 }
-		x = 0
-		y = 2
+		x = 3
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1480,8 +1480,8 @@ focus_tree = {
 
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		prerequisite = { focus = RED_economy_focus_5 }
-		x = -1
-		y = 3
+		x = 2
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
@@ -1585,13 +1585,15 @@ focus_tree = {
 		id = RED_economy_focus_9
 
 		icon = GFX_goal_CAN_banking_legislation
-		prerequisite = { focus = RED_economy_focus_8 }
-		prerequisite = { focus = RED_economy_focus_11 }
-		x = 2
-		y = 2
+		prerequisite = { focus = RED_economy_focus_3}
+		x = -3
+		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 4
-
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_0
+			focus = RED_entice_publicworks
+		}
 		available = {
 			if = {
 				limit = {
@@ -1637,15 +1639,47 @@ focus_tree = {
 					days = 1
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			effect_tooltip = {
+				unlock_national_focus = RED_economy_focus_21
+				unlock_national_focus = RED_economy_focus_13
+				unlock_national_focus = RED_economy_focus_10
+			}
+		}
+	}
+	focus = { #해외 전문가
+		id = RED_economy_focus_21
+
+		icon = GFX_SOV_foreign_experts_ccp_2d_sov_compatibility
+		prerequisite = { focus = RED_economy_focus_8 }
+		x = -4
+		y = 2
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				has_idea = RED_first_AEP
+				has_idea = RED_first_AEP_1
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_first_aep_tt
 		}
 	}
 	focus = { #민간 사업체 지원
 		id = RED_economy_focus_10
 
 		icon = GFX_focus_DEN_no_regulations
-		prerequisite = { focus = RED_economy_focus_9 }
-		x = 1
-		y = 3
+		prerequisite = { focus = RED_economy_focus_8 }
+		x = 0
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1660,6 +1694,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_first_aep_tt
 			swap_ideas = {
 				remove_idea = RED_first_AEP
 				add_idea = RED_first_AEP_1
@@ -1689,7 +1724,7 @@ focus_tree = {
 
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		prerequisite = { focus = RED_economy_focus_3 }
-		x = 3
+		x = -1
 		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 4
@@ -1740,10 +1775,10 @@ focus_tree = {
 	focus = { #노르웨이 해운업 회복
 		id = RED_economy_focus_12
 
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = RED_economy_focus_11 }
-		x = 4
-		y = 2
+		x = -1
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1796,9 +1831,10 @@ focus_tree = {
 		id = RED_economy_focus_13
 
 		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = RED_economy_focus_9 }
 		prerequisite = { focus = RED_economy_focus_11 }
-		x = 3
-		y = 3
+		x = -2
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
@@ -1815,6 +1851,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_first_aep_tt
 			add_stability = -0.01
 			add_popularity = {
 				ideology = communism
@@ -1853,8 +1890,8 @@ focus_tree = {
 
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		prerequisite = { focus = RED_economy_focus_9 }
-		x = 2
-		y = 4
+		x = -3
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1870,6 +1907,12 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_ideas = RED_second_AEP
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			effect_tooltip = {
+				unlock_national_focus = RED_economy_focus_16
+				unlock_national_focus = RED_economy_focus_20
+				unlock_national_focus = RED_economy_focus_19
+			}
 		}
 	}
 	focus = { #화폐개혁
@@ -1877,8 +1920,8 @@ focus_tree = {
 
 		icon = GFX_focus_hol_abandon_the_gold_standard
 		prerequisite = { focus = RED_economy_focus_14 }
-		x = 1
-		y = 5
+		x = -4
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1913,8 +1956,8 @@ focus_tree = {
 
 		icon = GFX_focus_FIN_socialist_welfare
 		prerequisite = { focus = RED_economy_focus_14 }
-		x = 3
-		y = 5
+		x = -2
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
@@ -1927,6 +1970,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
 			if = {
 				limit = {
 					has_idea = RED_second_AEP
@@ -1949,13 +1993,122 @@ focus_tree = {
 	focus = { #시장사회주의
 		id = RED_economy_focus_17
 		icon = GFX_focus_generic_communist_industry
-		prerequisite = { focus = RED_economy_focus_15 }
 		prerequisite = { focus = RED_economy_focus_16 }
-		x = 2
+		x = -1
+		y = 5
+		relative_position_id = RED_economy_focus_3
+		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_22
+		}
+
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			country_event = {
+				id = RED_event.22
+				days = 3
+			}
+		}
+	}
+	focus = { #협동조합경제
+		id = RED_economy_focus_22
+		icon = GFX_focus_CHL_la_corporacion_araucania
+		prerequisite = { focus = RED_economy_focus_16 }
+		x = -3
+		y = 5
+		relative_position_id = RED_economy_focus_3
+		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_17
+		}
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			country_event = {
+				id = RED_event.22
+				days = 3
+			}
+		}
+	}
+	focus = { #독립적인 중앙은행
+		id = RED_economy_focus_23
+		icon = GFX_focus_CHL_strengthen_the_central_bank
+		prerequisite = { focus = RED_economy_focus_15 }
+		prerequisite = { focus = RED_economy_focus_22 }
+		x = -4
 		y = 6
 		relative_position_id = RED_economy_focus_3
 		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_17
+		}
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 
+		completion_reward = {
+			country_event = {
+				id = RED_event.22
+				days = 3
+			}
+		}
+	}
+	focus = { #유연한 고용
+		id = RED_economy_focus_24
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = RED_economy_focus_22 focus = RED_economy_focus_17 }
+		x = -2
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_17
+		}
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			country_event = {
+				id = RED_event.22
+				days = 3
+			}
+		}
+	}
+	focus = { #농어촌 자본주의
+		id = RED_economy_focus_25
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		prerequisite = { focus = RED_economy_focus_20 }
+		prerequisite = { focus = RED_economy_focus_19 }
+		prerequisite = { focus = RED_economy_focus_17 }
+		x = 1
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_17
+		}
 		available = {
    
 			NOT = {
@@ -1977,8 +2130,8 @@ focus_tree = {
 		icon = GFX_focus_generic_supply_line
 		prerequisite = { focus = RED_economy_focus_7 }
 		prerequisite = { focus = RED_economy_focus_10 }
-		x = 0
-		y = 4
+		x = 1
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -2049,9 +2202,9 @@ focus_tree = {
 
 		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus = RED_economy_focus_18 }
-		prerequisite = { focus = RED_economy_focus_14 }
-		x = -1
-		y = 6
+		prerequisite = { focus = RED_economy_focus_6 }
+		x = 2
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -2075,6 +2228,83 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_category = town
+						has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = { #조선업 주력
+		id = RED_economy_focus_20
+
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RED_economy_focus_12 }
+		prerequisite = { focus = RED_economy_focus_10 }
+		x = 0
+		y = 4
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				RED_axel_pehrssonbramstorp = {
+					is_political_advisor = yes
+				}
+				RED_knud_bach = {
+					is_political_advisor = yes
+				}
+			}
+			RED_johan_h_andresen = {
+				is_political_advisor = yes
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
 			random_owned_controlled_state = {
 				limit = {
 					OR={has_state_category = rural
