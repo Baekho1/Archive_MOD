@@ -26,7 +26,7 @@ focus_tree = {
 	}
 	shortcut = {
 		name = RED_focus_shortcut_industry_2
-		target = RED_club_focus_0
+		target = RED_club_focus_4
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
