@@ -1278,6 +1278,10 @@
  RE4_autonomous_DEF: "핀란드 자치국"
  RE4_autonomous_ADJ: "핀란드"
 
+ RE4_finlandia_military_administration: "핀란드 군정청"
+ RE4_finlandia_military_administration_DEF: "핀란드 군정청"
+ RE4_finlandia_military_administration_ADJ: "핀란드 군정청"
+
  RE2_antirevolution: "붉은겨울 연방사무국"
  RE2_antirevolution_DEF: "붉은겨울 연방사무국"
  RE2_antirevolution_ADJ: "붉은겨울 연방사무국"

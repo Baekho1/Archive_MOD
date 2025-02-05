@@ -1,6 +1,7 @@
 focus_tree = {
 	id = RED_focus_tree
 	shared_focus = BA_new_world_technology
+	shared_focus = RE4_create_of_defense_committee
 	
 	country = {
 		factor = 0

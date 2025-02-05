@@ -20,6 +20,7 @@
 	initial_show_position = {
 		focus = REPP_industrial_effort
 	}
+	shared_focus = RE4_create_of_defense_committee
 
 	focus = {
         id = REPP_army_effort
@@ -1755,3 +1756,241 @@
 	}
 
 }
+
+	shared_focus = {
+		id = RE4_create_of_defense_committee
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_REDWINTER_defense_committee
+
+		cost = 5
+
+		text_icon = REDWINTER_RE4_focus_style
+
+		x = 25
+		y = 0
+		offset = {
+			x = -25
+			y = 10
+			trigger = {
+				original_tag = RED
+			}
+		}
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			OR = {
+				is_in_faction_with = RED
+				is_subject_of = RED
+			}
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = {
+				OR = {
+					is_in_faction_with = RED
+					is_subject_of = RED
+				}
+				has_war_with = FIN
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			IF = {
+				limit = { original_tag = RE4 }
+				add_political_power = 50
+				RED = {
+					country_event = { id = redpuppet.1 hours = 04 }
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					RE4 = { add_political_power = 50 }
+					country_event = { id = redpuppet.1 hours = 04 }
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_create_of_defense_committee }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_Invitation_of_military_advisors
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_REDWINTER_defense_committee
+
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+
+		relative_position_id = RE4_create_of_defense_committee
+		x = -1
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			IF = {
+				limit = { original_tag = RE4 }
+				RED = { 
+					country_event = { id = redpuppet.4 hours = 04 } 
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					add_ideas = RE4_redwinter_military_advisors
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					country_event = { id = redpuppet.4 }
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					add_ideas = RED_redwinter_military_advisors
+					custom_effect_tooltip = tooltip_white_line
+					RE4 = { add_ideas = RE4_redwinter_military_advisors }
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_Invitation_of_military_advisors }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_Finland_Military_Administration
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_REDWINTER_defense_committee
+
+		cost = 5
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+
+		relative_position_id = RE4_create_of_defense_committee
+		x = 0
+		y = 3
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			any_country = {
+				original_tag = RE4
+				is_subject_of = RED
+			}
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+				has_war_with = FIN
+			}
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = {
+				OR = {
+					is_in_faction_with = RED
+					is_subject_of = RED
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			IF = {
+				limit = { original_tag = RE4 }
+				set_cosmetic_tag = RE4_finlandia_military_administration
+				set_capital = {
+					state = 111
+					remember_old_capital = no
+				}
+				swap_ideas = {
+					remove_idea = RED_military_government_idea_exit
+					add_idea = RED_military_government_idea_1
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					RE4 = { 
+						set_cosmetic_tag = RE4_finlandia_military_administration 
+						set_capital = {
+							state = 111
+							remember_old_capital = no
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_Finland_Military_Administration }
+			}
+
+		}
+	}

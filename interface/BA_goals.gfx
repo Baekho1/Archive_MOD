@@ -2446,6 +2446,11 @@ spriteTypes = {
 		name = "GFX_focus_shigure"
 		textureFile = "gfx/interface/goals/RED/focus_shigure.tga"
 	}
+	# 방위위원회
+	spriteType = {
+		name = "GFX_focus_REDWINTER_defense_committee"
+		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_defense_committee.tga"
+	}
 
 	#백귀야행
 	spriteType = {
