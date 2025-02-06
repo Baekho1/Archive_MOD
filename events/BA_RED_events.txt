@@ -450,7 +450,7 @@ country_event = { #제1차 AEP 평가
 	option = { #굿 = 유지
 		name = RED_generic.15.a
 		trigger = {
-			num_of_civilian_factories > 51
+			num_of_civilian_factories > 40
 		}
 		custom_effect_tooltip = RED_generic.15.a_tt
 		add_political_power = 10
@@ -465,7 +465,7 @@ country_event = { #제1차 AEP 평가
 		add_political_power = -10
 		add_stability = -0.05
 		trigger = {
-			num_of_civilian_factories < 52
+			num_of_civilian_factories < 41
 		}
 		ai_chance = {
 			base = 2
@@ -4054,11 +4054,13 @@ country_event = { #민트초코해방전선의 쿠데타
 	title = RED_event.24.t
 	desc = RED_event.24.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.24.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27
@@ -4073,11 +4075,13 @@ country_event = { #가라아게에 레몬을 반대하는 혁명가들의 모임
 	title = RED_event.25.t
 	desc = RED_event.25.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.25.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27
@@ -4092,11 +4096,13 @@ country_event = { #한겨울냉수마찰총연맹 쿠데타
 	title = RED_event.26.t
 	desc = RED_event.26.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.26.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27

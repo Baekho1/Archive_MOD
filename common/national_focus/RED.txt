@@ -1359,10 +1359,10 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 현지 산업 개발안
+	focus = { # 현지 기술관료 등용
 		id = RED_economy_focus_3
 
-		icon = GFX_focus_generic_treaty
+		icon = GFX_goal_TRM_class_collaboration
 		prerequisite = { focus = RED_land_research }
 		x = 8
 		y = 1
@@ -1392,89 +1392,13 @@ focus_tree = {
 		}
 
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
-				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
-				}
 			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-		}
-	}
-	focus = { # 현지 기술관료 등용
-		id = RED_economy_focus_4
-		icon = GFX_goal_TRM_class_collaboration
-		prerequisite = { focus = RED_land_research }
-		x = 6
-		y = 1
-		relative_position_id = RED_land_research
-		cost = 2
-		offset = {
-			x = -6
-			trigger = {
-				OR = {
-					has_completed_focus = RED_industrial_planning
-				}
-			}
-		}
-		offset = {
-			x = -2
-			trigger = {
-				has_completed_focus = RED_economy_focus_9
-			}
-		}
-		offset = {
-			x = -6
-			trigger = {
-				OR = {
-					has_completed_focus = RED_new_economy_focus_0
-				}
-			}
-		}
-
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -1509,15 +1433,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1549,12 +1478,17 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1599,12 +1533,17 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1644,15 +1583,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1708,15 +1652,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1953,15 +1902,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -2125,7 +2079,7 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			num_of_civilian_factories > 50
+			num_of_civilian_factories > 40
 			if = {
 				limit = {
 					NOT = {
@@ -2507,16 +2461,21 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
+				}
+				RED_arnold_peter_moller = {
 					is_political_advisor = yes
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
-				}
-			}
-			RED_arnold_peter_moller = {
-				is_political_advisor = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2626,16 +2585,21 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
+				}
+				RED_johan_h_andresen = {
 					is_political_advisor = yes
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
-				}
-			}
-			RED_johan_h_andresen = {
-				is_political_advisor = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2718,16 +2682,21 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
+				}
+				RED_johan_h_andresen = {
 					is_political_advisor = yes
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
-				}
-			}
-			RED_johan_h_andresen = {
-				is_political_advisor = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
