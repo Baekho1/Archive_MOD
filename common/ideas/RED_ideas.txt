@@ -973,8 +973,6 @@ ideas = {
 					economy_cost_factor = 15
 				}
 			}
-			rule = {
-			}
 			on_remove = {
 				if = {
 					limit = {

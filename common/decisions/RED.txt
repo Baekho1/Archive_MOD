@@ -91,6 +91,33 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			else_if = {
 				limit = {
+					has_idea = RED_exile_committee_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl
+					add_idea = RED_exile_committee_krl_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk
+					add_idea = RED_exile_committee_alk_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr
+					add_idea = RED_exile_committee_alk_yev_ivr
+				}
+			}
+			else_if = {
+				limit = {
 					has_idea = RED_exile_committee_ivn_ivr
 				}
 				swap_ideas = {
@@ -199,6 +226,33 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			else_if = {
 				limit = {
+					has_idea = RED_exile_committee_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev
+					add_idea = RED_exile_committee_krl_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr
+					add_idea = RED_exile_committee_ivr_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk
+					add_idea = RED_exile_committee_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
 					has_idea = RED_exile_committee_ivn_ivr
 				}
 				swap_ideas = {
@@ -294,6 +348,33 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				swap_ideas = {
 					remove_idea = RED_exile_committee
 					add_idea = RED_exile_committee_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev
+					add_idea = RED_exile_committee_alk_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl
+					add_idea = RED_exile_committee_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr
+					add_idea = RED_exile_committee_ivr_alk
 				}
 			}
 			else_if = {
@@ -408,6 +489,33 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			else_if = {
 				limit = {
+					has_idea = RED_exile_committee_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl
+					add_idea = RED_exile_committee_ivr_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk
+					add_idea = RED_exile_committee_ivr_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev
+					add_idea = RED_exile_committee_yev_ivr
+				}
+			}
+			else_if = {
+				limit = {
 					has_idea = RED_exile_committee_ivn
 				}
 				swap_ideas = {
@@ -514,6 +622,33 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				swap_ideas = {
 					remove_idea = RED_exile_committee
 					add_idea = RED_exile_committee_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev
+					add_idea = RED_exile_committee_yev_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl
+					add_idea = RED_exile_committee_ivn_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk
+					add_idea = RED_exile_committee_krl_ivn
 				}
 			}
 			else_if = {

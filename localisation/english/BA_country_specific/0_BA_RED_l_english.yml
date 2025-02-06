@@ -903,6 +903,9 @@
  RED_generic.15.b_tt: "§g우리는 산업구조를 계획경제로 전환할 것입니다.§!\n\n§Y$RED_rearming_focus_1$§! 이하의 잠긴 중점들과 다른 §Y산업 중점 계통§!의 §Y산업 중점§! 일부가 해금됩니다:\n\n "
  RED_generic.15.c_tt: "§Y민간공장§!이 §R40§! 이하이기 때문에, 대중들은 §YAEP§!에 회의적입니다:"
  RED_throw_aep_away: "§YAEP§!에서 §Y계획경제§!로의 전환"
+ RED_generic.16.t: "목표 조기달성"
+ RED_generic.16.d: "우리는 AEP의 목표를 조기달성했습니다."
+ RED_generic.16.a: "인상적이군."
 
 
 
