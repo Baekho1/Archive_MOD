@@ -7,6 +7,366 @@ ideas = {
 		}
 	}
     country = {
+		
+		RED_exile_committee_all = { #망명위원회-전체
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_yev = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_no_krl = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_alk = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_ivr = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_ivn = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+
+		RED_exile_committee_yev_ivr_krl = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_ivn_alk = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk_yev_ivr = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_krl_ivn = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_alk_yev = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		
+		RED_exile_committee_yev_ivn_ivr = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_yev_ivn = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_alk_krl_yev = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_alk_krl = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_ivr_alk = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+
+
+
+		RED_exile_committee_yev_ivr = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_ivn = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk_yev = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_krl = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_alk = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+
+		RED_exile_committee_yev_ivn = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_yev = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_alk_krl = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivr_alk = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+		RED_exile_committee_ivn_ivr = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+			}
+		}
+
+		RED_exile_committee_yev = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+		RED_exile_committee_ivr = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+			}
+		}
+		RED_exile_committee_ivn = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+			}
+		}
+		RED_exile_committee = { #망명위원회
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+			}
+		}
 		RE4_redwinter_military_advisors = {
 			picture = saf_soviet_advisers
 			cancel = {
@@ -1160,6 +1520,7 @@ ideas = {
 			}
 
 			modifier = {
+				experience_gain_factor = -0.1
 				land_doctrine_cost_factor = 0.05
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
@@ -1179,6 +1540,7 @@ ideas = {
 			}
 
 			modifier = {
+				experience_gain_factor = -0.4
 				land_doctrine_cost_factor = 0.25
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10

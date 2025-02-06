@@ -196,7 +196,7 @@ RED_debt = { #다가오는 대출 만료
 	priority = 100
 }
 RED_red_horse_category = { #붉은말운동
-	priority = 20
+	priority = 200
 	allowed = {
 		original_tag = RED
 	}

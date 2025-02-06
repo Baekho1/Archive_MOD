@@ -3391,6 +3391,23 @@ leader_traits = {
 		random = no
 	}
 		#붉은겨울은 맞는데, 국민정신용 트레잇으로 쓰일 거임
+
+	RED_ivan_trait = {
+		random = no
+	}
+	RED_ivar_trait = {
+		random = no
+	}
+	RED_aleksandr_trait = {
+		random = no
+	}
+	RED_karl_trait = {
+		random = no
+	}
+	RED_yevgeny_trait = {
+		random = no
+	}
+	
 	RED_speed_fight = { #속도전
 		random = no
 		stability_factor = -0.05

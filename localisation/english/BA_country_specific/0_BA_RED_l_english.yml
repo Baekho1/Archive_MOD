@@ -125,6 +125,7 @@
 
 
 
+
  RED_club_focus_0: "붉은겨울 전산국"
  RED_club_focus_0_desc: "대전이로 기능이 멈춘 학원을 다시 복구해야 합니다. 우선 마비된 행정력을 복구할 필요가 있습니다."
  RED_club_focus_1: "급양부 재건"
@@ -767,7 +768,7 @@
  RED_revolution_war_focus_2_tt: "보병 속도: §G+5.00%§!\n보급 소비량: §G-5.0%§!\n\n"
  
 #툴팁/플래그
- RED_accept_trotskism_tt: "§Y$RED_lev_trotsky$§!는 이제 선전부장관 겸 육군참모총장 입니다"
+ RED_accept_trotskism_tt: "§Y$RED_lev_trotsky$§!는 이제 육군참모총장입니다"
  RED_heros_at_front_tt: "무작위 장군 두 명이 §Y$war_hero$§! 특성 획득"
  RED_winterarmy_advance_tt: "§Y$RED_winter_army_dynamic_modifier$§! 변동치:\n"
  RED_redwinter_office_tt: "§Y$RED_the_office_good_dynamic_modifier$§! 변동치:\n"
@@ -1410,6 +1411,7 @@
  RED_no_limit_inflation_tt: "\n조건 충족 시 제거: §Y총동원령§! 보유\n"
 
  RED_red_horse_idea: "붉은말 운동"
+ RED_exile_committee: "망명위원회"
 
  RED_fake_money: "위조지폐로 인한 경제 파탄"
  RED_fake_money_tt: "\n조건 충족시 제거 : §Y전쟁 중§!이 아님 또는 §Y총동원령§! 보유"
@@ -1445,8 +1447,15 @@
  politics_RED_tomoe_desc: "용역부장"
  
 #디시전
+ RED_in_exile_committee_flag: "망명위원회에서 활동 중"
  RED_invite_trotskists_dec_cat: "제4인터내셔널"
  RED_invite_trotskists_dec_cat_desc: "제4인터내셔널에대한설명을적어주세요"
+ RED_exile_committee_yev: "$SOV_yevgeny_preobrazhensky$ 고용"
+ RED_exile_committee_krl: "$SOV_karl_radek$ 고용"
+ RED_exile_committee_alk: "$SOV_aleksandr_shlyapnikov$ 고용"
+ RED_exile_committee_ivr: "$SOV_ivar_smilga$ 고용"
+ RED_exile_committee_ivn: "$SOV_ivan_smirnov$ 고용"
+ RED_create_exile_committee: "망명위원회 설립"
  RED_invite_ivan_smirnov_dec: "$SOV_ivan_smirnov$ 초빙"
  RED_invite_ivar_smilga_dec: "$SOV_ivar_smilga$ 초빙"
  RED_invite_karl_radek_dec: "$SOV_karl_radek$ 초빙"
@@ -1623,6 +1632,7 @@
  RED_red_horse_sp: "'속도전'"
  RED_red_horse_pr: "'증산의 불길'"
  RED_red_horse_cr: "'창조와 혁신'"
+ RED_red_horse_in: "'산업의 언덕'"
 
  RED_service_n_dedication: "봉사와 헌신"
  RED_service_n_dedication_desc: "작금의 위기상태는 너무나 예외적이기에, 이를 극복할 방법론 역시 급진적이어야만 합니다. 모든 민중은 단일한 의지 아래 공공 목적을 달성하기 위해 봉사하고 헌신하여 사회를 궁극적으로 '정상화'할 의무가 있습니다."

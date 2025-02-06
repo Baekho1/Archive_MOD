@@ -58,8 +58,582 @@ RED_seek_allies_dec_cat = {
 	}
 }
 
-RED_invite_trotskists_dec_cat = {
+RED_invite_trotskists_dec_cat = { #제4인터내셔널
 	#트로츠키주의자 규합
+	RED_exile_committee_yev = {
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		fire_only_once = yes
+		cost = 80
+		visible = {
+			has_country_flag = RED_exile_committee_made_flag
+			RED_yevgeny_preobrazhensky = {
+				has_character_flag = RED_invited_trotskist
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = RED_exile_committee
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee
+					add_idea = RED_exile_committee_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn
+					add_idea = RED_exile_committee_yev_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_ivr
+					add_idea = RED_exile_committee_yev_ivn_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_alk
+					add_idea = RED_exile_committee_alk_yev_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_krl
+					add_idea = RED_exile_committee_alk_krl_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_ivr_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_ivr_alk
+					add_idea = RED_exile_committee_no_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_alk_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_alk_krl
+					add_idea = RED_exile_committee_no_ivn
+				}
+			}
+			else_if = { #
+				limit = {
+					has_idea = RED_exile_committee_ivr_krl_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_krl_ivn
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_krl_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_krl_ivn
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_no_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_no_yev
+					add_idea = RED_exile_committee_all
+				}
+			}
+			ROOT = {
+				RED_yevgeny_preobrazhensky = {
+					set_country_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+	}
+	RED_exile_committee_krl = {
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		fire_only_once = yes
+		cost = 80
+		visible = {
+			has_country_flag = RED_exile_committee_made_flag
+			RED_karl_radek = {
+				has_character_flag = RED_invited_trotskist
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = RED_exile_committee
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee
+					add_idea = RED_exile_committee_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn
+					add_idea = RED_exile_committee_krl_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_ivr
+					add_idea = RED_exile_committee_ivr_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_alk
+					add_idea = RED_exile_committee_ivr_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_yev
+					add_idea = RED_exile_committee_alk_krl_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_ivr_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_ivr_alk
+					add_idea = RED_exile_committee_no_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_yev_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_yev_ivr
+					add_idea = RED_exile_committee_no_ivn
+				}
+			}
+			else_if = { #
+				limit = {
+					has_idea = RED_exile_committee_yev_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev_ivn_ivr
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev_ivn_ivr
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_no_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_no_krl
+					add_idea = RED_exile_committee_all
+				}
+			}
+			ROOT = {
+				RED_karl_radek = {
+					set_country_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+	}
+	RED_exile_committee_alk = {
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		fire_only_once = yes
+		cost = 80
+		visible = {
+			has_country_flag = RED_exile_committee_made_flag
+			RED_aleksandr_shlyapnikov = {
+				has_character_flag = RED_invited_trotskist
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = RED_exile_committee
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee
+					add_idea = RED_exile_committee_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn
+					add_idea = RED_exile_committee_ivn_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_ivr
+					add_idea = RED_exile_committee_ivn_ivr_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_krl
+					add_idea = RED_exile_committee_ivr_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_yev
+					add_idea = RED_exile_committee_alk_krl_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_krl_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_krl_ivn
+					add_idea = RED_exile_committee_no_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev_ivr_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev_ivr_krl
+					add_idea = RED_exile_committee_no_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_yev_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_yev_ivn
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev_ivn_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev_ivn_ivr
+					add_idea = RED_exile_committee_no_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_no_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_no_alk
+					add_idea = RED_exile_committee_all
+				}
+			}
+			ROOT = {
+				RED_aleksandr_shlyapnikov = {
+					set_country_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+	}
+	RED_exile_committee_ivr = {
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		fire_only_once = yes
+		cost = 80
+		visible = {
+			has_country_flag = RED_exile_committee_made_flag
+			ROOT = {
+				RED_ivar_smilga = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = RED_exile_committee
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee
+					add_idea = RED_exile_committee_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn
+					add_idea = RED_exile_committee_ivn_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_alk
+					add_idea = RED_exile_committee_ivn_ivr_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_krl
+					add_idea = RED_exile_committee_ivr_alk_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_yev
+					add_idea = RED_exile_committee_yev_ivr_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_ivn_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_ivn_alk
+					add_idea = RED_exile_committee_no_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_krl_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_krl_yev
+					add_idea = RED_exile_committee_no_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_yev_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_yev_ivn
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivn_alk_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivn_alk_yev
+					add_idea = RED_exile_committee_no_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_no_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_no_ivr
+					add_idea = RED_exile_committee_all
+				}
+			}
+			ROOT = {
+				RED_ivar_smilga = {
+					set_country_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+	}
+	RED_exile_committee_ivn = {
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		fire_only_once = yes
+		cost = 80
+		visible = {
+			has_country_flag = RED_exile_committee_made_flag
+			ROOT = {
+				RED_ivan_smirnov = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = RED_exile_committee
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee
+					add_idea = RED_exile_committee_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr
+					add_idea = RED_exile_committee_ivn_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_alk
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_alk
+					add_idea = RED_exile_committee_ivn_ivr_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_krl
+					add_idea = RED_exile_committee_krl_ivn_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_krl_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_krl_yev
+					add_idea = RED_exile_committee_krl_yev_ivn
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_ivr_alk_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_ivr_alk_krl
+					add_idea = RED_exile_committee_no_yev
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_krl_yev
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_krl_yev
+					add_idea = RED_exile_committee_no_ivr
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_yev_ivr_krl
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_yev_ivr_krl
+					add_idea = RED_exile_committee_no_alk
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_alk_yev_ivr
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_alk_yev_ivr
+					add_idea = RED_exile_committee_no_krl
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_exile_committee_no_ivn
+				}
+				swap_ideas = {
+					remove_idea = RED_exile_committee_no_ivn
+					add_idea = RED_exile_committee_all
+				}
+			}
+			ROOT = {
+				RED_ivan_smirnov = {
+					set_country_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+	}
+	RED_create_exile_committee = {
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			add_ideas = RED_exile_committee
+			set_country_flag = RED_exile_committee_made_flag
+		}
+		visible = {
+			ROOT = {
+				OR = {
+					RED_ivan_smirnov = {
+						has_character_flag = RED_invited_trotskist
+					}
+					RED_ivar_smilga = {
+						has_character_flag = RED_invited_trotskist
+					}
+					RED_karl_radek = {
+						has_character_flag = RED_invited_trotskist
+					}
+					RED_yevgeny_preobrazhensky = {
+						has_character_flag = RED_invited_trotskist
+					}
+					RED_aleksandr_shlyapnikov = {
+						has_character_flag = RED_invited_trotskist
+					}
+				}
+			}
+		}
+	}
 	RED_invite_ivan_smirnov_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
@@ -108,12 +682,12 @@ RED_invite_trotskists_dec_cat = {
 		available = {
 			if = {
 				limit = {
-						GEH = {
+					GEM = {
 							exists = yes
 						}
 				}
 				network_strength = {
-					target = GEH
+					target = GEM
 					value > 10
 				}
 			}
@@ -151,12 +725,12 @@ RED_invite_trotskists_dec_cat = {
 		available = {
 			if = {
 				limit = {
-						GEH = {
+					GEM = {
 							exists = yes
 						}
 				}
 				network_strength = {
-					target = GEH
+					target = GEM
 					value > 10
 				}
 			}
@@ -282,7 +856,7 @@ RED_invite_trotskists_dec_cat = {
 	}
 }
 
-RED_military_government_administration = {
+RED_military_government_administration = { #군정청
 	RED_military_government_occupation_DEN = {
 		icon = GFX_decision_generic_tank
 		priority = 202
@@ -977,7 +1551,7 @@ RED_military_government_administration = {
 	}
 }
 
-RED_forced_relocation_policy = {
+RED_forced_relocation_policy = { #강제이주
 	RED_forced_relocation_policy_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
@@ -999,8 +1573,8 @@ RED_forced_relocation_policy = {
 			}
 		}
 		available = {
-			political_power_daily > 0.249
-			has_stability > 0.149
+			political_power_daily > 0.2
+			has_stability > 0.15
 		}
 		ai_will_do = {
 			factor = 400
@@ -1009,11 +1583,11 @@ RED_forced_relocation_policy = {
 		cost = 35
 		days_remove = 70
 		modifier = {
-			political_power_cost = 0.25
-			consumer_goods_factor = 0.15
+			political_power_cost = 0.2
+			consumer_goods_factor = 0.1
 		}
 		complete_effect = {
-			add_stability = -0.03
+			add_stability = -0.01
 		}
 		remove_effect = {
 			add_state_core = FROM
@@ -4283,6 +4857,51 @@ RED_red_horse_category = {
 				swap_ideas = {
 					remove_idea = RED_red_horse_idea_sp_pr
 					add_idea = RED_red_horse_idea_all
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = RED_horse_in_progress
+		}
+	}
+	RED_red_horse_in = { #'산업의 언덕'
+		icon = GFX_decision_gre_paying_ifc_debt
+		fire_only_once = yes
+		days_remove = 60
+		cost = 20
+		available = {
+			NOT = {
+				has_country_flag = RED_horse_in_progress
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RED_horse_in_progress
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+					infrastructure > 2
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = RED
+					infrastructure > 2
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 				}
 			}
 		}

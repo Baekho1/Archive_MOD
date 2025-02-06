@@ -791,6 +791,11 @@ characters = {
 			traits = {
 				head_directorate_of_new_buildings 
 			}
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 		}
 	}
 	RED_ivar_smilga = {
@@ -816,6 +821,9 @@ characters = {
 				}
 			}
 			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
 			}
 			traits = {
 				soviet_economist
@@ -836,6 +844,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = RED_aleksandr_shlyapnikov
 			allowed = {
@@ -867,6 +880,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = RED_karl_radek
 			allowed = {
@@ -898,6 +916,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = SOV_yevgeny_preobrazhensky
 			allowed = {

@@ -106,6 +106,12 @@
  RED_more_production: "  §Y증산의 불길§!"
  RED_creating_n_inovation: "  §Y창조와 혁신§!"
 
+ RED_ivan_trait: "§Y$SOV_ivan_smirnov$§!\n\n £GFX_idea_SOV_ivan_smirnov\n\n"
+ RED_ivar_trait: "§Y$SOV_ivar_smilga$§!\n\n £GFX_idea_SOV_ivar_smilga\n\n"
+ RED_aleksandr_trait: "§Y$SOV_aleksandr_shlyapnikov$§!\n\n £GFX_idea_SOV_aleksandr_shlyapnikov\n\n"
+ RED_karl_trait: "§Y$SOV_karl_radek$§!\n\n £GFX_idea_SOV_karl_radek\n\n"
+ RED_yevgeny_trait: "§Y$SOV_yevgeny_preobrazhensky$§!\n\n £GFX_idea_SOV_yevgeny_preobrazhensky\n\n"
+
 
  RED_syndicalism_politic: "  §Y생디칼리즘 행정§!"
  RED_syndicalism_economy: "  §Y생디칼리즘 경제§!"

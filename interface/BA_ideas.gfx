@@ -808,6 +808,33 @@ spriteTypes = {
 		name = "GFX_idea_ARI_atsuko_smile"
 		textureFile = "gfx/interface/ideas/ARI/atsuko_smile.tga"
 	}
+	#붉겨 - 근데 트로츠키
+	spriteType = {
+		name = "GFX_idea_SOV_aleksandr_shlyapnikov"
+		texturefile = "gfx/interface/ideas/idea_SOV_aleksandr_shlyapnikov.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_yevgeny_preobrazhensky"
+		texturefile = "gfx/interface/ideas/idea_SOV_yevgeny_preobrazhensky.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_karl_radek"
+		texturefile = "gfx/interface/ideas/idea_SOV_karl_radek.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_ivar_smilga"
+		texturefile = "gfx/interface/ideas/idea_SOV_ivar_smilga.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_ivan_smirnov"
+		texturefile = "gfx/interface/ideas/idea_SOV_ivan_smirnov.dds"
+		legacy_lazy_load = no
+	}
+	#붉겨
 	spriteType = {
 		name = "GFX_idea_RED_redwinter"
 		textureFile = "gfx/interface/ideas/RED/idea_RED_redwinter.tga"
