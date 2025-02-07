@@ -50,6 +50,7 @@ ideas = {
 			modifier = {
 				war_support_weekly = 0.005
 				surrender_limit = 2
+				mobilization_speed = 0.50
 			}
 			targeted_modifier = {
 				tag = var:global.BAKSANWAR_on_war_relation_added_tag
