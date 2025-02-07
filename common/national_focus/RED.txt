@@ -2295,9 +2295,13 @@ focus_tree = {
 			focus = RED_economy_focus_17
 		}
 		available = {
-			num_of_civilian_factories > 80
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			num_of_civilian_factories > 80
+			NOT = {
+				has_idea = tot_economic_mobilisation
+				has_idea = war_economy
 			}
 			NOT = {
 				has_idea = RED_second_AEP
@@ -2382,7 +2386,7 @@ focus_tree = {
 					add_idea = RED_corporatism_2
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = RED_market_socialism
 				}
@@ -2394,6 +2398,16 @@ focus_tree = {
 			else_if = {
 				limit = {
 					has_idea = RED_market_socialism_2
+				}
+				swap_ideas = {
+					remove_idea = RED_market_socialism_2
+					add_idea = RED_market_socialism_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RED_corporatism
+					add_idea = RED_corporatism_2
 				}
 				swap_ideas = {
 					remove_idea = RED_market_socialism_2
@@ -2481,7 +2495,7 @@ focus_tree = {
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 		mutually_exclusive = {
-			focus = RED_economy_focus_17
+			focus = RED_economy_focus_27
 		}
 		available = {
 			if = {
@@ -2518,6 +2532,28 @@ focus_tree = {
 					add_idea = RED_market_socialism_3
 				}
 			}
+		}
+	}
+	focus = { #규제강화
+		id = RED_economy_focus_27
+		icon = GFX_focus_DEN_limited_regulations
+		prerequisite = { focus = RED_economy_focus_25 }
+		x = 2
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_economy_focus_26
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			upgrade_economy_law = yes
 		}
 	}
 	focus = { #상품작물 재배

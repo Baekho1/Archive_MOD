@@ -738,7 +738,11 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.15
 				production_speed_industrial_complex_factor = 0.25
 				industrial_capacity_factory = 0.075
-				consumer_goods_factor = -0.2
+				consumer_goods_factor = -0.25
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 		}
 		RED_corporatism_2 = { #협동조합경제 - 유연한 고용
@@ -750,6 +754,10 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				industrial_capacity_factory = 0.075
 				consumer_goods_factor = -0.1
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 		}
 		RED_corporatism_1 = { #협동조합경제 - 중앙은행
@@ -761,7 +769,11 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
-				consumer_goods_factor = -0.2
+				consumer_goods_factor = -0.25
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 		}
 		RED_corporatism = { #협동조합경제
@@ -773,6 +785,10 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
 				consumer_goods_factor = -0.1
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 		}
 		RED_market_socialism_3 = { #시장사회주의 - 다합치기
@@ -828,6 +844,10 @@ ideas = {
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 			on_remove = {
 				if = {
@@ -857,6 +877,10 @@ ideas = {
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 			on_remove = {
 				if = {
@@ -884,6 +908,10 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 			on_remove = {
 				if = {
@@ -912,6 +940,10 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
 			}
 			on_remove = {
 				if = {
