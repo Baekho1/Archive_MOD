@@ -769,7 +769,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 		}
 	}
-	RED_invite_ivan_smirnov_dec = {
+	RED_invite_ivan_smirnov_dec = { #데려오기 / 초빙
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
 			if = {

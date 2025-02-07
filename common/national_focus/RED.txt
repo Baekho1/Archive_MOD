@@ -2373,7 +2373,10 @@ focus_tree = {
 					add_idea = RED_corporatism_3
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_idea = RED_corporatism
+				}
 				swap_ideas = {
 					remove_idea = RED_corporatism
 					add_idea = RED_corporatism_2
@@ -2388,7 +2391,10 @@ focus_tree = {
 					add_idea = RED_market_socialism_1
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_idea = RED_market_socialism_2
+				}
 				swap_ideas = {
 					remove_idea = RED_market_socialism_2
 					add_idea = RED_market_socialism_3
@@ -3221,7 +3227,7 @@ focus_tree = {
 	}
 	focus = { #군대에 배식 우선
 		id = RED_meal_focus_arm
-		icon = GFX_focus_SWI_neutrality_on_the_move
+		icon = GFX_focus_generic_reinforcing_the_supply_network
 		cost = 2
 		relative_position_id = RED_club_focus_1
 		x = -1
