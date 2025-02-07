@@ -282,7 +282,6 @@ focus_tree = {
 		available = {
 		}   
 		bypass = {
-			has_global_flag = GFLAG_BAKSANWAR
 		}
 		ai_will_do = {
 			factor = 0
@@ -676,6 +675,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			every_controlled_state = {
+				limit = { is_demilitarized_zone = yes }
+				set_demilitarized_zone = no
+			}
 		}
 	}
 	focus = { # 지도부 교체
@@ -785,6 +788,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			every_controlled_state = {
+				limit = { is_demilitarized_zone = yes }
+				set_demilitarized_zone = no
+			}
 		}
 	}
 	focus = { # 두 번째 충격
@@ -830,10 +837,6 @@ focus_tree = {
 			if = {
 				limit = { has_idea = SHA_HYA_wjswodqotkd2 }
 				remove_ideas = SHA_HYA_wjswodqotkd2
-			}
-			every_controlled_state = {
-				limit = { is_demilitarized_zone = yes }
-				set_demilitarized_zone = no
 			}
 			create_wargoal = {
 				type = take_state_focus

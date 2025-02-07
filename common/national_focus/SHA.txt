@@ -1654,9 +1654,12 @@ focus_tree = {
 					id = shafas.8
 				}
 			}
-			set_global_flag = GFLAG_FASI_BAKSANWAR
+			set_global_flag = GFLAG_BAKSANWAR
 			custom_effect_tooltip = tooltip_white_line 
 			unlock_decision_category_tooltip = SHA_invade_of_Hyakkiyako_cat
+			set_country_flag = SHA_invade_of_Hyakkiyako_flag
+			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_tt
+			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_def_tt
 		}
 	}
 	#########################

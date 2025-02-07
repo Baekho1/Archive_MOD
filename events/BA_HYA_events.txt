@@ -7,7 +7,6 @@ country_event = {
 	picture = GFX_report_event_dead_soldiers
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = { 
 		name = HYA_event.1.a
@@ -32,11 +31,14 @@ country_event = {
 	desc = HYA_event.2.desc
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = { 
 		name = HYA_event.2.a
 		ai_chance = {
 			factor = 10
+			modifier = {
+				NOT = { tag = var:global.BAKSANWAR_on_war_relation_added_tag }
+				factor = 0
+			}
 		}
 		white_peace = SHA
 		set_global_flag = GFLAG_BAKSANWAR_END
@@ -119,6 +121,10 @@ country_event = {
 		name = HYA_event.2.b
 		ai_chance = {
 			factor = 0
+			modifier = {
+				NOT = { tag = var:global.BAKSANWAR_on_war_relation_added_tag }
+				add = 100
+			}
 		}
 		add_threat = 2
 		set_global_flag = GFLAG_BAKSANWAR_END
@@ -442,7 +448,6 @@ country_event = {
 	picture = GFX_report_event_dead_soldiers
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = { 
 		name = HYA_event.14.a
@@ -470,11 +475,14 @@ country_event = {
 	desc = HYA_event.15.desc
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = { 
 		name = HYA_event.15.a
 		ai_chance = {
 			factor = 10
+			modifier = {
+				NOT = { tag = var:global.BAKSANWAR_on_war_relation_added_tag }
+				factor = 0
+			}
 		}
 		white_peace = HYA
 		set_global_flag = CFLAG_BAKSANWAR_END
@@ -539,6 +547,10 @@ country_event = {
 		name = HYA_event.15.b
 		ai_chance = {
 			factor = 0
+			modifier = {
+				NOT = { tag = var:global.BAKSANWAR_on_war_relation_added_tag }
+				add = 100
+			}
 		}
 		add_threat = 2
 		set_global_flag = CFLAG_BAKSANWAR_END
@@ -551,9 +563,17 @@ country_event = {
 	desc = HYA_event.16.desc
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = { 
-		name = HYA_event.16.b
+		name = HYA_event.16.a
+		set_variable = { global.BAKSANWAR_on_war_relation_added_tag = ROOT }
+		if = {
+			limit = {
+				NOT = { tag = var:global.BAKSANWAR_on_war_relation_added_tag }
+				has_war_with = var:global.BAKSANWAR_on_war_relation_added_tag
+			}
+			add_war_support = 0.10
+			add_ideas = HYA_event_idea_16
+		}
 	}
 }
 country_event = { 

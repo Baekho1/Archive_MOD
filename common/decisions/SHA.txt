@@ -494,6 +494,29 @@ SHA_Eastern_Alchemy_Society_cat = {
 	}
 }
 SHA_invade_of_Hyakkiyako_cat = {
+
+	SHA_war_with_southern_kivotos_decision = {
+		priority = 100
+		icon = GFX_decision_generic_political_rally
+		activation = {
+			always = no
+		}
+		available = {
+			has_war_with = HYA
+			any_war_score > 50
+			HYA = { surrender_progress > 0.35 }
+		}
+		cancel_trigger = {
+			has_war_with = HYA
+			surrender_progress > 0.50
+			HYA = { any_war_score > 35 }
+		}
+		is_good = no
+		days_mission_timeout = 365
+
+		complete_effect = { HYA = { country_event = HYA_event.14 } }
+		cancel_effect = { country_event = HYA_event.1 }
+	}
 	
 	SHA_operational_planning = {
 		icon = GFX_decision_hol_draw_up_staff_plans
