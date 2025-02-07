@@ -810,27 +810,27 @@ spriteTypes = {
 	}
 	#붉겨 - 근데 트로츠키
 	spriteType = {
-		name = "GFX_idea_SOV_aleksandr_shlyapnikov"
+		name = "GFX_idea_RED_aleksandr_shlyapnikov"
 		texturefile = "gfx/interface/ideas/idea_SOV_aleksandr_shlyapnikov.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_yevgeny_preobrazhensky"
+		name = "GFX_idea_RED_yevgeny_preobrazhensky"
 		texturefile = "gfx/interface/ideas/idea_SOV_yevgeny_preobrazhensky.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_karl_radek"
+		name = "GFX_idea_RED_karl_radek"
 		texturefile = "gfx/interface/ideas/idea_SOV_karl_radek.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_ivar_smilga"
+		name = "GFX_idea_RED_ivar_smilga"
 		texturefile = "gfx/interface/ideas/idea_SOV_ivar_smilga.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_SOV_ivan_smirnov"
+		name = "GFX_idea_RED_ivan_smirnov"
 		texturefile = "gfx/interface/ideas/idea_SOV_ivan_smirnov.dds"
 		legacy_lazy_load = no
 	}

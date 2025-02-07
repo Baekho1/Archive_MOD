@@ -1067,28 +1067,38 @@ ideas = {
 			}
 		}
 
-		RED_technician = {
+		RED_technician = { #용역부
 
 			picture = jap_the_unthinkable_option
 			
 			allowed = {
-				Kivotos_tag = yes
+				tag = RED
 			}
 
 			available = {
-				controls_state = 37
+				has_completed_focus = RED_entice_publicworks
 			}
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.05
 			}
 
-			modifier = {	
-				production_speed_buildings_factor = 0.05
+			modifier = {
+				political_power_cost = 0.1
 			}
 			
 			traits = { RED_designer }
 
+			on_add = {
+				add_dynamic_modifier = {
+					modifier = RED_labor_party_dynamic_modifier
+				}
+			}
+			on_remove = {
+				remove_dynamic_modifier = {
+					modifier = RED_labor_party_dynamic_modifier
+				}
+			}
 			ai_will_do = {
 				factor = 1
 			}

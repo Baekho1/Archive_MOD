@@ -97,6 +97,7 @@
  RED_SWE_minister_of_trade: "무역장관"
  RED_Labor_n_Social_Engineering_Institute: "진보한 사회공학 연구"
  office_propagandist: "사무국 비서실장"
+ office_propagandist_: "사무국 총비서"
  alcoholic: "알콜중독"
  alcoholic_desc: "§L이 지휘관은 어떤 면에서는 용감하지만 어떤 면에서는... 제정신이 아닙니다.§!"
  leader_of_publicworks: "용역부장"
@@ -106,11 +107,11 @@
  RED_more_production: "  §Y증산의 불길§!"
  RED_creating_n_inovation: "  §Y창조와 혁신§!"
 
- RED_ivan_trait: "§Y$SOV_ivan_smirnov$§!\n\n £GFX_idea_SOV_ivan_smirnov\n\n"
- RED_ivar_trait: "§Y$SOV_ivar_smilga$§!\n\n £GFX_idea_SOV_ivar_smilga\n\n"
- RED_aleksandr_trait: "§Y$SOV_aleksandr_shlyapnikov$§!\n\n £GFX_idea_SOV_aleksandr_shlyapnikov\n\n"
- RED_karl_trait: "§Y$SOV_karl_radek$§!\n\n £GFX_idea_SOV_karl_radek\n\n"
- RED_yevgeny_trait: "§Y$SOV_yevgeny_preobrazhensky$§!\n\n £GFX_idea_SOV_yevgeny_preobrazhensky\n\n"
+ RED_ivan_trait: "§Y$SOV_ivan_smirnov$§!\n\n £GFX_idea_RED_ivan_smirnov\n\n"
+ RED_ivar_trait: "§Y$SOV_ivar_smilga$§!\n\n £GFX_idea_RED_ivar_smilga\n\n"
+ RED_aleksandr_trait: "§Y$SOV_aleksandr_shlyapnikov$§!\n\n £GFX_idea_RED_aleksandr_shlyapnikov\n\n"
+ RED_karl_trait: "§Y$SOV_karl_radek$§!\n\n £GFX_idea_RED_karl_radek\n\n"
+ RED_yevgeny_trait: "§Y$SOV_yevgeny_preobrazhensky$§!\n\n £GFX_idea_RED_yevgeny_preobrazhensky\n\n"
 
 
  RED_syndicalism_politic: "  §Y생디칼리즘 행정§!"

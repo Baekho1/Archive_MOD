@@ -250,9 +250,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			add_dynamic_modifier = {
-				modifier = RED_labor_party_dynamic_modifier
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = RED_technician
+			custom_effect_tooltip = RED_entice_publicworks_tt
+			effect_tooltip = {
+				add_dynamic_modifier = {
+					modifier = RED_labor_party_dynamic_modifier
+				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			effect_tooltip = {
 				unlock_national_focus = RED_rearming_focus_1
 			}
@@ -1410,6 +1416,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.1
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = DEN_knud_kristensen
 			custom_effect_tooltip = available_political_advisor
@@ -1420,6 +1427,17 @@ focus_tree = {
 				country_event = {
 					id = RED_generic.11
 					days = 2
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			RED_Tomoe = {
+				remove_trait = {
+					trait = office_propagandist
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = office_propagandist_
+					slot = political_advisor
 				}
 			}
 		}
@@ -2102,6 +2120,7 @@ focus_tree = {
 					has_country_flag = RED_there_is_coup_flag
 				}
 				NOT = { OR = {has_idea = RED_first_AEP_1 has_idea = RED_first_AEP} }
+				has_idea = low_economic_mobilisation
 			}
 			else = {
 				NOT = {
@@ -2300,6 +2319,7 @@ focus_tree = {
 			}
 			num_of_civilian_factories > 80
 			NOT = {
+				has_idea = partial_economic_mobilisation
 				has_idea = tot_economic_mobilisation
 				has_idea = war_economy
 			}
@@ -2438,11 +2458,19 @@ focus_tree = {
 				limit = {
 					OR={has_state_category = rural
 					has_state_category = town}
-					is_coastal = no
 				}
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_building_construction = {
+					type = infrastructure
 					level = 1
 				}
 			}
@@ -2451,18 +2479,6 @@ focus_tree = {
 					OR={has_state_category = rural
 					has_state_category = town}
 					is_coastal = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					OR={has_state_category = rural
-					has_state_category = town}
-					is_coastal = yes
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2538,6 +2554,7 @@ focus_tree = {
 		id = RED_economy_focus_27
 		icon = GFX_focus_DEN_limited_regulations
 		prerequisite = { focus = RED_economy_focus_25 }
+		prerequisite = { focus = RED_economy_focus_22 focus = RED_economy_focus_17 }
 		x = 2
 		y = 6
 		relative_position_id = RED_economy_focus_3
@@ -2731,9 +2748,8 @@ focus_tree = {
 					OR={has_state_category = rural
 					has_state_category = town}
 				}
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 1
 				}
 			}
@@ -2742,20 +2758,8 @@ focus_tree = {
 					OR={has_state_category = rural
 					has_state_category = town}
 				}
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					OR={has_state_category = rural
-					has_state_category = town}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 1
 				}
 			}
@@ -2801,14 +2805,10 @@ focus_tree = {
 					is_coastal = yes
 					infrastructure > 3
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
 				}
 			}
 			random_owned_controlled_state = {
@@ -2816,14 +2816,10 @@ focus_tree = {
 					is_coastal = yes
 					infrastructure > 3
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
 				}
 			}
 			every_owned_state = {

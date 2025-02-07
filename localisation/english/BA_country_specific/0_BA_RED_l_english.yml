@@ -34,6 +34,7 @@
  RED_entice_publicworks_cherino: "용역부 회유"
  RED_entice_publicworks_minori: "용역부 확장"
  RED_entice_publicworks: "[RED_entice_publicworks]"
+ RED_entice_publicworks_tt: "\n§Y고용시§!:"
  RED_entice_publicworks_desc: "경제를 복구하는데 있어서 용역부의 도움은 필수적입니다. 우리는 그들을 회유하여 복구 작업에 참여하도록 해야 합니다. \n단순한 그들을 회유하는데는 보상으로 줄 넉넉한 푸딩만 있다면 충분할 것입니다."
  RED_upgrade_heavy_industry: "중공업 확장"
  RED_upgrade_heavy_industry_desc: "경제를 회복하기 위해선 기반이 될 공업시설이 필요합니다. 우선, 중공업 시설을 확장하여 생산량을 증대시킵시다."
@@ -828,6 +829,12 @@
  RED_central_labor_union: "노동사회공학연구소"
  
 #이벤트
+ RED_racing_sov.1.t: "[ROOT.getname] 추적 실패"
+ RED_racing_sov.1.d: "우리는 [ROOT.getname]을(를) 추적하고자 했지만 아쉽게도 실패했습니다."
+ RED_racing_sov.1.t_1: "[RED.getname]의 [ROOT.getname] 추적 실패"
+ RED_racing_sov.1.d_1: "[RED.getname]은(는) [ROOT.getname]을(를) 추적하고자 했으나 실패하였습니다."
+ RED_racing_sov.1.a: "알겠다."
+
  RED_tro_event.1.t: "[SOV.getname]의 트로츠키 암살 시도!"
  RED_tro_event.1.d: " 유감스럽게도, 우리 학원의 현지인 고문으로서 활동하고 있는 '레프 트로츠키'는 한때 소련의 건국영웅인 블라디미르 레닌과 함께 자본주의에 맞선 혁명세력인 볼셰비키를 이끌며 소련 정치의 중앙에 자리잡았습니다. 그러나 1920년대, 트로츠키는 현재 소련의 권력자인 이오시프 스탈린과의 권력쟁투에서 패배하며 그 세력을 크게 잃었고, 현재 망명을 위해 이곳에 와 있는 상황입니다. 한편, 스탈린은 트로츠키를 제거함으로써 소련 내 자신의 지위를 공고히 하고자 소련의 첩보시설을 동원하여 지속적으로 트로츠키의 암살을 시도하고 있습니다.\n\n 우리는 트로츠키 동지의 목숨을 '퇴보한 노동자 국가'에게 내어주지 않을 것이며, 기필코 그의 신변을 보호할 것입니다. "
  RED_tro_event.1.a: "경계를 강화해!"
@@ -1007,7 +1014,7 @@
  
 #이벤트(마리나)
  
- RED_event.15_tt: "\n§Y£GFX_decision_icon_small 혁명전쟁 준비§! 결정을 많이 완료하지 않아서 가장 낮은 효과의 국민정신을 얻습니다."
+ RED_event.15_tt: "\n§Y£decision_icon_small 혁명전쟁 준비§! 결정을 많이 완료하지 않아서 가장 낮은 효과의 국민정신을 얻습니다."
  RED_event.15_tt1: "\n§Y£GFX_decision_icon_small 혁명전쟁 준비§! 결정을 한 개 이상 완료하여 두 번째로 낮은 효과의 국민정신을 얻습니다."
  RED_event.15_tt2: "\n§Y£GFX_decision_icon_small 혁명전쟁 준비§! 결정을 4개 이상 완료하여 중간 효과의 국민정신을 얻습니다."
  RED_event.15_tt3: "\n§Y£GFX_decision_icon_small 혁명전쟁 준비§! 결정을 7개 이상 완료하여 두 번째로 높은 효과의 국민정신을 얻습니다."
@@ -1445,6 +1452,9 @@
  RED_military_government_idea_2: "§W불안도§!§gㅣ§!§W균형§!"
  RED_military_government_idea_1: "§W불안도§!§gㅣ§!§G안정적§!"
  RED_military_government_idea_exit: "§W불안도§!§gㅣ§!§g전시 상태§!"
+
+ 
+ RED_technician: "붉은겨울 용역부"
 
 
 #지도자

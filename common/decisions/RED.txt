@@ -780,7 +780,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				}
 				network_strength = {
 					target = SPR
-					value > 10
+					value > 30
 				}
 			}
 			has_equipment = {
@@ -796,17 +796,35 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 		}
 		remove_effect = {
-			effect_tooltip = {
-				SOV = {
-					SOV_ivan_smirnov = {
-						set_nationality = RED
+			random_list = {
+				35 = {
+					effect_tooltip = {
+						SOV = {
+							SOV_ivan_smirnov = {
+								set_nationality = RED
+							}
+						}
+					}
+					hidden_effect = {
+						ROOT = {
+							RED_ivan_smirnov = {
+								set_character_flag = RED_invited_trotskist
+							}
+						}
 					}
 				}
-			}
-			hidden_effect = {
-				ROOT = {
-					RED_ivan_smirnov = {
-						set_character_flag = RED_invited_trotskist
+				65 ={
+					ROOT = {
+						RED_ivan_smirnov = {
+							unit_leader_event = RED_racing_sov.1
+						}
+					}
+					hidden_effect = {
+						SOV = {
+							SOV_ivan_smirnov = {
+								unit_leader_event = RED_racing_sov.1
+							}
+						}
 					}
 				}
 			}
@@ -1708,6 +1726,9 @@ RED_forced_relocation_policy = { #강제이주
 			}
 		}
 		available = {
+			FROM = {
+				compliance > 25
+			}
 			political_power_daily > 0.2
 			has_stability > 0.15
 		}
