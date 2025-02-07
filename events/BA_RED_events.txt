@@ -530,6 +530,9 @@ country_event = { #제1차 AEP 조기달성
 	option = { #굿 
 		name = RED_generic.16.a
 		add_political_power = 5
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_14
+		}
 		hidden_effect = {
 			remove_ideas = RED_first_AEP_1
 		}
@@ -4033,6 +4036,9 @@ country_event = { #제2차 AEP 평가
 			custom_effect_tooltip = RED_event.22_tt_1
 			add_political_power = -100
 		}
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_22
+		}
 		set_country_flag = RED_corporatism_flag
 	}
 	option = {
@@ -4045,6 +4051,9 @@ country_event = { #제2차 AEP 평가
 			add_political_power = -100
 		}
 		else = {
+		}
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_17
 		}
 		set_country_flag = RED_market_socialism_flag
 	}

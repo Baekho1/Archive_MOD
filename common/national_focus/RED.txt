@@ -3431,7 +3431,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_accept_trotskism
-		x = -1
+		x = -7
 		y = 1
 
 		prerequisite = {
@@ -3510,9 +3510,6 @@ focus_tree = {
 
 		prerequisite = {
 			focus = RED_the_fourth_international
-		}
-		prerequisite = {
-			focus = RED_redbear_editorial
 		}
 		available = {
 			NOT = {
@@ -3630,9 +3627,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		}
-		prerequisite = {
-			focus = RED_the_fourth_international
 		}
 
 		prerequisite = {
@@ -3962,7 +3956,7 @@ focus_tree = {
 		id = RED_expand_publishing_dep
 		icon = GFX_focus_generic_printing_press
 		prerequisite = { focus = RED_redbear_editorial }
-		x = -10
+		x = -4
 		y = 1
 		relative_position_id = RED_redbear_editorial
 		cost = 2
