@@ -13,7 +13,9 @@ country_event = {
 		ai_chance = {
 			base = 3
 		}
-		country_event = { id = redpuppet.3 hours = 08 }
+		FROM = { 
+			country_event = { id = redpuppet.3 hours = 08 } 
+		}
 		effect_tooltip = {
 			FROM = {
 				add_opinion_modifier = {
@@ -24,8 +26,8 @@ country_event = {
 					type = infantry_equipment
 					amount = 1500
 				}
-				add_equipment_production = {
-					type  =kivotos_infantry_equipment
+				add_equipment_to_stockpile = {
+					type = kivotos_infantry_equipment
 					amount = 1500
 				}
 			}
@@ -93,6 +95,9 @@ country_event = { # 군사고문 내놓으세요 :rage:
 	
 	option = { # 무조건 줌
 		name = redpuppet.4.a 
+		ai_chance = {
+			base = 999
+		}
 		add_ideas = RED_redwinter_military_advisors
 		effect_tooltip = {
 			FROM = { 
@@ -101,6 +106,23 @@ country_event = { # 군사고문 내놓으세요 :rage:
 					target = ROOT
 					modifier = ITA_military_cooperation_acceptance
 				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = redpuppet.5 hours = 04 }
+			}
+		}
+	}
+	
+	option = { # 씨발 이걸 왜 거부해?!
+		name = redpuppet.4.b 
+		ai_chance = {
+			base = 0
+		}
+		effect_tooltip = {
+			FROM = {
+				add_opinion_modifier = { target = ROOT modifier = SWI_rejected_our_request }
 			}
 		}
 		hidden_effect = {
@@ -125,6 +147,129 @@ country_event = { # 감사링
 				target = FROM
 				modifier = ITA_military_cooperation_acceptance
 			}
+		}
+	}
+}
+country_event = { # 이걸 거부해?
+	id = redpuppet.6
+	title = redpuppet.6.t
+	desc = redpuppet.6.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = redpuppet.6.a 
+		ROOT = {
+			add_opinion_modifier = { target = FROM modifier = SWI_rejected_our_request }
+		}
+	}
+}
+country_event = { # 장교 파견좀
+	id = redpuppet.7
+	title = redpuppet.7.t
+	desc = redpuppet.7.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = redpuppet.7.a 
+		ai_chance = { base = 90 }
+		IF = {
+			limit = { original_tag = RED }
+			RED_marina = { custom_effect_tooltip = RE4_she_is_leader_tt }
+			set_global_flag = RE4_marina_is_militaryadmin
+		}
+		ELSE_IF = {
+			limit = { original_tag = RE4 }
+			RED = { 
+				RED_marina = { custom_effect_tooltip = RE4_she_is_leader_tt }
+			}
+		}
+	}
+	
+	option = { 
+		name = redpuppet.7.b
+		ai_chance = { base = 10 }
+		IF = {
+			limit = { original_tag = RED }
+			RED_Tomoe = { custom_effect_tooltip = RE4_she_is_leader_tt }
+			set_global_flag = RE4_tomoe_is_militaryadmin
+		}
+		ELSE_IF = {
+			limit = { original_tag = RE4 }
+			RED = { 
+				RED_Tomoe = { custom_effect_tooltip = RE4_she_is_leader_tt }
+			}
+		}
+	}
+	
+	option = { 
+		name = redpuppet.7.c
+		custom_effect_tooltip = NO_EFFECT
+	}
+}
+country_event = { # 찬성하다.
+	id = redpuppet.8
+	title = redpuppet.8.t
+	desc = redpuppet.8.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = redpuppet.5.a
+		if = {
+			limit = { has_global_flag = RE4_marina_is_militaryadmin }
+			effect_tooltip = {
+				add_corps_commander_role = {
+					character = RE4_clone_marina
+				}
+			}
+			add_country_leader_role = {
+				character = RE4_clone_marina
+				promote_leader = yes
+				country_leader = {
+					ideology = stalinism
+					expire = "1999.1.1.1"
+					traits = { 
+						RED_military_government_commander 
+						office_commander
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_global_flag = RE4_tomoe_is_militaryadmin }
+			effect_tooltip = {
+				add_corps_commander_role = {
+					character = RE4_clone_tomoe
+				}
+			}
+			add_country_leader_role = {
+				character = RE4_clone_tomoe
+				promote_leader = yes
+				country_leader = {
+					ideology = stalinism
+					expire = "1999.1.1.1"
+					traits = { 
+						RED_military_government_commander 
+						office_propagandist
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { # 거부하다
+	id = redpuppet.9
+	title = redpuppet.9.t
+	desc = redpuppet.9.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = redpuppet.2.a 
+		ROOT = {
+			add_opinion_modifier = { target = FROM modifier = SWI_rejected_our_request }
 		}
 	}
 }

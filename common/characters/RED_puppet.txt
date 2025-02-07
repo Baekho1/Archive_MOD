@@ -1,0 +1,69 @@
+characters = {
+	RED_Finnish_Commander={ # 핀란드 사령관
+		name=RE4_country_leader_name
+		portraits={
+			civilian={
+				large="GFX_Portrait_BlueArchive_RED_Generic_1"
+			}
+			army={
+				large="GFX_Portrait_BlueArchive_RED_Generic_1"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ RED_military_government_commander }
+		}
+		field_marshal={
+			traits={  }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	RE4_clone_marina = {
+		name = RED_marina
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RED/RED_Ikekura_Marina_Portrait.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { media_personality winter_specialist infantry_officer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id = 0
+			visible = { 
+				has_global_flag = RE4_marina_is_militaryadmin
+			}
+		}
+	}
+	RE4_clone_tomoe = {
+		name = RED_Tomoe
+		portraits = {
+			civilian = {
+				large="gfx/leaders/RED/RED_Sashiro_Tomoe_Portrait.tga"
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=5
+			logistics_skill=2
+			legacy_id=-1
+			visible = { 
+				has_global_flag = RE4_tomoe_is_militaryadmin
+			}
+		}
+	}
+}
+

@@ -14,6 +14,9 @@
 		}
 	}
 	
+
+	continuous_focus_position = { x = 50 y = 1600 }
+	
 	default = no
 	reset_on_civilwar = no
 
@@ -31,6 +34,12 @@
 		y = 0
 		cost = 10
 		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		allow_branch = {
+			NOT = {
+				original_tag = RE4
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -283,6 +292,12 @@
 		cost = 10
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		allow_branch = {
+			NOT = {
+				original_tag = RE4
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -597,6 +612,12 @@
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
+
+		allow_branch = {
+			NOT = {
+				original_tag = RE4
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -967,6 +988,12 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		allow_branch = {
+			NOT = {
+				original_tag = RE4
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -1764,11 +1791,11 @@
 		
 		icon = GFX_focus_REDWINTER_defense_committee
 
-		cost = 5
+		cost = 2
 
 		text_icon = REDWINTER_RE4_focus_style
 
-		x = 25
+		x = 10
 		y = 0
 		offset = {
 			x = -25
@@ -1838,7 +1865,7 @@
 		
 		dynamic = yes 
 		
-		icon = GFX_focus_REDWINTER_defense_committee
+		icon = GFX_focus_generic_military_academy
 
 		cost = 2
 
@@ -1907,13 +1934,128 @@
 	}
 
 	shared_focus = {
+		id = RE4_redwinter_offficer_corps
+		dynamic = yes 
+		icon = GFX_focus_generic_military_mission
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+		relative_position_id = RE4_create_of_defense_committee
+		x = -2
+		y = 2
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { original_tag = RE4 }
+				RED = { 
+					country_event = { id = redpuppet.7 hours = 04 } 
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					country_event = { id = redpuppet.7 }
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_redwinter_offficer_corps }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_We_need_we_need_weapon
+		dynamic = yes 
+		icon = GFX_focus_generic_spur_communist_revolutions
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+		relative_position_id = RE4_create_of_defense_committee
+		x = -3
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { original_tag = RE4 }
+				RED = {
+					country_event = { id = redpuppet.1 hours = 04 }
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					RE4 = { add_political_power = 50 }
+					country_event = { id = redpuppet.1 hours = 04 }
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_We_need_we_need_weapon }
+			}
+
+		}
+	}
+
+	shared_focus = {
 		id = RE4_Finland_Military_Administration
 		
 		dynamic = yes 
 		
-		icon = GFX_focus_REDWINTER_defense_committee
+		icon = GFX_focus_REDWINTER_finland
 
-		cost = 5
+		cost = 2
 
 		text_icon = REDWINTER_RE4_focus_style
 		
@@ -1941,7 +2083,7 @@
 					has_war_with = RED
 					has_war_with = RE4 
 				}
-				has_war_with = FIN
+				RE4 = { has_war_with = FIN }
 			}
 		} 
 

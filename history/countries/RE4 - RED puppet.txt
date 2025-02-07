@@ -28,14 +28,9 @@ set_technology = {
 	panzerschiffe = 1
 }
 
-create_country_leader = {
-	name = RE4_country_leader_name
-	picture = "GFX_Portrait_BlueArchive_RED_Generic_1"
-	ideology = stalinism
-	traits = {
-		RED_military_government_commander
-	}
-}
+recruit_character = RED_Finnish_Commander
+recruit_character = RE4_clone_marina
+recruit_character = RE4_clone_tomoe
 
 set_stability = 0.4
 set_war_support = 0.4

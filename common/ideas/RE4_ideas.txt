@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		RE4_redwinter_military_advisors = {
+			picture = saf_soviet_advisers
+			cancel = {
+				NOT = { has_war_with = FIN }
+			}
+
+			modifier = {
+				communism_drift = 0.05
+				planning_speed = 0.1
+				max_planning = 0.1
+				custom_modifier_tooltip = RE4_redwinter_military_advisors_remove_tt
+			}
+		}
+		RED_redwinter_military_advisors = {
+			picture = saf_soviet_advisers
+			cancel = {
+				RE4 = {
+					NOT = { has_war_with = FIN }
+				}
+			}
+
+			modifier = {
+				experience_gain_army = 0.1
+				custom_modifier_tooltip = RED_redwinter_military_advisors_remove_tt
+			}
+		}
+	}
+}
