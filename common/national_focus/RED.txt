@@ -228,6 +228,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			num_of_civilian_factories > 50
 		}
 		offset = {
 			x = 5
@@ -341,6 +342,14 @@ focus_tree = {
 					}
 				}
 				unlock_decision_tooltip = RED_population_issue_down_to_country
+			}
+			if = {
+				limit ={
+					has_completed_focus = RED_accept_trotskism
+				}
+				effect_tooltip = {
+					unlock_national_focus = RED_depress_locals
+				}
 			}
 		}
 	}
@@ -3720,6 +3729,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			has_completed_focus = RED_improve_railway_network
 		}
 		mutually_exclusive = {
 			focus = RED_enticing_locals
@@ -8413,6 +8423,7 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			has_completed_focus = RED_entice_publicworks
+			num_of_civilian_factories > 60
 		}
 
 		completion_reward = {

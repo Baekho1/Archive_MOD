@@ -217,7 +217,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			ROOT = {
 				RED_yevgeny_preobrazhensky = {
-					set_country_flag = RED_in_exile_committee_flag
+					set_character_flag = RED_in_exile_committee_flag
 				}
 			}
 		}
@@ -379,7 +379,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			ROOT = {
 				RED_karl_radek = {
-					set_country_flag = RED_in_exile_committee_flag
+					set_character_flag = RED_in_exile_committee_flag
 				}
 			}
 		}
@@ -541,7 +541,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			ROOT = {
 				RED_aleksandr_shlyapnikov = {
-					set_country_flag = RED_in_exile_committee_flag
+					set_character_flag = RED_in_exile_committee_flag
 				}
 			}
 		}
@@ -705,7 +705,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			ROOT = {
 				RED_ivar_smilga = {
-					set_country_flag = RED_in_exile_committee_flag
+					set_character_flag = RED_in_exile_committee_flag
 				}
 			}
 		}
@@ -869,7 +869,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			ROOT = {
 				RED_ivan_smirnov = {
-					set_country_flag = RED_in_exile_committee_flag
+					set_character_flag = RED_in_exile_committee_flag
 				}
 			}
 		}
