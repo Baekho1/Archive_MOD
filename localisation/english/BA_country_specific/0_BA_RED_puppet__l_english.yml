@@ -1,16 +1,23 @@
 ﻿l_english:
  
- 
- RE4_create_of_defense_committee: "[RE4.GetName]"
+ RE4_random_commander_1: "아리마 히즈메"
+ RE4_random_commander_2: "마키하라 시호"
+
+ RE4_create_of_defense_committee: "붉은겨울 방위위원회"
  RE4_Invitation_of_military_advisors: "군사고문단 요청"
  RE4_redwinter_offficer_corps: "붉은겨울 장교단"
  RE4_We_need_we_need_weapon: "무기 지원 요청"
+ RE4_kemi_munitions_factory: "$VICTORY_POINTS_11164$ 군수품 공장"
+ RE4_capture_of_supplies: "노획한 장비 회수"
+ RE4_support_for_the_finland_communist_party: "핀란드 공산당 지원"
  RE4_Finland_Military_Administration: "핀란드 자치위원회 수립"
+
  RE4_redwinter_military_advisors: "붉은겨울 군사고문단"
  RE4_redwinter_military_advisors_desc: "본국에서 군사고문단을 파견하면서 우리는 보다 정교한 작전을 수립할 수 있게 되었습니다. 이는 곧, 더욱 적극적인 공세를 펼칠 수 있는 기반이 마련되었음을 의미합니다. 전장의 흐름을 주도하고, 주저 없이 앞으로 나아갈 때입니다."
  RE4_redwinter_military_advisors_remove_tt: "\n조건 충족시 제거: §Y@FIN[FIN.GetAdjective]§! 측과 평화 중"
  RED_redwinter_military_advisors: "$RE4_redwinter_military_advisors$"
  RED_redwinter_military_advisors_desc: "핀란드를 향한 모험은 예상보다 거센 저항에 부딪히며 차질을 빚고 있습니다. 이 상황을 타개하기 위해, 우리는 군사고문단을 파견하여 방위위원회를 지원하고 보다 적극적인 공세를 유도해야 합니다. 물론 전투 자료 확보하는 것 또한 중요합니다."
+ RE4_capture_of_supplies_ns: "$RE4_capture_of_supplies$"
  RED_redwinter_military_advisors_remove_tt: "\n조건 충족시 제거: §Y[RE4.GetName]§!: §Y@FIN[FIN.GetAdjective]§! 측과 평화 중"
 
  redpuppet.1.t: "[RE4.GetName]의 무기 요청"
@@ -43,4 +50,17 @@
  redpuppet.8.a: "반가운 소식이군!"
  redpuppet.9.t: "장교 파견을 거부한 [FROM.GetName]"
  redpuppet.9.desc: "[FROM.GetName] 측은 [RE4.GetName]의 문제를 스스로 해결하라며 장교 파견 요청을 단호히 거부하였습니다. 다행히 [ROOT.GetLeader]의 노력 덕분에 어느 정도 규율이 잡혀가고 있지만, 아직 갈 길은 멀어 보입니다."
+ redpuppet.10.t: "겨울 전쟁"
+ redpuppet.10.desc: "북유럽의 운명이 붉은겨울의 강철 앞에 무릎을 꿇었습니다. 노르웨이, 덴마크, 스웨덴 이 세 나라는 붉은겨울의 거센 공세 끝에 패배하였고, 그 땅 위에는 붉은겨울이 직접 통치하는 군정청이 세워졌습니다. 그러나 붉은겨울의 진격은 여기서 멈추지 않았습니다.\n\n핀란드 북부의 도시 케미에서 학생들이 '자발적으로 봉기'하며 곧바로 붉은겨울 방위위원회가 수립되었습니다. 이들은 라피 지역을 점령하는 데 그치지 않고, 남부로 진격하며 핀란드 전역을 장악하려는 야심을 드러냈습니다. 하지만 핀란드군의 완강한 저항에 부딪히며 공세는 점차 지연되었습니다.\n\n그럼에도 불구하고 방위위원회는 민병대를 규합하며 다시 한 번 남부로의 진격을 준비하고 있습니다. 이제, 자신의 고향을 지키려는 핀란드군과 북쪽에서 밀려오는 붉은겨울의 군대가 맞붙을 시점이 다가오고 있습니다."
+ redpuppet.10.a: "가자 남부로!"
+ redpuppet.10.b: "우리의 조국을 지켜내자!"
+ redpuppet.11.t: "겨울 전쟁 - [RE4.GetName]의 승리"
+ redpuppet.11.desc: "[RE4.GetName]의 끈질기고도 치밀한 공세 끝에 마침내 핀란드군의 방어선이 무너졌고, $VICTORY_POINTS_11105$가 함락되었습니다. 피로 얼룩진 전장이 침묵에 잠긴 가운데, [RE4.GetName]의 군대가 $VICTORY_POINTS_11105$ 시가지를 가로질러 행군하자, 남겨진 이들은 그 모습을 무표정하게 바라볼 수밖에 없었습니다."
+ redpuppet.11.a: "위대한 승리다!"
+ redpuppet.12.t: "겨울 전쟁 - [RE4.GetName]의 패배"
+ redpuppet.12.desc: "핀란드군의 완강한 방어와 끈질긴 저항 속에서 [RE4.GetName]은 공세 역량을 소진하고 결국 후퇴를 거듭하다가 와해되고 말았습니다. 현재 방위위원회는 [925.GetName]으로 피신한 상태지만, 이마저도 오래가지 못하고 곧 해체될 것으로 보입니다.\n\n한편, 핀란드군은 이계의 침략자들로부터 조국을 지켜냈다며 승리를 자축하고 있습니다. 해방된 케미에서는 환호성이 울려 퍼졌고, 승리를 기념하는 축제가 열리며 핀란드의 자유를 기념하는 불꽃이 밤하늘을 수놓았습니다."
+ 
+ RE4_Northern_War: "겨울 전쟁"
+ RE4_Northern_War_timeattack: "겨울 전쟁"
+ RE4_Northern_War_timeattack_FIN: "겨울 전쟁"
 

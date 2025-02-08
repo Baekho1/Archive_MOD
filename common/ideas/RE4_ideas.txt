@@ -26,5 +26,19 @@ ideas = {
 				custom_modifier_tooltip = RED_redwinter_military_advisors_remove_tt
 			}
 		}
+		RE4_capture_of_supplies_ns = {
+			picture = generic_supply_depot
+			cancel = {
+				RE4 = {
+					NOT = { has_war_with = FIN }
+				}
+			}
+
+			modifier = {
+				equipment_capture = 0.05
+				equipment_capture_factor = 0.15
+				custom_modifier_tooltip = RED_redwinter_military_advisors_remove_tt
+			}
+		}
 	}
 }

@@ -31,6 +31,8 @@ set_technology = {
 recruit_character = RED_Finnish_Commander
 recruit_character = RE4_clone_marina
 recruit_character = RE4_clone_tomoe
+recruit_character = RE4_commander_1
+recruit_character = RE4_commander_2
 
 set_stability = 0.4
 set_war_support = 0.4

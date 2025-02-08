@@ -273,3 +273,71 @@ country_event = { # 거부하다
 		}
 	}
 }
+country_event = { # 겨울전쟁 사건
+	id = redpuppet.10
+	title = redpuppet.10.t
+	desc = redpuppet.10.desc
+	picture = GFX_report_event_FIN_motti_tactics
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			RE4 = { activate_mission = RE4_Northern_War_timeattack }
+			FIN = { activate_mission = RE4_Northern_War_timeattack_FIN }
+		}
+	}
+	
+	option = { 
+		name = redpuppet.10.a
+		trigger = { original_tag = RE4 }
+		effect_tooltip = {
+			RE4 = { activate_mission = RE4_Northern_War_timeattack }
+		}
+	}
+	option = { 
+		name = redpuppet.10.b
+		trigger = { original_tag = FIN } 
+		effect_tooltip = {
+			FIN = { activate_mission = RE4_Northern_War_timeattack_FIN }
+		}
+	}
+}
+country_event = { # 겨울전쟁 사건 - 방위위원회 승리
+	id = redpuppet.11
+	title = redpuppet.11.t
+	desc = redpuppet.11.desc
+	picture = GFX_report_event_FIN_motti_tactics
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.11.a
+		trigger = { original_tag = RE4 }
+		add_war_support = 0.45
+	}
+	option = { 
+		name = redpuppet.2.a
+		trigger = { original_tag = FIN }
+		add_war_support = -0.45
+	}
+}
+country_event = { # 겨울전쟁 사건 - 방위위원회 패배
+	id = redpuppet.12
+	title = redpuppet.12.t
+	desc = redpuppet.12.desc
+	picture = GFX_report_event_FIN_motti_tactics
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.11.a
+		trigger = { original_tag = FIN }
+		add_stability = 0.3
+	}
+	option = { 
+		name = redpuppet.2.a
+		trigger = { original_tag = RE4 }
+		add_war_support = -0.45
+	}
+}

@@ -1,0 +1,9 @@
+# 북방전쟁 or 겨울전쟁? 솔직히 잘 모르겠다
+RE4_Northern_War = { 
+	icon = GFX_decision_category_NOR_fascist_deploy_prep
+	priority = 300
+	allowed = {
+		original_tag = RE4
+	}
+	visible_when_empty = yes
+}

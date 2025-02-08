@@ -695,6 +695,28 @@ focus_tree = {
 		}
 	}
 
+	# 대원수
+	focus = {
+		id = SHA_great_commander
+		icon = GFX_focus_generic_military_dictatorship
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_consolidate_industries }
+		prerequisite = { focus = SHA_Expansion_of_military_factories }
+		mutually_exclusive = { focus = SHA_architect_of_fascism }
+
+		available = { }
+		bypass = { }
+
+		relative_position_id = SHA_consolidate_industries
+
+		completion_reward = {
+			add_country_leader_trait = stalin_great_commander
+		}
+	}
+
 	# 연단방 결속
 	focus = {
 		id = SHA_Eastern_Alchemy_Society_solidarity
@@ -784,6 +806,44 @@ focus_tree = {
 		}
 	}
 
+	# 파시즘 설계자
+	focus = {
+		id = SHA_architect_of_fascism
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = -1
+		y = 1
+		relative_position_id = SHA_podium_room_expansion
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_podium_room_expansion 
+			focus = SHA_Sundan_dosage
+		}
+		mutually_exclusive = { focus = SHA_great_commander }
+
+		available = {
+
+		}
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_military_change
+			add_to_variable = {
+				SHA_militray_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				SHA_military_army_morale_factor = 0.05
+				tooltip = army_morale_factor_tt
+			}
+			add_to_variable = {
+				SHA_militray_army_org_factor = -0.05
+				tooltip = army_org_factor_tt
+			}
+		}
+	}
+
 	# 산해경 인민의 영도자
 	focus = {
 		id = SHA_leader_of_the_people
@@ -794,6 +854,38 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = SHA_Kaguya_ousted }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15
+				tooltip = party_popularity_stability_factor_tt
+			}
+			add_to_variable = { 
+				SHA_Shanhaijinfascism_fascism_drift = 0.03 
+				tooltip = fascism_drift_tt
+			}
+		}
+	}
+
+	# 
+	focus = {
+		id = SHA_leader_of_the_shanhaijing
+		icon = GFX_focus_SHA_cavalry_charge
+		x = 0
+		y = 3
+		relative_position_id = SHA_leader_of_the_people
+		cost = 5
+
+		prerequisite = { focus = SHA_leader_of_the_people }
+		prerequisite = { 
+			focus = SHA_architect_of_fascism
+			focus = SHA_great_commander
+		}
 
 		available = { }
 		bypass = { }

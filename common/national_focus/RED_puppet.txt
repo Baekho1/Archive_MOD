@@ -1795,10 +1795,10 @@
 
 		text_icon = REDWINTER_RE4_focus_style
 
-		x = 10
+		x = 11
 		y = 0
 		offset = {
-			x = -25
+			x = -11
 			y = 10
 			trigger = {
 				original_tag = RED
@@ -1896,7 +1896,7 @@
 		}
 
 		ai_will_do = {
-			base = 999
+			base = 500
 		}
 
 		available_if_capitulated = no
@@ -1909,8 +1909,19 @@
 					country_event = { id = redpuppet.4 hours = 04 } 
 				}
 				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_ideas = RE4_redwinter_military_advisors
+				effect_tooltip = { add_ideas = RE4_redwinter_military_advisors }
+				custom_effect_tooltip = tooltip_white_line
+				add_days_mission_timeout = {
+					mission = RE4_Northern_War_timeattack
+					days = -70
+				}
+				hidden_effect = {
+					FIN = {
+						add_days_mission_timeout = {
+							mission = RE4_Northern_War_timeattack_FIN
+							days = -70
+						}
+					}
 				}
 			}
 			ELSE_IF = {
@@ -1922,7 +1933,13 @@
 				effect_tooltip = {
 					add_ideas = RED_redwinter_military_advisors
 					custom_effect_tooltip = tooltip_white_line
-					RE4 = { add_ideas = RE4_redwinter_military_advisors }
+					RE4 = { 
+						add_ideas = RE4_redwinter_military_advisors
+						add_days_mission_timeout = {
+							mission = RE4_Northern_War_timeattack
+							days = -70
+						}
+					}
 				}
 			}
 
@@ -1964,7 +1981,7 @@
 		}
 
 		ai_will_do = {
-			base = 999
+			base = 500
 		}
 
 		available_if_capitulated = no
@@ -1975,11 +1992,66 @@
 				RED = { 
 					country_event = { id = redpuppet.7 hours = 04 } 
 				}
+				custom_effect_tooltip = tooltip_white_line
+				add_corps_commander_role = {
+					character = RE4_commander_1
+					traits = { winter_specialist }
+					skill=1
+					attack_skill=1
+					defense_skill=1
+					planning_skill=1
+					logistics_skill=1
+				}
+				add_corps_commander_role = {
+					character = RE4_commander_2
+					traits = { winter_specialist }
+					skill=1
+					attack_skill=1
+					defense_skill=1
+					planning_skill=1
+					logistics_skill=1
+				}
+				custom_effect_tooltip = tooltip_white_line
+				add_days_mission_timeout = {
+					mission = RE4_Northern_War_timeattack
+					days = -70
+				}
+				hidden_effect = {
+					FIN = {
+						add_days_mission_timeout = {
+							mission = RE4_Northern_War_timeattack_FIN
+							days = -70
+						}
+					}
+				}
 			}
 			ELSE_IF = {
 				limit = { original_tag = RED }
 				effect_tooltip = {
 					country_event = { id = redpuppet.7 }
+					custom_effect_tooltip = tooltip_white_line
+				}
+				effect_tooltip = {
+					RE4 = {
+						add_corps_commander_role = {
+							character = RE4_commander_1
+							traits = { winter_specialist }
+							skill=1
+							attack_skill=1
+							defense_skill=1
+							planning_skill=1
+							logistics_skill=1
+						}
+						add_corps_commander_role = {
+							character = RE4_commander_2
+							traits = { winter_specialist }
+							skill=1
+							attack_skill=1
+							defense_skill=1
+							planning_skill=1
+							logistics_skill=1
+						}
+					}
 				}
 			}
 
@@ -2021,7 +2093,12 @@
 		}
 
 		ai_will_do = {
-			base = 999
+			base = 1
+			modifier = {
+				add = 999
+				has_completed_focus = RE4_Invitation_of_military_advisors
+				has_completed_focus = RE4_redwinter_offficer_corps
+			}
 		}
 
 		available_if_capitulated = no
@@ -2031,6 +2108,19 @@
 				limit = { original_tag = RE4 }
 				RED = {
 					country_event = { id = redpuppet.1 hours = 04 }
+				}
+				custom_effect_tooltip = tooltip_white_line
+				add_days_mission_timeout = {
+					mission = RE4_Northern_War_timeattack
+					days = -70
+				}
+				hidden_effect = {
+					FIN = {
+						add_days_mission_timeout = {
+							mission = RE4_Northern_War_timeattack_FIN
+							days = -70
+						}
+					}
 				}
 			}
 			ELSE_IF = {
@@ -2043,6 +2133,207 @@
 
 			hidden_effect = {
 				RED = { unlock_national_focus = RE4_We_need_we_need_weapon }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_kemi_munitions_factory
+		dynamic = yes 
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+		relative_position_id = RE4_create_of_defense_committee
+		x = 1
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { original_tag = RE4 }
+				148 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					RE4 = {
+						148 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_kemi_munitions_factory }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_capture_of_supplies
+		dynamic = yes 
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+		relative_position_id = RE4_create_of_defense_committee
+		x = 2
+		y = 2
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 200
+			modifier = {
+
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { original_tag = RE4 }
+				add_ideas = RE4_capture_of_supplies_ns
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+				effect_tooltip = {
+					RE4 = { add_ideas = RE4_capture_of_supplies_ns }
+				}
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_capture_of_supplies }
+			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_support_for_the_finland_communist_party
+		dynamic = yes 
+		icon = GFX_focus_FIN_suomalainen_sosialismi
+		cost = 2
+
+		text_icon = REDWINTER_RE4_focus_style
+		
+		prerequisite = { focus = RE4_create_of_defense_committee }
+		relative_position_id = RE4_create_of_defense_committee
+		x = 3
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RE4
+			has_war_with = FIN
+		} 
+
+		bypass = {
+			original_tag = RE4
+			NOT = { has_war_with = FIN }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { original_tag = RE4 }
+				custom_effect_tooltip = tooltip_white_line
+				add_days_mission_timeout = {
+					mission = RE4_Northern_War_timeattack
+					days = 42
+				}
+				hidden_effect = {
+					FIN = {
+						add_days_mission_timeout = {
+							mission = RE4_Northern_War_timeattack_FIN
+							days = 42
+						}
+					}
+				}
+
+			}
+			ELSE_IF = {
+				limit = { original_tag = RED }
+
+			}
+
+			hidden_effect = {
+				RED = { unlock_national_focus = RE4_support_for_the_finland_communist_party }
 			}
 
 		}

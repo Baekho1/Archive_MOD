@@ -1,0 +1,52 @@
+RE4_Northern_War = {
+	RE4_Northern_War_timeattack = {
+		priority = 100
+		icon = GFX_decision_hol_draw_up_staff_plans
+		activation = {
+			always = no
+		}
+		available = {
+		}
+		cancel_trigger = {
+			111 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+		is_good = no
+		days_mission_timeout = 365
+
+		complete_effect = { 
+			country_event = {
+				id = redpuppet.12
+			}
+		}
+		cancel_effect = { 
+			country_event = {
+				id = redpuppet.11
+			}
+		}
+	}
+	RE4_Northern_War_timeattack_FIN = {
+		priority = 100
+		icon = GFX_decision_hol_draw_up_staff_plans
+		activation = {
+			always = no
+		}
+		available = {
+		}
+		cancel_trigger = {
+			111 = { is_controlled_by_ROOT_or_ally = no }
+		}
+		is_good = no
+		days_mission_timeout = 365
+
+		complete_effect = { 
+			country_event = {
+				id = redpuppet.12
+			}
+		}
+		cancel_effect = { 
+			country_event = {
+				id = redpuppet.11
+			}
+		}
+	}
+}
