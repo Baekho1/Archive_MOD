@@ -7,7 +7,7 @@ RE4_Northern_War = {
 		}
 		available = {
 			111 = { is_controlled_by_ROOT_or_ally = yes }
-			FIN {
+			FIN = {
 				111 = { is_controlled_by_ROOT_or_ally = no }
 			}
 		}
