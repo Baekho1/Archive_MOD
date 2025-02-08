@@ -2021,19 +2021,6 @@
 					planning_skill=1
 					logistics_skill=1
 				}
-				custom_effect_tooltip = tooltip_white_line
-				add_days_mission_timeout = {
-					mission = RE4_Northern_War_timeattack
-					days = -70
-				}
-				hidden_effect = {
-					FIN = {
-						add_days_mission_timeout = {
-							mission = RE4_Northern_War_timeattack_FIN
-							days = -70
-						}
-					}
-				}
 			}
 			ELSE_IF = {
 				limit = { original_tag = RED }
@@ -2302,7 +2289,6 @@
 
 		available = { 
 			original_tag = RE4
-			has_war_with = FIN
 		} 
 
 		bypass = {
@@ -2322,24 +2308,21 @@
 		completion_reward = {
 			IF = {
 				limit = { original_tag = RE4 }
-				custom_effect_tooltip = tooltip_white_line
-				add_days_mission_timeout = {
-					mission = RE4_Northern_War_timeattack
-					days = 42
+				custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_tooltip
+				FIN = {
+					show_ideas_tooltip = RE4_kaisu_mirjami_rydberg
+					show_ideas_tooltip = RE4_sandra_lehtinen
+					show_ideas_tooltip = RE4_karl_harald_wiik
+					custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_2_tooltip
 				}
-				hidden_effect = {
-					FIN = {
-						add_days_mission_timeout = {
-							mission = RE4_Northern_War_timeattack_FIN
-							days = 42
-						}
-					}
-				}
-
 			}
 			ELSE_IF = {
 				limit = { original_tag = RED }
-
+				effect_tooltip = {
+					RE4 = {
+						custom_effect_tooltip = RE4_support_for_the_finland_communist_party_reward_tooltip
+					}
+				}
 			}
 
 			hidden_effect = {
@@ -2416,6 +2399,21 @@
 				swap_ideas = {
 					remove_idea = RED_military_government_idea_exit
 					add_idea = RED_military_government_idea_1
+				}
+				IF = {
+					limit = { has_completed_focus = RE4_support_for_the_finland_communist_party }
+					FIN = {
+						every_character = {
+							limit = {
+								OR = {
+									is_character = RE4_kaisu_mirjami_rydberg
+									is_character = RE4_sandra_lehtinen
+									is_character = RE4_karl_harald_wiik
+								}
+							}
+							set_nationality = RE4
+						}
+					}
 				}
 			}
 			ELSE_IF = {

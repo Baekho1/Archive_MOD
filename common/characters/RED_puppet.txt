@@ -81,5 +81,80 @@ characters = {
 			}
 		}
 	}
+
+	RE4_kaisu_mirjami_rydberg = {
+		name = FIN_kaisu_mirjami_rydberg
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_kaisu_mirjami_rydberg_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #
+			idea_token = RE4_kaisu_mirjami_rydberg
+			allowed = {
+				original_tag = RE4
+			}
+			available = {
+				has_completed_focus = RE4_support_for_the_finland_communist_party
+			}
+			cost = 70
+			traits = {
+				socialist_journalist
+			}
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	RE4_sandra_lehtinen = {
+		name = FIN_sandra_lehtinen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_sandra_lehtinen_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #
+			idea_token = RE4_sandra_lehtinen
+			allowed = {
+				original_tag = RE4
+			}
+			available = {
+				has_completed_focus = RE4_support_for_the_finland_communist_party
+			}
+			cost = 70
+			traits = {
+				veteran_trade_unionist 
+			}
+		}
+	}
+
+	RE4_karl_harald_wiik = {
+		name = FIN_karl_harald_wiik
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_karl_harald_wiik_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #
+			idea_token = RE4_karl_harald_wiik
+			allowed = {
+				original_tag = RE4
+			}
+			available = {
+				has_completed_focus = RE4_support_for_the_finland_communist_party
+			}
+			cost = 70
+			traits = {
+				kautskyian_socialist 
+			}
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
 }
 

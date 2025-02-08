@@ -1,0 +1,6 @@
+﻿recruit_character = RE4_kaisu_mirjami_rydberg
+recruit_character = RE4_sandra_lehtinen
+recruit_character = RE4_karl_harald_wiik
+
+
+set_convoys = 5

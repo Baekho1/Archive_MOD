@@ -6,10 +6,8 @@ RE4_Northern_War = {
 			always = no
 		}
 		available = {
-			111 = { is_controlled_by_ROOT_or_ally = yes }
-			FIN = {
-				111 = { is_controlled_by_ROOT_or_ally = no }
-			}
+			148 = { is_controlled_by_ROOT_or_ally = no }
+			
 		}
 		cancel_trigger = {
 			111 = { is_controlled_by_ROOT_or_ally = yes }
