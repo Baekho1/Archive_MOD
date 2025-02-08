@@ -77,3 +77,5 @@ UMA = "countries/Japan.txt"
 
 KBT = "countries/SHE.txt"
 KAP = "countries/ComChina.txt"
+
+MRD = "countries/MRD.txt"
