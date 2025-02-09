@@ -4427,7 +4427,7 @@ country_event = { #드러난 부패
 		add_ideas = RED_corruption_0
 	}
 }
-country_event = { #산업 호황
+country_event = { #산업 호황의 맹아
 	id = RED_event.38
 	title = RED_event.38.t
 	desc = RED_event.38.d

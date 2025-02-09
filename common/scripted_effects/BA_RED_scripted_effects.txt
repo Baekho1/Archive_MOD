@@ -556,6 +556,13 @@ RED_instability_system_down_effect = {
 			add_idea = RED_military_government_idea_1
 		}
 	}
+	else = {
+		add_stability = 0.1
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
 }
 
 #붉은곰 선전

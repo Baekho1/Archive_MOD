@@ -1139,7 +1139,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				RED_yevgeny_preobrazhensky = {
 					set_character_flag = RED_invited_trotskist
 				}
-			}
+			}}
 			65 ={
 				ROOT = {
 					RED_yevgeny_preobrazhensky = {
@@ -1226,7 +1226,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					}
 				}
 			}}
-		}
+		}}
 	}
 }
 

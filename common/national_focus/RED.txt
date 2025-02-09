@@ -3463,6 +3463,12 @@ focus_tree = {
 					days = 20
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = RED_event.37
+					days = 30
+				}
+			}
             
             mark_focus_tree_layout_dirty = yes
 		}
@@ -3491,12 +3497,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.10
-			hidden_effect = {
-				country_event = {
-					id = RED_event.37
-					days = 6
-				}
-			}
 		}
 	}
 
@@ -3716,6 +3716,32 @@ focus_tree = {
 			add_ideas = RED_security_idea
 		}
 	}
+	focus = { #비밀경찰 확대
+		id = RED_enlarge_secret_police
+		icon = GFX_goal_generic_political_pressure
+		cost = 4
+
+		relative_position_id = RED_restore_the_security
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RED_restore_the_security
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = { base = 15 }
+
+		completion_reward = {
+			add_stability = 0.10
+			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			BA_halo_infantry_cap_edit_effect = yes
+		}
+	}
 
 	focus = { #군정청 통제
 		id = RED_locals_problem
@@ -3829,7 +3855,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = { #자치국 수립
 		id = RED_enticing_locals
 		icon = GFX_goal_generic_intelligence_exchange
@@ -3851,7 +3876,6 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 15 }
-
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -3878,13 +3902,87 @@ focus_tree = {
 		}
 	}
 
-	focus = { #이주민 환영
+	focus = { #현지 공산당 수용
 		id = RED_welcome_immigrate
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
 		cost = 4
 
 		relative_position_id = RED_enticing_locals
-		x = 0
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RED_enticing_locals
+		}
+		prerequisite = {
+			focus = RED_merger_of_educational_institutions
+			focus = RED_large_administrative
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = { base = 15 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE1 = {
+					set_party_name = {
+						ideology = communism
+						long_name = DEN_communism_party_long
+						name = DEN_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE2 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE2 = {
+					set_party_name = {
+						ideology = communism
+						long_name = NOR_communism_party_long
+						name = NOR_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					set_party_name = {
+						ideology = communism
+						long_name = SWE_communism_party_long
+						name = SWE_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+		}
+	}
+	focus = { #계급의 적
+		id = RED_enemy_of_class
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 4
+
+		relative_position_id = RED_enticing_locals
+		x = -1
 		y = 1
 
 		prerequisite = {
@@ -3898,25 +3996,23 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_manpower = 1000
-			add_timed_idea = {
-				idea = RED_welcome_immigrate_idea
-				days = 365
-			}
 		}
 	}
 
-	focus = { #비밀경찰 확대
+	focus = { #이주노동자 강제 배치
 		id = RED_welcome_thugs
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_ARG_the_buenos_aires_conference
 		cost = 4
 
 		relative_position_id = RED_depress_locals
-		x = 0
+		x = -1
 		y = 1
 
 		prerequisite = {
-			focus = RED_depress_locals focus = RED_enticing_locals
+			focus = RED_depress_locals
+		}
+		prerequisite = {
+			focus = RED_enlarge_secret_police
 		}
 		available = {
 			NOT = {
@@ -3944,7 +4040,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = RED_all_power_to_redwinter }
 		prerequisite = {
-			focus = RED_welcome_immigrate focus = RED_welcome_thugs
+			focus = RED_enemy_of_class
 		}
 
 		available = {
@@ -4073,10 +4169,6 @@ focus_tree = {
 						id = RED_event.6 
 						days = 2
 					}
-				}
-				country_event = {
-					id = RED_event.37
-					days = 6
 				}
 			}
 		}
@@ -4669,7 +4761,7 @@ focus_tree = {
 	focus = { #민중정치
 		id = RED_long_live_the_workers_government
 		icon = GFX_focus_generic_join_comintern
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_redwinter_office
 		x = -1
@@ -4697,13 +4789,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_long_live_the_workers_government
-		cost = 4
+		cost = 2
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
 		completion_reward = {
+			add_political_power = 50
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = RED
@@ -4735,6 +4828,11 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = RED_large_administrative_tt
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				RED_the_politburo_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
 			RED_corruption_solve = yes
 		}
 	}
@@ -4813,6 +4911,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				RED_the_politburo_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 		}
 	}
 	focus = { #겨울 군대의 기상
@@ -4890,7 +4993,6 @@ focus_tree = {
 		id = RED_all_power_to_redwinter
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = RED_strengthen_regional_party focus = RED_strengthen_the_trade_unions}
-		prerequisite = { focus = RED_the_builder_of_the_winter_army }
 		mutually_exclusive = { focus = RED_advance_security }
 		x = 1
 		y = 1

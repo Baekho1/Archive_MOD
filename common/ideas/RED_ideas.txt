@@ -1525,7 +1525,7 @@ ideas = {
 
 			modifier = {
 				experience_gain_factor = -0.1
-				land_doctrine_cost_factor = 0.05
+				land_doctrine_cost_factor = 0.45
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
 				army_speed_factor = -0.05
@@ -1545,7 +1545,7 @@ ideas = {
 
 			modifier = {
 				experience_gain_factor = -0.4
-				land_doctrine_cost_factor = 0.25
+				land_doctrine_cost_factor = 1.25
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10
 				army_speed_factor = -0.15
@@ -1711,22 +1711,6 @@ ideas = {
 			}
 			modifier = {
 				drift_defence_factor = 0.50
-			}
-		}
-		
-		RED_welcome_immigrate_idea = { #이주민 환영
-			name = RED_welcome_immigrate_idea
-
-			picture = generic_manpower_bonus
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-			modifier = {
-				monthly_population = 3
-				stability_weekly_factor = -0.02
-				war_support_weekly_factor = -0.03
 			}
 		}
 
