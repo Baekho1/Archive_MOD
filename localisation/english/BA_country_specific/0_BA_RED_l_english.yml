@@ -834,6 +834,11 @@
  RED_racing_sov.1.t_1: "[RED.getname]의 [ROOT.getname] 추적 실패"
  RED_racing_sov.1.d_1: "[RED.getname]은(는) [ROOT.getname]을(를) 추적하고자 했으나 실패하였습니다."
  RED_racing_sov.1.a: "알겠다."
+ RED_racing_sov.2.t: "[ROOT.getnmae] 확보"
+ RED_racing_sov.2.t_1: "[RED.getname]의 [ROOT.getnmae] 확보"
+ RED_racing_sov.2.d: "우리는 [ROOT.getname]을(를) 무사히 학원으로 초빙하였습니다."
+ RED_racing_sov.2.d_1: "[RED.getname]은(는) [ROOT.getname]을(를) 구출하여 학원으로 대피시켰습니다."
+ 
 
  RED_tro_event.1.t: "[SOV.getname]의 트로츠키 암살 시도!"
  RED_tro_event.1.d: " 유감스럽게도, 우리 학원의 현지인 고문으로서 활동하고 있는 '레프 트로츠키'는 한때 소련의 건국영웅인 블라디미르 레닌과 함께 자본주의에 맞선 혁명세력인 볼셰비키를 이끌며 소련 정치의 중앙에 자리잡았습니다. 그러나 1920년대, 트로츠키는 현재 소련의 권력자인 이오시프 스탈린과의 권력쟁투에서 패배하며 그 세력을 크게 잃었고, 현재 망명을 위해 이곳에 와 있는 상황입니다. 한편, 스탈린은 트로츠키를 제거함으로써 소련 내 자신의 지위를 공고히 하고자 소련의 첩보시설을 동원하여 지속적으로 트로츠키의 암살을 시도하고 있습니다.\n\n 우리는 트로츠키 동지의 목숨을 '퇴보한 노동자 국가'에게 내어주지 않을 것이며, 기필코 그의 신변을 보호할 것입니다. "

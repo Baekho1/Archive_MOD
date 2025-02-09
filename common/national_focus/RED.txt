@@ -3209,21 +3209,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-			if = {
-				limit = {
-					controls_state = 141
-				}
-				141 = {
-					create_unit = {
-						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
+			141 = {
+				RED = {
+					add_to_variable = {
+						RED.halo_militia_cap = 3
 					}
+					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
 				}
 			}
 		}
@@ -3478,7 +3474,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_accept_trotskism
-		x = -7
+		x = -8
 		y = 1
 
 		prerequisite = {
@@ -3638,6 +3634,40 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #국제해방전선
+		id = RED_international_frontline
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		prerequisite = { focus = RED_new_inteligence_agency }
+		x = 0
+		y = 2
+		relative_position_id = RED_new_inteligence_agency 
+		
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = { is_in_faction_with = ROOT }
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 
 	focus = { #비밀 경찰
 		id = RED_fraktiya
@@ -3668,7 +3698,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_the_fourth_international
-		x = -6
+		x = -7
 		y = 1
 		available = {
 			NOT = {
@@ -3693,7 +3723,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_restore_the_security
-		x = 0
+		x = 1
 		y = 1
 		available = {
 			NOT = {
@@ -4004,7 +4034,7 @@ focus_tree = {
 		id = RED_expand_publishing_dep
 		icon = GFX_focus_generic_printing_press
 		prerequisite = { focus = RED_redbear_editorial }
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = RED_redbear_editorial
 		cost = 2
@@ -4043,6 +4073,10 @@ focus_tree = {
 						id = RED_event.6 
 						days = 2
 					}
+				}
+				country_event = {
+					id = RED_event.37
+					days = 6
 				}
 			}
 		}
@@ -4734,40 +4768,6 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #국제해방전선
-		id = RED_international_frontline
-		icon = GFX_focus_SOV_international_union_of_soviet_republics
-		prerequisite = { focus = RED_long_live_the_workers_government }
-		x = 3
-		y = 1
-		relative_position_id = RED_socialism_over_the_world 
-		
-		cost = 4
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-			every_country = {
-				limit = { is_in_faction_with = ROOT }
-				random_owned_controlled_state = {
-					limit = { is_capital = yes }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
 	focus = { #노동조합 강화
 		id = RED_strengthen_the_trade_unions
 		icon = GFX_focus_generic_treaty
@@ -4815,17 +4815,17 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	focus = { #겨울군대의 기상
+	focus = { #겨울 군대의 기상
 		id = RED_the_builder_of_the_winter_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 4
 
-		relative_position_id = RED_international_frontline
-		x = -1
-		y = 1
+		relative_position_id = RED_invite_trotskists
+		x = 1
+		y = 3
 
 		prerequisite = {
-			focus = RED_international_frontline
+			focus = RED_invite_trotskists
 		}
 		ai_will_do = { base = 15 }
 		available = {

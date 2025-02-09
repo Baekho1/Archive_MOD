@@ -839,6 +839,16 @@ characters = {
 				soviet_economist
 			}
 		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	RED_aleksandr_shlyapnikov = {
@@ -878,6 +888,16 @@ characters = {
 				left_trade_unionist
 			}
 		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	RED_karl_radek = {
@@ -915,6 +935,16 @@ characters = {
 				international_revolutionary 
 			}
 		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	RED_yevgeny_preobrazhensky = {
@@ -949,6 +979,16 @@ characters = {
 			}
 			traits = {
 				ecomonist_publicist 
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
 			}
 		}
 	}

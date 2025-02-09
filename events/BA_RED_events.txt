@@ -39,19 +39,38 @@ unit_leader_event = { #못찾음 (붉겨)
 	}
 	option = {
 		name = RED_racing_sov.1.a
-		RED_takane = {
-			unit_leader_event = RED_racing_sov.1
-		}
 	}
 }
 unit_leader_event = { #찾아서 데려옴
 	id = RED_racing_sov.2
-	title = RED_racing_sov.2.t
-	desc = RED_racing_sov.2.d
+	title = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.2.t
+	}
+	title = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.2.t_1
+	}
+	desc = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.2.d
+	}
+	desc = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.2.d_1
+	}
 	is_triggered_only = yes
 	option = {
-		name = RED_racing_sov.2.a
-		add_political_power = 5
+		SOV_paranoia_low_increase_effect = yes
+		name = RED_racing_sov.1.a
 	}
 }
 unit_leader_event = { #찾아서 죽임

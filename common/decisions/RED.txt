@@ -922,7 +922,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				infantry_equipment > 99
 			}
 		}
-		fire_only_once = yes
+		visible = {
+			RED_ivan_smirnov = {
+				NOT = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
 		days_remove = 35
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -956,7 +962,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					}
 					hidden_effect = {
 						SOV = {
-							SOV_ivan_smirnov = {
+							RED_ivan_smirnov = {
 								unit_leader_event = RED_racing_sov.1
 							}
 						}
@@ -983,7 +989,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				infantry_equipment > 99
 			}
 		}
-		fire_only_once = yes
+		visible = {
+			RED_ivar_smilga = {
+				NOT = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
 		days_remove = 35
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -991,7 +1003,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {
+		remove_effect = {random_list={35={
 			effect_tooltip = {
 				SOV = {
 					SOV_ivar_smilga = {
@@ -1005,7 +1017,21 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 						set_character_flag = RED_invited_trotskist
 					}
 				}
-			}
+			}}
+			65 ={
+				ROOT = {
+					RED_ivar_smilga = {
+						unit_leader_event = RED_racing_sov.1
+					}
+				}
+				hidden_effect = {
+					SOV = {
+						RED_ivar_smilga = {
+							unit_leader_event = RED_racing_sov.1
+						}
+					}
+				}
+			}}
 		}
 	}
 	RED_invite_karl_radek_dec = {
@@ -1026,7 +1052,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				infantry_equipment > 99
 			}
 		}
-		fire_only_once = yes
+		visible = {
+			RED_karl_radek = {
+				NOT = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
 		days_remove = 35
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -1034,7 +1066,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {
+		remove_effect = {random_list={35={
 			effect_tooltip = {
 				SOV = {
 					SOV_karl_radek = {
@@ -1046,7 +1078,21 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				RED_karl_radek = {
 					set_character_flag = RED_invited_trotskist
 				}
-			}
+			}}
+			65 ={
+				ROOT = {
+					RED_karl_radek = {
+						unit_leader_event = RED_racing_sov.1
+					}
+				}
+				hidden_effect = {
+					SOV = {
+						RED_karl_radek = {
+							unit_leader_event = RED_racing_sov.1
+						}
+					}
+				}
+			}}
 		}
 	}
 	RED_invite_yevgeny_preobrazhensky_dec = {
@@ -1067,7 +1113,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				infantry_equipment > 99
 			}
 		}
-		fire_only_once = yes
+		visible = {
+			RED_yevgeny_preobrazhensky = {
+				NOT = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
 		days_remove = 35
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -1075,7 +1127,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {
+		remove_effect = {random_list={35={
 			effect_tooltip = {
 				SOV = {
 					SOV_yevgeny_preobrazhensky = {
@@ -1088,6 +1140,20 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					set_character_flag = RED_invited_trotskist
 				}
 			}
+			65 ={
+				ROOT = {
+					RED_yevgeny_preobrazhensky = {
+						unit_leader_event = RED_racing_sov.1
+					}
+				}
+				hidden_effect = {
+					SOV = {
+						RED_yevgeny_preobrazhensky = {
+							unit_leader_event = RED_racing_sov.1
+						}
+					}
+				}
+			}}
 		}
 	}
 	RED_invite_aleksandr_shlyapnikov_dec = {
@@ -1119,7 +1185,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				}
 			}
 		}
-		fire_only_once = yes
+		visible = {
+			RED_aleksandr_shlyapnikov = {
+				NOT = {
+					has_character_flag = RED_invited_trotskist
+				}
+			}
+		}
 		days_remove = 35
 		complete_effect = {
 			add_equipment_to_stockpile = {
@@ -1127,7 +1199,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {
+		remove_effect = {random_list={35={
 			effect_tooltip = {
 				SOV = {
 					SOV_aleksandr_shlyapnikov = {
@@ -1140,6 +1212,20 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					set_character_flag = RED_invited_trotskist
 				}
 			}
+			65 ={
+				ROOT = {
+					RED_aleksandr_shlyapnikov = {
+						unit_leader_event = RED_racing_sov.1
+					}
+				}
+				hidden_effect = {
+					SOV = {
+						RED_aleksandr_shlyapnikov = {
+							unit_leader_event = RED_racing_sov.1
+						}
+					}
+				}
+			}}
 		}
 	}
 }

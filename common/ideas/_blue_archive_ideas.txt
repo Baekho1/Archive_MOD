@@ -1069,7 +1069,7 @@ ideas = {
 
 		RED_technician = { #용역부
 
-			picture = jap_the_unthinkable_option
+			picture = portrait_RED_minori
 			
 			allowed = {
 				tag = RED
