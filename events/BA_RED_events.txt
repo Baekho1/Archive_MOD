@@ -155,6 +155,23 @@ country_event = { #망명위원회 설립
 		unlock_decision_tooltip = RED_invite_aleksandr_shlyapnikov_dec
 	}
 }
+country_event = { #자치공화국 작명
+	id = RED_tro_event.6
+	title = RED_tro_event.6.t
+	desc = RED_tro_event.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #뭐라는거야미친놈이
+		name = RED_tro_event.6.a
+	}
+	option = { #
+		name = RED_tro_event.6.b
+		ai_chance = {
+			base = 0
+		}
+		set_country_flag = RED_cherino_buntang_country_name
+	}
+}
 add_namespace = RED_reading
 country_event = { #『공산당 선언』
 	id = RED_reading.1
@@ -1579,6 +1596,14 @@ country_event = { #엄습하는 반혁명
 		}
 		delete_unit = {}
 		custom_effect_tooltip = RED_minori_event.5_tt
+		custom_effect_tooltip = RED_kivotos_halo_militia_add-10_tt
+		hidden_effect = {
+			add_to_variable = {
+				RED.halo_militia_cap = -10
+			}
+			set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
 		activate_mission = RED_aproaching_anti_revolution
 		hidden_effect = {
 			every_state = {
@@ -4413,14 +4438,15 @@ country_event = { #드러난 부패
 	desc = RED_event.37.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	immediate = {
-		add_to_variable = {
-			RED.halo_militia_cap = -10
-		}
-	}
 	option = {
 		name = RED_event.37.a
-		set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+		custom_effect_tooltip = RED_kivotos_halo_militia_add-10_tt
+		hidden_effect = {
+			add_to_variable = {
+				RED.halo_militia_cap = -10
+			}
+			set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+		}
 		delete_units = {
 			division_template = "Redwinter Garde populaire"
 		}

@@ -1262,21 +1262,39 @@
  YUG_partisan_country_ADJ: "유고슬라비아"
 
 
- RE1_autonomous: "덴마크 자치국"
- RE1_autonomous_DEF: "덴마크 자치국"
+ RE1_autonomous: "덴마크 자치공화국"
+ RE1_autonomous_DEF: "덴마크 자치공화국"
  RE1_autonomous_ADJ: "덴마크"
 
- RE2_autonomous: "노르웨이 자치국"
- RE2_autonomous_DEF: "노르웨이 자치국"
+ RE2_autonomous: "노르웨이 자치공화국"
+ RE2_autonomous_DEF: "노르웨이 자치공화국"
  RE2_autonomous_ADJ: "노르웨이"
 
- RE3_autonomous: "스웨덴 자치국"
- RE3_autonomous_DEF: "스웨덴 자치국"
+ RE3_autonomous: "스웨덴 자치공화국"
+ RE3_autonomous_DEF: "스웨덴 자치공화국"
  RE3_autonomous_ADJ: "스웨덴"
 
- RE4_autonomous: "핀란드 자치국"
- RE4_autonomous_DEF: "핀란드 자치국"
+ RE4_autonomous: "핀란드 자치공화국"
+ RE4_autonomous_DEF: "핀란드 자치공화국"
  RE4_autonomous_ADJ: "핀란드"
+
+ #분탕치는 체리노
+ RE1_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 덴마크 사회주의 자치 노동자 소비에트 공화국"
+ RE1_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 덴마크 사회주의 자치 노동자 소비에트 공화국"
+ RE1_autonomous_cherino_ADJ: "덴마크"
+
+ RE2_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 노르웨이 사회주의 자치 노동자 소비에트 공화국"
+ RE2_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 노르웨이 사회주의 자치 노동자 소비에트 공화국"
+ RE2_autonomous_cherino_ADJ: "노르웨이"
+
+ RE3_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 스웨덴 사회주의 자치 노동자 소비에트 공화국"
+ RE3_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 스웨덴 사회주의 자치 노동자 소비에트 공화국"
+ RE3_autonomous_cherino_ADJ: "스웨덴"
+
+
+ RE4_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 핀란드 사회주의 자치 노동자 소비에트 공화국"
+ RE4_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 핀란드 사회주의 자치 노동자 소비에트 공화국"
+ RE4_autonomous_cherino_ADJ: "핀란드"
 
  RE4_finlandia_military_administration: "핀란드 자치위원회"
  RE4_finlandia_military_administration_DEF: "핀란드 자치위원회"

@@ -3211,10 +3211,13 @@ focus_tree = {
 		completion_reward = {
 			141 = {
 				RED = {
-					add_to_variable = {
-						RED.halo_militia_cap = 3
+					custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
+					hidden_effect = {
+						add_to_variable = {
+							RED.halo_militia_cap = 3
+						}
+						set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 					}
-					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
@@ -3716,10 +3719,10 @@ focus_tree = {
 			add_ideas = RED_security_idea
 		}
 	}
-	focus = { #비밀경찰 확대
+	focus = { #공안부
 		id = RED_enlarge_secret_police
-		icon = GFX_goal_generic_political_pressure
-		cost = 4
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
+		cost = 2
 
 		relative_position_id = RED_restore_the_security
 		x = -1
@@ -3736,10 +3739,17 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_stability = 0.10
-			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			BA_halo_infantry_cap_edit_effect = yes
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
+				hidden_effect = {
+					add_to_variable = {
+						RED.halo_militia_cap = 3
+					}
+					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+				}
+			}
+			add_political_power = 30
+			add_stability = 0.05
 		}
 	}
 
@@ -3855,7 +3865,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #자치국 수립
+	focus = { #자치공화국 수립
 		id = RED_enticing_locals
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 4
@@ -3904,8 +3914,8 @@ focus_tree = {
 
 	focus = { #현지 공산당 수용
 		id = RED_welcome_immigrate
-		icon = GFX_focus_BEL_national_redoubt_at_antwerp
-		cost = 4
+		icon = GFX_focus_generic_communist
+		cost = 2
 
 		relative_position_id = RED_enticing_locals
 		x = 1
@@ -3996,6 +4006,10 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_security_idea
+				add_idea = RED_security_idea_1
+			}
 		}
 	}
 
@@ -4022,10 +4036,23 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_stability = 0.10
-			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			BA_halo_infantry_cap_edit_effect = yes
+			add_political_power = -60
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+					}
+				}
+				add_manpower = 1000
+				add_extra_state_shared_building_slots = 1
+				add_resistance = -5
+				add_compliance = 5
+			}
 		}
 	}
 
@@ -4055,17 +4082,17 @@ focus_tree = {
 		completion_reward = {
 			effect_tooltip = {
 				swap_ideas = {
-					remove_idea = RED_security_idea
+					remove_idea = RED_security_idea_1
 					add_idea = RED_advanced_security_idea
 				}
 			}
 			hidden_effect = {
 				if = {
 					limit = {
-						has_idea = RED_security_idea
+						has_idea = RED_security_idea_1
 					}
 					swap_ideas = {
-						remove_idea = RED_security_idea
+						remove_idea = RED_security_idea_1
 						add_idea = RED_advanced_security_idea
 					}
 				}
@@ -5554,6 +5581,10 @@ focus_tree = {
 			factor = 0
 		}
 		select_effect = {
+			country_event = {
+				id = RED_event.37
+				days = 3
+			}
 			country_event = {
 				id = RED_marina_event.1
 				days = 10
@@ -9616,13 +9647,17 @@ focus_tree = {
 			custom_effect_tooltip = RED_winterarmy_advance_tt
 			custom_effect_tooltip = RED_army_focus_6_tt
 			add_to_variable = { RED_winter_army_modifier_army_sub_unit_halo_militia_defence_factor = 0.05 }
-			capital_scope = {
-				RED = {
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add6_tt
+				hidden_effect = {
 					add_to_variable = {
 						RED.halo_militia_cap = 6
 					}
 					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
+			}
+			capital_scope = {
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
@@ -11116,7 +11151,7 @@ focus_tree = {
 
 	focus = { #반파시즘 성전
 		id = RED_revolution_war_focus_0
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_generic_communism_anti_fascism
 		cost = 4
 		available = {
 			NOT = {
@@ -11389,16 +11424,19 @@ focus_tree = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
-					infrastructure > 3
+					infrastructure > 4
 					NOT = {
 						state = 914
 					}
 				}
 				RED = {
-					add_to_variable = {
-						RED.halo_militia_cap = 1
+					custom_effect_tooltip = RED_kivotos_halo_militia_add1_tt
+					hidden_effect = {
+						add_to_variable = {
+							RED.halo_militia_cap = 1
+						}
+						set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 					}
-					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
