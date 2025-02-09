@@ -18,9 +18,40 @@ focus_tree = {
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 
 	focus = {
+		id = GEH_start_focus
+		icon = GFX_focus_rom_parties_end
+		cost = 2
+        ai_will_do = {
+            base = 999
+        }
+		available = {
+		}
+		x = 19
+		y = 0
+		offset = {
+			trigger = {
+				OR = {
+					is_debug = yes
+					has_completed_focus = GEH_zero_congress_focus
+				}
+			}
+			x = 11
+		}
+		completion_reward = {
+			add_stability = 0.02
+			swap_ruler_traits = {
+				remove = b_tjsehqnwkd_start
+				add = b_tjsehqnwkd
+			}
+		}
+	}
+	focus = {
 		id = GEH_zero_congress_focus
 		icon = GFX_goal_Perfect_team_zero_congress
 		cost = 15
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         select_effect = {
             country_event=hina.4
             add_political_power = 100
@@ -90,7 +121,7 @@ focus_tree = {
 	focus = {
 		id = GEH_focus_111111
 		icon = GFX_goal_tripartite_pact
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -112,7 +143,11 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_focus_111111
         }
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         ai_will_do = {
             base = 80
         }
@@ -320,7 +355,7 @@ focus_tree = {
 	focus = {
 		id = GEH_get_legitimacy
 		icon = GFX_goal_GEH_get_legitimacy
-		cost = 5
+		cost = 2
 		available = {
             OR = {
 				custom_trigger_tooltip = {
@@ -331,23 +366,26 @@ focus_tree = {
 				if = { limit = { has_idea = GEH_popular_support_2 }
 					has_idea = GEH_popular_support_2
 				}
-				if = { limit = { has_idea = GEH_popular_support_3 }
+				else_if = { limit = { has_idea = GEH_popular_support_3 }
 					has_idea = GEH_popular_support_3
 				}
-				if = { limit = { has_idea = GEH_popular_support_4 }
+				else_if = { limit = { has_idea = GEH_popular_support_4 }
 					has_idea = GEH_popular_support_4
 				}
-				if = { limit = { has_idea = GEH_popular_support_5 }
+				else_if = { limit = { has_idea = GEH_popular_support_5 }
 					has_idea = GEH_popular_support_5
+				}
+				else = {
+					has_idea = GEH_popular_support_2
 				}
             }
 		}
 		bypass = {
 		}
         relative_position_id = GEH_rework_focus_2
-        prerequisite = { focus =GEH_rework_focus_3 }
-        prerequisite = { focus =GEH_rework_focus_2 }
-        prerequisite = { focus =GEH_rework_focus_1 }
+        prerequisite = { focus = GEH_rework_focus_3 }
+        prerequisite = { focus = GEH_rework_focus_2 }
+        prerequisite = { focus = GEH_rework_focus_1 }
 		x = 0
 		y = 1
 		completion_reward = {
@@ -814,7 +852,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.10
 			swap_ruler_traits = {
 				remove = b_tjsehqnwkd
 				add = b_tjsehqnwkd2
@@ -1112,7 +1150,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.02
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.10
@@ -1536,7 +1574,7 @@ focus_tree = {
 		relative_position_id = GEH_main_route_focus
 		x = -1
 		y = 1
-		cost = 5
+		cost = 2
 		prerequisite = {
 			focus = GEH_main_route_focus
 		}
@@ -1553,13 +1591,13 @@ focus_tree = {
 				limit = { original_tag = GEM }
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = medium_increase
+					modifier = large_increase
 				}
 				hidden_effect = {
 					ROOT = {
 						add_opinion_modifier = {
 							target = PREV
-							modifier = medium_increase
+							modifier = large_increase
 						}
 					}
 				}
@@ -1682,7 +1720,7 @@ focus_tree = {
         relative_position_id = GEH_second_congress_focus
         x = -2
         y = 1
-        cost = 10
+        cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
@@ -1717,7 +1755,7 @@ focus_tree = {
         relative_position_id = GEH_second_congress_focus
         x = -2
         y = 1
-        cost = 5
+        cost = 2
 		allow_branch = {
 			OR = {
 				is_debug = yes
@@ -1864,8 +1902,11 @@ focus_tree = {
 		id = GEH_first_congress_focus
 		icon = GFX_goal_Perfect_team_first_congress
 		cost = 6
-		x = 23
+		x = 18
 		y = 0
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         relative_position_id = GEH_second_congress_focus
 
 		cancelable = no
@@ -1880,9 +1921,15 @@ focus_tree = {
         }
 		offset = {
 			trigger = {
+				has_completed_focus = GEH_zero_congress_focus
+			}
+			x = 2
+		}
+		offset = {
+			trigger = {
 				is_debug = yes
 			}
-			x = 24
+			x = 26
 			y = 0
 		}
         select_effect = {
