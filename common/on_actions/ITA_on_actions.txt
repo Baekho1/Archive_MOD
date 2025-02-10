@@ -1,113 +1,251 @@
 on_actions = {
-	on_create_faction = {
+	on_create_faction = { # ROOT 팩션 창설자, FROM 대상국
 		effect = {
 			if = {
 				limit = {
 					original_tag = ITA
-					OR = {
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
+					FROM = {
+						Kivotos_tag = yes
+						NOT = { # 비키보토스화 국가 제외
+							has_cosmetic_tag = HEU_luxembourg
+							has_cosmetic_tag = HEU_luxembourg_benriya
+							has_cosmetic_tag = HEU_west_germanic_union
+							has_cosmetic_tag = HEU_germanic_union
+							has_cosmetic_tag = KAI_british_corporation
+						}
 					}
-					FROM = { Kivotos_tag = yes }
 				}
-				ROOT = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						ROOT = { has_idea = PASTA_shock_to_daejeon }
+					}
+					ROOT = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						ROOT = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					ROOT = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
 					Kivotos_tag = yes
+					NOT = { # 비키보토스화 국가 제외
+						has_cosmetic_tag = HEU_luxembourg
+						has_cosmetic_tag = HEU_luxembourg_benriya
+						has_cosmetic_tag = HEU_west_germanic_union
+						has_cosmetic_tag = HEU_germanic_union
+						has_cosmetic_tag = KAI_british_corporation
+					}
 					FROM = {
 						original_tag = ITA
-						OR = {
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-						}
 					}
 				}
-				FROM = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						FROM = { has_idea = PASTA_shock_to_daejeon }
+					}
+					FROM = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						FROM = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					FROM = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 		}
 	}
-	on_offer_join_faction = {
+	on_offer_join_faction = { # ROOT 팩션 리더, FROM 초대된 국가
 		effect = {
 			if = {
 				limit = {
 					original_tag = ITA
-					OR = {
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
+					FROM = {
+						Kivotos_tag = yes
+						NOT = { # 비키보토스화 국가 제외
+							has_cosmetic_tag = HEU_luxembourg
+							has_cosmetic_tag = HEU_luxembourg_benriya
+							has_cosmetic_tag = HEU_west_germanic_union
+							has_cosmetic_tag = HEU_germanic_union
+							has_cosmetic_tag = KAI_british_corporation
+						}
 					}
-					FROM = { Kivotos_tag = yes }
 				}
-				ROOT = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						ROOT = { has_idea = PASTA_shock_to_daejeon }
+					}
+					ROOT = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						ROOT = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					ROOT = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
 					Kivotos_tag = yes
+					NOT = { # 비키보토스화 국가 제외
+						has_cosmetic_tag = HEU_luxembourg
+						has_cosmetic_tag = HEU_luxembourg_benriya
+						has_cosmetic_tag = HEU_west_germanic_union
+						has_cosmetic_tag = HEU_germanic_union
+						has_cosmetic_tag = KAI_british_corporation
+					}
 					FROM = {
 						original_tag = ITA
-						OR = {
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-						}
 					}
 				}
-				FROM = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						FROM = { has_idea = PASTA_shock_to_daejeon }
+					}
+					FROM = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						FROM = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					FROM = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 		}
 	}
-	on_join_faction = {
+	on_join_faction = { # ROOT 가입국, FROM 팩션 리더
 		effect = {
 			if = {
 				limit = {
 					original_tag = ITA
-					OR = {
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
-						has_idea = PASTA_shock_to_daejeon
+					FROM = {
+						Kivotos_tag = yes
+						NOT = { # 비키보토스화 국가 제외
+							has_cosmetic_tag = HEU_luxembourg
+							has_cosmetic_tag = HEU_luxembourg_benriya
+							has_cosmetic_tag = HEU_west_germanic_union
+							has_cosmetic_tag = HEU_germanic_union
+							has_cosmetic_tag = KAI_british_corporation
+						}
 					}
-					FROM = { Kivotos_tag = yes }
 				}
-				ROOT = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						ROOT = { has_idea = PASTA_shock_to_daejeon }
+					}
+					ROOT = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						ROOT = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					ROOT = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
 					Kivotos_tag = yes
+					NOT = { # 비키보토스화 국가 제외
+						has_cosmetic_tag = HEU_luxembourg
+						has_cosmetic_tag = HEU_luxembourg_benriya
+						has_cosmetic_tag = HEU_west_germanic_union
+						has_cosmetic_tag = HEU_germanic_union
+						has_cosmetic_tag = KAI_british_corporation
+					}
 					FROM = {
 						original_tag = ITA
-						OR = {
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-							has_idea = PASTA_shock_to_daejeon
-						}
 					}
 				}
-				FROM = {
-					set_country_flag = ITA_human_fascism_lock_trigger_flag
-					country_event = PASTA_event.8
+				if = { # 대전이 충격 보유 시 격발
+					limit = {
+						FROM = { has_idea = PASTA_shock_to_daejeon }
+					}
+					FROM = {
+						set_country_flag = ITA_human_fascism_lock_trigger_flag
+						country_event = PASTA_event.8
+					}
+				}
+				else_if = { # 파시즘 bop 보유시 격발
+					limit = {
+						FROM = {
+							has_power_balance = { id = ITA_power_balance }
+							has_government = fascism
+							NOT = { has_country_flag = ITA_kvt_bop_modifier_lock_trigger_flag }
+						}
+					}
+					FROM = {
+						add_power_balance_modifier = {
+							id = ITA_power_balance
+							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+					}
 				}
 			}
 		}
 	}
-	on_leave_faction = {
+	on_leave_faction = { # ROOT 탈퇴국, FROM 팩션 리더
 		effect = {
 			if = {
 				limit = {
@@ -115,6 +253,18 @@ on_actions = {
 					has_power_balance_modifier = {
 						id = ITA_power_balance
 						modifier = ITA_power_balance_aliy_in_kvt_country
+					}
+					all_allied_country = { # 동맹국 검사
+						OR = {
+							tag = FROM # 이 액션이 작동하는 시점에서는 FROM 또한 세력 가입 상태로 판정되기에 제외
+							NOT = { Kivotos_tag = yes }
+							is_subject = yes # 괴뢰국은 제외
+							has_cosmetic_tag = HEU_luxembourg # 비키보토스화 국가 제외
+							has_cosmetic_tag = HEU_luxembourg_benriya
+							has_cosmetic_tag = HEU_west_germanic_union
+							has_cosmetic_tag = HEU_germanic_union
+							has_cosmetic_tag = KAI_british_corporation
+						}
 					}
 					FROM = { Kivotos_tag = yes }
 				}
@@ -141,6 +291,18 @@ on_actions = {
 						has_power_balance_modifier = {
 							id = ITA_power_balance
 							modifier = ITA_power_balance_aliy_in_kvt_country
+						}
+						all_allied_country = { #동맹국 검사
+							OR = {
+								tag = ROOT # 이 액션이 작동하는 시점에서는 ROOT 또한 세력 가입 상태로 판정되기에 제외
+								NOT = { Kivotos_tag = yes }
+								is_subject = yes # 괴뢰국은 제외
+								has_cosmetic_tag = HEU_luxembourg # 비키보토스화 국가 제외
+								has_cosmetic_tag = HEU_luxembourg_benriya
+								has_cosmetic_tag = HEU_west_germanic_union
+								has_cosmetic_tag = HEU_germanic_union
+								has_cosmetic_tag = KAI_british_corporation
+							}
 						}
 					}
 				}
