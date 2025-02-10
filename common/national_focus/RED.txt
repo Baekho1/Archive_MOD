@@ -986,7 +986,7 @@ focus_tree = {
 			OR = {
 				AND = {
 					NOT = {
-						has_completed_focus = RED_new_economy_focus_0
+						has_completed_focus = RED_industrial_planning
 						has_completed_focus = RED_economy_focus_9
 					}
 				}
@@ -2091,16 +2091,6 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
 					type = dockyard
 					level = 1
 				}
@@ -2642,17 +2632,6 @@ focus_tree = {
 					has_idea = RED_economy_recover_idea_1
 				}
 				remove_ideas = RED_economy_recover_idea_1
-			}
-			random_owned_controlled_state = {
-				limit = {
-					OR={has_state_category = rural
-					has_state_category = town}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -4061,8 +4040,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		cost = 4
 
-		relative_position_id = RED_welcome_immigrate
-		x = -1
+		relative_position_id = RED_enemy_of_class
+		x = 0
 		y = 1
 
 		mutually_exclusive = { focus = RED_all_power_to_redwinter }
@@ -4895,7 +4874,7 @@ focus_tree = {
 	}
 	focus = { #노동조합 강화
 		id = RED_strengthen_the_trade_unions
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		prerequisite = { focus = RED_system_decentralization }
 		x = -1
 		y = 1
@@ -5016,9 +4995,9 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #모든 권력을 붉은겨울로
+	focus = { #모든 권력을 소비에트로!
 		id = RED_all_power_to_redwinter
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_SOV_the_supreme_soviet
 		prerequisite = { focus = RED_strengthen_regional_party focus = RED_strengthen_the_trade_unions}
 		mutually_exclusive = { focus = RED_advance_security }
 		x = 1
@@ -5070,6 +5049,24 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_0
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_3
+				}
+			}
 		}
 		x = -2
 		y = 1
@@ -5105,9 +5102,9 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #당권 확립
+	focus = { #새로운 테제
 		id = RED_party_reorganization
-		icon = GFX_focus_SOV_the_supreme_soviet
+		icon = GFX_focus_AUS_danubian_socialist_communes
 		prerequisite = { focus = RED_trotsky_s_world_revolution focus = RED_cherino_s_systemic_revolution }
 		x = 2
 		y = 1
@@ -5118,10 +5115,57 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+	focus = { #중앙 집권 국가
+		id = RED_centralization
+		icon = GFX_focus_BEL_the_grand_place
+		prerequisite = { focus = RED_party_reorganization }
+		x = -1
+		y = 1
+		relative_position_id = RED_party_reorganization
+		mutually_exclusive = {
+			focus = RED_union_nation
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #제민족의 자결
+		id = RED_union_nation
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		prerequisite = { focus = RED_party_reorganization }
+		x = 1
+		y = 1
+		relative_position_id = RED_party_reorganization
+		mutually_exclusive = {
+			focus = RED_centralization
+		}
+		
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #노동자 공화국
+		id = RED_workers_state
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = RED_centralization focus = RED_union_nation }
+		x = 0
+		y = 2
+		relative_position_id = RED_party_reorganization
+		
+		cost = 4
+
+		completion_reward = {
+		}
+	}
 	focus = { #당중앙 해체
 		id = RED_party_central_dissolution
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = RED_cherino_s_systemic_revolution }
+		mutually_exclusive = {
+			focus = RED_freedom_of_debate_unity_of_action
+		}
 		x = 0
 		y = 1
 		relative_position_id = RED_cherino_s_systemic_revolution
@@ -5141,20 +5185,83 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #토론의 자유와 단합된 행동
+		id = RED_freedom_of_debate_unity_of_action
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = RED_cherino_s_systemic_revolution }
+		x = 2
+		y = 1
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_party_central_dissolution
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
 	focus = { #자유 소비에트
 		id = RED_free_soviets
 		icon = GFX_RED_free_soviets
-		prerequisite = { focus = RED_party_central_dissolution }
-		x = 0
-		y = 3
+		prerequisite = { focus = RED_party_central_dissolution focus = RED_freedom_of_debate_unity_of_action }
+		x = 1
+		y = 2
 		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_democratic_planned_economy
+		}
 		
 		cost = 4
 
 		completion_reward = {
 		}
 	}
-	focus = { #키보토스 국가들의 해방
+	focus = { #민주적 계획경제
+		id = RED_democratic_planned_economy
+		icon = GFX_focus_generic_central_planning
+		prerequisite = { focus = RED_party_central_dissolution focus = RED_freedom_of_debate_unity_of_action }
+		x = 3
+		y = 2
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_free_soviets
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #전쟁이 아니라 계급전쟁
+		id = RED_no_war_but_class_war
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = RED_party_central_dissolution }
+		x = 0
+		y = 3
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_ideal_of_bolshevism_again
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #볼셰비즘 이상 재현
+		id = RED_ideal_of_bolshevism_again
+		icon = GFX_focus_ETH_callout_to_the_world
+		prerequisite = { focus = RED_free_soviets focus = RED_democratic_planned_economy }
+		x = 2
+		y = 3
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_no_war_but_class_war
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #키보토스 혁명전쟁
 		id = RED_liberation_of_the_kibotus_states
 		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus = RED_trotsky_s_world_revolution }
@@ -5167,25 +5274,25 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	focus = { #전인민의 해방전쟁
-		id = RED_people_s_liberation_war
-		icon = GFX_focus_spr_anarchism_knows_no_borders
+	focus = { #전시 공산주의
+		id = RED_war_communism
+		icon = GFX_focus_GER_wage_war_on_capitalism
 		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
-		x = 0
-		y = 3
-		relative_position_id = RED_trotsky_s_world_revolution
+		x = -1
+		y = 1
+		relative_position_id = RED_liberation_of_the_kibotus_states
 		
 		cost = 4
 
 		completion_reward = {
 		}
 	}
-	focus = { #노동자 국가
-		id = RED_workers_state
-		icon = GFX_focus_ger_great_red_menace
-		prerequisite = { focus = RED_people_s_liberation_war focus = RED_free_soviets }
-		x = 2
-		y = 4
+	focus = { #전인민의 해방전쟁
+		id = RED_people_s_liberation_war
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
+		x = 0
+		y = 3
 		relative_position_id = RED_trotsky_s_world_revolution
 		
 		cost = 4
@@ -5446,47 +5553,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { #소련 선제타격
-		id = RED_attack_sov
-		icon = GFX_focus_attack_soviet
-		cost = 4
-
-		relative_position_id = RED_communist_instigation
-		x = 0
-		y = 3
-
-		available = {
-   
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			is_faction_leader = yes
-		}
-
-		prerequisite = {
-			focus = RED_communist_instigation
-		}
-
-		will_lead_to_war_with = SOU
-
-		completion_reward = {
-			declare_war_on = {
-				target = SOU
-				type = annex_everything
-			}
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						is_in_faction_with = SOU
-					}
-					add_to_war = {
-						targeted_alliance = SOU
-						enemy = ROOT
-					}
-				}
-			}
-		}
-	}
 
 	focus = { #핀란드 침공
 		id = RED_attack_fin
@@ -8521,6 +8587,52 @@ focus_tree = {
 		x = 1
 		y = 2
 	}
+	focus = { #소련 확보
+		id = RED_attack_sov
+		icon = GFX_focus_attack_soviet
+		cost = 4
+
+		relative_position_id = RED_workers_state
+		x = 0
+		y = 1
+
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			is_faction_leader = yes
+		}
+
+		prerequisite = {
+			focus = RED_workers_state
+		}
+		prerequisite = {
+			focus = RED_people_s_liberation_war
+			focus = RED_ideal_of_bolshevism_again
+			focus = RED_no_war_but_class_war
+		}
+
+		will_lead_to_war_with = SOU
+
+		completion_reward = {
+			declare_war_on = {
+				target = SOU
+				type = annex_everything
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_in_faction_with = SOU
+					}
+					add_to_war = {
+						targeted_alliance = SOU
+						enemy = ROOT
+					}
+				}
+			}
+		}
+	}
 	# 군 개편 중점
 	focus = { #재무장 계획
 		id = RED_rearming_focus_0
@@ -8648,7 +8760,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			has_tech = improved_machine_tools
+			has_tech = advanced_machine_tools
 		}
 
 		completion_reward = {
