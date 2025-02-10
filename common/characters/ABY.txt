@@ -1827,7 +1827,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				front_line_general reckless adaptable harsh_leader aggressive_assaulter
+				reckless adaptable harsh_leader aggressive_assaulter
 			}
 			skill=5
 			attack_skill=5
@@ -2794,7 +2794,7 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology = falangism
 			expire = "1965.1.1.1"
 			id = -1
 			traits = { anti_communist }

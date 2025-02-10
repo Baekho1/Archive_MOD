@@ -43,6 +43,7 @@ ideologies = {
 
 			Cohabitism = {
 				can_be_randomly_selected = no
+				color = { 5 187 250 }
 			}
 
 			Libertic_Integralism = {
@@ -171,6 +172,7 @@ ideologies = {
 			
 			culturlic_Integralism = {
 				can_be_randomly_selected = no
+				color = { 104 34 34 }
 			}
 
 			police_communism = {
@@ -437,6 +439,11 @@ ideologies = {
 			}
 			Government_Federalism = {
 				can_be_randomly_selected = no
+			}
+			
+			corporate_state_nephtys = {
+				can_be_randomly_selected = no
+				color = { 255 217 102 }
 			}
 
 			police_neutralism = {

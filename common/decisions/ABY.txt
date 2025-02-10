@@ -20594,6 +20594,10 @@ ABY_descision_category_federal_government = {
 			remove_ideas = {
 				ABY_idea_bohemia_and_austria
 			}
+			add_timed_idea = {
+				idea = ABY_idea_bohemia_and_austria_2
+				days = 140
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = -1
@@ -20779,6 +20783,40 @@ ABY_descision_category_federal_government = {
 				mission = ABY_descision_fall_government
 				days = -10
 			} 
+		}
+	} 
+}
+ABY_descision_category_suspecious_move = {
+	ABY_descision_suspecious_military_move = {
+		days_mission_timeout = 70
+		fire_only_once = yes
+		priority = 1
+		activation = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {
+				has_country_flag = ABY_flag_arrested_fascist
+			}
+		}
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_fascist_terror
+		}
+
+        allowed = {
+            tag = ABY
+        }
+		available = {
+			has_country_flag = ABY_flag_arrested_fascist
+			
+    	}
+		complete_effect = {
+			country_event = {
+				id = ABY_new_event.213
+			}
+		}
+		timeout_effect = { 
+			complete_national_focus = ABY_focus_first_attack
 		}
 	} 
 }

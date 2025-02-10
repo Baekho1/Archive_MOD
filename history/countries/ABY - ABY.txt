@@ -94,6 +94,7 @@ set_variable = {ABY_rebuild_cost_var = 50}
 set_variable = {ABY_unite_cost_var = 50}
 set_variable = {ABY_government_cost_var = 75}
 set_variable = {ABY_government_var = 0}
+set_variable = {ABY_plan_cost_var = 25}
 
 every_state = {
     limit = {

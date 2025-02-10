@@ -142,8 +142,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
 	}
 	spriteType = {
+		name = "GFX_ideology_Cohabitism"
+		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
+	}
+	spriteType = {
 		name = "GFX_ideology_Libertic_Integralism"
-		texturefile = "gfx/interface/ideologies/Libertic_Integralism.tga"
+		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_culturlic_Integralism"
+		texturefile = "gfx/interface/ideologies/culturlic_Integralism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporate_state_nephtys"
+		texturefile = "gfx/interface/ideologies/corporate_state_nephtys.tga"
 	}
 	spriteType = {
 		name = "GFX_ideology_police_nationalism"

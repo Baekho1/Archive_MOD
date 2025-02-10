@@ -1871,6 +1871,10 @@ ABY_UNION = {
 	color = rgb { 153 0 25 }
 	color_ui = rgb { 153 0 25 }
 }
+ABY_military_government = {
+	color = rgb { 120 120 150 }
+	color_ui = rgb { 120 120 150 }
+}
 ABY_SCHOOL = {
 	color = rgb { 50 0 75 }
 	color_ui = rgb { 50 0 75 }

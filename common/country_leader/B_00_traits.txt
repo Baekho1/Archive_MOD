@@ -1032,6 +1032,7 @@ leader_traits = {
 	}
 	ABY_trait_wolf_god = { #"늑대신"
 		random = no
+		political_power_factor = -0.1
 		stability_factor = -0.1
 		war_support_factor = 0.1
 		army_attack_factor = 0.05
