@@ -204,7 +204,7 @@ recruit_character = GEH_hina
 recruit_character = GEH_dldhfl
 recruit_character = GEH_dkzh
 recruit_character = GEH_chinatsu
-#recruit_character = GEH_clskcm
+recruit_character = GEH_theorist_idea
 
 set_convoys = 140
 

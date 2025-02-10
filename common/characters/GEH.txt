@@ -378,7 +378,7 @@ characters={
 			idea_token = GEH_dldhfl_chief
 			allowed = { OR = { original_tag = GEH original_tag = GEM } }
 			traits = { army_chief_reform_1 }
-			cost = 100
+			cost = 50
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -759,6 +759,23 @@ characters={
 		gender = female
 	}
 
+	GEH_theorist_idea={ # 선도부 회의
+		name=GEH_theorist_idea
+		portraits={
+			army={
+				small="gfx/interface/advisors/GEH/GEH_theorist_idea.tga"
+			}
+		}
+		gender = female
+		advisor={
+			slot = theorist
+			idea_token = GEH_theorist_idea
+			allowed = { original_tag = GEH }
+			traits = { council_of_theorists }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
 	GEH_pandemonium_society={ #만마전
 		name=GEH_pandemonium_society
 		portraits={
