@@ -760,7 +760,7 @@ ideas = {
 			}
 		}
         COU_cut_tower = { #생텀 타워 통제권 상실
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -789,7 +789,7 @@ ideas = {
         }
         COU_cut_tower_0 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -818,7 +818,7 @@ ideas = {
         }
         COU_cut_tower_1 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower
             allowed = {
                 always = no
             }
@@ -846,7 +846,7 @@ ideas = {
         }
         COU_cut_tower_2 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -872,7 +872,7 @@ ideas = {
         }
         COU_cut_tower_3 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -897,7 +897,7 @@ ideas = {
         }
         COU_cut_tower_4 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -920,7 +920,7 @@ ideas = {
         }
         COU_cut_tower_5 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower
             allowed = {
                 always = no
             }
@@ -943,7 +943,7 @@ ideas = {
         }
         COU_cut_tower_6 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -966,7 +966,7 @@ ideas = {
         }
         COU_cut_tower_7 = { #생텀 타워 통제권 상실
             name = COU_cut_tower
-            picture = generic_army_problems 
+            picture = COU_cut_tower 
             allowed = {
                 always = no
             }
@@ -1006,6 +1006,27 @@ ideas = {
             }
 
         }
+		
+		COU_dutch_collaboraters = { #현지인 협력자들
+            picture = COU_dutch_collaboraters 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.05
+				army_morale_factor = 0.05
+				production_speed_buildings_factor = 0.1
+            }
+
+        }
+		
         COU_no_police = { #치안 없음
             picture = tfv_can_conscription_crisis 
             allowed = {

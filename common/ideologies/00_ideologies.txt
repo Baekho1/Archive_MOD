@@ -283,6 +283,11 @@ ideologies = {
 			neopandemonium = { #개혁 만마전
 				can_be_randomly_selected = no
 			}
+			
+			cou_kaya_dictatorship = { # 카야 고유 이념 
+				can_be_randomly_selected = no
+                color = { 53 60 74 }
+			}
 
 			The_Colour_fascism = {
 				can_be_randomly_selected = no

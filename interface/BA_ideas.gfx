@@ -573,6 +573,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/cou/COU_admin_confusion_idea.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_COU_cut_tower"
+		texturefile = "gfx/interface/ideas/cou/COU_cut_tower.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COU_dutch_collaboraters"
+		texturefile = "gfx/interface/ideas/cou/COU_dutch_collaboraters.png"
+	}
+	spriteType = {
 		name = "GFX_idea_COU_RIN_policy_lead_idea"
 		texturefile = "gfx/interface/ideas/cou/COU_RIN_policy_lead_idea.tga"
 	}

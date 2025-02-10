@@ -122,15 +122,15 @@ characters={
 		gender = female
 		country_leader={
 			desc=COU_KAYA_desc
-			ideology=gen_nazism
+			ideology=cou_kaya_dictatorship
 			expire="1965.1.1.1"
 		}
 		field_marshal={
 			traits={ politically_connected }
 			skill=2
-			attack_skill=2
+			attack_skill=3
 			defense_skill=2
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=2
 			legacy_id=-1
 		}

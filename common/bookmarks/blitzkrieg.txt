@@ -13,6 +13,7 @@ bookmarks = {
 			ideas = {
 				COU_admin_confusion
 				COU_cut_tower
+				COU_dutch_collaboraters
 			}
 			focuses = {
 				COU_establishment_of_emergency_measures_committee
