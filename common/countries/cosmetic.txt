@@ -2389,6 +2389,10 @@ RE8_office = {
 	color = rgb { 178 59 89 }
 	color_ui = rgb { 178 59 89 }
 }
+RE5_rebuilding_soviet = {
+	color = rgb { 178 59 89 }
+	color_ui = rgb { 178 59 89 }
+}
 
 TRM_polish = {
 	color = rgb { 189 55 86 }

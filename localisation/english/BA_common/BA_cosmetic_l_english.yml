@@ -1341,6 +1341,13 @@
  RED_redwinter_soviet_socialist_republic: "붉은겨울 소비에트 사회주의 공화국"
  RED_redwinter_soviet_socialist_republic_DEF: "붉은겨울 소비에트 사회주의 공화국"
  RED_redwinter_soviet_socialist_republic_ADJ: "붉은겨울"
+ RED_redwinter_soviet_socialist_republic_1: "붉은겨울 소비에트 사회주의 자치 공화국 연방"
+ RED_redwinter_soviet_socialist_republic_1_DEF: "붉은겨울 소비에트 사회주의 자치 공화국 연방"
+ RED_redwinter_soviet_socialist_republic_1_ADJ: "붉은겨울"
+
+ RE5_rebuilding_soviet: "해방지구 재건평의회"
+ RE5_rebuilding_soviet_DEF: "해방지구 재건평의회"
+ RE5_rebuilding_soviet_ADJ: "해방지구 재건평의회"
 
  VIN_indochina_civilwar_jap: "베트남 복국동맹회"
  VIN_indochina_civilwar_jap_DEF: "베트남 복국동맹회"

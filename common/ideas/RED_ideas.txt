@@ -7,7 +7,82 @@ ideas = {
 		}
 	}
     country = {
-		
+		RED_nation_united_LD = { #민족 자결 원칙
+			picture = GER_iron_front
+			modifier = {
+				cic_to_overlord_factor = 0.25
+				mic_to_overlord_factor = 0.25
+			}
+		}
+		RED_centralized_LD = { #중앙 집권 원칙
+			picture = GER_iron_front
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+		RED_rebuilding_soviet = { #재건평의회
+			picture = HUN_resurgent_communist_party_idea
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		RED_liberation_district = { #해방지구
+			picture = SOV_soviet_hegemony
+			modifier = {
+				compliance_growth = 0.5
+				resistance_growth = -0.5
+			}
+		}
+		RED_world_revolution_1 = { #세계혁명!
+			picture = GER_wage_war_on_capitalism
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+				custom_modifier_tooltip = RED_world_revolution_1_tt
+			}
+			cancel = {
+				has_war = no
+			}
+			on_remove = {
+				add_ideas = RED_world_revolution
+			}
+		}
+		RED_world_revolution = { #세계혁명에의 열망
+			picture = MEX_revolutionary_army
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				consumer_goods_expected_value = 0.1
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_factory_efficiency_gain_factor = -0.4
+				custom_modifier_tooltip = RED_world_revolution_tt
+			}
+			cancel = {
+				has_war = yes
+			}
+			on_remove = {
+				add_ideas = RED_world_revolution_1
+			}
+		}
+		RED_debate_everywhere = { #정치적 전환에의 열망
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_factor = -0.1
+				stability_weekly = -0.001
+			}
+		}
 		RED_exile_committee_all = { #망명위원회-전체
 			name = RED_exile_committee
 			picture = AUS_austromarxism

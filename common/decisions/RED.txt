@@ -59,6 +59,71 @@ RED_seek_allies_dec_cat = {
 }
 
 RED_invite_trotskists_dec_cat = { #제4인터내셔널
+	RED_make_LD = { #재건평의회 설립
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_completed_focus = RED_workers_state
+		}
+		available = {
+			any_owned_state = {
+				NOT = {
+					is_core_of = RED
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					RE5 = {
+						NOT = {
+							is_subject_of = RED
+						}
+					}
+				}
+				set_autonomy = {
+					target = RE5
+					autonomy_state = autonomy_supervised_state
+				}
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+				}
+				transfer_state_to = RE5
+			}
+		}
+	}
+	RED_attack_kivotos = { #혁명 전파
+		icon = GFX_decision_generic_ignite_civil_war
+		target_trigger = {
+			FROM = {
+				Kivotos_tag = yes
+				any_country = {
+					is_ally_with = RED
+					is_neighbor_of = PREV
+				}
+				NOT = {
+					is_ally_with = RED
+				}
+			}
+		}
+		days_remove = 40
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
 	#트로츠키주의자 규합
 	RED_exile_committee_yev = {
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
@@ -5472,5 +5537,39 @@ RED_bop_category = {
 			}
 		}
 		cost = 5
+	}
+	RED_giving_pudding = { #추가적 푸딩 배급
+		icon = GFX_decision_hol_attract_foreign_investors
+		complete_effect = {
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = -0.05
+			}
+		}
+		cost = 10
+		days_re_enable = 10
+		days_remove = 30
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+	}
+	RED_unite_exiles = { #망명 좌익반대파 규합
+		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
+		visible = {
+			has_completed_focus = RED_invite_trotskists
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.05
+			}
+		}
+		cost = 10
+		days_re_enable = 10
+		days_remove = 30
+		modifier = {
+			weekly_manpower = 10
+			political_power_factor = -0.05
+		}
 	}
 }
