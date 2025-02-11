@@ -24,6 +24,7 @@
 		focus = REPP_industrial_effort
 	}
 	shared_focus = RE4_create_of_defense_committee
+	shared_focus = RE4_Defense_Commission_Investment
 
 	focus = {
         id = REPP_army_effort
@@ -2289,6 +2290,7 @@
 
 		available = { 
 			original_tag = RE4
+			NOT = { has_completed_focus = RE4_Finland_Military_Administration}
 		} 
 
 		bypass = {
@@ -2332,7 +2334,7 @@
 		}
 	}
 
-	shared_focus = {
+	joint_focus = {
 		id = RE4_Finland_Military_Administration
 		
 		dynamic = yes 
@@ -2344,9 +2346,16 @@
 		text_icon = REDWINTER_RE4_focus_style
 		
 		
-		prerequisite = { focus = RE4_create_of_defense_committee }
+		prerequisite = { 
+			focus = RE4_create_of_defense_committee 
+			#focus = RE4_Defense_Commission_Investment
+		}
 
 		relative_position_id = RE4_create_of_defense_committee
+
+		joint_trigger = {
+			RED_is_a_redwinter_viable_nation = yes 
+		}
 		x = 0
 		y = 3
 
@@ -2369,20 +2378,135 @@
 				}
 				RE4 = { has_war_with = FIN }
 			}
-		} 
-
-		bypass = {
-			original_tag = RE4
-			NOT = {
-				OR = {
-					is_in_faction_with = RED
-					is_subject_of = RED
-				}
-			}
 		}
 
 		ai_will_do = {
-			base = 999
+			base = 0
+			modifier = {
+				add = 999 
+				original_tag = RE4
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		completion_reward_joint_originator = {
+
+			IF = {
+				limit = {
+					original_tag = RED
+				}
+				country_event = { id = redpuppet.14 days = 04 }
+			}
+			
+			IF = {
+				limit = {
+					original_tag = RE4
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RE4_finland_colonial_dynamic_modifier
+						}		
+					}
+				}
+				add_dynamic_modifier = { 
+					modifier = RE4_finland_colonial_dynamic_modifier
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = RE4_warning_this_idea_can_be_removed_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					original_tag = RE4
+				}
+				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+			}
+
+		}
+
+		completion_reward_joint_member = {
+
+			IF = {
+				limit = {
+					original_tag = RED
+				}
+				country_event = { id = redpuppet.14 days = 04 }
+			}
+			
+			IF = {
+				limit = {
+					original_tag = RE4
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RE4_finland_colonial_dynamic_modifier
+						}		
+					}
+				}
+				add_dynamic_modifier = { 
+					modifier = RE4_finland_colonial_dynamic_modifier
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = RE4_warning_this_idea_can_be_removed_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					original_tag = RE4
+				}
+				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+			}
+			
+		}
+	}
+
+	shared_focus = {
+		id = RE4_Defense_Commission_Investment
+		dynamic = yes 
+		icon = GFX_focus_REDWINTER_investment
+		cost = 5
+
+		text_icon = REDWINTER_RED_focus_style
+		
+		prerequisite = {  }
+
+		relative_position_id = RE4_create_of_defense_committee
+		x = -6
+		y = 2
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RED
+			has_subject = RE4
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4
+				}
+			}
+		} 
+
+		bypass = {
+
+		}
+
+		ai_will_do = {
+			base = 0
 		}
 
 		available_if_capitulated = no
@@ -2391,47 +2515,114 @@
 			
 			IF = {
 				limit = { original_tag = RE4 }
-				set_cosmetic_tag = RE4_finlandia_military_administration
-				set_capital = {
-					state = 111
-					remember_old_capital = no
-				}
-				swap_ideas = {
-					remove_idea = RED_military_government_idea_exit
-					add_idea = RED_military_government_idea_1
-				}
-				IF = {
-					limit = { has_completed_focus = RE4_support_for_the_finland_communist_party }
-					FIN = {
-						every_character = {
-							limit = {
-								OR = {
-									is_character = RE4_kaisu_mirjami_rydberg
-									is_character = RE4_sandra_lehtinen
-									is_character = RE4_karl_harald_wiik
-								}
-							}
-							set_nationality = RE4
+				effect_tooltip = {
+					925 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
 						}
 					}
+					country_event = {
+						id = redpuppet.13 days = 04
+					}
 				}
+
 			}
 			ELSE_IF = {
 				limit = { original_tag = RED }
-				effect_tooltip = {
-					RE4 = { 
-						set_cosmetic_tag = RE4_finlandia_military_administration 
-						set_capital = {
-							state = 111
-							remember_old_capital = no
-						}
+				925 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
 					}
+				}
+				RE4 = { 
+					country_event = { id = redpuppet.13 days = 04 }
 				}
 			}
 
 			hidden_effect = {
-				RED = { unlock_national_focus = RE4_Finland_Military_Administration }
+				RE4 = { unlock_national_focus = RE4_Defense_Commission_Investment }
 			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RE4_Supervision_and_Management_Committee
+		dynamic = yes 
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		cost = 5
+
+		text_icon = REDWINTER_RED_focus_style
+		
+		prerequisite = { 
+			focus = RE4_Defense_Commission_Investment 
+			focus = RE4_Finland_Military_Administration
+		}
+
+		relative_position_id = RE4_Defense_Commission_Investment
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			original_tag = RED
+			has_subject = RE4
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4
+				}
+			}
+			RE4 = { has_war = no }
+		} 
+
+		bypass = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			IF = {
+				limit = { 
+					RE4 ={
+						NOT = { 
+							has_dynamic_modifier = { modifier = RE4_finland_colonial_dynamic_modifier }
+						}
+					}
+				}
+				RE4 = { add_dynamic_modifier = { modifier = RE4_finland_colonial_dynamic_modifier } }
+				custom_effect_tooltip = tooltip_white_line
+			}
+			custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
+			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_stability_factor = -0.05 tooltip = stability_factor_tt }
+			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
+
+			IF = {
+
+			}
+
+		hidden_effect = {
+			RE4 = { unlock_national_focus = RE4_Supervision_and_Management_Committee }
+			force_update_dynamic_modifier = yes
+		}
 
 		}
 	}

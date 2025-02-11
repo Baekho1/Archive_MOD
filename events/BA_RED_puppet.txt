@@ -341,3 +341,50 @@ country_event = { # 겨울전쟁 사건 - 방위위원회 패배
 		add_war_support = -0.45
 	}
 }
+country_event = { # 후원 감사링~
+	id = redpuppet.13
+	title = redpuppet.13.t
+	desc = redpuppet.13.desc
+	picture = GFX_report_event_generic_construction_site
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.13.a
+		ai_chance = { base = 100 }
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = small_increase
+		}		
+	}
+}
+country_event = { # 자치위원회 설립
+	id = redpuppet.14
+	title = redpuppet.14.t
+	desc = redpuppet.14.desc
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.14.a
+		ai_chance = { base = 100 }
+		
+		add_political_power = 75
+	}
+}
+country_event = { # 관리감독위원회 설립
+	id = redpuppet.15
+	title = redpuppet.15.t
+	desc = redpuppet.15.desc
+	picture = GFX_report_event_FIN_svinhufvud_speech
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = redpuppet.15.a
+		ai_chance = { base = 100 }
+		
+	}
+}

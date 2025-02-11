@@ -5,5 +5,4 @@ RE4_Northern_War = {
 	allowed = {
 		original_tag = RE4
 	}
-	visible_when_empty = yes
 }

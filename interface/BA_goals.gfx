@@ -2455,6 +2455,10 @@ spriteTypes = {
 		name = "GFX_focus_REDWINTER_finland"
 		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_finland.tga"
 	}
+	spriteType = {
+		name = "GFX_focus_REDWINTER_investment"
+		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_investment.tga"
+	}
 
 	#백귀야행
 	spriteType = {
