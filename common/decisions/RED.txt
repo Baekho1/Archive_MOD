@@ -59,6 +59,45 @@ RED_seek_allies_dec_cat = {
 }
 
 RED_invite_trotskists_dec_cat = { #제4인터내셔널
+	RED_wc_collective_farming = { #wc = war communism / 협동농장
+		icon = GFX_decision_POL_looming_peasants_strike
+		visible = {
+			has_completed_focus = RED_war_communism
+		}
+		cost = 30
+		days_remove = 120
+		available = {
+			any_owned_state = {
+				is_core_of = RED
+				OR = {
+					has_state_category = rural
+					has_state_category = town
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = RED_collective_farming_modifier
+					}
+				}
+			}
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = RED
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = RED_collective_farming_modifier
+				}
+			}
+		}
+	}
 	RED_make_LD = { #재건평의회 설립
 		icon = GFX_decision_generic_construction
 		visible = {
@@ -1863,7 +1902,7 @@ RED_military_government_administration = { #군정청
 			RE1 = {
 				if = {
 					limit = {
-						has_country_flag = RED_cherino_buntang_country_name
+						RED={has_country_flag = RED_cherino_buntang_country_name}
 					}
 					set_cosmetic_tag = RE1_autonomous_cherino
 				}
@@ -1909,7 +1948,7 @@ RED_military_government_administration = { #군정청
 			RE2 = {
 				if = {
 					limit = {
-						has_country_flag = RED_cherino_buntang_country_name
+						RED={has_country_flag = RED_cherino_buntang_country_name}
 					}
 					set_cosmetic_tag = RE2_autonomous_cherino
 				}
@@ -1955,7 +1994,7 @@ RED_military_government_administration = { #군정청
 			RE3 = {
 				if = {
 					limit = {
-						has_country_flag = RED_cherino_buntang_country_name
+						RED={has_country_flag = RED_cherino_buntang_country_name}
 					}
 					set_cosmetic_tag = RE3_autonomous_cherino
 				}
@@ -2001,7 +2040,7 @@ RED_military_government_administration = { #군정청
 			RE4 = {
 				if = {
 					limit = {
-						has_country_flag = RED_cherino_buntang_country_name
+						RED={has_country_flag = RED_cherino_buntang_country_name}
 					}
 					set_cosmetic_tag = RE4_autonomous_cherino
 				}

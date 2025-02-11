@@ -5427,11 +5427,15 @@ focus_tree = {
 		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
 		x = -1
 		y = 1
+		available = {
+			has_war = yes
+		}
 		relative_position_id = RED_liberation_of_the_kibotus_states
 		
 		cost = 4
 
 		completion_reward = {
+			upgrade_economy_law = yes
 		}
 	}
 	focus = { #프롤레타리아 무장

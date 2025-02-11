@@ -1521,7 +1521,11 @@
 #지도자
  politics_RED_tomoe_desc: "용역부장"
  
+ #주 모디파이어
+ RED_collective_farming_modifier: "협동 농장"
+
 #디시전
+ RED_wc_collective_farming: "전시 공산주의: 협동농장으로 재편"
  RED_make_LD: "재건평의회 설립"
  RED_attack_kivotos: "[FROM.getname]에로 혁명 전파"
  RED_in_exile_committee_flag: "망명위원회에서 활동 중"
