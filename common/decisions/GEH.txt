@@ -460,5 +460,97 @@ GEH_external_activities = {
 		}
 	}
 }
+GEH_basking_in_the_brilliance_of_their_serenade = {
 
+	GEH_basking_in_the_brilliance_of_their_serenade_mission = { 
+		priority = 99
+
+		icon = GFX_decision_generic_scorched_earth
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
+				always = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = var:GEH_basking_in_the_brilliance_of_their_serenade_mission?240
+
+		timeout_effect = {
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_tt
+			if = {
+				limit = { check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 5 } }
+				country_event = GEH_BTBOTS.7
+				clr_country_flag = GEH_start_focus_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_1_flag } }
+				country_event = GEH_BTBOTS.1
+				set_country_flag = GEH_BTBOTS_1_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_2_flag } }
+				country_event = GEH_BTBOTS.2
+				set_country_flag = GEH_BTBOTS_2_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_3_flag } }
+				country_event = GEH_BTBOTS.3
+				set_country_flag = GEH_BTBOTS_3_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_4_flag } }
+				country_event = GEH_BTBOTS.4
+				set_country_flag = GEH_BTBOTS_4_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_5_flag } }
+				country_event = GEH_BTBOTS.5
+				set_country_flag = GEH_BTBOTS_5_flag
+			}
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
+			hidden_effect = {
+				activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+			}
+		}
+	}
+    GEH_basking_in_the_brilliance_of_their_serenade_decision = {
+		icon = GFX_decision_Prefect_team
+		allowed = {
+			original_tag = GEH
+		}
+        fire_only_once = yes
+
+		visible = {
+		}
+        available = {
+        }
+		
+		cost = 25
+
+		complete_effect = {
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_decision_tt
+			country_event = GEH_BTBOTS.6
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = -60 }
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val > 4 }
+				add = 400
+			}
+		}
+    }
+}
 

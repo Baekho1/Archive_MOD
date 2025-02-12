@@ -43,6 +43,10 @@ focus_tree = {
 				remove = b_tjsehqnwkd_start
 				add = b_tjsehqnwkd
 			}
+			
+			set_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 240 }
+			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+			set_country_flag = GEH_start_focus_flag
 		}
 	}
 	focus = {
@@ -78,6 +82,7 @@ focus_tree = {
             }
             custom_effect_tooltip = tooltip_effect_upon_focus_completion
             country_event=hina.5
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -164,7 +169,40 @@ focus_tree = {
 		x = 3
 		y = 0
 		completion_reward = {
-
+			if = {
+				limit = { has_country_flag = GEH_administrative_personnel_shortage_flag }
+				set_country_flag = GEH_additional_leadership_personnel_employment_flag
+				effect_tooltip = { unlock_national_focus = GEH_additional_leadership_personnel_employment }
+			}
+			if = {
+				limit = { has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag }
+				set_country_flag = GEH_establishment_of_german_autonomous_government_flag
+				effect_tooltip = { unlock_national_focus = GEH_establishment_of_german_autonomous_government }
+			}
+			if = { #히나독재
+				limit = { has_country_flag = hina_assembly_12_flag }
+				add_stability = 0.05
+				set_country_flag = hina_assembly_h_flag
+				effect_tooltip = { unlock_national_focus = GEH_hina_route_focus }
+			}
+			else_if = { #아코
+				limit = { check_variable = { GEH_hina_a_var > 3 } }
+				add_stability = -0.03
+				set_country_flag = hina_assembly_a_flag
+				effect_tooltip = { unlock_national_focus = GEH_ako_route_focus }
+			}
+			else_if = { #이오리
+				limit = { check_variable = { GEH_hina_c_var > 3 } }
+				add_stability = -0.05
+				set_country_flag = hina_assembly_c_flag
+				effect_tooltip = { unlock_national_focus = GEH_iori_route_focus }
+			}
+			else = { #노멀
+				add_stability = 0.03
+				set_country_flag = hina_assembly_normal_flag
+				effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -828,7 +866,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 			}
 		}
 		offset = {
@@ -848,7 +886,7 @@ focus_tree = {
 		}
 		available = {
 			hidden_trigger = {
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 			}
 		}
 		completion_reward = {
@@ -1050,6 +1088,8 @@ focus_tree = {
 				remove = b_tjsehqnwkd2
 				add = b_tjsehqnwkd3
 			}
+			custom_effect_tooltip = GEH_gehenna_leader_tt
+			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
         }
         ai_will_do = {
             factor = 1
@@ -1724,7 +1764,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = GEH_administrative_personnel_shortage_flag
+				has_country_flag = GEH_additional_leadership_personnel_employment_flag
 			}
 		}
 		offset = {
@@ -1738,6 +1778,9 @@ focus_tree = {
             focus = GEH_second_congress_focus
         }
         available = {
+			hidden_trigger = {
+				has_country_flag = GEH_additional_leadership_personnel_employment_flag
+			}
         }
 		bypass = {
 			NOT = { has_idea = GEH_administrative_personnel_shortage }
@@ -1759,7 +1802,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag
+				has_country_flag = GEH_establishment_of_german_autonomous_government_flag
 			}
 		}
         prerequisite = {
@@ -1807,7 +1850,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 				has_country_flag = hina_assembly_a_flag
 				has_country_flag = hina_assembly_c_flag
 				has_country_flag = hina_assembly_normal_flag
@@ -1912,12 +1955,9 @@ focus_tree = {
 		cancelable = no
 		ai_will_do = { base = 1000 }
         available = {
-            controls_state = 52
-            controls_state = 55
-            controls_state = 59
-			has_dynamic_modifier = { modifier = GEH_HSDD_idea }
-			has_dynamic_modifier = { modifier = GEH_Chinatsu_idea }
-			has_dynamic_modifier = { modifier = GEH_Disciplinary_Committee_idea }
+			has_country_flag = GEH_unified_gehenna_flag
+			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_second_congress_focus
         }
 		offset = {
 			trigger = {

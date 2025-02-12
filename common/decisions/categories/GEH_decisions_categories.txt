@@ -37,3 +37,29 @@ GEH_external_activities = {
         always = yes
     }
 }
+GEH_basking_in_the_brilliance_of_their_serenade = {
+    icon = GFX_decision_category_spr_political_assassination
+    picture = GFX_decisions_GEH_basking_in_the_brilliance_of_their_serenade
+    priority = 89
+    allowed = {
+        tag = GEH
+    }
+    visible = {
+        has_country_flag = GEH_start_focus_flag
+        NOT = { has_completed_focus = GEH_gehenna_leader }
+    }
+    visible_when_empty = yes
+}
+GEH_basking_in_the_brilliance_of_their_serenade_FUCK = {
+    icon = GFX_decision_category_spr_political_assassination
+    picture = GFX_decisions_GEH_basking_in_the_brilliance_of_their_serenade
+    priority = 89
+    allowed = {
+        tag = GEH
+    }
+    visible = {
+        has_country_flag = GEH_start_focus_flag
+        has_completed_focus = GEH_gehenna_leader
+    }
+    visible_when_empty = yes
+}

@@ -1,0 +1,90 @@
+defined_text = {
+	name = GEH_basking_in_the_brilliance_of_their_serenade_loc_1_tt
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 0 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 2 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 3 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 4 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 5 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_5
+	}
+}
+defined_text = {
+	name = GEH_basking_in_the_brilliance_of_their_serenade_loc_tt_desc
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 0 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_0_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_1_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 2 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_2_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 3 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_3_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 4 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_4_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 5 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_loc_5_desc
+	}
+}
+defined_text = {
+	name = GEH_basking_in_the_brilliance_of_their_serenade_text_tt
+	text = {
+		trigger = {
+			check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val < 6 }
+		}
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_text_0
+	}
+	text = {
+		localization_key = GEH_basking_in_the_brilliance_of_their_serenade_text_1
+	}
+}

@@ -7,6 +7,8 @@ add_namespace = hina_assembly
 add_namespace = debug_hina
 #히든 이벤트
 add_namespace = GEH_hidden
+#히나 정신상태 이벤트
+add_namespace = GEH_BTBOTS
 country_event = { # 선도부 소집
 	id = NextPhase.0
 	title = NextPhase.0.t
@@ -229,26 +231,18 @@ country_event = { # 1차 총회 폐막
 		if = { #히나독재
 			limit = { has_country_flag = hina_assembly_12_flag }
 			add_stability = 0.05
-			effect_tooltip = { unlock_national_focus = GEH_hina_route_focus }
 		}
 		else_if = { #아코
 			limit = { check_variable = { GEH_hina_a_var > 3 } }
 			add_stability = -0.03
-			set_country_flag = hina_assembly_a_flag
-			effect_tooltip = { unlock_national_focus = GEH_ako_route_focus }
 		}
 		else_if = { #이오리
 			limit = { check_variable = { GEH_hina_c_var > 3 } }
 			add_stability = -0.05
-			set_country_flag = hina_assembly_c_flag
-			effect_tooltip = { unlock_national_focus = GEH_iori_route_focus }
 		}
 		else = { #노멀
 			add_stability = 0.03
-			set_country_flag = hina_assembly_normal_flag
-			effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
 		}
-		mark_focus_tree_layout_dirty = yes
 	}
 }
 country_event = { # 돌아온 안정
@@ -728,4 +722,104 @@ country_event = {
 		}
 	}
 }
+country_event = { #
+	id = GEH_BTBOTS.1
+	title = GEH_BTBOTS.1.t
+	desc = GEH_BTBOTS.1.desc
+	picture = GFX_event_GEH_hina_eventpicture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.1.a
+		add_stability = -0.005
+	}
+}
+
+country_event = { #
+	id = GEH_BTBOTS.2
+	title = GEH_BTBOTS.2.t
+	desc = GEH_BTBOTS.2.desc
+	picture = GFX_event_GEH_hina_event_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.2.a
+		add_stability = -0.01
+	}
+}
+
+
+country_event = { #
+	id = GEH_BTBOTS.3
+	title = GEH_BTBOTS.3.t
+	desc = GEH_BTBOTS.3.desc
+	picture = GFX_event_GEH_hina_event_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.3.a
+		add_stability = -0.01
+	}
+}
+
+country_event = { #
+	id = GEH_BTBOTS.4
+	title = GEH_BTBOTS.4.t
+	desc = GEH_BTBOTS.4.desc
+	picture = GFX_event_GEH_hina_event_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.4.a
+		add_stability = -0.05
+	}
+}
+
+country_event = { #
+	id = GEH_BTBOTS.5
+	title = GEH_BTBOTS.5.t
+	desc = GEH_BTBOTS.5.desc
+	picture = GFX_event_GEH_event_40
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.5.a
+		add_stability = -0.05
+	}
+}
+
+country_event = { #
+	id = GEH_BTBOTS.6
+	title = GEH_BTBOTS.6.t
+	desc = GEH_BTBOTS.6.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.6.a
+		add_stability = 0.01
+	}
+}
+
+country_event = { #
+	id = GEH_BTBOTS.7
+	title = GEH_BTBOTS.7.t
+	desc = GEH_BTBOTS.7.desc
+	picture = GFX_event_GEH_event_40
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.7.a
+		add_stability = -0.10
+	}
+}
+
+
 
