@@ -1,0 +1,126 @@
+PAN_BOP_category = {
+    PAN_PFP_Propaganda = { #선전물 배포
+        icon = GFX_decision_NOR_deploy_prep_comm_1
+        visible = {
+            has_completed_focus = PAN_with_Popular_Front
+        }
+        days_remove = 10
+        cost = 15
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = -0.03
+            }
+        }
+    }
+    PAN_PFP_Speech = { #대인민 연설
+        icon = GFX_decision_NOR_deploy_prep_comm_2
+        visible = {
+            has_completed_focus = PAN_with_Popular_Front
+        }
+        days_remove = 15
+        cost = 20
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = -0.05
+            }
+            add_stability = 0.01
+        }
+    }
+    PAN_PFP_support_dispute = { #노동쟁의 지원
+        icon = GFX_decision_NOR_deploy_prep_comm_3
+        visible = {
+            has_completed_focus = PAN_with_Popular_Front
+        }
+        days_remove = 25
+        cost = 30
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = -0.08
+            }
+
+        }
+    }
+    PAN_PFP_Alliances_PP = { #인민당과의 연립
+        icon = GFX_decision_NOR_deploy_prep_trot_3
+        visible = {
+            has_completed_focus = PAN_with_Popular_Front
+        }
+        days_remove = 30
+        cost = 80
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = -0.20
+            }
+            custom_effect_tooltip = PFP_Alliances_PP_tt
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+        }
+    }
+    PAN_NCF_National_Inspire = { #민족성 고취
+        icon = GFX_decision_NOR_deploy_prep_fasc_1
+        visible = {
+            has_completed_focus = PAN_with_National_Coalition
+        }
+        days_remove = 10
+        cost = 15
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance 
+                value = 0.03
+            }
+        }
+    }
+    PAN_NCF_anti_america_propaganda = { #반미 선전
+        icon = GFX_decision_NOR_deploy_prep_fasc_2
+        visible = {
+            has_completed_focus = PAN_with_National_Coalition
+        }
+        days_remove = 15
+        cost = 20
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = 0.05
+            }
+        }
+    }
+    PAN_NCF_propaganda_with_capitalist = { #자본가와의 제휴
+        icon = GFX_decision_NOR_deploy_prep_fasc_3
+        visible = {
+            has_completed_focus = PAN_with_National_Coalition
+        }
+        days_remove = 25
+        cost = 30
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = 0.08
+            }
+        }
+    }
+    PAN_NCF_alliance_AC = { #공동 행동과의 결탁
+        icon = GFX_decision_ger_reichskommissariats
+        visible = {
+            has_completed_focus = PAN_with_National_Coalition
+        }
+        days_remove = 30
+        cost = 80
+        complete_effect = {
+            add_power_balance_value = {
+                id = PAN_power_balance
+                value = -0.20
+            }
+            custom_effect_tooltip = PFP_Alliances_AC_tt
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+        }
+    }
+}

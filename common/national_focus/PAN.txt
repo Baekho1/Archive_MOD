@@ -33,6 +33,10 @@ focus_tree = {
 
         completion_reward = { #차후에 효과 추가 예정
             add_political_power = 50
+            set_power_balance = {
+                id = PAN_power_balance
+                set_value = 0
+            }
         }
     }
     
