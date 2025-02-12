@@ -419,7 +419,7 @@ focus_tree = {
 				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = 0.05
+					value = 0.1
 				}
 			}
 		}
@@ -456,12 +456,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 			else = {
 				swap_ideas = {
@@ -571,12 +565,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 			else = {
 				swap_ideas = {
@@ -809,19 +797,27 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 50
+			num_of_civilian_factories > 40
 		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			add_timed_idea = {
 				idea = RED_industrial_futurization_idea
-				days = 140
+				days = 240
 			}
 		}
 	}
@@ -875,26 +871,109 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #경제기적
+		id = RED_economic_miracle
+
+		icon = GFX_focus_GER_wirtschaftswunder
+		prerequisite = { focus = RED_future_production_line focus = RED_industrial_futurization}
+		x = 2
+		y = 1
+		relative_position_id = RED_industrial_futurization
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			num_of_controlled_factories > 60
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.5
+				uses = 2
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
 
 	focus = { # 복구된 경제
 		id = RED_restored_economy
 
 		icon = GFX_focus_generic_industry_3
-		prerequisite = { focus = RED_industrial_futurization }
-		prerequisite = { focus = RED_future_production_line }
-		x = 2
-		y = 1
-		relative_position_id = RED_industrial_futurization
+		prerequisite = { focus = RED_economy_focus_24 focus = RED_new_economy_focus_15 focus = RED_new_economy_focus_16 focus = RED_economic_miracle }
+		x = 0
+		y = 8
+		relative_position_id = RED_land_research
 		cost = 4
 
 		cancel_if_invalid = yes
-
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 80
+			num_of_factories > 120
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+			x = -6
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_industrial_planning
+			}
+			x = -4
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+			x = 4
 		}
 
 		completion_reward = {
@@ -1740,7 +1819,7 @@ focus_tree = {
 				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = -0.05
+					value = -0.1
 				}
 			}
 			custom_effect_tooltip = RED_new_economy_focus_0_tt
@@ -1806,12 +1885,6 @@ focus_tree = {
 					add_idea = RED_economy_recover_idea_1
 				}
 			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
-			}
 			add_ideas = RED_red_horse_idea
 			unlock_decision_category_tooltip = RED_red_horse_category
 			hidden_effect = {
@@ -1837,6 +1910,14 @@ focus_tree = {
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_industrial_planning
+			}
+			NOT = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = RED_first_aep_tt
@@ -1870,12 +1951,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 			add_popularity = {
 				ideology = democratic
@@ -2219,12 +2294,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 		}
 	}
@@ -2602,39 +2671,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = RED_doomed_economy_idea_1
-				}
-				swap_ideas = {
-					remove_idea = RED_doomed_economy_idea_1
-					add_idea = RED_doomed_economy_idea_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_doomed_economy_idea_2
-				}
-				swap_ideas = {
-					remove_idea = RED_doomed_economy_idea_2
-					add_idea = RED_economy_recover_idea
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea
-				}
-				swap_ideas = {
-					remove_idea = RED_economy_recover_idea
-					add_idea = RED_economy_recover_idea_1
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
-			}
 			random_owned_controlled_state = {
 				limit = {
 					OR={has_state_category = rural
@@ -3841,7 +3877,7 @@ focus_tree = {
 				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = -0.05
+					value = -0.1
 				}
 			}
 		}
@@ -3887,7 +3923,7 @@ focus_tree = {
 				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = 0.05
+					value = 0.1
 				}
 			}
 		}
@@ -3917,6 +3953,12 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.6
+					days = 2
+				}
+			}
 			if = {
 				limit = {
 					RE1 = {
@@ -4017,6 +4059,12 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.9
+					days = 2
+				}
+			}
 			add_political_power = -60
 			every_owned_state = {
 				limit = {
@@ -4223,7 +4271,7 @@ focus_tree = {
 				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = 0.05
+					value = 0.1
 				}
 			}
 		}
@@ -4268,7 +4316,7 @@ focus_tree = {
 				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = -0.05
+					value = -0.1
 				}
 			}
 		}
@@ -4307,7 +4355,7 @@ focus_tree = {
 				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = -0.05
+					value = -0.1
 				}
 			}
 		}
@@ -4412,7 +4460,7 @@ focus_tree = {
 				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = 0.05
+					value = 0.1
 				}
 			}
 		}
@@ -5012,6 +5060,9 @@ focus_tree = {
 		
 		cost = 4
 		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
 			custom_trigger_tooltip = {
 				tooltip = RED_all_power_to_redwinter_tt
 				check_variable = {
@@ -5019,9 +5070,6 @@ focus_tree = {
 					value = 5
 					compare = greater_than_or_equals
 				}
-			}
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
 			}
 			NOT = {
 				has_global_flag = flag_trotsky_dead
@@ -5036,8 +5084,21 @@ focus_tree = {
 			add_to_variable = {
 				RED_the_politburo_surrender_limit = 0.05
 			}
-			custom_effect_tooltip = RED_advance_security_tt
-			set_country_flag = RED_snake_game_end
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = flag_trotsky_dead
+					}
+				}
+				custom_effect_tooltip = RED_advance_security_tt
+				set_country_flag = RED_snake_game_end
+				hidden_effect = {
+					news_event = {
+						id = BA_news.125
+						days = 5
+					}
+				}
+			}
 		}
 	}
 	focus = { #트로츠키의 세계혁명
@@ -5418,6 +5479,7 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
+			custom_effect_tooltip = RED_liberation_of_the_kibotus_states_tt
 			unlock_decision_tooltip = RED_attack_kivotos
 		}
 	}
@@ -5435,7 +5497,11 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
-			upgrade_economy_law = yes
+			add_timed_idea = {
+				idea = RED_war_communism
+				months = 6
+			}
+			unlock_decision_tooltip = RED_wc_collective_farming
 		}
 	}
 	focus = { #프롤레타리아 무장
@@ -5462,6 +5528,25 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
+			custom_effect_tooltip = RED_people_s_liberation_war_tt
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_ally_with = RED
+					}
+					is_major = no
+					any_other_country = {
+						is_ally_with = RED
+						is_neighbor_of = PREV
+					}
+				}
+				RED = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
 		}
 	}
 	focus = { #영구혁명
@@ -9576,7 +9661,7 @@ focus_tree = {
 				custom_effect_tooltip = tro_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = 0.05
+					value = 0.1
 				}
 			}
 		}
@@ -9615,7 +9700,7 @@ focus_tree = {
 				custom_effect_tooltip = cherino_support_tt
 				add_power_balance_value = {
 					id = RED_power_balance
-					value = -0.05
+					value = -0.1
 				}
 			}
 		}

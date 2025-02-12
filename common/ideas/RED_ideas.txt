@@ -7,6 +7,18 @@ ideas = {
 		}
 	}
     country = {
+		RED_war_communism = {
+			picture = SPR_class_war
+			modifier = {
+				army_core_attack_factor = 0.03
+				army_attack_speed_factor = 0.03
+				army_attack_factor = 0.03
+				custom_modifier_tooltip = RED_world_revolution_1_tt
+			}
+			cancel = {
+				has_war = no
+			}
+		}
 		RED_nation_united_LD = { #민족 자결 원칙
 			picture = GER_iron_front
 			modifier = {
@@ -32,7 +44,7 @@ ideas = {
 		RED_liberation_district = { #해방지구
 			picture = SOV_soviet_hegemony
 			modifier = {
-				compliance_growth = 0.5
+				compliance_growth = 1.5
 				resistance_growth = -0.5
 			}
 		}

@@ -11,7 +11,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=stalinism
+			ideology = trotskyism
 			traits={ b_tjrlwkd }
 			expire="1965.1.1.1"
 		}
@@ -763,6 +763,7 @@ characters = {
 				large = "GFX_portrait_SOV_ivan_smirnov"
 			}
 			army = {
+				large = "GFX_portrait_SOV_ivan_smirnov"
 				small = "GFX_idea_SOV_ivan_smirnov"
 			}
 		}
@@ -812,6 +813,7 @@ characters = {
 		name = SOV_ivar_smilga
 		portraits = {
 			army = {
+				large = "GFX_portrait_SOV_ivar_smilga"
 				small = "GFX_idea_SOV_ivar_smilga"
 			}
 		}
