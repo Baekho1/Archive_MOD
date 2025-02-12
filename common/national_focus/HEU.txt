@@ -496,6 +496,19 @@ focus_tree = {
 					}
 				}
 
+				set_portraits = {
+					character = HEU_ancmzl
+					army = { large ="gfx/leaders/HEU/HEU_mutsuki_asagi_com_black.dds" }
+				}
+				set_portraits = {
+					character = HEU_gkfnzk
+					army = { large ="gfx/leaders/HEU/HEU_haruka_igusa_com.dds" }
+				}
+				set_portraits = {
+					character = HEU_zkdyzh
+					army = { large ="gfx/leaders/HEU/HEU_kayoko_onikata_com.dds" }
+				}
+
 				country_event = { id = HEU_event.164 }
 
 				set_party_name = {
