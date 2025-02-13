@@ -404,6 +404,40 @@ country_event = { #노동조합 문제
 	}
 	
 }
+
+country_event = { #협력자 문제
+	id = COU_event.6
+	title = COU_event.6.t
+	desc = COU_event.6.desc
+	picture = GFX_report_event_fascist_militia
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.6.b
+		add_political_power = 25
+		add_stability = -0.05
+	}
+	option = { 
+		name = COU_event.6.a
+		remove_ideas = COU_dutch_collaboraters
+		set_country_flag = UNLOCK_KAYA_CONTENTS
+		custom_effect_tooltip = COU_tooltip_kaya_get_move
+		hidden_effect = { #collapse focus tree
+			 load_focus_tree = {
+				tree = COU_focus_tree
+				keep_completed = yes
+			 }
+			 mark_focus_tree_layout_dirty = yes
+			 complete_national_focus = COU_focus_in_the_darkness
+	    }
+	}
+	
+}
+
+
+##KIVOTOSALLIANCE
 country_event = { #원정군 파병
 	id = COU_kivotos_alliance.1
 	title = COU_kivotos_alliance.1.t

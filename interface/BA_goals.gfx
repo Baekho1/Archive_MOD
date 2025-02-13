@@ -1979,6 +1979,29 @@ spriteTypes = {
 		name = "GFX_COU_kaya_gscp"
 		textureFile = "gfx/interface/goals/COU/COU_KAYA_GSCP.tga"
 	}
+	
+	spriteType = {
+		name = "GFX_COU_unarrest_mussert"
+		textureFile = "gfx/interface/goals/COU/COU_unarrest_mussert.png"
+	}
+	spriteType = {
+		name = "GFX_COU_in_the_darkness"
+		textureFile = "gfx/interface/goals/COU/COU_in_the_darkness.png"
+	}
+	spriteType = {
+		name = "GFX_COU_remove_the_line"
+		textureFile = "gfx/interface/goals/COU/COU_remove_the_line.png"
+	}
+	spriteType = {
+		name = "GFX_COU_treaty_of_amsterdam"
+		textureFile = "gfx/interface/goals/COU/COU_treaty_of_amsterdam.png"
+	}
+	spriteType = {
+		name = "GFX_COU_kaya_dictatership_on"
+		textureFile = "gfx/interface/goals/COU/COU_kaya_dictatership_on.png"
+	}
+	
+	
 	####카이저라이히 돚거
 	SpriteType = { 
 		name = "GFX_goal_state_economy"
