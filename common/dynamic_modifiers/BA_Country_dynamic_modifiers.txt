@@ -937,6 +937,7 @@ RED_RedWinterIntelligenceService_dynamic_modifier = { #정보국
 	operative_slot = RED_intel_operative_slot
 	intel_network_gain = RED_intel_intel_network_gain
 	compliance_gain = RED_intel_compliance_gain
+	send_volunteer_size = RED_intel_send_volunteer_size
 }
 RED_ThreatOfCovered5thLines_dynamic_modifier = { #잠복된 제5열의 위협
 	enable = {

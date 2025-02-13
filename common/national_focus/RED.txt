@@ -2146,29 +2146,41 @@ focus_tree = {
 				limit = {
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -3591,7 +3603,7 @@ focus_tree = {
 	focus = { #정보국 신설
 		id = RED_new_inteligence_agency
 		icon = GFX_focus_generic_secret_service_agency
-		cost = 4
+		cost = 2
 		x = 4
 		y = 1
 		relative_position_id = RED_the_fourth_international
@@ -3631,7 +3643,7 @@ focus_tree = {
 	focus = { #잠입 전문가
 		id = RED_professioner_undercover
 		icon = GFX_focus_SWI_embrace_rote_drei
-		cost = 4
+		cost = 2
 		x = 1
 		y = 1
 		relative_position_id = RED_new_inteligence_agency
@@ -3654,12 +3666,52 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #국제해방전선
-		id = RED_international_frontline
-		icon = GFX_focus_SOV_international_union_of_soviet_republics
-		prerequisite = { focus = RED_new_inteligence_agency }
+	focus = { #국제 소비에트 의용군
+		id = RED_communist_instigation
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		cost = 2
 		x = 0
 		y = 2
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		bypass = {
+			date > 1937.1.1
+			NOT = {
+				has_global_flag = spanish_civil_war
+			}
+		}
+		prerequisite = {
+			focus = RED_new_inteligence_agency
+		}
+		relative_position_id = RED_new_inteligence_agency
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPD
+				value = 100
+			}
+			custom_effect_tooltip = RED_advance_intel_tt
+			add_to_variable = {
+				var = RED_intel_send_volunteer_size
+				value = 3
+				tooltip = send_volunteer_size_tt
+			}
+		}
+	}
+	focus = { #혁명수비대
+		id = RED_international_frontline
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		prerequisite = { focus = RED_communist_instigation  }
+		prerequisite = { focus = RED_the_builder_of_the_winter_army}
+		prerequisite = { focus = RED_seek_allies}
+		x = 0
+		y = 4
 		relative_position_id = RED_new_inteligence_agency 
 		
 		cost = 4
@@ -3689,10 +3741,10 @@ focus_tree = {
 		}
 	}
 
-	focus = { #비밀 경찰
+	focus = { #쁘락치
 		id = RED_fraktiya
 		icon = GFX_focus_NOR_continue_nygaardsvold_government
-		cost = 4
+		cost = 2
 		prerequisite = {
 			focus = RED_new_inteligence_agency
 		}
@@ -3756,6 +3808,39 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
+			if = {
+				limit = {
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE1 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE2 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE2 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
 			RED = {
 				custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
 				hidden_effect = {
@@ -3904,6 +3989,12 @@ focus_tree = {
 
 		ai_will_do = { base = 15 }
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.6
+					days = 2
+				}
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = -0.10
@@ -3953,12 +4044,6 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			hidden_effect = {
-				country_event = {
-					id = RED_tro_event.6
-					days = 2
-				}
-			}
 			if = {
 				limit = {
 					RE1 = {
@@ -4706,7 +4791,7 @@ focus_tree = {
 	focus = { #트로츠키주의자 초청
 		id = RED_invite_trotskists
 		icon = GFX_goal_tripartite_pact
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_the_fourth_international
 		x = 1
@@ -4740,10 +4825,10 @@ focus_tree = {
 			unlock_decision_tooltip = RED_unite_exiles
 		}
 	}
-	focus = { #연속 혁명론
+	focus = { #연속혁명론
 		id = RED_socialism_over_the_world
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_redwinter_office
 		x = 1
@@ -4763,13 +4848,9 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 		
 		completion_reward = {
-			add_to_variable = { RED_the_politburo_defensive_war_stability_factor = 0.25 }
-			custom_effect_tooltip = RED_the_politburo_defensive_war_stability_factor_tt
-
 			add_political_power = 25
 
 			every_country = {
-				add_political_power = 50
 				limit = {
 					NOT = { 
                         is_in_faction_with = ROOT
@@ -5098,6 +5179,94 @@ focus_tree = {
 						days = 5
 					}
 				}
+				custom_effect_tooltip = RED_all_power_to_redwinter_tt_2
+				if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 6
+							compare = equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 7
+							compare = equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 8
+							compare = greater_than_or_equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
 			}
 		}
 	}
@@ -5160,6 +5329,24 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_0
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_3
+				}
 			}
 		}
 		completion_reward = {
@@ -5268,6 +5455,11 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				RE5 = {
+					create_country_leader = {
+						name = "Rebuilding Council"
+						picture = GFX_portrait_SOV_supreme_soviet
+						ideology = trotskyism
+					}
 					set_cosmetic_tag = RE5_rebuilding_soviet
 					add_ideas = {RED_liberation_district RED_rebuilding_soviet}
 					if = {
@@ -5295,7 +5487,7 @@ focus_tree = {
 					}
 					every_owned_state = {
 						limit = {
-							is_core_of = ROOT
+							is_core_of = PREV
 						}
 						add_core_of = RED
 					}
@@ -5431,7 +5623,7 @@ focus_tree = {
 	}
 	focus = { #볼셰비즘 이상 재현
 		id = RED_ideal_of_bolshevism_again
-		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		prerequisite = { focus = RED_free_soviets  focus = RED_democratic_planned_economy }
 		x = 2
 		y = 3
@@ -5466,6 +5658,22 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
+			RED_cherino = {
+				effect_tooltip = {
+					swap_country_leader_traits = {
+						remove = b_tjrlwkd
+						add = RED_bright_polar_star
+					}
+				}
+				hidden_effect = {
+					remove_country_leader_trait = b_tjrlwkd
+					add_country_leader_trait = RED_bright_polar_star
+					add_country_leader_trait = RED_bright_polar_star_desc
+				}
+			}
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
 		}
 	}
 	focus = { #키보토스 혁명전쟁
@@ -5507,7 +5715,7 @@ focus_tree = {
 	focus = { #프롤레타리아 무장
 		id = RED_armed_workers
 		icon = GFX_focus_GER_support_the_proletarian_uprising
-		prerequisite = { focus = RED_trotsky_s_world_revolution focus = RED_end_of_counter_revolution }
+		prerequisite = { focus = RED_trotsky_s_world_revolution focus = RED_cherino_s_systemic_revolution focus = RED_end_of_counter_revolution }
 		x = -2
 		y = 1
 		relative_position_id = RED_trotsky_s_world_revolution
@@ -5828,45 +6036,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { #트로츠키주의 선동 
-		id = RED_communist_instigation
-		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
-		cost = 4
-		x = -1
-		y = 2
-		relative_position_id = RED_seek_allies
-		prerequisite = {
-			focus = RED_seek_allies
-		}
-		prerequisite = {
-			focus = RED_all_power_to_redwinter
-		}
-		available = {
-   
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			has_war = no
-			is_subject = no
-			is_major = yes
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_neighbor_of = SOV
-					is_subject = no
-					is_major = no
-				}
-				add_timed_idea = {
-					idea = communist_pressure
-					days = 365
-				}
-				hidden_effect = {
-					country_event = { id = generic.1 }
-				} 
-			}
-		}
-	}
 
 
 	focus = { #핀란드 침공
