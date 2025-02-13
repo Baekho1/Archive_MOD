@@ -23,7 +23,7 @@ set_technology = {
 create_country_leader = {
 	name = RE1_country_leader_name
 	picture = "GFX_Portrait_BlueArchive_RED_Generic_1"
-	ideology = stalinism
+	ideology = trotskyism
 	traits = {
 		RED_military_government_commander
 	}

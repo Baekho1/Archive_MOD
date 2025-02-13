@@ -3913,6 +3913,18 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
+		ABY_idea_army_1_0 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = -0.1
+			}
+		}
 		ABY_idea_army_1_1 = {
 			allowed_civil_war = {
                 always = yes
@@ -5702,6 +5714,81 @@ ideas = {
 			modifier = {
 				communism_drift = -0.1
 				fascism_drift = -0.1
+			}
+		}
+		ABY_idea_SS = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_category_halo_attack_factor = 0.15
+				modifier_army_sub_unit_category_halo_defence_factor = -0.1
+				modifier_army_sub_unit_category_halo_max_org_factor = 0.05
+				war_support_factor = 0.1
+				conscription = 0.005
+			}
+		}
+		ABY_idea_intel_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.1
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.1
+				INTELLIGENCE_AGENCY_DEFENSE = 0.1
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+			}
+		}
+		ABY_idea_intel_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.15
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.15
+				INTELLIGENCE_AGENCY_DEFENSE = 0.2
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 1
+			}
+		}
+		ABY_idea_intel_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.2
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.15
+				INTELLIGENCE_AGENCY_DEFENSE = 0.35
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 1
+				party_popularity_stability_factor = 0.25
+			}
+		}
+		ABY_idea_intel_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.25
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.2
+				INTELLIGENCE_AGENCY_DEFENSE = 0.5
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 2
+				party_popularity_stability_factor = 0.25
 			}
 		}
 	}

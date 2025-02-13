@@ -352,6 +352,7 @@ set_variable = { RED_locals_problem_in_progress = 0 }
 set_variable = { RED_intel_operative_slot = 0 }
 set_variable = { RED_intel_intel_network_gain = 0 }
 set_variable = { RED_intel_compliance_gain = 0 }
+set_variable = { RED_intel_send_volunteer_size = 0}
 
 #보안위원회
 set_variable = { RED_sco_political_power_factor = -0.08 }
