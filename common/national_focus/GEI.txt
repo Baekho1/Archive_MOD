@@ -426,6 +426,8 @@ focus_tree = {
 		y = 4
 		cost = 0
 		prerequisite = { focus = GEI_uigyeonchungdol }
+		mutually_exclusive = { focus = GEI_DEC_victory}
+
 		available = {
 			has_country_flag = GEI_Beatrice_win_flag
 		}
@@ -711,4 +713,311 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 데카그라마톤 승리 
+
+	#베아트리체의 승리
+	focus = {
+		id = GEI_DEC_victory
+		icon = GFX_GEI_Beatrice
+
+		relative_position_id = GEI_uigyeonchungdol
+		x = 5
+		y = 1
+
+		cost = 0
+		prerequisite = { focus = GEI_uigyeonchungdol }
+		mutually_exclusive = { focus = GEI_beateulicheuiseungli}
+
+		available = {
+			has_country_flag = GEI_Beatrice_win_flag
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+				}
+			}
+	# 오래된 질문 		
+
+	focus = {
+		id = GEI_DEC_old_qusetion
+		icon = GFX_GEI_DEC_old_question
+
+		relative_position_id = GEI_DEC_victory
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_victory }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+				}
+	}
+    
+	#오래된 대답
+	focus = {
+		id = GEI_DEC_old_answer
+		icon = GFX_GEI_DEC_old_answer
+
+		relative_position_id = GEI_DEC_old_qusetion
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_old_qusetion }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+				}
+	}
+
+	#외부로
+	focus = {
+		id = GEI_DEC_outside
+		icon = GFX_GEI_DEC_outside
+
+		relative_position_id = GEI_DEC_old_answer
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_old_answer }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+				}
+	}
+
+    #인간의 역사
+	focus = {
+		id = GEI_DEC_human_history
+		icon = GFX_GEI_DEC_human_history
+
+		relative_position_id = GEI_DEC_outside
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_outside }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+				}
+	}
+
+ #무너지는 신들의 고향
+	focus = {
+		id = GEI_DEC_fallen_gods_homeland
+		icon = GFX_GEI_DEC_fallen_gods_homeland
+
+		relative_position_id = GEI_DEC_human_history
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_human_history }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 현지 안정화
+	focus = {
+		id = GEI_DEC_stabilization
+		icon = GFX_GEI_DEC_stabilization
+
+		relative_position_id = GEI_DEC_old_answer
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_old_answer }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 자동화
+	focus = {
+		id = GEI_DEC_auto
+		icon = GFX_GEI_DEC_auto
+
+		relative_position_id = GEI_DEC_stabilization
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_stabilization }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 낙후문명재구축
+	focus = {
+		id = GEI_DEC_modernization
+		icon = GFX_GEI_DEC_modernization
+
+		relative_position_id = GEI_DEC_auto
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_auto }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 헤세드
+	focus = {
+		id = GEI_DEC_hesade_plan
+		icon = GFX_GEI_DEC_hesade_plan
+
+		relative_position_id = GEI_DEC_old_answer
+		x = 0
+		y = 2.5
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_old_answer }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 기계의 려명 
+	focus = {
+		id = GEI_DEC_synthetic_dawn
+		icon = GFX_GEI_DEC_syntetic_dawn
+
+		relative_position_id = GEI_DEC_hesade_plan
+		x = 0
+		y = 2
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_hesade_plan }
+		prerequisite = { focus = GEI_DEC_fallen_gods_homeland }
+		prerequisite = { focus = GEI_DEC_modernization }
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+	# 싯딤의 상자 확보
+	focus = {
+		id = GEI_DEC_box
+		icon = GFX_GEI_DEC_box
+
+		relative_position_id = GEI_DEC_synthetic_dawn
+		x = 0
+		y = 2
+
+		cost = 5
+		prerequisite = { focus = GEI_DEC_synthetic_dawn}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+
+		}
+	}
+
+
 }
