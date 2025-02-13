@@ -719,7 +719,7 @@ focus_tree = {
 	#베아트리체의 승리
 	focus = {
 		id = GEI_DEC_victory
-		icon = GFX_GEI_Beatrice
+		icon = GFX_GEI_DEC_victory
 
 		relative_position_id = GEI_uigyeonchungdol
 		x = 5
@@ -749,7 +749,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_victory
 		x = 0
-		y = 1
+		y = 2
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_victory }
@@ -774,7 +774,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_old_qusetion
 		x = 0
-		y = 1
+		y = 2
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_old_qusetion }
@@ -920,7 +920,7 @@ focus_tree = {
 	# 낙후문명재구축
 	focus = {
 		id = GEI_DEC_modernization
-		icon = GFX_GEI_DEC_modernization
+		icon = GFX_GEI_DEC_modernization 
 
 		relative_position_id = GEI_DEC_auto
 		x = 0
@@ -974,7 +974,7 @@ focus_tree = {
 
 		relative_position_id = GEI_DEC_hesade_plan
 		x = 0
-		y = 2
+		y = 3
 
 		cost = 5
 		prerequisite = { focus = GEI_DEC_hesade_plan }

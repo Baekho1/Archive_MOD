@@ -2592,4 +2592,62 @@ spriteTypes = {
 		name = "GFX_goal_JAP_strengthen_the_divine_wind"
 		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_strengthen_the_divine_wind.tga"
 	}
+
+	# 데카그라마톤톤정
+
+	spriteType = {
+		name = "GFX_GEI_DEC_victory"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_old_question"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_old_answer"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_outside"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_human_history"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_fallen_gods_homeland"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_stabilization"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_auto"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_modernization"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_syntetic_dawn"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_box"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
+	}
+
 }
