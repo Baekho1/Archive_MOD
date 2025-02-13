@@ -1,4 +1,5 @@
 add_namespace = GEI_event
+add_namespace = GEI_DEC_event 
 
 country_event = {
 	id = GEI_event.1
@@ -13,6 +14,12 @@ country_event = {
 		set_country_flag = GEI_Beatrice
 		complete_national_focus = GEI_beateulicheuiseungli
 		custom_effect_tooltip = GEI_Beatrice_tt
+	}
+
+	option = { 
+		name = GEI_event.1.b
+		set_country_flag = GEI_Beatrice
+		complete_national_focus = GEI_DEC_victory
 	}
 }
 country_event = {
@@ -2038,3 +2045,80 @@ country_event = {
 		}
 	}
 }
+
+# GEI_DEC_event / 데카그라마톤 이벤트
+
+country_event = {
+	id = GEI_DEC_event.0
+	title = GEI_DEC_event.0.t
+	desc = GEI_DEC_event.0.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.0.a
+		add_stability = 0.10
+		country_event = { id = GEI_DEC_event.1}
+		
+	}
+}
+
+country_event = {
+	id = GEI_DEC_event.1
+	title = GEI_DEC_event.1.t
+	desc = GEI_DEC_event.1.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.1.a
+	}
+}
+
+# 오래된 질문
+country_event = {
+	id = GEI_DEC_event.2
+	title = GEI_DEC_event.2.t
+	desc = GEI_DEC_event.2.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.2.a
+	}
+}
+
+# 오래된 대답 
+country_event = {
+	id = GEI_DEC_event.3
+	title = GEI_DEC_event.3.t
+	desc = GEI_DEC_event.3.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.3.a
+		country_event = {id = GEI_DEC_event.4}
+	}
+}
+
+# 오래된 대답2
+country_event = {
+	id = GEI_DEC_event.4
+	title = GEI_DEC_event.4.t
+	desc = GEI_DEC_event.4.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.4.a
+	}
+}
+
+
+
