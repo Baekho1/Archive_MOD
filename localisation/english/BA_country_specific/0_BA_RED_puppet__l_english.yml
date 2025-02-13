@@ -2,6 +2,7 @@
  
  RE4_random_commander_1: "아리마 히즈메"
  RE4_random_commander_2: "마키하라 시호"
+ RE4_council: "$RE4_finland_colonial_dynamic_modifier$"
  
  RE4_Defense_Commission_Investment: "방위위원회 투자"
  RE4_Supervision_and_Management_Committee: "감독관리위원회 설립"
@@ -16,6 +17,10 @@
  RE4_support_for_the_finland_communist_party_reward_tooltip: "§Y$RE4_Finland_Military_Administration$§! 중점 완료 이후 효과 발동\n\n"
  RE4_support_for_the_finland_communist_party_reward_2_tooltip: "\n§Y해당하는 인물§!들이 전향함!"
  RE4_Finland_Military_Administration: "핀란드 자치위원회 수립"
+ RE4_Infrastructure_connectivity: "핀란드 기반시설 확장"
+ RE4_janiskoski_power_plant: "$FIN_janiskoski_power_plant$"
+ RE4_expand_imatra_hydropower_plant: "$FIN_expand_imatra_hydropower_plant$"
+ RE4_power_from_the_dams: "$FIN_power_from_the_dams$"
 
  RE4_redwinter_military_advisors: "붉은겨울 군사고문단"
  RE4_redwinter_military_advisors_desc: "본국에서 군사고문단을 파견하면서 우리는 보다 정교한 작전을 수립할 수 있게 되었습니다. 이는 곧, 더욱 적극적인 공세를 펼칠 수 있는 기반이 마련되었음을 의미합니다. 전장의 흐름을 주도하고, 주저 없이 앞으로 나아갈 때입니다."

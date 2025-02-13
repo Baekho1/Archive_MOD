@@ -81,6 +81,14 @@ characters = {
 			}
 		}
 	}
+	RE4_council = {
+		name = RE4_council
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RE4_council"
+			}
+		}
+	}
 
 	RE4_kaisu_mirjami_rydberg = {
 		name = FIN_kaisu_mirjami_rydberg

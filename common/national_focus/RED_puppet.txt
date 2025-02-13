@@ -1900,12 +1900,6 @@
 			original_tag = RE4
 			has_war_with = FIN
 		} 
-
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
-
 		ai_will_do = {
 			base = 500
 		}
@@ -1985,11 +1979,6 @@
 			original_tag = RE4
 			has_war_with = FIN
 		} 
-
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
 
 		ai_will_do = {
 			base = 500
@@ -2085,11 +2074,6 @@
 			has_war_with = FIN
 		} 
 
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
-
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -2161,11 +2145,6 @@
 			has_war_with = FIN
 		} 
 
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
-
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -2235,11 +2214,6 @@
 			has_war_with = FIN
 		} 
 
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
-
 		ai_will_do = {
 			base = 200
 			modifier = {
@@ -2293,11 +2267,6 @@
 			NOT = { has_completed_focus = RE4_Finland_Military_Administration}
 		} 
 
-		bypass = {
-			original_tag = RE4
-			NOT = { has_war_with = FIN }
-		}
-
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -2341,7 +2310,7 @@
 		
 		icon = GFX_focus_REDWINTER_finland
 
-		cost = 2
+		cost = 5
 
 		text_icon = REDWINTER_RE4_focus_style
 		
@@ -2367,10 +2336,7 @@
 		}
 
 		available = { 
-			any_country = {
-				original_tag = RE4
-				is_subject_of = RED
-			}
+			original_tag = RE4
 			NOT = {
 				OR = {
 					has_war_with = RED
@@ -2378,6 +2344,7 @@
 				}
 				RE4 = { has_war_with = FIN }
 			}
+			RE4 = { owns_state = 111 }
 		}
 
 		ai_will_do = {
@@ -2426,7 +2393,39 @@
 					original_tag = RE4
 				}
 				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.01 tooltip = research_speed_factor_tt }
+				set_capital = {
+					state = 111
+					remember_old_capital = no
+				}
+				add_country_leader_role = {
+					character = RE4_council 
+					country_leader = {
+						ideology = stalinism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+					promote_leader = yes
+				}
+				set_cosmetic_tag = RE4_finlandia_military_administration
+			}
+			IF = {
+				limit = {
+					original_tag = RE4
+					has_completed_focus = RE4_support_for_the_finland_communist_party
+				}
+				FIN = {
+					every_character = {
+						limit = {
+							OR = {
+								is_character = RE4_karl_harald_wiik
+								is_character = RE4_kaisu_mirjami_rydberg
+								is_character = RE4_sandra_lehtinen
+							}
+						}
+						set_nationality = RE4
+					}
+				}
 			}
 
 		}
@@ -2463,7 +2462,23 @@
 					original_tag = RE4
 				}
 				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
-				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.01 tooltip = research_speed_factor_tt }
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_capital = {
+					state = 111
+					remember_old_capital = no
+				}
+				add_country_leader_role = {
+					character = RE4_council 
+					country_leader = {
+						ideology = stalinism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+					promote_leader = yes
+				}
+				set_cosmetic_tag = RE4_finlandia_military_administration
 			}
 			
 		}
@@ -2481,7 +2496,7 @@
 
 		relative_position_id = RE4_create_of_defense_committee
 		x = -6
-		y = 2
+		y = 0
 
 		allow_branch = {
 			OR = {
@@ -2562,12 +2577,11 @@
 		
 		prerequisite = { 
 			focus = RE4_Defense_Commission_Investment 
-			focus = RE4_Finland_Military_Administration
 		}
 
 		relative_position_id = RE4_Defense_Commission_Investment
 		x = 0
-		y = 2
+		y = 3
 
 		allow_branch = {
 			OR = {
@@ -2586,10 +2600,6 @@
 				}
 			}
 			RE4 = { has_war = no }
-		} 
-
-		bypass = {
-
 		}
 
 		ai_will_do = {
@@ -2624,5 +2634,556 @@
 			force_update_dynamic_modifier = yes
 		}
 
+		}
+	}
+
+	joint_focus = {
+		id = RE4_Infrastructure_connectivity
+		
+		dynamic = yes 
+		
+		icon = GFX_goal_generic_construct_infrastructure
+
+		cost = 10
+
+		text_icon = REDWINTER_RED_RE4_focus_style
+		
+		
+		prerequisite = { 
+			focus = RE4_Finland_Military_Administration 
+			#focus = RE4_Defense_Commission_Investment
+		}
+
+		relative_position_id = RE4_Finland_Military_Administration
+
+		joint_trigger = {
+			RED_is_a_redwinter_viable_nation = yes 
+		}
+		x = 2
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			any_country = {
+				original_tag = RE4
+				is_subject_of = RED
+			}
+			
+			111 = { state_is_fully_controlled_by_ROOT_or_subject = yes } 
+			926 = { state_is_fully_controlled_by_ROOT_or_subject = yes } 
+
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 999 
+				original_tag = RE4
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		completion_reward_joint_originator = {
+			
+			IF = {
+				limit = { original_tag = RE4 }
+				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
+				every_owned_state = {
+					limit = {
+						infrastructure < 5
+						OR = {
+							state = 111
+							state = 926
+							state = 149
+							state = 929
+							state = 148
+							state = 925
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+				# 헬싱키 - 헤멘린나 - 탐페레
+				build_railway = {
+					path = { 3083 9194 11211 6108 11105 9129 11172 3025 3137 9167 }
+				}
+				
+				build_railway = { # 투르쿠 - 라우마 - 포리 - 바사
+					path = { 3083 6066 169 3117 11126 3122 11065 3172 66 195 11121 158 11081 11164 162 6087 11204 11167 6142 103 3097 9116 9140  }
+				}
+
+			}
+
+		}
+
+		completion_reward_joint_member = {
+			
+			IF = {
+				limit = { original_tag = RE4 }
+				custom_effect_tooltip = modify_RE4_finland_colonial_dynamic_modifier_tt
+				add_to_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
+				
+				# 우사마
+				111 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+				# 투르쿠
+				926 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+				# 바사
+				149 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+				# 오울루 
+				929 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+				# 라피 
+				148 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+
+			}
+			
+		}
+	}
+
+	joint_focus = {
+		id = RE4_janiskoski_power_plant
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_generic_energy
+
+		cost = 5
+
+		text_icon = REDWINTER_RED_RE4_focus_style
+		
+		
+		prerequisite = { 
+			focus = RE4_Finland_Military_Administration 
+			#focus = RE4_Defense_Commission_Investment
+		}
+
+		relative_position_id = RE4_Finland_Military_Administration
+
+		joint_trigger = {
+			RED_is_a_redwinter_viable_nation = yes 
+		}
+		x = 4
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			any_country = {
+				original_tag = RE4
+				is_subject_of = RED
+			}
+
+			722 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 999 
+				original_tag = RE4
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		completion_reward_joint_originator = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				722 = { #PETSAMO
+					set_state_category = rural
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
+			}
+
+		}
+
+		completion_reward_joint_member = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				722 = { #PETSAMO
+					set_state_category = rural
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
+			}
+			
+		}
+	}
+
+	joint_focus = {
+		id = RE4_expand_imatra_hydropower_plant
+		
+		dynamic = yes 
+		
+		icon = GFX_goal_generic_construction
+
+		cost = 5
+
+		text_icon = REDWINTER_RED_RE4_focus_style
+		
+		
+		prerequisite = { 
+			focus = RE4_janiskoski_power_plant 
+		}
+
+		relative_position_id = RE4_janiskoski_power_plant
+
+		joint_trigger = {
+			RED_is_a_redwinter_viable_nation = yes 
+		}
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			any_country = {
+				original_tag = RE4
+				is_subject_of = RED
+			}
+
+			928 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 999 
+				original_tag = RE4
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		completion_reward_joint_originator = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				928 = { #KYME
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
+			}
+
+		}
+
+		completion_reward_joint_member = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				928 = { #KYME
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
+			}
+			
+		}
+	}
+
+	joint_focus = {
+		id = RE4_power_from_the_dams
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_generic_hydroelectric_energy
+
+		cost = 10
+
+		text_icon = REDWINTER_RED_RE4_focus_style
+		
+		
+		prerequisite = { 
+			focus = RE4_expand_imatra_hydropower_plant 
+		}
+
+		relative_position_id = RE4_expand_imatra_hydropower_plant
+
+		joint_trigger = {
+			RED_is_a_redwinter_viable_nation = yes 
+		}
+		x = 0
+		y = 1
+
+		allow_branch = {
+			OR = {
+				original_tag = RED
+				original_tag = RE4
+			}
+		}
+
+		available = { 
+			any_country = {
+				original_tag = RE4
+				is_subject_of = RED
+			}
+			has_tech = construction3
+
+			148 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+			929 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+
+			NOT = {
+				OR = {
+					has_war_with = RED
+					has_war_with = RE4 
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 999 
+				original_tag = RE4
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		completion_reward_joint_originator = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				
+				random_core_state = {
+					prioritize = { 927 } # 헤메 (탐페레)
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						NOT = { has_state_flag = RE4_power_from_the_dams_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = RE4_power_from_the_dams_flag
+				}
+			}
+
+			IF = {
+				limit = { original_tag = RE4 }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				148 = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = { id = 11164 }
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				929 = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = { id = 158 }
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}	
+				}
+			}
+
+		}
+
+		completion_reward_joint_member = {
+
+			IF = {
+				limit = { original_tag = RE4 }
+				
+				random_core_state = {
+					prioritize = { 927 } # 헤메 (탐페레)
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						NOT = { has_state_flag = RE4_power_from_the_dams_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = RE4_power_from_the_dams_flag
+				}
+			}
+
+			IF = {
+				limit = { original_tag = RE4 }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				148 = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = { id = 11164 }
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				929 = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = { id = 158 }
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}	
+				}
+			}
+			
 		}
 	}

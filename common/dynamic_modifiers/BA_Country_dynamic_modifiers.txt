@@ -977,7 +977,7 @@ RE4_finland_colonial_dynamic_modifier = {
 
 	enable = { always = yes }
 
-	icon = GFX_idea_COG_belgian_congo_colonial_dynamic_modifier
+	icon = GFX_idea_RE4_Finland_committee
 
 	remove_trigger = {
 		is_subject = no

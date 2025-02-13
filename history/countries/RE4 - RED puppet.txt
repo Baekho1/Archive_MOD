@@ -33,6 +33,7 @@ recruit_character = RE4_clone_marina
 recruit_character = RE4_clone_tomoe
 recruit_character = RE4_commander_1
 recruit_character = RE4_commander_2
+recruit_character = RE4_council
 
 set_stability = 0.4
 set_war_support = 0.4
