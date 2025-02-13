@@ -1038,10 +1038,28 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 	}
+	ABY_trait_wolf_god_2 = { #"늑대신"
+		random = no
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		conscription = 0.02
+	}
 	ABY_trait_neko_god = { #"고양이신"
 		random = no
-		stability_factor = 0.2
-		political_power_gain = -0.15
+		drift_defence_factor = 0.25
+		communism_drift = 0.1
+		stability_factor = -0.1
+		conscription_factor = 0.15
+	}
+	ABY_trait_neko_god_2 = { #"고양이신"
+		random = no
+		drift_defence_factor = 0.5
+		war_support_weekly = 0.005
+		communism_drift = 0.25
+		stability_factor = -0.25
+		conscription_factor = 0.25
 	}
 	ABY_trait_black_sun = { #"검은 태양의 총독"
 		random = no
@@ -1194,11 +1212,29 @@ leader_traits = {
 	}
 	ABY_trait_school_leader_2 = { #"학생회장"
 		random = no
-		political_power_gain = 0.5
+		political_power_gain = 0.1
 		communism_drift = 0.15
-		party_popularity_stability_factor = 0.1
-		stability_factor = 0.15
-		war_support_factor = 0.15
+		stability_factor = -0.1
+		war_support_factor = 0.1
+	}
+	ABY_trait_school_leader_3 = { #"학생회장"
+		random = no
+		political_power_gain = 0.25
+		communism_drift = 0.25
+		stability_factor = 0.25
+		war_support_factor = 0.1
+		compliance_gain = 0.1
+		stability_weekly = 0.005
+	}
+	ABY_trait_school_leader_4 = { #"학생회장"
+		random = no
+		political_power_gain = 0.25
+		communism_drift = 0.25
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		compliance_gain = 0.1
+		JUSTIFY_WAR_GOAL_TIME = -0.75
+		conscription = 0.02
 	}
 	ABY_idea_5_days = {
 		random = no

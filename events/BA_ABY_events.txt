@@ -9314,7 +9314,7 @@ country_event = {
 			add_trait = { trait = Commando }
 		}
 		custom_effect_tooltip = ABY_plan_cost_tt
-		add_to_variable = { ABY_plan_cost_var = -20 }
+		add_to_variable = { ABY_plan_cost_var = -10 }
 	}
 
 	option = {
@@ -10469,6 +10469,8 @@ country_event = {
 		trigger = {
 			has_completed_focus = ABY_focus_shiroco_commander
 		}
+		complete_national_focus = ABY_focus_first_attack
+		set_country_flag = ABY_flag_terror_occured
 		ABYDO_Hoshino = {
 			add_trait = { trait = unconscious }
 		}
@@ -10480,30 +10482,6 @@ country_event = {
 		}
 		ABYDO_nonomi = {
 			add_trait = { trait = unconscious }
-		}
-		add_stability = -0.15
-		add_popularity = {
-			ideology = democratic
-			popularity = -1
-		}
-		set_politics = {
-			ruling_party = neutrality
-		}
-		set_cosmetic_tag = ABY_military_government
-		set_portraits = {
-			character = ABYDO_Shiroko
-			civilian = { 
-				large = "gfx/leaders/ABY/4b8ecfc919d15b2f.tga" 
-			}
-		}
-		add_country_leader_role = {
-			character = ABYDO_Shiroko
-			promote_leader = yes
-			country_leader = {
-				ideology = emergency_military_government
-				expire = "1965.1.1.1"
-				traits = { ABY_trait_wolf_god }
-			}
 		}
 	}
 
@@ -10572,10 +10550,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.215.a
 		ai_chance = { factor = 100 }
-		add_timed_idea = {
-			idea = ABY_idea_cornjs_give
-			days = 180
-		}
+		set_country_flag = ABY_flag_arrest_fascist_1
 	}
 }
 
@@ -10590,6 +10565,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.216.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_arrest_fascist_2
 	}
 }
 
@@ -10604,21 +10580,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.217.a
 		ai_chance = { factor = 100 }
-		country_event = {
-			id = ABY_new_event.235
-		}
-		ABYDO_Shiroko = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_nonomi = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_serika = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_ayane = {
-			add_trait = { trait = unconscious }
-		}
+		set_country_flag = ABY_flag_arrest_fascist_3
 	}
 }
 
@@ -10633,6 +10595,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.218.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_arrested_fascist
 	}
 }
 
