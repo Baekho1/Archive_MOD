@@ -155,6 +155,21 @@ BA_halo_infantry_ban_effect = { #실행된 범위의 헤일로 보병을 0으로
 	}
 }
 
+BA_halo_infantry_ban_effect_only_infantry = { #실행된 범위의 헤일로 보병을 0으로 만들고 헤일로 보병 사단 추가 효과에 영향을 받지 않게 만듭니다.
+	custom_effect_tooltip = BA_halo_infantry_ban_effect_tt
+	hidden_effect = { # 헤일로 보병 밴
+		if = {
+			limit = {
+				has_template = "Halo Infantry Division"
+			}
+			set_division_template_cap = {
+				division_template = "Halo Infantry Division"
+				division_cap = 0
+			}
+		}
+	}
+}
+
 BA_halo_infantry_unban_effect = { #이것은 단순히 실행된 범위의 헤일로 보병 밴을 제거합니다
 	hidden_effect = {
 		if = { # 헤일로 보병 밴 해제 하는 것
@@ -2790,5 +2805,37 @@ USABA_debug_effect5 = {
 		}
 		country_event = usa_event.14
 		activate_mission = USA_rising_exiled_germans_3st
+	}
+}
+
+GEH_deb_eff = {
+	country_event = { 
+		id = hina_assembly.12
+	}
+	country_event = { 
+		id = hina_assembly.11
+	}
+	country_event = { 
+		id = hina_assembly.10
+	}
+	country_event = { 
+		id = hina_assembly.9
+	}
+	country_event = {
+		id = hina_assembly.8
+	}
+}
+ABY_halo_militia_ban_effect = { #실행된 범위의 헤일로 민병을 0으로 만들고 헤일로 보병 사단 추가 효과에 영향을 받지 않게 만듭니다.
+	custom_effect_tooltip = BA_halo_militia_ban_effect_tt
+	hidden_effect = { # 헤일로 민병 밴
+		if = {
+			limit = {
+				has_template = "ABYDOS National Brigade"
+			}
+			set_division_template_cap = {
+				division_template = "ABYDOS National Brigade"
+				division_cap = 0
+			}
+		}
 	}
 }

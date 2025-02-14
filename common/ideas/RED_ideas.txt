@@ -7,7 +7,511 @@ ideas = {
 		}
 	}
     country = {
-		RED_property_ceiling = {
+		RED_war_communism_idea = {
+			picture = SPR_class_war
+			modifier = {
+				army_core_attack_factor = 0.03
+				army_attack_speed_factor = 0.03
+				army_attack_factor = 0.03
+				custom_modifier_tooltip = RED_world_revolution_1_tt
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_nation_united_LD = { #민족 자결 원칙
+			picture = GER_iron_front
+			modifier = {
+				cic_to_overlord_factor = 0.25
+				mic_to_overlord_factor = 0.25
+			}
+		}
+		RED_centralized_LD = { #중앙 집권 원칙
+			picture = GER_iron_front
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+		RED_rebuilding_soviet = { #재건평의회
+			picture = HUN_resurgent_communist_party_idea
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		RED_liberation_district = { #해방지구
+			picture = SOV_soviet_hegemony
+			modifier = {
+				compliance_growth = 1.5
+				resistance_growth = -0.5
+			}
+		}
+		RED_world_revolution_1 = { #세계혁명!
+			picture = GER_wage_war_on_capitalism
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = 0.2
+				custom_modifier_tooltip = RED_world_revolution_1_tt
+			}
+			cancel = {
+				has_war = no
+			}
+			on_remove = {
+				add_ideas = RED_world_revolution
+			}
+		}
+		RED_world_revolution = { #세계혁명에의 열망
+			picture = MEX_revolutionary_army
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				consumer_goods_expected_value = 0.1
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_factory_efficiency_gain_factor = -0.4
+				custom_modifier_tooltip = RED_world_revolution_tt
+			}
+			cancel = {
+				has_war = yes
+			}
+			on_remove = {
+				add_ideas = RED_world_revolution_1
+			}
+		}
+		RED_debate_everywhere = { #정치적 전환에의 열망
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_factor = -0.1
+				stability_weekly = -0.001
+			}
+		}
+		RED_exile_committee_all = { #망명위원회-전체
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_yev = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_no_krl = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_alk = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_ivr = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_no_ivn = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+
+		RED_exile_committee_yev_ivr_krl = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_ivn_alk = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk_yev_ivr = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_krl_ivn = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_alk_yev = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		
+		RED_exile_committee_yev_ivn_ivr = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_yev_ivn = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_alk_krl_yev = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_alk_krl = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_ivr_alk = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+
+
+
+		RED_exile_committee_yev_ivr = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_ivn = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk_yev = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_ivr_krl = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivn_alk = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+
+		RED_exile_committee_yev_ivn = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl_yev = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_karl_trait
+				international_revolutionary
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_alk_krl = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_ivr_alk = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+		RED_exile_committee_ivn_ivr = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+				RED_ivar_trait
+				soviet_economist
+			}
+		}
+
+		RED_exile_committee_yev = { #망명위원회-예프
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_yevgeny_trait
+				ecomonist_publicist
+			}
+		}
+		RED_exile_committee_krl = { #망명위원회-카를
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_karl_trait
+				international_revolutionary
+			}
+		}
+		RED_exile_committee_alk = { #망명위원회-알렉
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_aleksandr_trait
+				left_trade_unionist
+			}
+		}
+		RED_exile_committee_ivr = { #망명위원회-이발
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivar_trait
+				soviet_economist
+			}
+		}
+		RED_exile_committee_ivn = { #망명위원회-이반
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+				RED_ivan_trait
+				head_directorate_of_new_buildings
+			}
+		}
+		RED_exile_committee = { #망명위원회
+			name = RED_exile_committee
+			picture = AUS_austromarxism
+			traits = {
+			}
+		}
+		RED_red_horse_idea_all = { #붉은말 운동
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_more_production
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_cr_sp = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_pr_cr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_more_production
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_sp_pr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+				RED_more_production
+			}
+		}
+		RED_red_horse_idea_cr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_creating_n_inovation
+			}
+		}
+		RED_red_horse_idea_pr = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_more_production
+			}
+		}
+		RED_red_horse_idea_sp = {
+			picture = FIN_socialist_welfare
+			name = 	RED_red_horse_idea
+			traits = {
+				RED_speed_fight
+			}
+		}
+		RED_red_horse_idea = { #붉 말 운동
+			picture = FIN_socialist_welfare
+		}
+		RED_property_ceiling = { #재산상한제
 			picture = GER_economy_of_conquest
 			modifier = {
 				consumer_goods_expected_value = -0.1
@@ -45,7 +549,8 @@ ideas = {
 				local_building_slots_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
 				local_resources_factor = 0.05
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.05
 			}
 		}
 		RED_land_developing_1 = { #토지 개발 사업
@@ -94,10 +599,18 @@ ideas = {
 			picture = ARG_construction_guilds
 			modifier = {
 				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+				political_power_factor = -0.05
+				conscription_factor = -0.1
+			}
+		}
+		RED_full_employment_2 = { #완전고용
+			name = RED_full_employment
+			picture = ARG_construction_guilds
+			modifier = {
 				production_speed_buildings_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
-				political_power_factor = -0.05
 				conscription_factor = -0.1
 			}
 		}
@@ -287,12 +800,125 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		RED_market_socialism = { #시장사회주의
-			picture = new_economic_policy
+		RED_farming-fishing_town_capitalism_1 = { #농어촌 자본주의
+			name = RED_farming-fishing_town_capitalism
+			picture = ARG_rapid_militarization
 			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				local_building_slots_factor = 0.2
+				local_resources_factor = 0.1
+			}
+		}
+		RED_farming-fishing_town_capitalism = { #농어촌 자본주의
+			name = RED_farming-fishing_town_capitalism
+			picture = ARG_rapid_militarization
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		RED_corporatism_3 = { #협동조합경제 - 합친 거
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.15
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.25
 				industrial_capacity_factory = 0.075
+				consumer_goods_factor = -0.35
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+		}
+		RED_corporatism_2 = { #협동조합경제 - 유연한 고용
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_industrial_complex_factor = 0.25
+				industrial_capacity_factory = 0.075
+				consumer_goods_factor = -0.1
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+		}
+		RED_corporatism_1 = { #협동조합경제 - 중앙은행
+			name = RED_corporatism
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.35
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+		}
+		RED_corporatism = { #협동조합경제
+			picture = tur_etatism
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.1
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+		}
+		RED_market_socialism_3 = { #시장사회주의 - 다합치기
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.075
+				stability_weekly = 0.004
+			}
+		}
+		RED_market_socialism_2 = { #시장사회주의 - 폴크헴메트
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.05
+				stability_weekly = 0.005
+			}
+		}
+		RED_market_socialism_1 = { #시장사회주의 - 유연한 고용
+			name = RED_market_socialism
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.075
+				stability_weekly = 0.004
+			}
+		}
+		RED_market_socialism = { #시장사회주의
+			picture = tur_kemalism_with_socialist_characteristics
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
 				stability_weekly = 0.005
 			}
 		}
@@ -302,10 +928,30 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_second_AEP_2 = { #제2차 대안경제정책
@@ -315,10 +961,30 @@ ideas = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
 				stability_weekly = 0.001
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_second_AEP_1 = { #제2차 대안경제정책
@@ -327,9 +993,29 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_second_AEP = { #제2차 대안경제정책
@@ -339,9 +1025,29 @@ ideas = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.025
 				industrial_capacity_factory = 0.05
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_second_AEP
+							has_idea = RED_second_AEP_1
+							has_idea = RED_second_AEP_2
+							has_idea = RED_second_AEP_3
+						}
+					}
+					country_event = {
+						id = RED_event.22
+						days = 2
+					}
+				}
 			}
 		}
 		RED_first_AEP_1 = { #제1차 대안경제정책
@@ -352,9 +1058,28 @@ ideas = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.05
 				industrial_capacity_factory = 0.05
+
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_first_AEP
+							has_idea = RED_first_AEP_1
+						}
+					}
+					country_event = {
+						id = RED_generic.15
+						days = 2
+					}
+				}
 			}
 		}
 		RED_first_AEP = { #제1차 대안경제정책
@@ -365,8 +1090,26 @@ ideas = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.05
+				custom_modifier_tooltip = RED_cant_change_economy
+				hidden_modifier = {
+					economy_cost_factor = 15
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = RED_first_AEP
+							has_idea = RED_first_AEP_1
+						}
+					}
+					country_event = {
+						id = RED_generic.15
+						days = 2
+					}
+				}
 			}
 		}
 		RED_consumer_goods_production = { #소비재 생산
@@ -869,7 +1612,8 @@ ideas = {
 			}
 
 			modifier = {
-				land_doctrine_cost_factor = 0.05
+				experience_gain_factor = -0.1
+				land_doctrine_cost_factor = 0.45
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
 				army_speed_factor = -0.05
@@ -888,12 +1632,29 @@ ideas = {
 			}
 
 			modifier = {
-				land_doctrine_cost_factor = 0.25
+				experience_gain_factor = -0.4
+				land_doctrine_cost_factor = 1.25
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10
 				army_speed_factor = -0.15
 				army_org_factor = -0.15
 				army_org_regain = -0.15
+			}
+		}
+		RED_revolution_defender = { # 혁명수비대
+
+			picture = RED_office_ss
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				supply_combat_penalties_on_core_factor = -0.05
 			}
 		}
 		RED_office_ss_idea = { # 사무국 친위대
@@ -1054,22 +1815,6 @@ ideas = {
 			}
 			modifier = {
 				drift_defence_factor = 0.50
-			}
-		}
-		
-		RED_welcome_immigrate_idea = { #이주민 환영
-			name = RED_welcome_immigrate_idea
-
-			picture = generic_manpower_bonus
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-			modifier = {
-				monthly_population = 3
-				stability_weekly_factor = -0.02
-				war_support_weekly_factor = -0.03
 			}
 		}
 
@@ -1309,6 +2054,21 @@ ideas = {
 				stability_factor = 0.10
 			}
 		}
+		RED_security_idea_1 = { #경비국
+			name = RED_security_idea
+			picture = RED_security_idea
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				drift_defence_factor = 0.05
+			}
+		}
 		RED_advanced_security_idea = { #경비국(강하다)
 			name = RED_security_idea
 			picture = RED_security_idea
@@ -1319,10 +2079,11 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.10
+				political_power_gain = 0.15
 				stability_factor = 0.15
 				resistance_target = -0.05
 				resistance_damage_to_garrison = -0.05
+				drift_defence_factor = 0.05
 			}
 		}
 		RED_nkvd_security_idea = { #내무부
@@ -1819,7 +2580,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.01
+				conscription = 0.005
 				army_core_defence_factor = 0.1
 			}
 		}
@@ -1828,7 +2589,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.015
+				conscription = 0.01
 				training_time_factor = -0.3
 				army_core_defence_factor = 0.1
 			}
@@ -1838,7 +2599,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.015
+				conscription = 0.01
 				army_core_defence_factor = 0.1
 			}
 			equipment_bonus = {
@@ -1853,7 +2614,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.02
+				conscription = 0.015
 				training_time_factor = -0.3
 				army_core_defence_factor = 0.1
 			}
@@ -1869,7 +2630,7 @@ ideas = {
 			picture = generic_wall_line
 			modifier = {
 				mobilization_laws_cost_factor = -0.2
-				conscription = 0.025
+				conscription = 0.02
 				training_time_factor = -0.3
 				mobilization_speed = 0.15
 				recruitable_population = 0.1

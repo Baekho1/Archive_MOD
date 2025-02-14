@@ -49,6 +49,20 @@ SHA_invade_of_Hyakkiyako_cat = {
 		}
 	}
 }
+HYA_invade_of_Hyakkiyako_cat = {
+	icon = GFX_decision_category_GER_war_planning
+
+	picture = GFX_decision_cat_picture_operational_planning
+
+	priority = 11
+
+	allowed = {
+		original_tag = HYA
+	}
+
+	visible = {
+	}
+}
 SHA_balance_of_power_category = {
 	priority = 0
 	icon = GFX_decision_category_power_struggle

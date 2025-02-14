@@ -524,35 +524,6 @@ characters={
 			}
 		}
 	}
-	SHA_arthur_seyss_inquart={
-		name=AUS_arthur_seyss-inquart
-		portraits={
-			civilian={
-				large = "GFX_portrait_AUS_arthur_seyss_inquart"
-				small = "GFX_portrait_AUS_arthur_seyss_inquart_small"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SHA_arthur_seyss_inquart_political_advisor
-			allowed = {
-				original_tag = SHA
-			}
-			available = {
-				NOT = { country_exists = AUS }
-				OR = {
-					has_completed_focus = SHA_Contact_with_Austrian_militia
-				}
-			}
-			traits  = {
-				prince_of_terror 
-			}
-			cost = 150
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
 
 	SHA_elizabet_von_gutmann = {
 		advisor = {

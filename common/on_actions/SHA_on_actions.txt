@@ -13,6 +13,19 @@ on_actions = {
 				ROOT = {
 					clr_country_flag = HYA_focus_12_flag
 					activate_mission = HYA_war_with_southern_kivotos_decision
+					set_variable = { global.BAKSANWAR_on_war_relation_added_tag = THIS }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = SHA }
+					ROOT = { has_country_flag = SHA_invade_of_Hyakkiyako_flag }
+					FROM =  { original_tag = HYA }
+				}
+				ROOT = {
+					clr_country_flag = SHA_invade_of_Hyakkiyako_flag
+					activate_mission = SHA_war_with_southern_kivotos_decision
+					set_variable = { global.BAKSANWAR_on_war_relation_added_tag = THIS }
 				}
 			}
 		}

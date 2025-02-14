@@ -553,6 +553,10 @@
  ABY_federal_government: "아비도스 연방정부"
  ABY_federal_government_DEF: "아비도스 연방정부"
  ABY_federal_government_ADJ: "연방정부"
+
+ ABY_military_government: "아비도스 군사정부"
+ ABY_military_government_DEF: "아비도스 군사정부"
+ ABY_military_government_ADJ: "연방정부"
  
  ABY_HYA_federation: "아비도스-백귀야행 연방학원"
  ABY_HYA_federation_DEF: "아비도스-백귀야행 연방학원"
@@ -606,9 +610,9 @@
  ABY_union_school_DEF: "아비도스 연방학교"
  ABY_union_school_ADJ: "아비도스"
 
- ABY_PRE_UNION: "아비도스 연방"
- ABY_PRE_UNION_DEF: "아비도스 연방"
- ABY_PRE_UNION_ADJ: "연방"
+ ABY_PRE_UNION: "아비도스 인민공화국"
+ ABY_PRE_UNION_DEF: "아비도스 인민공화국"
+ ABY_PRE_UNION_ADJ: "아비도스"
 
  ABY_UNION: "연방"
  ABY_UNION_DEF: "연방"
@@ -742,13 +746,29 @@
  ABY_COLOR_defense_KSP_DEF: "발키리 보호지구"
  ABY_COLOR_defense_KSP_ADJ: "발키리 보호지구"
   
- ABY_neptis_nation_1: "아비도스 네프티스"
- ABY_neptis_nation_1_DEF: "아비도스 네프티스"
+ ABY_neptis_nation_1: "네프티스 그룹"
+ ABY_neptis_nation_1_DEF: "네프티스 그룹"
  ABY_neptis_nation_1_ADJ: "네프티스"
 
- ABY_neptis_nation_2: "네프티스 그룹"
- ABY_neptis_nation_2_DEF: "네프티스 그룹"
- ABY_neptis_nation_2_ADJ: "네프티스 그룹"
+ ABY_neptis_nation_2: "네프티스 PMC"
+ ABY_neptis_nation_2_DEF: "네프티스 PMC"
+ ABY_neptis_nation_2_ADJ: "네프티스"
+
+ ABY_neptis_nation_3: "네프티스 컨스트럭션"
+ ABY_neptis_nation_3_DEF: "네프티스 컨스트럭션"
+ ABY_neptis_nation_3_ADJ: "네프티스"
+
+ ABY_neptis_nation_4: "네프티스-로스차일드 펀드"
+ ABY_neptis_nation_4_DEF: "네프티스-로스차일드 펀드"
+ ABY_neptis_nation_4_ADJ: "네프티스"
+
+ ABY_neptis_nation_5: "네프티스 케미컬 리파이너리"
+ ABY_neptis_nation_5_DEF: "네프티스 케미컬 리파이너리"
+ ABY_neptis_nation_5_ADJ: "네프티스"
+
+ ABY_neptis_nation_6: "네프티스 저너리 익스프레스"
+ ABY_neptis_nation_6_DEF: "네프티스 저너리 익스프레스"
+ ABY_neptis_nation_6_ADJ: "네프티스"
   
  ABY_highlander_nation_1: "하이랜더 철도학원"
  ABY_highlander_nation_1_DEF: "하이랜더 철도학원"
@@ -900,18 +920,18 @@
  ABY_zapadoslavia_neutrality_ADJ: "자파도슬라비아"
  ABY_zapadoslavia_communism_ADJ: "서슬라비아"
 
- ABY_greater_abydos_fascism: "아비도스 고등연방학교"
- ABY_greater_abydos_fascism_DEF: "아비도스 고등연방학교"
- ABY_greater_abydos_democratic: "아비도스 합중 공화국"
- ABY_greater_abydos_democratic_DEF: "아비도스 합중 공화국"
- ABY_greater_abydos_neutrality: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_greater_abydos_neutrality_DEF: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_greater_abydos_communism: "미텔유로파 평의회 연합"
- ABY_greater_abydos_communism_DEF: "미텔유로파 평의회 연합"
- ABY_greater_abydos_fascism_ADJ: "아비도스 고등학교"
- ABY_greater_abydos_democratic_ADJ: "합중 공화국"
- ABY_greater_abydos_neutrality_ADJ: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_greater_abydos_communism_ADJ: "미텔유로파"
+ ABY_greater_abydos_fascism: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
+ ABY_greater_abydos_fascism_DEF: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
+ ABY_greater_abydos_democratic: "아비도스 고등연방학교"
+ ABY_greater_abydos_democratic_DEF: "아비도스 고등연방학교"
+ ABY_greater_abydos_neutrality: "네프티스 그룹 기업체"
+ ABY_greater_abydos_neutrality_DEF: "네프티스 그룹 기업체"
+ ABY_greater_abydos_communism: "아비도스 인민연방"
+ ABY_greater_abydos_communism_DEF: "아비도스 인민연방"
+ ABY_greater_abydos_fascism_ADJ: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
+ ABY_greater_abydos_democratic_ADJ: "아비도스 고등학교"
+ ABY_greater_abydos_neutrality_ADJ: "네프티스"
+ ABY_greater_abydos_communism_ADJ: "인민연방"
 
  ABY_united_europe_fascism: "범유럽국"
  ABY_united_europe_fascism_DEF: "범유럽국"
@@ -1262,21 +1282,43 @@
  YUG_partisan_country_ADJ: "유고슬라비아"
 
 
- RE1_autonomous: "덴마크 자치국"
- RE1_autonomous_DEF: "덴마크 자치국"
+ RE1_autonomous: "덴마크 자치공화국"
+ RE1_autonomous_DEF: "덴마크 자치공화국"
  RE1_autonomous_ADJ: "덴마크"
 
- RE2_autonomous: "노르웨이 자치국"
- RE2_autonomous_DEF: "노르웨이 자치국"
+ RE2_autonomous: "노르웨이 자치공화국"
+ RE2_autonomous_DEF: "노르웨이 자치공화국"
  RE2_autonomous_ADJ: "노르웨이"
 
- RE3_autonomous: "스웨덴 자치국"
- RE3_autonomous_DEF: "스웨덴 자치국"
+ RE3_autonomous: "스웨덴 자치공화국"
+ RE3_autonomous_DEF: "스웨덴 자치공화국"
  RE3_autonomous_ADJ: "스웨덴"
 
- RE4_autonomous: "핀란드 자치국"
- RE4_autonomous_DEF: "핀란드 자치국"
+ RE4_autonomous: "핀란드 자치공화국"
+ RE4_autonomous_DEF: "핀란드 자치공화국"
  RE4_autonomous_ADJ: "핀란드"
+
+ #분탕치는 체리노
+ RE1_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 덴마크 사회주의 자치 노동자 소비에트 공화국"
+ RE1_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 덴마크 사회주의 자치 노동자 소비에트 공화국"
+ RE1_autonomous_cherino_ADJ: "덴마크"
+
+ RE2_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 노르웨이 사회주의 자치 노동자 소비에트 공화국"
+ RE2_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 노르웨이 사회주의 자치 노동자 소비에트 공화국"
+ RE2_autonomous_cherino_ADJ: "노르웨이"
+
+ RE3_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 스웨덴 사회주의 자치 노동자 소비에트 공화국"
+ RE3_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 스웨덴 사회주의 자치 노동자 소비에트 공화국"
+ RE3_autonomous_cherino_ADJ: "스웨덴"
+
+
+ RE4_autonomous_cherino: "체리노 총서기 동지의 자애로운 영도 아래 이룬 핀란드 사회주의 자치 노동자 소비에트 공화국"
+ RE4_autonomous_cherino_DEF: "체리노 총서기 동지의 자애로운 영도 아래 이룬 핀란드 사회주의 자치 노동자 소비에트 공화국"
+ RE4_autonomous_cherino_ADJ: "핀란드"
+
+ RE4_finlandia_military_administration: "핀란드 자치위원회"
+ RE4_finlandia_military_administration_DEF: "핀란드 자치위원회"
+ RE4_finlandia_military_administration_ADJ: "핀란드 자치위원회"
 
  RE2_antirevolution: "붉은겨울 연방사무국"
  RE2_antirevolution_DEF: "붉은겨울 연방사무국"
@@ -1315,6 +1357,13 @@
  RED_redwinter_soviet_socialist_republic: "붉은겨울 소비에트 사회주의 공화국"
  RED_redwinter_soviet_socialist_republic_DEF: "붉은겨울 소비에트 사회주의 공화국"
  RED_redwinter_soviet_socialist_republic_ADJ: "붉은겨울"
+ RED_redwinter_soviet_socialist_republic_1: "붉은겨울 소비에트 사회주의 자치 공화국 연방"
+ RED_redwinter_soviet_socialist_republic_1_DEF: "붉은겨울 소비에트 사회주의 자치 공화국 연방"
+ RED_redwinter_soviet_socialist_republic_1_ADJ: "붉은겨울"
+
+ RE5_rebuilding_soviet: "해방지구 재건평의회"
+ RE5_rebuilding_soviet_DEF: "해방지구 재건평의회"
+ RE5_rebuilding_soviet_ADJ: "해방지구 재건평의회"
 
  VIN_indochina_civilwar_jap: "베트남 복국동맹회"
  VIN_indochina_civilwar_jap_DEF: "베트남 복국동맹회"

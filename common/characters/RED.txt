@@ -11,8 +11,8 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=stalinism
-			traits={ b_tjrlwkd }
+			ideology = war_communism
+			traits={ b_tjrlwkd hate_soviet}
 			expire="1965.1.1.1"
 		}
 		field_marshal={
@@ -205,7 +205,7 @@ characters = {
 		country_leader = {
 			ideology = trotskyism
 			traits = {
-				permanent_revolutionary
+				permanent_revolutionary hate_soviet
 			}
 		}
 		advisor = {
@@ -236,7 +236,7 @@ characters = {
 			}
 
 			traits = {
-				communist_theorist
+				permanent_revolutionary
 			}
 		}
 		
@@ -763,6 +763,7 @@ characters = {
 				large = "GFX_portrait_SOV_ivan_smirnov"
 			}
 			army = {
+				large = "GFX_portrait_SOV_ivan_smirnov"
 				small = "GFX_idea_SOV_ivan_smirnov"
 			}
 		}
@@ -791,12 +792,28 @@ characters = {
 			traits = {
 				head_directorate_of_new_buildings 
 			}
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
 		}
 	}
 	RED_ivar_smilga = {
 		name = SOV_ivar_smilga
 		portraits = {
 			army = {
+				large = "GFX_portrait_SOV_ivar_smilga"
 				small = "GFX_idea_SOV_ivar_smilga"
 			}
 		}
@@ -816,9 +833,22 @@ characters = {
 				}
 			}
 			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
 			}
 			traits = {
 				soviet_economist
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
 			}
 		}
 	}
@@ -836,6 +866,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = RED_aleksandr_shlyapnikov
 			allowed = {
@@ -855,6 +890,16 @@ characters = {
 				left_trade_unionist
 			}
 		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	RED_karl_radek = {
@@ -867,6 +912,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = RED_karl_radek
 			allowed = {
@@ -887,6 +937,16 @@ characters = {
 				international_revolutionary 
 			}
 		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	RED_yevgeny_preobrazhensky = {
@@ -898,6 +958,11 @@ characters = {
 		}
 
 		advisor = {
+			available = {
+				NOT = {
+					has_character_flag = RED_in_exile_committee_flag
+				}
+			}
 			slot = political_advisor
 			idea_token = SOV_yevgeny_preobrazhensky
 			allowed = {
@@ -916,6 +981,16 @@ characters = {
 			}
 			traits = {
 				ecomonist_publicist 
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
 			}
 		}
 	}
@@ -954,8 +1029,15 @@ characters = {
 			slot = political_advisor
 			idea_token = DEN_niels_bohr
 			available = {
-				has_completed_focus = RED_economy_focus_4
-				owns_state = 37
+				has_completed_focus = RED_economy_focus_3
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 			visible = {
 				has_completed_focus = RED_great_punch
@@ -983,10 +1065,17 @@ characters = {
 				captain_of_industry 
 			}
 			visible = {
-				has_completed_focus = RED_economy_focus_4
+				has_completed_focus = RED_economy_focus_3
 			}
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 			cost = 150
 		}
@@ -1003,10 +1092,17 @@ characters = {
 			slot = political_advisor
 			idea_token = DEN_vilhelm_buhl
 			visible = {
-				has_completed_focus = RED_economy_focus_4
+				has_completed_focus = RED_economy_focus_3
 			}
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 			traits = {
 				finansminister 
@@ -1022,7 +1118,7 @@ characters = {
 				financial_expert
 			}
 			visible = {
-				has_completed_focus = RED_economy_focus_4
+				has_completed_focus = RED_economy_focus_3
 			}
 			cost = 150
 		}
@@ -1054,7 +1150,14 @@ characters = {
 				has_completed_focus = RED_economy_focus_16
 			}
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 		}
 	}
@@ -1077,7 +1180,14 @@ characters = {
 			}
 			cost = 150
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 		}
 	}
@@ -1119,7 +1229,14 @@ characters = {
 				has_completed_focus = RED_economy_focus_10
 			}
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 			}
 		}
 	}
@@ -1141,7 +1258,14 @@ characters = {
 				has_completed_focus = RED_economy_focus_12
 			}
 			available = {
-				owns_state = 110
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 110
+					}
+					owns_state = 110
+				}
 			}
 		}
 	}
@@ -1188,7 +1312,14 @@ characters = {
 				has_completed_focus = RED_economy_focus_18
 			}
 			available = {
-				owns_state = 110
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 110
+					}
+					owns_state = 110
+				}
 			}
 		}
 	}
@@ -1210,7 +1341,14 @@ characters = {
 				has_completed_focus = RED_army_production_improve
 			}
 			available = {
-				owns_state = 37
+				OR = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+						is_ally_with = RED
+						owns_state = 37
+					}
+					owns_state = 37
+				}
 				has_completed_focus = RED_rearming_focus_0
 			}
 		}

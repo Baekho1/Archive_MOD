@@ -506,7 +506,7 @@ HYA_centralization_power_balance_decisions = {
 		}
 	}
 }
-war_measures = {
+HYA_invade_of_Hyakkiyako_cat = {
 	HYA_war_with_southern_kivotos_decision = {
 		priority = 100
 		icon = GFX_decision_generic_political_rally
@@ -515,13 +515,13 @@ war_measures = {
 		}
 		available = {
 			has_war_with = SHA
-			any_war_score > 35
+			any_war_score > 50
 			SHA = { surrender_progress > 0.35 }
 		}
 		cancel_trigger = {
 			has_war_with = SHA
 			surrender_progress > 0.35
-			SHA = { any_war_score > 35 }
+			SHA = { any_war_score > 50 }
 		}
 		is_good = no
 		days_mission_timeout = 365

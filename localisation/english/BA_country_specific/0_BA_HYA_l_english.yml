@@ -259,9 +259,14 @@
  HYA_anarch_state:0 "아나키즘 사회"
  HYA_anarchist_culture:0 "문화적 아나키즘"
  HYA_fort_idea:0 "백귀야행 요새 위원회"
+ HYA_event_idea_16: "항전"
+ HYA_event_idea_16_desc: "좋은 의미인지는 모르겠으나 저들은 우리의 영유권 분쟁 지역 양도를 포함한 조건부 항복 제안을 거절하였으며 우리 국가를 향한 최종전쟁을 선포했습니다. 이로써 그들은 우리 내부의 싸우기 싫어하는 자들에게 강제로 싸워야 할 이유를 만들어 주었습니다."
  #디시전
  HYA_revenge_drama: "복수전"
  HYA_revenge_drama_dd: "영토 재수복 선언"
+
+ SHA_war_with_southern_kivotos_decision:0 "벚나무 벌목"
+ SHA_war_with_southern_kivotos_decision_tt:0 "전쟁 발발 §Y365일§! 이내 [HYA.GetNameDef] 측의 항복도를 크게 떨어뜨린다면, [HYA.GetNameDef] 측은 무조건 평화를 수락하거나 치명적인 사기 저하에 직면하게 될 것입니다."
 
  HYA_war_with_southern_kivotos_decision:0 "속전 속결의 전쟁"
  HYA_war_with_southern_kivotos_decision_tt:0 "전쟁 발발 §Y365일§! 이내 [SHA.GetNameDef] 측의 항복도를 크게 떨어뜨린다면, [SHA.GetNameDef] 측은 무조건 평화를 수락하거나 치명적인 사기 저하에 직면하게 될 것입니다."

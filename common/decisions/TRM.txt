@@ -4233,45 +4233,38 @@ TRN_after_war_decisions = {
 		visible = {
 			has_completed_focus = TRM_anti_gehenna_focus_2
 		}
-		on_map_mode = map_only
-		target_array = TRM.controlled_states
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				has_resistance = yes
-				OR = {
-					is_core_of = GEM
-					is_core_of = GEH
-					#state = 58
-					#state = 909
-				}
-			}
-		}
 
 		fire_only_once = no
-		days_remove = 30
+		days_remove = 90
 		cost = 25
 		ai_will_do = {
-			base = 20
+			base = 10
 			modifier = {
-				has_political_power > 149
-				factor = 3
+				add = 100
+				GEM = {
+					all_core_state = {
+						resistance > 25
+					}
+				}
 			}
 		}
 		modifier = {
 		}
 		complete_effect = {
-		}
-		remove_effect = {
-			FROM = {
+			every_owned_state = {
+				limit = {
+					has_resistance = yes
+					OR = {
+						is_core_of = GEM
+						is_core_of = GEH
+					}
+				}
 				add_resistance = -5
 			}
 		}
-	}
-
-	TRM_raid_gehenna_resistance_tooltip = {
-		visible = { always = no }
-		available = { always = no }
+		remove_effect = {
+			unlock_decision_tooltip = TRM_raid_gehenna_resistance
+		}
 	}
 	
 	TRM_tighten_control = {

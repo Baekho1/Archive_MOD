@@ -14,3 +14,10 @@ RED_instability_system_operational = {
 		has_idea = RED_military_government_idea_4
 	}
 }
+RED_is_a_redwinter_viable_nation = {
+	exists = yes
+	OR = {
+		original_tag = RE4
+		original_tag = RED
+	}
+}

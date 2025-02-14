@@ -262,6 +262,11 @@ RED_bunker_modifier = {
 	ground_attack_factor = -0.1
 	local_org_regain = -0.1
 }
+RED_collective_farming_modifier = {
+	recruitable_population_factor = 0.1
+	state_resources_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+}
 ENG_we_will_win = {
 	icon = GFX_idea_CZE_planning_bonus
 	remove_trigger = {

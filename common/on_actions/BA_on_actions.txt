@@ -28,6 +28,21 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
+			#GEM iron concessions
+			GEM = {
+				give_resource_rights = { receiver = GEH state = 51 }
+				give_resource_rights = { receiver = GEH state = 987 }
+				give_resource_rights = { receiver = GEH state = 990 }
+			}
+		}
+		effect = {
+			#Set Iranian initial states (for Anglo-Soviet invasion of Iran)
+			GEM = {
+				every_owned_state = {
+					limit = { is_core_of = GEM }
+					add_to_array = { GEH_gem_initial_states = PREV }
+				}
+			}
 			every_country = {
 				limit = {
 					Kivotos_tag = yes

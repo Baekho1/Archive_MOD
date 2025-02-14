@@ -101,7 +101,7 @@
 	}
 	offset = {
 		x = -35
-		y = 0
+		y = 8
 		trigger = {
 			OR = {
 				original_tag = SHA
@@ -150,8 +150,8 @@
 		}
 	}
 	offset = {
-		x = 17
-		y = 5
+		x = 14
+		y = 7
 		trigger = {
 			OR = {
 				original_tag = ABY
@@ -721,7 +721,24 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		add_ideas = BA_horror_of_war
+		ROOT = {
+			if = {
+				limit = {
+					original_tag = ABY
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = ABY_idea_two_00
+						add_idea = ABY_idea_two_0000
+					}
+				}
+				add_to_variable = {ABY_var_army_core_attack_factor = 0.05}
+				add_to_variable = {ABY_var_army_core_defence_factor = 0.1}
+			}
+			else_if = {
+				add_ideas = BA_horror_of_war
+			}
+		}
 		if = {
 			limit = {
 				has_idea = low_economic_mobilisation

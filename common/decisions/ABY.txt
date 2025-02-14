@@ -16118,7 +16118,7 @@ ABY_descision_category_pay_dept = {
 		priority = 1
 		days_remove = 365
 
-		cost = 150
+		cost = 0
 		
 		visible = {       
 			tag = ABY
@@ -16134,6 +16134,7 @@ ABY_descision_category_pay_dept = {
 		}    
 
 		modifier = {
+			political_power_gain = -0.1
 		}      
 
 		complete_effect = {
@@ -20593,6 +20594,10 @@ ABY_descision_category_federal_government = {
 			remove_ideas = {
 				ABY_idea_bohemia_and_austria
 			}
+			add_timed_idea = {
+				idea = ABY_idea_bohemia_and_austria_2
+				days = 140
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = -1
@@ -20780,4 +20785,133 @@ ABY_descision_category_federal_government = {
 			} 
 		}
 	} 
+}
+ABY_descision_category_suspecious_move = {
+	ABY_descision_suspecious_military_move = {
+		days_mission_timeout = 40
+		fire_only_once = yes
+		priority = 1
+		activation = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {
+				has_country_flag = ABY_flag_arrested_fascist
+			}
+		}
+
+		visible = {
+			tag = ABY
+			has_country_flag = ABY_flag_fascist_terror
+		}
+
+        allowed = {
+            tag = ABY
+        }
+		available = {
+			has_country_flag = ABY_flag_arrested_fascist
+			
+    	}
+		complete_effect = {
+			country_event = {
+				id = ABY_new_event.213
+			}
+		}
+		timeout_effect = { 
+			country_event = {
+				id = ABY_new_event.214
+			}
+		}
+	} 
+	ABY_descision_arrest_fascist_1 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_1
+		}
+
+        available = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_1
+        }
+
+		cost = ABY_plan_cost_var
+
+		days_remove = 5
+
+        remove_effect = {  
+			country_event = {
+				id = ABY_new_event.216
+			}
+        }
+	}
+	ABY_descision_arrest_fascist_2 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_2
+		}
+
+        available = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_2
+        }
+
+		cost = ABY_plan_cost_var
+
+		days_remove = 5
+
+        remove_effect = {  
+			country_event = {
+				id = ABY_new_event.217
+			}
+        }
+	}
+	ABY_descision_arrest_fascist_3 = {
+        priority = 1
+
+        allowed = {
+            tag = ABY
+        }
+
+		visible = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_3
+		}
+
+        available = {
+			has_country_flag = ABY_flag_fascist_terror
+			NOT = {has_country_flag = ABY_flag_terror_occured}
+			NOT = {has_country_flag = ABY_flag_arrested_fascist}
+			has_country_flag = ABY_flag_arrest_fascist_3
+        }
+
+		cost = ABY_plan_cost_var
+
+		days_remove = 5
+
+        remove_effect = {  
+			country_event = {
+				id = ABY_new_event.218
+			}
+        }
+	}
 }

@@ -33,6 +33,10 @@ focus_tree = {
 
         completion_reward = { #차후에 효과 추가 예정
             add_political_power = 50
+            set_power_balance = {
+                id = PAN_power_balance
+                set_value = 0
+            }
         }
     }
     
@@ -45,6 +49,9 @@ focus_tree = {
 
         prerequisite = {
             focus = PAN_upcoming_eleciotn_day
+        }
+        mutually_exclusive = {
+            focus = PAN_with_Popular_Front
         }
 
         completion_reward = { #차후에 효과 추가 예정

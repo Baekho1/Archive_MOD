@@ -43,6 +43,21 @@ ideas = {
 				neutrality_drift = -0.01
 			}
 		}
+		HYA_event_idea_16 = { 
+			picture = chi_war_of_resistance3
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_weekly = 0.005
+				surrender_limit = 2
+				mobilization_speed = 0.50
+			}
+			targeted_modifier = {
+				tag = var:global.BAKSANWAR_on_war_relation_added_tag
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.40
+			}
+		}
 		SHA_HYA_wjswodqotkd = { 
 			name = HYA_SHA_wjswodqotkd
 			picture = SPR_seize_the_gold_reserves

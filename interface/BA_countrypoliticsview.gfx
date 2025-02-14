@@ -1,27 +1,27 @@
 spriteTypes = {
 
 	spriteType = {
-        name = GFX_ideology_seia
+        name = "GFX_ideology_seia"
     	texturefile = gfx/interface/ideologies/seia.dds
     }
 	
 	spriteType = {
-        name = GFX_ideology_manyoshu
+        name = "GFX_ideology_manyoshu"
         texturefile = gfx/interface/ideologies/manyoshu.dds
     }
 
     spriteType = {
-        name = GFX_ideology_singican
+        name = "GFX_ideology_singican"
         texturefile = gfx/interface/ideologies/singican.dds
     }
 
     spriteType = {
-        name = GFX_ideology_yunowka
+        name = "GFX_ideology_yunowka"
         texturefile = gfx/interface/ideologies/yunowka.dds
     }
 
     spriteType = {
-        name = GFX_ideology_uranotsukasa
+        name = "GFX_ideology_uranotsukasa"
         texturefile = gfx/interface/ideologies/uranotsukasa.dds
     }
 
@@ -77,6 +77,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_ideology_cou_kaya_dictatorship"
+		texturefile = "gfx/interface/ideologies/cou_kaya_dictatorship.png"
+	}
+	
+	spriteType = {
 		name = "GFX_ideology_technocracy"
 		texturefile = "gfx/interface/ideologies/technocracy.tga"
 	}
@@ -99,6 +104,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_syndicalism"
 		texturefile = "gfx/interface/ideologies/syndicalism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_war_communism"
+		texturefile = "gfx/interface/ideologies/war_communism.dds"
 	}
 	spriteType = {
 		name = "GFX_ideology_pater_nazism"
@@ -137,8 +146,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
 	}
 	spriteType = {
+		name = "GFX_ideology_Cohabitism"
+		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
+	}
+	spriteType = {
 		name = "GFX_ideology_Libertic_Integralism"
-		texturefile = "gfx/interface/ideologies/Libertic_Integralism.tga"
+		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_culturlic_Integralism"
+		texturefile = "gfx/interface/ideologies/culturlic_Integralism.tga"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporate_state_nephtys"
+		texturefile = "gfx/interface/ideologies/corporate_state_nephtys.tga"
 	}
 	spriteType = {
 		name = "GFX_ideology_police_nationalism"

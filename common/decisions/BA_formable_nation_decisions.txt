@@ -691,78 +691,49 @@ BA_greater_ABY_category = {
 
 		available = {
 			is_subject = no
-			check_variable = {
-                var = ABY_num_of_students_var
-                value = 5000
-                compare = greater_than_or_equals
-                tooltip = ABY_num_of_students_5000_tooltip
-            }
 			64 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			65 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			67 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			68 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			66 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			762 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			86 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			60 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			50 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			52 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			53 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			54 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 			55 = {
-				compliance > 35
+				is_core_of = ABY
 			}
 		}
 
 		complete_effect = {
-            add_to_variable = {
-                var = ABY_num_of_students_var
-                value = 5000
-                tooltip = ABY_add_num_of_students_5000_tooltip
-            }
-            add_to_variable = {
-                var = ABY_num_of_monthly_students_var
-                value = 100
-                tooltip = ABY_add_num_of_monthly_students_100_tooltip
-            }
-			69 = {add_core_of = ABY}
-			64 = {add_core_of = ABY}
-			65 = {add_core_of = ABY}
-			67 = {add_core_of = ABY}
-			68 = {add_core_of = ABY}
-			66 = {add_core_of = ABY}
-			762 = {add_core_of = ABY}
-			86 = {add_core_of = ABY}
-			60 = {add_core_of = ABY}
-			50 = {add_core_of = ABY}
-			52 = {add_core_of = ABY}
-			53 = {add_core_of = ABY}
-			54 = {add_core_of = ABY}
-			55 = {add_core_of = ABY}
+            add_stability = 0.25
 			set_cosmetic_tag = ABY_greater_abydos
 			set_province_name = {
 				id = 692

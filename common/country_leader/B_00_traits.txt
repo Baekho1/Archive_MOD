@@ -1032,15 +1032,34 @@ leader_traits = {
 	}
 	ABY_trait_wolf_god = { #"늑대신"
 		random = no
+		political_power_factor = -0.1
 		stability_factor = -0.1
 		war_support_factor = 0.1
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 	}
+	ABY_trait_wolf_god_2 = { #"늑대신"
+		random = no
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		conscription = 0.02
+	}
 	ABY_trait_neko_god = { #"고양이신"
 		random = no
-		stability_factor = 0.2
-		political_power_gain = -0.15
+		drift_defence_factor = 0.25
+		communism_drift = 0.1
+		stability_factor = -0.1
+		conscription_factor = 0.15
+	}
+	ABY_trait_neko_god_2 = { #"고양이신"
+		random = no
+		drift_defence_factor = 0.5
+		war_support_weekly = 0.005
+		communism_drift = 0.25
+		stability_factor = -0.25
+		conscription_factor = 0.25
 	}
 	ABY_trait_black_sun = { #"검은 태양의 총독"
 		random = no
@@ -1110,10 +1129,23 @@ leader_traits = {
 		democratic_drift = 0.05
 		political_power_factor = 0.10
 	}
+	ABY_trait_democratist = { #"임시정부"
+		random = no
+		drift_defence_factor = 0.25
+		democratic_drift = 0.1
+	}
 	ABY_trait_pre_government = { #"임시정부"
 		random = no
-		stability_factor = -0.05
-		war_support_factor = 0.10
+		political_power_factor = -0.15
+		drift_defence_factor = -0.15
+		stability_factor = -0.10
+		war_support_factor = -0.10
+	}
+	ABY_trait_pre_government_2 = { #"임시정부"
+		random = no
+		political_power_factor = -0.15
+		drift_defence_factor = -0.15
+		stability_factor = -0.10
 	}
 	ABY_trait_emergency_government = { #"비상위원회"
 		random = no
@@ -1164,11 +1196,11 @@ leader_traits = {
 	}
 	ABY_trait_school_leader = { #"학생회장"
 		random = no
-		political_power_gain = 0.5
+		political_power_factor = 0.15
 		democratic_drift = 0.15
-		party_popularity_stability_factor = 0.1
-		stability_factor = 0.15
-		stability_weekly = 0.005
+		party_popularity_stability_factor = 0.2
+		stability_factor = 0.1
+		drift_defence_factor = 0.25
 	}
 	ABY_trait_EU = { #"유럽 총회의"
 		random = no
@@ -1180,11 +1212,29 @@ leader_traits = {
 	}
 	ABY_trait_school_leader_2 = { #"학생회장"
 		random = no
-		political_power_gain = 0.5
+		political_power_gain = 0.1
 		communism_drift = 0.15
-		party_popularity_stability_factor = 0.1
-		stability_factor = 0.15
-		war_support_factor = 0.15
+		stability_factor = -0.1
+		war_support_factor = 0.1
+	}
+	ABY_trait_school_leader_3 = { #"학생회장"
+		random = no
+		political_power_gain = 0.25
+		communism_drift = 0.25
+		stability_factor = 0.25
+		war_support_factor = 0.1
+		compliance_gain = 0.1
+		stability_weekly = 0.005
+	}
+	ABY_trait_school_leader_4 = { #"학생회장"
+		random = no
+		political_power_gain = 0.25
+		communism_drift = 0.25
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		compliance_gain = 0.1
+		JUSTIFY_WAR_GOAL_TIME = -0.75
+		conscription = 0.02
 	}
 	ABY_idea_5_days = {
 		random = no
@@ -1222,30 +1272,27 @@ leader_traits = {
 		stability_weekly = 0.001
 		political_power_factor = 0.05
 	}
+	b_tjsehqnwkd_start = { #강철의 선도부장
+		random = no
+        stability_factor = -0.05
+        war_support_factor = -0.05
+		ai_desired_divisions_factor = -0.20
+	}
 	b_tjsehqnwkd_week = { #강철의 선도부장
 		sprite = 12
 		random = no
-		hidden_modifier = {
-			ai_desired_divisions_factor = 2
-		}
         stability_factor = 0.15
         war_support_factor = 0.10
 	}
 	b_tjsehqnwkd = { #강철의 선도부장
 		sprite = 12
 		random = no
-		hidden_modifier = {
-			ai_desired_divisions_factor = 3
-		}
         stability_factor = 0.1
         war_support_factor = 0.05
 		political_power_factor = 0.1
 	}
 	b_tjsehqnwkd2 = { #강철의 선도부장
 		random = no
-		hidden_modifier = {
-			ai_desired_divisions_factor = 3
-		}
         stability_factor = 0.05
         war_support_factor = 0.10
 		political_power_factor = 0.1
@@ -1254,9 +1301,6 @@ leader_traits = {
 	}
 	b_tjsehqnwkd3 = { #강철의 선도부장
 		random = no
-		hidden_modifier = {
-			ai_desired_divisions_factor = 3
-		}
         war_support_factor = 0.15
 		political_power_factor = 0.15
 		army_core_defence_factor = 0.05
@@ -1812,13 +1856,6 @@ leader_traits = {
 		random = no
 		consumer_goods_factor = -0.1
 		research_speed_factor = 0.01
-	}
-	b_tjrlwkd = { #체리노 서기장 동지
-		random = no
-        stability_factor = -0.15
-        war_support_factor = 0.10
-        political_power_factor = 0.15
-		communism_drift = 0.01
 	}
 	b_gurauddmlrnlwo = { #혁명의 귀재
 		random = no
@@ -2859,7 +2896,9 @@ leader_traits = {
 		sp_tag_rocket_speed_factor = 0.2
 		sp_tag_jet_speed_factor = 0.2
 		sp_air_intercontinental_bomber_speed_factor = 0.2
-		sp_air_mothership_aircraft_speed_factor = 0.2
+		sp_rockets_long_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.2
+		sp_rockets_ballistic_missile_speed_factor = 0.2
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
@@ -3198,16 +3237,52 @@ leader_traits = {
 		justify_war_goal_time = -0.75
 	}
 	#붉은겨울 연방학원
-
+	b_tjrlwkd = { #체리노 서기장 동지
+		random = no
+        stability_factor = -0.1
+        war_support_factor = 0.10
+        political_power_factor = 0.1
+		communism_drift = 0.01
+	}
+	RED_bright_polar_star = { #붉게 빛나는 혁명의 북극성
+		random = no
+		political_power_factor = 0.1
+		drift_defence_factor = 0.5
+		communism_drift = 0.2
+		war_support_factor = 0.15
+		custom_modifier_tooltip = ITA_political_reformer_tt
+		hidden_modifier = {
+			political_advisor_cost_factor = -0.25
+			air_advisor_cost_factor = -0.25
+			army_advisor_cost_factor = -0.25
+			navy_advisor_cost_factor = -0.25
+		}
+		custom_modifier_tooltip = il_duce_laws_cost_tt
+		hidden_modifier = {
+			mobilization_laws_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			economy_cost_factor = -0.15
+		}
+	}
+	RED_bright_polar_star_desc = { #위에거 설명
+		random = no
+	}
 	office_propagandist = { #사무국 선동가(토모에)
 		random = no
 		sprite = 13
 		communism_drift = 0.10
-		political_power_factor = 0.05
-		political_advisor_cost_factor = -0.5
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	office_propagandist_ = { #사무국 선동가(토모에)
+		random = no
+		sprite = 13
+		communism_drift = 0.10
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.6
 	}
 	RED_socialist_cabinet = { #사회주의 집단지도체제
 		random = no
@@ -3233,12 +3308,14 @@ leader_traits = {
 	office_commander = { #사무국 보안위원장
 		random = no
 		sprite = 13
+		resistance_growth = -0.15
+	}
+	office_commander_1 = { #혁명수비대 사령관
+		random = no
+		sprite = 13
 		political_power_factor = 0.05
-		stability_factor = -0.10
-		war_support_factor = 0.30
-		drift_defence_factor = 0.05
-		non_core_manpower = 0.05
-		resistance_damage_to_garrison = -0.15
+		drift_defence_factor = 0.1
+		resistance_growth = -0.15
 	}
 
 	hate_soviet = {
@@ -3372,7 +3449,44 @@ leader_traits = {
 		random = no
 		army_morale_factor = 0.01
 	}
+	RED_cherino_learner = { #학생운동가
+		random = no
+	}
 		#붉은겨울은 맞는데, 국민정신용 트레잇으로 쓰일 거임
+
+	RED_ivan_trait = {
+		random = no
+	}
+	RED_ivar_trait = {
+		random = no
+	}
+	RED_aleksandr_trait = {
+		random = no
+	}
+	RED_karl_trait = {
+		random = no
+	}
+	RED_yevgeny_trait = {
+		random = no
+	}
+	
+	RED_speed_fight = { #속도전
+		random = no
+		stability_factor = -0.05
+		production_speed_buildings_factor = 0.1
+	}
+	RED_more_production = { #증산의 불길
+		random = no
+		war_support_factor = -0.05
+		industrial_capacity_factory = 0.05
+	}
+	RED_creating_n_inovation = { #창조와 혁신
+		random = no
+		research_speed_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+	}
+
+
 	RED_syndicalism_politic = { #생디칼리즘 행정
 		random = no
 		drift_defence_factor = 0.15
@@ -3441,7 +3555,6 @@ leader_traits = {
 		random = no
 		industrial_capacity_factory = -0.5
 		monthly_population = 0.35
-		production_factory_efficiency_gain_factor = 0.4
 		production_factory_max_efficiency_factor = 0.4
 		research_speed_factor = 0.15
 		compliance_growth = 0.5
@@ -3450,7 +3563,6 @@ leader_traits = {
 		random = no
 		industrial_capacity_factory = -0.35
 		monthly_population = 0.15
-		production_factory_efficiency_gain_factor = 0.2
 		production_factory_max_efficiency_factor = 0.2
 		research_speed_factor = 0.075
 		compliance_growth = 0.25

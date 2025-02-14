@@ -18,12 +18,50 @@ focus_tree = {
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 
 	focus = {
+		id = GEH_start_focus
+		icon = GFX_focus_rom_parties_end
+		cost = 2
+        ai_will_do = {
+            base = 999
+        }
+		available = {
+		}
+		x = 19
+		y = 0
+		offset = {
+			trigger = {
+				OR = {
+					is_debug = yes
+					has_completed_focus = GEH_zero_congress_focus
+				}
+			}
+			x = 11
+		}
+		completion_reward = {
+			add_stability = 0.02
+			swap_ruler_traits = {
+				remove = b_tjsehqnwkd_start
+				add = b_tjsehqnwkd
+			}
+			
+			set_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 240 }
+			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+			set_country_flag = GEH_start_focus_flag
+		}
+	}
+	focus = {
 		id = GEH_zero_congress_focus
 		icon = GFX_goal_Perfect_team_zero_congress
 		cost = 15
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         select_effect = {
             country_event=hina.4
             add_political_power = 100
+			hidden_effect = {
+				country_event = { id = GEH_hidden.1 days = 2 }
+			}
         }
         ai_will_do = {
             base = 999
@@ -44,12 +82,13 @@ focus_tree = {
             }
             custom_effect_tooltip = tooltip_effect_upon_focus_completion
             country_event=hina.5
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
 		id = GEH_Nuremberg_Wehrmacht
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -68,7 +107,7 @@ focus_tree = {
 	focus = {
 		id = GEH_Regensburg_Wehrmacht
 		icon = GFX_focus_generic_conspiracy
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -87,7 +126,7 @@ focus_tree = {
 	focus = {
 		id = GEH_focus_111111
 		icon = GFX_goal_tripartite_pact
-		cost = 5
+		cost = 2
 		available = {
 		}
         ai_will_do = {
@@ -109,7 +148,11 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_focus_111111
         }
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         ai_will_do = {
             base = 80
         }
@@ -126,7 +169,40 @@ focus_tree = {
 		x = 3
 		y = 0
 		completion_reward = {
-
+			if = {
+				limit = { has_country_flag = GEH_administrative_personnel_shortage_flag }
+				set_country_flag = GEH_additional_leadership_personnel_employment_flag
+				effect_tooltip = { unlock_national_focus = GEH_additional_leadership_personnel_employment }
+			}
+			if = {
+				limit = { has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag }
+				set_country_flag = GEH_establishment_of_german_autonomous_government_flag
+				effect_tooltip = { unlock_national_focus = GEH_establishment_of_german_autonomous_government }
+			}
+			if = { #히나독재
+				limit = { has_country_flag = hina_assembly_12_flag }
+				add_stability = 0.05
+				set_country_flag = hina_assembly_h_flag
+				effect_tooltip = { unlock_national_focus = GEH_hina_route_focus }
+			}
+			else_if = { #아코
+				limit = { check_variable = { GEH_hina_a_var > 3 } }
+				add_stability = -0.03
+				set_country_flag = hina_assembly_a_flag
+				effect_tooltip = { unlock_national_focus = GEH_ako_route_focus }
+			}
+			else_if = { #이오리
+				limit = { check_variable = { GEH_hina_c_var > 3 } }
+				add_stability = -0.05
+				set_country_flag = hina_assembly_c_flag
+				effect_tooltip = { unlock_national_focus = GEH_iori_route_focus }
+			}
+			else = { #노멀
+				add_stability = 0.03
+				set_country_flag = hina_assembly_normal_flag
+				effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -135,7 +211,34 @@ focus_tree = {
 		id = GEH_Prefect_Team_muster
 		icon = GFX_goal_Prefect_Team_muster
 		cost = 5
-		available = { }
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_Prefect_Team_muster_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_Prefect_Team_muster_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
+		}
+		text_icon = GER_inner_circle_focus_style
         ai_will_do = {
             base = 200
         }
@@ -157,7 +260,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Ako
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_1_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_1_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         ai_will_do = {
             base = 333
         }
@@ -176,7 +305,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Chinatsu
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_2_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_2_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         prerequisite = {
             focus = GEH_Prefect_Team_muster
         }
@@ -195,7 +350,33 @@ focus_tree = {
 		icon = GFX_goal_PrefectTeam_muster_Iori
 		cost = 5
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_rework_focus_3_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_hina
+						FLAG_DAYS = [?GEH_rework_focus_3_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_focus_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_hina
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
+		text_icon = GER_inner_circle_focus_style
         prerequisite = {
             focus = GEH_Prefect_Team_muster
         }
@@ -212,7 +393,7 @@ focus_tree = {
 	focus = {
 		id = GEH_get_legitimacy
 		icon = GFX_goal_GEH_get_legitimacy
-		cost = 5
+		cost = 2
 		available = {
             OR = {
 				custom_trigger_tooltip = {
@@ -223,23 +404,26 @@ focus_tree = {
 				if = { limit = { has_idea = GEH_popular_support_2 }
 					has_idea = GEH_popular_support_2
 				}
-				if = { limit = { has_idea = GEH_popular_support_3 }
+				else_if = { limit = { has_idea = GEH_popular_support_3 }
 					has_idea = GEH_popular_support_3
 				}
-				if = { limit = { has_idea = GEH_popular_support_4 }
+				else_if = { limit = { has_idea = GEH_popular_support_4 }
 					has_idea = GEH_popular_support_4
 				}
-				if = { limit = { has_idea = GEH_popular_support_5 }
+				else_if = { limit = { has_idea = GEH_popular_support_5 }
 					has_idea = GEH_popular_support_5
+				}
+				else = {
+					has_idea = GEH_popular_support_2
 				}
             }
 		}
 		bypass = {
 		}
         relative_position_id = GEH_rework_focus_2
-        prerequisite = { focus =GEH_rework_focus_3 }
-        prerequisite = { focus =GEH_rework_focus_2 }
-        prerequisite = { focus =GEH_rework_focus_1 }
+        prerequisite = { focus = GEH_rework_focus_3 }
+        prerequisite = { focus = GEH_rework_focus_2 }
+        prerequisite = { focus = GEH_rework_focus_1 }
 		x = 0
 		y = 1
 		completion_reward = {
@@ -433,7 +617,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
-            country_event = { id = NextPhase.1 }
+			activate_mission = GEH_preparations_for_operation_countenance
+			custom_effect_tooltip = GEH_fear_eyes_tt
 		}
 	}
 
@@ -681,7 +866,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 			}
 		}
 		offset = {
@@ -701,11 +886,11 @@ focus_tree = {
 		}
 		available = {
 			hidden_trigger = {
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 			}
 		}
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.10
 			swap_ruler_traits = {
 				remove = b_tjsehqnwkd
 				add = b_tjsehqnwkd2
@@ -903,6 +1088,8 @@ focus_tree = {
 				remove = b_tjsehqnwkd2
 				add = b_tjsehqnwkd3
 			}
+			custom_effect_tooltip = GEH_gehenna_leader_tt
+			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
         }
         ai_will_do = {
             factor = 1
@@ -1003,7 +1190,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.02
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.10
@@ -1427,7 +1614,7 @@ focus_tree = {
 		relative_position_id = GEH_main_route_focus
 		x = -1
 		y = 1
-		cost = 5
+		cost = 2
 		prerequisite = {
 			focus = GEH_main_route_focus
 		}
@@ -1444,13 +1631,13 @@ focus_tree = {
 				limit = { original_tag = GEM }
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = medium_increase
+					modifier = large_increase
 				}
 				hidden_effect = {
 					ROOT = {
 						add_opinion_modifier = {
 							target = PREV
-							modifier = medium_increase
+							modifier = large_increase
 						}
 					}
 				}
@@ -1573,11 +1760,11 @@ focus_tree = {
         relative_position_id = GEH_second_congress_focus
         x = -2
         y = 1
-        cost = 10
+        cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = GEH_administrative_personnel_shortage_flag
+				has_country_flag = GEH_additional_leadership_personnel_employment_flag
 			}
 		}
 		offset = {
@@ -1591,6 +1778,9 @@ focus_tree = {
             focus = GEH_second_congress_focus
         }
         available = {
+			hidden_trigger = {
+				has_country_flag = GEH_additional_leadership_personnel_employment_flag
+			}
         }
 		bypass = {
 			NOT = { has_idea = GEH_administrative_personnel_shortage }
@@ -1608,11 +1798,11 @@ focus_tree = {
         relative_position_id = GEH_second_congress_focus
         x = -2
         y = 1
-        cost = 5
+        cost = 2
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag
+				has_country_flag = GEH_establishment_of_german_autonomous_government_flag
 			}
 		}
         prerequisite = {
@@ -1660,7 +1850,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_country_flag = hina_assembly_12_flag
+				has_country_flag = hina_assembly_h_flag
 				has_country_flag = hina_assembly_a_flag
 				has_country_flag = hina_assembly_c_flag
 				has_country_flag = hina_assembly_normal_flag
@@ -1755,25 +1945,31 @@ focus_tree = {
 		id = GEH_first_congress_focus
 		icon = GFX_goal_Perfect_team_first_congress
 		cost = 6
-		x = 23
+		x = 18
 		y = 0
+		prerequisite = {
+			focus = GEH_start_focus
+		}
         relative_position_id = GEH_second_congress_focus
 
 		cancelable = no
 		ai_will_do = { base = 1000 }
         available = {
-            controls_state = 52
-            controls_state = 55
-            controls_state = 59
-			has_dynamic_modifier = { modifier = GEH_HSDD_idea }
-			has_dynamic_modifier = { modifier = GEH_Chinatsu_idea }
-			has_dynamic_modifier = { modifier = GEH_Disciplinary_Committee_idea }
+			has_country_flag = GEH_unified_gehenna_flag
+			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_second_congress_focus
         }
+		offset = {
+			trigger = {
+				has_completed_focus = GEH_zero_congress_focus
+			}
+			x = 2
+		}
 		offset = {
 			trigger = {
 				is_debug = yes
 			}
-			x = 24
+			x = 26
 			y = 0
 		}
         select_effect = {

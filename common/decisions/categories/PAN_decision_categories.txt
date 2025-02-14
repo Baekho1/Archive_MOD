@@ -1,10 +1,13 @@
-PAN_election_decision = {
-    priority = 700
-    icon = GFX_decision_CHL_mapuche_liberate_hawaii
+PAN_BOP_category = {
+    icon = GFX_decision_category_usa_congress_senate_ui
+    
     allowed = {
         original_tag = PAN
     }
-    available = {
-        has_war = no
-    }   
+
+    priority = 700
+
+    visible = {
+        has_completed_focus = PAN_upcoming_eleciotn_day
+    }
 }

@@ -1,31 +1,5 @@
 characters={
 
-#	HEU_uihoe = {
-#		name=HEU_uihoe
-#		portraits={
-#			civilian={
-#				large="gfx/leaders/HEU/HEU_uihoe.tga"
-#			}
-#		}
-#		country_leader={
-#			ideology=liberalism
-#			expire="1965.1.1.1"
-#		}
-#	}
-#
-#	HEU_nojoyeonmaeng = {
-#		name=HEU_nojoyeonmaeng
-#		portraits={
-#			civilian={
-#				large=GFX_portrait_SOV_supreme_soviet
-#			}
-#		}
-#		country_leader={
-#			ideology=anarchist_communism
-#			expire="1965.1.1.1"
-#		}
-#	}
-
 	HEU_aru={ #리쿠하치마 아루
 		name=HEU_aru_rikuhachima
 		gender = female
@@ -38,14 +12,6 @@ characters={
 				small= "gfx/interface/advisors/HEU/HEU_ARU_S.tga"
 			}
 		}
-
-		#country_leader={
-		#	ideology=hardboiled_noir
-		#	traits = { 
-		#		HEU_ARU_T1
-		#	}
-		#	expire="1965.1.1.1"
-		#}
 
 		country_leader={
 			ideology=centrism
@@ -126,7 +92,7 @@ characters={
 				large="gfx/leaders/HEU/HEU_kayoko_onikata_scientist.dds"
 			}
 			army={
-				large="gfx/leaders/HEU/HEU_KAYOKO.tga"
+				large="gfx/leaders/HEU/HEU_kayoko_onikata_base.dds"
 				small= "gfx/interface/advisors/HEU/HEU_KAYOKO_S.tga"
 			}
 		}
@@ -202,7 +168,7 @@ characters={
 		name=HEU_mutsuki_asagi
 		portraits={
 			army={
-				large="gfx/leaders/HEU/HEU_MUTSUKI.tga"
+				large="gfx/leaders/HEU/HEU_mutsuki_asagi_base.dds"
 				small="gfx/interface/advisors/HEU/HEU_MUTSUKI_S.tga"
 			}
 		}
@@ -260,12 +226,17 @@ characters={
 	HEU_gkfnzk={ #이구사 하루카
 		name=HEU_haruka_igusa
 		portraits={
+			civilian={
+				large="gfx/leaders/HEU/HEU_haruka_igusa_scientist.dds"
+			}
 			army={
-				large="gfx/leaders/HEU/HEU_HARUKA.tga"
+				large="gfx/leaders/HEU/HEU_haruka_igusa_base.dds"
 				small= "gfx/interface/advisors/HEU/HEU_HARUKA_S.tga"
 			}
 		}
+
 		gender = female
+
 		corps_commander={ 
 			traits={ trait_reckless Brilliant_Strategist Infantry_Officer front_line_general }
 			skill=3
@@ -275,6 +246,7 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 		}
+
 		advisor={
 			slot = political_advisor
 			idea_token = HEU_gkfnzk
@@ -290,6 +262,7 @@ characters={
 				factor = 24.000
 			}
 		}
+
 		advisor={
 			cost = 150
 			slot = high_command
@@ -307,6 +280,13 @@ characters={
 
 			ai_will_do = {
 				factor = 24.000
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_land = 2
 			}
 		}
 	}

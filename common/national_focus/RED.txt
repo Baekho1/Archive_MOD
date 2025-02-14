@@ -2,6 +2,9 @@ focus_tree = {
 	id = RED_focus_tree
 	shared_focus = BA_new_world_technology
 	
+	shared_focus = RE4_create_of_defense_committee
+	shared_focus = RE4_Defense_Commission_Investment
+	
 	country = {
 		factor = 0
 		modifier = {
@@ -26,7 +29,7 @@ focus_tree = {
 	}
 	shortcut = {
 		name = RED_focus_shortcut_industry_2
-		target = RED_club_focus_0
+		target = RED_club_focus_4
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
@@ -86,6 +89,9 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = RED_land_research
+					NOT = {
+						has_country_flag = RED_population_issue_solved_flag
+					}
 				}
 				unlock_decision_tooltip = RED_population_issue_to_south
 			}
@@ -124,6 +130,9 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = RED_land_research
+					NOT = {
+						has_country_flag = RED_population_issue_solved_flag
+					}
 				}
 				unlock_decision_tooltip = RED_population_issue_to_north
 			}
@@ -164,7 +173,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = RED_land_research }
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -176,14 +185,33 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			if = {
+				limit = {
+					has_completed_focus = RED_accept_trotskism
+				}
+				has_completed_focus = RED_redwinter_office
+			}
 		}
-		
+		offset = {
+			x = 5
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RED_doomed_economy_idea_1
-				add_idea = RED_doomed_economy_idea_2
+			if = {
+				limit = {
+					OR = {
+						has_idea = RED_doomed_economy_idea
+						has_idea = RED_doomed_economy_idea_1
+					}
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -203,12 +231,62 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { # 용역부 회유
+		id = RED_entice_publicworks
+		dynamic = yes
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = RED_economy_dev_plan }
+		x = -4
+		y = 1
+		relative_position_id = RED_economy_dev_plan
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			num_of_civilian_factories > 50
+		}
+		offset = {
+			x = 5
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
+		offset = {
+			x = 8
+			trigger = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
+		offset = {
+			x = 8
+			trigger = {
+				has_completed_focus = RED_industrial_planning
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = RED_technician
+			custom_effect_tooltip = RED_entice_publicworks_tt
+			effect_tooltip = {
+				add_dynamic_modifier = {
+					modifier = RED_labor_party_dynamic_modifier
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			effect_tooltip = {
+				unlock_national_focus = RED_rearming_focus_1
+			}
+		}
+	}
 	focus = { # 철도망 개선
 		id = RED_improve_railway_network
 
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = RED_economy_dev_plan }
-		x = -4
+		x = -6
 		y = 1
 		relative_position_id = RED_economy_dev_plan
 		cost = 4
@@ -217,9 +295,21 @@ focus_tree = {
 			factor = 100
 		}
 		offset = {
-			x = 2
+			x = 5
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
+		offset = {
+			x = 8
 			trigger = {
 				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
+		offset = {
+			x = 8
+			trigger = {
+				has_completed_focus = RED_industrial_planning
 			}
 		}
 
@@ -269,18 +359,25 @@ focus_tree = {
 				}
 				unlock_decision_tooltip = RED_population_issue_down_to_country
 			}
+			if = {
+				limit ={
+					has_completed_focus = RED_accept_trotskism
+				}
+				effect_tooltip = {
+					unlock_national_focus = RED_depress_locals
+				}
+			}
 		}
 	}
 
-	focus = { # 용역부 회유
-		id = RED_entice_publicworks
-		dynamic = yes
-		icon = GFX_goal_generic_construction2
+	focus = { # 산업 기획
+		id = RED_industrial_planning
+		icon = GFX_focus_GER_kdf_wagen
 		prerequisite = { focus = RED_economy_dev_plan }
 		x = -2
 		y = 1
 		relative_position_id = RED_economy_dev_plan
-		cost = 4
+		cost = 2
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -289,12 +386,15 @@ focus_tree = {
 		offset = {
 			x = 2
 			trigger = {
-				has_completed_focus = RED_entice_publicworks
+				has_completed_focus = RED_industrial_planning
 			}
 		}
 		allow_branch = {
 			NOT = {
 				has_completed_focus = RED_new_economy_focus_0
+			}
+			NOT = {
+				has_completed_focus = RED_economy_focus_9
 			}
 		}
 		bypass = {
@@ -304,15 +404,18 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = RED_new_economy_focus_0
+			focus = RED_economy_focus_9
 		}
 
 		completion_reward = {
-			add_stability = 0.05
-			add_dynamic_modifier = {
-				modifier = RED_labor_party_dynamic_modifier
-			}
-			effect_tooltip = {
-				unlock_national_focus = RED_rearming_focus_1
+			add_political_power = 30
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
 			}
 			hidden_effect = {
 				load_focus_tree = {
@@ -321,6 +424,18 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = tro_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.1
+				}
+			}
 		}
 	}
 	focus = { # 중공업 확장
@@ -328,14 +443,22 @@ focus_tree = {
 
 		icon = GFX_goal_generic_construct_civ_factory
 
-		prerequisite = { focus = RED_entice_publicworks }
+		prerequisite = { focus = RED_industrial_planning }
 		x = -3
 		y = 1
-		relative_position_id = RED_entice_publicworks
+		relative_position_id = RED_industrial_planning
 		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		offset = {
+			x = 2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_industrial_planning
+				}
 			}
 		}
 		completion_reward = {
@@ -347,12 +470,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 			else = {
 				swap_ideas = {
@@ -383,17 +500,24 @@ focus_tree = {
 	}
 	focus = { # 툰드라 지방 개발
 		id = RED_economy_focus_1
-
 		icon = GFX_goal_generic_production2
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
-		prerequisite = { focus = RED_entice_publicworks }
+		offset = {
+			x = 2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_industrial_planning
+				}
+			}
+		}
+		prerequisite = { focus = RED_industrial_planning }
 		x = -1
 		y = 1
-		relative_position_id = RED_entice_publicworks
+		relative_position_id = RED_industrial_planning
 		cost = 4
 
 		completion_reward = {
@@ -428,14 +552,22 @@ focus_tree = {
 
 		icon = GFX_goal_generic_construct_mil_factory
 
-		prerequisite = { focus = RED_entice_publicworks }
+		prerequisite = { focus = RED_industrial_planning }
 		x = 1
 		y = 1
-		relative_position_id = RED_entice_publicworks
+		relative_position_id = RED_industrial_planning
 		cost = 4
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		offset = {
+			x = 2
+			trigger = {
+				OR = {
+					has_completed_focus = RED_industrial_planning
+				}
 			}
 		}
 		completion_reward = {
@@ -447,12 +579,6 @@ focus_tree = {
 					remove_idea = RED_economy_recover_idea
 					add_idea = RED_economy_recover_idea_1
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = RED_economy_recover_idea_1
-				}
-				remove_ideas = RED_economy_recover_idea_1
 			}
 			else = {
 				swap_ideas = {
@@ -477,7 +603,7 @@ focus_tree = {
 				}
 			}
 			effect_tooltip = {
-				unlock_national_focus = RED_rearming_focus_6
+				unlock_national_focus = RED_arms_industrial_optimize
 			}
 		}
 	}
@@ -490,7 +616,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_upgrade_heavy_industry
 		cost = 4
-
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = RED_new_economy_focus_0
+					has_completed_focus = RED_economy_focus_9
+				}
+				has_country_flag = RED_throw_aep_away
+			}
+		}
 		available = {
    
 			NOT = {
@@ -677,19 +811,27 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 50
+			num_of_civilian_factories > 40
 		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			add_timed_idea = {
 				idea = RED_industrial_futurization_idea
-				days = 140
+				days = 240
 			}
 		}
 	}
@@ -743,26 +885,109 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #경제기적
+		id = RED_economic_miracle
+
+		icon = GFX_focus_GER_wirtschaftswunder
+		prerequisite = { focus = RED_future_production_line focus = RED_industrial_futurization}
+		x = 2
+		y = 1
+		relative_position_id = RED_industrial_futurization
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			num_of_controlled_factories > 70
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.5
+				uses = 2
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit ={
+					is_core_of = RED
+					infrastructure < 5
+				}
+				BA_increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
 
 	focus = { # 복구된 경제
 		id = RED_restored_economy
 
 		icon = GFX_focus_generic_industry_3
-		prerequisite = { focus = RED_industrial_futurization }
-		prerequisite = { focus = RED_future_production_line }
-		x = 2
-		y = 1
-		relative_position_id = RED_industrial_futurization
+		prerequisite = { focus = RED_economy_focus_24 focus = RED_new_economy_focus_15 focus = RED_new_economy_focus_16 focus = RED_economic_miracle }
+		x = 0
+		y = 8
+		relative_position_id = RED_land_research
 		cost = 4
 
 		cancel_if_invalid = yes
-
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 80
+			num_of_factories > 120
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+			x = -6
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_industrial_planning
+			}
+			x = -4
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+			x = 4
 		}
 
 		completion_reward = {
@@ -791,11 +1016,15 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = RED_entice_publicworks
+				has_completed_focus = RED_industrial_planning
+			}
+			NOT = {
+				has_completed_focus = RED_economy_focus_9
 			}
 		}
 		mutually_exclusive = {
-			focus = RED_entice_publicworks
+			focus = RED_industrial_planning
+			focus = RED_economy_focus_9
 		}
 		completion_reward = {
 			if = {
@@ -841,6 +1070,24 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		offset = {
+			x = -1
+			trigger = {
+				has_country_flag = RED_throw_aep_away
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
+		allow_branch = {
+			OR = {
+				AND = {
+					NOT = {
+						has_completed_focus = RED_industrial_planning
+						has_completed_focus = RED_economy_focus_9
+					}
+				}
+				has_country_flag = RED_throw_aep_away
+			}
+		}
 		completion_reward = {
 			add_ideas = RED_full_employment
 		}
@@ -853,6 +1100,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_new_economy_focus_1
 		cost = 4
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_3
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -878,7 +1128,14 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_2
+		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_full_employment
+				add_idea = RED_full_employment_2
+			}
 			141 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -898,8 +1155,7 @@ focus_tree = {
 	focus = { # 봉사와 헌신
 		id = RED_new_economy_focus_4
 		icon = GFX_focus_generic_workers
-		prerequisite = { focus = RED_new_economy_focus_2 }
-		prerequisite = { focus = RED_new_economy_focus_3 }
+		prerequisite = { focus = RED_new_economy_focus_2 focus = RED_new_economy_focus_3 }
 		x = 0
 		y = 2
 		relative_position_id = RED_new_economy_focus_1
@@ -1036,7 +1292,7 @@ focus_tree = {
 	}
 	focus = { # 통화 정책
 		id = RED_new_economy_focus_9
-		icon = GFX_focus_fra_devalue_the_franc
+		icon = GFX_focus_ITA_devaluate_the_lire
 		prerequisite = { focus = RED_new_economy_focus_7 }
 		x = 3
 		y = 3
@@ -1044,6 +1300,11 @@ focus_tree = {
 		cost = 4
 		available = {
 			always = no
+			OR = {
+				has_completed_focus = RED_minori_diplo_0
+				has_completed_focus = RED_advance_security
+				has_completed_focus = RED_all_power_to_redwinter
+			}
 		}
 		completion_reward = {
 			if = {
@@ -1109,7 +1370,7 @@ focus_tree = {
 	}
 	focus = { # 재산 상한제
 		id = RED_new_economy_focus_12
-		icon = GFX_focus_GER_proletarian_dictatorship
+		icon = GFX_focus_generic_price_controls
 		prerequisite = { focus = RED_new_economy_focus_10 focus = RED_new_economy_focus_11 }
 		x = 3
 		y = 5
@@ -1214,12 +1475,12 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 현지 산업 개발안
+	focus = { # 현지 기술관료 등용
 		id = RED_economy_focus_3
 
-		icon = GFX_focus_generic_treaty
+		icon = GFX_goal_TRM_class_collaboration
 		prerequisite = { focus = RED_land_research }
-		x = 7
+		x = 8
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
@@ -1227,12 +1488,18 @@ focus_tree = {
 			x = -6
 			trigger = {
 				OR = {
-					has_completed_focus = RED_entice_publicworks
+					has_completed_focus = RED_industrial_planning
 				}
 			}
 		}
 		offset = {
 			x = -2
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
+		offset = {
+			x = -6
 			trigger = {
 				OR = {
 					has_completed_focus = RED_new_economy_focus_0
@@ -1241,94 +1508,19 @@ focus_tree = {
 		}
 
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
-			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
-				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
-				}
 			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				add_state_modifier = {
-					modifier = {
-						state_production_speed_buildings_factor = 0.1
-						local_building_slots = 1
-					}
-				}
-			}
-		}
-	}
-	focus = { # 현지 기술관료 등용
-		id = RED_economy_focus_4
-		icon = GFX_goal_TRM_class_collaboration
-		prerequisite = { focus = RED_land_research }
-		x = 9
-		y = 1
-		relative_position_id = RED_land_research
-		cost = 2
-		offset = {
-			x = -6
-			trigger = {
-				OR = {
-					has_completed_focus = RED_entice_publicworks
-				}
-			}
-		}
-		offset = {
-			x = -2
-			trigger = {
-				OR = {
-					has_completed_focus = RED_new_economy_focus_0
-				}
-			}
-		}
-
-		available = {
-			date > 1937.1.1
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = -0.1
-			}
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 			}
-			add_stability = -0.03
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = DEN_knud_kristensen
 			custom_effect_tooltip = available_political_advisor
@@ -1341,6 +1533,17 @@ focus_tree = {
 					days = 2
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			RED_Tomoe = {
+				remove_trait = {
+					trait = office_propagandist
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = office_propagandist_
+					slot = political_advisor
+				}
+			}
 		}
 	}
 	focus = { #농촌 계획
@@ -1348,7 +1551,7 @@ focus_tree = {
 
 		icon = GFX_focus_generic_farmland
 		prerequisite = { focus = RED_economy_focus_3 }
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 2
@@ -1358,15 +1561,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1375,14 +1583,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_popularity = {
-				ideology = communism
-				popularity = -0.1
-			}
-			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 			}
-			add_stability = -0.03
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = DEN_knud_bach
 			custom_effect_tooltip = available_political_advisor
@@ -1391,11 +1594,10 @@ focus_tree = {
 	}
 	focus = { #농업 기계화 지원
 		id = RED_economy_focus_6
-
 		icon = GFX_focus_NZL_bob_semple_tank
 		prerequisite = { focus = RED_economy_focus_5 }
-		x = 0
-		y = 2
+		x = 3
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1404,12 +1606,17 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1444,8 +1651,8 @@ focus_tree = {
 
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		prerequisite = { focus = RED_economy_focus_5 }
-		x = -1
-		y = 3
+		x = 2
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
@@ -1454,12 +1661,17 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
+				OR = {
+					RED_axel_pehrssonbramstorp = {
+						is_political_advisor = yes
+					}
+					RED_knud_bach = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1499,15 +1711,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1549,51 +1766,51 @@ focus_tree = {
 		id = RED_economy_focus_9
 
 		icon = GFX_goal_CAN_banking_legislation
-		prerequisite = { focus = RED_economy_focus_8 }
-		prerequisite = { focus = RED_economy_focus_11 }
-		x = 2
-		y = 2
+		prerequisite = { focus = RED_economy_focus_3}
+		x = -3
+		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 4
-
+		mutually_exclusive = {
+			focus = RED_new_economy_focus_0
+			focus = RED_industrial_planning
+		}
 		available = {
-			if = {
-				limit = {
-					has_completed_focus = RED_accept_trotskism
-				}
-				OR = {
-					has_global_flag = flag_trotsky_dead
-					has_completed_focus = RED_cherino_s_systemic_revolution
-				}
-			}
+			has_idea = civilian_economy
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
-				}
-			}
-			NOT = {
 				OR = {
-					has_completed_focus = RED_the_threats_abound
-					has_completed_focus = RED_trotsky_s_world_revolution
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
-		
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_industrial_planning
+			}
+			NOT = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
 			add_timed_idea = {
 				idea = RED_first_AEP
-				years = 2
+				years = 1
 			}
 			hidden_effect = {
 				country_event = {
@@ -1601,20 +1818,105 @@ focus_tree = {
 					days = 1
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			effect_tooltip = {
+				unlock_national_focus = RED_economy_focus_21
+				unlock_national_focus = RED_economy_focus_13
+				unlock_national_focus = RED_economy_focus_10
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.1
+				}
+			}
+			custom_effect_tooltip = RED_new_economy_focus_0_tt
+			hidden_effect = {
+				load_focus_tree = {
+					tree = RED_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+	focus = { #붉은말 운동
+		id = RED_economy_focus_21
+
+		icon = GFX_focus_GER_stakhanovite_movement
+		prerequisite = { focus = RED_economy_focus_9 }
+		x = -4
+		y = 2
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				has_idea = RED_first_AEP
+				has_idea = RED_first_AEP_1
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_first_aep_tt
+			upgrade_economy_law = yes
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_1
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_2
+					add_idea = RED_economy_recover_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_economy_recover_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_economy_recover_idea
+					add_idea = RED_economy_recover_idea_1
+				}
+			}
+			add_ideas = RED_red_horse_idea
+			unlock_decision_category_tooltip = RED_red_horse_category
+			hidden_effect = {
+				scoped_play_song = BA_horse
+			}
 		}
 	}
 	focus = { #민간 사업체 지원
 		id = RED_economy_focus_10
 
 		icon = GFX_focus_DEN_no_regulations
-		prerequisite = { focus = RED_economy_focus_9 }
-		x = 1
-		y = 3
+		prerequisite = { focus = RED_economy_focus_8 }
+		x = 0
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
 		available = {
-			num_of_civilian_factories > 40
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -1622,16 +1924,47 @@ focus_tree = {
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_industrial_planning
+			}
+			NOT = {
+				has_completed_focus = RED_new_economy_focus_0
+			}
+		}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_first_aep_tt
 			swap_ideas = {
 				remove_idea = RED_first_AEP
 				add_idea = RED_first_AEP_1
 			}
-			add_stability = -0.01
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
+			if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_1
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_2
+					add_idea = RED_economy_recover_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_economy_recover_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_economy_recover_idea
+					add_idea = RED_economy_recover_idea_1
+				}
 			}
 			add_popularity = {
 				ideology = democratic
@@ -1641,6 +1974,32 @@ focus_tree = {
 			show_ideas_tooltip = DEN_arnold_peter_moller
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -1653,7 +2012,7 @@ focus_tree = {
 
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		prerequisite = { focus = RED_economy_focus_3 }
-		x = 3
+		x = -1
 		y = 1
 		relative_position_id = RED_economy_focus_3
 		cost = 4
@@ -1663,15 +2022,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_knud_kristensen = {
-					is_political_advisor = yes
+			if = {
+				limit = {
+					is_ai = no
 				}
-				RED_vilhelm_buhl = {
-					is_political_advisor = yes
-				}
-				RED_ernst_wigforss = {
-					is_political_advisor = yes
+				OR = {
+					RED_knud_kristensen = {
+						is_political_advisor = yes
+					}
+					RED_vilhelm_buhl = {
+						is_political_advisor = yes
+					}
+					RED_ernst_wigforss = {
+						is_political_advisor = yes
+					}
 				}
 			}
 		}
@@ -1704,10 +2068,10 @@ focus_tree = {
 	focus = { #노르웨이 해운업 회복
 		id = RED_economy_focus_12
 
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = RED_economy_focus_11 }
-		x = 4
-		y = 2
+		x = -1
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1721,34 +2085,47 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_stability = -0.01
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
 			}
-			random_owned_controlled_state = {
+			random_state = {
 				limit = {
 					is_coastal = yes
 					is_core_of = NOR
+					is_controlled_by_ROOT_or_ally = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
 				add_building_construction = {
 					type = dockyard
 					level = 1
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
-			random_owned_controlled_state = {
+			random_state = {
 				limit = {
 					is_coastal = yes
 					is_core_of = NOR
+					is_controlled_by_ROOT_or_ally = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
 				add_building_construction = {
 					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -1760,9 +2137,10 @@ focus_tree = {
 		id = RED_economy_focus_13
 
 		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = RED_economy_focus_9 }
 		prerequisite = { focus = RED_economy_focus_11 }
-		x = 3
-		y = 3
+		x = -2
+		y = 2
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
@@ -1779,11 +2157,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_stability = -0.01
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
+			custom_effect_tooltip = RED_first_aep_tt
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -1794,7 +2168,11 @@ focus_tree = {
 				limit = {
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -1804,9 +2182,27 @@ focus_tree = {
 				limit = {
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -1817,23 +2213,52 @@ focus_tree = {
 
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		prerequisite = { focus = RED_economy_focus_9 }
-		x = 2
-		y = 4
+		x = -3
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
 		available = {
-   
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
+			num_of_civilian_factories > 40
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_throw_aep_away
+					}
+				}
+				NOT = {
+					has_country_flag = RED_there_is_coup_flag
+				}
+				NOT = { OR = {has_idea = RED_first_AEP_1 has_idea = RED_first_AEP} }
+				has_idea = low_economic_mobilisation
 			}
-			NOT = { OR = {has_idea = RED_first_AEP_1 has_idea = RED_first_AEP} }
+			else = {
+				NOT = {
+					has_country_flag = RED_throw_aep_away
+				}
+			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
 			add_stability = -0.05
-			add_ideas = RED_second_AEP
+			add_timed_idea = {
+				idea = RED_second_AEP
+				years = 1
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			effect_tooltip = {
+				unlock_national_focus = RED_economy_focus_15
+				unlock_national_focus = RED_economy_focus_16
+				unlock_national_focus = RED_economy_focus_20
+				unlock_national_focus = RED_economy_focus_19
+			}
+			hidden_effect = {
+				country_event = {
+					id = RED_generic.12
+					days = 1
+				}
+			}
 		}
 	}
 	focus = { #화폐개혁
@@ -1841,12 +2266,18 @@ focus_tree = {
 
 		icon = GFX_focus_hol_abandon_the_gold_standard
 		prerequisite = { focus = RED_economy_focus_14 }
-		x = 1
-		y = 5
+		x = -4
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
 		available = {
+			OR = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
    
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -1855,6 +2286,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
 			if = {
 				limit = {
 					has_idea = RED_second_AEP
@@ -1870,6 +2302,33 @@ focus_tree = {
 					add_idea = RED_second_AEP_3
 				}
 			}
+			if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_1
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_doomed_economy_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_2
+					add_idea = RED_economy_recover_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_economy_recover_idea
+				}
+				swap_ideas = {
+					remove_idea = RED_economy_recover_idea
+					add_idea = RED_economy_recover_idea_1
+				}
+			}
 		}
 	}
 	focus = { #선별적 복지
@@ -1877,13 +2336,18 @@ focus_tree = {
 
 		icon = GFX_focus_FIN_socialist_welfare
 		prerequisite = { focus = RED_economy_focus_14 }
-		x = 3
-		y = 5
+		x = -2
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 2
 
 		available = {
-   
+			OR = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -1891,6 +2355,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
 			if = {
 				limit = {
 					has_idea = RED_second_AEP
@@ -1913,13 +2378,111 @@ focus_tree = {
 	focus = { #시장사회주의
 		id = RED_economy_focus_17
 		icon = GFX_focus_generic_communist_industry
-		prerequisite = { focus = RED_economy_focus_15 }
 		prerequisite = { focus = RED_economy_focus_16 }
-		x = 2
-		y = 6
+		x = -1
+		y = 5
 		relative_position_id = RED_economy_focus_3
 		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_22
+		}
 
+		available = {
+			num_of_civilian_factories > 80
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			NOT = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
+			has_country_flag = RED_market_socialism_flag
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = RED_market_socialism
+		}
+	}
+	focus = { #협동조합경제
+		id = RED_economy_focus_22
+		icon = GFX_focus_CHL_la_corporacion_araucania
+		prerequisite = { focus = RED_economy_focus_16 }
+		x = -3
+		y = 5
+		relative_position_id = RED_economy_focus_3
+		cost = 2
+		mutually_exclusive = {
+			focus = RED_economy_focus_17
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			num_of_civilian_factories > 80
+			NOT = {
+				has_idea = partial_economic_mobilisation
+				has_idea = tot_economic_mobilisation
+				has_idea = war_economy
+			}
+			NOT = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
+			has_country_flag = RED_corporatism_flag
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = RED_corporatism
+		}
+	}
+	focus = { #독립적인 중앙은행
+		id = RED_economy_focus_23
+		icon = GFX_focus_CHL_strengthen_the_central_bank
+		prerequisite = { focus = RED_economy_focus_15 }
+		prerequisite = { focus = RED_economy_focus_22 }
+		x = -4
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RED_corporatism_2
+				}
+				swap_ideas = {
+					remove_idea = RED_corporatism_2
+					add_idea = RED_corporatism_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RED_corporatism
+					add_idea = RED_corporatism_1
+				}
+			}
+		}
+	}
+	focus = { #유연한 고용
+		id = RED_economy_focus_24
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = RED_economy_focus_22 focus = RED_economy_focus_17 }
+		x = -2
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 4
 		available = {
    
 			NOT = {
@@ -1929,10 +2492,189 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			country_event = {
-				id = RED_event.22
-				days = 3
+			if = {
+				limit = {
+					has_idea = RED_corporatism_1
+				}
+				swap_ideas = {
+					remove_idea = RED_corporatism_1
+					add_idea = RED_corporatism_3
+				}
 			}
+			else_if = {
+				limit = {
+					has_idea = RED_corporatism
+				}
+				swap_ideas = {
+					remove_idea = RED_corporatism
+					add_idea = RED_corporatism_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_market_socialism
+				}
+				swap_ideas = {
+					remove_idea = RED_market_socialism
+					add_idea = RED_market_socialism_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RED_market_socialism_2
+				}
+				swap_ideas = {
+					remove_idea = RED_market_socialism_2
+					add_idea = RED_market_socialism_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RED_corporatism
+					add_idea = RED_corporatism_2
+				}
+				swap_ideas = {
+					remove_idea = RED_market_socialism_2
+					add_idea = RED_market_socialism_3
+				}
+			}
+		}
+	}
+	focus = { #농어촌 자본주의
+		id = RED_economy_focus_25
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		prerequisite = { focus = RED_economy_focus_20 }
+		prerequisite = { focus = RED_economy_focus_19 }
+		x = 1
+		y = 5
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+					is_coastal = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_ideas = RED_farming-fishing_town_capitalism
+		}
+	}
+	focus = { #폴크헴메트
+		id = RED_economy_focus_26
+		icon = GFX_focus_generic_welfare
+		prerequisite = { focus = RED_economy_focus_25 }
+		prerequisite = { focus = RED_economy_focus_17 }
+		x = 0
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_economy_focus_27
+		}
+		available = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				RED_karl_kristian_steincke = {
+					is_political_advisor = yes
+				}
+			}
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RED_farming-fishing_town_capitalism
+				add_idea = RED_farming-fishing_town_capitalism_1
+			}
+			if = {
+				limit = {
+					has_idea = RED_market_socialism
+				}
+				swap_ideas = {
+					remove_idea = RED_market_socialism
+					add_idea = RED_market_socialism_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RED_market_socialism_1
+					add_idea = RED_market_socialism_3
+				}
+			}
+		}
+	}
+	focus = { #규제강화
+		id = RED_economy_focus_27
+		icon = GFX_focus_DEN_limited_regulations
+		prerequisite = { focus = RED_economy_focus_25 }
+		prerequisite = { focus = RED_economy_focus_22 focus = RED_economy_focus_17 }
+		x = 2
+		y = 6
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+		mutually_exclusive = {
+			focus = RED_economy_focus_26
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			upgrade_economy_law = yes
 		}
 	}
 	focus = { #상품작물 재배
@@ -1941,8 +2683,8 @@ focus_tree = {
 		icon = GFX_focus_generic_supply_line
 		prerequisite = { focus = RED_economy_focus_7 }
 		prerequisite = { focus = RED_economy_focus_10 }
-		x = 0
-		y = 4
+		x = 1
+		y = 3
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
@@ -1951,16 +2693,13 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				RED_arnold_peter_moller = {
 					is_political_advisor = yes
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
-				}
-			}
-			RED_arnold_peter_moller = {
-				is_political_advisor = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2013,32 +2752,35 @@ focus_tree = {
 
 		icon = GFX_focus_generic_agricultural_subsidies
 		prerequisite = { focus = RED_economy_focus_18 }
-		prerequisite = { focus = RED_economy_focus_14 }
-		x = -1
-		y = 6
+		prerequisite = { focus = RED_economy_focus_6 }
+		x = 2
+		y = 4
 		relative_position_id = RED_economy_focus_3
 		cost = 4
 
 		available = {
-   
+			OR = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			OR = {
-				RED_axel_pehrssonbramstorp = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				RED_johan_h_andresen = {
 					is_political_advisor = yes
 				}
-				RED_knud_bach = {
-					is_political_advisor = yes
-				}
-			}
-			RED_johan_h_andresen = {
-				is_political_advisor = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
 			random_owned_controlled_state = {
 				limit = {
 					OR={has_state_category = rural
@@ -2066,9 +2808,18 @@ focus_tree = {
 					OR={has_state_category = rural
 					has_state_category = town}
 				}
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR={has_state_category = rural
+					has_state_category = town}
+				}
+				add_building_construction = {
+					type = infrastructure
 					level = 1
 				}
 			}
@@ -2078,6 +2829,63 @@ focus_tree = {
 						has_state_category = town
 						has_state_category = rural
 					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = { #조선업 주력
+		id = RED_economy_focus_20
+
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RED_economy_focus_12 }
+		prerequisite = { focus = RED_economy_focus_10 }
+		x = 0
+		y = 4
+		relative_position_id = RED_economy_focus_3
+		cost = 4
+
+		available = {
+			OR = {
+				has_idea = RED_second_AEP
+				has_idea = RED_second_AEP_1
+				has_idea = RED_second_AEP_2
+				has_idea = RED_second_AEP_3
+			}
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = RED_second_aep_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					infrastructure > 3
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					infrastructure > 3
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+					infrastructure > 3
 				}
 				add_extra_state_shared_building_slots = 1
 			}
@@ -2099,12 +2907,18 @@ focus_tree = {
 			x = -6
 			trigger = {
 				OR = {
-					has_completed_focus = RED_entice_publicworks
+					has_completed_focus = RED_industrial_planning
 				}
 			}
 		}
 		offset = {
 			x = -2
+			trigger = {
+				has_completed_focus = RED_economy_focus_9
+			}
+		}
+		offset = {
+			x = -6
 			trigger = {
 				OR = {
 					has_completed_focus = RED_new_economy_focus_0
@@ -2446,21 +3260,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-				BA_halo_infantry_cap_edit_effect = yes
-			}
-			if = {
-				limit = {
-					controls_state = 141
-				}
-				141 = {
-					create_unit = {
-						division = "division_template = \"Halo Infantry Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
+			141 = {
+				RED = {
+					custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
+					hidden_effect = {
+						add_to_variable = {
+							RED.halo_militia_cap = 3
+						}
+						set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 					}
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
 				}
 			}
 		}
@@ -2468,7 +3281,7 @@ focus_tree = {
 	focus = { # 급양부 재건
 		id = RED_club_focus_1
 
-		icon = GFX_focus_generic_agricultural_subsidies
+		icon = GFX_focus_ITA_grande_rivolta_rurale
 		prerequisite = { focus = RED_club_focus_2 }
 		x = 2
 		y = 4
@@ -2505,7 +3318,7 @@ focus_tree = {
 	}
 	focus = { #군대에 배식 우선
 		id = RED_meal_focus_arm
-		icon = GFX_focus_SWI_neutrality_on_the_move
+		icon = GFX_focus_generic_reinforcing_the_supply_network
 		cost = 2
 		relative_position_id = RED_club_focus_1
 		x = -1
@@ -2676,9 +3489,19 @@ focus_tree = {
 					days = 1
 				}
 				activate_advisor = RED_lev_trotsky_mil
-				activate_advisor = RED_lev_trotsky_pol
 			}
-
+			hidden_effect = {
+				SOV = {
+					country_event = {
+						id = RED_event.14
+						days = 10
+					}
+				}
+				country_event = {
+					id = RED_event.14
+					days = 10
+				}
+			}
 			if = { limit = { is_ai = no }
 				RED_snake_game_setup = yes
 				RED_snake_tailupeffect = yes
@@ -2694,6 +3517,12 @@ focus_tree = {
 					days = 20
 				}
 			}
+			hidden_effect = {
+				country_event = {
+					id = RED_event.37
+					days = 30
+				}
+			}
             
             mark_focus_tree_layout_dirty = yes
 		}
@@ -2705,7 +3534,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_accept_trotskism
-		x = -1
+		x = -8
 		y = 1
 
 		prerequisite = {
@@ -2722,12 +3551,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.10
-			hidden_effect = {
-				country_event = {
-					id = RED_event.37
-					days = 6
-				}
-			}
 		}
 	}
 
@@ -2785,9 +3608,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
-		prerequisite = {
-			focus = RED_redbear_editorial
-		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -2796,6 +3616,8 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 		
 		completion_reward = {
+
+			set_country_leader_ideology = trotskyism
 			add_dynamic_modifier = {
 				modifier = RED_the_office_good_dynamic_modifier
 			}
@@ -2805,7 +3627,7 @@ focus_tree = {
 	focus = { #정보국 신설
 		id = RED_new_inteligence_agency
 		icon = GFX_focus_generic_secret_service_agency
-		cost = 4
+		cost = 2
 		x = 4
 		y = 1
 		relative_position_id = RED_the_fourth_international
@@ -2819,7 +3641,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			threat > 0.15
 			is_subject = no
 			
 		}
@@ -2846,7 +3667,7 @@ focus_tree = {
 	focus = { #잠입 전문가
 		id = RED_professioner_undercover
 		icon = GFX_focus_SWI_embrace_rote_drei
-		cost = 4
+		cost = 2
 		x = 1
 		y = 1
 		relative_position_id = RED_new_inteligence_agency
@@ -2854,11 +3675,10 @@ focus_tree = {
 			focus = RED_new_inteligence_agency
 		}
 		available = {
-   
+			threat > 0.15
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			has_intelligence_agency = yes
 		}
 		completion_reward = {
 			custom_effect_tooltip = RED_operative_effects1_tt
@@ -2870,15 +3690,92 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #국제 소비에트 의용군
+		id = RED_communist_instigation
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+		bypass = {
+			date > 1937.1.1
+			NOT = {
+				has_global_flag = spanish_civil_war
+			}
+		}
+		prerequisite = {
+			focus = RED_new_inteligence_agency
+		}
+		relative_position_id = RED_new_inteligence_agency
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPD
+				value = 100
+			}
+			custom_effect_tooltip = RED_advance_intel_tt
+			add_to_variable = {
+				var = RED_intel_send_volunteer_size
+				value = 3
+				tooltip = send_volunteer_size_tt
+			}
+		}
+	}
+	focus = { #혁명수비대
+		id = RED_international_frontline
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		prerequisite = { focus = RED_communist_instigation  }
+		prerequisite = { focus = RED_the_builder_of_the_winter_army}
+		prerequisite = { focus = RED_seek_allies}
+		x = 0
+		y = 4
+		relative_position_id = RED_new_inteligence_agency 
+		
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			RED_marina = {
+				remove_trait = {
+					trait = office_commander
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = office_commander_1
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = prince_of_terror
+					slot = political_advisor
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = RED_office_ss_idea
+				add_idea = RED_revolution_defender
+			}
+		}
+	}
 
-	focus = { #비밀 경찰
+	focus = { #쁘락치
 		id = RED_fraktiya
 		icon = GFX_focus_NOR_continue_nygaardsvold_government
-		cost = 4
+		cost = 2
 		prerequisite = {
 			focus = RED_new_inteligence_agency
 		}
 		available = {
+			threat > 0.15
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -2899,15 +3796,12 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_the_fourth_international
-		x = -6
+		x = -7
 		y = 1
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		}
-		prerequisite = {
-			focus = RED_the_fourth_international
 		}
 
 		prerequisite = {
@@ -2920,6 +3814,72 @@ focus_tree = {
 			add_ideas = RED_security_idea
 		}
 	}
+	focus = { #공안부
+		id = RED_enlarge_secret_police
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
+		cost = 2
+
+		relative_position_id = RED_restore_the_security
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RED_restore_the_security
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = { base = 15 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE1 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE2 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE2 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					RED_instability_system_down_effect = yes
+				}
+			}
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
+				hidden_effect = {
+					add_to_variable = {
+						RED.halo_militia_cap = 3
+					}
+					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+				}
+			}
+			add_political_power = 30
+			add_stability = 0.05
+		}
+	}
 
 	focus = { #군정청 통제
 		id = RED_locals_problem
@@ -2927,7 +3887,7 @@ focus_tree = {
 		cost = 4
 
 		relative_position_id = RED_restore_the_security
-		x = 0
+		x = 1
 		y = 1
 		available = {
 			NOT = {
@@ -2963,6 +3923,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			has_completed_focus = RED_improve_railway_network
 		}
 		mutually_exclusive = {
 			focus = RED_enticing_locals
@@ -3016,24 +3977,23 @@ focus_tree = {
 					transfer_troops = yes
 				}
 			}
-			if = {
-				limit = {
-					RE4 = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				annex_country = {
-					target = RE4
-					transfer_troops = yes
-				}
-			}
 			unlock_decision_category_tooltip = RED_forced_relocation_policy
 			RED_population_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.1
+				}
+			}
 		}
 	}
-
-	focus = { #자치국 수립
+	focus = { #자치공화국 수립
 		id = RED_enticing_locals
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 4
@@ -3054,8 +4014,13 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 15 }
-
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.6
+					days = 2
+				}
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = -0.10
@@ -3066,16 +4031,102 @@ focus_tree = {
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE2
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE3
 			unlock_decision_tooltip = RED_establishment_of_autonomous_state_RE4
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = tro_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.1
+				}
+			}
 		}
 	}
 
-	focus = { #이주민 환영
+	focus = { #현지 공산당 수용
 		id = RED_welcome_immigrate
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_generic_communist
+		cost = 2
+
+		relative_position_id = RED_enticing_locals
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RED_enticing_locals
+		}
+		prerequisite = {
+			focus = RED_merger_of_educational_institutions
+			focus = RED_large_administrative
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = { base = 15 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE1 = {
+					set_party_name = {
+						ideology = communism
+						long_name = DEN_communism_party_long
+						name = DEN_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE2 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE2 = {
+					set_party_name = {
+						ideology = communism
+						long_name = NOR_communism_party_long
+						name = NOR_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					set_party_name = {
+						ideology = communism
+						long_name = SWE_communism_party_long
+						name = SWE_communism_party
+					}
+					RED_instability_system_down_effect = yes
+				}
+			}
+		}
+	}
+	focus = { #계급의 적
+		id = RED_enemy_of_class
+		icon = GFX_focus_spr_crush_the_revolution
 		cost = 4
 
 		relative_position_id = RED_enticing_locals
-		x = 0
+		x = -1
 		y = 1
 
 		prerequisite = {
@@ -3089,25 +4140,27 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_manpower = 1000
-			add_timed_idea = {
-				idea = RED_welcome_immigrate_idea
-				days = 365
+			swap_ideas = {
+				remove_idea = RED_security_idea
+				add_idea = RED_security_idea_1
 			}
 		}
 	}
 
-	focus = { #비밀경찰 확대
+	focus = { #이주노동자 강제 배치
 		id = RED_welcome_thugs
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_ARG_the_buenos_aires_conference
 		cost = 4
 
 		relative_position_id = RED_depress_locals
-		x = 0
+		x = -1
 		y = 1
 
 		prerequisite = {
-			focus = RED_depress_locals focus = RED_enticing_locals
+			focus = RED_depress_locals
+		}
+		prerequisite = {
+			focus = RED_enlarge_secret_police
 		}
 		available = {
 			NOT = {
@@ -3117,10 +4170,29 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 
 		completion_reward = {
-			add_stability = 0.10
-			set_variable = { BA_halo_infantry_cap_edit_var = 3 }
-			custom_effect_tooltip = kivotos_halo_add3_tt
-			BA_halo_infantry_cap_edit_effect = yes
+			hidden_effect = {
+				country_event = {
+					id = RED_tro_event.9
+					days = 2
+				}
+			}
+			add_political_power = -60
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+					}
+				}
+				add_manpower = 1000
+				add_extra_state_shared_building_slots = 1
+				add_resistance = -5
+				add_compliance = 5
+			}
 		}
 	}
 
@@ -3129,13 +4201,13 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		cost = 4
 
-		relative_position_id = RED_welcome_immigrate
-		x = -1
+		relative_position_id = RED_enemy_of_class
+		x = 0
 		y = 1
 
 		mutually_exclusive = { focus = RED_all_power_to_redwinter }
 		prerequisite = {
-			focus = RED_welcome_immigrate focus = RED_welcome_thugs
+			focus = RED_enemy_of_class
 		}
 
 		available = {
@@ -3150,17 +4222,17 @@ focus_tree = {
 		completion_reward = {
 			effect_tooltip = {
 				swap_ideas = {
-					remove_idea = RED_security_idea
+					remove_idea = RED_security_idea_1
 					add_idea = RED_advanced_security_idea
 				}
 			}
 			hidden_effect = {
 				if = {
 					limit = {
-						has_idea = RED_security_idea
+						has_idea = RED_security_idea_1
 					}
 					swap_ideas = {
-						remove_idea = RED_security_idea
+						remove_idea = RED_security_idea_1
 						add_idea = RED_advanced_security_idea
 					}
 				}
@@ -3168,15 +4240,16 @@ focus_tree = {
 					add_ideas = RED_advanced_security_idea
 				}
 			}
+			custom_effect_tooltip = RED_advance_security_tt
+			set_country_flag = RED_snake_game_end
 		}
 	}
-
 	focus = { #반혁명의 종식
 		id = RED_end_of_counter_revolution
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = RED_advance_security }
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = RED_advance_security
 		available = {
 			NOT = {
@@ -3201,7 +4274,7 @@ focus_tree = {
 		icon = GFX_SOV_nkvd_primacy_ccp_2d_sov_compatibility
 		prerequisite = { focus = RED_end_of_counter_revolution }
 		x = -1
-		y = 4
+		y = 3
 		relative_position_id = RED_advance_security
 		
 		cost = 4
@@ -3220,11 +4293,11 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #출판부 확대
+	focus = { #출판부 확장
 		id = RED_expand_publishing_dep
 		icon = GFX_focus_generic_printing_press
 		prerequisite = { focus = RED_redbear_editorial }
-		x = -10
+		x = -3
 		y = 1
 		relative_position_id = RED_redbear_editorial
 		cost = 2
@@ -3233,10 +4306,38 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = RED_expand_publishing_dep_tt
+					check_variable = {
+						var = RED_cherino_communism_knowledge
+						value = 6
+						compare = greater_than_or_equals
+					}
+				}
+			}
 		}
 
 		completion_reward = {
 			add_ideas = RED_publishing_idea
+			hidden_effect = {
+				if = {
+					limit = {
+						has_power_balance = {
+							id = RED_power_balance
+						}
+					}
+					country_event = {
+						id = RED_event.6 
+						days = 2
+					}
+				}
+			}
 		}
 	}
 	
@@ -3252,9 +4353,16 @@ focus_tree = {
 		mutually_exclusive = { focus = RED_kill_editorial }
 
 		available = {
-   
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				has_country_flag = RED_edit_disagree_1
 			}
 		}
 
@@ -3265,6 +4373,18 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_kill_editorial_tt
 			RED_corruption_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = tro_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.1
+				}
+			}
 		}
 	}
 	focus = { #편집국 약화
@@ -3282,14 +4402,13 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = {
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
 				has_country_flag = RED_edit_disagree
-			}
-		}
-		select_effect = {
-			country_event = {
-				id = RED_event.6 
-				days = 5
 			}
 		}
 		completion_reward = {
@@ -3299,6 +4418,18 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_kill_editorial_tt
 			RED_corruption_solve = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.1
+				}
+			}
 		}
 	}
 
@@ -3325,6 +4456,18 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_publishing_idea_soc
 				add_idea = RED_publishing_idea_soc_hero
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.1
+				}
 			}
 		}
 	}
@@ -3418,6 +4561,18 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_publishing_idea_soc
 				add_idea = RED_publishing_idea_soc_col
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = tro_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.1
+				}
 			}
 		}
 	}
@@ -3662,12 +4817,13 @@ focus_tree = {
 	focus = { #트로츠키주의자 초청
 		id = RED_invite_trotskists
 		icon = GFX_goal_tripartite_pact
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_the_fourth_international
 		x = 1
 		y = 1
 		available = {
+			has_intelligence_agency = yes
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
@@ -3687,27 +4843,18 @@ focus_tree = {
 		
 		completion_reward = {
 			SOV = {
-				SOV_paranoia_low_increase_effect = yes
-				if = {
-					limit = {
-						has_idea = trotskyite_plot_nsb
-					}
-					swap_ideas = {
-						remove_idea = trotskyite_plot_nsb
-						add_idea = RED_trotskyite_run
-					}
-				}
-				else = {
-					add_ideas = RED_trotskyite_run
-				}
 			}
-			country_event = RED_event.14
+			country_event = {
+				id = RED_tro_event.5
+				days = 1
+			}
+			unlock_decision_tooltip = RED_unite_exiles
 		}
 	}
-	focus = { #연속 혁명론
+	focus = { #연속혁명론
 		id = RED_socialism_over_the_world
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_redwinter_office
 		x = 1
@@ -3727,13 +4874,9 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 		
 		completion_reward = {
-			add_to_variable = { RED_the_politburo_defensive_war_stability_factor = 0.25 }
-			custom_effect_tooltip = RED_the_politburo_defensive_war_stability_factor_tt
-
 			add_political_power = 25
 
 			every_country = {
-				add_political_power = 50
 				limit = {
 					NOT = { 
                         is_in_faction_with = ROOT
@@ -3782,7 +4925,7 @@ focus_tree = {
 	focus = { #민중정치
 		id = RED_long_live_the_workers_government
 		icon = GFX_focus_generic_join_comintern
-		cost = 4
+		cost = 2
 
 		relative_position_id = RED_redwinter_office
 		x = -1
@@ -3810,13 +4953,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_long_live_the_workers_government
-		cost = 4
+		cost = 2
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
 		completion_reward = {
+			add_political_power = 50
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = RED
@@ -3848,6 +4992,11 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = RED_large_administrative_tt
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				RED_the_politburo_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
 			RED_corruption_solve = yes
 		}
 	}
@@ -3879,45 +5028,14 @@ focus_tree = {
 			add_to_variable = {
 				RED_the_politburo_war_support_factor = 0.10
 			}
-		}
-	}
-	focus = { #국제해방전선
-		id = RED_international_frontline
-		icon = GFX_focus_SOV_international_union_of_soviet_republics
-		prerequisite = { focus = RED_long_live_the_workers_government }
-		x = 3
-		y = 1
-		relative_position_id = RED_socialism_over_the_world 
-		
-		cost = 4
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-			every_country = {
-				limit = { is_in_faction_with = ROOT }
-				random_owned_controlled_state = {
-					limit = { is_capital = yes }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+			custom_effect_tooltip = RED_all_power_to_redwinter_tt_1
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_ideas = RED_debate_everywhere
 		}
 	}
 	focus = { #노동조합 강화
 		id = RED_strengthen_the_trade_unions
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		prerequisite = { focus = RED_system_decentralization }
 		x = -1
 		y = 1
@@ -3960,19 +5078,24 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				RED_the_politburo_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 		}
 	}
-	focus = { #겨울군대의 기상
+	focus = { #겨울 군대의 기상
 		id = RED_the_builder_of_the_winter_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 4
 
-		relative_position_id = RED_international_frontline
-		x = -1
-		y = 1
+		relative_position_id = RED_invite_trotskists
+		x = 1
+		y = 3
 
 		prerequisite = {
-			focus = RED_international_frontline
+			focus = RED_invite_trotskists
 		}
 		ai_will_do = { base = 15 }
 		available = {
@@ -4024,13 +5147,19 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_strengthen_heavy_industry_tt
 			RED_corruption_solve = yes
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 		}
 	}
-	focus = { #모든 권력을 붉은겨울로
+	focus = { #모든 권력을 소비에트로!
 		id = RED_all_power_to_redwinter
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_SOV_the_supreme_soviet
 		prerequisite = { focus = RED_strengthen_regional_party focus = RED_strengthen_the_trade_unions}
-		prerequisite = { focus = RED_the_builder_of_the_winter_army }
 		mutually_exclusive = { focus = RED_advance_security }
 		x = 1
 		y = 1
@@ -4040,6 +5169,14 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = RED_all_power_to_redwinter_tt
+				check_variable = {
+					var = red_game_snake_tail_see
+					value = 5
+					compare = greater_than_or_equals
+				}
 			}
 			NOT = {
 				has_global_flag = flag_trotsky_dead
@@ -4054,11 +5191,108 @@ focus_tree = {
 			add_to_variable = {
 				RED_the_politburo_surrender_limit = 0.05
 			}
-			add_to_variable = {
-				RED_the_politburo_offensive_war_stability_factor = 0.10
-			}
-			add_to_variable = {
-				RED_the_politburo_defensive_war_stability_factor = 0.20
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = flag_trotsky_dead
+					}
+				}
+				custom_effect_tooltip = RED_advance_security_tt
+				set_country_flag = RED_snake_game_end
+				hidden_effect = {
+					news_event = {
+						id = BA_news.125
+						days = 5
+					}
+				}
+				custom_effect_tooltip = RED_all_power_to_redwinter_tt_2
+				if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 6
+							compare = equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 7
+							compare = equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = red_game_snake_tail_see
+							value = 8
+							compare = greater_than_or_equals
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = RED
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
 			}
 		}
 	}
@@ -4071,14 +5305,41 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_0
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_3
+				}
+			}
 		}
 		x = -2
 		y = 1
 		relative_position_id = RED_all_power_to_redwinter
 		
-		cost = 4
+		cost = 2
 
 		completion_reward = {
+			promote_character = RED_lev_trotsky
+			country_event = {
+				id = RED_tro_event.7
+				days = 3
+			}
+			country_event = {
+				id = RED_tro_event.8
+				days = 14
+			}
 		}
 	}
 	focus = { #체리노의 체제혁명
@@ -4090,10 +5351,28 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_all_power_to_redwinter
 		
-		cost = 4
+		cost = 2
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_0
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_3
+				}
 			}
 		}
 		completion_reward = {
@@ -4106,23 +5385,169 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #당권 확립
+	focus = { #새로운 테제
 		id = RED_party_reorganization
-		icon = GFX_focus_SOV_the_supreme_soviet
+		icon = GFX_focus_AUS_danubian_socialist_communes
 		prerequisite = { focus = RED_trotsky_s_world_revolution focus = RED_cherino_s_systemic_revolution }
 		x = 2
 		y = 1
 		relative_position_id = RED_trotsky_s_world_revolution
-		
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = RED_cherino_s_systemic_revolution
+				}
+			}
+			else = {
+				
+			}
+		}
 		cost = 4
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = RED_cherino_s_systemic_revolution
+				}
+				custom_effect_tooltip = RED_party_reorganization_tt_1
+			}
+			else = {
+				custom_effect_tooltip = RED_party_reorganization_tt
+			}
+			remove_ideas = RED_debate_everywhere
+		}
+	}
+	focus = { #중앙 집권 국가
+		id = RED_centralization
+		icon = GFX_focus_BEL_the_grand_place
+		prerequisite = { focus = RED_party_reorganization }
+		x = -1
+		y = 1
+		relative_position_id = RED_party_reorganization
+		mutually_exclusive = {
+			focus = RED_union_nation
+		}
+		available = {
+			has_completed_focus = RED_enemy_of_class	
+		}
+		cost = 4
+
+		completion_reward = {
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				var = RED_the_politburo_production_factory_max_efficiency_factor
+				value = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			custom_effect_tooltip = RED_centralization_tt
+		}
+	}
+	focus = { #제민족의 자결
+		id = RED_union_nation
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		prerequisite = { focus = RED_party_reorganization }
+		x = 1
+		y = 1
+		relative_position_id = RED_party_reorganization
+		mutually_exclusive = {
+			focus = RED_centralization
+		}
+		cost = 4
+
+		completion_reward = {
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				var = RED_the_politburo_political_power_factor
+				value = -0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = RED_the_politburo_non_core_manpower
+				value = 0.05
+				tooltip = non_core_manpower_tt
+			}
+			custom_effect_tooltip = RED_union_nation_tt
+		}
+	}
+	focus = { #노동자 공화국
+		id = RED_workers_state
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = RED_centralization focus = RED_union_nation }
+		x = 0
+		y = 2
+		relative_position_id = RED_party_reorganization
+		
+		cost = 4
+		completion_reward = {
+			hidden_effect = {
+				RE5 = {
+					create_country_leader = {
+						name = "Rebuilding Council"
+						picture = GFX_portrait_SOV_supreme_soviet
+						ideology = war_communism
+					}
+					set_cosmetic_tag = RE5_rebuilding_soviet
+					add_ideas = {RED_liberation_district RED_rebuilding_soviet}
+					if = {
+						limit = {
+							RED = {
+								has_completed_focus = RED_centralization
+							}
+						}
+						add_ideas = RED_centralized_LD
+					}
+					else = {
+						add_ideas = RED_nation_united_LD
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						has_idea = RED_autonomous_state_idea
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_idea = RED_autonomous_state_idea
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = PREV
+						}
+						add_core_of = RED
+					}
+					RED = {
+						annex_country = {
+							target = prev
+							transfer_troops = yes
+						}
+					}
+				}
+				set_cosmetic_tag = RED_redwinter_soviet_socialist_republic_1
+			}
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				var = RED_the_politburo_offensive_war_stability_factor
+				value = 0.2
+				tooltip = offensive_war_stability_factor_tt
+			}
+			add_to_variable = {
+				var = RED_the_politburo_defensive_war_stability_factor
+				value = 0.2
+				tooltip = defensive_war_stability_factor_tt
+			}
+			unlock_decision_tooltip = RED_make_LD
 		}
 	}
 	focus = { #당중앙 해체
 		id = RED_party_central_dissolution
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = RED_cherino_s_systemic_revolution }
+		mutually_exclusive = {
+			focus = RED_freedom_of_debate_unity_of_action
+			focus = RED_multi_party_system
+		}
 		x = 0
 		y = 1
 		relative_position_id = RED_cherino_s_systemic_revolution
@@ -4142,20 +5567,142 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #토론의 자유와 단합된 행동
+		id = RED_freedom_of_debate_unity_of_action
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = RED_cherino_s_systemic_revolution }
+		x = 2
+		y = 1
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_party_central_dissolution
+			focus = RED_multi_party_system
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #다당제 협동
+		id = RED_multi_party_system
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = RED_cherino_s_systemic_revolution }
+		x = 4
+		y = 1
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_party_central_dissolution
+			focus = RED_freedom_of_debate_unity_of_action
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
 	focus = { #자유 소비에트
 		id = RED_free_soviets
 		icon = GFX_RED_free_soviets
-		prerequisite = { focus = RED_party_central_dissolution }
-		x = 0
-		y = 3
+		prerequisite = { focus = RED_party_central_dissolution focus = RED_freedom_of_debate_unity_of_action focus = RED_multi_party_system }
+		x = 1
+		y = 2
 		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_democratic_planned_economy
+			focus = RED_industrial_democracy
+		}
 		
 		cost = 4
 
 		completion_reward = {
 		}
 	}
-	focus = { #키보토스 국가들의 해방
+	focus = { #산업 중앙 통제
+		id = RED_democratic_planned_economy
+		icon = GFX_focus_generic_central_planning
+		prerequisite = { focus = RED_party_central_dissolution focus = RED_freedom_of_debate_unity_of_action focus = RED_multi_party_system}
+		x = 3
+		y = 2
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_free_soviets
+			focus = RED_industrial_democracy
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #전쟁이 아니라 계급전쟁
+		id = RED_no_war_but_class_war
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = RED_party_central_dissolution }
+		x = 0
+		y = 3
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_ideal_of_bolshevism_again
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #볼셰비즘 이상 재현
+		id = RED_ideal_of_bolshevism_again
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		prerequisite = { focus = RED_free_soviets  focus = RED_democratic_planned_economy }
+		x = 2
+		y = 3
+		relative_position_id = RED_cherino_s_systemic_revolution
+		mutually_exclusive = {
+			focus = RED_no_war_but_class_war
+		}
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #문화 패권 투쟁
+		id = RED_hegemony_struggle
+		icon = GFX_focus_ITA_communist_leadership
+		prerequisite = { focus = RED_free_soviets focus = RED_democratic_planned_economy }
+		x = 4
+		y = 3
+		relative_position_id = RED_cherino_s_systemic_revolution
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #통일단결의 핵
+		id = RED_cherino_core_of_solidarity
+		icon = GFX_focus_GER_proletarian_solidarity
+		prerequisite = { focus = RED_no_war_but_class_war focus = RED_ideal_of_bolshevism_again }
+		x = 1
+		y = 4
+		relative_position_id = RED_cherino_s_systemic_revolution
+		cost = 4
+
+		completion_reward = {
+			RED_cherino = {
+				effect_tooltip = {
+					swap_country_leader_traits = {
+						remove = b_tjrlwkd
+						add = RED_bright_polar_star
+					}
+				}
+				hidden_effect = {
+					remove_country_leader_trait = b_tjrlwkd
+					add_country_leader_trait = RED_bright_polar_star
+					add_country_leader_trait = RED_bright_polar_star_desc
+				}
+			}
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+	focus = { #키보토스 혁명전쟁
 		id = RED_liberation_of_the_kibotus_states
 		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus = RED_trotsky_s_world_revolution }
@@ -4166,9 +5713,45 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
+			custom_effect_tooltip = RED_liberation_of_the_kibotus_states_tt
+			unlock_decision_tooltip = RED_attack_kivotos
 		}
 	}
-	focus = { #전인민의 해방전쟁
+	focus = { #전시 공산주의
+		id = RED_war_communism_focus
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
+		x = -1
+		y = 1
+		available = {
+			has_war = yes
+		}
+		relative_position_id = RED_liberation_of_the_kibotus_states
+		
+		cost = 4
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = RED_war_communism_idea
+				months = 6
+			}
+			unlock_decision_tooltip = RED_wc_collective_farming
+		}
+	}
+	focus = { #프롤레타리아 무장
+		id = RED_armed_workers
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		prerequisite = { focus = RED_trotsky_s_world_revolution focus = RED_cherino_s_systemic_revolution focus = RED_end_of_counter_revolution }
+		x = -2
+		y = 1
+		relative_position_id = RED_trotsky_s_world_revolution
+		
+		cost = 4
+
+		completion_reward = {
+		}
+	}
+	focus = { #세계 인민해방전쟁
 		id = RED_people_s_liberation_war
 		icon = GFX_focus_spr_anarchism_knows_no_borders
 		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
@@ -4179,19 +5762,91 @@ focus_tree = {
 		cost = 4
 
 		completion_reward = {
+			custom_effect_tooltip = RED_people_s_liberation_war_tt
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_ally_with = RED
+					}
+					is_major = no
+					any_other_country = {
+						is_ally_with = RED
+						is_neighbor_of = PREV
+					}
+				}
+				RED = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
 		}
 	}
-	focus = { #노동자 국가
-		id = RED_workers_state
-		icon = GFX_focus_ger_great_red_menace
-		prerequisite = { focus = RED_people_s_liberation_war focus = RED_free_soviets }
-		x = 2
-		y = 4
-		relative_position_id = RED_trotsky_s_world_revolution
+	focus = { #영구혁명
+		id = RED_permanent_revolution
+		icon = GFX_SOV_the_permanent_revolution_ccp_2d_sov_compatibility
+		prerequisite = { focus = RED_people_s_liberation_war }
+		prerequisite = { focus = RED_war_communism_focus }
+		x = -1
+		y = 1
+		relative_position_id = RED_people_s_liberation_war
 		
 		cost = 4
 
 		completion_reward = {
+			RED_lev_trotsky = {
+				swap_country_leader_traits = {
+					remove = permanent_revolutionary
+					add = triumphant_revolutionary
+				}
+			}
+		}
+	}
+	focus = { #소련 확보
+		id = RED_attack_sov
+		icon = GFX_focus_attack_soviet
+		cost = 4
+
+		relative_position_id = RED_workers_state
+		x = 0
+		y = 1
+
+		available = {
+   
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			is_faction_leader = yes
+		}
+
+		prerequisite = {
+			focus = RED_workers_state
+		}
+		prerequisite = {
+			focus = RED_people_s_liberation_war
+			focus = RED_ideal_of_bolshevism_again
+			focus = RED_no_war_but_class_war
+		}
+
+		will_lead_to_war_with = SOU
+
+		completion_reward = {
+			declare_war_on = {
+				target = SOU
+				type = annex_everything
+			}
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_in_faction_with = SOU
+					}
+					add_to_war = {
+						targeted_alliance = SOU
+						enemy = ROOT
+					}
+				}
+			}
 		}
 	}
 	focus = { #대외 정책
@@ -4407,87 +6062,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { #트로츠키주의 선동 
-		id = RED_communist_instigation
-		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
-		cost = 4
-		x = -4
-		y = 2
-		relative_position_id = RED_seek_allies
-		prerequisite = {
-			focus = RED_seek_allies
-		}
-		prerequisite = {
-			focus = RED_all_power_to_redwinter
-		}
-		available = {
-   
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			has_war = no
-			is_subject = no
-			is_major = yes
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_neighbor_of = SOV
-					is_subject = no
-					is_major = no
-				}
-				add_timed_idea = {
-					idea = communist_pressure
-					days = 365
-				}
-				hidden_effect = {
-					country_event = { id = generic.1 }
-				} 
-			}
-		}
-	}
 
-	focus = { #소련 선제타격
-		id = RED_attack_sov
-		icon = GFX_focus_attack_soviet
-		cost = 4
-
-		relative_position_id = RED_communist_instigation
-		x = 0
-		y = 3
-
-		available = {
-   
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			is_faction_leader = yes
-		}
-
-		prerequisite = {
-			focus = RED_communist_instigation
-		}
-
-		will_lead_to_war_with = SOU
-
-		completion_reward = {
-			declare_war_on = {
-				target = SOU
-				type = annex_everything
-			}
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						is_in_faction_with = SOU
-					}
-					add_to_war = {
-						targeted_alliance = SOU
-						enemy = ROOT
-					}
-				}
-			}
-		}
-	}
 
 	focus = { #핀란드 침공
 		id = RED_attack_fin
@@ -4582,6 +6157,10 @@ focus_tree = {
 			factor = 0
 		}
 		select_effect = {
+			country_event = {
+				id = RED_event.37
+				days = 3
+			}
 			country_event = {
 				id = RED_marina_event.1
 				days = 10
@@ -5236,7 +6815,7 @@ focus_tree = {
 			focus = RED_path_of_great_academy
 		}
 		cost = 5
-		x = -9
+		x = -6
 		y = 1
 		relative_position_id = RED_path_of_great_academy
 		completion_reward = {
@@ -7553,6 +9132,7 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			has_completed_focus = RED_entice_publicworks
+			num_of_civilian_factories > 60
 		}
 
 		completion_reward = {
@@ -7593,6 +9173,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_rearming_focus_1
 		}
+		mutually_exclusive = {
+			focus = RED_rearming_focus_3
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -7631,6 +9214,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		mutually_exclusive = {
+			focus = RED_rearming_focus_2
+		}
 		prerequisite = {
 			focus = RED_rearming_focus_1
 		}
@@ -7638,7 +9224,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			has_tech = improved_machine_tools
+			has_tech = advanced_machine_tools
 		}
 
 		completion_reward = {
@@ -7713,10 +9299,24 @@ focus_tree = {
 			focus = RED_rearming_focus_2
 		}
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_throw_aep_away
+					}
+				}
+				NOT = {
+					has_country_flag = RED_there_is_coup_flag
+				}
+				has_completed_focus = RED_economy_focus_1
+				NOT = {
+					has_completed_focus = RED_new_economy_focus_0
+					has_completed_focus = RED_economy_focus_9
+				}
 			}
-			has_completed_focus = RED_economy_focus_1
+			else = {
+				has_country_flag = RED_throw_aep_away
+			}
 		}
 
 		completion_reward = {
@@ -7765,7 +9365,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			has_completed_focus = RED_upgrade_army_industry
 		}
 
 		completion_reward = {
@@ -7855,7 +9454,7 @@ focus_tree = {
 	focus = { #규모의 경제
 		id = RED_rearming_focus_9
 
-		icon = GFX_focus_ITA_devaluate_the_lire
+		icon = GFX_focus_generic_mass_production
 		x = -2
 		y = 4
 		cost = 4
@@ -7957,26 +9556,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = -0.05
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = RED
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = RED
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = RED
@@ -8127,10 +9706,24 @@ focus_tree = {
 			focus = RED_rearming_focus_2
 		}
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_throw_aep_away
+					}
+				}
+				NOT = {
+					has_country_flag = RED_there_is_coup_flag
+				}
+				has_completed_focus = RED_upgrade_heavy_industry
+				NOT = {
+					has_completed_focus = RED_new_economy_focus_0
+					has_completed_focus = RED_economy_focus_9
+				}
 			}
-			has_completed_focus = RED_upgrade_heavy_industry
+			else = {
+				has_country_flag = RED_throw_aep_away
+			}
 		}
 
 		completion_reward = {
@@ -8163,10 +9756,24 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_throw_aep_away
+					}
+				}
+				NOT = {
+					has_country_flag = RED_there_is_coup_flag
+				}
+				has_completed_focus = RED_upgrade_army_industry
+				NOT = {
+					has_completed_focus = RED_new_economy_focus_0
+					has_completed_focus = RED_economy_focus_9
+				}
 			}
-		
+			else = {
+				has_country_flag = RED_throw_aep_away
+			}
 		}
 		prerequisite = {
 			focus = RED_rearming_focus_1
@@ -8193,7 +9800,7 @@ focus_tree = {
 	}
 	focus = { #동원 강화
 		id = RED_strengthen_the_mobilization_plan
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_generic_limited_social_mobilization
 		x = -4
 		y = 1
 		relative_position_id = RED_rearming_focus_0
@@ -8240,6 +9847,18 @@ focus_tree = {
 			custom_effect_tooltip = RED_restore_cossack_units_tt
 			add_to_variable = { RED_winter_army_modifier_army_sub_unit_infantry_speed_factor = 0.05 }
 			add_to_variable = { RED_winter_army_army_infantry_attack_factor = 0.05 }
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = tro_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = 0.1
+				}
+			}
 		}
 	}
 	focus = { #열의
@@ -8267,6 +9886,18 @@ focus_tree = {
 			add_to_variable = { RED_winter_army_army_morale_factor = 0.05 }
 			add_to_variable = { RED_winter_army_training_time_factor = 0.1 }
 			add_to_variable = { RED_winter_army_mobilization_speed = 0.05 }
+			if = {
+				limit = {
+					has_power_balance = {
+						id = RED_power_balance
+					}
+				}
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.1
+				}
+			}
 		}
 	}
 
@@ -8592,13 +10223,17 @@ focus_tree = {
 			custom_effect_tooltip = RED_winterarmy_advance_tt
 			custom_effect_tooltip = RED_army_focus_6_tt
 			add_to_variable = { RED_winter_army_modifier_army_sub_unit_halo_militia_defence_factor = 0.05 }
-			capital_scope = {
-				RED = {
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			RED = {
+				custom_effect_tooltip = RED_kivotos_halo_militia_add6_tt
+				hidden_effect = {
 					add_to_variable = {
 						RED.halo_militia_cap = 6
 					}
 					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
+			}
+			capital_scope = {
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
@@ -8609,7 +10244,7 @@ focus_tree = {
 	}
 	focus = { #민주집중제 원리
 		id = RED_army_focus_7
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		x = 2
 		y = 5
 		cost = 4
@@ -8647,13 +10282,22 @@ focus_tree = {
 			focus = RED_cohesion_first
 		}
 		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RED_throw_aep_away
+					}
+				}
+				NOT = {
+					has_country_flag = RED_there_is_coup_flag
+				}
+				has_completed_focus = RED_future_production_line
+				NOT = {
+					has_completed_focus = RED_new_economy_focus_0
+					has_completed_focus = RED_economy_focus_9
+				}
 			}
-			has_completed_focus = RED_future_production_line
-			NOT = {
-				has_completed_focus = RED_new_economy_focus_0
-			}
+			else = {has_country_flag = RED_throw_aep_away}
 		}
 
 		completion_reward = {
@@ -10083,7 +11727,7 @@ focus_tree = {
 
 	focus = { #반파시즘 성전
 		id = RED_revolution_war_focus_0
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_generic_communism_anti_fascism
 		cost = 4
 		available = {
 			NOT = {
@@ -10323,7 +11967,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #지역 훈련소
+	focus = { #지역 학생 훈련소
 		id = RED_revolution_war_focus_6
 		icon = GFX_focus_SMB_tierra_del_fuego_training
 		cost = 4
@@ -10351,20 +11995,24 @@ focus_tree = {
 					add_idea = RED_seawall_1
 				}
 			}
+			custom_effect_tooltip = RED_revolution_war_focus_6_tt
 			every_controlled_state = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
-					infrastructure > 2
+					infrastructure > 4
 					NOT = {
 						state = 914
 					}
 				}
 				RED = {
-					add_to_variable = {
-						RED.halo_militia_cap = 1
+					custom_effect_tooltip = RED_kivotos_halo_militia_add1_tt
+					hidden_effect = {
+						add_to_variable = {
+							RED.halo_militia_cap = 1
+						}
+						set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 					}
-					set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
 				}
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 1"
@@ -10409,7 +12057,7 @@ focus_tree = {
 	}
 	focus = { #대규모 동원
 		id = RED_revolution_war_focus_8
-		icon = GFX_focus_generic_limited_social_mobilization
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 4
 		relative_position_id = RED_revolution_war_focus_0
 		x = -3
@@ -10465,13 +12113,32 @@ focus_tree = {
 					}
 				}
 			}
-			every_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					is_owned_by = RED
 					is_core_of = RED
-					NOT = {
-						state = 914
-					}
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_owned_by = RED
+					is_core_of = RED
+				}
+				create_unit = {
+					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = RED
+					count = 3
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_owned_by = RED
+					is_core_of = RED
 				}
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
@@ -10490,17 +12157,15 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = RED_revolution_war_focus_8_tt_2
-				every_controlled_state = {
+				random_controlled_state = {
 					limit = {
 						is_owned_by = RED
 						is_core_of = RED
-						NOT = {
-							state = 914
-						}
 					}
 					create_unit = {
 						division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
 						owner = RED
+						count = 3
 					}
 				}
 			}

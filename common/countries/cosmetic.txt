@@ -1871,6 +1871,10 @@ ABY_UNION = {
 	color = rgb { 153 0 25 }
 	color_ui = rgb { 153 0 25 }
 }
+ABY_military_government = {
+	color = rgb { 120 120 150 }
+	color_ui = rgb { 120 120 150 }
+}
 ABY_SCHOOL = {
 	color = rgb { 50 0 75 }
 	color_ui = rgb { 50 0 75 }
@@ -2072,8 +2076,8 @@ EGY_NOT_ENG = {
 	color_ui = rgb { 230 230 70 }
 }
 EGY_arab_united_republic = {
-	color = rgb { 100 100 50 }
-	color_ui = rgb { 100 100 50 }
+	color = rgb { 85 102 0 }
+	color_ui = rgb { 85 102 0 }
 }
 EGY_ABYDOS = {
 	color = rgb { 50 0 75 }
@@ -2385,6 +2389,10 @@ RE8_office = {
 	color = rgb { 178 59 89 }
 	color_ui = rgb { 178 59 89 }
 }
+RE5_rebuilding_soviet = {
+	color = rgb { 178 59 89 }
+	color_ui = rgb { 178 59 89 }
+}
 
 TRM_polish = {
 	color = rgb { 189 55 86 }
@@ -2550,6 +2558,14 @@ ABY_greater_abydos_communism = {
 	color = rgb { 153 0 25 }
 	color_ui = rgb { 153 0 25 }
 }
+ABY_greater_abydos_democratic = {
+	color = rgb { 150 0 50 }
+	color_ui = rgb { 150 0 50 }
+}
+ABY_greater_abydos_neutrality = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
 ABY_czech_osterreich = {
 	color = HSV { 0 0 0.4 }
 	color_ui = rgb { 138 155 116 }
@@ -2595,12 +2611,28 @@ SYR_middle_east = {
 	color_ui = rgb { 175 50 75 }
 }
 ABY_neptis_nation_1 = {
-	color = rgb { 200 200 100 }
-	color_ui = rgb { 200 200 100 }
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
 }
 ABY_neptis_nation_2 = {
-	color = rgb { 200 200 100 }
-	color_ui = rgb { 200 200 100 }
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_3 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_4 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_5 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_6 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
 }
 ABY_highlander_nation_1 = {
 	color = rgb { 69 157 208 }

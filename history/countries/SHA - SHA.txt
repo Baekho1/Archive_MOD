@@ -130,12 +130,6 @@ recruit_character = SHA_KAGUYA
 recruit_character = SHA_secret_agent
 recruit_character = SHA_elizabet_von_gutmann
 
-recruit_character = SHA_arthur_seyss_inquart
-
-# SHA_KAI ={
-# 	set_character_flag = MIL_imprisoned_flag #수감중
-# }
-
 set_convoys = 0
 
 set_politics = {

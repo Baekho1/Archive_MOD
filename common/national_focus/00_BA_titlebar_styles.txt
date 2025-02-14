@@ -1,0 +1,37 @@
+# 작은 중점명
+style = {
+	name = FUCKING_focus_style
+
+	unavailable = GFX_focus_unavailable_fucking
+	completed = GFX_focus_completed_fucking
+	available = GFX_focus_can_start_fucking
+	current = GFX_focus_current_fucking
+}
+
+# 붉겨 - 방위위원회
+style = {
+	name = REDWINTER_RE4_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_RE4_bg
+	completed = GFX_focus_completed_joint_RE4_bg
+	available = GFX_focus_can_start_joint_RE4_bg
+	current = GFX_focus_current_joint_RE4
+}
+# 붉겨 - 붉겨 본국
+style = {
+	name = REDWINTER_RED_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_RED_bg
+	completed = GFX_focus_completed_joint_RED_bg
+	available = GFX_focus_can_start_joint_RED_bg
+	current = GFX_focus_current_joint_RED
+}
+# 붉겨 - 본국 - 방위위원회
+style = {
+	name = REDWINTER_RED_RE4_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_RED_RE4_bg
+	completed = GFX_focus_completed_joint_RED_RE4_bg
+	available = GFX_focus_can_start_joint_RED_RE4_bg
+	current = GFX_focus_current_joint_RED_RE4
+}

@@ -44,7 +44,7 @@ SHA_tank_equipment_organization = {
 	allowed = { tag = SHA }
 
 	available = {
-		
+		FROM = { has_completed_focus = SHA_military_production }
 	}
 
 	add_trait = { 
@@ -62,7 +62,7 @@ SHA_tank_equipment_organization = {
 
 		available = { #Three FROM blocs to provide two different check marks in the UI
 			FROM = {
-				has_completed_focus = SHA_Mortar_Development_Department
+				has_completed_focus = SHA_tank_develop
 			}
 		}
 
@@ -74,6 +74,7 @@ SHA_tank_equipment_organization = {
 
 		equipment_bonus = {
 			soft_attack = 0.07
+			hard_attack = 0.04
 		}
 	}
 
@@ -92,7 +93,7 @@ SHA_tank_equipment_organization = {
 
 		available = { #Three FROM blocs to provide two different check marks in the UI
 			FROM = {
-				has_completed_focus = SHA_Mortar_Development_Department
+				has_completed_focus = SHA_military_production
 			}
 		}
 
@@ -104,6 +105,45 @@ SHA_tank_equipment_organization = {
 
 		production_bonus = {
 			production_capacity_factor = 0.06
+		}
+	}
+}
+# 야포 설계사
+SHA_artillery_equipment_organization = {
+	include = generic_artillery_organization
+	icon = GFX_Shanhaijing_MIO_artill
+	allowed = { tag = SHA }
+
+	available = {
+		FROM = { has_completed_focus = SHA_Mortar_Development_Department }
+	}
+
+	add_trait = { 
+		token = SHA_mio_trait_merge_plant_soft_hard_attack
+		name = SHA_mio_trait_No1
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+		special_trait_background = yes
+
+		position = { x=4 y=3 }
+		
+		visible = {
+			FROM = { original_tag = SHA }
+		}
+
+		available = { #Three FROM blocs to provide two different check marks in the UI
+			FROM = {
+				has_completed_focus = SHA_Mortar_Development_Department
+			}
+		}
+
+		on_complete = {
+
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.04
 		}
 	}
 }

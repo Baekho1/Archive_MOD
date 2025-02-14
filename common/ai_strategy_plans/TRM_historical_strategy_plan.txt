@@ -86,10 +86,6 @@ TRM_historical = {
         # 마지막 내정 중점
         TRN_gyungje_hyu_ul_bub
         
-        # 남부 공세
-        TRM_southern_offensive
-        TRM_SANHAIJING_offensive
-        
         # 공군 중점
         TRN_Luftwaffe
         TRN_Standardise_Pilot_Training
@@ -102,6 +98,10 @@ TRM_historical = {
         TRN_research_slot
         TRN_railway_focus
         TRN_railway_gun_focus
+        
+        # 남부 공세
+        TRM_southern_offensive
+        TRM_SANHAIJING_offensive
         
 	}
 	research = {

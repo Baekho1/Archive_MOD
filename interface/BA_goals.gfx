@@ -1869,6 +1869,10 @@ spriteTypes = {
 		name = "GFX_goal_SHA_Southern_Kivotos"
 		texturefile = "gfx/interface/goals/SHA/SHA_Southern_Kivotos.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_cavalry_charge"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_cavalry_charge.png"  
+	}
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  
@@ -1975,6 +1979,29 @@ spriteTypes = {
 		name = "GFX_COU_kaya_gscp"
 		textureFile = "gfx/interface/goals/COU/COU_KAYA_GSCP.tga"
 	}
+	
+	spriteType = {
+		name = "GFX_COU_unarrest_mussert"
+		textureFile = "gfx/interface/goals/COU/COU_unarrest_mussert.png"
+	}
+	spriteType = {
+		name = "GFX_COU_in_the_darkness"
+		textureFile = "gfx/interface/goals/COU/COU_in_the_darkness.png"
+	}
+	spriteType = {
+		name = "GFX_COU_remove_the_line"
+		textureFile = "gfx/interface/goals/COU/COU_remove_the_line.png"
+	}
+	spriteType = {
+		name = "GFX_COU_treaty_of_amsterdam"
+		textureFile = "gfx/interface/goals/COU/COU_treaty_of_amsterdam.png"
+	}
+	spriteType = {
+		name = "GFX_COU_kaya_dictatership_on"
+		textureFile = "gfx/interface/goals/COU/COU_kaya_dictatership_on.png"
+	}
+	
+	
 	####카이저라이히 돚거
 	SpriteType = { 
 		name = "GFX_goal_state_economy"
@@ -2442,6 +2469,19 @@ spriteTypes = {
 		name = "GFX_focus_shigure"
 		textureFile = "gfx/interface/goals/RED/focus_shigure.tga"
 	}
+	# 방위위원회
+	spriteType = {
+		name = "GFX_focus_REDWINTER_defense_committee"
+		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_defense_committee.tga"
+	}
+	spriteType = {
+		name = "GFX_focus_REDWINTER_finland"
+		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_finland.tga"
+	}
+	spriteType = {
+		name = "GFX_focus_REDWINTER_investment"
+		textureFile = "gfx/interface/goals/RED/focus_REDWINTER_investment.tga"
+	}
 
 	#백귀야행
 	spriteType = {
@@ -2552,4 +2592,62 @@ spriteTypes = {
 		name = "GFX_goal_JAP_strengthen_the_divine_wind"
 		textureFile = "gfx/interface/goals/JAP/ADDON_JAP_strengthen_the_divine_wind.tga"
 	}
+
+	# 데카그라마톤톤정
+
+	spriteType = {
+		name = "GFX_GEI_DEC_victory"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_old_question"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_old_answer"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_outside"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_human_history"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_fallen_gods_homeland"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_stabilization"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_auto"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_modernization"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_syntetic_dawn"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_box"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
+	}
+
 }

@@ -1914,6 +1914,10 @@ country_event = { # 크아악 선도부
 		name = GEH_event.70.b
 		ai_chance = {
 			factor = 5
+			modifier = {
+				date < 1939.6.1
+				factor = 0.001
+			}
 		}
 		add_war_support = 0.10
 		create_wargoal = {

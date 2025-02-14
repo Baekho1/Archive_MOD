@@ -367,6 +367,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_decisions_GEH_basking_in_the_brilliance_of_their_serenade"
+		texturefile = "gfx/interface/decisions/GEH_basking_in_the_brilliance_of_their_serenade.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_BA_all_country_img"
 		texturefile = "gfx/interface/decisions/BA_all_country_img.tga"
 		legacy_lazy_load = no

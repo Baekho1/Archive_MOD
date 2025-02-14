@@ -1877,12 +1877,6 @@ country_event = {
 		74 = { set_demilitarized_zone = no }
 		set_country_flag = ABY_flag_collapsed_government
 		set_cosmetic_tag = ABY_revolution
-		set_power_balance = {
-			id = ABY_power_balance
-            left_side = ABY_government_side
-            right_side = ABY_neptis_side
-			set_default = yes # whether or not to reset the power balance to the initial value, default = no
-		}
 		add_popularity = {
 			ideology = democratic
 			popularity = -1
@@ -1907,30 +1901,17 @@ country_event = {
 		trigger = {
 			has_completed_focus = ABY_focus_unite_front
 		}
-		986 = { set_demilitarized_zone = no }
-		4 = { set_demilitarized_zone = no }
-		972 = { set_demilitarized_zone = no }
-		153 = { set_demilitarized_zone = no }
-		74 = { set_demilitarized_zone = no }
-		set_country_flag = ABY_flag_collapsed_government
-		set_cosmetic_tag = ABY_revolution
-		set_country_flag = ABY_flag_revolution
-		add_popularity = {
-			ideology = democratic
-			popularity = -1
-		}
-		set_politics = {
-			ruling_party = fascism
-		}
 		set_country_flag = ABY_flag_collapse_end
-		complete_national_focus = ABY_focus_bohemia_wldurqkddnldnldnjsghl
-		remove_ideas = {
-			ABY_idea_bohemia_and_austria
-		}
-		retire_character = ABY_czech_EV
-		retire_character = ABY_czech_EH
-		hidden_effect = {
-			retire_character = ABY_czech_EV_2
+		start_civil_war = {
+			ideology = fascism 
+			size = 0.35
+			army_ratio = 0.35
+			states = {
+				972 74 153 4 986
+			}
+			keep_all_characters = yes
+			set_cosmetic_tag = ABY_revolution
+			ABY_AUS_ernst_rudiger_starhemberg = { set_nationality = PREV.PREV }
 		}
 	}
 }
@@ -2015,7 +1996,17 @@ country_event = {
 	option = {
 		name = ABY_new_event.29.a
 		ai_chance = { factor = 100 }
-		
+		complete_national_focus = ABY_focus_milita_keep
+		add_stability = -0.1
+		add_war_support = 0.1
+	}
+
+	option = {
+		name = ABY_new_event.29.a
+		ai_chance = { factor = 100 }
+		complete_national_focus = ABY_focus_milita_dismiss
+		add_stability = 0.1
+		add_war_support = -0.1
 	}
 }
 
@@ -9259,7 +9250,12 @@ country_event = {
 	option = {
 		name = ABY_new_event.185.a
 		ai_chance = { factor = 100 }
-		add_stability = 0.25
+		add_stability = 0.15
+		set_party_name = {
+			ideology = fascism
+    		long_name = ABY_fascism_party
+    		name = ABY_fascism_party
+		}
 	}
 }
 
@@ -9297,6 +9293,8 @@ country_event = {
 	option = {
 		name = ABY_new_event.187.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_fascist_terror
+		custom_effect_tooltip = ABY_tt_fascist_warning
 	}
 }
 
@@ -9311,6 +9309,18 @@ country_event = {
 	option = {
 		name = ABY_new_event.188.a
 		ai_chance = { factor = 100 }
+		ABYDO_Shiroko = {
+			add_trait = { trait = front_line_general }
+			add_trait = { trait = Commando }
+		}
+		custom_effect_tooltip = ABY_plan_cost_tt
+		add_to_variable = { ABY_plan_cost_var = -10 }
+	}
+
+	option = {
+		name = ABY_new_event.188.b
+		ai_chance = { factor = 100 }
+		add_political_power = 100
 	}
 }
 
@@ -9325,6 +9335,10 @@ country_event = {
 	option = {
 		name = ABY_new_event.189.a
 		ai_chance = { factor = 100 }
+		add_ideas = {
+			ABY_idea_wprnrtodehdusaod
+		}
+		set_country_flag = ABY_flag_wprnrtodehdusaod
 	}
 }
 
@@ -10437,12 +10451,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.213.a
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_enead
-	}
-	option = {
-		name = ABY_new_event.213.b
-		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_custom_puppet
+		complete_national_focus = ABY_focus_arrest_suo
 	}
 }
 
@@ -10457,28 +10466,75 @@ country_event = {
 	option = {
 		name = ABY_new_event.214.a
 		ai_chance = { factor = 100 }
-		ABY = {
-			country_event = {
-				id = ABY_new_event.215
-				hours = 12
-			}
-			remove_ideas = {
-				ABY_idea_KAI_cornjs
-			}
+		trigger = {
+			has_completed_focus = ABY_focus_shiroco_commander
+		}
+		complete_national_focus = ABY_focus_first_attack
+		set_country_flag = ABY_flag_terror_occured
+		ABYDO_Hoshino = {
+			add_trait = { trait = unconscious }
+		}
+		ABYDO_ayane = {
+			add_trait = { trait = unconscious }
+		}
+		ABYDO_serika = {
+			add_trait = { trait = unconscious }
+		}
+		ABYDO_nonomi = {
+			add_trait = { trait = unconscious }
 		}
 	}
+
 	option = {
 		name = ABY_new_event.214.b
 		ai_chance = { factor = 100 }
-		ABY = {
-			country_event = {
-				id = ABY_new_event.216
-				hours = 12
+		trigger = {
+			NOT = {has_completed_focus = ABY_focus_shiroco_commander}
+		}
+		if = {
+			limit = {
+				GEI = {
+					has_cosmetic_tag = GEI_The_Colour
+				}
 			}
 		}
-		add_timed_idea = {
-			idea = ABY_idea_cornjs_get
-			days = 180
+		else = {
+			custom_effect_tooltip = ABY_final_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_core_of = CZE
+					}
+					transfer_state_to = CZE
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = AUS
+					}
+					transfer_state_to = AUS
+				}
+				every_owned_state = {
+					limit = {
+						AND = {
+							NOT = {is_core_of = AUS}
+							NOT = {is_core_of = CZE}
+						}
+					}
+					transfer_state_to = ZZZ
+				}
+				CZE = {
+					set_politics = {
+						ruling_party = fascism
+					}
+					create_faction = ABY_united_frontline
+					add_to_faction = AUS
+				}
+				AUS = {
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+			}
 		}
 	}
 }
@@ -10494,10 +10550,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.215.a
 		ai_chance = { factor = 100 }
-		add_timed_idea = {
-			idea = ABY_idea_cornjs_give
-			days = 180
-		}
+		set_country_flag = ABY_flag_arrest_fascist_1
 	}
 }
 
@@ -10512,6 +10565,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.216.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_arrest_fascist_2
 	}
 }
 
@@ -10526,21 +10580,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.217.a
 		ai_chance = { factor = 100 }
-		country_event = {
-			id = ABY_new_event.235
-		}
-		ABYDO_Shiroko = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_nonomi = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_serika = {
-			add_trait = { trait = unconscious }
-		}
-		ABYDO_ayane = {
-			add_trait = { trait = unconscious }
-		}
+		set_country_flag = ABY_flag_arrest_fascist_3
 	}
 }
 
@@ -10555,6 +10595,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.218.a
 		ai_chance = { factor = 100 }
+		set_country_flag = ABY_flag_arrested_fascist
 	}
 }
 

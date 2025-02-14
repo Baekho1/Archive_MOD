@@ -656,7 +656,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.3
+				political_power_gain = 0.5
 			}
 		}
 		ABY_idea_eocordnldnjsghl_first = {
@@ -3913,6 +3913,18 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
+		ABY_idea_army_1_0 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = -0.1
+			}
+		}
 		ABY_idea_army_1_1 = {
 			allowed_civil_war = {
                 always = yes
@@ -3993,6 +4005,42 @@ ideas = {
 				max_dig_in_factor = 0.2
 				production_speed_bunker_factor = 0.25
 				production_speed_coastal_bunker_factor = 0.25
+			}
+		}
+		ABY_idea_army_2_2_3_a = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.1
+				max_dig_in = 10
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.2
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+			}
+		}
+		ABY_idea_army_2_2_3_b = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.1
+				max_dig_in = 10
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.2
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				modifier_army_sub_unit_militia_attack_factor = -0.25
+				modifier_army_sub_unit_militia_defence_factor = -0.25
 			}
 		}
 		ABY_idea_army_2_2_3_1 = {
@@ -4997,51 +5045,102 @@ ideas = {
 			allowed_civil_war = {
                 always = yes
             }
-			cancel = {
-				SHA = {
-					all_core_state = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				HYA = {
-					all_core_state = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				SLO = {
-					all_core_state = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				39 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				850 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				102 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				736 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				852 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				982 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-				853 = {
-					is_controlled_by_ROOT_or_subject = yes
-				}
-			}
 			removal_cost = -1 
 			# picture = 
 			modifier = {
-				conscription = 0.03
-				war_support_factor = 0.05
-				surrender_limit = 0.25
-				custom_modifier_tooltip = ABY_have_cze_aus_slo_tt
+				stability_weekly = 0.025
+				industrial_capacity_factory = -0.2
+			}
+		}
+		ABY_idea_bohemia_and_austria_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				industrial_capacity_factory = 0.15
+				stability_factor = -0.15
+			}
+		}
+		ABY_idea_bohemia_and_austria_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
+		ABY_idea_bohemia_and_austria_5 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		ABY_idea_bohemia_and_austria_6 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				#industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				#stability_factor = -0.05
+			}
+		}
+		ABY_idea_bohemia_and_austria_7 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.2
+				stability_factor = 0.05
+			}
+		}
+		ABY_idea_wprnrtodehdusaod = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				fascism_drift = 0.15
+				command_power_gain_mult = -0.5
+				stability_factor = -0.1
+			}
+		}
+		ABY_idea_wprnrtodehdusaod_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				fascism_drift = 0.1
+				command_power_gain_mult = -0.5
+				stability_factor = -0.05
 			}
 		}
 		ABY_idea_kivotos_nationalism = {
@@ -5560,6 +5659,23 @@ ideas = {
 				army_core_defence_factor = 0.05
 			}
 		}
+		ABY_idea_two_0000 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.35
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
 		ABY_idea_two_001 = {
 			allowed_civil_war = {
                 always = yes
@@ -5587,6 +5703,92 @@ ideas = {
 				war_support_weekly = -0.01
 				political_power_factor = 0.25
 				political_power_gain = 0.5
+			}
+		}
+		ABY_idea_no_totalism = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				communism_drift = -0.1
+				fascism_drift = -0.1
+			}
+		}
+		ABY_idea_SS = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				modifier_army_sub_unit_category_halo_attack_factor = 0.15
+				modifier_army_sub_unit_category_halo_defence_factor = -0.1
+				modifier_army_sub_unit_category_halo_max_org_factor = 0.05
+				war_support_factor = 0.1
+				conscription = 0.005
+			}
+		}
+		ABY_idea_intel_1 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.1
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.1
+				INTELLIGENCE_AGENCY_DEFENSE = 0.1
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+			}
+		}
+		ABY_idea_intel_2 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.15
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.15
+				INTELLIGENCE_AGENCY_DEFENSE = 0.2
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 1
+			}
+		}
+		ABY_idea_intel_3 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.2
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.15
+				INTELLIGENCE_AGENCY_DEFENSE = 0.35
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 1
+				party_popularity_stability_factor = 0.25
+			}
+		}
+		ABY_idea_intel_4 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				stability_factor = -0.25
+				ENEMY_OPERATIVE_DETECTION_CHANCE = 0.2
+				INTELLIGENCE_AGENCY_DEFENSE = 0.5
+				ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR = 0.25
+				NEW_OPERATIVE_SLOT_BONUS = 2
+				OPERATIVE_SLOT = 2
+				party_popularity_stability_factor = 0.25
 			}
 		}
 	}

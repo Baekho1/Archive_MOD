@@ -333,5 +333,224 @@ political_actions = {
 		}
     }
 }
+GEH_external_activities = {
+	GEH_preparations_for_operation_countenance = { # Mission for SOV (or SOV + ENG) to prepare the invasion of Iran
+		priority = 50
 
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			hidden_trigger = { always = no }
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
+			OR = {
+				is_subject = yes
+				NOT = { country_exists = GEM }
+				is_in_faction_with = GEM
+				has_war_with = GEM
+				has_guaranteed = GEM
+				has_non_aggression_pact_with = GEM
+			}
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			country_event = NextPhase.1
+			declare_war_on = {
+				target = GEM
+				type = puppet_wargoal_focus
+			}
+			hidden_effect = {
+       			scoped_play_song = "BA_to_battle"
+			}
+			activate_mission = GEH_operation_countenance
+			custom_effect_tooltip = GEH_fear_eyes_mission_tt
+
+			hidden_effect = { #Add all AI strategies
+				HEU = {
+					add_ai_strategy = {
+						type = befriend
+						id = GEM
+						value = -15
+					}
+				}
+				TRM = {
+					add_ai_strategy = {
+						type = befriend
+						id = GEM			
+						value = -15
+					}
+				}
+				GEM = {
+					add_timed_idea = {
+						idea = GEH_shocked_by_surprise_attack
+						days = 60
+					}
+				}
+			}
+		}
+	}
+
+	GEH_operation_countenance = { # Mission for SOV (or SOV + ENG) to capitulate Iran in time, before they seek foreign help
+		priority = 50
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			GEM = { has_capitulated = yes }
+			all_of_scopes = {
+				array = GEH_gem_initial_states
+				OR = {
+					is_controlled_by = GEH
+					any_allied_country = {
+						controls_state = PREV
+					}
+				}
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		days_mission_timeout = 60
+
+		timeout_effect = { #FAIL -> Lose some stuff and Iran wants to enter an alliance
+			add_political_power = -25
+			add_command_power = -25
+			add_war_support = -0.05
+
+			hidden_effect = { #AI strategies
+				GEM = {
+					add_ai_strategy = {
+						type = alliance
+						id = HEU
+						value = 200
+					}
+				}
+				HEU = {
+					add_ai_strategy = {
+						type = alliance
+						id = GEM		
+						value = 25
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			add_command_power = 50
+			add_war_support = 0.1
+		}
+	}
+}
+GEH_basking_in_the_brilliance_of_their_serenade = {
+
+	GEH_basking_in_the_brilliance_of_their_serenade_mission = { 
+		priority = 99
+
+		icon = GFX_decision_generic_scorched_earth
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
+				always = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = var:GEH_basking_in_the_brilliance_of_their_serenade_mission?240
+
+		timeout_effect = {
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_tt
+			if = {
+				limit = { check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 5 } }
+				country_event = GEH_BTBOTS.7
+				clr_country_flag = GEH_start_focus_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_1_flag } }
+				country_event = GEH_BTBOTS.1
+				set_country_flag = GEH_BTBOTS_1_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_2_flag } }
+				country_event = GEH_BTBOTS.2
+				set_country_flag = GEH_BTBOTS_2_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_3_flag } }
+				country_event = GEH_BTBOTS.3
+				set_country_flag = GEH_BTBOTS_3_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_4_flag } }
+				country_event = GEH_BTBOTS.4
+				set_country_flag = GEH_BTBOTS_4_flag
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = GEH_BTBOTS_5_flag } }
+				country_event = GEH_BTBOTS.5
+				set_country_flag = GEH_BTBOTS_5_flag
+			}
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
+			hidden_effect = {
+				activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+			}
+		}
+	}
+    GEH_basking_in_the_brilliance_of_their_serenade_decision = {
+		icon = GFX_decision_Prefect_team
+		allowed = {
+			original_tag = GEH
+		}
+        fire_only_once = yes
+
+		visible = {
+		}
+        available = {
+        }
+		
+		cost = 25
+
+		complete_effect = {
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_decision_tt
+			country_event = GEH_BTBOTS.6
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = -60 }
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val > 4 }
+				add = 400
+			}
+		}
+    }
+}
 

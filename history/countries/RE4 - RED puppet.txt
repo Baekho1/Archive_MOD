@@ -1,5 +1,7 @@
 capital = 148
 
+set_oob = "RE4_1936"
+
 declare_war_on = {
     target = FIN
     type = annex_everything
@@ -26,19 +28,35 @@ set_technology = {
 	panzerschiffe = 1
 }
 
-create_country_leader = {
-	name = RE4_country_leader_name
-	picture = "GFX_Portrait_BlueArchive_RED_Generic_1"
-	ideology = stalinism
-	traits = {
-		RED_military_government_commander
-	}
-}
+recruit_character = RED_Finnish_Commander
+recruit_character = RE4_clone_marina
+recruit_character = RE4_clone_tomoe
+recruit_character = RE4_commander_1
+recruit_character = RE4_commander_2
+recruit_character = RE4_council
 
 set_stability = 0.4
 set_war_support = 0.4
 set_research_slots = 2
 add_command_power = 10
+
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_political_power_factor = -0.1 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_war_support_factor = -0.05 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_buildings_factor = 0.03 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor = 0.01 }
+
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_autonomy_gain_global_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_consumer_goods_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_local_resources_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_stability_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_autonomy_gain = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_trade_laws_cost_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_production_speed_supply_node_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_industrial_capacity_dockyard = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_cic_to_overlord_factor = 0 }
+set_variable = { RED.RE4_finland_colonial_dynamic_modifier_mic_to_overlord_factor = 0 }
+
 
 add_timed_idea = {idea = BA_exiles_of_the_future days = 210}
 add_ideas = {
@@ -54,6 +72,7 @@ set_rule = {
 }
 
 set_convoys = 100
+add_manpower = 50000
 
 set_popularities = {
 	communism = 100

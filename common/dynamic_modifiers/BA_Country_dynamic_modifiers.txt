@@ -857,7 +857,8 @@ RED_the_office_good_dynamic_modifier = { #사무국
 	stability_factor = RED_the_politburo_stability_factor
 	war_support_factor = RED_the_politburo_war_support_factor
 	communism_drift = RED_the_politburo_communism_drift
-	
+	compliance_growth = RED_the_politburo_compliance_growth
+	non_core_manpower = RED_the_politburo_non_core_manpower
 }
 RED_winter_army_dynamic_modifier = { # 겨울군대
 	enable = { always = yes }
@@ -894,7 +895,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 	enable = {
 		always = yes
 	}
-	icon = GFX_idea_NORDIC_industry_communist
+	icon = GFX_idea_portrait_RED_minori
 
 	industrial_capacity_factory = RED_labor_party_dynamic_modifier_industrial_capacity_factory
 	industrial_capacity_dockyard = 0.05
@@ -936,6 +937,7 @@ RED_RedWinterIntelligenceService_dynamic_modifier = { #정보국
 	operative_slot = RED_intel_operative_slot
 	intel_network_gain = RED_intel_intel_network_gain
 	compliance_gain = RED_intel_compliance_gain
+	send_volunteer_size = RED_intel_send_volunteer_size
 }
 RED_ThreatOfCovered5thLines_dynamic_modifier = { #잠복된 제5열의 위협
 	enable = {
@@ -969,6 +971,35 @@ RED_war_engineering_modifier = { #전쟁공학
 	motorized_defence_factor = RED_war_motorized_defence_factor
 	unit_motorized_design_cost_factor = RED_war_unit_motorized_design_cost_factor
 	fighter_sortie_efficiency = RED_war_fighter_sortie_efficiency
+}
+
+# 방위위원회
+RE4_finland_colonial_dynamic_modifier = {
+
+	enable = { always = yes }
+
+	icon = GFX_idea_RE4_Finland_committee
+
+	remove_trigger = {
+		is_subject = no
+	}
+
+	political_power_factor = RED.RE4_finland_colonial_dynamic_modifier_political_power_factor
+	war_support_factor = RED.RE4_finland_colonial_dynamic_modifier_war_support_factor
+	production_speed_buildings_factor = RED.RE4_finland_colonial_dynamic_modifier_production_speed_buildings_factor
+	autonomy_gain_global_factor = RED.RE4_finland_colonial_dynamic_modifier_autonomy_gain_global_factor
+	research_speed_factor = RED.RE4_finland_colonial_dynamic_modifier_research_speed_factor
+	consumer_goods_factor = RED.RE4_finland_colonial_dynamic_modifier_consumer_goods_factor
+	local_resources_factor = RED.RE4_finland_colonial_dynamic_modifier_local_resources_factor
+	stability_factor = RED.RE4_finland_colonial_dynamic_modifier_stability_factor
+	production_speed_industrial_complex_factor = RED.RE4_finland_colonial_dynamic_modifier_production_speed_industrial_complex_factor
+	autonomy_gain = RED.RE4_finland_colonial_dynamic_modifier_autonomy_gain
+	trade_laws_cost_factor = RED.RE4_finland_colonial_dynamic_modifier_trade_laws_cost_factor
+	production_speed_infrastructure_factor = RED.RE4_finland_colonial_dynamic_modifier_production_speed_infrastructure_factor
+	production_speed_supply_node_factor = RED.RE4_finland_colonial_dynamic_modifier_production_speed_supply_node_factor
+	industrial_capacity_dockyard = RED.RE4_finland_colonial_dynamic_modifier_industrial_capacity_dockyard
+	cic_to_overlord_factor = RED.RE4_finland_colonial_dynamic_modifier_cic_to_overlord_factor
+	mic_to_overlord_factor = RED.RE4_finland_colonial_dynamic_modifier_mic_to_overlord_factor
 }
 
 ## 독일계 국가 ##
@@ -1836,6 +1867,8 @@ ABY_army_dynamic_modifier = {
 	army_attack_factor = ABY_var_army_attack_factor
 	army_speed_factor = ABY_var_army_speed_factor
 	army_defence_factor = ABY_var_army_defence_factor
+    army_org_factor  = ABY_var_army_army_org_factor
+    army_morale_factor = ABY_var_army_army_morale_factor
 	max_dig_in = ABY_var_max_dig_in
 	dig_in_speed_factor = ABY_var_dig_in_speed_factor
 	max_dig_in_factor = ABY_var_max_dig_in_factor
@@ -1854,6 +1887,9 @@ ABY_army_dynamic_modifier = {
 	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
 	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
 	modifier_army_sub_unit_category_halo_defence_factor = ABY_var_modifier_army_sub_unit_category_halo_defence_factor
+
+	modifier_army_sub_unit_militia_attack_factor = ABY_var_modifier_army_sub_unit_militia_attack_factor
+	modifier_army_sub_unit_militia_defence_factor = ABY_var_modifier_army_sub_unit_militia_defence_factor
 
 	#navy
 	navy_org_factor = ABY_var_NAVY_ORG_FACTOR

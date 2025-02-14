@@ -43,6 +43,7 @@ ideologies = {
 
 			Cohabitism = {
 				can_be_randomly_selected = no
+				color = { 5 187 250 }
 			}
 
 			Libertic_Integralism = {
@@ -151,6 +152,7 @@ ideologies = {
 			}
 
 		#/BA_MOD_FIX
+
 			technocracy_communism = {
 				can_be_randomly_selected = no
 				color = { 104 34 34 }
@@ -164,6 +166,9 @@ ideologies = {
 			syndicalism = {
 				can_be_randomly_selected = no
 			}
+			war_communism = { #전시 공산주의 / 좌익 군사정부
+				can_be_randomly_selected = no
+			}
 			
 			left_council_communism = {
 				can_be_randomly_selected = no
@@ -171,6 +176,7 @@ ideologies = {
 			
 			culturlic_Integralism = {
 				can_be_randomly_selected = no
+				color = { 104 34 34 }
 			}
 
 			police_communism = {
@@ -282,6 +288,11 @@ ideologies = {
 
 			neopandemonium = { #개혁 만마전
 				can_be_randomly_selected = no
+			}
+			
+			cou_kaya_dictatorship = { # 카야 고유 이념 
+				can_be_randomly_selected = no
+                color = { 53 60 74 }
 			}
 
 			The_Colour_fascism = {
@@ -432,6 +443,11 @@ ideologies = {
 			}
 			Government_Federalism = {
 				can_be_randomly_selected = no
+			}
+			
+			corporate_state_nephtys = {
+				can_be_randomly_selected = no
+				color = { 255 217 102 }
 			}
 
 			police_neutralism = {

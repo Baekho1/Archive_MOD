@@ -4832,6 +4832,49 @@ news_event = { # OFN의 승리!
     }
 }
 
+news_event = { # 버텨낸 트로츠키
+    id = BA_news.125
+    title = BA_news.125.t
+    desc = BA_news.125.d
+    picture = GFX_news_event_NOR_trotsky_frida
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { #트로츠키 동지 만세!
+        name = BA_news.125.a
+        trigger = {
+			has_government = communism
+			NOT = {
+				OR = {
+					is_ally_with = SOV
+					has_country_leader_ideology = stalinism
+				}
+			}
+        }
+    }
+    option = { #반혁명분자 😠
+        name = BA_news.125.b
+        trigger = {
+			has_government = communism
+			OR = {
+				is_ally_with = SOV
+				has_country_leader_ideology = stalinism
+			}
+        }
+    }
+    option = { #빨갱이들 알빠노
+        name = BA_news.125.c
+        trigger = {
+			NOT = {
+				has_government = communism
+			}
+        }
+    }
+}
+
+
+
 
 
 #news_event = { # 미국 트리니티 에덴 점령

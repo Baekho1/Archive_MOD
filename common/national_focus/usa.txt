@@ -12862,8 +12862,8 @@ focus = {
 				limit = {
 					has_country_flag = USABA_revolutionaries_of_the_nation_in_progress_flag
 				}
-				set_temp_variable = { temp_focus_days = 1 } #For tooltip purposes
-				multiply_temp_variable = { temp_focus_days = 1 } #The constant uses focus cost which is in weeks, so convert to days
+				set_temp_variable = { temp_focus_days = 10 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt

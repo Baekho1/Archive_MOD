@@ -8,6 +8,97 @@ add_namespace = RED_missions_char
 add_namespace = RED_marina_event
 add_namespace = RED_generic
 add_namespace = RED_tro_event
+add_namespace = RED_racing_sov
+
+unit_leader_event = { #못찾음 (붉겨)
+	id = RED_racing_sov.1
+	is_triggered_only = yes
+	title = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.1.t
+	}
+	title = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.1.t_1
+	}
+	desc = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.1.d
+	}
+	desc = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.1.d_1
+	}
+	option = {
+		name = RED_racing_sov.1.a
+	}
+}
+unit_leader_event = { #찾아서 데려옴
+	id = RED_racing_sov.2
+	title = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.2.t
+	}
+	title = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.2.t_1
+	}
+	desc = {
+		trigger = {
+			tag = RED
+		}
+		text = RED_racing_sov.2.d
+	}
+	desc = {
+		trigger = {
+			tag = SOV
+		}
+		text = RED_racing_sov.2.d_1
+	}
+	is_triggered_only = yes
+	option = {
+		if = {
+			limit = {
+				tag = SOV
+			}
+			SOV_paranoia_low_increase_effect = yes
+		}
+		name = RED_racing_sov.1.a
+		if = {
+			limit = {
+				has_power_balance = {
+					id = RED_power_balance
+				}
+			}
+			add_power_balance_value = {
+				id = RED_power_balance
+				value = 0.05
+			}
+		}
+	}
+}
+unit_leader_event = { #찾아서 죽임
+	id = RED_racing_sov.3
+	title = RED_racing_sov.3.t
+	desc = RED_racing_sov.3.d
+	is_triggered_only = yes
+	option = {
+		name = RED_racing_sov.3.a
+		add_political_power = 5
+	}
+}
 
 country_event = {
 	id = RED_tro_event.1
@@ -65,6 +156,82 @@ country_event = { #모미지를 찾아간 체리노
 		name = RED_tro_event.4.a
 	}
 }
+country_event = { #망명위원회 설립
+	id = RED_tro_event.5
+	title = RED_tro_event.5.t
+	desc = RED_tro_event.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #
+		name = RED_tro_event.5.a
+		unlock_decision_tooltip = RED_invite_ivan_smirnov_dec
+		unlock_decision_tooltip = RED_invite_ivar_smilga_dec
+		unlock_decision_tooltip = RED_invite_karl_radek_dec
+		unlock_decision_tooltip = RED_invite_yevgeny_preobrazhensky_dec
+		unlock_decision_tooltip = RED_invite_aleksandr_shlyapnikov_dec
+	}
+}
+country_event = { #자치공화국 작명
+	id = RED_tro_event.6
+	title = RED_tro_event.6.t
+	desc = RED_tro_event.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #뭐라는거야미친놈이
+		name = RED_tro_event.6.a
+	}
+	option = { #
+		name = RED_tro_event.6.b
+		ai_chance = {
+			base = 0
+		}
+		set_country_flag = RED_cherino_buntang_country_name
+	}
+}
+country_event = { #세계혁명
+	id = RED_tro_event.7
+	title = RED_tro_event.7.t
+	desc = RED_tro_event.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #레츠고 디디씨
+		name = RED_tro_event.7.a
+		add_ideas = RED_world_revolution
+		custom_effect_tooltip = RED_tro_event.7_tt
+	}
+}
+country_event = { #사무국 처우
+	id = RED_tro_event.8
+	title = RED_tro_event.8.t
+	desc = RED_tro_event.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #적당한 직위에 올려두자
+		name = RED_tro_event.8.a
+		custom_effect_tooltip = RED_tro_event.8_tt
+		#정치고문으로만들기
+	}
+	option = { #사무국 팔다리 잘라버리자
+		name = RED_tro_event.8.b
+		remove_power_balance = {
+			id = RED_power_balance
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = { #이주노동자
+	id = RED_tro_event.9
+	title = RED_tro_event.9.t
+	desc = RED_tro_event.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #적당한 직위에 올려두자
+		name = RED_tro_event.9.a
+		add_political_power = 10
+	}
+}
 add_namespace = RED_reading
 country_event = { #『공산당 선언』
 	id = RED_reading.1
@@ -78,6 +245,34 @@ country_event = { #『공산당 선언』
 			ideology = communism
 			popularity = 0.01
 		}
+		add_country_leader_trait = RED_cherino_learner
+		effect_tooltip = {
+			RED_cherino = {
+				add_to_variable = {
+					var = RED_cherino_communism_knowledge
+					value = 1
+					tooltip = RED_cherino_communism_knowledge_tt
+				}
+				add_to_variable = {
+					var = RED_cherino_ideal_values
+					value = 1
+					tooltip = RED_cherino_ideal_values_tt
+				}
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = RED_cherino_communism_knowledge
+				value = 1
+				tooltip = RED_cherino_communism_knowledge_tt
+			}
+			add_to_variable = {
+				var = RED_cherino_ideal_values
+				value = 1
+				tooltip = RED_cherino_ideal_values_tt
+			}
+		}
+		unlock_decision_tooltip = RED_cherino_read_book
 	}
 }
 
@@ -207,7 +402,7 @@ country_event = { #국내 매입 조절
 		add_to_variable = {
 			RED_invest = 4
 		}
-		add_political_power = -25
+		add_political_power = -50
 	}
 	option = { #대규모
 		name = RED_generic.4.c
@@ -216,7 +411,7 @@ country_event = { #국내 매입 조절
 		add_to_variable = {
 			RED_invest = 6
 		}
-		add_political_power = -50
+		add_political_power = -100
 	}
 }
 country_event = { #재건채권 만료
@@ -365,6 +560,15 @@ country_event = { #대안 경제 정책
 	option = { #후
 		name = RED_generic.12.a
 		add_political_power = 10
+		if = {
+			limit = {
+				has_completed_focus = RED_economy_focus_14
+			}
+			custom_effect_tooltip = RED_generic.12_tt_1
+		}
+		else = {
+			custom_effect_tooltip = RED_generic.12_tt
+		}
 	}
 }
 country_event = { #방위위원회 패배
@@ -375,6 +579,115 @@ country_event = { #방위위원회 패배
 	option = { #후
 		name = RED_generic.13.a
 		add_political_power = -1
+	}
+}
+country_event = { #방위위원회 승리
+	id = RED_generic.14
+	title = RED_generic.13.t
+	desc = RED_generic.13.d
+	is_triggered_only = yes
+	option = { #후
+		name = RED_generic.13.a
+		add_political_power = -1
+	}
+}
+country_event = { #제1차 AEP 평가
+	id = RED_generic.15
+	title = RED_generic.15.t
+	desc = RED_generic.15.d
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = RED_throw_aep_away
+	}
+	option = { #굿 = 유지
+		name = RED_generic.15.a
+		trigger = {
+			num_of_civilian_factories > 40
+		}
+		custom_effect_tooltip = RED_generic.15.a_tt
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = {
+			base = 4
+		}
+	}
+	option = { #배드 = 유지
+		name = RED_generic.15.c
+		custom_effect_tooltip = RED_generic.15.c_tt
+		add_political_power = -10
+		add_stability = -0.05
+		trigger = {
+			num_of_civilian_factories < 41
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = { #폐지
+		custom_effect_tooltip = RED_generic.15.b_tt
+		set_country_flag = RED_throw_aep_away
+		name = RED_generic.15.b
+
+		effect_tooltip = {
+			unlock_national_focus = RED_rearming_focus_5
+			unlock_national_focus = RED_rearming_focus_14
+			unlock_national_focus = RED_arms_industrial_optimize
+			unlock_national_focus = RED_army_production_improve
+		}
+		hidden_effect = {
+			complete_national_focus  = RED_steel_casting_industry
+			complete_national_focus = RED_new_economy_focus_1
+		}
+		add_political_power = -80
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = { #제2차 AEP 조기달성
+	id = RED_generic.16
+	title = RED_generic.16.t
+	desc = RED_generic.16.d
+	fire_only_once = yes
+	trigger = {
+		num_of_civilian_factories > 81
+		has_completed_focus = RED_economy_focus_15
+		has_completed_focus = RED_economy_focus_16
+		has_completed_focus = RED_economy_focus_20
+		has_completed_focus = RED_economy_focus_19
+		has_idea = RED_second_AEP_3
+		original_tag = RED
+	}
+	option = { #굿 
+		name = RED_generic.16.a
+		add_political_power = 5
+		hidden_effect = {
+			remove_ideas = RED_second_AEP_3
+		}
+	}
+}
+country_event = { #제1차 AEP 조기달성
+	id = RED_generic.17
+	title = RED_generic.16.t
+	desc = RED_generic.16.d
+	fire_only_once = yes
+	trigger = {
+		num_of_civilian_factories > 41
+		has_completed_focus = RED_economy_focus_21
+		has_completed_focus = RED_economy_focus_13
+		has_completed_focus = RED_economy_focus_10
+		has_idea = RED_first_AEP_1
+		original_tag = RED
+	}
+	option = { #굿 
+		name = RED_generic.16.a
+		add_political_power = 5
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_14
+		}
+		hidden_effect = {
+			remove_ideas = RED_first_AEP_1
+		}
 	}
 }
 
@@ -1334,7 +1647,6 @@ country_event = { #엄습하는 반혁명
 			promote_character = RED_cherino
 			puppet = RE1
 			puppet = RE3
-			puppet = RE4
 			hidden_effect={remove_ideas = { RED_democratic_resistancel_idea RED_democratic_resistancel_week_idea RED_academic_regime_dominance_idea RED_military_government_idea_1 RED_military_government_idea_2 RED_military_government_idea_3 RED_military_government_idea_4 RED_military_government_idea_exit }}
 			set_cosmetic_tag = RE2_antirevolution
 		}
@@ -1344,6 +1656,14 @@ country_event = { #엄습하는 반혁명
 		}
 		delete_unit = {}
 		custom_effect_tooltip = RED_minori_event.5_tt
+		custom_effect_tooltip = RED_kivotos_halo_militia_add-10_tt
+		hidden_effect = {
+			add_to_variable = {
+				RED.halo_militia_cap = -10
+			}
+			set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+		}
+		custom_effect_tooltip = CHL_skip_one_line_tt
 		activate_mission = RED_aproaching_anti_revolution
 		hidden_effect = {
 			every_state = {
@@ -3353,23 +3673,27 @@ country_event = { #권력쟁투 시작
 			id = RED_power_balance
 			set_value = -0.2
 		}
+		unlock_decision_tooltip = RED_giving_pudding
 	}
 }
-country_event = { #편집국의 반대
+country_event = { #트로츠키-체리노 대립 / 출판부
 	id = RED_event.6 
 	title = RED_event.6.t
 	desc = RED_event.6.d
 	hidden = no
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #ㅇㅋ
+	option = { #체리노 승
 		name = RED_event.6.a
-		add_political_power = 10
+		effect_tooltip = {
+			unlock_national_focus = RED_kill_editorial
+		}
 		set_country_flag = RED_edit_disagree
 	}
 	option = { #ㄴㄴ
 		name = RED_event.6.b
-		add_political_power = -10
+		effect_tooltip={unlock_national_focus = RED_socialist_press}
+		set_country_flag = RED_edit_disagree_1
 	}
 }
 
@@ -3546,7 +3870,7 @@ country_event = { # 2번 선택지
 	}
 }
 
-country_event = { #망명위원회의 설립
+country_event = { #트로츠키주의자들 튀기
 	id = RED_event.14
 	title = RED_event.14.t
 	desc = RED_event.14.d
@@ -3556,7 +3880,70 @@ country_event = { #망명위원회의 설립
 		
 	option = {
 		name = RED_event.14.a
-		unlock_decision_category_tooltip = RED_invite_trotskists_dec_cat
+		if = {
+			limit = {
+				tag = SOV
+			}
+			SOV_paranoia_low_increase_effect = yes
+			if = {
+				limit = {
+					has_idea = trotskyite_plot_nsb
+				}
+				swap_ideas = {
+					remove_idea = trotskyite_plot_nsb
+					add_idea = RED_trotskyite_run
+				}
+			}
+			else = {
+				add_ideas = RED_trotskyite_run
+			}
+		}
+		SOV = {
+			effect_tooltip = {
+				SOV_ivan_smirnov = {
+					set_nationality = SPR
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_ivan_smirnov
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_ivar_smilga = {
+					set_nationality = GEM
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_ivar_smilga
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_karl_radek = {
+					set_nationality = GEM
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_karl_radek
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_yevgeny_preobrazhensky = {
+					set_nationality = MIL
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_yevgeny_preobrazhensky
+			}
+			custom_effect_tooltip = RED_event.14_tt
+			effect_tooltip = {
+				SOV_aleksandr_shlyapnikov = {
+					set_nationality = COU
+				}
+			}
+			hidden_effect = {
+				retire_character = SOV_aleksandr_shlyapnikov
+			}
+		}
 	}
 }
 country_event = { #반파시즘 노동자전선
@@ -3793,7 +4180,7 @@ country_event = { #주 3일제
 		add_war_support = 0.05
 	}
 }
-country_event = { #대안경제정책에 대한 평가
+country_event = { #제2차 AEP 평가
 	id = RED_event.22
 	title = RED_event.22.t
 	desc = RED_event.22.d
@@ -3801,34 +4188,35 @@ country_event = { #대안경제정책에 대한 평가
 	is_triggered_only = yes
 	option = {
 		name = RED_event.22.a
-		swap_ideas = {
-			remove_idea = RED_second_AEP_3
-			add_idea = RED_market_socialism
-		}
 		if = {
 			limit = {
-				num_of_factories > 200
-				has_stability > 0.7
+				num_of_civilian_factories > 79
 			}
 		}
 		else = {
-			add_political_power = -200
 			custom_effect_tooltip = RED_event.22_tt_1
+			add_political_power = -100
 		}
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_22
+		}
+		set_country_flag = RED_corporatism_flag
 	}
 	option = {
 		name = RED_event.22.b
-		remove_ideas = RED_second_AEP_3
 		if = {
 			limit = {
-				num_of_factories > 200
-				has_stability > 0.7
+				num_of_civilian_factories > 79
 			}
-			add_political_power = -200
 			custom_effect_tooltip = RED_event.22_tt_2
+			add_political_power = -100
 		}
 		else = {
 		}
+		effect_tooltip = {
+			unlock_national_focus = RED_economy_focus_17
+		}
+		set_country_flag = RED_market_socialism_flag
 	}
 }
 country_event = { #쿠데타를 위한 무한반복 디시전
@@ -3879,11 +4267,13 @@ country_event = { #민트초코해방전선의 쿠데타
 	title = RED_event.24.t
 	desc = RED_event.24.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.24.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27
@@ -3898,11 +4288,13 @@ country_event = { #가라아게에 레몬을 반대하는 혁명가들의 모임
 	title = RED_event.25.t
 	desc = RED_event.25.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.25.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27
@@ -3917,11 +4309,13 @@ country_event = { #한겨울냉수마찰총연맹 쿠데타
 	title = RED_event.26.t
 	desc = RED_event.26.d
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_there_is_coup_flag
+	}
 	option = {
 		name = RED_event.26.a
 		add_political_power = -10
 		add_stability = -0.03
-		set_country_flag = RED_there_is_coup_flag
 		hidden_effect = {
 			country_event = {
 				id = RED_event.27
@@ -4107,13 +4501,20 @@ country_event = { #드러난 부패
 	is_triggered_only = yes
 	option = {
 		name = RED_event.37.a
+		custom_effect_tooltip = RED_kivotos_halo_militia_add-10_tt
+		hidden_effect = {
+			add_to_variable = {
+				RED.halo_militia_cap = -10
+			}
+			set_division_template_cap = {  division_template = "Redwinter Garde populaire" division_cap = ROOT.halo_militia_cap }
+		}
 		delete_units = {
 			division_template = "Redwinter Garde populaire"
 		}
 		add_ideas = RED_corruption_0
 	}
 }
-country_event = { #산업 호황
+country_event = { #산업 호황의 맹아
 	id = RED_event.38
 	title = RED_event.38.t
 	desc = RED_event.38.d
@@ -4242,20 +4643,6 @@ country_event = { #산업 호황
 							factor = 0
 							NOT = {
 								has_completed_focus = RED_economy_focus_9
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_9
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_9
-						}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = RED_the_threats_abound
-								has_completed_focus = RED_trotsky_s_world_revolution
 							}
 						}
 					}
@@ -4396,6 +4783,19 @@ country_event = { #산업 호황
 						}
 					}
 					1 = {
+						complete_national_focus = RED_economy_focus_21
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_economy_focus_21
+						}
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
+							}
+						}
+					}
+					1 = {
 						complete_national_focus = RED_economy_focus_12
 						modifier = {
 							factor = 0
@@ -4431,7 +4831,8 @@ country_event = { #산업 호황
 							factor = 0
 							OR = {
 								has_completed_focus = RED_the_threats_abound
-								has_completed_focus = RED_trotsky_s_world_revolution
+								has_completed_focus = RED_new_economy_focus_9
+								has_completed_focus = RED_industrial_planning
 							}
 						}
 					}
