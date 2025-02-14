@@ -1,0 +1,14 @@
+spriteTypes = { 
+    spriteType = {
+		name = "GFX_decision_COU_aoi"
+		texturefile =  "gfx/interface/decisions/COU_aoi.png"
+	}
+	spriteType = {
+		name = "GFX_decision_COU_suou"
+		texturefile =  "gfx/interface/decisions/COU_suou.png"
+	}
+	spriteType = {
+		name = "GFX_decision_COU_haime"
+		texturefile =  "gfx/interface/decisions/COU_haime.png"
+	}
+}

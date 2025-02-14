@@ -59,3 +59,21 @@ COU_nation_moving_forward = {
 	}
 	priority = 200
 }
+
+##린 탄핵 
+COU_getout_rin_decision = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = COU
+	}
+
+	visible = {
+		is_debug = yes 
+		is_ai = no
+		##개발중 임시 
+	}
+	priority = 230
+	
+	scripted_gui = COU_rin_getout
+}
