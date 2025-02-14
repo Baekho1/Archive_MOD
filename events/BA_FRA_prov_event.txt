@@ -2202,7 +2202,7 @@ news_event = {
 							has_government = communism
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 22
 						days = 15
@@ -2215,7 +2215,7 @@ news_event = {
 							has_government = democratic
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 23
 						days = 15
@@ -2228,7 +2228,7 @@ news_event = {
 							has_government = fascism
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 24
 						days = 15
@@ -2236,7 +2236,7 @@ news_event = {
 					scoped_play_song = "BA_verdun"
 				}
 				else = {
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 7
 						days = 15
@@ -2328,7 +2328,7 @@ news_event = {
 							has_government = communism
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 22
 						days = 15
@@ -2341,7 +2341,7 @@ news_event = {
 							has_government = democratic
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 23
 						days = 15
@@ -2354,7 +2354,7 @@ news_event = {
 							has_government = fascism
 						}
 					}
-					set_global_flag = {
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 24
 						days = 15
@@ -2362,12 +2362,12 @@ news_event = {
 					scoped_play_song = "BA_verdun"
 				}
 				else = {
-					set_global_flag = {
+					scoped_play_song = "BA_victory"
+					set_country_flag = {
 						flag = BA_Super_Event_Visible
 						value = 7
 						days = 15
 					}
-					scoped_play_song = "BA_victory"
 				}
 			}
 		}

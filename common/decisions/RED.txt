@@ -4828,7 +4828,7 @@ RED_population_issue_cat = {
 		days_mission_timeout = 720
 		is_good = no
 		timeout_effect = {
-			add_stability = -0.35
+			add_stability = -0.05
 		}
 		complete_effect = {
 			hidden_effect = {
