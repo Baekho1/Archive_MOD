@@ -64,7 +64,7 @@ RED_invite_trotskists_dec_cat = {
 		#wc = war communism / 협동농장
 		icon = GFX_decision_POL_looming_peasants_strike
 		visible = {
-			has_completed_focus = RED_war_communism
+			has_completed_focus = RED_war_communism_focus
 		}
 		cost = 30
 		days_remove = 120
@@ -87,7 +87,7 @@ RED_invite_trotskists_dec_cat = {
 		}
 		complete_effect = {
 			modify_timed_idea = {
-				idea = RED_war_communism
+				idea = RED_war_communism_idea
 				months = 3
 			}
 		}
@@ -189,7 +189,7 @@ RED_invite_trotskists_dec_cat = {
 		}
 		complete_effect = {
 			modify_timed_idea = {
-				idea = RED_war_communism
+				idea = RED_war_communism_idea
 				months = 2
 			}
 		}
@@ -721,7 +721,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_krl
-					add_idea = RED_exile_committee_ivr_alk
+					add_idea = RED_exile_committee_ivr_krl
 				}
 			}
 			else_if = {
@@ -730,7 +730,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_alk
-					add_idea = RED_exile_committee_ivr_krl
+					add_idea = RED_exile_committee_ivr_alk
 				}
 			}
 			else_if = {

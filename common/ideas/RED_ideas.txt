@@ -7,7 +7,7 @@ ideas = {
 		}
 	}
     country = {
-		RED_war_communism = {
+		RED_war_communism_idea = {
 			picture = SPR_class_war
 			modifier = {
 				army_core_attack_factor = 0.03
@@ -1639,6 +1639,22 @@ ideas = {
 				army_speed_factor = -0.15
 				army_org_factor = -0.15
 				army_org_regain = -0.15
+			}
+		}
+		RED_revolution_defender = { # 혁명수비대
+
+			picture = RED_office_ss
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				supply_combat_penalties_on_core_factor = -0.05
 			}
 		}
 		RED_office_ss_idea = { # 사무국 친위대

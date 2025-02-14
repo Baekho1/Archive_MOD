@@ -10,7 +10,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=stalinism
+			ideology=war_communism
 			traits={ RED_military_government_commander }
 		}
 		field_marshal={

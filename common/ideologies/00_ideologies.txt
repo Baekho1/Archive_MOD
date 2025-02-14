@@ -152,6 +152,7 @@ ideologies = {
 			}
 
 		#/BA_MOD_FIX
+
 			technocracy_communism = {
 				can_be_randomly_selected = no
 				color = { 104 34 34 }
@@ -163,6 +164,9 @@ ideologies = {
 			}
 			
 			syndicalism = {
+				can_be_randomly_selected = no
+			}
+			war_communism = { #전시 공산주의 / 좌익 군사정부
 				can_be_randomly_selected = no
 			}
 			

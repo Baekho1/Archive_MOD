@@ -185,6 +185,12 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			if = {
+				limit = {
+					has_completed_focus = RED_accept_trotskism
+				}
+				has_completed_focus = RED_redwinter_office
+			}
 		}
 		offset = {
 			x = 5
@@ -195,9 +201,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RED_doomed_economy_idea_1
-				add_idea = RED_doomed_economy_idea_2
+			if = {
+				limit = {
+					OR = {
+						has_idea = RED_doomed_economy_idea
+						has_idea = RED_doomed_economy_idea_1
+					}
+				}
+				swap_ideas = {
+					remove_idea = RED_doomed_economy_idea_1
+					add_idea = RED_doomed_economy_idea_2
+				}
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -884,7 +898,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_controlled_factories > 60
+			num_of_controlled_factories > 70
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -2081,13 +2095,17 @@ focus_tree = {
 					is_core_of = NOR
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 				}
 				add_building_construction = {
 					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -2097,13 +2115,17 @@ focus_tree = {
 					is_core_of = NOR
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 				}
 				add_building_construction = {
 					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 				}
 			}
@@ -3594,6 +3616,8 @@ focus_tree = {
 		ai_will_do = { base = 15 }
 		
 		completion_reward = {
+
+			set_country_leader_ideology = trotskyism
 			add_dynamic_modifier = {
 				modifier = RED_the_office_good_dynamic_modifier
 			}
@@ -3721,22 +3745,24 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			every_country = {
-				limit = { is_in_faction_with = ROOT }
-				random_owned_controlled_state = {
-					limit = { is_capital = yes }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			RED_marina = {
+				remove_trait = {
+					trait = office_commander
+					slot = political_advisor
 				}
+				add_trait = {
+					trait = office_commander_1
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = prince_of_terror
+					slot = political_advisor
+				}
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = RED_office_ss_idea
+				add_idea = RED_revolution_defender
 			}
 		}
 	}
@@ -5458,7 +5484,7 @@ focus_tree = {
 					create_country_leader = {
 						name = "Rebuilding Council"
 						picture = GFX_portrait_SOV_supreme_soviet
-						ideology = trotskyism
+						ideology = war_communism
 					}
 					set_cosmetic_tag = RE5_rebuilding_soviet
 					add_ideas = {RED_liberation_district RED_rebuilding_soviet}
@@ -5692,7 +5718,7 @@ focus_tree = {
 		}
 	}
 	focus = { #전시 공산주의
-		id = RED_war_communism
+		id = RED_war_communism_focus
 		icon = GFX_focus_GER_wage_war_on_capitalism
 		prerequisite = { focus = RED_liberation_of_the_kibotus_states }
 		x = -1
@@ -5706,7 +5732,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = RED_war_communism
+				idea = RED_war_communism_idea
 				months = 6
 			}
 			unlock_decision_tooltip = RED_wc_collective_farming
@@ -5761,7 +5787,7 @@ focus_tree = {
 		id = RED_permanent_revolution
 		icon = GFX_SOV_the_permanent_revolution_ccp_2d_sov_compatibility
 		prerequisite = { focus = RED_people_s_liberation_war }
-		prerequisite = { focus = RED_war_communism }
+		prerequisite = { focus = RED_war_communism_focus }
 		x = -1
 		y = 1
 		relative_position_id = RED_people_s_liberation_war

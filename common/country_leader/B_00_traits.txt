@@ -3281,11 +3281,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		communism_drift = 0.10
-		political_power_factor = 0.15
-		political_advisor_cost_factor = -0.7
-		ai_will_do = {
-			factor = 1
-		}
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.6
 	}
 	RED_socialist_cabinet = { #사회주의 집단지도체제
 		random = no
@@ -3311,12 +3308,14 @@ leader_traits = {
 	office_commander = { #사무국 보안위원장
 		random = no
 		sprite = 13
+		resistance_growth = -0.15
+	}
+	office_commander_1 = { #혁명수비대 사령관
+		random = no
+		sprite = 13
 		political_power_factor = 0.05
-		stability_factor = -0.10
-		war_support_factor = 0.30
-		drift_defence_factor = 0.05
-		non_core_manpower = 0.05
-		resistance_damage_to_garrison = -0.15
+		drift_defence_factor = 0.1
+		resistance_growth = -0.15
 	}
 
 	hate_soviet = {

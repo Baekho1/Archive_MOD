@@ -11,7 +11,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology = trotskyism
+			ideology = war_communism
 			traits={ b_tjrlwkd hate_soviet}
 			expire="1965.1.1.1"
 		}
