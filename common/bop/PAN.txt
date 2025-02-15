@@ -11,7 +11,7 @@ PAN_power_balance = {
     }
 
     side = { #인민전선의 우세
-        id = PAN_NLP_side
+        id = PAN_NLP_side_WIN
 
         range = {
             max = -0.10
@@ -23,7 +23,7 @@ PAN_power_balance = {
     }
 
     side = { #국민연합의 우세
-        id = PAN_UPP_side
+        id = PAN_UPP_side_WIN
 
         range = {
             min = 0.10

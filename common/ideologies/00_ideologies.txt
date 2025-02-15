@@ -65,6 +65,11 @@ ideologies = {
 				can_be_randomly_selected = no
 				color = { 15 15 104 }
 			}
+			
+			Social_Liberalism = {
+				can_be_randomly_selected = no
+				color = { 255 213 62 }
+			}
 		#BA_MOD_FIX/
 		}
 
