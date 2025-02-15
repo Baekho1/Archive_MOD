@@ -7,16 +7,15 @@ ideas = {
 		}
 	}
     country = {
-		RED_war_communism_idea = {
-			picture = SPR_class_war
-			modifier = {
-				army_core_attack_factor = 0.03
-				army_attack_speed_factor = 0.03
-				army_attack_factor = 0.03
-				custom_modifier_tooltip = RED_world_revolution_1_tt
+		RED_the_fifth_columnists_idea = { #조직된 제5열
+			picture = HUN_the_rakosi_battalion_idea
+			targeted_modifier = {
+				tag = RED
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
 			}
-			cancel = {
-				has_war = no
+			modifier = {
+				communism_drift = 0.05
 			}
 		}
 		RED_nation_united_LD = { #민족 자결 원칙

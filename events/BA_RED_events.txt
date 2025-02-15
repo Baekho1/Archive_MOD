@@ -169,6 +169,7 @@ country_event = { #망명위원회 설립
 		unlock_decision_tooltip = RED_invite_karl_radek_dec
 		unlock_decision_tooltip = RED_invite_yevgeny_preobrazhensky_dec
 		unlock_decision_tooltip = RED_invite_aleksandr_shlyapnikov_dec
+		custom_effect_tooltip =  RED_tro_event.5_tt
 	}
 }
 country_event = { #자치공화국 작명
@@ -4430,6 +4431,7 @@ country_event = { #인구 문제
 			add_manpower = 1500000
 		}
 		activate_mission = RED_population_issue_no_food
+		custom_effect_tooltip = RED_event.32_tt
 	}
 }
 country_event = { #주자파
@@ -4527,7 +4529,7 @@ country_event = { #산업 호황의 맹아
 			limit = {
 				has_completed_focus = RED_economy_focus_18
 				has_completed_focus = RED_economy_focus_13
-				has_completed_focus = RED_economy_focus_12
+				has_completed_focus = RED_economy_focus_11
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -4576,19 +4578,6 @@ country_event = { #산업 호황의 맹아
 						}
 					}
 					1 = {
-						complete_national_focus = RED_economy_focus_7
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_7
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_5
-							}
-						}
-					}
-					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
 							factor = 0
@@ -4610,20 +4599,7 @@ country_event = { #산업 호황의 맹아
 						modifier = {
 							factor = 0
 							NOT = {
-								has_completed_focus = RED_economy_focus_3
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_12
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_12
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_11
+								has_completed_focus = RED_economy_focus_8
 							}
 						}
 					}
@@ -4680,7 +4656,7 @@ country_event = { #산업 호황의 맹아
 							factor = 0
 							OR = {
 								NOT = {
-									has_completed_focus = RED_economy_focus_7
+									has_completed_focus = RED_economy_focus_5
 								}
 								NOT = {
 									has_completed_focus = RED_economy_focus_10
@@ -4695,7 +4671,7 @@ country_event = { #산업 호황의 맹아
 			limit = {
 				has_completed_focus = RED_economy_focus_18
 				has_completed_focus = RED_economy_focus_13
-				has_completed_focus = RED_economy_focus_12
+				has_completed_focus = RED_economy_focus_11
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -4744,19 +4720,6 @@ country_event = { #산업 호황의 맹아
 						}
 					}
 					1 = {
-						complete_national_focus = RED_economy_focus_7
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_7
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_5
-							}
-						}
-					}
-					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
 							factor = 0
@@ -4778,33 +4741,7 @@ country_event = { #산업 호황의 맹아
 						modifier = {
 							factor = 0
 							NOT = {
-								has_completed_focus = RED_economy_focus_3
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_21
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_21
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_9
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_12
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_12
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_11
+								has_completed_focus = RED_economy_focus_8
 							}
 						}
 					}
@@ -4820,19 +4757,10 @@ country_event = { #산업 호황의 맹아
 								has_completed_focus = RED_economy_focus_11
 							}
 						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_9
 						modifier = {
 							factor = 0
-							has_completed_focus = RED_economy_focus_9
-						}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = RED_the_threats_abound
-								has_completed_focus = RED_new_economy_focus_9
-								has_completed_focus = RED_industrial_planning
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
 							}
 						}
 					}
@@ -4870,7 +4798,7 @@ country_event = { #산업 호황의 맹아
 							factor = 0
 							OR = {
 								NOT = {
-									has_completed_focus = RED_economy_focus_7
+									has_completed_focus = RED_economy_focus_5
 								}
 								NOT = {
 									has_completed_focus = RED_economy_focus_10
@@ -4885,7 +4813,7 @@ country_event = { #산업 호황의 맹아
 			limit = {
 				has_completed_focus = RED_economy_focus_18
 				has_completed_focus = RED_economy_focus_13
-				has_completed_focus = RED_economy_focus_12
+				has_completed_focus = RED_economy_focus_11
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -4934,19 +4862,6 @@ country_event = { #산업 호황의 맹아
 						}
 					}
 					1 = {
-						complete_national_focus = RED_economy_focus_7
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_7
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_5
-							}
-						}
-					}
-					1 = {
 						complete_national_focus = RED_economy_focus_8
 						modifier = {
 							factor = 0
@@ -4968,20 +4883,7 @@ country_event = { #산업 호황의 맹아
 						modifier = {
 							factor = 0
 							NOT = {
-								has_completed_focus = RED_economy_focus_3
-							}
-						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_12
-						modifier = {
-							factor = 0
-							has_completed_focus = RED_economy_focus_12
-						}
-						modifier = {
-							factor = 0
-							NOT = {
-								has_completed_focus = RED_economy_focus_11
+								has_completed_focus = RED_economy_focus_8
 							}
 						}
 					}
@@ -4997,18 +4899,10 @@ country_event = { #산업 호황의 맹아
 								has_completed_focus = RED_economy_focus_11
 							}
 						}
-					}
-					1 = {
-						complete_national_focus = RED_economy_focus_9
 						modifier = {
 							factor = 0
-							has_completed_focus = RED_economy_focus_9
-						}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = RED_the_threats_abound
-								has_completed_focus = RED_trotsky_s_world_revolution
+							NOT = {
+								has_completed_focus = RED_economy_focus_9
 							}
 						}
 					}
@@ -5046,7 +4940,7 @@ country_event = { #산업 호황의 맹아
 							factor = 0
 							OR = {
 								NOT = {
-									has_completed_focus = RED_economy_focus_7
+									has_completed_focus = RED_economy_focus_5
 								}
 								NOT = {
 									has_completed_focus = RED_economy_focus_10

@@ -60,6 +60,44 @@ RED_seek_allies_dec_cat = {
 
 RED_invite_trotskists_dec_cat = {
 	#제4인터내셔널
+	RED_the_fifth_columnists = { #제5열 조직
+		icon = GFX_decision_generic_nationalism
+		visible = {
+			has_completed_focus = RED_armed_workers
+			
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = RED
+				NOT = {
+					has_idea = RED_the_fifth_columnists_idea
+				}
+			}
+		}
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+
+		custom_cost_text = decision_cost_CP_25_ArmXP_15 
+		fire_only_once = no
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+			}
+			FROM = {
+				add_timed_idea = {
+					idea = RED_the_fifth_columnists_idea
+					days = 180
+				}
+				hidden_effect = {
+					country_event = generic.1
+				}
+			}
+		}
+	}
 	RED_wc_collective_farming = {
 		#wc = war communism / 협동농장
 		icon = GFX_decision_POL_looming_peasants_strike
@@ -87,7 +125,7 @@ RED_invite_trotskists_dec_cat = {
 		}
 		complete_effect = {
 			modify_timed_idea = {
-				idea = RED_war_communism_idea
+				idea = NOR_permanent_revolution_ns
 				months = 3
 			}
 		}
@@ -189,7 +227,7 @@ RED_invite_trotskists_dec_cat = {
 		}
 		complete_effect = {
 			modify_timed_idea = {
-				idea = RED_war_communism_idea
+				idea = NOR_permanent_revolution_ns
 				months = 2
 			}
 		}
