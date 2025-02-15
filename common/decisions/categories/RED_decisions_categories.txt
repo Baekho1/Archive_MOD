@@ -20,7 +20,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 		original_tag = RED
 	}
 
-	priority = 50
+	priority = 99
 
 	visible = {
 		has_completed_focus = RED_invite_trotskists
