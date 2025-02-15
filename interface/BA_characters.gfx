@@ -225,6 +225,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/advisors/COU/하이네.tga"
 	}
 	spriteType = {
+		name = "GFX_SMOMO"
+		textureFile = "gfx/interface/advisors/COU/스모모.png"
+	}
+	spriteType = {
 		name = "GFX_anton_pannekoek"
 		textureFile = "gfx/interface/advisors/COU/좌파_판네쿡.tga"
 	}

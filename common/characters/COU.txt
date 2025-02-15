@@ -260,6 +260,30 @@ characters={
 			}
 		}
 	}
+	COU_SMOMO = { #스모모
+		name=COU_SMOMO
+		portraits={
+			civilian={
+				#large="GFX_leaders_HAINE"
+				small="GFX_SMOMO" 
+			}
+		}
+		gender = female
+		advisor = {
+			slot = political_advisor
+			idea_token = SMOMO_political_advisor
+			allowed = {
+				original_tag = COU
+			}
+			available = {
+			}
+			traits = {
+				NOR_compliant_politician
+				##이년 대체 뭐하는년임 
+			}
+			cost = 150
+		}
+	}
 	COU_willem_drees = { #빌럼 드리스
 		name=COU_willem_drees
 		portraits={

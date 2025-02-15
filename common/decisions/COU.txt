@@ -445,28 +445,27 @@ COU_nation_moving_forward = {
 
 ##린 탄핵 
 COU_getout_rin_decision = {
-     COU_gr_test_decision = {
-		icon = GFX_decision_generic_form_nation
-		allowed = {
-			original_tag = COU
-		}
+     COU_rin_getout_kaya = {
 
-		available = {
-		}
+		icon = generic_civil_support
 
-		visible = {
-		}
-
-		ai_will_do = {
-			base = 0
-		}
+		 allowed = { 
+		    original_tag = COU
+		    always = no
+		 }
 		
-		fire_only_once = yes
-
-		cost = 300
-
-		complete_effect = {
-			set_cosmetic_tag = COU_go_to_left_left_world_2
-		}
+		 available = { 
+			 NOT = { has_country_flag = COU_flag_acivate_norin_decision }
+		 }
+		
+		 days_mission_timeout = 30
+		
+		 is_good = no
+				
+		 activation = { always = no }
+		
+		 timeout_effect = {
+		      country_event = COU_event.9
+		 }
 	}
 }

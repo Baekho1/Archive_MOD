@@ -2004,6 +2004,14 @@ spriteTypes = {
 		name = "GFX_COU_kaya_dictatership_on"
 		textureFile = "gfx/interface/goals/COU/COU_kaya_dictatership_on.png"
 	}
+	spriteType = {
+		name = "GFX_COU_road_ot_choin"
+		textureFile = "gfx/interface/goals/COU/road_ot_choin.png"
+	}
+	spriteType = {
+		name = "GFX_COU_what_the_fuck_is_fascism"
+		textureFile = "gfx/interface/goals/COU/what_the_fuck_is_fascism.png"
+	}
 	
 	
 	####카이저라이히 돚거

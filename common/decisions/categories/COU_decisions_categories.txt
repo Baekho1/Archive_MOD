@@ -69,9 +69,10 @@ COU_getout_rin_decision = {
 	}
 
 	visible = {
-		is_debug = yes 
-		is_ai = no
+		#is_debug = yes 
+		#is_ai = no
 		##개발중 임시 
+		has_country_flag = COU_flag_acivate_norin_decision
 	}
 	priority = 230
 	
