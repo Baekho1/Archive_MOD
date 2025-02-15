@@ -675,6 +675,11 @@ characters={
 				factor = 1.000
 			}
 		}
+		country_leader={
+			ideology=despotism
+			traits={ GEH_ako_trait_0 }
+			expire="1965.1.1"
+		}
 	}
 	GEH_kinugawa_kasumi={ #카스미
 		name=GEH_kinugawa_kasumi

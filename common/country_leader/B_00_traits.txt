@@ -1346,6 +1346,11 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	GEH_ako_trait_0 = { # 선임행정관
+		random = no
+		political_power_factor = -0.25
+		stability_factor = -0.25
+	}
 	GEH_ako_trait_1 = { # 선도부 개혁가
 		random = no
 		political_power_gain = 0.15

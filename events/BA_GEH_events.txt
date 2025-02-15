@@ -722,6 +722,30 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = GEH_hidden.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GEH_three_congress_focus_no_hina
+			}
+			complete_national_focus = {
+				focus = GEH_three_congress_focus_no_hina
+				use_side_message = yes
+				originator_name = GEH_dkzh
+			}
+			clr_country_flag = GEH_three_congress_focus_no_hina_in_progress_flag
+		}
+	}
+}
 country_event = { #
 	id = GEH_BTBOTS.1
 	title = GEH_BTBOTS.1.t
@@ -818,6 +842,18 @@ country_event = { #
 	option = { 
 		name = GEH_BTBOTS.7.a
 		add_stability = -0.10
+		set_global_flag = GEH_BTBOTS_END_flag
+		custom_effect_tooltip = GEH_BTBOTS_END_tt
+		GEH_hina = {
+			remove_country_leader_role = {
+				ideology = despotism
+			}
+		}
+		hidden_effect = {
+			activate_shine_on_focus = GEH_three_congress_focus_no_hina
+			set_country_flag = { flag = GEH_three_congress_focus_no_hina_in_progress_flag days = 35 value = 1 }
+			country_event = { id = GEH_hidden.3 days = 35 }
+		}
 	}
 }
 
