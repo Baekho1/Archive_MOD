@@ -123,4 +123,16 @@ PAN_BOP_category = {
             }
         }
     }
+    PAN_election_final = { #선거일
+        icon = GFX_decision_unknown
+        activation = {
+            has_completed_focus = PAN_with_Popular_Front
+        }
+        days_mission_timeout = 175
+        is_good = no
+        selectable_mission = no
+        complete_effect = {
+            set_country_flag = PAN_election_complete
+        }
+    }
 }

@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_GEH_last_focus_effect"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_HYA_focus_2"
 		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_2.tga"
 	}

@@ -567,7 +567,7 @@ characters = {
 			idea_token = RED_meal_department_adv_ideas
 			traits = { RED_meal_trait_adv }
 			available = {
-				has_completed_focus = RED_meal_focus_adv
+				has_completed_focus = RED_club_focus_0
 			}
 		}
 		advisor = {
@@ -575,7 +575,7 @@ characters = {
 			idea_token = RED_meal_department_arm_ideas
 			traits = { RED_meal_trait_arm }
 			available = {
-				has_completed_focus = RED_meal_focus_arm
+				has_completed_focus = RED_club_focus_0
 			}
 		}
 	}

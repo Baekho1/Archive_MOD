@@ -29,6 +29,7 @@ recruit_character = PAN_manuel_rios_urribe
 recruit_character = PAN_victor_pareja
 recruit_character = PAN_nicolas_ardito_barletta
 recruit_character = PAN_jose_pezet
+recruit_character = PAN_domingo_Arosemena
 
 add_ideas = {
 	PAN_americanarmy_fuck

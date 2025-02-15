@@ -68,8 +68,8 @@ bookmarks = {
 			}
 			focuses = {
 				RED_accept_trotskism
-				RED_labor_world
-				RED_ivan_kupla
+				RED_dipose_cherino
+				RED_no_error_at_ideology
 			}
 		}
 		"HYA"={
