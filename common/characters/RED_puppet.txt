@@ -10,7 +10,7 @@ characters = {
 			}
 		}
 		country_leader={
-			ideology=stalinism
+			ideology=war_communism
 			traits={ RED_military_government_commander }
 		}
 		field_marshal={
@@ -78,6 +78,14 @@ characters = {
 			legacy_id=-1
 			visible = { 
 				has_global_flag = RE4_tomoe_is_militaryadmin
+			}
+		}
+	}
+	RE4_council = {
+		name = RE4_council
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RE4_council"
 			}
 		}
 	}

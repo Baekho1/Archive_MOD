@@ -125,6 +125,9 @@ add_ideas = {
 	COU_dutch_collaboraters
 }
 
+##카야루트 이벤트
+country_event = { id = COU_event.6 days = 30 }
+
 
 set_technology = {
 	kivotos_infantry_weapons = 1

@@ -26,3 +26,12 @@ style = {
 	available = GFX_focus_can_start_joint_RED_bg
 	current = GFX_focus_current_joint_RED
 }
+# 붉겨 - 본국 - 방위위원회
+style = {
+	name = REDWINTER_RED_RE4_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_RED_RE4_bg
+	completed = GFX_focus_completed_joint_RED_RE4_bg
+	available = GFX_focus_can_start_joint_RED_RE4_bg
+	current = GFX_focus_current_joint_RED_RE4
+}

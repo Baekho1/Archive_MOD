@@ -937,6 +937,7 @@ RED_RedWinterIntelligenceService_dynamic_modifier = { #정보국
 	operative_slot = RED_intel_operative_slot
 	intel_network_gain = RED_intel_intel_network_gain
 	compliance_gain = RED_intel_compliance_gain
+	send_volunteer_size = RED_intel_send_volunteer_size
 }
 RED_ThreatOfCovered5thLines_dynamic_modifier = { #잠복된 제5열의 위협
 	enable = {
@@ -977,7 +978,7 @@ RE4_finland_colonial_dynamic_modifier = {
 
 	enable = { always = yes }
 
-	icon = GFX_idea_COG_belgian_congo_colonial_dynamic_modifier
+	icon = GFX_idea_RE4_Finland_committee
 
 	remove_trigger = {
 		is_subject = no
@@ -1866,6 +1867,8 @@ ABY_army_dynamic_modifier = {
 	army_attack_factor = ABY_var_army_attack_factor
 	army_speed_factor = ABY_var_army_speed_factor
 	army_defence_factor = ABY_var_army_defence_factor
+    army_org_factor  = ABY_var_army_army_org_factor
+    army_morale_factor = ABY_var_army_army_morale_factor
 	max_dig_in = ABY_var_max_dig_in
 	dig_in_speed_factor = ABY_var_dig_in_speed_factor
 	max_dig_in_factor = ABY_var_max_dig_in_factor

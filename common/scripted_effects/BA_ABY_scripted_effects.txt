@@ -287,15 +287,37 @@ ABY_69_rebuild_effect = {
 			69 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_69_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -459,15 +481,37 @@ ABY_9_rebuild_effect = {
 			9 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_9_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -631,15 +675,37 @@ ABY_74_rebuild_effect = {
 			74 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_74_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -803,15 +869,37 @@ ABY_72_rebuild_effect = {
 			72 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_72_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -975,15 +1063,37 @@ ABY_75_rebuild_effect = {
 			75 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_75_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -1147,15 +1257,37 @@ ABY_972_rebuild_effect = {
 			972 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_972_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -1319,15 +1451,37 @@ ABY_986_rebuild_effect = {
 			986 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_986_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -1491,15 +1645,37 @@ ABY_975_rebuild_effect = {
 			975 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_975_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -1663,15 +1839,37 @@ ABY_4_rebuild_effect = {
 			4 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_4_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -1835,15 +2033,37 @@ ABY_976_rebuild_effect = {
 			976 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_976_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -2007,15 +2227,37 @@ ABY_152_rebuild_effect = {
 			152 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_152_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -2179,15 +2421,37 @@ ABY_153_rebuild_effect = {
 			153 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_153_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}
@@ -2351,15 +2615,37 @@ ABY_848_rebuild_effect = {
 			848 = {
 				add_core_of = ABY
 			}
-			custom_effect_tooltip = kivotos_halo_add1_tt
-			hidden_effect = {
-				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-				BA_halo_infantry_cap_edit_effect = yes
+			set_country_flag = ABY_flag_848_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ABY_flag_pro_halo
+					}
+				}
+				custom_effect_tooltip = kivotos_halo_add1_tt
+				hidden_effect = {
+					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+					BA_halo_infantry_cap_edit_effect = yes
+				}
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
 			}
-			random_owned_state = {
-				create_unit = {
-					division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-					owner = ABY
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_pro_halo
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
 				}
 			}
 		}

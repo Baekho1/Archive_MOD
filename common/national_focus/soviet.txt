@@ -586,7 +586,7 @@ focus_tree = {
 	focus = {
 		id = SOV_industrial_modernization
 
-		icon = GFX_goal_reichsautobahn
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
 		x = 0
 		y = 3

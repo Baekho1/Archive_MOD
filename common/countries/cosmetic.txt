@@ -2558,6 +2558,14 @@ ABY_greater_abydos_communism = {
 	color = rgb { 153 0 25 }
 	color_ui = rgb { 153 0 25 }
 }
+ABY_greater_abydos_democratic = {
+	color = rgb { 150 0 50 }
+	color_ui = rgb { 150 0 50 }
+}
+ABY_greater_abydos_neutrality = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
 ABY_czech_osterreich = {
 	color = HSV { 0 0 0.4 }
 	color_ui = rgb { 138 155 116 }
@@ -2603,12 +2611,28 @@ SYR_middle_east = {
 	color_ui = rgb { 175 50 75 }
 }
 ABY_neptis_nation_1 = {
-	color = rgb { 200 200 100 }
-	color_ui = rgb { 200 200 100 }
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
 }
 ABY_neptis_nation_2 = {
-	color = rgb { 200 200 100 }
-	color_ui = rgb { 200 200 100 }
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_3 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_4 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_5 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
+}
+ABY_neptis_nation_6 = {
+	color = rgb { 255 217 102 }
+	color_ui = rgb { 255 217 102 }
 }
 ABY_highlander_nation_1 = {
 	color = rgb { 69 157 208 }

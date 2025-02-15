@@ -35,7 +35,10 @@ if = {
 		}
 	}
 }
-
+1935.1.1 = {
+	complete_national_focus = POL_prepare_for_the_next_war
+	complete_national_focus = POL_plan_east
+}
 set_research_slots = 3
 
 # Starting tech

@@ -95,12 +95,45 @@ spriteTypes = {
 		name = "GFX_idea_GEH_sena"
 		textureFile = "gfx/interface/advisors/GEH/GEH_Himuro_Sena_idea.tga"
 	}
-	#샬레
+	spriteType = {
+		name = "GFX_portrait_albert_speer"
+		textureFile = "gfx/leaders/GEH/portrait_albert_speer.dds"
+	}
+	spriteType = {
+		name = "GFX_GEH_Sorasaki_Hina_Portrait"
+		textureFile = "gfx/leaders/GEH/GEH_Sorasaki_Hina_Portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_GEH_Sorasaki_Hina_After_War_Portrait"
+		textureFile = "gfx/leaders/GEH/GEH_Sorasaki_Hina_After_War_Portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_GEH_dress_portrait"
+		textureFile = "gfx/interface/decisions/GEH_Portrait_introduce.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_GEH_Hina_Dress_Portrait"
+		textureFile = "gfx/leaders/GEH/GEH_Dress_Hina.tga"
+	}
+	spriteType = {
+		name = "GFX_GEH_Ako_Dress_Portrait"
+		textureFile = "gfx/leaders/GEH/GEH_Dress_Ako.tga"
+	}
+	spriteType = {
+		name = "GFX_GEH_Ako_Dress_advisor"
+		textureFile = "gfx/interface/advisors/GEH/GEH_Dress_Ako_advisor.tga"
+	}
+	spriteType = {
+		name = "GFX_GEH_Hina_Dress_advisor"
+		textureFile = "gfx/interface/advisors/GEH/GEH_Dress_Hina_advisor.tga"
+	}
+#샬레
 	spriteType = {
 		name = "GFX_SHE_central_labor_union"
 		textureFile = "gfx/interface/advisors/SHE/SHE_central_labor_union.tga"
 	}
-	#총학생회
+#총학생회
 	spriteType = {
 		name = "GFX_leaders_Rin"
 		textureFile = "gfx/leaders/COU/COU_RIN_portrait_leader.dds"
@@ -241,7 +274,7 @@ spriteTypes = {
 	}
 	
 
-	#밀레니엄
+#밀레니엄
 	spriteType = { 
 		name = "GFX_HUB"
 		textureFile = "gfx/interface/advisors/MIL/허브.tga"
@@ -364,7 +397,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/advisors/MIL/사제회.tga"
 	}
 
-	##독일 공산당##
+##독일 공산당##
 	spriteType = { 
 		name = "GFX_Elected_Officer"
 		textureFile = "gfx/leaders/KPD/elected_officer.dds"
@@ -415,9 +448,13 @@ spriteTypes = {
 		name = "GFX_portrait_ENG_Clement_Attlee"
 		textureFile = "gfx/leaders/ENG/BA_thxr56_portrait_ENG_Clement_Attlee.dds"
 	}
+#붉은겨울
+	spriteType = {
+		name = "GFX_portrait_RE4_council"
+		textureFile = "gfx/leaders/RED/RE4_Build_Portrait_Template.tga"
+	}
 
-
-	# 트리니티 초상화
+# 트리니티 초상화
 	spriteType = {
 		name = "GFX_TRN_Misono_Mika_Portrait_Official"
 		textureFile = "gfx/leaders/TRN/TRN_Misono_Mika_Portrait_2.tga"
@@ -723,7 +760,7 @@ spriteTypes = {
 		name = "GFX_Z_TRM_Hans_Frank_Portrait"
 		textureFile = "gfx/leaders/TRN/한스프랑크.tga"
 	}
-	# 흥신소 (HEU)
+# 흥신소 (HEU)
 	spriteType = {
 		name = "GFX_HEU_ARU_DRESS_Portrait"
 		textureFile = "gfx/leaders/HEU/HEU_ARU_DRESS.tga"
@@ -774,41 +811,7 @@ spriteTypes = {
 		textureFile = "gfx/leaders/HEU/HEU_aru_rikuhachima_communist.dds"
 		legacy_lazy_load = no
 	}
-	# 게헨나
-	spriteType = {
-		name = "GFX_portrait_albert_speer"
-		textureFile = "gfx/leaders/GEH/portrait_albert_speer.dds"
-	}
-	spriteType = {
-		name = "GFX_GEH_Sorasaki_Hina_Portrait"
-		textureFile = "gfx/leaders/GEH/GEH_Sorasaki_Hina_Portrait.tga"
-	}
-	spriteType = {
-		name = "GFX_GEH_Sorasaki_Hina_After_War_Portrait"
-		textureFile = "gfx/leaders/GEH/GEH_Sorasaki_Hina_After_War_Portrait.tga"
-	}
-	spriteType = {
-		name = "GFX_GEH_dress_portrait"
-		textureFile = "gfx/interface/decisions/GEH_Portrait_introduce.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_GEH_Hina_Dress_Portrait"
-		textureFile = "gfx/leaders/GEH/GEH_Dress_Hina.tga"
-	}
-	spriteType = {
-		name = "GFX_GEH_Ako_Dress_Portrait"
-		textureFile = "gfx/leaders/GEH/GEH_Dress_Ako.tga"
-	}
-	spriteType = {
-		name = "GFX_GEH_Ako_Dress_advisor"
-		textureFile = "gfx/interface/advisors/GEH/GEH_Dress_Ako_advisor.tga"
-	}
-	spriteType = {
-		name = "GFX_GEH_Hina_Dress_advisor"
-		textureFile = "gfx/interface/advisors/GEH/GEH_Dress_Hina_advisor.tga"
-	}
-	# 김용하 #
+# 김용하 #
 	spriteType = {
 		name = "GFX_KIM_YONG_HA"
 		textureFile = "gfx/leaders/ZZZ_BlueArchive/Kim_youngha.tga"
@@ -828,7 +831,7 @@ spriteTypes = {
 		textureFile = "gfx/leaders/GEI/GEI_Portrait_HP_Lovecraft.tga"
 		legacy_lazy_load = no
 	}
-	#이집트
+#이집트
 	spriteType = {
 		name = "GFX_portrait_egy_faud_i"
 		texturefile = "gfx/leaders/EGY/portrait_EGY_faud_i.dds"
@@ -958,16 +961,18 @@ spriteTypes = {
 		name = "GFX_idea_EGY_ahmed_hussyan_army"
 		texturefile = "gfx/interface/ideas/egy/advisors/r56_idea_EGY_ahmed_hussyan_army.dds"
 	}
-    #소련
+#소련
 	spriteType = {
 		name = "GFX_portrait_SOV_nikita_khrushche"
 		textureFile = "gfx/leaders/SOV/SOV_nikita_khrushchev_Portrait.tga"
 	}
+#프랑스
 	spriteType = {
 		name = "GFX_Portrait_FRA_Anime_Petain"
 		textureFile = "gfx/leaders/FRA/Portrait_FRA_Anime_Petain.tga"
 		legacy_lazy_load = no
 	}
+# 일본
 	spriteType = {
 		name = "GFX_portrait_Japan_jnlc"
 		textureFile = "gfx/leaders/JAP/portrait_Japan_jnlc.dds"
@@ -1009,7 +1014,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	# 프로젝트 KV
+# 프로젝트 KV
 	spriteType = {
 		name = "GFX_portrait_KAP_Kohane"
 		textureFile = "gfx/leaders/KAP/portrait_KAP_Kohane.dds"

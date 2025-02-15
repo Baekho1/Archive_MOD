@@ -1,30 +1,63 @@
 defined_text = {
-    name = COU_division_of_military
+    name = COU_deoragree_out_rin
     text = {
         trigger = {
             tag = COU
+			has_country_flag = COU_deagree_out_rin
         }
-        localization_key = COU_COU_division_of_military
+        localization_key = COU_deagree_out_rin_loc
     }
-    text = {
+	text = {
         trigger = {
-            tag = SHE
+            tag = COU
+			has_country_flag = COU_agree_out_rin
         }
-        localization_key = SHE_COU_division_of_military
+        localization_key = COU_agree_out_rin_loc
     }
+	text = {
+		localization_key = "COU_deoragree_out_rin"
+	}
 }
+
 defined_text = {
-    name = COU_division_of_military_desc
+    name = COU_deoragree_out_rintwo
     text = {
         trigger = {
             tag = COU
+			has_country_flag = COU_deagree_out_rin2
         }
-        localization_key = COU_COU_division_of_military_desc
+        localization_key = COU_deagree_out_rin_loc
     }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_agree_out_rin2
+        }
+        localization_key = COU_agree_out_rin_loc
+    }
+	text = {
+		localization_key = "COU_deoragree_out_rintwo"
+	}
+}
+
+defined_text = {
+    name = COU_deoragree_out_rinthree
     text = {
         trigger = {
-            tag = SHE
+            tag = COU
+			has_country_flag = COU_deagree_out_rin3
         }
-        localization_key = SHE_COU_division_of_military_desc
+        localization_key = COU_deagree_out_rin_loc
     }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_agree_out_rin3
+        }
+        localization_key = COU_agree_out_rin_loc
+    }
+	text = {
+		localization_key = "COU_deoragree_out_rinthree"
+	}
 }
+

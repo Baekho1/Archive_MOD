@@ -1,0 +1,11 @@
+scripted_gui = {
+	COU_rin_getout = {
+		context_type = decision_category
+		window_name = "COU_getout_rin_window"
+		effects = {
+
+            
+		}
+	}
+}
+

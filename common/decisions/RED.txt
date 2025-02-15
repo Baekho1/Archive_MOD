@@ -58,11 +58,13 @@ RED_seek_allies_dec_cat = {
 	}
 }
 
-RED_invite_trotskists_dec_cat = { #제4인터내셔널
-	RED_wc_collective_farming = { #wc = war communism / 협동농장
+RED_invite_trotskists_dec_cat = {
+	#제4인터내셔널
+	RED_wc_collective_farming = {
+		#wc = war communism / 협동농장
 		icon = GFX_decision_POL_looming_peasants_strike
 		visible = {
-			has_completed_focus = RED_war_communism
+			has_completed_focus = RED_war_communism_focus
 		}
 		cost = 30
 		days_remove = 120
@@ -83,6 +85,12 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 		modifier = {
 			political_power_cost = 0.5
 		}
+		complete_effect = {
+			modify_timed_idea = {
+				idea = RED_war_communism_idea
+				months = 3
+			}
+		}
 		remove_effect = {
 			every_owned_state = {
 				limit = {
@@ -98,7 +106,8 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 		}
 	}
-	RED_make_LD = { #재건평의회 설립
+	RED_make_LD = {
+		#재건평의회 설립
 		icon = GFX_decision_generic_construction
 		visible = {
 			has_completed_focus = RED_workers_state
@@ -134,23 +143,55 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 		}
 	}
-	RED_attack_kivotos = { #혁명 전파
+	RED_attack_kivotos = {
+		#혁명 전파
 		icon = GFX_decision_generic_ignite_civil_war
+		visible = {
+			has_completed_focus = RED_liberation_of_the_kibotus_states
+		}
 		target_trigger = {
-			FROM = {
-				Kivotos_tag = yes
-				any_country = {
-					is_ally_with = RED
-					is_neighbor_of = PREV
+			if = {
+				limit = {
+					has_completed_focus = RED_people_s_liberation_war
 				}
-				NOT = {
-					is_ally_with = RED
+				FROM = {
+					OR = {
+						is_major = no
+						Kivotos_tag = yes
+					}
+					any_country = {
+						is_ally_with = RED
+						is_neighbor_of = PREV
+					}
+					NOT = {
+						is_ally_with = RED
+						has_war_with = RED
+					}
+				}
+			}
+			else = {
+				FROM = {
+					Kivotos_tag = yes
+					any_country = {
+						is_ally_with = RED
+						is_neighbor_of = PREV
+					}
+					NOT = {
+						is_ally_with = RED
+						has_war_with = RED
+					}
 				}
 			}
 		}
 		days_remove = 40
 		custom_cost_trigger = {
 			command_power > 24
+		}
+		complete_effect = {
+			modify_timed_idea = {
+				idea = RED_war_communism_idea
+				months = 2
+			}
 		}
 		custom_cost_text = decision_cost_CP_25
 		remove_effect = {
@@ -292,7 +333,8 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					add_idea = RED_exile_committee_no_ivn
 				}
 			}
-			else_if = { #
+			else_if = {
+				#
 				limit = {
 					has_idea = RED_exile_committee_ivr_krl_ivn
 				}
@@ -454,7 +496,8 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 					add_idea = RED_exile_committee_no_ivn
 				}
 			}
-			else_if = { #
+			else_if = {
+				#
 				limit = {
 					has_idea = RED_exile_committee_yev_ivn_ivr
 				}
@@ -678,7 +721,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_krl
-					add_idea = RED_exile_committee_ivr_alk
+					add_idea = RED_exile_committee_ivr_krl
 				}
 			}
 			else_if = {
@@ -687,7 +730,7 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_alk
-					add_idea = RED_exile_committee_ivr_krl
+					add_idea = RED_exile_committee_ivr_alk
 				}
 			}
 			else_if = {
@@ -1008,14 +1051,15 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 		}
 	}
-	RED_invite_ivan_smirnov_dec = { #데려오기 / 초빙
+	RED_invite_ivan_smirnov_dec = {
+		#데려오기 / 초빙
 		icon = GFX_decision_SOV_left_opposition_state
 		available = {
 			if = {
 				limit = {
-						SPR = {
-							exists = yes
-						}
+					SPR = {
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = SPR
@@ -1054,11 +1098,17 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 						ROOT = {
 							RED_ivan_smirnov = {
 								set_character_flag = RED_invited_trotskist
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
+						SOV = {
+							RED_ivan_smirnov = {
+								unit_leader_event = RED_racing_sov.2
 							}
 						}
 					}
 				}
-				65 ={
+				65 = {
 					ROOT = {
 						RED_ivan_smirnov = {
 							unit_leader_event = RED_racing_sov.1
@@ -1081,12 +1131,12 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			if = {
 				limit = {
 					GEM = {
-							exists = yes
-						}
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = GEM
-					value > 10
+					value > 30
 				}
 			}
 			has_equipment = {
@@ -1107,35 +1157,45 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {random_list={35={
-			effect_tooltip = {
-				SOV = {
-					SOV_ivar_smilga = {
-						set_nationality = RED
+		remove_effect = {
+			random_list = {
+				35 = {
+					effect_tooltip = {
+						SOV = {
+							SOV_ivar_smilga = {
+								set_nationality = RED
+							}
+						}
+					}
+					hidden_effect = {
+						ROOT = {
+							RED_ivar_smilga = {
+								set_character_flag = RED_invited_trotskist
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
+						SOV = {
+							RED_ivar_smilga = {
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
 					}
 				}
-			}
-			hidden_effect = {
-				ROOT = {
-					RED_ivar_smilga = {
-						set_character_flag = RED_invited_trotskist
-					}
-				}
-			}}
-			65 ={
-				ROOT = {
-					RED_ivar_smilga = {
-						unit_leader_event = RED_racing_sov.1
-					}
-				}
-				hidden_effect = {
-					SOV = {
+				65 = {
+					ROOT = {
 						RED_ivar_smilga = {
 							unit_leader_event = RED_racing_sov.1
 						}
 					}
+					hidden_effect = {
+						SOV = {
+							RED_ivar_smilga = {
+								unit_leader_event = RED_racing_sov.1
+							}
+						}
+					}
 				}
-			}}
+			}
 		}
 	}
 	RED_invite_karl_radek_dec = {
@@ -1144,12 +1204,12 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			if = {
 				limit = {
 					GEM = {
-							exists = yes
-						}
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = GEM
-					value > 10
+					value > 30
 				}
 			}
 			has_equipment = {
@@ -1170,33 +1230,45 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {random_list={35={
-			effect_tooltip = {
-				SOV = {
-					SOV_karl_radek = {
-						set_nationality = RED
+		remove_effect = {
+			random_list = {
+				35 = {
+					effect_tooltip = {
+						SOV = {
+							SOV_karl_radek = {
+								set_nationality = RED
+							}
+						}
+					}
+					hidden_effect = {
+						ROOT = {
+							RED_karl_radek = {
+								set_character_flag = RED_invited_trotskist
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
+						SOV = {
+							RED_karl_radek = {
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
 					}
 				}
-			}
-			ROOT = {
-				RED_karl_radek = {
-					set_character_flag = RED_invited_trotskist
-				}
-			}}
-			65 ={
-				ROOT = {
-					RED_karl_radek = {
-						unit_leader_event = RED_racing_sov.1
-					}
-				}
-				hidden_effect = {
-					SOV = {
+				65 = {
+					ROOT = {
 						RED_karl_radek = {
 							unit_leader_event = RED_racing_sov.1
 						}
 					}
+					hidden_effect = {
+						SOV = {
+							RED_karl_radek = {
+								unit_leader_event = RED_racing_sov.1
+							}
+						}
+					}
 				}
-			}}
+			}
 		}
 	}
 	RED_invite_yevgeny_preobrazhensky_dec = {
@@ -1204,13 +1276,13 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 		available = {
 			if = {
 				limit = {
-						MIL = {
-							exists = yes
-						}
+					MIL = {
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = MIL
-					value > 10
+					value > 30
 				}
 			}
 			has_equipment = {
@@ -1231,33 +1303,45 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {random_list={35={
-			effect_tooltip = {
-				SOV = {
-					SOV_yevgeny_preobrazhensky = {
-						set_nationality = RED
+		remove_effect = {
+			random_list = {
+				35 = {
+					effect_tooltip = {
+						SOV = {
+							SOV_yevgeny_preobrazhensky = {
+								set_nationality = RED
+							}
+						}
+					}
+					hidden_effect = {
+						ROOT = {
+							RED_yevgeny_preobrazhensky = {
+								set_character_flag = RED_invited_trotskist
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
+						SOV = {
+							RED_yevgeny_preobrazhensky = {
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
 					}
 				}
-			}
-			ROOT = {
-				RED_yevgeny_preobrazhensky = {
-					set_character_flag = RED_invited_trotskist
-				}
-			}}
-			65 ={
-				ROOT = {
-					RED_yevgeny_preobrazhensky = {
-						unit_leader_event = RED_racing_sov.1
-					}
-				}
-				hidden_effect = {
-					SOV = {
+				65 = {
+					ROOT = {
 						RED_yevgeny_preobrazhensky = {
 							unit_leader_event = RED_racing_sov.1
 						}
 					}
+					hidden_effect = {
+						SOV = {
+							RED_yevgeny_preobrazhensky = {
+								unit_leader_event = RED_racing_sov.1
+							}
+						}
+					}
 				}
-			}}
+			}
 		}
 	}
 	RED_invite_aleksandr_shlyapnikov_dec = {
@@ -1268,20 +1352,20 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 			}
 			if = {
 				limit = {
-						COU = {
-							exists = yes
-						}
+					COU = {
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = COU
-					value > 10
+					value > 30
 				}
 			}
 			else_if = {
 				limit = {
-						SHE = {
-							exists = yes
-						}
+					SHE = {
+						exists = yes
+					}
 				}
 				network_strength = {
 					target = SHE
@@ -1303,38 +1387,51 @@ RED_invite_trotskists_dec_cat = { #제4인터내셔널
 				amount = -100
 			}
 		}
-		remove_effect = {random_list={35={
-			effect_tooltip = {
-				SOV = {
-					SOV_aleksandr_shlyapnikov = {
-						set_nationality = RED
+		remove_effect = {
+			random_list = {
+				35 = {
+					effect_tooltip = {
+						SOV = {
+							SOV_aleksandr_shlyapnikov = {
+								set_nationality = RED
+							}
+						}
+					}
+					hidden_effect = {
+						ROOT = {
+							RED_aleksandr_shlyapnikov = {
+								set_character_flag = RED_invited_trotskist
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
+						SOV = {
+							RED_aleksandr_shlyapnikov = {
+								unit_leader_event = RED_racing_sov.2
+							}
+						}
 					}
 				}
-			}
-			ROOT = {
-				RED_aleksandr_shlyapnikov = {
-					set_character_flag = RED_invited_trotskist
-				}
-			}
-			65 ={
-				ROOT = {
-					RED_aleksandr_shlyapnikov = {
-						unit_leader_event = RED_racing_sov.1
-					}
-				}
-				hidden_effect = {
-					SOV = {
+				65 = {
+					ROOT = {
 						RED_aleksandr_shlyapnikov = {
 							unit_leader_event = RED_racing_sov.1
 						}
 					}
+					hidden_effect = {
+						SOV = {
+							RED_aleksandr_shlyapnikov = {
+								unit_leader_event = RED_racing_sov.1
+							}
+						}
+					}
 				}
-			}}
-		}}
+			}
+		}
 	}
 }
 
-RED_military_government_administration = { #군정청
+RED_military_government_administration = {
+	#군정청
 	RED_military_government_occupation_DEN = {
 		icon = GFX_decision_generic_tank
 		priority = 202
@@ -1893,16 +1990,19 @@ RED_military_government_administration = { #군정청
 			factor = 400
 		}
 		fire_only_once = no
-		cost = 50
-		days_remove = 65
+		cost = 30
+		days_remove = 45
 		modifier = {
 			consumer_goods_factor = 0.15
 		}
 		remove_effect = {
 			RE1 = {
+				RED_instability_system_down_effect = yes
 				if = {
 					limit = {
-						RED={has_country_flag = RED_cherino_buntang_country_name}
+						RED = {
+							has_country_flag = RED_cherino_buntang_country_name
+						}
 					}
 					set_cosmetic_tag = RE1_autonomous_cherino
 				}
@@ -1939,16 +2039,19 @@ RED_military_government_administration = { #군정청
 			factor = 400
 		}
 		fire_only_once = no
-		cost = 50
-		days_remove = 65
+		cost = 30
+		days_remove = 45
 		modifier = {
 			consumer_goods_factor = 0.15
 		}
 		remove_effect = {
 			RE2 = {
+				RED_instability_system_down_effect = yes
 				if = {
 					limit = {
-						RED={has_country_flag = RED_cherino_buntang_country_name}
+						RED = {
+							has_country_flag = RED_cherino_buntang_country_name
+						}
 					}
 					set_cosmetic_tag = RE2_autonomous_cherino
 				}
@@ -1985,16 +2088,19 @@ RED_military_government_administration = { #군정청
 			factor = 400
 		}
 		fire_only_once = no
-		cost = 50
-		days_remove = 65
+		cost = 30
+		days_remove = 45
 		modifier = {
 			consumer_goods_factor = 0.15
 		}
 		remove_effect = {
 			RE3 = {
+				RED_instability_system_down_effect = yes
 				if = {
 					limit = {
-						RED={has_country_flag = RED_cherino_buntang_country_name}
+						RED = {
+							has_country_flag = RED_cherino_buntang_country_name
+						}
 					}
 					set_cosmetic_tag = RE3_autonomous_cherino
 				}
@@ -2031,8 +2137,11 @@ RED_military_government_administration = { #군정청
 			factor = 400
 		}
 		fire_only_once = no
-		cost = 50
-		days_remove = 65
+		cost = 30
+		days_remove = 45
+		available = {
+			always = no
+		}
 		modifier = {
 			consumer_goods_factor = 0.15
 		}
@@ -2040,7 +2149,9 @@ RED_military_government_administration = { #군정청
 			RE4 = {
 				if = {
 					limit = {
-						RED={has_country_flag = RED_cherino_buntang_country_name}
+						RED = {
+							has_country_flag = RED_cherino_buntang_country_name
+						}
 					}
 					set_cosmetic_tag = RE4_autonomous_cherino
 				}
@@ -2061,7 +2172,8 @@ RED_military_government_administration = { #군정청
 	}
 }
 
-RED_forced_relocation_policy = { #강제이주
+RED_forced_relocation_policy = {
+	#강제이주
 	RED_forced_relocation_policy_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
@@ -3600,7 +3712,8 @@ RED_minori_revolutionary_isolationism = {
 				}
 				909 = {
 					add_core_of = ROOT
-				}				#New state of SCHLESWIG
+				}
+				#New state of SCHLESWIG
 				60 = {
 					add_core_of = ROOT
 				}
@@ -4546,59 +4659,55 @@ RED_demand_cat = {
 }
 
 RED_zenkyoutou_cat = {
-	RED_install_zkt = { #현지 전공투 설립
-
-	icon = GFX_decision_generic_civil_support
-
-	available = {
-	}
-
-	target_root_trigger = {
-	}
-	complete_effect = {
-		add_political_power = -50
-	}
-	days_remove = 50
-	state_target = europe
-	target_trigger = {
-		FROM = {
-			OR = {
-				AND = {
-					is_capital = yes
-					CONTROLLER = {
-						Kivotos_school_tag = yes
-						NOT = {
-							OR = {
-								has_country_flag = RED_there_is_zkt
-								has_country_flag = RED_there_was_zkt
+	RED_install_zkt = {
+		#현지 전공투 설립
+		icon = GFX_decision_generic_civil_support
+		available = {
+		}
+		target_root_trigger = {
+		}
+		complete_effect = {
+			add_political_power = -50
+		}
+		days_remove = 50
+		state_target = europe
+		target_trigger = {
+			FROM = {
+				OR = {
+					AND = {
+						is_capital = yes
+						CONTROLLER = {
+							Kivotos_school_tag = yes
+							NOT = {
+								OR = {
+									has_country_flag = RED_there_is_zkt
+									has_country_flag = RED_there_was_zkt
+								}
+								is_ally_with = RED
 							}
-							is_ally_with = RED
 						}
 					}
 				}
 			}
 		}
-	}
-	visible = {
-		has_political_power > 49
-	}
-
-	fire_only_once = no
-	cost = 0
-
-	days_re_enable = 180
-	on_map_mode = map_only
-	remove_effect = {
-		
-	}
-
-	ai_will_do = {
-		base = 0
+		visible = {
+			has_political_power > 49
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 180
+		on_map_mode = map_only
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 0
+		}
 	}
 }
-}
+
 RED_winter_war_cat = {
-	RED_winter_war_fake_money = { #위조지폐 발행
+	RED_winter_war_fake_money = {
+		#위조지폐 발행
 		ai_will_do = {
 			base = 100
 		}
@@ -4650,7 +4759,8 @@ RED_winter_war_cat = {
 			}
 		}
 	}
-	RED_winter_war_biochemical = { #생화학 무기
+	RED_winter_war_biochemical = {
+		#생화학 무기
 		ai_will_do = {
 			base = 100
 		}
@@ -4703,8 +4813,11 @@ RED_winter_war_cat = {
 		}
 	}
 }
-RED_population_issue_cat = { #인구문제
-	RED_population_issue_no_goods = { #다가오는 소비재 부족 사태
+
+RED_population_issue_cat = {
+	#인구문제
+	RED_population_issue_no_goods = {
+		#다가오는 소비재 부족 사태
 		icon = GFX_decision_generic_fundraising
 		activation = {
 			always = no
@@ -4715,7 +4828,7 @@ RED_population_issue_cat = { #인구문제
 		days_mission_timeout = 720
 		is_good = no
 		timeout_effect = {
-			add_stability = -0.35
+			add_stability = -0.05
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -4726,7 +4839,8 @@ RED_population_issue_cat = { #인구문제
 			}
 		}
 	}
-	RED_population_issue_no_food = { #다가오는 식량 부족 사태
+	RED_population_issue_no_food = {
+		#다가오는 식량 부족 사태
 		icon = GFX_decision_POL_organize_strike_two
 		activation = {
 			always = no
@@ -4740,14 +4854,15 @@ RED_population_issue_cat = { #인구문제
 			news_event = BA_news.105
 		}
 	}
-	RED_population_issue_to_south = { #남부로의 이주
+	RED_population_issue_to_south = {
+		#남부로의 이주
 		icon = GFX_decision_generic_motorized
 		fire_only_once = yes
 		ai_will_do = {
 			base = 9999
 		}
 		available = {
-			has_completed_focus = RED_road_to_south	
+			has_completed_focus = RED_road_to_south
 		}
 		cost = 30
 		complete_effect = {
@@ -4761,7 +4876,8 @@ RED_population_issue_cat = { #인구문제
 			}
 		}
 	}
-	RED_population_issue_to_north = { #북부로의 이주
+	RED_population_issue_to_north = {
+		#북부로의 이주
 		icon = GFX_decision_generic_trucks
 		fire_only_once = yes
 		ai_will_do = {
@@ -4782,7 +4898,8 @@ RED_population_issue_cat = { #인구문제
 			}
 		}
 	}
-	RED_population_issue_down_to_country = { #하방 운동
+	RED_population_issue_down_to_country = {
+		#하방 운동
 		icon = GFX_decision_generic_train
 		fire_only_once = yes
 		ai_will_do = {
@@ -4805,31 +4922,40 @@ RED_population_issue_cat = { #인구문제
 			}
 			918 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			666 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			924 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			144 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			923 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			143 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			920 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 			921 = {
 				add_extra_state_shared_building_slots = 1
-				add_manpower = 20000}
+				add_manpower = 20000
+			}
 		}
 	}
-	RED_population_issue_suburbanization = { #의도적 교외화
+	RED_population_issue_suburbanization = {
+		#의도적 교외화
 		icon = GFX_decision_SOV_place_hq
 		fire_only_once = yes
 		ai_will_do = {
@@ -4855,7 +4981,8 @@ RED_population_issue_cat = { #인구문제
 			}
 		}
 	}
-	RED_population_issue_mobilisation = { #해결을 위한 징병제
+	RED_population_issue_mobilisation = {
+		#해결을 위한 징병제
 		icon = GFX_decision_generic_reorganize_irregulars
 		fire_only_once = yes
 		ai_will_do = {
@@ -4895,7 +5022,8 @@ RED_population_issue_cat = { #인구문제
 			}
 		}
 	}
-	RED_population_issue_distribution_system = { #배급제
+	RED_population_issue_distribution_system = {
+		#배급제
 		icon = GFX_decision_generic_fundraising
 		fire_only_once = yes
 		ai_will_do = {
@@ -4913,7 +5041,8 @@ RED_population_issue_cat = { #인구문제
 			RED_population_solve = yes
 		}
 	}
-	RED_population_issue_import_food = { #긴급한 식량 수입
+	RED_population_issue_import_food = {
+		#긴급한 식량 수입
 		icon = GFX_decision_eng_trade_unions_support
 		fire_only_once = yes
 		ai_will_do = {
@@ -4933,9 +5062,10 @@ RED_population_issue_cat = { #인구문제
 	}
 }
 
-
-RED_service_n_dedication = { #봉사와 헌신
-	RED_cpr_on_economy = { #경제에의 심폐소생술
+RED_service_n_dedication = {
+	#봉사와 헌신
+	RED_cpr_on_economy = {
+		#경제에의 심폐소생술
 		icon = GFX_decision_generic_merge_plant_materiel
 		cost = 10
 		days_remove = 60
@@ -4947,7 +5077,6 @@ RED_service_n_dedication = { #봉사와 헌신
 				has_idea = RED_doomed_economy_idea_1
 				has_idea = RED_doomed_economy_idea_2
 				has_idea = RED_economy_recover_idea
-				has_idea = RED_economy_recover_idea_1
 			}
 		}
 		remove_effect = {
@@ -4978,7 +5107,10 @@ RED_service_n_dedication = { #봉사와 헌신
 					add_idea = RED_economy_recover_idea_1
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_country_flag = RED_throw_aep_away
+				}
 				remove_ideas = RED_economy_recover_idea_1
 			}
 		}
@@ -4986,7 +5118,8 @@ RED_service_n_dedication = { #봉사와 헌신
 			base = 1000
 		}
 	}
-	RED_no_pain_no_gain = { #무노동, 무임금!
+	RED_no_pain_no_gain = {
+		#무노동, 무임금!
 		icon = GFX_decision_generic_civil_support
 		cost = 10
 		days_remove = 120
@@ -4998,7 +5131,8 @@ RED_service_n_dedication = { #봉사와 헌신
 			base = 1000
 		}
 	}
-	RED_get_every_iron = { #고철 수집
+	RED_get_every_iron = {
+		#고철 수집
 		icon = GFX_decision_steel
 		cost = 10
 		days_remove = 120
@@ -5010,7 +5144,8 @@ RED_service_n_dedication = { #봉사와 헌신
 			base = 1000
 		}
 	}
-	RED_sell_meal = { #농산물 매각
+	RED_sell_meal = {
+		#농산물 매각
 		icon = GFX_decision_generic_confiscation
 		cost = 10
 		days_remove = 120
@@ -5028,7 +5163,8 @@ RED_service_n_dedication = { #봉사와 헌신
 			consumer_goods_factor = -0.05
 		}
 	}
-	RED_no_more_salary = { #임금 동결
+	RED_no_more_salary = {
+		#임금 동결
 		icon = GFX_decision_hol_attract_foreign_investors
 		cost = 10
 		days_remove = 120
@@ -5046,7 +5182,8 @@ RED_service_n_dedication = { #봉사와 헌신
 }
 
 RED_debt = {
-	RED_mission_rebuild_bill_outdate = { #재건채권 만료
+	RED_mission_rebuild_bill_outdate = {
+		#재건채권 만료
 		icon = GFX_decision_ger_mefo_bills
 		days_mission_timeout = 365
 		fire_only_once = yes
@@ -5069,7 +5206,8 @@ RED_debt = {
 			}
 		}
 	}
-	RED_mission_rebuild_bill_no_pay_outdate = { #연장기한 만료
+	RED_mission_rebuild_bill_no_pay_outdate = {
+		#연장기한 만료
 		icon = GFX_decision_ger_mefo_bills
 		days_mission_timeout = 90
 		available = {
@@ -5083,11 +5221,12 @@ RED_debt = {
 		timeout_effect = {
 			country_event = RED_generic.5
 			add_to_variable = {
-				RED_no_pay = 0.1
+				RED_no_pay = 0.075
 			}
 		}
 	}
-	RED_no_more_pay = { #상환 포기
+	RED_no_more_pay = {
+		#상환 포기
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			OR = {
@@ -5123,7 +5262,7 @@ RED_debt = {
 			add_political_power = -30
 			add_stability = -0.3
 			add_war_support = -0.1
-			complete_national_focus  = RED_new_economy_focus_9
+			complete_national_focus = RED_new_economy_focus_9
 			every_other_country = {
 				limit = {
 					has_country_flag = I_have_invested_RED_flag
@@ -5139,7 +5278,8 @@ RED_debt = {
 			}
 		}
 	}
-	RED_your_economy_fucked = { #경제 마비의 전조
+	RED_your_economy_fucked = {
+		#경제 마비의 전조
 		days_mission_timeout = 60
 		icon = GFX_decision_generic_wreckers
 		activation = {
@@ -5160,7 +5300,8 @@ RED_debt = {
 			}
 		}
 	}
-	RED_your_economy_normalize = { #채권 상환
+	RED_your_economy_normalize = {
+		#채권 상환
 		days_mission_timeout = 365
 		icon = GFX_decision_generic_wreckers
 		activation = {
@@ -5198,12 +5339,13 @@ RED_debt = {
 				}
 				country_event = RED_generic.6
 			}
-			
 		}
 	}
 }
+
 RED_red_horse_category = {
-	RED_red_horse_sp = { #속도전
+	RED_red_horse_sp = {
+		#속도전
 		icon = GFX_decision_generic_civil_support
 		fire_only_once = yes
 		days_remove = 60
@@ -5256,7 +5398,8 @@ RED_red_horse_category = {
 			set_country_flag = RED_horse_in_progress
 		}
 	}
-	RED_red_horse_pr = { #증산의 불길
+	RED_red_horse_pr = {
+		#증산의 불길
 		icon = GFX_decision_generic_industry
 		fire_only_once = yes
 		days_remove = 60
@@ -5309,7 +5452,8 @@ RED_red_horse_category = {
 			set_country_flag = RED_horse_in_progress
 		}
 	}
-	RED_red_horse_cr = { #'창조와 혁신'
+	RED_red_horse_cr = {
+		#'창조와 혁신'
 		icon = GFX_decision_generic_research
 		fire_only_once = yes
 		days_remove = 60
@@ -5362,7 +5506,8 @@ RED_red_horse_category = {
 			set_country_flag = RED_horse_in_progress
 		}
 	}
-	RED_red_horse_in = { #'산업의 언덕'
+	RED_red_horse_in = {
+		#'산업의 언덕'
 		icon = GFX_decision_gre_paying_ifc_debt
 		fire_only_once = yes
 		days_remove = 60
@@ -5408,8 +5553,10 @@ RED_red_horse_category = {
 		}
 	}
 }
+
 RED_bop_category = {
-	RED_cherino_read_book = { #독서
+	RED_cherino_read_book = {
+		#독서
 		icon = GFX_decision_generic_operation
 		visible = {
 			RED_cherino = {
@@ -5422,7 +5569,8 @@ RED_bop_category = {
 		days_remove = 15
 		cost = 5
 	}
-	RED_cherino_become_cleaner = { #미화부장
+	RED_cherino_become_cleaner = {
+		#미화부장
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
@@ -5442,7 +5590,8 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_become_meal = { #급식부장
+	RED_cherino_become_meal = {
+		#급식부장
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
@@ -5462,7 +5611,8 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_become_prefect = { #선도부장
+	RED_cherino_become_prefect = {
+		#선도부장
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
@@ -5482,7 +5632,8 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_become_gym = { #체육부장
+	RED_cherino_become_gym = {
+		#체육부장
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
@@ -5502,7 +5653,8 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_quit_cleaner = { #미화부장 안하기
+	RED_cherino_quit_cleaner = {
+		#미화부장 안하기
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
@@ -5520,12 +5672,12 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_quit_meal = { #급식부장 안하기
+	RED_cherino_quit_meal = {
+		#급식부장 안하기
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
-					has_trait = RED_cherino_meal
-				
+				has_trait = RED_cherino_meal
 			}
 		}
 		complete_effect = {
@@ -5539,12 +5691,12 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_quit_prefect = { #선도부장 안하기
+	RED_cherino_quit_prefect = {
+		#선도부장 안하기
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
-					has_trait = RED_cherino_prefect
-				
+				has_trait = RED_cherino_prefect
 			}
 		}
 		complete_effect = {
@@ -5558,12 +5710,12 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_cherino_quit_gym = { #체육부장 안하기
+	RED_cherino_quit_gym = {
+		#체육부장 안하기
 		icon = GFX_decision_eng_trade_unions_demand
 		visible = {
 			RED_cherino = {
-					has_trait = RED_cherino_gym
-				
+				has_trait = RED_cherino_gym
 			}
 		}
 		complete_effect = {
@@ -5577,7 +5729,8 @@ RED_bop_category = {
 		}
 		cost = 5
 	}
-	RED_giving_pudding = { #추가적 푸딩 배급
+	RED_giving_pudding = {
+		#추가적 푸딩 배급
 		icon = GFX_decision_hol_attract_foreign_investors
 		complete_effect = {
 			add_power_balance_value = {
@@ -5592,7 +5745,8 @@ RED_bop_category = {
 			consumer_goods_factor = 0.05
 		}
 	}
-	RED_unite_exiles = { #망명 좌익반대파 규합
+	RED_unite_exiles = {
+		#망명 좌익반대파 규합
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
 		visible = {
 			has_completed_focus = RED_invite_trotskists

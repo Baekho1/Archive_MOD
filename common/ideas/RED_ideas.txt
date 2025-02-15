@@ -7,6 +7,18 @@ ideas = {
 		}
 	}
     country = {
+		RED_war_communism_idea = {
+			picture = SPR_class_war
+			modifier = {
+				army_core_attack_factor = 0.03
+				army_attack_speed_factor = 0.03
+				army_attack_factor = 0.03
+				custom_modifier_tooltip = RED_world_revolution_1_tt
+			}
+			cancel = {
+				has_war = no
+			}
+		}
 		RED_nation_united_LD = { #민족 자결 원칙
 			picture = GER_iron_front
 			modifier = {
@@ -32,7 +44,7 @@ ideas = {
 		RED_liberation_district = { #해방지구
 			picture = SOV_soviet_hegemony
 			modifier = {
-				compliance_growth = 0.5
+				compliance_growth = 1.5
 				resistance_growth = -0.5
 			}
 		}
@@ -646,6 +658,9 @@ ideas = {
 			}
 			cancel = {
 				democratic < 0.05
+			}
+			on_remove = {
+				country_event = RED_event.34
 			}
 		}
 		RED_famine = { #대기근
@@ -1627,6 +1642,22 @@ ideas = {
 				army_speed_factor = -0.15
 				army_org_factor = -0.15
 				army_org_regain = -0.15
+			}
+		}
+		RED_revolution_defender = { # 혁명수비대
+
+			picture = RED_office_ss
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				supply_combat_penalties_on_core_factor = -0.05
 			}
 		}
 		RED_office_ss_idea = { # 사무국 친위대

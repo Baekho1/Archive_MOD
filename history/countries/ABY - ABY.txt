@@ -19,6 +19,8 @@ set_variable = { ABY_halo_milita_cap = 6 }
 set_variable = {ABY_var_army_attack_factor = 0 }
 set_variable = {ABY_var_army_speed_factor = 0 }
 set_variable = {ABY_var_army_defence_factor = 0 }
+set_variable = {ABY_var_army_army_org_factor = 0}
+set_variable = {ABY_var_army_army_morale_factor = 0}
 set_variable = {ABY_var_max_dig_in = 0 }
 set_variable = {ABY_var_dig_in_speed_factor = 0 }
 set_variable = {ABY_var_max_dig_in_factor = 0 }
@@ -140,6 +142,8 @@ every_state = {
 			is_core_of = TRM
 			is_core_of = GEH
 			is_core_of = GEM
+			is_core_of = SLO
+			is_core_of = HUN
             state = 991
             state = 87
             state = 98
