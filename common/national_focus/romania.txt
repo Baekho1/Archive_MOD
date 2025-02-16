@@ -1732,6 +1732,7 @@ focus_tree = {
 		id = ROM_institute_democracy
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = {focus = ROM_modify_the_constitution }
+		mutually_exclusive = { focus = ROM_institute_comintern }
 		x = 3
 		y = 1
 
@@ -2326,6 +2327,7 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = ROM_be_red }
 		mutually_exclusive = {focus = ROM_not_sov }
+		mutually_exclusive = {focus = ROM_my_way }
 		x = 1
 		y = 4
 		relative_position_id = ROM_institute_comintern
@@ -3151,6 +3153,7 @@ focus_tree = {
 		id = ROM_force_abdication
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_iron_guard focus = ROM_national_christian_party }
+		mutually_exclusive = { focus= ROM_handle_the_king }
 		x = 2				
 		y = 5
 		relative_position_id = ROM_institute_fascism
