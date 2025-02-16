@@ -3807,7 +3807,7 @@ country_event = { #적색경보 해제
 	}
 }
 
-country_event = { #붉은겨울 수염공항
+country_event = { #핀란드와 친선
 	id = RED_event.11
 	title = RED_event.11.t
 	desc = RED_event.11.d
@@ -3815,16 +3815,13 @@ country_event = { #붉은겨울 수염공항
 
 	is_triggered_only = yes
 
-	option = { # 1번 선택 
+	option = { # ㅇㅋ 
 		name = RED_event.11.a
-		add_political_power = -200
-		add_command_power = -50
-		country_event = { id = RED_event.12 days = 120 }
+		country_event = { id = RED_event.12 days = 1 }
 	}
-	option = { # 2번 선택
+	option = { # ㄴㄴ
 		name = RED_event.11.b
-		add_political_power = -75
-		country_event = { id = RED_event.13 days = 60 }
+		country_event = { id = RED_event.13 days = 1 }
 	}
 }
 country_event = { # 1번 선택지

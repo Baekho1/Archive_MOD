@@ -205,5 +205,9 @@ spriteTypes = {
 		name = "GFX_autonomy_holy_dminion_icon"
 		texturefile = "gfx/interface/autonomy/autonomy_annex_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_Social_Liberalism"
+		textureFile = "gfx/interface/ideologies/Social_Liberalism.tga"
+	}
 
 }

@@ -6,13 +6,15 @@ country_event = { #인민전선의 승리
 	desc = PAN_event.1.d
 
 	fire_only_once = yes
+
 	trigger = {
 		has_country_flag = PAN_election_complete
 		is_power_balance_in_range = {
-			id = PAN_power_balance
-			range = PAN_NLP_side_WIN
+			id = PAN_power_balance 
+			range = PAN_NLP_side_w
 		}
 	}
+
 	option = {
 		name = PAN_evnet.1.a
 		set_party_name = {
