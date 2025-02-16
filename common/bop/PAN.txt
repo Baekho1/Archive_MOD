@@ -14,6 +14,7 @@ PAN_power_balance = {
         id = PAN_NLP_side_WIN
 
         range = {
+            id = PAN_NLP_side_w
             max = -0.10
             min = -1.00
             modifier = {
@@ -26,6 +27,7 @@ PAN_power_balance = {
         id = PAN_UPP_side_WIN
 
         range = {
+            id = PAN_UPP_side_w
             min = 0.10
             max = 1.00
             modifier = {
