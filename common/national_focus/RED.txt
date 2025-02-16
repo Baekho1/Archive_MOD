@@ -101,7 +101,7 @@ focus_tree = {
 	focus = {
 		# 북부 도로 재개발
 		id = RED_road_to_north
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_road_investment
 		x = 2
 		y = 0
 		relative_position_id = RED_road_to_south
@@ -3767,19 +3767,55 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#혁명수비대
-		id = RED_international_frontline
-		icon = GFX_focus_SOV_organization_centralization_discipline
+		#스페인 내 반스탈린 대오
+		id = RED_anti_stalin_in_spain
+		icon = GFX_focus_spr_no_pasaran
+		cost = 2
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = RED_communist_instigation
+		}
+		relative_position_id = RED_new_inteligence_agency
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			NOT = {
+				has_global_flag = spanish_civil_war
+			}
+			SPD = {
+				exists = yes
+			}
+		}
+		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPD
+				value = 100
+			}
+			custom_effect_tooltip = RED_advance_intel_tt
+			add_to_variable = {
+				var = RED_intel_send_volunteer_size
+				value = 3
+				tooltip = send_volunteer_size_tt
+			}
+		}
+	}
+	focus = {
+		#친위대 해체
+		id = RED_red_army_focus
+		icon = GFX_focus_YUG_pan_slavic_congress
 		prerequisite = {
 			focus = RED_communist_instigation
 		}
 		prerequisite = {
 			focus = RED_the_builder_of_the_winter_army
 		}
-		prerequisite = {
-			focus = RED_seek_allies
+		mutually_exclusive = {
+			focus = RED_international_frontline
 		}
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = RED_new_inteligence_agency
 		cost = 4
@@ -3795,11 +3831,45 @@ focus_tree = {
 					slot = political_advisor
 				}
 				add_trait = {
-					trait = office_commander_1
+					trait = prince_of_terror
+					slot = political_advisor
+				}
+			}
+			remove_ideas = RED_office_ss_idea
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			add_timed_idea = {
+				idea = SOV_revolutionary_spirit_idea
+				days = 365
+			}
+		}
+	}
+	focus = {
+		#혁명수비대
+		id = RED_international_frontline
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		prerequisite = {
+			focus = RED_communist_instigation
+		}
+		x = 1
+		y = 4
+		relative_position_id = RED_new_inteligence_agency
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		mutually_exclusive = {
+			focus = RED_red_army_focus
+		}
+		completion_reward = {
+			RED_marina = {
+				remove_trait = {
+					trait = office_commander
 					slot = political_advisor
 				}
 				add_trait = {
-					trait = prince_of_terror
+					trait = office_commander_1
 					slot = political_advisor
 				}
 			}
@@ -3807,10 +3877,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_office_ss_idea
 				add_idea = RED_revolution_defender
-			}
-			add_timed_idea = {
-				idea = SOV_revolutionary_spirit_idea
-				days = 365
 			}
 		}
 	}
@@ -5956,6 +6022,9 @@ focus_tree = {
 						is_ally_with = RED
 						is_neighbor_of = PREV
 					}
+					NOT = {
+						has_non_aggression_pact_with = RED
+					}
 				}
 				RED = {
 					declare_war_on = {
@@ -6047,7 +6116,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
-		x = 9
+		x = 10
 		y = 1
 		relative_position_id = RED_the_fourth_international
 		available = {
@@ -6102,7 +6171,7 @@ focus_tree = {
 	focus = {
 		#정치현실주의
 		id = RED_political_realism
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_generic_devaluation
 		cost = 4
 		x = -1
 		y = 1
@@ -6130,9 +6199,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#팽창주의
+		#적극적 방어
 		id = RED_expansionism
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_GER_wunderwaffe
 		cost = 4
 		x = 1
 		y = 1
@@ -6162,11 +6231,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#핀란드와 친선
+		#완충국가와의 제휴
 		id = RED_deal_with_fin
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_generic_fortify_finland
 		cost = 4
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RED_political_realism
 		prerequisite = {
@@ -6187,11 +6256,11 @@ focus_tree = {
 	focus = {
 		#동맹 모색
 		id = RED_seek_allies
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_red_flags
 		cost = 4
 		relative_position_id = RED_political_realism
 		x = 1
-		y = 2
+		y = 1
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -6199,8 +6268,8 @@ focus_tree = {
 			is_faction_leader = yes
 		}
 		prerequisite = {
-			focus = RED_deal_with_fin
-			focus = RED_attack_fin
+			focus = RED_political_realism
+			focus = RED_expansionism
 		}
 		completion_reward = {
 			add_war_support = 0.15
@@ -6208,14 +6277,71 @@ focus_tree = {
 		}
 	}
 	focus = {
-		# 고틀란드 할양 요구
-		id = RED_gotland_or_war
-		icon = GFX_focus_generic_provoke_border_clashes
-		x = 0
-		y = 1
-		relative_position_id = RED_seek_allies
+		#독일 군사정부 지원
+		id = RED_support_german
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 4
+		relative_position_id = RED_political_realism
+		x = -2
+		y = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
 		prerequisite = {
-			focus = RED_seek_allies
+			focus = RED_deal_with_fin
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#게헨나 지원
+		id = RED_support_geh
+		icon = GFX_focus_chi_mission_to_the_GEH
+		cost = 4
+		relative_position_id = RED_political_realism
+		x = -1
+		y = 3
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		prerequisite = {
+			focus = RED_deal_with_fin
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#민간 교류 활성화
+		id = RED_trade_with_KAI
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 4
+		relative_position_id = RED_political_realism
+		x = 0
+		y = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		prerequisite = {
+			focus = RED_political_realism
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 북해에서의 자위
+		id = RED_gotland_or_war
+		icon = GFX_focus_generic_baltic_sea_fleet
+		x = 0
+		y = 2
+		relative_position_id = RED_expansionism
+		prerequisite = {
+			focus = RED_expansionism
 		}
 		cost = 4
 		available = {
@@ -6239,12 +6365,31 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#핀란드 침공
+		# 남방 타격
+		id = RED_attack_ger
+		icon = GFX_focus_attack_germany
+		x = 1
+		y = 3
+		relative_position_id = RED_expansionism
+		prerequisite = {
+			focus = RED_gotland_or_war
+		}
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사프미 해방
 		id = RED_attack_fin
-		icon = GFX_focus_generic_attack_finland
+		icon = GFX_focus_SWE_finnish_communists
 		cost = 4
 		relative_position_id = RED_political_realism
-		x = 2
+		x = 3
 		y = 1
 		available = {
 			NOT = {
@@ -6276,6 +6421,27 @@ focus_tree = {
 				target = FIN
 				type = annex_everything
 			}
+		}
+	}
+	focus = {
+		#발트 패권
+		id = RED_hegemony_on_balt
+		icon = GFX_focus_GER_subduing_the_baltic_states
+		cost = 4
+		relative_position_id = RED_political_realism
+		x = 4
+		y = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		bypass = {
+		}
+		prerequisite = {
+			focus = RED_attack_fin
+		}
+		completion_reward = {
 		}
 	}
 	# 마리나 루트
@@ -10293,13 +10459,6 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			capital_scope = {
-				add_building_construction = {
-					type = land_facility
-					level = 1
-					province = 6050
-				}
-			}
 			add_dynamic_modifier = {
 				modifier = RED_war_engineering_modifier
 			}
@@ -10703,6 +10862,13 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
+				}
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					province = 6050
 				}
 			}
 			custom_effect_tooltip = RED_advance_publicwork_tt
@@ -11674,7 +11840,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_bases
 		cost = 5
 		relative_position_id = RED_rearming_focus_0
-		x = 11
+		x = 10
 		y = 1
 		prerequisite = {
 			focus = RED_rearming_focus_0
@@ -11718,7 +11884,11 @@ focus_tree = {
 			factor = 0.25
 		}
 		completion_reward = {
-			#이벤트 발생
+			mio:RED_saab_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
 		}
 	}
 	focus = {
@@ -11744,7 +11914,7 @@ focus_tree = {
 			air_experience = 30
 			add_timed_idea = {
 				idea = RED_airforce_training_project_idea
-				days = 100
+				days = 720
 			}
 		}
 	}
@@ -11813,7 +11983,7 @@ focus_tree = {
 			air_experience = 25
 			add_doctrine_cost_reduction = {
 				name = RED_air_doctrine_focus
-				cost_reduction = 0.99
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -12548,7 +12718,7 @@ focus_tree = {
 		#점령지 봉기
 		id = RED_revolution_war_focus_9
 		icon = GFX_focus_spr_crush_the_revolution
-		cost = 4
+		cost = 6
 		relative_position_id = RED_revolution_war_focus_0
 		x = -2
 		y = 4
@@ -12577,7 +12747,7 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Regional Defense Division\" division_template = \"Regional Defense Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
 					owner = RED
-					count = 5
+					count = 2
 				}
 			}
 			uncomplete_national_focus = {
