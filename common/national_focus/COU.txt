@@ -29,7 +29,7 @@ focus_tree = {
 
 	focus = { #비상대책위원회 수립
 		id = COU_establishment_of_emergency_measures_committee
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_COU_establishment_of_emergency_measures_committee
 		offset = {
 			x = -15
 			y = 0

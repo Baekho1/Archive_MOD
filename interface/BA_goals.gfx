@@ -2012,6 +2012,10 @@ spriteTypes = {
 		name = "GFX_COU_what_the_fuck_is_fascism"
 		textureFile = "gfx/interface/goals/COU/what_the_fuck_is_fascism.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_establishment_of_emergency_measures_committee"
+		textureFile = "gfx/interface/goals/COU/COU_establishment_of_emergency_measures_committee.png"
+	}
 	
 	
 	####카이저라이히 돚거

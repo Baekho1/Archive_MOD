@@ -16,9 +16,9 @@ bookmarks = {
 				COU_dutch_collaboraters
 			}
 			focuses = {
+				COU_impeachment_of_chief_executive
 				COU_establishment_of_emergency_measures_committee
-				COU_establishment_of_federal_industrial_committee
-				COU_normalization_of_administration
+				COU_focus_in_the_darkness
 			}
 		}
 		"MIL"={
