@@ -145,6 +145,9 @@ on_actions = {
 						autonomy_state = autonomy_dominion
 					}
 				}
+				ENG = {
+					country_event = { id = impindia.36 days = 03 }
+				}
 			}
 			#if = { #미국 - 색채전 색채 승전
 			#	limit = {

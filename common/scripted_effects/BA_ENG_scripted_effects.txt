@@ -36,8 +36,8 @@ ENG_uk_support_down = {
 	}
 	else_if = {
 		limit = { has_idea = ENG_UK_exile_support_idea_1 }
-			custom_effect_tooltip = IMP_by_uk_exile
-		add_war_support = -0.1
+		custom_effect_tooltip = IMP_by_uk_exile
+		add_war_support = -0.05
 	}
 }
 ENG_can_gov_support_up = {
@@ -204,5 +204,179 @@ CAN_clr_all_flag = {
 	every_state = {
 		limit = { has_state_flag = CAN_industry_flag }
 		clr_state_flag = CAN_industry_flag
+	}
+}
+
+CAN_change_par_anger = {
+	if = {
+		limit = {
+			has_idea = CAN_parliament_anger_ns
+			OR = {
+				check_variable = { CAN_anger_change > 0 }
+				AND = {
+					check_variable = { CAN_anger_change < 0 }
+					check_variable = { CAN_parliament_anger > 0 }
+				}
+			}
+		}
+
+		set_temp_variable = { CAN_anger_lower_limit = 1 }
+		subtract_from_temp_variable = { CAN_anger_lower_limit = CAN_parliament_anger }
+
+		set_temp_variable = { CAN_anger_upper_limit = 10 }
+		subtract_from_temp_variable = { CAN_anger_upper_limit = CAN_parliament_anger }
+
+		# avoid going < 1 or > 10
+		clamp_temp_variable = {
+			var = CAN_anger_change
+			min = CAN_anger_lower_limit
+			max = CAN_anger_upper_limit
+		}
+
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = CAN_parliament_anger } #bypass the check when initialising
+					NOT = { check_variable = { CAN_anger_change = 0 } }
+				}
+			}
+			if = {
+				limit = { check_variable = { CAN_anger_change > 0 } }
+				custom_effect_tooltip = CAN_increase_par_anger
+				
+			}
+			else = {
+				custom_effect_tooltip = CAN_decrease_par_anger
+				
+			}
+
+			# for the tooltips
+			set_temp_variable = { CAN_par_anger_pp_temp = 0.1 }
+			multiply_temp_variable = { CAN_par_anger_pp_temp = CAN_anger_change }
+
+			set_temp_variable = { CAN_par_anger_cg_temp = 0.02 }
+			multiply_temp_variable = { CAN_par_anger_cg_temp = CAN_anger_change }
+
+			# set the new variables
+			add_to_variable = { CAN_parliament_anger = CAN_anger_change }
+			add_to_variable = { CAN_par_anger_pp = CAN_par_anger_pp_temp }
+			add_to_variable = { CAN_par_anger_cg = CAN_par_anger_cg_temp }
+		}
+	}
+}
+
+CAN_change_people_anger = {
+	if = {
+		limit = {
+			has_idea = CAN_popular_anger_ns
+			OR = {
+				check_variable = { CAN_anger_change > 0 }
+				AND = {
+					check_variable = { CAN_anger_change < 0 }
+					check_variable = { CAN_popular_anger > 0 }
+				}
+			}
+		}
+
+		set_temp_variable = { CAN_anger_lower_limit = 1 }
+		subtract_from_temp_variable = { CAN_anger_lower_limit = CAN_popular_anger }
+
+		set_temp_variable = { CAN_anger_upper_limit = 10 }
+		subtract_from_temp_variable = { CAN_anger_upper_limit = CAN_popular_anger }
+
+		# avoid going < 1 or > 10
+		clamp_temp_variable = {
+			var = CAN_anger_change
+			min = CAN_anger_lower_limit
+			max = CAN_anger_upper_limit
+		}
+
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = CAN_popular_anger } #bypass the check when initialising
+					NOT = { check_variable = { CAN_anger_change = 0 } }
+				}
+			}
+			if = {
+				limit = { check_variable = { CAN_anger_change > 0 } }
+				custom_effect_tooltip = CAN_increase_pop_anger
+				
+			}
+			else = {
+				custom_effect_tooltip = CAN_decrease_pop_anger
+				
+			}
+
+			# for the tooltips
+			set_temp_variable = { CAN_popular_anger_stability_temp = -0.02 }
+			multiply_temp_variable = { CAN_popular_anger_stability_temp = CAN_anger_change }
+
+			set_temp_variable = { CAN_popular_anger_factory_output_temp = -0.01 }
+			multiply_temp_variable = { CAN_popular_anger_factory_output_temp = CAN_anger_change }
+
+			# set the new variables
+			add_to_variable = { CAN_popular_anger = CAN_anger_change }
+			add_to_variable = { CAN_popular_anger_stability = CAN_popular_anger_stability_temp }
+			add_to_variable = { CAN_popular_anger_factory_output = CAN_popular_anger_factory_output_temp }
+		}
+	}
+}
+
+CAN_change_british_anger = {
+	if = {
+		limit = {
+			has_idea = CAN_british_anger_ns
+			OR = {
+				check_variable = { CAN_anger_change > 0 }
+				AND = {
+					check_variable = { CAN_anger_change < 0 }
+					check_variable = { CAN_british_anger > 0 }
+				}
+			}
+		}
+
+		set_temp_variable = { CAN_anger_lower_limit = 1 }
+		subtract_from_temp_variable = { CAN_anger_lower_limit = CAN_popular_anger }
+
+		set_temp_variable = { CAN_anger_upper_limit = 10 }
+		subtract_from_temp_variable = { CAN_anger_upper_limit = CAN_popular_anger }
+
+		# avoid going < 1 or > 10
+		clamp_temp_variable = {
+			var = CAN_anger_change
+			min = CAN_anger_lower_limit
+			max = CAN_anger_upper_limit
+		}
+
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = CAN_british_anger } #bypass the check when initialising
+					NOT = { check_variable = { CAN_anger_change = 0 } }
+				}
+			}
+			if = {
+				limit = { check_variable = { CAN_anger_change > 0 } }
+				custom_effect_tooltip = CAN_increase_british_anger
+				
+			}
+			else = {
+				custom_effect_tooltip = CAN_decrease_british_anger
+				
+			}
+
+			# for the tooltips
+			set_temp_variable = { CAN_british_anger_pps_temp = -0.05 }
+			multiply_temp_variable = { CAN_british_anger_pps_temp = CAN_anger_change }
+
+			set_temp_variable = { CAN_british_anger_army_org_temp = -0.01 }
+			multiply_temp_variable = { CAN_british_anger_army_org_temp = CAN_anger_change }
+
+			# set the new variables
+			add_to_variable = { CAN_british_anger = CAN_anger_change }
+			add_to_variable = { CAN_british_anger_pps = CAN_british_anger_pps_temp }
+			add_to_variable = { CAN_british_anger_army_org = CAN_british_anger_army_org_temp }
+		}
 	}
 }

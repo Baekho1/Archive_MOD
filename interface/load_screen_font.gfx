@@ -11,6 +11,7 @@ bitmapfonts = {
 		color = 0xffffffff
 
 		textcolors = {
+			1 = { 128 120 211 }   # Gradient Step 1 - lilac 		{ 51 43 133 }
 			G = { 86 172 91 }
 			R = { 222 86 70 }
 			Y = { 238 201 35 }

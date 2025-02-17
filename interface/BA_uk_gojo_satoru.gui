@@ -5,30 +5,29 @@ guiTypes = {
 		position = { x = 545 y = 90 }
 		#orientation = center
         
-
-        buttonType = {
+        @BA_eng_icon_x = 200
+        iconType = {
             name = "ENG_uk_support_ns"
-            position = { x = 225 y = 0 }
+            position = { x = @BA_eng_icon_x y = 0 }
             quadTextureSprite = "GFX_idea_ENG_exile_uk"
-			clicksound = click_default
+            pdx_tooltip = ENG_UK_exile_support_idea_tt
             scale = 0.80
-            pdx_tooltip = ENG_uk_support_ns_tt
         }
 
-        buttonType = {
+        iconType = {
             name = "ENG_canada_support_ns"
-            position = { x = 225 y = 64 }
+            position = { x = @BA_eng_icon_x y = 64 }
             quadTextureSprite = "GFX_idea_ENG_canada_government"
+            pdx_tooltip = ENG_Canada_Government_support_idea_tt
             scale = 0.80
-            pdx_tooltip = ENG_canada_support_ns_tt
         }
 
-        buttonType = {
+        iconType = {
             name = "ENG_people_support_ns"
-            position = { x = 225 y = 128 }
+            position = { x = @BA_eng_icon_x y = 128 }
             quadTextureSprite = "GFX_idea_prc_low_popular_support3"
+            pdx_tooltip = ENG_people_support_idea_tt
             scale = 0.8
-            pdx_tooltip = ENG_people_support_ns_tt
         }
 
         iconType = {
@@ -46,14 +45,15 @@ guiTypes = {
             scale = 0.52
             alwaystransparent = yes
         }
+        @BA_eng_text_x = 255
         #### 영국 망명정부
         instantTextBoxType = {#
             name = ENG_current_uk_support
-            position = { x = 280  y = 17 }
+            position = { x = @BA_eng_text_x  y = 17 }
             font = "hoi_24header"
             borderSize = {x = 0 y = 0}
             text = "ENG_UK_exile_support_idea"
-            maxWidth = 200
+            maxWidth = 250
             maxHeight = 36
             format = left
             pdx_tooltip = ENG_UK_exile_support_idea_tt
@@ -63,11 +63,11 @@ guiTypes = {
         #### 캐나다 의회
         instantTextBoxType = {#
             name = ENG_current_canada_support
-            position = { x = 280  y = 77 }
+            position = { x = @BA_eng_text_x  y = 77 }
             font = "hoi_24header"
             borderSize = {x = 0 y = 0}
             text = "ENG_Canada_Government_support"
-            maxWidth = 200
+            maxWidth = 250
             maxHeight = 36
             format = left
             pdx_tooltip = "ENG_Canada_Government_support_idea_tt"
@@ -77,11 +77,11 @@ guiTypes = {
         #### 대중(김대중아님)
         instantTextBoxType = {#
             name = ENG_current_people_support
-            position = { x = 280  y = 150 }
+            position = { x = @BA_eng_text_x  y = 137 }
             font = "hoi_24header"
             borderSize = {x = 0 y = 0}
             text = "ENG_people_support_idea"
-            maxWidth = 200
+            maxWidth = 250
             maxHeight = 36
             format = left
             pdx_tooltip = ENG_people_support_idea_tt

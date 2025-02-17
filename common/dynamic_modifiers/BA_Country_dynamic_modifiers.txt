@@ -2239,3 +2239,18 @@ SHA_aup_modifier = {
 	stability_factor = SHA_aup_stability
 	industrial_capacity_factory = SHA_aup_factory_output
 }
+
+CAN_parliament_anger_modifier = {
+	political_power_cost = CAN_par_anger_pp
+	consumer_goods_factor = CAN_par_anger_cg
+}
+
+CAN_popular_anger_modifier = {
+	stability_factor = CAN_popular_anger_stability
+	industrial_capacity_factory = CAN_popular_anger_factory_output
+}
+
+CAN_british_anger_modifier = {
+	party_popularity_stability_factor = CAN_british_anger_pps
+	army_org_factor = CAN_british_anger_army_org
+}

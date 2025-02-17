@@ -399,7 +399,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_gathering_of_radicals }
 		mutually_exclusive = {  }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_Kisaki_Suppression }
+		}
 		bypass = { }
 
 		relative_position_id = SHA_gathering_of_radicals

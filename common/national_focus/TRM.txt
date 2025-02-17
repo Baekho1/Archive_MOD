@@ -6722,7 +6722,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		available = {
-			NOT = { has_idea = TRM_safe_trinity }
+			NOT = { has_idea = TRN_political_instability_ns }
 			has_country_leader = {
 				character = TRN_alzk
 				ruling_only = yes
@@ -6732,7 +6732,7 @@ focus_tree = {
 
 		}
 		select_effect = {
-
+			country_event = { id = trinity.18 days = 02 }
 		}
 		completion_reward = {
 			country_event = trinity.1
@@ -6771,7 +6771,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_Mika_basic_law
-		cost = 5
+		cost = 4
 
 		available = {
 			has_government = fascism
@@ -6791,7 +6791,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_Mika_basic_law
-		cost = 5
+		cost = 4
 
 		available = {
 			has_government = fascism
@@ -8557,8 +8557,14 @@ focus_tree = {
 	    cost = 5
 		completion_reward = {
             custom_effect_tooltip = TRM_heer_modifier_change
-            set_variable = { TRM_army_out_of_supply_factor = -0.1 }
-            set_variable = { TRM_army_supply_node_range = 0.1 }
+            set_variable = { 
+				TRM_army_out_of_supply_factor = -0.1 
+				tooltip = out_of_supply_factor_tt
+			}
+            set_variable = { 
+				TRM_army_supply_node_range = 0.1 
+				tooltip = supply_node_range_tt
+			}
 		}
 	}
 	shared_focus = {
