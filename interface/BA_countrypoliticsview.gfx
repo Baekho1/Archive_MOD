@@ -209,5 +209,9 @@ spriteTypes = {
 		name = "GFX_ideology_Social_Liberalism"
 		textureFile = "gfx/interface/ideologies/Social_Liberalism.tga"
 	}
+	spriteType = {
+		name = "GFX_ideology_monarchist_socialism"
+		texturefile = "gfx/interface/ideologies/monarchist_socialism.dds"
+	}
 
 }
