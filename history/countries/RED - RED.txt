@@ -72,6 +72,61 @@ set_variable = {
 	RED_cherino_social_analizing = 0
 }
 
+#체리노의 독서
+set_variable = {
+	RED_read_marx = 5 
+#『공산당 선언』,『자본론』,『독일 이데올로기』,『경제학 비판 요강』, 『고타 강령 비판』
+}
+set_variable = {
+	RED_read_kautsky = 4
+#『에르푸르트 강령』,『베른슈타인과 사회민주주의 강령』,『농업 문제』,『프롤레타리아 독재』	
+}
+set_variable = {
+	RED_read_lenin = 7
+#『무엇을 할 것인가?』,『민주주의 혁명에서 사회민주주의의 두 가지 전술』 
+#『제국주의, 자본주의의 최고 단계』,『국가와 혁명』,『4월 테제』
+#『공산주의에서의 "좌익" 소아병』,『프롤레타리아 혁명과 배신자 카우츠키』
+}
+set_variable = {
+	RED_read_luxembourg = 5
+#『사회 개혁이냐 혁명이냐』,『자본의 축적』,『대중파업론』
+#『러시아 혁명』,『사회민주주의의 위기』
+}
+set_variable = {
+	RED_read_trotsky = 3
+#『평가와 전망』,『우리 혁명』,『테러리즘과 공산주의』
+}
+set_variable = {
+	RED_read_bukharin = 3
+#『세계경제와 제국주의』,『코뮤니즘 ABC』,『과도기 경제학』
+}
+set_variable = {
+	RED_read_zinoviev = 5
+#『레닌주의의 기초』,『세계 혁명과 코민테른』,『볼셰비키의 길』
+#『프롤레타리아 혁명과 사회민주주의』,『코민테른 제4차 대회 연설문』 
+}
+set_variable = {
+	RED_read_zinoviev = 5
+#『레닌주의의 기초』,『세계 혁명과 코민테른』,『볼셰비키의 길』
+#『프롤레타리아 혁명과 사회민주주의』,『코민테른 제4차 대회 연설문』 
+}
+set_variable = {
+	RED_read_stalin = 2
+#『마르크스주의와 민족 문제』,『레닌주의의 기초와 레닌의 혁명적 교의』
+}
+set_variable = {
+	RED_read_gramsci = 1
+#『옥중수고』
+}
+
+
+
+
+#혁명 전쟁준비
+set_variable = {
+	RED_prepare = 0
+}
+
 #대중의 요구 시스템
 set_variable = {
 	RED_public_mission_completed = 0

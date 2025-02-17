@@ -240,6 +240,11 @@ country_event = { #『공산당 선언』
 	desc = RED_reading.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
+	immediate = {
+		add_to_variable = {
+			RED_read_marx = -1
+		}
+	}
 	option = { #
 		name = RED_reading.1.a
 		add_popularity = {
@@ -274,6 +279,237 @@ country_event = { #『공산당 선언』
 			}
 		}
 		unlock_decision_tooltip = RED_cherino_read_book
+	}
+}
+country_event = { #무슨 책을 읽을까?
+	id = RED_reading.2
+	title = RED_reading.2.t
+	desc = RED_reading.2.d
+	is_triggered_only = yes
+	option = { #마르크스의 책
+		name = RED_reading.2.a
+		custom_effect_tooltip = RED_reading.2_tt_marx
+		trigger = {
+			check_variable = {
+				var = RED_read_marx
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #카우츠키의 책
+		name = RED_reading.2.b
+		custom_effect_tooltip = RED_reading.2_tt_kautsky
+		trigger = {
+			check_variable = {
+				var = RED_read_marx
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_kautsky
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #레닌의 책
+		name = RED_reading.2.c
+		custom_effect_tooltip = RED_reading.2_tt_lenin
+		trigger = {
+			check_variable = {
+				var = RED_read_marx
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_lenin
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #룩셈부르크의 책
+		name = RED_reading.2.e
+		custom_effect_tooltip = RED_reading.2_tt_luxembourg
+		trigger = {
+			check_variable = {
+				var = RED_read_marx
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_luxembourg
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #트로츠키
+		name = RED_reading.2.f
+		custom_effect_tooltip = RED_reading.2_tt_trotsky
+		trigger = {
+			check_variable = {
+				var = RED_read_lenin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_trotsky
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #부하린
+		name = RED_reading.2.g
+		custom_effect_tooltip = RED_reading.2_tt_bukharin
+		trigger = {
+			check_variable = {
+				var = RED_read_lenin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_bukharin
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #지노비예프
+		name = RED_reading.2.h
+		custom_effect_tooltip = RED_reading.2_tt_zinoviev
+		trigger = {
+			check_variable = {
+				var = RED_read_lenin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_zinoviev
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #스탈린
+		name = RED_reading.2.i
+		custom_effect_tooltip = RED_reading.2_tt_stalin
+		trigger = {
+			OR = {
+				check_variable = {
+					var = RED_read_trotsky
+					value = 0
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = RED_read_bukharin
+					value = 0
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = RED_read_zinoviev
+					value = 0
+					compare = less_than_or_equals
+				}
+			}
+			check_variable = {
+				var = RED_read_stalin
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	option = { #읽을 책이 없소
+		name = RED_reading.2.j
+		custom_effect_tooltip = RED_reading.2_tt_no
+		trigger = {
+			check_variable = {
+				var = RED_read_trotsky
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_bukharin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_zinoviev
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_stalin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_luxembourg
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_kautsky
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_gramsci
+				value = 1
+				compare = greater_than_or_equals
+			}
+			network_strength = {
+				target = ITA
+				value < 1
+			}
+		}
+	}
+	option = { #그람시
+		name = RED_reading.2.k
+		custom_effect_tooltip = RED_reading.2_tt_gramsci
+		trigger = {
+			check_variable = {
+				var = RED_read_trotsky
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_bukharin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_zinoviev
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_stalin
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_luxembourg
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_kautsky
+				value = 0
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = RED_read_gramsci
+				value = 1
+				compare = greater_than_or_equals
+			}
+			network_strength = {
+				target = ITA
+				value > 1
+			}
+		}
 	}
 }
 
@@ -688,6 +924,93 @@ country_event = { #제1차 AEP 조기달성
 		}
 		hidden_effect = {
 			remove_ideas = RED_first_AEP_1
+		}
+	}
+}
+country_event = { #대외정책
+	id = RED_generic.18
+	title = RED_generic.18.t
+	desc = RED_generic.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #현실주의
+		name = RED_generic.18.a
+		add_stability = 0.05
+		complete_national_focus = RED_political_realism
+	}
+	option = { #확장주의
+		name = RED_generic.18.b
+		add_war_support = 0.05
+		complete_national_focus = RED_expansionism
+	}
+}
+country_event = { #군통권 내놔
+	id = RED_generic.19
+	title = RED_generic.19.t
+	desc = RED_generic.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #현실주의
+		name = RED_generic.18.a
+		add_stability = 0.05
+		complete_national_focus = RED_political_realism
+	}
+	option = { #확장주의
+		name = RED_generic.18.b
+		add_war_support = 0.05
+		complete_national_focus = RED_expansionism
+	}
+}
+country_event = { #국경분쟁 짐
+	id = RED_generic.20
+	title = RED_generic.20.t
+	desc = RED_generic.20.d
+	is_triggered_only = yes
+	option = { #ㅠㅠ
+		name = RED_generic.20.a
+		add_war_support = -0.05
+	}
+	option = {
+		name = RED_generic.20.b
+		add_war_support = -0.1
+		random_other_country = {
+			limit = {
+				owns_state = 909
+			}
+			RED = { 
+				create_wargoal = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+country_event = { #국경분쟁 이김
+	id = RED_generic.21
+	title = RED_generic.21.t
+	desc = RED_generic.21.d
+	is_triggered_only = yes
+	option = { #cool
+		name = RED_generic.21.a
+		add_war_support = 0.05
+		transfer_state = 910
+	}
+}
+country_event = { #붉은겨울의 지원
+	id = RED_generic.22
+	title = RED_generic.22.t
+	desc = RED_generic.22.d
+	is_triggered_only = yes
+	option = { #cool
+		name = RED_generic.22.a
+		add_timed_idea = {
+			idea = RED_supporting_idea
+			days = 180
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
 		}
 	}
 }
@@ -2410,6 +2733,14 @@ country_event = { #독립한 군정청 조지기
 		if = {
 			limit = {
 				FROM = {
+					tag = RE2
+				}
+			}
+			activate_mission = RED_military_government_attack_NOR
+		}
+		if = {
+			limit = {
+				FROM = {
 					tag = RE1
 				}
 			}
@@ -3495,6 +3826,7 @@ country_event = { # 고틀란드냐 전쟁이냐
 				add_state_core = 124
 				transfer_state = 910
 				add_state_core = 910
+				set_country_flag = RED_GEK_gave_goatland_flag
 			}
 			ROOT = {
 				remove_state_claim = 124
@@ -3647,7 +3979,7 @@ country_event = { # 독일 거부
 	}
 }
 
-country_event = { #현지인 문제
+country_event = { #군정 체제의 해결
 	id = RED_event.4
 	title = RED_event.4.t
 	desc = RED_event.4.d
@@ -3784,25 +4116,31 @@ country_event = { #동맹 거절
 	}
 }
 
-country_event = { #적색경보 해제
+country_event = { #군통권 내놔
 	id = RED_event.10
 	title = RED_event.10.t
 	desc = RED_event.10.d
 	picture = GFX_report_event_chinese_soldiers_fighting
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
-	option = {
+	option = { #ㅇㅋ
 		name = RED_event.10.a
-		if = {
-			limit = {
-				has_idea = RED_doomed_army_idea
-			}
-			remove_ideas = RED_doomed_army_idea
+		ai_chance = {
+			base = 3
 		}
-		else = {
-			add_war_support = 0.15
+		give_military_access = RED
+		RED = {
+			give_guarantee = THIS
+		}
+	}
+	option = { #ㅗ
+		name = RED_event.10.b
+		RED = {
+			create_wargoal = {
+				target = THIS
+				type = annex_everything
+			}
 		}
 	}
 }
@@ -3818,13 +4156,20 @@ country_event = { #핀란드와 친선
 	option = { # ㅇㅋ 
 		name = RED_event.11.a
 		country_event = { id = RED_event.12 days = 1 }
+		diplomatic_relation = {
+			country = RED
+			relation = non_aggression_pact
+		}
 	}
 	option = { # ㄴㄴ
 		name = RED_event.11.b
 		country_event = { id = RED_event.13 days = 1 }
+		ai_chance = {
+			base = 0
+		}
 	}
 }
-country_event = { # 1번 선택지
+country_event = { # 수락
 	id = RED_event.12
 	title = RED_event.12.t
 	desc = RED_event.12.d
@@ -3834,17 +4179,9 @@ country_event = { # 1번 선택지
 
 	option = {
 		name = RED_event.12.a
-		141 = {
-			add_building_construction = {
-				type = air_base
-				level = 3
-				instant_build = yes
-			}
-			add_state_modifier = {
-				modifier = { 
-					local_supplies = 0.25
-				}
-			}
+		diplomatic_relation = {
+			country = RED
+			relation = non_aggression_pact
 		}
 	}
 }
@@ -3858,13 +4195,7 @@ country_event = { # 2번 선택지
 
 	option = {
 		name = RED_event.13.a
-		141 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
+		add_war_support = -0.05
 	}
 }
 
@@ -3944,7 +4275,7 @@ country_event = { #트로츠키주의자들 튀기
 		}
 	}
 }
-country_event = { #반파시즘 노동자전선
+country_event = { #반파시즘 노동자전선 / 겨울대전 / 혁명전쟁
 	id = RED_event.15
 	title = RED_event.15.t
 	desc = RED_event.15.d
@@ -3961,7 +4292,51 @@ country_event = { #반파시즘 노동자전선
 		if = {
 			limit = {
 				check_variable = {
-					var = RED_revolutionary_war_prepare_degree
+					var = RED_prepare
+					value = 36
+					compare = greater_than_or_equals
+				}
+			}
+			add_ideas = RED_anti_fascism_8
+			custom_effect_tooltip = RED_event.15_tt8
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = RED_prepare
+					value = 27
+					compare = greater_than_or_equals
+				}
+			}
+			add_ideas = RED_anti_fascism_7
+			custom_effect_tooltip = RED_event.15_tt7
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = RED_prepare
+					value = 21
+					compare = greater_than_or_equals
+				}
+			}
+			add_ideas = RED_anti_fascism_6
+			custom_effect_tooltip = RED_event.15_tt6
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = RED_prepare
+					value = 16
+					compare = greater_than_or_equals
+				}
+			}
+			add_ideas = RED_anti_fascism_5
+			custom_effect_tooltip = RED_event.15_tt5
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = RED_prepare
 					value = 10
 					compare = greater_than_or_equals
 				}
@@ -3972,7 +4347,7 @@ country_event = { #반파시즘 노동자전선
 		else_if = {
 			limit = {
 				check_variable = {
-					var = RED_revolutionary_war_prepare_degree
+					var = RED_prepare
 					value = 7
 					compare = greater_than_or_equals
 				}
@@ -3983,7 +4358,7 @@ country_event = { #반파시즘 노동자전선
 		else_if = {
 			limit = {
 				check_variable = {
-					var = RED_revolutionary_war_prepare_degree
+					var = RED_prepare
 					value = 4
 					compare = greater_than_or_equals
 				}
@@ -3994,7 +4369,7 @@ country_event = { #반파시즘 노동자전선
 		else_if = {
 			limit = {
 				check_variable = {
-					var = RED_revolutionary_war_prepare_degree
+					var = RED_prepare
 					value = 1
 					compare = greater_than_or_equals
 				}

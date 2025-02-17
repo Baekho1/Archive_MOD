@@ -7,6 +7,13 @@ ideas = {
 		}
 	}
     country = {
+		RED_supporting_idea = { #붉은겨울의 지원
+			picture = saf_soviet_advisers
+			modifier = {
+				mobilization_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
 		RED_the_fifth_columnists_idea = { #조직된 제5열
 			picture = HUN_the_rakosi_battalion_idea
 			targeted_modifier = {
@@ -1410,6 +1417,66 @@ ideas = {
 				has_war = no
 			}
 		}
+		RED_anti_fascism_5 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.2
+				army_defence_against_major_factor = 0.2
+				dig_in_speed_factor = 0.2
+				army_attack_speed_factor = 0.15
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_6 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.225
+				army_defence_against_major_factor = 0.225
+				dig_in_speed_factor = 0.225
+				army_attack_speed_factor = 0.175
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_7 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.25
+				army_defence_against_major_factor = 0.25
+				dig_in_speed_factor = 0.25
+				army_attack_speed_factor = 0.18
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_8 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.27
+				army_defence_against_major_factor = 0.27
+				dig_in_speed_factor = 0.28
+				army_attack_speed_factor = 0.2
+			}
+			cancel = {
+				has_war = no
+			}
+		}
 		RED_insentive = { #인센티브 증여
 			picture = ARG_civilian_economy_boost
 			modifier = {
@@ -1616,11 +1683,11 @@ ideas = {
 			modifier = {
 				experience_gain_factor = -0.1
 				land_doctrine_cost_factor = 0.45
-				army_attack_factor = -0.05
-				army_defence_factor = -0.05
-				army_speed_factor = -0.05
-				army_org_factor = -0.05
-				army_org_regain = -0.05
+				army_attack_factor = -0.30
+				army_defence_factor = -0.30
+				army_speed_factor = -0.15
+				army_org_factor = -0.25
+				army_org_regain = -0.15
 			}
 		}
 		RED_doomed_army_idea = { # 난잡한 군대
@@ -1636,11 +1703,11 @@ ideas = {
 			modifier = {
 				experience_gain_factor = -0.4
 				land_doctrine_cost_factor = 1.25
-				army_attack_factor = -0.10
-				army_defence_factor = -0.10
-				army_speed_factor = -0.15
-				army_org_factor = -0.15
-				army_org_regain = -0.15
+				army_attack_factor = -0.50
+				army_defence_factor = -0.50
+				army_speed_factor = -0.25
+				army_org_factor = -0.35
+				army_org_regain = -0.25
 			}
 		}
 		RED_revolution_defender = { # 혁명수비대

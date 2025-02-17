@@ -60,7 +60,7 @@ focus_tree = {
 		# 남부 도로 재정비
 		id = RED_road_to_south
 		icon = GFX_goal_generic_construction
-		x = -10
+		x = -11
 		y = 0
 		cost = 4
 		ai_will_do = {
@@ -3005,7 +3005,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_land_research
 		}
-		x = 14
+		x = 15
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 2
@@ -3172,7 +3172,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_club_focus_5
 		}
-		x = -1
+		x = 5
 		y = 1
 		relative_position_id = RED_club_focus_5
 		cost = 2
@@ -3262,6 +3262,142 @@ focus_tree = {
 					slot = political_advisor
 				}
 			}
+		}
+	}
+	focus = {
+		# 지식해방전선 기관화
+		id = RED_club_focus_14
+		icon = GFX_focus_generic_university_2
+		prerequisite = {
+			focus = RED_club_focus_6
+			focus = RED_club_focus_7
+			focus = RED_club_focus_8
+		}
+		x = 3
+		y = 2
+		relative_position_id = RED_club_focus_5
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		# 문화혁명
+		id = RED_club_focus_15
+		icon = GFX_focus_prc_maoism
+		prerequisite = {
+			focus = RED_club_focus_14
+		}
+		x = 3
+		y = 3
+		relative_position_id = RED_club_focus_5
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#신학 탐구
+		id = RED_club_focus_9
+		icon = GFX_focus_assist_catholic
+		prerequisite = {
+			focus = RED_club_focus_5
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_club_focus_5
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#붉은겨울-트리니티 기독교 교류
+		id = RED_club_focus_10
+		icon = GFX_goal_focus_TRM_cooperation
+		prerequisite = {
+			focus = RED_club_focus_9
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_club_focus_9
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#개신교 활용
+		id = RED_club_focus_13
+		icon = GFX_focus_secularism
+		prerequisite = {
+			focus = RED_club_focus_9
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_club_focus_9
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#천문동아리 지원
+		id = RED_club_focus_11
+		icon = GFX_focus_generic_league_of_nations
+		prerequisite = {
+			focus = RED_club_focus_5
+		}
+		x = 0
+		y = 2
+		relative_position_id = RED_club_focus_5
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			has_completed_focus = RED_club_focus_4
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#우주 경쟁
+		id = RED_club_focus_12
+		icon = GFX_MIL_satellite_design
+		prerequisite = {
+			focus = RED_club_focus_11
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_club_focus_11
+		cost = 2
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -4059,11 +4195,17 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.1
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = {
 					RE1 = {
 						exists = yes
 						is_subject_of = ROOT
+					}
+				}
+				RE1 = {
+					transfer_navy = {
+						target = RED
 					}
 				}
 				annex_country = {
@@ -4078,6 +4220,11 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
+				RE2 = {
+					transfer_navy = {
+						target = RED
+					}
+				}
 				annex_country = {
 					target = RE2
 					transfer_troops = yes
@@ -4090,11 +4237,17 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
+				RE3 = {
+					transfer_navy = {
+						target = RED
+					}
+				}
 				annex_country = {
 					target = RE3
 					transfer_troops = yes
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_category_tooltip = RED_forced_relocation_policy
 			RED_population_solve = yes
 			if = {
@@ -5722,6 +5875,9 @@ focus_tree = {
 					limit = {
 						has_idea = RED_autonomous_state_idea
 					}
+					transfer_navy = {
+						target = RED
+					}
 					every_owned_state = {
 						limit = {
 							is_core_of = PREV
@@ -6079,7 +6235,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_faction_leader = yes
+			is_major = yes
 		}
 		prerequisite = {
 			focus = RED_workers_state
@@ -6112,7 +6268,7 @@ focus_tree = {
 		#대외 정책
 		id = RED_foreign_policy
 		icon = GFX_goal_anschluss
-		cost = 4
+		cost = 2
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
@@ -6127,45 +6283,7 @@ focus_tree = {
 			is_subject = no
 		}
 		completion_reward = {
-			#이벤트 발생
-		}
-	}
-	focus = {
-		#트리니티의 위협
-		id = RED_threat_from_trm
-		icon = GFX_goal_TRN_Blocking_attacks_from_the_outside
-		prerequisite = {
-			focus = RED_foreign_policy
-		}
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		cost = 4
-		x = 5
-		y = 1
-		relative_position_id = RED_foreign_policy
-		completion_reward = {
-		}
-	}
-	focus = {
-		#트리니티에 잠입
-		id = RED_infiltrate_trm
-		icon = GFX_focus_generic_infiltration
-		prerequisite = {
-			focus = RED_threat_from_trm
-		}
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		cost = 4
-		x = 0
-		y = 1
-		relative_position_id = RED_threat_from_trm
-		completion_reward = {
+			country_event = RED_generic.18
 		}
 	}
 	focus = {
@@ -6195,7 +6313,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			#이벤트 발생
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				add_opinion_modifier = {
+					target = RED
+					modifier = RED_rational_choice
+				}
+			}
 		}
 	}
 	focus = {
@@ -6227,7 +6355,17 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			#이벤트 발생
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				add_opinion_modifier = {
+					target = RED
+					modifier = RED_expansionism_opinion
+				}
+			}
 		}
 	}
 	focus = {
@@ -6245,12 +6383,16 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_faction_leader = yes
 		}
 		completion_reward = {
 			FIN = {
-				#이벤트 발생
+				country_event = {
+					id =  RED_event.11
+					days = 2
+				}
 			}
+			custom_effect_tooltip = RED_deal_with_fin_tt
+			unlock_decision_tooltip = RED_support_intermarium
 		}
 	}
 	focus = {
@@ -6265,15 +6407,36 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_faction_leader = yes
+			is_subject = no
+			is_in_faction = no
 		}
 		prerequisite = {
 			focus = RED_political_realism
 			focus = RED_expansionism
 		}
 		completion_reward = {
-			add_war_support = 0.15
+			add_war_support = 0.05
+			create_faction = FOURTH_INTERNATIONAL_FACTION
 			unlock_decision_category_tooltip = RED_seek_allies_dec_cat
+		}
+	}
+	focus = {
+		#트리니티에 잠입
+		id = RED_infiltrate_trm
+		icon = GFX_focus_generic_infiltration
+		prerequisite = {
+			focus = RED_seek_allies
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = RED_foreign_policy
+		completion_reward = {
 		}
 	}
 	focus = {
@@ -6288,11 +6451,33 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			GEK = {
+				has_war_with = TRM
+			}
+			has_completed_focus = RED_new_inteligence_agency
 		}
 		prerequisite = {
 			focus = RED_deal_with_fin
 		}
 		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GEK
+				value = 100
+			}
+			custom_effect_tooltip = RED_advance_intel_tt
+			add_to_variable = {
+				var = RED_intel_send_volunteer_size
+				value = 1
+				tooltip = send_volunteer_size_tt
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			GEK = {
+				add_timed_idea = {
+					idea = RED_supporting_idea
+					days = 180
+				}
+			}
 		}
 	}
 	focus = {
@@ -6307,11 +6492,50 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			OR = {
+				GEM = {
+					has_war_with = TRM
+				}
+				GEH = {
+					has_war_with = TRM
+				}
+			}
+			has_completed_focus = RED_new_inteligence_agency
 		}
 		prerequisite = {
 			focus = RED_deal_with_fin
 		}
 		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GEH
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GEM
+				value = 100
+			}
+			custom_effect_tooltip = RED_advance_intel_tt
+			add_to_variable = {
+				var = RED_intel_send_volunteer_size
+				value = 1
+				tooltip = send_volunteer_size_tt
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			every_other_country = {
+				limit = {
+					has_war_with = TRM
+					OR = {
+						tag = GEH
+						tag = GEM
+					}
+				}
+				add_timed_idea = {
+					idea = RED_supporting_idea
+					days = 180
+				}
+			}
 		}
 	}
 	focus = {
@@ -6379,12 +6603,40 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			has_country_flag = {
+				flag = RED_GEK_gave_goatland_flag
+				days > 180
+			}
+			custom_trigger_tooltip = {
+				tooltip = RED_GEK_gave_goatland_flag_tt
+				has_country_flag = {
+					flag = RED_GEK_gave_goatland_flagg
+					days > 180
+				}
+			}
 		}
 		completion_reward = {
+			add_state_claim = 910
+			add_state_claim = 909
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 139
+					on_win = RED_minori_event.21
+					on_lose = RED_minori_event.20
+					num_provinces = 2
+				}
+				defender = {
+					state = 909
+					on_win = RED_minori_event.9
+					on_lose = RED_minori_event.9
+					num_provinces = 2
+				}
+			}
 		}
 	}
 	focus = {
-		#사프미 해방
+		#제2차 방위위원회
 		id = RED_attack_fin
 		icon = GFX_focus_SWE_finnish_communists
 		cost = 4
@@ -6395,15 +6647,33 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			FIN = {
+				is_subject = no
+			}
 			is_subject = no
 			can_declare_war_on = FIN
 			NOT = {
 				has_non_aggression_pact_with = FIN
 			}
+			any_country = {
+				is_ally_with = RED
+				is_neighbor_of = FIN
+			}
 		}
 		bypass = {
-			NOT = {
-				can_declare_war_on = FIN
+			OR = {
+				NOT = {
+					any_country = {
+						is_ally_with = RED
+						is_neighbor_of = FIN
+					}
+				}
+				FIN = {
+					is_subject = yes
+				}
+				NOT = {
+					can_declare_war_on = FIN
+				}
 			}
 		}
 		prerequisite = {
@@ -6411,11 +6681,18 @@ focus_tree = {
 		}
 		will_lead_to_war_with = FIN
 		completion_reward = {
+			925 = {
+				transfer_state_to = RE4
+			}
+			set_autonomy = {
+				target = RE4
+				autonomy_state = autonomy_supervised_state
+			}
 			every_state = {
 				limit = {
 					is_core_of = FIN
 				}
-				add_claim_by = ROOT
+				add_claim_by = RE4
 			}
 			create_wargoal = {
 				target = FIN
@@ -6435,13 +6712,59 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			EST = {
+				has_war = no
+				is_in_faction = no
+			}
+			LAT = {
+				has_war = no
+				is_in_faction = no
+			}
 		}
 		bypass = {
+			EST = {
+				OR = {
+					has_war = yes
+					is_in_faction = yes
+				}
+			}
+			LAT = {
+				OR = {
+					has_war = yes
+					is_in_faction = yes
+				}
+			}
 		}
 		prerequisite = {
 			focus = RED_attack_fin
 		}
 		completion_reward = {
+			every_country = {
+				limit ={
+					OR = {
+						tag = EST
+						tag = LAT
+					}
+				}
+				country_event = {
+					id = RED_event.10
+					days = 2
+				}
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = if_they_accept_tt
+				every_country = {
+					limit ={
+						OR = {
+							tag = EST
+							tag = LAT
+						}
+					}
+					give_military_access = RED
+				}
+				give_guarantee = EST
+				give_guarantee = LAT
+			}
 		}
 	}
 	# 마리나 루트
@@ -8413,9 +8736,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			#디시전 추가
-			set_variable = {
-				RED_revolutionary_war_prepare_degree = 0
-			}
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_1
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_2
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_3
@@ -8425,7 +8745,6 @@ focus_tree = {
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_7
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_8
 			unlock_decision_tooltip = RED_prepare_revolutionary_war_9
-			custom_effect_tooltip = RED_minori_diplo_6_tt
 		}
 	}
 	focus = {
@@ -10168,6 +10487,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_prepare_of_arms = 1
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10351,6 +10673,9 @@ focus_tree = {
 					count = 3
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10392,6 +10717,9 @@ focus_tree = {
 					id = RED_power_balance
 					value = 0.1
 				}
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -10438,6 +10766,9 @@ focus_tree = {
 					value = -0.1
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10461,6 +10792,9 @@ focus_tree = {
 		completion_reward = {
 			add_dynamic_modifier = {
 				modifier = RED_war_engineering_modifier
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -10516,6 +10850,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_warunit_motorized_design_cost_factor = -0.5
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10556,6 +10893,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_war_carrier_traffic = 0.05
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10590,6 +10930,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_war_fighter_sortie_efficiency = 0.05
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10620,6 +10963,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_winterarmy_advance_tt
 			custom_effect_tooltip = RED_army_focus_1_tt
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10647,6 +10993,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_winterarmy_advance_tt
 			custom_effect_tooltip = RED_army_focus_2_tt
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10674,6 +11023,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = RED_winterarmy_advance_tt
 			custom_effect_tooltip = RED_army_focus_5_tt
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10714,6 +11066,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_winter_army_planning_speed_factor = -0.05
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10740,6 +11095,9 @@ focus_tree = {
 			custom_effect_tooltip = RED_army_focus_4_tt
 			add_to_variable = {
 				RED_winter_army_combat_width_factor = -0.1
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -10789,6 +11147,9 @@ focus_tree = {
 					count = 6
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10815,6 +11176,9 @@ focus_tree = {
 			custom_effect_tooltip = RED_army_focus_7_tt
 			add_to_variable = {
 				RED_winter_army_army_infantry_defence_factor = 0.05
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -10876,6 +11240,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_labor_party_dynamic_modifier_iresearch_speed_factor = 0.025
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10905,6 +11272,9 @@ focus_tree = {
 				uses = 2
 				category = support_tech
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -10928,6 +11298,9 @@ focus_tree = {
 				category = cat_anti_tank
 				bonus = 0.5
 				uses = 2
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -10955,6 +11328,9 @@ focus_tree = {
 				uses = 3
 				ahead_reduction = 2
 				category = artillery
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11023,9 +11399,12 @@ focus_tree = {
 					artillery4 = 1
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
-	focus = {
+	focus = { #전투교리 대규모 개편
 		id = RED_rehabilitated_military
 		icon = GFX_goal_generic_small_arms
 		prerequisite = {
@@ -11050,6 +11429,9 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_doomed_army_idea
 				add_idea = RED_doomed_army_idea_1
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11076,6 +11458,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = RED_doomed_army_idea_1
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11106,6 +11491,9 @@ focus_tree = {
 			add_to_variable = {
 				RED_winter_army_terrain_penalty_reduction = 0.1
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11134,6 +11522,9 @@ focus_tree = {
 			}
 			add_to_variable = {
 				RED_winter_army_army_morale_factor = 0.05
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11164,6 +11555,9 @@ focus_tree = {
 			}
 			add_to_variable = {
 				RED_winter_army_dig_in_speed_factor = 0.05
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11226,6 +11620,9 @@ focus_tree = {
 				equipment_variant = "Norge Class"
 				name = "RWFA Norge"
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 			#if = {
 			#	limit = { has_dlc = "Man the Guns" }
 			#	create_equipment_variant = {
@@ -11263,7 +11660,7 @@ focus_tree = {
 		#민간 수송선 확보
 		id = RED_nortraship
 		icon = GFX_focus_POL_develop_polish_shipbuilding
-		cost = 5
+		cost = 2
 		relative_position_id = RED_cruiser_question
 		x = -2
 		y = 1
@@ -11284,6 +11681,9 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = convoy
 				amount = 100
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11375,6 +11775,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11445,6 +11848,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11488,6 +11894,9 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = ca_tech
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11557,6 +11966,9 @@ focus_tree = {
 				progress = 0.5
 				amount = 1
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11618,6 +12030,9 @@ focus_tree = {
 				progress = 0.35
 				amount = 1
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11661,6 +12076,9 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = ss_tech
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11732,6 +12150,9 @@ focus_tree = {
 				requested_factories = 1
 				progress = 0.4
 				amount = 1
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -11810,6 +12231,9 @@ focus_tree = {
 				progress = 0.4
 				amount = 1
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -11831,6 +12255,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = RED_controller_of_baltic_idea
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	# 공군 개편 중점
@@ -11838,7 +12265,7 @@ focus_tree = {
 		#붉은겨울 수염공항
 		id = RED_redwinter_moustache_airport
 		icon = GFX_focus_generic_air_bases
-		cost = 5
+		cost = 4
 		relative_position_id = RED_rearming_focus_0
 		x = 10
 		y = 1
@@ -11862,13 +12289,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
 		#설계사를 위한 투자금
 		id = RED_invest_only_one_mio
 		icon = GFX_focus_NORDIC_com_airforce
-		cost = 5
+		cost = 4
 		x = -1
 		y = 1
 		relative_position_id = RED_redwinter_moustache_airport
@@ -11889,13 +12319,16 @@ focus_tree = {
 				add_mio_funds_gain_factor = 0.25
 				add_mio_research_bonus = 0.05
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
 		#공군 양성 프로젝트
 		id = RED_airforce_training_project
 		icon = GFX_focus_generic_copy_plane_designs
-		cost = 5
+		cost = 4
 		relative_position_id = RED_invest_only_one_mio
 		x = 2
 		y = 0
@@ -11916,13 +12349,16 @@ focus_tree = {
 				idea = RED_airforce_training_project_idea
 				days = 720
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
 		#공군기지 증축
 		id = RED_extend_air_bases
 		icon = GFX_goal_generic_air_doctrine
-		cost = 5
+		cost = 4
 		relative_position_id = RED_invest_only_one_mio
 		x = 1
 		y = 1
@@ -11957,13 +12393,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
 		#교리 확립
 		id = RED_air_doctrine_focus
 		icon = GFX_goal_generic_build_airforce
-		cost = 5
+		cost = 4
 		relative_position_id = RED_airforce_training_project
 		x = 1
 		y = 1
@@ -11986,6 +12425,9 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
+			}
+			add_to_variable = {
+				RED_prepare = 1
 			}
 		}
 	}
@@ -12048,6 +12490,9 @@ focus_tree = {
 					category = tactical_bomber
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -12109,6 +12554,9 @@ focus_tree = {
 					category = cat_heavy_fighter
 				}
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -12162,6 +12610,9 @@ focus_tree = {
 				amount = 30
 				variant_name = "Red Terror"
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -12200,6 +12651,9 @@ focus_tree = {
 				amount = 100
 				variant_name = "Puding Defender"
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	focus = {
@@ -12232,6 +12686,9 @@ focus_tree = {
 			else = {
 				add_ideas = RED_redwinter_airforce_idea_2
 			}
+			add_to_variable = {
+				RED_prepare = 1
+			}
 		}
 	}
 	#겨 울 대 전 ❄️
@@ -12253,6 +12710,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.15
+			custom_effect_tooltip = RED_minori_diplo_6_tt
 		}
 	}
 	focus = {

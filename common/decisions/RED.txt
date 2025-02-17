@@ -1,19 +1,76 @@
 RED_seek_allies_dec_cat = {
-	#동맹 모색
+	#외교
+	RED_support_intermarium = { #인테르마리움 지원
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_completed_focus = RED_deal_with_fin
+			POL = {
+				is_faction_leader = yes
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_ally_with = POL
+				NOT = {
+					is_ally_with = SOV
+				}
+			}
+		}
+		fire_only_once = no
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 69
+			has_equipment = {
+				infantry_equipment > 1499
+			}
+		}
+		custom_cost_text = FIN_crush_the_karelian_insurrection_decision_cost_ie_cp_pp
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -70
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1500
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					country_event = {
+						id = RED_generic.22
+						days = 1
+					}
+				}
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = RED_supporting_idea
+						days = 180
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = 0.01
+					}
+				}
+			}
+		}
+		cost = 20
+	}
 	RED_seek_allies_dec = {
 		#공산주의 동맹
 		icon = generic_civil_support
 		target_trigger = {
 			FROM = {
-				communism > 30
+				communism > 0.3
 			}
-		}
-		available = {
 			FROM = {
 				is_subject = no
 				is_in_faction = no
 				NOT = {
 					has_war_with = RED
+					is_ally_with = RED
 				}
 			}
 		}
@@ -35,13 +92,12 @@ RED_seek_allies_dec_cat = {
 			FROM = {
 				is_neighbor_of = SOV
 			}
-		}
-		available = {
 			FROM = {
 				is_subject = no
 				is_in_faction = no
 				NOT = {
 					has_war_with = RED
+					is_ally_with = RED
 				}
 			}
 		}
@@ -154,6 +210,7 @@ RED_invite_trotskists_dec_cat = {
 			any_owned_state = {
 				NOT = {
 					is_core_of = RED
+					is_claimed_by = RED
 				}
 			}
 		}
@@ -2780,9 +2837,6 @@ RED_minori_revolutionary_isolationism = {
 		on_map_mode = map_only
 		cost = 30
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			99 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -2851,9 +2905,6 @@ RED_minori_revolutionary_isolationism = {
 			}
 		}
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			37 = {
 				add_building_construction = {
 					type = bunker
@@ -2896,9 +2947,6 @@ RED_minori_revolutionary_isolationism = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			140 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2938,9 +2986,6 @@ RED_minori_revolutionary_isolationism = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			every_owned_state = {
 				limit = {
 					is_core_of = RED
@@ -2968,9 +3013,6 @@ RED_minori_revolutionary_isolationism = {
 			has_war = no
 		}
 		complete_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 		}
 		cost = 30
 		days_remove = -1
@@ -2990,9 +3032,6 @@ RED_minori_revolutionary_isolationism = {
 			has_war = no
 		}
 		complete_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 		}
 		cost = 30
 		days_remove = -1
@@ -3013,9 +3052,6 @@ RED_minori_revolutionary_isolationism = {
 		}
 		days_remove = 30
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 		}
 		cost = 30
 		complete_effect = {
@@ -3053,9 +3089,6 @@ RED_minori_revolutionary_isolationism = {
 		}
 		cost = 50
 		complete_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 		}
 	}
 	RED_prepare_revolutionary_war_9 = {
@@ -3074,9 +3107,6 @@ RED_minori_revolutionary_isolationism = {
 		}
 		cost = 50
 		complete_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 		}
 	}
 	RED_prepare_revolutionary_war_10 = {
@@ -3089,9 +3119,6 @@ RED_minori_revolutionary_isolationism = {
 		days_remove = -1
 		cost = 50
 		complete_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			set_country_flag = RED_Central_Defense_Planning_Committee_tt
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = RED_Central_Defense_Planning_Committee_ideas
@@ -3122,9 +3149,6 @@ RED_minori_revolutionary_isolationism = {
 		on_map_mode = map_only
 		cost = 30
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			141 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -3176,9 +3200,6 @@ RED_minori_revolutionary_isolationism = {
 		on_map_mode = map_only
 		cost = 60
 		remove_effect = {
-			add_to_variable = {
-				RED_revolutionary_war_prepare_degree = 1
-			}
 			110 = {
 				add_building_construction = {
 					type = coastal_bunker
