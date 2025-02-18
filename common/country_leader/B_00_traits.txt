@@ -1045,7 +1045,6 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		conscription = 0.02
-		power_balance_daily = -0.001
 	}
 	ABY_trait_neko_god = { #"고양이신"
 		random = no
@@ -1053,7 +1052,6 @@ leader_traits = {
 		communism_drift = 0.1
 		stability_factor = -0.1
 		conscription_factor = 0.15
-		power_balance_daily = -0.001
 	}
 	ABY_trait_neko_god_2 = { #"고양이신"
 		random = no
@@ -1062,7 +1060,6 @@ leader_traits = {
 		communism_drift = 0.25
 		stability_factor = -0.25
 		conscription_factor = 0.25
-		power_balance_daily = -0.002
 	}
 	ABY_trait_black_sun = { #"검은 태양의 총독"
 		random = no
@@ -1228,7 +1225,6 @@ leader_traits = {
 		war_support_factor = 0.1
 		compliance_gain = 0.1
 		stability_weekly = 0.005
-		power_balance_daily = -0.002
 	}
 	ABY_trait_school_leader_4 = { #"학생회장"
 		random = no
@@ -1236,9 +1232,9 @@ leader_traits = {
 		communism_drift = 0.25
 		stability_factor = 0.1
 		war_support_factor = 0.1
+		compliance_gain = 0.1
 		JUSTIFY_WAR_GOAL_TIME = -0.75
 		conscription = 0.02
-		power_balance_daily = -0.002
 	}
 	ABY_idea_5_days = {
 		random = no
@@ -1349,6 +1345,11 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	GEH_ako_trait_0 = { # 선임행정관
+		random = no
+		political_power_factor = -0.25
+		stability_factor = -0.25
 	}
 	GEH_ako_trait_1 = { # 선도부 개혁가
 		random = no
@@ -1860,13 +1861,6 @@ leader_traits = {
 		random = no
 		consumer_goods_factor = -0.1
 		research_speed_factor = 0.01
-	}
-	b_tjrlwkd = { #체리노 서기장 동지
-		random = no
-        stability_factor = -0.15
-        war_support_factor = 0.10
-        political_power_factor = 0.15
-		communism_drift = 0.01
 	}
 	b_gurauddmlrnlwo = { #혁명의 귀재
 		random = no
@@ -3248,6 +3242,36 @@ leader_traits = {
 		justify_war_goal_time = -0.75
 	}
 	#붉은겨울 연방학원
+	b_tjrlwkd = { #체리노 서기장 동지
+		random = no
+        stability_factor = -0.1
+        war_support_factor = 0.10
+        political_power_factor = 0.1
+		communism_drift = 0.01
+	}
+	RED_bright_polar_star = { #붉게 빛나는 혁명의 북극성
+		random = no
+		political_power_factor = 0.1
+		drift_defence_factor = 0.5
+		communism_drift = 0.2
+		war_support_factor = 0.15
+		custom_modifier_tooltip = ITA_political_reformer_tt
+		hidden_modifier = {
+			political_advisor_cost_factor = -0.25
+			air_advisor_cost_factor = -0.25
+			army_advisor_cost_factor = -0.25
+			navy_advisor_cost_factor = -0.25
+		}
+		custom_modifier_tooltip = il_duce_laws_cost_tt
+		hidden_modifier = {
+			mobilization_laws_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			economy_cost_factor = -0.15
+		}
+	}
+	RED_bright_polar_star_desc = { #위에거 설명
+		random = no
+	}
 	office_propagandist = { #사무국 선동가(토모에)
 		random = no
 		sprite = 13
@@ -3262,11 +3286,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		communism_drift = 0.10
-		political_power_factor = 0.15
-		political_advisor_cost_factor = -0.7
-		ai_will_do = {
-			factor = 1
-		}
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.6
 	}
 	RED_socialist_cabinet = { #사회주의 집단지도체제
 		random = no
@@ -3292,12 +3313,14 @@ leader_traits = {
 	office_commander = { #사무국 보안위원장
 		random = no
 		sprite = 13
+		resistance_growth = -0.15
+	}
+	office_commander_1 = { #혁명수비대 사령관
+		random = no
+		sprite = 13
 		political_power_factor = 0.05
-		stability_factor = -0.10
-		war_support_factor = 0.30
-		drift_defence_factor = 0.05
-		non_core_manpower = 0.05
-		resistance_damage_to_garrison = -0.15
+		drift_defence_factor = 0.1
+		resistance_growth = -0.15
 	}
 
 	hate_soviet = {
