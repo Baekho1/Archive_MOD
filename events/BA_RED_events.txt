@@ -1014,6 +1014,86 @@ country_event = { #붉은겨울의 지원
 		}
 	}
 }
+country_event = { #저임금 노동자
+	id = RED_generic.23
+	title = RED_generic.23.t
+	desc = RED_generic.23.d
+	is_triggered_only = yes
+	option = { #cool
+		name = RED_generic.23.a
+		add_timed_idea = {
+			idea = KAI_RED_trade_low_fee_idea
+			years = 1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		RED = {
+			add_timed_idea = {
+				idea = RED_KAI_trade_low_fee_idea
+				years = 1
+			}
+			country_event = {
+				id = RED_event.8
+				days = 1
+			}
+			set_country_flag = RED_low_fee_workers_flag
+		}
+	}
+	option = { #cool
+		name = RED_generic.23.b
+		ai_chance = {
+			base = 0
+		}
+		RED = {
+			country_event = {
+				id = RED_event.9
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #자원-기술 교환
+	id = RED_generic.24
+	title = RED_generic.23.t
+	desc = RED_generic.24.d
+	is_triggered_only = yes
+	option = { #cool
+		name = RED_generic.23.a
+		add_timed_idea = {
+			idea = MIL_RED_exchange
+			years = 1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		RED = {
+			add_timed_idea = {
+				idea = RED_MIL_exchange
+				years = 1
+			}
+			country_event = {
+				id = RED_event.8
+				days = 1
+			}
+			set_country_flag = RED_MIL_exchange_flag
+		}
+	}
+	option = { #cool
+		name = RED_generic.23.b
+		ai_chance = {
+			base = 0
+		}
+		RED = {
+			country_event = {
+				id = RED_event.9
+				days = 1
+			}
+		}
+	}
+}
 
 country_event = { #피로한 마리나 - 1
 	id = RED_marina_event.1
@@ -4101,6 +4181,26 @@ country_event = { #동맹 수락
 
 	option = {
 		name = RED_event.8.a
+		if = {
+			limit = {
+				has_country_flag = RED_low_fee_workers_flag
+			}
+			add_timed_idea = {
+				idea = RED_KAI_trade_low_fee_idea
+				years = 1
+			}
+			clr_country_flag = RED_low_fee_workers_flag
+		}
+		else_if = {
+			limit = {
+				has_country_flag = RED_MIL_exchange_flag
+			}
+			add_timed_idea = {
+				idea = RED_MIL_exchange
+				years = 1
+			}
+			clr_country_flag = RED_MIL_exchange_flag
+		}
 	}
 }
 country_event = { #동맹 거절

@@ -1,5 +1,69 @@
 RED_seek_allies_dec_cat = {
 	#외교
+	RED_trade_with_MIL = { #밀레니엄에 자원과 기술 교환
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			RED = {
+				is_subject = no
+				exists = yes
+				NOT = {
+					has_war_with = RED
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = RED_trade_with_KAI
+		}
+		cost = 30
+		complete_effect = {
+			RED = {
+				country_event = {
+					id = RED_generic.24
+					days = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = RED_MIL_exchange
+					years = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	RED_trade_with_KAI_low_fee = { #카이저에 저임금 노동자 파견
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			KAI = {
+				is_subject = no
+				exists = yes
+				NOT = {
+					has_war_with = RED
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = RED_trade_with_KAI
+		}
+		cost = 30
+		complete_effect = {
+			KAI = {
+				country_event = {
+					id = RED_generic.23
+					days = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = RED_KAI_trade_low_fee_idea
+					years = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
 	RED_support_intermarium = { #인테르마리움 지원
 		icon = GFX_decision_generic_industry
 		visible = {
@@ -74,6 +138,9 @@ RED_seek_allies_dec_cat = {
 				}
 			}
 		}
+		visible = {
+			always = no
+		}
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
@@ -86,6 +153,9 @@ RED_seek_allies_dec_cat = {
 		}
 	}
 	RED_anti_sov_diplo_dec = {
+		visible = {
+			always = no
+		}
 		#반소비에트 동맹
 		icon = generic_civil_support
 		target_trigger = {
@@ -196,6 +266,39 @@ RED_invite_trotskists_dec_cat = {
 				}
 				add_dynamic_modifier = {
 					modifier = RED_collective_farming_modifier
+				}
+			}
+		}
+	}
+	RED_SMI_autonomy = { #사미족 자치주 설립
+		icon = GFX_decision_generic_form_nation
+		visible = {
+			has_completed_focus = RED_union_nation
+			any_owned_state = {
+				is_controlled_by = RED
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = RED_SMI_autonomy_state_modifier
+					}
+				}
+				is_core_of = SMI
+			}
+		}
+		cost = 30
+		days_remove = 60
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = RED
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RED_SMI_autonomy_state_modifier
+						}
+					}
+					is_core_of = SMI
+				}
+				add_dynamic_modifier = {
+					modifier = RED_SMI_autonomy_state_modifier
 				}
 			}
 		}

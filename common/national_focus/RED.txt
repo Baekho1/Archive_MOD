@@ -3172,7 +3172,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_club_focus_5
 		}
-		x = 5
+		x = -1
 		y = 1
 		relative_position_id = RED_club_focus_5
 		cost = 2
@@ -3262,142 +3262,6 @@ focus_tree = {
 					slot = political_advisor
 				}
 			}
-		}
-	}
-	focus = {
-		# 지식해방전선 기관화
-		id = RED_club_focus_14
-		icon = GFX_focus_generic_university_2
-		prerequisite = {
-			focus = RED_club_focus_6
-			focus = RED_club_focus_7
-			focus = RED_club_focus_8
-		}
-		x = 3
-		y = 2
-		relative_position_id = RED_club_focus_5
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		# 문화혁명
-		id = RED_club_focus_15
-		icon = GFX_focus_prc_maoism
-		prerequisite = {
-			focus = RED_club_focus_14
-		}
-		x = 3
-		y = 3
-		relative_position_id = RED_club_focus_5
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		#신학 탐구
-		id = RED_club_focus_9
-		icon = GFX_focus_assist_catholic
-		prerequisite = {
-			focus = RED_club_focus_5
-		}
-		x = -1
-		y = 1
-		relative_position_id = RED_club_focus_5
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		#붉은겨울-트리니티 기독교 교류
-		id = RED_club_focus_10
-		icon = GFX_goal_focus_TRM_cooperation
-		prerequisite = {
-			focus = RED_club_focus_9
-		}
-		x = -1
-		y = 1
-		relative_position_id = RED_club_focus_9
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		#개신교 활용
-		id = RED_club_focus_13
-		icon = GFX_focus_secularism
-		prerequisite = {
-			focus = RED_club_focus_9
-		}
-		x = 0
-		y = 2
-		relative_position_id = RED_club_focus_9
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		#천문동아리 지원
-		id = RED_club_focus_11
-		icon = GFX_focus_generic_league_of_nations
-		prerequisite = {
-			focus = RED_club_focus_5
-		}
-		x = 0
-		y = 2
-		relative_position_id = RED_club_focus_5
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			has_completed_focus = RED_club_focus_4
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		#우주 경쟁
-		id = RED_club_focus_12
-		icon = GFX_MIL_satellite_design
-		prerequisite = {
-			focus = RED_club_focus_11
-		}
-		x = 1
-		y = 1
-		relative_position_id = RED_club_focus_11
-		cost = 2
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
 		}
 	}
 	focus = {
@@ -5824,6 +5688,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = non_core_manpower_tt
 			}
+			unlock_decision_tooltip = RED_SMI_autonomy
 			custom_effect_tooltip = RED_union_nation_tt
 		}
 	}
@@ -6550,11 +6415,17 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			NOT = {
+				has_idea = BA_isolation
+				has_idea = closed_economy
+			}
 		}
 		prerequisite = {
 			focus = RED_political_realism
 		}
 		completion_reward = {
+			unlock_decision_tooltip = RED_trade_with_KAI_low_fee
+			unlock_decision_tooltip = RED_trade_with_MIL
 		}
 	}
 	focus = {

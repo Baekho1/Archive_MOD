@@ -7,6 +7,35 @@ ideas = {
 		}
 	}
     country = {
+		RED_MIL_exchange = { #자원과 기술 교환
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		MIL_RED_exchange = { #자원과 기술 교환
+			name = RED_MIL_exchange
+			picture = can_wartime_prices_and_trade_board
+			targeted_modifier = {
+				tag = RED
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+		KAI_RED_trade_low_fee_idea = { #붉은겨울로부터의 저임금 노동자
+			picture = SPA_duty_to_work
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		RED_KAI_trade_low_fee_idea = { #저임금 노동자 수출
+			picture = SPA_duty_to_work
+			modifier = {
+				recruitable_population_factor = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = -0.1
+			}
+		}
 		RED_supporting_idea = { #붉은겨울의 지원
 			picture = saf_soviet_advisers
 			modifier = {

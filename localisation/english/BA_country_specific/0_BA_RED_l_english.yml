@@ -148,13 +148,6 @@
  RED_club_focus_7_desc: "우리는 자본주의와 봉건질서를 '사실주의 문학'이라는 눈을 통해 비판적이고 현실적으로 바라볼 줄 알아야 합니다. 모든 변혁은 인식과 평가로부터 비롯되기에 말입니다."
  RED_club_focus_8: "상업문학"
  RED_club_focus_8_desc: "펜은 칼보다 강합니다. 거기다 돈까지 줍니다. 우리는 학원의 뛰어난 작문 역량을 상업에로 투자할 것입니다."
- RED_club_focus_9: "신학 탐구"
- RED_club_focus_10: "붉은겨울-트리니티 기독교 교류"
- RED_club_focus_11: "천문 동아리 지원"
- RED_club_focus_12: "우주 경쟁"
- RED_club_focus_13: "개신교 활용"
- RED_club_focus_14: "지식해방전선 기관화"
- RED_club_focus_15: "문화혁명"
  RED_great_punch: "강력한 한방"
  RED_great_punch_desc: "우리에겐 만약을 대비한 강력한 신무기가 절실히 필요합니다."
  RED_rocket_romance: "라케트니 라만티크"
@@ -991,7 +984,11 @@
  RED_generic.22.t: "[RED.getname]의 지원"
  RED_generic.22.d: "[RED.getadjective](으)로부터 우리에게로의 지원이 도착했습니다."
  RED_generic.22.a: "고맙군."
-
+ RED_generic.23.t: "[RED.getname]의 제안"
+ RED_generic.23.d: "붉은겨울로부터 저임금 노동자 수입에 대한 제안이 왔습니다."
+ RED_generic.23.a: "좋은 거래군."
+ RED_generic.23.b: "우리가 손해인 것 같다."
+ RED_generic.23.d: "붉은겨울로부터 자원과 기술 교환에 대한 제안이 왔습니다."
 
 
  RED_reading.1.t: "'공산당 선언'"
@@ -1542,6 +1539,9 @@
  RED_the_fifth_columnists_idea: "조직된 제5열"
 
  RED_supporting_idea: "[RED.getadjective]의 지원"
+ RED_KAI_trade_low_fee_idea: "저임금 노동자 파견"
+ KAI_RED_trade_low_fee_idea: "[RED.getadjective]의 저임금 노동자들"
+ RED_MIL_exchange: "자원과 기술 교환"
 
  RED_fake_money: "위조지폐로 인한 경제 파탄"
  RED_fake_money_tt: "\n조건 충족시 제거 : §Y전쟁 중§!이 아님 또는 §Y총동원령§! 보유"
@@ -1581,10 +1581,12 @@
  
  #주 모디파이어
  RED_collective_farming_modifier: "협동 농장"
+ RED_SMI_autonomy_state_modifier: "사미족 자치주"
 
 #디시전
  RED_the_fifth_columnists: "[FROM.getname]에 제5열 조직"
  RED_wc_collective_farming: "전시 공산주의: 협동농장으로 재편"
+ RED_SMI_autonomy: "사미족 자치주 설립"
  RED_make_LD: "재건평의회 설립"
  RED_attack_kivotos: "[FROM.getname]에로 혁명 전파"
  RED_in_exile_committee_flag: "망명위원회에서 활동 중"
@@ -1608,6 +1610,8 @@
  RED_seek_allies_dec: "공산주의 동맹 모색"
  RED_anti_sov_diplo_dec: "반소비에트 동맹 모색"
  RED_support_intermarium: "[FROM.GetAdjective] 지원" 
+ RED_trade_with_KAI_low_fee: "§Y@KAI[KAI.getadjective]§!에 저임금 노동자 파견"
+ RED_trade_with_MIL: "§Y@MIL[MIL.getadjective]§!(으)로부터의 자원과 기술 교환"
 
  RED_forced_relocation_policy: "강제 이주 정책"
  RED_forced_relocation_policy_decision: "[FROM.GetName] 주 강제 이주"
