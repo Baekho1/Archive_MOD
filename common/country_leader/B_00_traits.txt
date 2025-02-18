@@ -3905,3 +3905,4 @@ leader_traits = {
 		custom_modifier_tooltip = "불쌍함"
 	}
 }
+ 
