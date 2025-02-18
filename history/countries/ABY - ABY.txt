@@ -41,6 +41,10 @@ set_variable = {ABY_var_modifier_army_sub_unit_category_halo_attack_factor = 0 }
 set_variable = {ABY_var_modifier_army_sub_unit_category_halo_defence_factor = 0 }
 set_variable = {ABY_var_modifier_army_sub_unit_militia_attack_factor = 0}
 set_variable = {ABY_var_modifier_army_sub_unit_militia_defence_factor = 0}
+set_variable = {ABY_var_mountaineers_special_forces_contribution_factor = 0}
+set_variable = {ABY_var_paratroopers_special_forces_contribution_factor = 0}
+set_variable = {ABY_var_marines_special_forces_contribution_factor = 0}
+set_variable = {ABY_var_special_forces_cap = 0}
 
 #navy
 set_variable = {ABY_var_NAVY_ORG_FACTOR = 0 }

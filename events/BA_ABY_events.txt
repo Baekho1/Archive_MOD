@@ -10610,6 +10610,19 @@ country_event = {
 	option = {
 		name = ABY_new_event.219.a
 		ai_chance = { factor = 100 }
+		ABYDO_Hoshino = {
+			remove_trait = { trait = unconscious }
+		}
+		ABYDO_nonomi = {
+			remove_trait = { trait = unconscious }
+		}
+		ABYDO_serika = {
+			remove_trait = { trait = unconscious }
+		}
+		ABYDO_ayane = {
+			remove_trait = { trait = unconscious }
+		}
+		set_country_flag = ABY_flag_recovered_ABYDOS
 	}
 }
 

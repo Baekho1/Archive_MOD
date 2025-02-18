@@ -691,6 +691,14 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/HYA/HYA_IdeaG_bakyadang.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_ABY_rothschild_concern"
+		textureFile = "gfx/interface/ideas/ABY/ABY_rothschild_concern.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ABY_nephthys_concern"
+		textureFile = "gfx/interface/ideas/ABY/ABY_nephthys_concern.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_HYA_idea_flower_bird_wind_moon_club"
 		textureFile = "gfx/interface/ideas/HYA/HYA_idea_flower_bird_wind_moon_club.tga"
 	}

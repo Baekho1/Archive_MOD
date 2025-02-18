@@ -398,7 +398,7 @@ ABY_power_balance_3 = {
 	}
 }
 ABY_power_balance_4 = {
-	initial_value = 0
+	initial_value = -0.25
 	left_side = ABY_frank_side
 	right_side = ABY_hoshino_side
 	decision_category = ABY_balance_of_power_category_4
@@ -425,9 +425,11 @@ ABY_power_balance_4 = {
 			min = 0.35
 			max = 0.6
 			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				political_power_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+				political_power_factor = 0.05
+				communism_drift = 0.05
 			}
 			on_activate = {
 			}
@@ -439,9 +441,11 @@ ABY_power_balance_4 = {
 			min = 0.6
 			max = 0.9
 			modifier = {
-				stability_factor = 0.2
-				war_support_factor = 0.2
-				political_power_factor = 0.2
+				stability_factor = -0.15
+				war_support_factor = 0.1
+				conscription_factor = 0.1
+				political_power_factor = 0.15
+				communism_drift = 0.15
 			}
 			on_activate = {
 			}
@@ -453,12 +457,13 @@ ABY_power_balance_4 = {
 			min = 0.9
 			max = 1
 			modifier = {
-				stability_factor = 0.3
-				war_support_factor = 0.3
-				political_power_factor = 0.3
+				stability_factor = -0.25
+				war_support_factor = 0.15
+				conscription_factor = 0.15
+				political_power_factor = 0.25
+				communism_drift = 0.25
 			}
 			on_activate = {
-				promote_character = ABYDO_Hoshino
 			}
 			on_deactivate = {
 			}
@@ -474,9 +479,11 @@ ABY_power_balance_4 = {
 			min = -0.6
 			max = -0.35
 			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.05
+				political_power_factor = = -0.05
+				democratic_drift = 0.05
 			}
 			on_activate = {
 			}
@@ -488,9 +495,11 @@ ABY_power_balance_4 = {
 			min = -0.9
 			max = -0.6
 			modifier = {
-				stability_factor = 0.2
-				war_support_factor = 0.2
-				political_power_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = -0.15
+				conscription_factor = -0.1
+				political_power_factor = = -0.15
+				democratic_drift = 0.15
 			}
 			on_activate = {
 			}
@@ -502,12 +511,13 @@ ABY_power_balance_4 = {
 			min = -1
 			max = -0.9
 			modifier = {
-				stability_factor = 0.3
-				war_support_factor = 0.3
-				political_power_factor = 0.3
+				stability_factor = 0.15
+				war_support_factor = -0.25
+				conscription_factor = -0.15
+				political_power_factor = = -0.25
+				democratic_drift = 0.25
 			}
 			on_activate = {
-				promote_character = ABYDOS_KHF
 			}
 			on_deactivate = {
 			}

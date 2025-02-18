@@ -1943,6 +1943,10 @@ ABY_army_dynamic_modifier_manual = {
 	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
 	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
 	modifier_army_sub_unit_category_halo_defence_factor = ABY_var_modifier_army_sub_unit_category_halo_defence_factor
+	mountaineers_special_forces_contribution_factor = ABY_var_mountaineers_special_forces_contribution_factor
+	paratroopers_special_forces_contribution_factor = ABY_var_paratroopers_special_forces_contribution_factor
+	marines_special_forces_contribution_factor = ABY_var_marines_special_forces_contribution_factor
+	special_forces_cap = ABY_var_special_forces_cap
 
 	#navy
 	navy_org_factor = ABY_var_NAVY_ORG_FACTOR
@@ -1973,6 +1977,8 @@ ABY_two_dynamic_modifier = {
 		always = yes
 	}
 	icon = ETH_conservative_high_command
+
+	non_core_manpower = 0.2
 
 	political_power_factor = ABY_var_political_power_factor
 	stability_factor = ABY_var_stability_factor
