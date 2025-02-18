@@ -13,6 +13,9 @@ defined_text = {
 	text = { trigger = { original_tag = KSP }  localization_key = "GFX_KSP_intro" }
 	text = { trigger = { original_tag = SHA }  localization_key = "GFX_SHA_intro" }
 	text = { trigger = { original_tag = SRT }  localization_key = "GFX_SRT_intro" }
+	text = { trigger = { original_tag = GEI }  localization_key = "GFX_GEI_intro" }
+	text = { trigger = { original_tag = COU }  localization_key = "GFX_COU_intro" }
+	text = { trigger = { original_tag = KAI }  localization_key = "GFX_KAI_intro" }
 
 	### Non - Kivotos ###
 	text = { trigger = { original_tag = FRA }  localization_key = "GFX_FRA_intro" }

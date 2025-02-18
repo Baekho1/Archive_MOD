@@ -322,6 +322,11 @@ ideas = {
 			TRM_mika_trinity = { #수권법
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
+			cancel = {
+				TRM = {
+					NOT = { has_government = fascism }
+				}
+			}
 			modifier = {
 				political_power_factor = 0.05
 				fascism_drift = 0.1
@@ -341,6 +346,11 @@ ideas = {
             picture = TRM_mika_trinity
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
+			cancel = {
+				TRM = {
+					NOT = { has_government = fascism }
+				}
+			}
 			modifier = {
 				political_power_factor = 0.05
 				fascism_drift = 0.1

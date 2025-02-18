@@ -92,6 +92,31 @@ spriteTypes = {
 		texturefile = "gfx/introscreen/SHA_intro.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	spriteType = {
+		name = "GFX_GEI_intro"
+		texturefile = "gfx/introscreen/GEI_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_COU_intro"
+		texturefile = "gfx/introscreen/COU_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_KAI_intro"
+		texturefile = "gfx/introscreen/KAI_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_HYA_intro"
+		texturefile = "gfx/introscreen/HYA_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_SHA_reverse_intro"
+		texturefile = "gfx/introscreen/SHA_reverse_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 
 	
 	

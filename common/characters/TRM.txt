@@ -202,7 +202,7 @@ characters={
 			ideology=tea_party_fascism_ideology
 			traits={ TRM_pater_faction }
 			expire="1965.1.1"
-			desc = TRINITY_MIKA_DESC
+			desc = TRN_alzk_leader_desc
 		}
 	}
 	TRN_tea_party ={ #티파티

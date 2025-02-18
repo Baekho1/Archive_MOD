@@ -228,6 +228,7 @@
  custom_diff_strong_BLM:0 "블랙마켓 강화"
  custom_diff_strong_GEI:0 "게마트리아 강화"
  custom_diff_strong_KAI:0 "카이저 코퍼레이션 강화"
+ Debug_BA_gathering_storm_desc:0 "제가 보인다면 버그 리포트를 작성해주세요."
 
  BA_game_rule: "블루 아카이브 모드 커스텀 게임 규칙"
  THE_COLOUR_RILE_NAME:0 "@GEI 색채 허용" 
