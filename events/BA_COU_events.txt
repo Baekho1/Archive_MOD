@@ -194,6 +194,7 @@ country_event = { #총학생회장 실종
 		country_event = { id = COU_event.2 hours = 8 }
 		news_event = { hours = 48 id = BA_news.76 }
 		set_country_flag = MISSINGGSCP
+		mark_focus_tree_layout_dirty = yes
 	}
 	
 }
@@ -481,7 +482,7 @@ country_event = {
 		set_country_flag = COU_deagree_out_rin2
 		set_country_flag = COU_deagree_out_rin3
 		add_to_variable = { var = COU_rin_percen value = 10 }
-		activate_mission = 
+		#activate_mission = 
 		custom_effect_tooltip = COU_tooltip_kaya_coueventeight
 	}
 }

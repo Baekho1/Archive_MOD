@@ -20,6 +20,48 @@ defined_text = {
 }
 
 defined_text = {
+    name = COU_establishment_of_emergency_measures_committee_tt
+    text = {
+        trigger = {
+            tag = COU
+			NOT = { has_country_flag = MISSINGGSCP }
+        }
+        localization_key = COU_establishment_of_emergency_measures_committee_1
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = MISSINGGSCP
+        }
+		localization_key = COU_establishment_of_emergency_measures_committee_2
+	}
+	text = {
+		localization_key = COU_establishment_of_emergency_measures_committee_2
+	}
+}
+
+defined_text = {
+    name = COU_establishment_of_emergency_measures_committee_desc_tt
+    text = {
+        trigger = {
+            tag = COU
+			NOT = { has_country_flag = MISSINGGSCP }
+        }
+        localization_key = COU_establishment_of_emergency_measures_committee_1_desc
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = MISSINGGSCP
+        }
+		localization_key = COU_establishment_of_emergency_measures_committee_2_desc
+	}
+	text = {
+		localization_key = COU_establishment_of_emergency_measures_committee_2_desc
+	}
+}
+
+defined_text = {
     name = COU_deoragree_out_rintwo
     text = {
         trigger = {
