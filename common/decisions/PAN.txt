@@ -50,6 +50,7 @@ PAN_BOP_category = {
         }
         days_remove = 30
         cost = 80
+        fire_only_once = yes
         complete_effect = {
             add_power_balance_value = {
                 id = PAN_power_balance
@@ -111,6 +112,7 @@ PAN_BOP_category = {
         }
         days_remove = 30
         cost = 80
+        fire_only_once = yes
         complete_effect = {
             add_power_balance_value = {
                 id = PAN_power_balance
@@ -128,10 +130,12 @@ PAN_BOP_category = {
         activation = {
             has_completed_focus = PAN_with_Popular_Front
         }
+        available = {
+            always = no
+        }
         days_mission_timeout = 175
         is_good = no
-        selectable_mission = no
-        complete_effect = {
+        timeout_effect = {
             set_country_flag = PAN_election_complete
         }
     }
