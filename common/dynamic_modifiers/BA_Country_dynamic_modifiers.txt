@@ -911,7 +911,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 	unit_artillery_brigade_design_cost_factor = RED_labor_party_dynamic_modifier_unit_artillery_brigade_design_cost_factor
 	political_power_factor = RED_labor_party_dynamic_modifier_political_power_factor
 	research_speed_factor = RED_labor_party_dynamic_modifier_iresearch_speed_factor
-	design_cost
+	#design_cost
 }
 RED_zenkyoutou_cat_dynamic_modifier = { #전공투
 	enable = {
