@@ -213,5 +213,9 @@ spriteTypes = {
 		name = "GFX_ideology_monarchist_socialism"
 		texturefile = "gfx/interface/ideologies/monarchist_socialism.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_National_conservatism"
+		textureFile = "gfx/interface/ideologies/National_conservatism.tga"
+	}
 
 }

@@ -75,6 +75,7 @@ ideologies = {
 				can_be_randomly_selected = no
 				color = { 34 52 155 }
 			}
+			
 		#BA_MOD_FIX/
 		}
 

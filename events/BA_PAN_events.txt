@@ -37,7 +37,7 @@ country_event = { #인민전선의 승리
 	}
 }
 
-country_event = {
+country_event = { #국민연합의 승리
 	id = PAN_event.2
 	title = PAN_event.2.t
 	desc = PAN_event.2.d
@@ -59,6 +59,7 @@ country_event = {
 			long_name = Pan_National_Coalition_long
 			name = Pan_National_Coalition
 		}
+		retire_country_leader = yes
 		add_country_leader_role = {
 			character = PAN_Juan_Arosemena
 			promote_leader = yes
@@ -66,6 +67,9 @@ country_event = {
 				ideology = National_conservatism
 				expire="1965.1.1.1"
 			}
+		}
+		remove_power_balance = {
+			id = PAN_power_balance
 		}
 	}
 }

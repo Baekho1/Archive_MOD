@@ -93,6 +93,7 @@
  crime_syndicate: "범죄 신디케이트"
  crime_syndicate_desc: "범죄자들의 연합체인 범죄 신디케이트는 이해관계의 일치로 동작하는 체제로써, 거대화된 지금으로서는 하나의 국가와도 같습니다. 이들은 자신들만의 질서를 지키려고 할 것이며 변화를 별로 좋아하지 않습니다."
 
+ Social_Liberalism: "사회자유주의" 
  National_conservatism: "국민보수주의"
  National_conservatism_desc: "국민보수주의는 특정되는 동질성, 역사적 유대성을 기반으로 한 국가적 집단, 혹은 혈연적 민족 공동체를 중시하는 사상인 내셔널리즘과, 보수주의를 결합한 보수주의의 한 갈래입니다. 국민보수주의는 자신이 속한 공동체의의 이권 신장, 외세의 침탈적 움직임에서 공동체를 보호하고, 더 나아가 공동체적 자주성의 진흥을 위한 사회적 운동을 촉구합니다."
 
@@ -424,6 +425,8 @@
  PAN_Liberal_party:0 "자유당"
  PAN_AMERICAN_MILITARY:0 "파나마 운하 군구"
  PAN_america_a:0 "파나마 육군 사령부"
+ Pan_National_Coalition_long:0 "국민혁명당"
+ Pan_National_Coalition:0 "국민혁명당-연정"
 
  RED_RedWinterCommunistParty:0 "연방학원 공산당"
  RED_communism_party:0 "붉은겨울 사무국"
