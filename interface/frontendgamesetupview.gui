@@ -685,7 +685,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_4"
-				quadTextureSprite = "GFX_HYA_intro"
+				quadTextureSprite = "GFX_GEH_other_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -698,7 +698,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_5"
-				quadTextureSprite = "GFX_GEI_intro"
+				quadTextureSprite = "GFX_HYA_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -711,7 +711,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_6"
-				quadTextureSprite = "GFX_KAI_intro"
+				quadTextureSprite = "GFX_SHA_other_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -745,7 +745,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "countries"
-			position = { x = 10 y = 140 }
+			position = { x = 12 y = 325 }
 			size = { width = -15 height = 120}
 
 			gridboxType = {
@@ -754,14 +754,14 @@ guiTypes = {
 				size = { width = 100% height = 100% }
 				slotsize = { width = 172 height = 95 }
 				add_horizontal = no
-				max_slots_vertical = 2
+				max_slots_vertical = 1
 				format = "UPPER_LEFT"
 			}
 		}
 
 		containerWindowType = {
 			name = "countries_medium"
-			position = { x = 15 y = 330 }
+			position = { x = 15 y = 50 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
@@ -777,7 +777,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "countries_mini"
-			position = { x = 24 y = 330 }
+			position = { x = 24 y = 230 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
@@ -805,10 +805,11 @@ guiTypes = {
 			position = { x = 10   y = 235 }
 			size = { width = 172  height = 96 }
 			clipping = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_0_bg"
-				position = { x = 0   y = -190 }
+				position = { x = 1   y = -190 }
 				size = { width = 172 height = 380 }
 				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
 
@@ -825,6 +826,7 @@ guiTypes = {
 			position = { x = 182  y = 235 }
 			size = { width = 172  height = 96 }
 			clipping = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_1_bg"
@@ -841,53 +843,65 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "coverup_3"
-			position = { x = 526  y = 140 }
+			name = "coverup_2"
+			position = { x = 354   y = 235 }
 			size = { width = 172  height = 96 }
 			clipping = yes
+			hide = yes
+
+			containerWindowType = {
+				name = "coverup_2_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				iconType = {
+					name = "backdrop_texture_2"
+					quadTextureSprite = "GFX_TRM_intro"
+					position = { x = 3  y = 2 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "coverup_3"
+			position = { x = 526   y = 235 }
+			size = { width = 172  height = 96 }
+			clipping = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_3_bg"
-				position = { x = 0   y = -95 }
+				position = { x = 0   y = -190 }
 				size = { width = 172 height = 380 }
 				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
 
 				iconType = {
 					name = "backdrop_texture_3"
 					quadTextureSprite = "GFX_RED_intro"
-					position = { x = 2  y = 2 }
+					position = { x = 3  y = 2 }
 				}
 			}
 		}
 
 		containerWindowType = {
-			name = feature_highlight_icon_container
-			position = { x = 528 y = 235 }
+			name = "coverup_4"
+			position = { x = 699  y = 235 }
+			size = { width = 172  height = 96 }
+			clipping = yes
 			hide = yes
 
-			iconType = {
-				name = feature_highlight_icon_0
-				quadTextureSprite = "GFX_idea_heritage_of_accomplishment"
-				position = { x = 30  y = 34 }
-				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_0_tt
-			}
+			containerWindowType = {
+				name = "coverup_4_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
 
-			iconType = {
-				name = feature_highlight_icon_1
-				quadTextureSprite = "GFX_idea_advisors_china_beiyang"
-				position = { x = 84  y = 62 }
-				scale = 0.80
-				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_1_tt
-			}
-
-			iconType = {
-				name = feature_highlight_icon_2
-				quadTextureSprite = "GFX_idea_brown_water_spirit"
-				position = { x = 138  y = 34 }
-				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_2_tt
+				iconType = {
+					name = "backdrop_texture_4"
+					quadTextureSprite = "GFX_GEH_other_intro"
+					position = { x = 2  y = 2 }
+				}
 			}
 		}
 
@@ -896,6 +910,7 @@ guiTypes = {
 			position = { x = 870  y = 235 }
 			size = { width = 172  height = 96 }
 			clipping = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_5_bg"
@@ -905,7 +920,28 @@ guiTypes = {
 
 				iconType = {
 					name = "backdrop_texture_5"
-					quadTextureSprite = "GFX_GEI_intro"
+					quadTextureSprite = "GFX_HYA_intro"
+					position = { x = 2  y = 2 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "coverup_6"
+			position = { x = 1044  y = 235 }
+			size = { width = 172  height = 96 }
+			clipping = yes
+			hide = yes
+
+			containerWindowType = {
+				name = "coverup_6_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				iconType = {
+					name = "backdrop_texture_6"
+					quadTextureSprite = "GFX_SHA_other_intro"
 					position = { x = 2  y = 2 }
 				}
 			}

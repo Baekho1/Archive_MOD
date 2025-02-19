@@ -22,9 +22,90 @@ bookmarks = {
 			}
 		}
 
-		ABC = {
+		MIL={
+			history = MIL_GATHERING_STORM_DESC
 			ideology = democratic
+			ideas = {
+				BA_exiles_of_the_future
+				MIL_neutrality_idea
+				MIL_Resistance_4
+			}
+			focuses = {
+				MIL_Rio_intensified
+				MIL_domestic_administration
+				MIL_Himari_intensified
+			}
+		}
+
+		TRM={
+			history = TRM_GATHERING_STORM_DESC
+			ideology = democratic
+			ideas = {
+				BA_exiles_of_the_future
+				TRM_safe_trinity
+				TRM_troll_mika
+			}
+			focuses = {
+				TRM_newfocus_27
+				TRN_yurijono_seia
+				TRN_nagisa_gyehek
+			}
+		}
+
+		RED={
+			history = RED_GATHERING_STORM_DESC
+			ideology = communism
+			ideas = {
+				RED_threat_of_coup
+				RED_doomed_army_idea
+				RED_doomed_economy_idea
+			}
+			focuses = {
+				RED_accept_trotskism
+				RED_dipose_cherino
+				RED_no_error_at_ideology
+			}
+		}
+
+		GEM={
+			history = GEM_GATHERING_STORM_DESC
+			ideology = fascism
+			ideas = {
+				BA_exiles_of_the_future
+			}
+			focuses = {
+			}
+		}
+
+		HYA={
+			history = HYA_GATHERING_STORM_DESC
+			ideology = neutrality
+			ideas = {
+				BA_exiles_of_the_future
+			}	
+			focuses = {
+			}			
+		}
+
+		SHA={
+			history = SHA_GATHERING_STORM_DESC
+			ideology = neutrality
+			ideas = {
+				SHA_Black_Tortoise_Promenade
+				SHA_shanhaijing_isolation
+				SHA_Eastern_alchemy_society
+			}	
+			focuses = {
+				SHA_gathering_of_radicals
+				SHA_Strengthening_Genryumon
+				SHA_local_harmony
+			}		
+		}
+
+		ZZZ = {
+			minor = yes
 			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
 		}
 
 		SHE={
@@ -42,7 +123,13 @@ bookmarks = {
 			}
 		}
 
-		KSP={
+		ZZZ = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+		
+		KSP = {
 			minor = yes
 			history = KSP_GATHERING_STORM_DESC
 			ideology = democratic
@@ -58,33 +145,14 @@ bookmarks = {
 			}
 		}
 
-		MIL={
-			history = MIL_GATHERING_STORM_DESC
-			ideology = democratic
+		FRA = {
+			minor = yes
+			history = FRA_GATHERING_STORM_DESC_1
+			ideology = neutrality
 			ideas = {
-				BA_exiles_of_the_future
-				MIL_neutrality_idea
-				MIL_Resistance_4
-			}
-			focuses = {
-				MIL_Rio_intensified
-				MIL_domestic_administration
-				MIL_Himari_intensified
-			}
-		}
-
-		ABC = {
-			ideology = democratic
-			history = Debug_BA_gathering_storm_desc
-		}
-
-		TRM={
-			history = TRM_GATHERING_STORM_DESC
-			ideology = democratic
-			ideas = {
-				BA_exiles_of_the_future
-				TRM_safe_trinity
-				TRM_troll_mika
+				FRA_emergency_mobil
+				FRA_resist_strike
+				FRA_exile
 			}
 			focuses = {
 				TRM_newfocus_27
@@ -92,117 +160,31 @@ bookmarks = {
 				TRN_nagisa_gyehek
 			}
 		}
-		GEM={
-			history = GEM_GATHERING_STORM_DESC
-			ideology = fascism
+
+		BLM = {
+			minor = yes
+			ideology = neutrality
+		}
+
+		FRM = {
+			minor = yes
+			history = FRA_GATHERING_STORM_DESC_1
+			ideology = neutrality
 			ideas = {
-				BA_exiles_of_the_future
+				FRM_defeatism
+				FRM_isolation
 			}
 			focuses = {
 			}
 		}
 
-		ABC = {
-			ideology = democratic
+		ZZZ = {
+			minor = yes
 			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
 		}
 
-		RED={
-			history = RED_GATHERING_STORM_DESC
-			ideology = communism
-			ideas = {
-				RED_threat_of_coup
-				RED_doomed_army_idea
-				RED_doomed_economy_idea
-			}
-			focuses = {
-				RED_accept_trotskism
-				RED_dipose_cherino
-				RED_no_error_at_ideology
-			}
-		}
-		HYA={
-			history = HYA_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				BA_exiles_of_the_future
-			}	
-			focuses = {
-			}			
-		}
-		SHA={
-			history = SHA_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				SHA_Black_Tortoise_Promenade
-				SHA_shanhaijing_isolation
-				SHA_Eastern_alchemy_society
-			}	
-			focuses = {
-				SHA_gathering_of_radicals
-				SHA_Strengthening_Genryumon
-				SHA_local_harmony
-			}		
-		}
-		GEI = {
-			ideology = fascism
-			history = GEI_scenario_desc
-		}
-
-		ABC = {
-			ideology = democratic
-			history = Debug_BA_gathering_storm_desc
-		}
-		KAI = {
-			ideology = neutrality
-			history = KAI_scenario_desc
-		}
-		ABY={
-			minor = yes
-			history = ABY_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				ABY_idea_eocordnldnjsghl
-				ABY_idea_bohemia_and_austria
-				ABY_idea_two_00
-			}
-			focuses = {
-				ABY_focus_neptis_cooperation_country
-				ABY_focus_with_czech
-				ABY_focus_abydos_schoolcountry
-			}
-		}
-		GEH={
-			minor = yes
-			history = GEH_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				BA_exiles_of_the_future
-                GEH_popular_support_1
-                GEH_individualism_low
-			}
-			focuses = {
-                GEH_rework_focus_1
-                GEH_rework_focus_2
-                GEH_rework_focus_3
-			}
-		}
-		HEU={
-			minor = yes
-			history = HEU_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				HEU_sinloe_wa_uae
-				HEU_grand_duchy_of_luxembourg 
-				HEU_gehenna_immigrant 
-			}	
-			focuses = {
-				HEU_watch_right_wing_party
-				HEU_one_evil_one_day
-				HEU_general_student_council_aru
-			}			
-		}
-		ARI={
+		ARI = {
 			minor = yes
 			history = ARI_GATHERING_STORM_DESC
 			ideology = neutrality
@@ -211,6 +193,45 @@ bookmarks = {
 				BA_ARI_bitter_revanchism
 				BA_ARI_tragedy
 			}
+		}
+
+		ZZZ = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+
+		KPD = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = communism
+		}
+
+		NSD = {
+			minor = yes
+			ideology = fascism
+		}
+
+		RE1 = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = communism
+		}
+
+		RE2 = {
+			minor = yes
+			ideology = communism
+		}
+
+		RE3 = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = communism
+		}
+
+		RE4 = {
+			minor = yes
+			ideology = communism
 		}
 
 		effect = {
