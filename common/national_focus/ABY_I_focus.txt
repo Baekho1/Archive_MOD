@@ -4728,7 +4728,7 @@ focus_tree = {
 			focus = ABY_focus_wjsekdeoghl   #이전 중점
 		}
 		mutually_exclusive = {
-			   #반대되는 중점
+			focus = ABY_focus_reject_ultimatum   #반대되는 중점
 		}
 		x = 1      #좌표
 		y = 1
@@ -11347,7 +11347,7 @@ focus_tree = {
 
         completion_reward = {
             set_politics = {
-			    ruling_party = despotic
+			    ruling_party = neutrality
 			    elections_allowed = no
 	        }
             hidden_effect = {
@@ -11832,10 +11832,10 @@ focus_tree = {
         }
 
         completion_reward = {
-            modify_timed_idea = {
-                idea = ABY_focus_conflict_with_seperatists
-                days = 180
-            }
+            #modify_timed_idea = {
+            #    idea = ABY_focus_conflict_with_seperatists
+            #    days = 180
+            #}
         }
     }
 
@@ -11849,7 +11849,7 @@ focus_tree = {
         relative_position_id = ABY_focus_reject_ultimatum
 
         available = {
-            has_completed_focus = ABY_focus_end_of_vengence
+            has_completed_focus = ABY_focus_end_of_vengeance
         }
 
         completion_reward = {
@@ -11881,7 +11881,7 @@ focus_tree = {
         cost = 5
 
         available = {
-            has_completed_focus = ABY_focus_end_of_vengence
+            has_completed_focus = ABY_focus_end_of_vengeance
         }
 
         completion_reward = {
@@ -11899,7 +11899,7 @@ focus_tree = {
         cost = 5
 
         available = {
-            has_completed_focus = ABY_focus_end_of_vengence
+            has_completed_focus = ABY_focus_end_of_vengeance
         }
 
         completion_reward = {
@@ -11938,10 +11938,10 @@ focus_tree = {
         cost = 10
 
         completion_reward = {
-            swap_ideas = {
-                remove_idea = ABY_focus_conflict_with_seperatists
-                add_idea = ABY_focus_persuaded_seperatists
-            }
+            #swap_ideas = {
+            #    remove_idea = ABY_focus_conflict_with_seperatists
+            #    add_idea = ABY_focus_persuaded_seperatists
+            #}
             
         }
     }
