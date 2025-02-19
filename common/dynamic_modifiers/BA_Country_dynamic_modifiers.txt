@@ -898,8 +898,8 @@ RED_labor_party_dynamic_modifier = { #용역부
 	icon = GFX_idea_portrait_RED_minori
 
 	industrial_capacity_factory = RED_labor_party_dynamic_modifier_industrial_capacity_factory
-	industrial_capacity_dockyard = 0.05
-	production_speed_buildings_factor = 0.05
+	industrial_capacity_dockyard = 0.03
+	production_speed_buildings_factor = 0.03
 	production_speed_coastal_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_coastal_bunker_factor
 	production_speed_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_bunker_factor
 	production_factory_max_efficiency_factor = RED_labor_party_dynamic_modifier_production_factory_max_efficiency_factor
@@ -911,6 +911,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 	unit_artillery_brigade_design_cost_factor = RED_labor_party_dynamic_modifier_unit_artillery_brigade_design_cost_factor
 	political_power_factor = RED_labor_party_dynamic_modifier_political_power_factor
 	research_speed_factor = RED_labor_party_dynamic_modifier_iresearch_speed_factor
+	design_cost
 }
 RED_zenkyoutou_cat_dynamic_modifier = { #전공투
 	enable = {
