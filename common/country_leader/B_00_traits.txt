@@ -1240,6 +1240,20 @@ leader_traits = {
 		conscription = 0.02
 		power_balance_daily = -0.002
 	}
+	ABY_trait_loyal_girl = { 
+		random = no
+		war_support_factor = -0.1
+		stability_factor = -0.1
+		democratic_drift = -0.15
+	}
+	ABY_trait_Rhrenrkrtl = { 
+		random = no
+		political_power_gain = -0.1
+		industrial_capacity_factory = 0.15
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.1
+	}
 	ABY_idea_5_days = {
 		random = no
 		war_support_factor = 0.2

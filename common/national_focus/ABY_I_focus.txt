@@ -1726,6 +1726,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ABY_focus_great_donau
 		bypass = {
+			has_country_flag = ABY_flag_collapse_end
 			#중점 통과 조건
 		}
 		available = {
@@ -1736,6 +1737,24 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_unite_front
+				}
+				add_days_mission_timeout = {
+					mission = ABY_descision_fall_government
+					days = 15
+				} 
+			}
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_great_donau
+				}
+				add_days_mission_timeout = {
+					mission = ABY_descision_fall_government
+					days = -15
+				} 
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1767,6 +1786,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = BA_highlander_invest_neptis_tt
+			add_to_variable = {
+				BA_highlander_invest = 20
+			}
+			set_country_flag = ABY_flag_suo_recruit
+			custom_effect_tooltip = ABY_suo_tt
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1798,6 +1823,8 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 150
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2172,10 +2199,6 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -1
-			}
 			add_stability = 0.15
 			promote_character = ABYDO_ayane
 			#중점 완료시 얻는 보상
@@ -2209,6 +2232,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}
+			add_stability = 0.1
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2240,6 +2268,8 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_country_flag = ABY_flag_balkan_invite
+			custom_effect_tooltip = ABY_tt_balkan
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2271,6 +2301,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			create_wargoal = {
+				type = topple_government
+				target = HUN
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2302,6 +2336,19 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			SLO = {
+				country_event = {
+					id = ABY_new_event.65
+				}
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					set_state_flag = ABY_state_flag_core
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3481,37 +3528,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_recruit_saint_nephtys  #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_nephtys_cooperation_country   #이전 중점
-		}
-		mutually_exclusive = {
-			   #반대되는 중점
-		}
-		x = 0      #좌표
-		y = 1
-		relative_position_id = ABY_focus_nephtys_cooperation_country
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3524,14 +3544,14 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_recruit_saint_nephtys   #이전 중점
+			focus = ABY_focus_nephtys_cooperation_country   #이전 중점
 		}
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
 		x = 0      #좌표
-		y = 2
-		relative_position_id = ABY_focus_recruit_saint_nephtys
+		y = 3
+		relative_position_id = ABY_focus_nephtys_cooperation_country
 		bypass = {
 			#중점 통과 조건
 		}
@@ -3543,6 +3563,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_industrial_concern_allow_6
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3574,6 +3595,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_ideas = {
+				ABY_idea_press_abydos_1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3605,6 +3629,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3629,6 +3657,7 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_idea = ABY_idea_KAI_cornjs
 			#중점 선행조건
 		}
 
@@ -3636,6 +3665,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			remove_ideas = {
+				ABY_idea_KAI_cornjs
+			}
+			add_political_power = -150
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3667,6 +3700,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_press_abydos_1
+				add_idea = ABY_idea_press_abydos_2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3697,6 +3734,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_press_abydos_2
+				add_idea = ABY_idea_press_abydos_3
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3727,6 +3768,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_ideas = {
+				ABY_idea_lobby_1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3757,6 +3801,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3787,6 +3836,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_lobby_1
+				add_idea = ABY_idea_lobby_2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3820,6 +3873,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_lobby_2
+				add_idea = ABY_idea_lobby_3
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3846,6 +3903,7 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_completed_focus = ABY_focus_more_nation_invest 
 			#중점 선행조건
 		}
 
@@ -3853,6 +3911,23 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_neptis_group2
+					add_idea = ABY_idea_neptis_group3
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = ABY_industrial_concern_neptis_group_2
+					}
+					swap_ideas = {
+						remove_idea = ABY_industrial_concern_neptis_group_2
+						add_idea = ABY_industrial_concern_neptis_group_3
+					}
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3866,9 +3941,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ABY_focus_annex_jew_money   #이전 중점
 		}
-		prerequisite = {
-			focus = ABY_focus_annex_czech   #이전 중점
-		}
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
@@ -3879,6 +3951,7 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			neutrality > 0.5
 			#중점 선행조건
 		}
 
@@ -3886,8 +3959,18 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			remove_power_balance = {
-				id = ABY_power_balance
+			set_politics = {
+				ruling_party = neutrality
+			}
+			set_cosmetic_tag = ABY_neptis_nation_1
+			add_country_leader_role = {
+				character = ABYDO_nonomi
+				promote_leader = yes
+				country_leader = {
+					ideology = corporate_state_nephtys
+					expire = "1965.1.1.1"
+					traits = { ABY_trait_Rhrenrkrtl ABY_trait_loyal_girl }
+				}
 			}
 			#중점 완료시 얻는 보상
 		}
@@ -3919,6 +4002,20 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_flag_austria_rebuild_tt
+			ABY_4_rebuild_effect = yes
+			ABY_152_rebuild_effect = yes
+			ABY_153_rebuild_effect = yes
+			ABY_986_rebuild_effect = yes
+			ABY_975_rebuild_effect = yes
+			ABY_848_rebuild_effect = yes
+			ABY_976_rebuild_effect = yes
+			custom_effect_tooltip = ABY_flag_czech_rebuild_tt
+			ABY_9_rebuild_effect = yes
+			ABY_972_rebuild_effect = yes
+			ABY_72_rebuild_effect = yes
+			ABY_74_rebuild_effect = yes
+			ABY_75_rebuild_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3949,6 +4046,20 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_flag_austria_unite_tt
+			ABY_4_unite_effect = yes
+			ABY_152_unite_effect = yes
+			ABY_153_unite_effect = yes
+			ABY_986_unite_effect = yes
+			ABY_975_unite_effect = yes
+			ABY_848_unite_effect = yes
+			ABY_976_unite_effect = yes
+			custom_effect_tooltip = ABY_flag_czech_unite_tt
+			ABY_9_unite_effect = yes
+			ABY_972_unite_effect = yes
+			ABY_72_unite_effect = yes
+			ABY_74_unite_effect = yes
+			ABY_75_unite_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4292,6 +4403,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = BA_highlander_invest_neptis_tt
+			add_to_variable = {
+				BA_highlander_invest = 20
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4322,6 +4438,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = BA_highlander_invest_neptis_tt
+			add_to_variable = {
+				BA_highlander_invest = 20
+			}
+			add_offsite_building = { type = industrial_complex level = 3 }
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4352,6 +4473,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = BA_highlander_invest_neptis_tt
+			add_to_variable = {
+				BA_highlander_invest = 20
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -4385,36 +4511,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	focus = {
-		id = ABY_focus_annex_czech  #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_rmarnjswjdcl   #이전 중점
-		}
-		mutually_exclusive = {
-			   #반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_rmarnjswjdcl
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
+			custom_effect_tooltip = BA_highlander_invest_neptis_tt
+			add_to_variable = {
+				BA_highlander_invest = 20
+			}
+			add_offsite_building = { type = arms_factory level = 3 }
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -8278,18 +8379,27 @@ focus_tree = {
 		completion_reward = {
 			effect_tooltip = {
 				swap_ideas = {
-					remove_idea = ABY_idea_neptis_group2
-					add_idea = ABY_idea_neptis_group3
+					remove_idea = ABY_idea_neptis_group3
+					add_idea = ABY_idea_neptis_group4
 				}
 			}
 			hidden_effect = {
 				if = {
 					limit = {
-						has_idea = ABY_industrial_concern_neptis_group_2
+						has_idea = ABY_industrial_concern_neptis_group_3
 					}
 					swap_ideas = {
-						remove_idea = ABY_industrial_concern_neptis_group_2
-						add_idea = ABY_industrial_concern_neptis_group_3
+						remove_idea = ABY_industrial_concern_neptis_group_3
+						add_idea = ABY_industrial_concern_neptis_group_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = ABY_industrial_concern_rothschild_nephtys
+					}
+					swap_ideas = {
+						remove_idea = ABY_industrial_concern_rothschild_nephtys
+						add_idea = ABY_industrial_concern_rothschild_nephtys_2
 					}
 				}
 			}
@@ -9070,6 +9180,17 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism
+				}
+				add_opinion_modifier = {
+					target = ABY
+					modifier = large_decrease
+				}					
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -9102,6 +9223,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			create_faction = ABY_EU
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -11016,6 +11138,11 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			YUG = {
+				NOT = {
+					is_in_faction_with = ABY
+				}
+			}
 			#중점 선행조건
 		}
 
@@ -11023,6 +11150,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			YUG = {
+				country_event = {
+					id = ABY_new_event.220
+					hours = 8
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -11054,6 +11187,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			create_wargoal = {
+				type = topple_government
+				target = ITA
+			}
+			set_country_flag = ABY_flag_divide_ITA
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -11085,6 +11223,15 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_provisional_government_tt_3
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = HUN
+					}
+					set_state_flag = ABY_state_flag_core
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
