@@ -116,27 +116,66 @@ PAN_BOP_category = {
         complete_effect = {
             add_power_balance_value = {
                 id = PAN_power_balance
-                value = -0.20
+                value = 0.20
             }
             custom_effect_tooltip = PFP_Alliances_AC_tt
             add_popularity = {
                 ideology = fascism
                 popularity = 0.05
             }
+
         }
     }
     PAN_election_final = { #선거일
         icon = GFX_decision_unknown
         activation = {
-            has_completed_focus = PAN_with_Popular_Front
+            OR = {
+                has_completed_focus = PAN_with_Popular_Front
+                has_completed_focus = PAN_with_National_Coalition
+            }
         }
         available = {
             always = no
         }
         days_mission_timeout = 175
+        fire_only_once = yes
         is_good = no
         timeout_effect = {
             set_country_flag = PAN_election_complete
+        }
+    }
+    PAN_Right_activation = { #우익 세력의 유세 활동
+        icon = GFX_decision_generic_intelligence_operation
+        activation = {
+            has_completed_focus = PAN_with_Popular_Front
+            has_active_mission = PAN_election_final
+        }
+        available = {
+            always = no
+        }
+        days_mission_timeout = 30
+        is_good = no
+        timeout_effect = {
+            random_list = {
+                50 = {
+                    add_power_balance_value = {
+                        id = PAN_power_balance
+                        value = 0.03
+                    }
+                }
+                40 = {
+                    add_power_balance_value = {
+                        id = PAN_power_balance
+                        value = 0.05
+                    }
+                }
+                10 = {
+                    add_power_balance_value = {
+                        id = PAN_power_balance
+                        value = -0.08
+                    }
+                }
+            }
         }
     }
 }

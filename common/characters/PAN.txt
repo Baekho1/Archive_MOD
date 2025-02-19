@@ -486,17 +486,30 @@ characters={
 			}
 		}
 	}
-		PAN_domingo_Arosemena = { #도밍고 아로세메나
-			name = PAN_domingo_Arosemena
-			portraits = {
-				civilian = {
-					large = "gfx/leaders/PAN/PAN_domingo_ Arosemena.tga"
-				}
-			}
-			country_leader = {
-				ideology = Social_Liberalism
-				expire="1965.1.1.1"
+	PAN_domingo_Arosemena = { #도밍고 아로세메나
+		name = PAN_domingo_Arosemena
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAN/PAN_domingo_Arosemena.tga"
 			}
 		}
+		country_leader = {
+			ideology = Social_Liberalism
+			expire="1965.1.1.1"
+		}
+	}
+	PAN_Juan_Arosemena = { #후안 아로세메나
+		name = PAN_Juan_Arosemena
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAN/PAN_Juan_Arosemena.tga"
+			}
+		}
+		country_leader = {
+			ideology = National_conservatism
+			expire = "1965.1.1.1"
+		}
+	}
+	
 }
 
