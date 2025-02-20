@@ -209,8 +209,8 @@
  BEL_fight_for_liberation_desc: ""
  # ストーリーアーカイブ
  BA_story_archive_btn_close: "閉じる"
- story_archive_title: "[ROOT.GetStoryArchiveTitle]"
- story_archive_desc: "[ROOT.GetStoryArchiveDesc]"
+ story_archive_title: "[ROOT.BA_Story_Archive_Title]"
+ story_archive_desc: "[ROOT.BA_Story_Archive_Desc]"
  # ベルギー ストーリーアーカイブ
  BEL_story_archive: "ストーリーアーカイブ"
  BEL_show_story_archive_gui: "ベルギー ストーリーアーカイブ"

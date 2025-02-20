@@ -209,8 +209,8 @@
  BEL_fight_for_liberation_desc: ""
  # 故事档案
  BA_story_archive_btn_close: "关闭"
- story_archive_title: "[ROOT.GetStoryArchiveTitle]"
- story_archive_desc: "[ROOT.GetStoryArchiveDesc]"
+ story_archive_title: "[ROOT.BA_Story_Archive_Title]"
+ story_archive_desc: "[ROOT.BA_Story_Archive_Desc]"
  # 比利时故事档案
  BEL_story_archive: "故事档案"
  BEL_show_story_archive_gui: "比利时故事档案"
