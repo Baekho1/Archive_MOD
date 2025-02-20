@@ -459,7 +459,7 @@
  GEH_restoration: "[FROM.GetName] 수복 공세 실행"
  GEH_We_go_to_the_Eden: "결정 해금: §Y트리니티 공세 작계§!"
  GEH_defense_TT: "결정 해금: §Y게헨나 방어 작계§!"
- GEH_restoration_TT: "결정 해금: §Y게헨나 수복 작계§!"
+ GEH_attack_to_TRM: "트리니티 본토 타격"
  GEH_defend_states: "특별명령 142호"
  GEH_attack_states: "수복 공세"
  GEH_ucantusefactory: "국방군 영향력"
