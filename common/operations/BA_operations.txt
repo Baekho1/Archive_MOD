@@ -18,8 +18,10 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 			tag = TRM
 		}
 		FROM = {
-			tag = RED
-			tag = TRM
+			OR = {
+				tag = RED
+				tag = TRM
+			}
 		}
 	}
 

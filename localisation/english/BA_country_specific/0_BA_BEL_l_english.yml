@@ -221,9 +221,9 @@
 
  # 스토리 아카이브
  BA_story_archive_btn_close: "닫기"
- story_archive_title: "[ROOT.GetStoryArchiveTitle]"
- story_archive_desc: "[ROOT.GetStoryArchiveDesc]"
-
+ story_archive_title: "[ROOT.BA_Story_Archive_Title]"
+ story_archive_desc: "[ROOT.BA_Story_Archive_Desc]"
+ story_archive_button: "[ROOT.BA_Story_Archive_Button_Text_By_Nation]"
  # 벨기에 스토리 아카이브
  BEL_story_archive: "스토리 아카이브"
  BEL_show_story_archive_gui: "벨기에 스토리 아카이브"

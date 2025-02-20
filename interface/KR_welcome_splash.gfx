@@ -113,8 +113,13 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 	spriteType = {
-		name = "GFX_SHA_reverse_intro"
-		texturefile = "gfx/introscreen/SHA_reverse_intro.tga"
+		name = "GFX_SHA_other_intro"
+		texturefile = "gfx/introscreen/SHA_other_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_GEH_other_intro"
+		texturefile = "gfx/introscreen/GEM_intro.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 

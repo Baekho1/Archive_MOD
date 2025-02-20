@@ -109,6 +109,12 @@ characters = {
 				#has_completed_focus = RED_227_speicial_class
 			}
 		}
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert scientist_trait_bright}
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
 		advisor={
 			slot = theorist
 			idea_token = RED_nodoka
@@ -174,7 +180,7 @@ characters = {
 
 		country_leader={
 			ideology= syndicalism
-			traits={ leader_of_publicworks }
+			traits={ leader_of_publicworks hate_soviet}
 			expire="1965.1.1.1"
 		}
 
@@ -567,7 +573,7 @@ characters = {
 			idea_token = RED_meal_department_adv_ideas
 			traits = { RED_meal_trait_adv }
 			available = {
-				has_completed_focus = RED_club_focus_0
+				has_completed_focus = RED_club_focus_1
 			}
 		}
 		advisor = {
@@ -575,7 +581,7 @@ characters = {
 			idea_token = RED_meal_department_arm_ideas
 			traits = { RED_meal_trait_arm }
 			available = {
-				has_completed_focus = RED_club_focus_0
+				has_completed_focus = RED_club_focus_1
 			}
 		}
 	}

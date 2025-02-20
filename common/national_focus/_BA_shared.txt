@@ -234,6 +234,10 @@ shared_focus = {
 			factor = 2
 			date > 1941.01.01
 		}
+		modifier = {
+			tag = RED
+			add = -10
+		}
 	}
 
 	available = {

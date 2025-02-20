@@ -482,7 +482,7 @@ ABY_power_balance_4 = {
 				stability_factor = 0.05
 				war_support_factor = -0.05
 				conscription_factor = -0.05
-				political_power_factor = = -0.05
+				political_power_factor =  -0.05
 				democratic_drift = 0.05
 			}
 			on_activate = {
@@ -498,7 +498,7 @@ ABY_power_balance_4 = {
 				stability_factor = 0.1
 				war_support_factor = -0.15
 				conscription_factor = -0.1
-				political_power_factor = = -0.15
+				political_power_factor =  -0.15
 				democratic_drift = 0.15
 			}
 			on_activate = {
@@ -514,7 +514,7 @@ ABY_power_balance_4 = {
 				stability_factor = 0.15
 				war_support_factor = -0.25
 				conscription_factor = -0.15
-				political_power_factor = = -0.25
+				political_power_factor =  -0.25
 				democratic_drift = 0.25
 			}
 			on_activate = {

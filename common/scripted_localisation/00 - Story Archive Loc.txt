@@ -1,0 +1,1102 @@
+defined_text = {
+    name = BA_Story_Archive_Title
+
+    ####################################################################
+    # [Title] 섹션
+    ####################################################################
+    # --- GEK Title ---
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = GEK_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = GEK_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = GEK_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = GEK_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = GEK_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = GEK_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = GEK_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = GEK_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = GEK_story_event.9.t
+    }
+
+    # --- HEU Title ---
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = HEU_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = HEU_story_event.2.t
+    }
+
+    # --- TRM Title ---
+    text = {
+        trigger = {
+            original_tag = TRM
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = TRM_story_event.1.t
+    }
+
+    # --- BEL & KSP Title ---
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = BEL_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = BEL_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = BEL_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = BEL_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = BEL_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = BEL_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = BEL_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = BEL_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = BEL_story_event.9.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 10 }
+        }
+        localization_key = BEL_story_event.10.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 11 }
+        }
+        localization_key = BEL_story_event.11.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 12 }
+        }
+        localization_key = BEL_story_event.12.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 13 }
+        }
+        localization_key = BEL_story_event.13.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 14 }
+        }
+        localization_key = BEL_story_event.14.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 15 }
+        }
+        localization_key = BEL_story_event.15.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 16 }
+        }
+        localization_key = BEL_story_event.16.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 17 }
+        }
+        localization_key = BEL_story_event.17.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 18 }
+        }
+        localization_key = BEL_story_event.18.t
+    }
+
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = BEL_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = BEL_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = BEL_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = BEL_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = BEL_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = BEL_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = BEL_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = BEL_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = BEL_story_event.9.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 10 }
+        }
+        localization_key = BEL_story_event.10.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 11 }
+        }
+        localization_key = BEL_story_event.11.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 12 }
+        }
+        localization_key = BEL_story_event.12.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 13 }
+        }
+        localization_key = BEL_story_event.13.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 14 }
+        }
+        localization_key = BEL_story_event.14.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 15 }
+        }
+        localization_key = BEL_story_event.15.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 16 }
+        }
+        localization_key = BEL_story_event.16.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 17 }
+        }
+        localization_key = BEL_story_event.17.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 18 }
+        }
+        localization_key = BEL_story_event.18.t
+    }
+}
+
+defined_text = {
+    name = BA_Story_Archive_Desc
+
+    ####################################################################
+    # [Desc] 섹션
+    ####################################################################
+    # --- GEK Desc ---
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = GEK_story_event.1.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = GEK_story_event.2.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = GEK_story_event.3.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = GEK_story_event.4.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = GEK_story_event.5.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = GEK_story_event.6.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = GEK_story_event.7.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = GEK_story_event.8.desc
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = GEK_story_event.9.desc
+    }
+
+    # --- HEU Desc ---
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = HEU_story_event.1.desc
+    }
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = HEU_story_event.2.desc
+    }
+
+    # --- TRM Desc ---
+    text = {
+        trigger = {
+            original_tag = TRM
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = TRM_story_event.1.desc
+    }
+
+    # --- BEL & KSP Desc ---
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = BEL_story_event.1.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = BEL_story_event.2.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = BEL_story_event.3.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = BEL_story_event.4.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = BEL_story_event.5.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = BEL_story_event.6.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = BEL_story_event.7.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = BEL_story_event.8.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = BEL_story_event.9.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 10 }
+        }
+        localization_key = BEL_story_event.10.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 11 }
+        }
+        localization_key = BEL_story_event.11.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 12 }
+        }
+        localization_key = BEL_story_event.12.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 13 }
+        }
+        localization_key = BEL_story_event.13.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 14 }
+        }
+        localization_key = BEL_story_event.14.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 15 }
+        }
+        localization_key = BEL_story_event.15.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 16 }
+        }
+        localization_key = BEL_story_event.16.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 17 }
+        }
+        localization_key = BEL_story_event.17.desc
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_event_var = 18 }
+        }
+        localization_key = BEL_story_event.18.desc
+    }
+
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 1 }
+        }
+        localization_key = BEL_story_event.1.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 2 }
+        }
+        localization_key = BEL_story_event.2.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 3 }
+        }
+        localization_key = BEL_story_event.3.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 4 }
+        }
+        localization_key = BEL_story_event.4.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 5 }
+        }
+        localization_key = BEL_story_event.5.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 6 }
+        }
+        localization_key = BEL_story_event.6.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 7 }
+        }
+        localization_key = BEL_story_event.7.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 8 }
+        }
+        localization_key = BEL_story_event.8.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 9 }
+        }
+        localization_key = BEL_story_event.9.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 10 }
+        }
+        localization_key = BEL_story_event.10.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 11 }
+        }
+        localization_key = BEL_story_event.11.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 12 }
+        }
+        localization_key = BEL_story_event.12.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 13 }
+        }
+        localization_key = BEL_story_event.13.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 14 }
+        }
+        localization_key = BEL_story_event.14.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 15 }
+        }
+        localization_key = BEL_story_event.15.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 16 }
+        }
+        localization_key = BEL_story_event.16.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 17 }
+        }
+        localization_key = BEL_story_event.17.desc
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_event_var = 18 }
+        }
+        localization_key = BEL_story_event.18.desc
+    }
+
+}
+
+defined_text = {
+    name = BA_Story_Archive_Button_Text_By_Nation
+
+    ####################################################################
+    # [Button Text By Nation] 섹션
+    ####################################################################
+    # --- GEK Button Text ---
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 0 }
+        }
+        localization_key = GEK_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 1 }
+        }
+        localization_key = GEK_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 2 }
+        }
+        localization_key = GEK_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 3 }
+        }
+        localization_key = GEK_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 4 }
+        }
+        localization_key = GEK_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 5 }
+        }
+        localization_key = GEK_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 6 }
+        }
+        localization_key = GEK_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 7 }
+        }
+        localization_key = GEK_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = GEK
+            check_variable = { story_arc_value = 4 }
+            check_variable = { story_arc_index = 8 }
+        }
+        localization_key = GEK_story_event.9.t
+    }
+
+    # --- HEU Button Text ---
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_arc_index = 0 }
+        }
+        localization_key = HEU_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = HEU
+            check_variable = { story_arc_index = 1 }
+        }
+        localization_key = HEU_story_event.2.t
+    }
+
+    # --- TRM Button Text ---
+    text = {
+        trigger = {
+            original_tag = TRM
+            check_variable = { story_arc_value = 3 }
+            check_variable = { story_arc_index = 0 }
+        }
+        localization_key = TRM_story_event.1.t
+    }
+
+    # --- BEL & KSP Button Text ---
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 0 }
+        }
+        localization_key = BEL_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 1 }
+        }
+        localization_key = BEL_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 2 }
+        }
+        localization_key = BEL_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 3 }
+        }
+        localization_key = BEL_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 4 }
+        }
+        localization_key = BEL_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 5 }
+        }
+        localization_key = BEL_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 6 }
+        }
+        localization_key = BEL_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 7 }
+        }
+        localization_key = BEL_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 8 }
+        }
+        localization_key = BEL_story_event.9.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 9 }
+        }
+        localization_key = BEL_story_event.10.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 10 }
+        }
+        localization_key = BEL_story_event.11.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 11 }
+        }
+        localization_key = BEL_story_event.12.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 12 }
+        }
+        localization_key = BEL_story_event.13.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 13 }
+        }
+        localization_key = BEL_story_event.14.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 14 }
+        }
+        localization_key = BEL_story_event.15.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 15 }
+        }
+        localization_key = BEL_story_event.16.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 16 }
+        }
+        localization_key = BEL_story_event.17.t
+    }
+    text = {
+        trigger = {
+            original_tag = BEL
+            check_variable = { story_arc_value = 1 }
+            check_variable = { story_arc_index = 17 }
+        }
+        localization_key = BEL_story_event.18.t
+    }
+
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 0 }
+        }
+        localization_key = BEL_story_event.1.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 1 }
+        }
+        localization_key = BEL_story_event.2.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 2 }
+        }
+        localization_key = BEL_story_event.3.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 3 }
+        }
+        localization_key = BEL_story_event.4.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 4 }
+        }
+        localization_key = BEL_story_event.5.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 5 }
+        }
+        localization_key = BEL_story_event.6.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 6 }
+        }
+        localization_key = BEL_story_event.7.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 7 }
+        }
+        localization_key = BEL_story_event.8.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 8 }
+        }
+        localization_key = BEL_story_event.9.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 9 }
+        }
+        localization_key = BEL_story_event.10.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 10 }
+        }
+        localization_key = BEL_story_event.11.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 11 }
+        }
+        localization_key = BEL_story_event.12.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 12 }
+        }
+        localization_key = BEL_story_event.13.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 13 }
+        }
+        localization_key = BEL_story_event.14.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 14 }
+        }
+        localization_key = BEL_story_event.15.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 15 }
+        }
+        localization_key = BEL_story_event.16.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 16 }
+        }
+        localization_key = BEL_story_event.17.t
+    }
+    text = {
+        trigger = {
+            original_tag = KSP
+            check_variable = { story_arc_value = 2 }
+            check_variable = { story_arc_index = 17 }
+        }
+        localization_key = BEL_story_event.18.t
+    }
+}
