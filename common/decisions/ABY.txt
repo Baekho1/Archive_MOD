@@ -21735,7 +21735,7 @@ ABY_descision_category_invite_balkan = {
 			}
 		}
 	}
-	ABY_descision_make_croatia = {
+	ABY_descision_make_montenegro = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
@@ -21786,7 +21786,7 @@ ABY_descision_category_invite_balkan = {
 			}
 		}
 	}
-	ABY_descision_make_croatia = {
+	ABY_descision_make_serbia = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
@@ -21892,22 +21892,7 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_ITA
-			every_state = {
-				limit = {
-					AND = {
-						is_core_of = ITA
-						NOT = {
-							OR = {
-								state = 159
-								state = 160
-								state = 850
-								state = 39
-								state = 736
-								state = 852
-							}
-						}
-					}
-				}
+			FROM = {
 				is_controlled_by_ROOT_or_subject = yes
 			}
 		}

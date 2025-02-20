@@ -7,6 +7,7 @@ add_namespace = TRM_ironsword_event
 
 add_namespace = trnstory
 add_namespace = trinity
+add_namespace = trnhonor
 add_namespace = trinitynews
 country_event = {
 	id = TRM_event.1
@@ -8815,7 +8816,7 @@ country_event = { # 대법관 임명
 
 	option = {
 		name = trinity.18.a
-		
+		add_political_power = 50
     }
 }
 news_event = {
