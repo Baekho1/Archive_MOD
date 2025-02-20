@@ -6,17 +6,6 @@ scripted_gui = {
 			ENG_king_portrait = { image = "[ENG_parliament_king_portrait]" }
 			ENG_king_portrait = { image = "[ENG_parliament_king_portrait]" }
 		}
-		effects = {
-			ENG_uk_support_ns_click = {
-				set_variable = { ENG_exile_gover_tap = 1 }
-			}
-			ENG_canada_support_ns_click = {
-				set_variable = { ENG_exile_gover_tap = 2 }
-			}
-			ENG_people_support_ns_click = {
-				set_variable = { ENG_exile_gover_tap = 3 }
-			}
-		}
 	}
 	
 }

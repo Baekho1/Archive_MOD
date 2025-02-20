@@ -8,8 +8,7 @@
 ### search_filters = {FOCUS_FILTER_USA_CONGRESS}
 
 focus_tree = {
-	id = usa_focus
-	
+	id = usa_focus	
 	country = {
 		factor = 0
 		
@@ -60,8 +59,7 @@ focus_tree = {
 #
 #		}
 #	}
-    
-	
+    	
 	focus = {
 		id = USABA_is_fucking_debug_focus
 		icon = GFX_focus_generic_the_giant_wakes

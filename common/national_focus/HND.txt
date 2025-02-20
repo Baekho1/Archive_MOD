@@ -19,6 +19,19 @@ focus_tree = {
 		cost = 2
 		x = 3
 		y = 0
+		cost = 1
+		allow_branch = {
+			NOT = {
+				has_country_flag = HND_communism_win
+				has_country_flag = HND_fascism_win
+			}
+		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.1
@@ -48,6 +61,12 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = HND_focus_army_tt
 			army_experience = 10
@@ -73,6 +92,12 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = HND_focus_army_tt
 			hidden_effect = {
@@ -91,7 +116,10 @@ focus_tree = {
 			focus = HND_focus_1
 		}
 		available = {
-			has_war_with = ENG
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -111,6 +139,10 @@ focus_tree = {
 			focus = HND_focus_1.1
 		}
 		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			army_experience = 55
@@ -125,6 +157,12 @@ focus_tree = {
 		y = 2
 		prerequisite = {
 			focus = HND_focus_1.2
+		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			RAJ = {
@@ -144,6 +182,12 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = HND_focus_1
+		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -171,6 +215,12 @@ focus_tree = {
 			focus = HND_focus_1.2
 			focus = HND_focus_2
 		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			every_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -191,6 +241,12 @@ focus_tree = {
 		prerequisite = {
 			focus = HND_focus_1.1
 			focus = HND_focus_2
+		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			every_owned_state = {
@@ -224,6 +280,12 @@ focus_tree = {
 		prerequisite = {
 			focus = HND_focus_2
 		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -243,6 +305,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = HND_focus_1.4
+		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
 		}
 		completion_reward = {
 			add_popularity = {
@@ -266,6 +334,12 @@ focus_tree = {
 			focus = HND_focus_1.7
 			focus = HND_focus_1.8
 		}
+		available = {
+			OR = {
+				has_war_with = RAJ
+				has_war_with = ENG
+			}
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -285,6 +359,9 @@ focus_tree = {
 		available = {
 			has_war = no
 			controls_state = 439
+		}
+		ai_will_do = {
+			factor = 1000
 		}
 		x = 15
 		y = 0
@@ -308,6 +385,9 @@ focus_tree = {
 		cancelable = no
 		x = 15
 		y = 1
+		ai_will_do = {
+			factor = 1000
+		}
 		prerequisite = {
 			focus = HND_focus_deli_1
 		}

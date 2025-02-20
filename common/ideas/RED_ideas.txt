@@ -7,16 +7,93 @@ ideas = {
 		}
 	}
     country = {
-		RED_war_communism = {
-			picture = SPR_class_war
-			modifier = {
-				army_core_attack_factor = 0.03
-				army_attack_speed_factor = 0.03
-				army_attack_factor = 0.03
-				custom_modifier_tooltip = RED_world_revolution_1_tt
+		RED_quantity_to_quality_jil = { #양질전화의 법칙 (질)
+		 	name = RED_quantity_to_quality
+			picture = man_five_year_plan_tank
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+					maximum_speed = 0.02
+					hard_attack = 0.09
+					reliability_factor = 0.15
+				}
 			}
-			cancel = {
-				has_war = no
+		}
+		RED_quantity_to_quality_yang = { #양질전화의 법칙 (양)
+		 	name = RED_quantity_to_quality
+			picture = man_five_year_plan_tank
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.15
+					maximum_speed = 0.06
+					hard_attack = 0.03
+					reliability_factor = 0.05
+				}
+			}
+		}
+		RED_quality = { #질
+			picture = man_five_year_plan_tank
+			equipment_bonus = {
+				armor = {
+					hard_attack = 0.06
+					reliability_factor = 0.1
+				}
+			}
+		}
+		RED_quantity = { #양
+			picture = man_five_year_plan_tank
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					maximum_speed = 0.04
+				}
+			}
+		}
+		RED_MIL_exchange = { #자원과 기술 교환
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		MIL_RED_exchange = { #자원과 기술 교환
+			name = RED_MIL_exchange
+			picture = can_wartime_prices_and_trade_board
+			targeted_modifier = {
+				tag = RED
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+		KAI_RED_trade_low_fee_idea = { #붉은겨울로부터의 저임금 노동자
+			picture = SPA_duty_to_work
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		RED_KAI_trade_low_fee_idea = { #저임금 노동자 수출
+			picture = SPA_duty_to_work
+			modifier = {
+				recruitable_population_factor = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		RED_supporting_idea = { #붉은겨울의 지원
+			picture = saf_soviet_advisers
+			modifier = {
+				mobilization_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		RED_the_fifth_columnists_idea = { #조직된 제5열
+			picture = HUN_the_rakosi_battalion_idea
+			targeted_modifier = {
+				tag = RED
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+			modifier = {
+				communism_drift = 0.05
 			}
 		}
 		RED_nation_united_LD = { #민족 자결 원칙
@@ -659,6 +736,9 @@ ideas = {
 			cancel = {
 				democratic < 0.05
 			}
+			on_remove = {
+				country_event = RED_event.34
+			}
 		}
 		RED_famine = { #대기근
 			picture = raj_risk_of_famine
@@ -1122,6 +1202,7 @@ ideas = {
 			name = RED_office_ss_idea
 			picture = generic_communist_army
 			modifier = {
+				political_power_factor = -0.05
 				surrender_limit = 0.15
 				war_support_factor = 0.15
 				stability_factor = -0.05
@@ -1268,6 +1349,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
 				army_speed_factor = -0.15
 				war_support_factor = -0.25
 				stability_factor = -0.1
@@ -1403,6 +1485,66 @@ ideas = {
 				army_defence_against_major_factor = 0.175
 				dig_in_speed_factor = 0.18
 				army_attack_speed_factor = 0.12
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_5 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.2
+				army_defence_against_major_factor = 0.2
+				dig_in_speed_factor = 0.2
+				army_attack_speed_factor = 0.15
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_6 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.225
+				army_defence_against_major_factor = 0.225
+				dig_in_speed_factor = 0.225
+				army_attack_speed_factor = 0.175
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_7 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.25
+				army_defence_against_major_factor = 0.25
+				dig_in_speed_factor = 0.25
+				army_attack_speed_factor = 0.18
+			}
+			cancel = {
+				has_war = no
+			}
+		}
+		RED_anti_fascism_8 = { #반파시즘 노동자전선
+			name = RED_anti_fascism
+			picture = SPR_the_popular_front
+			modifier = {
+				fascism_acceptance = -50
+				fascism_drift = -0.1
+				army_attack_against_major_factor = 0.27
+				army_defence_against_major_factor = 0.27
+				dig_in_speed_factor = 0.28
+				army_attack_speed_factor = 0.2
 			}
 			cancel = {
 				has_war = no
@@ -1614,11 +1756,11 @@ ideas = {
 			modifier = {
 				experience_gain_factor = -0.1
 				land_doctrine_cost_factor = 0.45
-				army_attack_factor = -0.05
-				army_defence_factor = -0.05
-				army_speed_factor = -0.05
-				army_org_factor = -0.05
-				army_org_regain = -0.05
+				army_attack_factor = -0.30
+				army_defence_factor = -0.30
+				army_speed_factor = -0.15
+				army_org_factor = -0.25
+				army_org_regain = -0.15
 			}
 		}
 		RED_doomed_army_idea = { # 난잡한 군대
@@ -1634,11 +1776,27 @@ ideas = {
 			modifier = {
 				experience_gain_factor = -0.4
 				land_doctrine_cost_factor = 1.25
-				army_attack_factor = -0.10
-				army_defence_factor = -0.10
-				army_speed_factor = -0.15
-				army_org_factor = -0.15
-				army_org_regain = -0.15
+				army_attack_factor = -0.50
+				army_defence_factor = -0.50
+				army_speed_factor = -0.25
+				army_org_factor = -0.35
+				army_org_regain = -0.25
+			}
+		}
+		RED_revolution_defender = { # 혁명수비대
+
+			picture = RED_office_ss
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				supply_combat_penalties_on_core_factor = -0.05
 			}
 		}
 		RED_office_ss_idea = { # 사무국 친위대
@@ -1652,6 +1810,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 			}

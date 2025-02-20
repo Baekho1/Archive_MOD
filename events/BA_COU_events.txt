@@ -190,13 +190,45 @@ country_event = { #총학생회장 실종
     		amount = 500
     		target = SHE
 		}
+		
 		promote_character = COU_null
+		
 		country_event = { id = COU_event.2 hours = 8 }
-		news_event = { hours = 48 id = BA_news.76 }
+		news_event = { id = BA_news.76 days = 7 }
 		set_country_flag = MISSINGGSCP
+		mark_focus_tree_layout_dirty = yes
 	}
 	
 }
+
+country_event = { 
+	id = COU_event.1001
+	title = COU_event.1001.t
+	desc = COU_event.1001.desc
+	picture = GFX_COU_event_gsc_meetingroom_night
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = COU
+		NOT = { has_global_flag = COU_event_1001_flag }
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	immediate = {
+		set_global_flag = COU_event_1001_flag
+	}
+
+	option = { 
+		name = COU_event.1001.a
+		custom_effect_tooltip = COU_tooltip_GSP_bad
+		add_stability = -0.01
+	}
+	
+}
+
 country_event = { #샬레랑 경쟁시키기
 	id = COU_event.2
 	title = COU_event.2.t
@@ -419,11 +451,33 @@ country_event = { #협력자 문제
 		add_political_power = 25
 		add_stability = -0.05
 	}
+	
 	option = { 
 		name = COU_event.6.a
 		remove_ideas = COU_dutch_collaboraters
-		set_country_flag = UNLOCK_KAYA_CONTENTS
 		custom_effect_tooltip = COU_tooltip_kaya_get_move
+		country_event = { id = COU_event.7 hours = 6 }
+		trigger = {
+		   NOT = { is_ai = yes }
+		   ##개발용 땜빵
+		}
+	}
+}
+
+##린 불신 
+country_event = { 
+	id = COU_event.7
+	title = COU_event.7.t
+	desc = COU_event.7.desc
+	picture = GFX_report_event_picture_kaya_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.7.a
+		set_country_flag = UNLOCK_KAYA_CONTENTS
+		custom_effect_tooltip = COU_tooltip_kaya_get_moved
 		hidden_effect = { #collapse focus tree
 			 load_focus_tree = {
 				tree = COU_focus_tree
@@ -433,8 +487,111 @@ country_event = { #협력자 문제
 			 complete_national_focus = COU_focus_in_the_darkness
 	    }
 	}
+}
+
+##린과의 개싸움 시작
+country_event = { 
+	id = COU_event.8
+	title = COU_event.8.t
+	desc = COU_event.8.desc
+	picture = GFX_COU_event_216
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = {
+		    activate_mission = COU_rin_getout_kaya
+		}
+	}
+
+	option = { 
+		name = COU_event.8.a
+		add_stability = -0.01
+		set_country_flag = COU_flag_acivate_norin_decision
+		set_country_flag = COU_deagree_out_rin
+		set_country_flag = COU_deagree_out_rin2
+		set_country_flag = COU_deagree_out_rin3
+		add_to_variable = { var = COU_rin_percen value = 10 }
+		#activate_mission = 
+		custom_effect_tooltip = COU_tooltip_kaya_coueventeight
+	}
+}
+
+##카야 패배 
+country_event = { 
+	id = COU_event.9
+	title = COU_event.9.t
+	desc = COU_event.9.desc
+	picture = GFX_COU_event_218
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.9.a
+		add_stability = -0.1
+		clr_country_flag = UNLOCK_KAYA_CONTENTS
+		clr_country_flag = COU_flag_acivate_norin_decision
+		custom_effect_tooltip = COU_tooltip_remove_kaya_contents
+		hidden_effect = { #collapse focus tree
+			 load_focus_tree = {
+				tree = COU_focus_tree
+				keep_completed = yes
+			 }
+			 mark_focus_tree_layout_dirty = yes
+			 complete_national_focus = COU_focus_in_the_darkness
+	    }
+	}
+}
+
+##기업인들과의 만남 
+country_event = { 
+	id = COU_event.10
+	title = COU_event.10.t
+	desc = COU_event.10.desc
+	picture = GFX_report_event_communist_leader
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.10.a
+		custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
+		add_one_random_civilian_factory = yes
+		custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
+		add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
+	}
+}
+
+
+##테스트용 이벤트
+
+country_event = { 
+	id = COU_event.100000
+	title = COU_event.100000.t
+	desc = COU_event.100000.desc
+	picture = GFX_report_event_fascist_militia
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.100000.a
+		trigger = {
+		   NOT = { is_ai = yes }
+		}
+	}
 	
 }
+
+##
 
 
 ##KIVOTOSALLIANCE

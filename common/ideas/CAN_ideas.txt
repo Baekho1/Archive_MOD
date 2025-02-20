@@ -90,6 +90,61 @@ ideas = {
 	
 	}
 	country = {
+		####### 분노 시스템 #######
+		CAN_parliament_anger_ns = {
+			on_add = {
+				add_dynamic_modifier = { modifier = CAN_parliament_anger_modifier }
+			}
+			on_remove = {
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_parliament_anger_modifier } }
+					remove_dynamic_modifier = { modifier = CAN_parliament_anger_modifier }
+					clear_variable = CAN_par_anger_pp
+					clear_variable = CAN_par_anger_cg
+				}
+			}
+			picture = ENG_canada_government
+			modifier = {
+				custom_modifier_tooltip = CAN_parliament_anger_modifier_tt
+			}
+		}
+		CAN_popular_anger_ns = {
+			on_add = {
+				add_dynamic_modifier = { modifier = CAN_popular_anger_modifier }
+			}
+			on_remove = {
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_popular_anger_modifier } }
+					remove_dynamic_modifier = { modifier = CAN_popular_anger_modifier }
+					clear_variable = CAN_popular_anger_stability 
+					clear_variable = CAN_popular_anger_factory_output
+				}
+			}
+			picture = prc_low_popular_support3
+			modifier = {
+				custom_modifier_tooltip = CAN_popular_anger_modifier_tt
+			}
+		}
+		CAN_british_anger_ns = {
+			on_add = {
+				add_dynamic_modifier = { modifier = CAN_british_anger_modifier }
+			}
+			on_remove = {
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_british_anger_modifier } }
+					remove_dynamic_modifier = { modifier = CAN_british_anger_modifier }
+					clear_variable = CAN_british_anger_pps 
+					clear_variable = CAN_british_anger_army_org
+				}
+			}
+			picture = ENG_exile_uk
+			modifier = {
+				custom_modifier_tooltip = CAN_british_anger_modifier_tt
+			}
+		}
+		
+		####### 분노 시스템 #######
+
 		ENG_french_governor = { #프랑스인 총독
 			picture = FRA_undividable
 			

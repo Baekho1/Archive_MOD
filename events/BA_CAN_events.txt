@@ -1,4 +1,8 @@
 add_namespace = IMP_event
+add_namespace = impblack
+add_namespace = impindia
+add_namespace = imp_deal
+add_namespace = IMP
 country_event = { #왕립해군과 육군의 귀환
 	id = IMP_event.1
 	title = IMP_event.1.t
@@ -673,7 +677,6 @@ country_event = { #거절당함
 	}
 }
 
-add_namespace = IMP
 
 
 country_event = { # 국왕의 연설 
@@ -775,13 +778,11 @@ country_event = { # 국왕의 연설 반응
 				remove_idea = ENG_king_edward
 			}
 		}
+		add_ideas = CAN_parliament_anger_ns
+		add_ideas = CAN_popular_anger_ns
+		add_ideas = CAN_british_anger_ns
 		if = { # 국왕이 영국 망명자를 지지함
 			limit = { has_country_flag = CAN_address_war }
-			hidden_effect = {
-				add_ideas = ENG_UK_exile_support_idea_3
-				add_ideas = ENG_Canada_Government_support_idea_1
-				add_ideas = ENG_people_support_idea_2
-			}
 			custom_effect_tooltip = IMP_by_parliament
 			add_stability = -0.1
 			custom_effect_tooltip = IMP_by_uk_exile
@@ -789,17 +790,12 @@ country_event = { # 국왕의 연설 반응
 		}
 		if = { # 캐나다 정부 지지
 			limit = { has_country_flag = CAN_address_gov }
-			hidden_effect = {
-				add_ideas = ENG_UK_exile_support_idea_2
-				add_ideas = ENG_Canada_Government_support_idea_2
-				add_ideas = ENG_people_support_idea_2
-			}
 			custom_effect_tooltip = IMP_by_parliament
 			add_stability = 0.05
-			ENG_can_gov_support_up = yes
 			custom_effect_tooltip = IMP_by_uk_exile
 			add_war_support = -0.1
-			ENG_uk_support_down = yes
+			set_temp_variable = {}
+			CAN_change_par_anger = yes
 		}
 	}
 }
@@ -965,6 +961,22 @@ country_event = { # 자유당과 보수당
 
 	option = {
 		name = IMP.7.a
+		set_party_name = {
+			ideology = neutrality
+			long_name = ENG_democratic_party
+			name = ENG_democratic_party
+		}
+		add_country_leader_role = {
+			character = IMP_winston_churchill
+			country_leader = {
+				ideology = centrism
+				traits = { 
+					british_bulldog
+					hawk
+				}
+			}
+			promote_leader = yes
+		}
 		custom_effect_tooltip = IMP_by_uk_exile
 		add_stability = 0.05
 		add_political_power = 25
@@ -1006,7 +1018,42 @@ country_event = { # ㄷㅂㄱ
 
 	}
 }
-add_namespace = impindia
+country_event = { # ㄷㅂㄱ
+	id = IMP.1001
+	title = IMP.1001.t
+	desc = IMP.1000.desc
+	picture = GFX_report_event_king_speech
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_ideas = CAN_parliament_anger_ns
+		add_ideas = CAN_popular_anger_ns
+		add_ideas = CAN_british_anger_ns
+	}
+
+	option = {
+		name = IMP.1001.a
+		trigger = { is_debug = yes }
+		set_temp_variable = { CAN_anger_change = 1 }
+		CAN_change_par_anger = yes
+	}
+
+	option = {
+		name = IMP.1001.b
+		trigger = { is_debug = yes }
+		set_temp_variable = { CAN_anger_change = -1 }
+		CAN_change_people_anger = yes
+	}
+
+	option = {
+		name = IMP.1001.c
+		trigger = { is_debug = yes }
+		set_temp_variable = { CAN_anger_change = 1 }
+		CAN_change_british_anger = yes
+	}
+}
 country_event = { #파키스탄 승인
 	id = impindia.1
 	title = impindia.1.t
@@ -1391,20 +1438,6 @@ country_event = { # 아대륙 방위 계획
 			type = annex_everything
 		}
 	}
-	option = { # 매켄지 킹 반응 - 협상 레츠고~~
-		name = impindia.12.b
-		trigger = { is_debug = yes}
-		trigger = { has_country_flag = mackenzie_king_is_leader_falg  }
-		ai_chance = {
-			base = 10
-			modifier = {
-				has_country_flag = mackenzie_king_is_leader_falg
-				add = 4000
-			}
-		}
-		set_country_flag = IMP_we_cant_select_india_focus
-		HND = { country_event = impindia.13 }
-	}
 }
 country_event = { # 
 	id = impindia.13
@@ -1449,104 +1482,142 @@ country_event = { #
 	option = { # 협상을 수락함 -> 반응
 		name = impindia.15.a
 		HND = {
-			country_event = { id = impindia.16 }
+			country_event = { id = imp_deal.1 }
 		}
 	}
 }
-country_event = { # 
-	id = impindia.16
-	title = {
-		text = impindia.16.t
-		trigger = {
-			NOT = {
-				has_country_flag = HND_we_want_independence
-				has_country_flag = HND_we_want_status
-				has_country_flag = HND_we_want_industrialization
-				has_country_flag = HND_we_want_socialism
-			}
-		}
-	}
-	title = {
-		text = impindia.16.t.return
-		trigger = {
-			OR = {
-				has_country_flag = HND_we_want_independence
-				has_country_flag = HND_we_want_status
-				has_country_flag = HND_we_want_industrialization
-				has_country_flag = HND_we_want_socialism
-			}
-		}
-	}
-	desc = {
-		text = impindia.16.desc
-		trigger = {
-			NOT = {
-				has_country_flag = HND_we_want_independence
-				has_country_flag = HND_we_want_status
-				has_country_flag = HND_we_want_industrialization
-				has_country_flag = HND_we_want_socialism
-			}
-		}
-	}
-	desc = {
-		text = impindia.16.desc.return
-		trigger = {
-			OR = {
-				has_country_flag = HND_we_want_independence
-				has_country_flag = HND_we_want_status
-				has_country_flag = HND_we_want_industrialization
-				has_country_flag = HND_we_want_socialism
-			}
-		}
-	}
+country_event = { # 무조건 독립 시켜줘
+	id = imp_deal.1
+	title = imp_deal.1.t
+	desc = imp_deal.1.desc
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # 
-		name = impindia.16.a
-		trigger = { NOT = { has_country_flag = HND_we_want_independence} }
-		set_country_flag = HND_we_want_independence
-	}
-	option = { # 
-		name = impindia.16.b
-		trigger = { NOT = { has_country_flag = HND_we_want_status} }
-		set_country_flag = HND_we_want_status
-	}
-	option = { # 
-		name = impindia.16.c
-		trigger = { NOT = { has_country_flag = HND_we_want_industrialization} }
-		set_country_flag = HND_we_want_industrialization
-	}
-	option = { # 
-		name = impindia.16.d
-		trigger = { NOT = { has_country_flag = HND_we_want_socialism} }
-		set_country_flag = HND_we_want_socialism
-	}
-	option = { # 
-		name = impindia.16.d
-		trigger = {
-			OR = {
-				has_country_flag = HND_we_want_independence
-				has_country_flag = HND_we_want_status
-				has_country_flag = HND_we_want_industrialization
-				has_country_flag = HND_we_want_socialism
+		name = imp_deal.1.a
+		ENG = {
+			country_event = {
+				id = imp_deal.2
+				days = 04
 			}
 		}
 	}
 }
+country_event = { # 독립 시켜줘 말아?
+	id = imp_deal.2
+	title = imp_deal.2.t
+	desc = imp_deal.2.desc
 
-# 너 협상 저거 몇 번 이벤트까지 만들 거야
-# 협상 이벤트를 줄줄히 만든다는 생각을 하는거 부터 FUN, COOL, SEXY 하지 않네요.
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = imp_deal.2.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 90
+				ENG = { has_country_flag = mackenzie_king_is_leader_falg }
+			}
+		}
+		HND = {
+			country_event = { id = imp_deal.3 days = 06 }
+		}
+	}
+
+	option = { # 
+		name = imp_deal.2.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 90
+				ENG = { 
+					NOT = {
+						has_country_flag = mackenzie_king_is_leader_falg 
+					}
+				}
+			}
+		}
+		HND = {
+			country_event = { id =  imp_deal.4 days = 06 }
+		}
+	}
+}
+
+country_event = { # 무조건 독립 - 반응
+	id = imp_deal.3
+	title = imp_deal.3.t
+	desc = imp_deal.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = imp_deal.3.a
+		annex_country = {
+			target = RAJ
+			transfer_troops = yes
+		}
+		ENG = {
+			country_event = { id =  imp_deal.5 days = 02 }
+		}
+	}
+}
+
+country_event = { # 독립 거부 - 반응
+	id = imp_deal.4
+	title = imp_deal.4.t
+	desc = imp_deal.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = imp_deal.4.a
+		ENG = {
+			country_event = { id = imp_deal.6 }
+		}
+	}
+}
+
+country_event = { # 
+	id = imp_deal.5
+	title = imp_deal.5.t
+	desc = imp_deal.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = imp_deal.5.a
+		clr_country_flag = IMP_we_cant_select_india_focus
+		set_country_flag = IMP_deal_success
+	}
+}
+
+country_event = { # 협상 파기
+	id = imp_deal.6
+	title = imp_deal.6.t
+	desc = imp_deal.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = imp_deal.6.a
+		clr_country_flag = IMP_we_cant_select_india_focus
+	}
+}
 
 country_event = { # "인도를 떠나라!"
-	id = impindia.20
-	title = impindia.20.t
-	desc = impindia.20.desc
+	id = impindia.30
+	title = impindia.30.t
+	desc = impindia.30.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { # 큰일이군.
-		name = impindia.20.a
+		name = impindia.30.a
 		add_war_support = -0.03
 		429 = {
 			set_demilitarized_zone = yes
@@ -1561,43 +1632,43 @@ country_event = { # "인도를 떠나라!"
 }
 
 country_event = { # 인도인들 시위 
-	id = impindia.21
-	title = impindia.20.t
-	desc = impindia.21.desc
+	id = impindia.31
+	title = impindia.30.t
+	desc = impindia.31.desc
 	
 	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { # 큰일이군.
-		name = impindia.21.a
+		name = impindia.31.a
 		RAJ = { add_stability = -0.03 }
 	}
 }
 
 country_event = { # 격화 되는 인도인 시위!
-	id = impindia.22
-	title = impindia.22.t
-	desc = impindia.22.desc
+	id = impindia.32
+	title = impindia.32.t
+	desc = impindia.32.desc
 	
 	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { # 큰일이군.
-		name = impindia.22.a
+		name = impindia.32.a
 		RAJ = { add_stability = -0.05 }
 	}
 }
 
 country_event = { # 총파업
-	id = impindia.23
+	id = impindia.33
 	title = bftb_bulgaria_factions.20.t
-	desc = impindia.23.desc
+	desc = impindia.33.desc
 	
 	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { # 큰일이군.
-		name = impindia.23.a
+		name = impindia.33.a
 		effect_tooltip = {
 			RAJ = { 
 				if = {
@@ -1621,7 +1692,7 @@ country_event = { # 총파업
 country_event = { # 총파업
 	id = impindia.24
 	title = bftb_bulgaria_factions.20.t
-	desc = impindia.23.desc
+	desc = impindia.33.desc
 	
 	fire_only_once = no
 	is_triggered_only = yes
@@ -1646,15 +1717,15 @@ country_event = { # 총파업
 }
 
 country_event = { # 봄베이로 결집하는 사회주의자들!
-	id = impindia.25
-	title = impindia.25.t
-	desc = impindia.25.desc
+	id = impindia.35
+	title = impindia.35.t
+	desc = impindia.35.desc
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # 어어..
-		name = impindia.25.a
+		name = impindia.35.a
 		429 = { set_demilitarized_zone = no }
 		HND = {
 			transfer_state = 429
@@ -1667,8 +1738,24 @@ country_event = { # 봄베이로 결집하는 사회주의자들!
 	}
 }
 
+country_event = { # 인도에서의 실패
+	id = impindia.36
+	title = impindia.36.t
+	desc = impindia.36.desc
+	
+	fire_only_once = yes
+	is_triggered_only = yes
 
-add_namespace = impblack
+	option = { # ㅜㅜ
+		name = impindia.36.a
+		set_temp_variable = { CAN_anger_change = 1 }
+		CAN_change_par_anger = yes
+		CAN_change_people_anger = yes
+		CAN_change_british_anger = yes
+	}
+}
+
+
 country_event = { #어라 야발 캐나다의 경제가??
 	id = impblack.0
 	title = impblack.0.t

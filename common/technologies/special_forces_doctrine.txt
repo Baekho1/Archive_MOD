@@ -1430,11 +1430,12 @@ technologies = {
 		doctrine_name = "CAVALRY_DOCTRINE"
 		
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 
 		#xor = { special_forces_marines special_forces_paratroopers special_forces_mountaineers }
 
 		force_use_small_tech_layout = yes
+		special_forces_cap = 0.06
 		halo_special_forces = {
 			supply_consumption = -0.02
 			soft_attack = 0.05
@@ -1444,6 +1445,9 @@ technologies = {
 			AND = {
 				has_tech = kivotos_halo_special_forces 
 				can_unlock_new_special_forces_tree = yes
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
 			}
 		}
 
@@ -1461,6 +1465,10 @@ technologies = {
 		}
 		on_research_complete = {
 			remove_potential_special_forces_tree = yes
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
 		}
 		doctrine = yes	
 		research_cost = 2.25
@@ -1485,7 +1493,7 @@ technologies = {
 	plain_cavalry = {
 		
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		force_use_small_tech_layout = yes
 		xor = { desert_cavalry }
 		folder = {
@@ -1510,6 +1518,20 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2.25
 		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
+		
 		categories = {
 			special_forces_doctrine
 			cat_halo_doctrine
@@ -1525,7 +1547,7 @@ technologies = {
 	desert_cavalry = {
 		
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 
 		force_use_small_tech_layout = yes
 		xor = { plain_cavalry }
@@ -1553,6 +1575,20 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2.25
 		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
+		
 		categories = {
 			special_forces_doctrine
 			cat_halo_doctrine
@@ -1567,7 +1603,7 @@ technologies = {
 	}
 	military_police_cavalry = {
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
 		path = {
@@ -1578,11 +1614,26 @@ technologies = {
 			leads_to_tech = fearless_cavalry
 			research_cost_coeff = 1
 		}
+		special_forces_cap = 0.06
 		
 		category_halo_special_forces = {
 			initiative = 0.01
 		}
 		unit_halo_recon_design_cost_factor = -1
+		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
 		folder = {
 			name = special_forces_doctrine_folder
 			position = { x = 0 y = 4 }
@@ -1606,7 +1657,7 @@ technologies = {
 	}
 	cavalry_sniper = {
 		xp_research_type = air
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
 		
@@ -1624,6 +1675,20 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2.5
 		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
+		
 		categories = {
 			special_forces_doctrine
 			cat_halo_doctrine
@@ -1639,7 +1704,7 @@ technologies = {
 	}
 	fearless_cavalry = {
 		xp_research_type = navy
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
 		naval_invasion_planning_bonus_speed = 0.25
@@ -1656,6 +1721,20 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2.5
 		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
+		
 		categories = {
 			special_forces_doctrine
 			cat_halo_doctrine
@@ -1671,13 +1750,14 @@ technologies = {
 	}
 	artillery_support_cavalry = {
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
 		halo_special_forces = {
 			defense = 0.1
 			max_organisation = 5
 		}
+		special_forces_cap = 0.06
 		on_research_complete = {
 			custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
 			set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
@@ -1698,6 +1778,20 @@ technologies = {
 		doctrine = yes	
 		research_cost = 4.5
 		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
+		
 		categories = {
 			special_forces_doctrine
 			cat_halo_doctrine
@@ -1713,7 +1807,7 @@ technologies = {
 	}
 	organized_cavalry = {
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
 		halo_special_forces = {
@@ -1724,6 +1818,7 @@ technologies = {
 			set_variable = { BA_halo_special_forces_cap_edit_var = 3 }
 			BA_halo_special_forces_cap_edit_effect = yes
 		}
+		special_forces_cap = 0.06
 		special_forces_training_time_factor = -0.20
 		folder = {
 			name = special_forces_doctrine_folder
@@ -1732,6 +1827,20 @@ technologies = {
 		xor = { agressive_cavalry }
 		doctrine = yes	
 		research_cost = 4.5
+		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
 		
 		categories = {
 			special_forces_doctrine
@@ -1749,10 +1858,9 @@ technologies = {
 	
 	agressive_cavalry = {
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 10
 		
 		force_use_small_tech_layout = yes
-		special_forces_cap = 0.10
 		halo_special_forces = {
 			soft_attack = 0.15
 			breakthrough = 0.15
@@ -1771,6 +1879,20 @@ technologies = {
 		xor = { organized_cavalry }
 		doctrine = yes	
 		research_cost = 4.5
+		
+		allow = { 
+			AND = {
+				has_equipment = {
+   					kivotos_infantry_equipment > 49
+				}
+			}
+		}
+		on_research_complete = {
+			add_equipment_to_stockpile = {
+				type = kivotos_infantry_equipment
+				amount = -50
+			}
+		}
 		
 		categories = {
 			special_forces_doctrine

@@ -7,6 +7,7 @@ add_namespace = TRM_ironsword_event
 
 add_namespace = trnstory
 add_namespace = trinity
+add_namespace = trnhonor
 add_namespace = trinitynews
 country_event = {
 	id = TRM_event.1
@@ -3388,10 +3389,11 @@ country_event = { # 미카의 트리니티가 전쟁 하면 이 이벤트가 보
 	picture = GFX_report_event_chamberlain
 
 	is_triggered_only = yes
-    fire_only_once = yes
+    fire_only_once = no
 
 	option = { # 중점 잠구기
 		name = TRMDIP.16.a
+		set_country_flag = TRM_focus_locked_flag
 		custom_effect_tooltip = TRM_focus_locked_flag_tt
 	}
 }
@@ -5116,24 +5118,6 @@ country_event = { # 디버그 이벤트
 				character = TRN_alzk
 				civilian = { 
 					large = GFX_TRN_Misono_Mika_Portrait_Official
-				}
-			}
-	}
-	option = {
-		name = TRM_event.2003.b
-			set_portraits = {
-				character = TRN_alzk
-				civilian = { 
-					large = GFX_TRN_Misono_Mika_Portrait_Fan_made
-				}
-			}
-	}
-	option = {
-		name = TRM_event.2003.c
-			set_portraits = {
-				character = TRN_alzk
-				civilian = { 
-					large = GFX_TRN_Misono_Mika_Portrait_Fan_made_2
 				}
 			}
 	}
@@ -8413,6 +8397,10 @@ country_event = { # 티파티 통제
 	option = {
 		name = trinity.10000.a
 		country_event = { id = trinity.6 days = 03 }
+		swap_ideas = {
+			remove_idea = TRM_safe_trinity
+			add_idea = TRN_political_instability_ns
+		}
 		load_focus_tree = {
 			tree = Trinity_focus
 		}
@@ -8502,6 +8490,11 @@ country_event = { # 미소노 미카 법
 			popularity = 0.20
 		}
 		set_politics = { ruling_party = fascism elections_allowed = no }
+		custom_effect_tooltip = TRM_pater_union_tt
+		remove_country_leader_trait = TRM_pater_faction
+		set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
+		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+		custom_effect_tooltip = TRN_tooltip_delete_powers
     }
 }
 country_event = { # 마지막 자유 발언
@@ -8585,8 +8578,8 @@ country_event = { # 가슴에 3발
 		name = trinity.9.a
 		add_stability = -0.05
 		swap_ideas = {
-			remove_idea = TRM_safe_trinity
-			add_idea = TRM_great_depression
+			remove_idea = TRN_political_instability_ns
+			add_idea = TRN_broken_balance_ns
 		}
 		add_trait = {
 			character = TRN_tpdldk
@@ -8755,10 +8748,6 @@ country_event = { # 정의실현부 작전
 				}
 			}
 			add_timed_unit_leader_trait = {
-				trait = reassigned 
-				days = 180
-			}
-			add_timed_unit_leader_trait = {
 				trait = disgruntled 
 				days = 180
 			}
@@ -8820,14 +8809,14 @@ country_event = { # 대법관 임명
 	id = trinity.18
 	title = trinity.18.t
 	desc = trinity.18.desc
-	picture = GFX_report_event_generic_funeral
+	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trinity.18.a
-		
+		add_political_power = 50
     }
 }
 news_event = {

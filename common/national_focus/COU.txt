@@ -1,6 +1,6 @@
 focus_tree = {
 	id = COU_focus_tree
-	continuous_focus_position = { x = 100 y = 800 } 
+	continuous_focus_position = { x = 1800 y = 200 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -29,7 +29,7 @@ focus_tree = {
 
 	focus = { #비상대책위원회 수립
 		id = COU_establishment_of_emergency_measures_committee
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_COU_establishment_of_emergency_measures_committee
 		offset = {
 			x = -15
 			y = 0
@@ -47,12 +47,9 @@ focus_tree = {
 		}
 		x = 32
 		y = 0
-		cost = 5
+		cost = 10
+		dynamic = yes
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = COU_missing_XXX_tt
-				has_country_flag = MISSINGGSCP
-			}
 		}
 		text_icon = NORDIC_focus_style
 		search_filters = {
@@ -63,75 +60,40 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4000
 		}
-		completion_reward = {
-			add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
-			promote_character = COU_RIN
 
-			set_party_name = {
-				ideology = democratic
-				long_name = COU_emergency_committee_democratic_party_long
-				name = COU_emergency_committee_democratic_party
+		cancelable = no
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = MISSINGGSCP }
+				add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
+				promote_character = COU_RIN
+				add_political_power = 100
+				add_stability = 0.1
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
 			}
-			set_party_name = {
-				ideology = communism
-				long_name = COU_emergency_committee_communism_party_long
-				name = COU_emergency_committee_communism_party
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = COU_emergency_committee_fascism_party_long
-				name = COU_emergency_committee_fascism_party
-			}
-			set_party_name = {
-				ideology = neutrality
-				long_name = COU_emergency_committee_neutrality_party_long
-				name = COU_emergency_committee_neutrality_party
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.40
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.30
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.20
+			else = {
+				add_political_power = 100
+				add_stability = 0.1
 			}
 		}
 	}
-
-	focus = { #행정위원회 결집
-		id = COU_question_about_acting_authority
-		icon = GFX_goal_generic_propaganda
+	
+	focus = { #인권위원회 설립
+		id = COU_establishment_of_human_rights_committee
+		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
 		x = 0
-		y = 2
-		relative_position_id = COU_establishment_of_emergency_measures_committee
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			add_political_power = 120
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.10
-			}
-		}
-	}
-
-	focus = { #비상 계엄
-		id = COU_martial_measures
-		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = -2
 		y = 1
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -144,11 +106,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
-			}
-			COU_cut_tower_down_effect = yes
+			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
+			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
 		}
 	}
 
@@ -156,8 +115,8 @@ focus_tree = {
 		id = COU_crackdown_on_anti_kivotos_activities
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = -4
-		y = 2
+		x = -3
+		y = 1
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
 		available = {
@@ -182,10 +141,36 @@ focus_tree = {
 		}
 	}
 
-	focus = { #SRT와 접촉
-		id = COU_political_intervention_of_SRT
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = COU_martial_measures }
+	focus = { #행정위원회 결집
+		id = COU_question_about_acting_authority
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = COU_crackdown_on_anti_kivotos_activities }
+		x = -4
+		y = 2
+		relative_position_id = COU_establishment_of_emergency_measures_committee
+		cost = 5
+		available = {
+			NOT = { has_completed_focus = COU_normalization_of_administration }
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+	
+	
+	focus = { #경찰학교 권한 강화
+		id = COU_strengthening_of_valkyrie_authority
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = COU_crackdown_on_anti_kivotos_activities }
 		x = -2
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
@@ -199,13 +184,37 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			custom_effect_tooltip = COU_political_intervention_of_SRT_tt
-			add_to_variable = { COU_emergency_measures_committee_army_core_attack_factor = 0.05 }
-			add_to_variable = { COU_emergency_measures_committee_army_core_defence_factor = 0.05 }
 			add_popularity = {
-				ideology = fascism
+				ideology = neutrality
 				popularity = 0.10
 			}
+			COU_cut_tower_down_effect = yes
+		}
+	}
+
+	focus = { #연방산업위원회 설립
+		id = COU_establishment_of_federal_industrial_committee
+		icon = GFX_focus_COU_aoi_with_companys
+		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority }
+		x = -3
+		y = 3
+		relative_position_id = COU_establishment_of_emergency_measures_committee
+		cost = 5
+		available = {
+			NOT = { has_completed_focus = COU_normalization_of_administration }
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+			#custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
+			#add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
+			country_event = COU_event.10
+			#custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
+			#add_one_random_civilian_factory = yes
+			#set_country_flag = COU_yes_sanub
 		}
 	}
 
@@ -213,7 +222,7 @@ focus_tree = {
 		id = COU_expedited_administrative_processing
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -230,7 +239,11 @@ focus_tree = {
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.05 }
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.10
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
 			}
 			COU_cut_tower_down_effect = yes
 		}
@@ -240,7 +253,7 @@ focus_tree = {
 		id = COU_opening_of_local_culture
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = COU_expedited_administrative_processing }
-		x = 2
+		x = 4
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -258,11 +271,7 @@ focus_tree = {
 			add_to_variable = { COU_emergency_measures_committee_global_building_slots_factor = 0.05 }
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+				popularity = 0.10
 			}
 		}
 	}
@@ -270,9 +279,9 @@ focus_tree = {
 	focus = { #자치 보장
 		id = COU_expansion_of_autonomy
 		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = 4
-		y = 1
+		prerequisite = { focus = COU_expedited_administrative_processing }
+		x = 2
+		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
 		available = {
@@ -295,13 +304,13 @@ focus_tree = {
 			COU_cut_tower_down_effect = yes
 		}
 	}
-
+	
 	focus = { #행정위원회 권한 축소
 		id = COU_reduction_of_administrative_committee_authority
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = COU_expansion_of_autonomy }
-		x = 4
-		y = 2
+		prerequisite = { focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
+		x = 3
+		y = 3
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
 		available = {
@@ -316,8 +325,12 @@ focus_tree = {
 			custom_effect_tooltip = COU_reduction_of_administrative_committee_authority_tt
 			add_to_variable = { COU_emergency_measures_committee_political_advisor_cost_factor = -0.25 }
 			add_popularity = {
-				ideology = communism
-				popularity = 0.10
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
 			}
 		}
 	}
@@ -325,7 +338,7 @@ focus_tree = {
 	focus = { #기반 시설 복구
 		id = COU_infrastructure_restoration
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = COU_crackdown_on_anti_kivotos_activities focus = COU_political_intervention_of_SRT focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_reduction_of_administrative_committee_authority }
+		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_expansion_of_autonomy focus = COU_opening_of_local_culture focus = COU_question_about_acting_authority }
 		x = 0
 		y = 3
 		relative_position_id = COU_establishment_of_emergency_measures_committee
@@ -347,128 +360,19 @@ focus_tree = {
 				}
 			}
 			add_one_random_civilian_factory = yes
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
 			COU_cut_tower_down_effect = yes
-		}
-	}
-
-	focus = { #인권위원회 설립
-		id = COU_establishment_of_human_rights_committee
-		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = COU_infrastructure_restoration }
-		x = 2
-		y = 2
-		relative_position_id = COU_infrastructure_restoration
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
-			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-		}
-	}
-
-	focus = { #노동부 설립
-		id = COU_union_negotiation
-		icon = GFX_focus_FIN_socialist_welfare
-		prerequisite = { focus = COU_infrastructure_restoration }
-		x = 4
-		y = 2
-		relative_position_id = COU_infrastructure_restoration
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			custom_effect_tooltip = COU_union_negotiation_tt
-			add_to_variable = { COU_emergency_measures_committee_factory_max_efficiency_factor = 0.10 }
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-		}
-	}
-
-	focus = { #경찰학교 권한 강화
-		id = COU_strengthening_of_valkyrie_authority
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = COU_infrastructure_restoration }
-		x = -2
-		y = 2
-		relative_position_id = COU_infrastructure_restoration
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.10
-			}
-			COU_cut_tower_down_effect = yes
-		}
-	}
-
-	focus = { #연방산업위원회 설립
-		id = COU_establishment_of_federal_industrial_committee
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = COU_infrastructure_restoration }
-		x = 0
-		y = 1
-		relative_position_id = COU_infrastructure_restoration
-		cost = 10
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
-			add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			set_country_flag = COU_yes_sanub
 		}
 	}
 
 	focus = { #수직적 통합
 		id = COU_vertical_integration
 		icon = GFX_focus_SOV_merge_plants
-		prerequisite = { focus = COU_establishment_of_federal_industrial_committee }
-		x = 0
-		y = 2
+		prerequisite = { focus = COU_infrastructure_restoration }
+		mutually_exclusive = { focus = COU_union_negotiation }
+		x = -1
+		y = 1
 		relative_position_id = COU_infrastructure_restoration
-		cost = 10
+		cost = 5
 		available = {
 			NOT = { has_completed_focus = COU_normalization_of_administration }
 		}
@@ -486,14 +390,19 @@ focus_tree = {
 				ideology = democratic
 				popularity = -0.05
 			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
 		}
 	}
-
-	focus = { #부서 병합
-		id = COU_reorganization_of_administrative_committee
-		icon = GFX_focus_generic_annex_country
+	
+	focus = { #노동부 설립
+		id = COU_union_negotiation
+		icon = GFX_focus_generic_communist
 		prerequisite = { focus = COU_infrastructure_restoration }
-		x = -4
+		mutually_exclusive = { focus = COU_vertical_integration }
+		x = 1
 		y = 1
 		relative_position_id = COU_infrastructure_restoration
 		cost = 5
@@ -506,44 +415,15 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			custom_effect_tooltip = COU_reorganization_of_administrative_committee_tt
-			add_to_variable = { COU_emergency_measures_committee_economy_cost_factor = -0.15 }
-			add_to_variable = { COU_emergency_measures_committee_mobilization_laws_cost_factor = -0.15 }
-			add_to_variable = { COU_emergency_measures_committee_trade_laws_cost_factor = -0.15 }
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.10
-			}
+			custom_effect_tooltip = COU_union_negotiation_tt
+			add_to_variable = { COU_emergency_measures_committee_factory_max_efficiency_factor = 0.10 }
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.10
+				popularity = -0.05
 			}
-		}
-	}
-
-	focus = { #방위실 재편
-		id = COU_restructuring_of_defense_office
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = COU_reorganization_of_administrative_committee }
-		x = -4
-		y = 2
-		relative_position_id = COU_infrastructure_restoration
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			custom_effect_tooltip = COU_restructuring_of_defense_office_tt
-			add_to_variable = { COU_emergency_measures_committee_mobilization_speed = 0.05 }
-			add_to_variable = { COU_emergency_measures_committee_land_reinforce_rate = 0.05 }
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
+				ideology = neutrality
+				popularity = -0.05
 			}
 		}
 	}
@@ -551,9 +431,9 @@ focus_tree = {
 	focus = { #행정 정상화
 		id = COU_normalization_of_administration
 		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = COU_restructuring_of_defense_office focus = COU_strengthening_of_valkyrie_authority focus = COU_vertical_integration focus = COU_establishment_of_human_rights_committee focus = COU_union_negotiation }
+		prerequisite = { focus = COU_union_negotiation focus = COU_vertical_integration }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = COU_infrastructure_restoration
 		cost = 5
 		available = {
@@ -648,7 +528,7 @@ focus_tree = {
 	focus = {
 		id = COU_focus_in_the_darkness
 		icon = GFX_COU_in_the_darkness
-		prerequisite = { focus = COU_normalization_of_administration }
+		#prerequisite = { focus = COU_normalization_of_administration }
 		mutually_exclusive = { focus = COU_stabilization_of_the_student_council focus = COU_establishment_of_autonomous_system }
 		allow_branch = {
 			if = {
@@ -663,8 +543,20 @@ focus_tree = {
 				has_country_flag = UNLOCK_KAYA_CONTENTS
 			}
 		}
-		x = 15
-		y = 1
+		offset = {
+			x = 20
+			y = -1
+			trigger = {
+				NOT = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+			}
+		}
+		x = 0
+		y = 2
 		relative_position_id = COU_normalization_of_administration
 		cost = 0
 		available = { always = no }
@@ -682,24 +574,27 @@ focus_tree = {
         x = 0
         y = 4
         cost = 5
+		available = { always = no }
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		     
         }
 	}
 	
+	####집권하기까지 필요한 중점들
 	##린 불신 
 	focus = {
         id = COU_focus_remove_the_line
         icon = GFX_COU_remove_the_line
         x = -2
         y = 1
-        cost = 5
+        cost = 1
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+			country_event = COU_event.8
+		    custom_effect_tooltip = COU_tooltip_kaya_started_game
         }
 	}
 	
@@ -750,6 +645,7 @@ focus_tree = {
         x = 2
         y = 1
         cost = 5
+		available = { has_completed_focus = COU_focus_remove_the_line }
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
@@ -816,9 +712,10 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = COU_autonomous_legislation }
+				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
 			}
 		}
-		x = 0
+		x = 7
 		y = 1
 		relative_position_id = COU_normalization_of_administration
 		cost = 5
@@ -858,6 +755,7 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = COU_student_council_amendment }
 				NOT = { has_completed_focus = COU_impeachment_of_chief_executive }
+				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
 			}
 		}
 		offset = {
@@ -873,7 +771,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = -15
+		x = -7
 		y = 1
 		relative_position_id = COU_normalization_of_administration
 		cost = 10

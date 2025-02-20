@@ -898,8 +898,8 @@ RED_labor_party_dynamic_modifier = { #용역부
 	icon = GFX_idea_portrait_RED_minori
 
 	industrial_capacity_factory = RED_labor_party_dynamic_modifier_industrial_capacity_factory
-	industrial_capacity_dockyard = 0.05
-	production_speed_buildings_factor = 0.05
+	industrial_capacity_dockyard = 0.03
+	production_speed_buildings_factor = 0.03
 	production_speed_coastal_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_coastal_bunker_factor
 	production_speed_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_bunker_factor
 	production_factory_max_efficiency_factor = RED_labor_party_dynamic_modifier_production_factory_max_efficiency_factor
@@ -911,6 +911,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 	unit_artillery_brigade_design_cost_factor = RED_labor_party_dynamic_modifier_unit_artillery_brigade_design_cost_factor
 	political_power_factor = RED_labor_party_dynamic_modifier_political_power_factor
 	research_speed_factor = RED_labor_party_dynamic_modifier_iresearch_speed_factor
+	#design_cost
 }
 RED_zenkyoutou_cat_dynamic_modifier = { #전공투
 	enable = {
@@ -1943,6 +1944,10 @@ ABY_army_dynamic_modifier_manual = {
 	ARMY_ARMOR_DEFENCE_FACTOR = ABY_var_ARMY_ARMOR_DEFENCE_FACTOR
 	modifier_army_sub_unit_category_halo_attack_factor = ABY_var_modifier_army_sub_unit_category_halo_attack_factor
 	modifier_army_sub_unit_category_halo_defence_factor = ABY_var_modifier_army_sub_unit_category_halo_defence_factor
+	mountaineers_special_forces_contribution_factor = ABY_var_mountaineers_special_forces_contribution_factor
+	paratroopers_special_forces_contribution_factor = ABY_var_paratroopers_special_forces_contribution_factor
+	marines_special_forces_contribution_factor = ABY_var_marines_special_forces_contribution_factor
+	special_forces_cap = ABY_var_special_forces_cap
 
 	#navy
 	navy_org_factor = ABY_var_NAVY_ORG_FACTOR
@@ -1973,6 +1978,8 @@ ABY_two_dynamic_modifier = {
 		always = yes
 	}
 	icon = ETH_conservative_high_command
+
+	non_core_manpower = 0.2
 
 	political_power_factor = ABY_var_political_power_factor
 	stability_factor = ABY_var_stability_factor
@@ -2238,4 +2245,19 @@ SHA_aup_modifier = {
 	political_power_cost = SHA_aup_pp
 	stability_factor = SHA_aup_stability
 	industrial_capacity_factory = SHA_aup_factory_output
+}
+
+CAN_parliament_anger_modifier = {
+	political_power_cost = CAN_par_anger_pp
+	consumer_goods_factor = CAN_par_anger_cg
+}
+
+CAN_popular_anger_modifier = {
+	stability_factor = CAN_popular_anger_stability
+	industrial_capacity_factory = CAN_popular_anger_factory_output
+}
+
+CAN_british_anger_modifier = {
+	party_popularity_stability_factor = CAN_british_anger_pps
+	army_org_factor = CAN_british_anger_army_org
 }

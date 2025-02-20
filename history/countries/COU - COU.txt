@@ -121,7 +121,8 @@ add_ideas = {
 	disarmed_nation
 	BA_isolation
 	civilian_economy
-	COU_cut_tower
+	COU_empty_of_monarchs
+	#COU_cut_tower
 	COU_dutch_collaboraters
 }
 
@@ -182,6 +183,7 @@ recruit_character = COU_KAYA
 recruit_character = COU_AYUMU
 recruit_character = COU_MOMOKA
 recruit_character = COU_HAINE
+recruit_character = COU_SMOMO
 
 recruit_character = COU_MIYAKO
 recruit_character = COU_SAKI

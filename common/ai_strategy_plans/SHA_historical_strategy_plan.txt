@@ -15,6 +15,7 @@ SHA_historical = {
 		SHA_gathering_of_radicals
 		SHA_Cooperation_with_Kaguya
 		SHA_podium_room_cooperation
+		SHA_Shintani_Kai_Follow
 		SHA_Kisaki_Suppression
 
 		SHA_relief_work
@@ -22,7 +23,6 @@ SHA_historical = {
 		SHA_invest_in_erzberg_steel_mines
 		SHA_expand_stpoltner_steelworks
 
-		SHA_Shintani_Kai_Follow
 		SHA_strike_suppression
 		SHA_Kaguya_ousted
 		SHA_Shanhaijing_fascism

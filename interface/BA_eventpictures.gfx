@@ -615,6 +615,21 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/COU/COU_gsc_defenseoffice1.tga"
 	}
 	spriteType = {
+		name = "GFX_report_event_picture_kaya_1"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_kaya_1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_kaya_2"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_kaya_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_mussert"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_mussert.png"
+	}
+	
+	
+	###
+	spriteType = {
 		name = "GFX_COU_event_109"
 		texturefile = "gfx/event_pictures/COU/COU_109.tga"
 	}

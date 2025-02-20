@@ -322,6 +322,11 @@ ideas = {
 			TRM_mika_trinity = { #수권법
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
+			cancel = {
+				TRM = {
+					NOT = { has_government = fascism }
+				}
+			}
 			modifier = {
 				political_power_factor = 0.05
 				fascism_drift = 0.1
@@ -341,6 +346,11 @@ ideas = {
             picture = TRM_mika_trinity
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
+			cancel = {
+				TRM = {
+					NOT = { has_government = fascism }
+				}
+			}
 			modifier = {
 				political_power_factor = 0.05
 				fascism_drift = 0.1
@@ -365,11 +375,11 @@ ideas = {
 				}
 				targeted_modifier = {
 					tag = GEH
-					attack_bonus_against = 0.05
+					attack_bonus_against = 0.1
 				}
 				targeted_modifier = {
 					tag = GEM
-					attack_bonus_against = 0.05
+					attack_bonus_against = 0.1
 				}
 				targeted_modifier = {
 					tag = HEU
@@ -493,7 +503,7 @@ ideas = {
 			}
 		}
 		TRN_Inefficient_bureaucracy_3 = { # 효율적 관료제 - 군수 생산법
-		picture = TRN_Inefficient_bureaucracy_2
+			picture = TRN_Inefficient_bureaucracy_2
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
 			modifier = {
@@ -503,7 +513,7 @@ ideas = {
 			}
 		}
 		TRN_Inefficient_bureaucracy_4 = { # 효율적 관료제 - 계획 경제
-		picture = TRN_Inefficient_bureaucracy_2
+			picture = TRN_Inefficient_bureaucracy_2
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
 			modifier = {
@@ -513,7 +523,7 @@ ideas = {
 			}
 		}
 		TRN_Inefficient_bureaucracy_5 = { # 효율적 관료제 - 계획 경제 + 군수 생산법
-		picture = TRN_Inefficient_bureaucracy_2
+			picture = TRN_Inefficient_bureaucracy_2
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
 			modifier = {
@@ -525,8 +535,8 @@ ideas = {
 			}
 		}
 		TRN_Inefficient_bureaucracy_6 = { # 효율적 관료제 - 나만 쓸거야
-		picture = TRN_Inefficient_bureaucracy_2
-		name = TRN_Inefficient_bureaucracy_2
+			picture = TRN_Inefficient_bureaucracy_2
+			name = TRN_Inefficient_bureaucracy_2
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
 			modifier = {
@@ -1262,4 +1272,21 @@ ideas = {
 			}
 		}
     }
+	country = {
+		TRN_political_instability_ns = {
+			picture = generic_democratic_opposition
+			modifier = {
+				political_power_gain = -0.8
+				stability_factor = 0.15
+			}
+		}
+		TRN_broken_balance_ns = {
+			picture = TRM_broken_icon
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = 0.05
+				disabled_ideas = 1
+			}
+		}
+	}
 }

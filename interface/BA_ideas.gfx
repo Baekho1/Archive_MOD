@@ -581,6 +581,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/cou/COU_cut_tower.png"
 	}
 	spriteType = {
+		name = "GFX_idea_COU_empty_of_monarchs"
+		texturefile = "gfx/interface/ideas/cou/COU_empty_of_monarchs.png"
+	}
+	spriteType = {
 		name = "GFX_idea_COU_dutch_collaboraters"
 		texturefile = "gfx/interface/ideas/cou/COU_dutch_collaboraters.png"
 	}
@@ -689,6 +693,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HYA_IdeaG_bakyadang"
 		textureFile = "gfx/interface/ideas/HYA/HYA_IdeaG_bakyadang.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ABY_rothschild_concern"
+		textureFile = "gfx/interface/ideas/ABY/ABY_rothschild_concern.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ABY_nephthys_concern"
+		textureFile = "gfx/interface/ideas/ABY/ABY_nephthys_concern.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_HYA_idea_flower_bird_wind_moon_club"

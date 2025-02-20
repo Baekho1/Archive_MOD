@@ -481,7 +481,7 @@ GEH_WE_NEED_MANY_SADAN: "我们需要更多师！"
 GEH_WE_NEED_MANY_SADAN_desc: "盖恩纳AI不组建师，所以添加了这个国民精神。希望能够阻止特里尼蒂。"
 #盖恩纳 真琴
 #旗帜
-student_councils_target_flag:0 "存在§Y新的伊甸条约§!缔约国。"
+KVT_student_councils_flag:0 "存在§Y新的伊甸条约§!缔约国。"
 GEM_eden_treaty_bad_flag:0 "§Y伊甸条约§!失败。"
 GEM_eden_treaty_flag:0 "§C学生会的调停成功！§!"
 GEM_corporate_headquarters_destroyed_flag:0 "§R这家公司目前总部被摧毁，无法使用。§!"

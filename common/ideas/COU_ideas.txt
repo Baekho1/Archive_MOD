@@ -1007,6 +1007,27 @@ ideas = {
 
         }
 		
+		COU_empty_of_monarchs = { #군주들의 공백
+            picture = COU_empty_of_monarchs 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+				political_power_factor  -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+            }
+
+        }
+		
 		COU_dutch_collaboraters = { #현지인 협력자들
             picture = COU_dutch_collaboraters 
             allowed = {
@@ -1144,8 +1165,75 @@ ideas = {
                 war_support_factor = -0.30
             }
         }
+	}
+     
+    ##TECH 
+	industrial_concern = {
+	
+		  COU_royal_dutch_shell = {
+		      name = HOL_royal_dutch_shell
+			
+			  allowed = {
+				 tag = COU
+			  }
 
+			  cost = 150
 
+			  picture = HOL_royal_dutch_shell
+			
+			  research_bonus = {
+				 industry = 0.15
+			  }
+			  
+			  available = {
+	              has_completed_focus = COU_establishment_of_federal_industrial_committee 
+	          }
+			
+			  traits = { industrial_concern }
+		  }
 
-    }
+		  COU_philips = {
+		      name = HOL_philips
+			
+			  allowed = {
+				  tag = COU
+			  }
+
+			  cost = 150
+
+			  picture = HOL_philips
+			
+			  research_bonus = {
+				 electronics = 0.15
+			  }
+			  
+			  available = {
+	              has_completed_focus = COU_establishment_of_federal_industrial_committee 
+	          }
+			
+		  	  traits = { electronics_concern }
+		  }
+
+		  COU_distrigaz = {
+             name = BEL_distrigaz
+			
+			 picture = BEL_distrigaz
+			
+			 allowed = {
+				tag = COU
+			 }
+
+			 cost = 150
+	 
+			 research_bonus = {
+				electronics = 0.15
+			 }
+			 
+			 available = {
+	              has_completed_focus = COU_establishment_of_federal_industrial_committee 
+	          }
+
+			 traits = { energy_company_trait } 
+		 }
+	}
 }

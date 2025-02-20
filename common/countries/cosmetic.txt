@@ -1883,6 +1883,130 @@ ABY_SCHOOL_2 = {
 	color = rgb { 75 0 100 }
 	color_ui = rgb { 75 0 100 }
 }
+ABY_SCHOOL_2_MIL = {
+	color = rgb { 75 0 100 }
+	color_ui = rgb { 75 0 100 }
+}
+ABY_SCHOOL_2_RED = {
+	color = rgb { 75 0 100 }
+	color_ui = rgb { 75 0 100 }
+}
+ABY_SCHOOL_2_BAL = {
+	color = rgb { 75 0 100 }
+	color_ui = rgb { 75 0 100 }
+}
+ABY_SCHOOL_2_OST = {
+	color = rgb { 75 0 100 }
+	color_ui = rgb { 75 0 100 }
+}
+ABY_SCHOOL_2_EAS = {
+	color = rgb { 75 0 100 }
+	color_ui = rgb { 75 0 100 }
+}
+ABY_SCHOOL_2_Q = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_W = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_E = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_R = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_T = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_Y = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_U = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_I = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_O = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_P = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_A = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_S = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_D = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_F = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_G = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_H = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_J = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_K = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_L = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_M = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_N = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_B = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_V = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_C = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_X = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
+ABY_SCHOOL_2_Z = {
+	color = rgb { 50 0 75 }
+	color_ui = rgb { 50 0 75 }
+}
 ABY_COLOR = {
 	color = rgb { 100 50 100 }
 	color_ui = rgb { 100 50 100 }
@@ -2348,6 +2472,10 @@ GEM_empire = {
 GAL_soviet = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 125 13 24 }
+}
+RED_trotsky = {
+    color = rgb { 224 5 5 }
+    color_ui = rgb { 193 81 81 }
 }
 RED_revolution = {
 	color = rgb { 220 39 69 }

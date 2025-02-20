@@ -1,5 +1,9 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_GEH_last_focus_effect"
+		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_HYA_focus_2"
 		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_2.tga"
 	}
@@ -1999,6 +2003,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_COU_kaya_dictatership_on"
 		textureFile = "gfx/interface/goals/COU/COU_kaya_dictatership_on.png"
+	}
+	spriteType = {
+		name = "GFX_COU_road_ot_choin"
+		textureFile = "gfx/interface/goals/COU/road_ot_choin.png"
+	}
+	spriteType = {
+		name = "GFX_COU_what_the_fuck_is_fascism"
+		textureFile = "gfx/interface/goals/COU/what_the_fuck_is_fascism.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_establishment_of_emergency_measures_committee"
+		textureFile = "gfx/interface/goals/COU/COU_establishment_of_emergency_measures_committee.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet"
+		textureFile = "gfx/interface/goals/COU/COU_meet.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_aoi_with_companys"
+		textureFile = "gfx/interface/goals/COU/COU_aoi_with_companys.png"
 	}
 	
 	

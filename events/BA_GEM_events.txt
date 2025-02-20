@@ -1632,10 +1632,6 @@ country_event = { # 중재해줘 총학생회
 	picture = GFX_event_none_picture
 	
     is_triggered_only = yes
-
-	immediate = {
-		set_country_flag = student_councils_target_flag
-	}
 	
 	option = { 
 		name = GEH_event.60.a
@@ -1795,6 +1791,7 @@ country_event = { # 총학생회의 방위 조약 제안 - ㄱㄱ
 	
 	option = {
 		name = GEH_event.66.a
+		set_country_flag = KVT_student_councils_flag
 		give_guarantee = GEM
 		GEM = {
 			give_guarantee = ROOT

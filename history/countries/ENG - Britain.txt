@@ -1,6 +1,22 @@
 capital = 132
+
+#/BA_MOD_FX
 set_cosmetic_tag = ENG_democratic
 country_lock_all_division_template = yes
+
+set_variable = { CAN_parliament_anger = 2 }
+set_variable = { CAN_par_anger_pp = 0.2 }
+set_variable = { CAN_par_anger_cg = 0.04 }
+
+set_variable = { CAN_popular_anger = 2 }
+set_variable = { CAN_popular_anger_stability = -0.02 }
+set_variable = { CAN_popular_anger_factory_output = -0.02 }
+
+set_variable = { CAN_british_anger = 3 }
+set_variable = { CAN_british_anger_pps = -0.15 }
+set_variable = { CAN_british_anger_army_org = -0.03 }
+#/BA_MOD_FX
+
 if = {
 	limit = {
 		NOT = {

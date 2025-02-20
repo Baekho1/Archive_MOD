@@ -53,6 +53,12 @@ opinion_modifiers = {
 	KSP_planning_for_attack = {
 		value = -15
 	}
+	RED_expansionism_opinion = {
+		value = -20
+	}
+	RED_rational_choice = {
+		value = 10
+	}
 	RED_communist_diplo_modifier = {
 		value = -25
 	}

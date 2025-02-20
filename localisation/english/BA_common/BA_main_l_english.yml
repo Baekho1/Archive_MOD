@@ -99,10 +99,8 @@
  kill_character_q_tt: "사망?"
  
   #북마크
- BA_GATHERING_STORM_NAME:0 "새로운 세계에서 50일"
- BA_GATHERING_STORM_DESC:0 "초자연적 현상일까요? 혹은 신의 장난일까요? 이 현상을 설명하려면 천 년이 걸려도 부족할 것입니다.그러나 새로운 세계에 대한 기대는 오래가지 못하고 산산이 부서지고 말았습니다. 그곳의 사람들은 우리를 침략자로 규정하며 망설임 없이 공격해 왔습니다. 압도적인 무력 차이로 인해 그들은 쉽게 와해되고 무너졌지만, 그들이 남긴 상처는 우리의 깊은 곳에 새겨졌습니다. 이 상처가 아물기 위해서는 아마도 오랜 시간이 필요할 것입니다."
- BA_BLITZKRIEG_NAME: "혼란의 50일"
- BA_BLITZKRIEG_DESC: "세계는 혼란의 소용돌이에 휘말렸습니다. 이차원의 침략자들이 모습을 드러내면서 유럽은 전쟁의 불길에 휩싸였습니다. 이들의 등장과 동시에 붉은 군대와 폴란드 사이에 충돌이 벌어졌고, 이탈리아는 패권을 향한 야망을 드러내기 시작했습니다. 한편, 영국의 수도는 침략자들에게 함락되었고, 시계탑의 종소리는 더 이상 울리지 않게 되었습니다.\n유럽이 전쟁의 소용돌이에 휘말린 가운데, 1936년 새해가 밝았습니다."
+ BA_scenario_name: "새로운 세계에서 50일"
+ BA_scenario_desc: "초자연적 현상일까요? 혹은 신의 장난일까요? 이 현상을 설명하려면 천 년이 걸려도 부족할 것입니다.그러나 새로운 세계에 대한 기대는 오래가지 못하고 산산이 부서지고 말았습니다. 그곳의 사람들은 우리를 침략자로 규정하며 망설임 없이 공격해 왔습니다. 압도적인 무력 차이로 인해 그들은 쉽게 와해되고 무너졌지만, 그들이 남긴 상처는 우리의 깊은 곳에 새겨졌습니다. 이 상처가 아물기 위해서는 아마도 오랜 시간이 필요할 것입니다."
  
  #메가시티
  TRN_Mega_City_Name: "천년수도 에덴"
@@ -228,6 +226,7 @@
  custom_diff_strong_BLM:0 "블랙마켓 강화"
  custom_diff_strong_GEI:0 "게마트리아 강화"
  custom_diff_strong_KAI:0 "카이저 코퍼레이션 강화"
+ Debug_BA_gathering_storm_desc:0 "제가 보인다면 버그 리포트를 작성해주세요."
 
  BA_game_rule: "블루 아카이브 모드 커스텀 게임 규칙"
  THE_COLOUR_RILE_NAME:0 "@GEI 색채 허용" 
@@ -257,8 +256,6 @@
  Trinity_Mika_Portrait_Off_DESC: "미소노 미카의 초상화는 공식 사진으로 유지됩니다."
  Trinity_Mika_Portrait_ON_NAME: "변경 함"
  
- Trinity_Mika_Portrait_ON_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Misono_Mika_Portrait_Fan_made\n\n\n\n\n\n\n\n\n미소노 미카의 초상화가 2차 창작물으로 변경됩니다."
- Trinity_Mika_Portrait_ON_2_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Misono_Mika_Portrait_Fan_made_2\n\n\n\n\n\n\n\n\n미소노 미카의 초상화가 2차 창작물으로 변경됩니다."
  Trinity_Mika_Portrait_ON_3_DESC: "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n\n\n\n\n\n\n\n£GFX_TRN_Misono_Mika_Portrait_Kon_ka\n\n\n\n\n\n\n\n\n미소노 미카의 초상화가 2차 창작물으로 변경됩니다."
  Trinity_Mika_Portrait_Maki_NAME: "분명 미카였는데"
  Trinity_Mika_Portrait_Maki_DESC: "미소노 미카의 초상화를 코누리 마키로 변경합니다."

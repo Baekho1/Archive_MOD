@@ -40,7 +40,7 @@
 		}
 	}
 	offset = {
-		x = -36
+		x = 10
 		y = 0
 		trigger = {
 			OR = {
@@ -233,6 +233,10 @@ shared_focus = {
 		modifier = {
 			factor = 2
 			date > 1941.01.01
+		}
+		modifier = {
+			tag = RED
+			add = -10
 		}
 	}
 

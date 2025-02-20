@@ -4027,7 +4027,7 @@ focus_tree = {
     	x = -3
     	y = 1
 		Relative_position_id = ENG_focus_fire_at_the_britain
-    	cost = 3
+    	cost = 1
 		prerequisite = { focus = ENG_focus_fire_at_the_britain }
     	completion_reward = {
  			132 = {
@@ -4290,7 +4290,7 @@ focus_tree = {
     	x = 3
     	y = 1
 		Relative_position_id = ENG_focus_fire_at_the_britain
-    	cost = 3
+    	cost = 1
 		prerequisite = { focus = ENG_focus_fire_at_the_britain }
     	completion_reward = {
 
@@ -4487,7 +4487,7 @@ focus_tree = {
 	focus = {
 		id = CAN_check_the_economy # 경제 상황 살펴보기
 		icon = GFX_focus_BRA_rio_protocol
-		cost = 5
+		cost = 2
 		
 		relative_position_id = CAN_kings_speech
 		x = -3
@@ -4514,7 +4514,7 @@ focus_tree = {
 	focus = {
 		id = CAN_government_unity # 캐나다 의회의 운명
 		icon = GFX_goal_CAN_parliament
-		cost = 4
+		cost = 2
 
 		relative_position_id = CAN_kings_speech
 		x = 3
@@ -5005,7 +5005,6 @@ focus_tree = {
 			add_stability = 0.05
 			remove_ideas = CAN_british_disease
 			effect_tooltip = {
-				unlock_decision_tooltip = CAN_decision_test_3
 				unlock_decision_tooltip = CAN_public_request_2
 			}
 		}

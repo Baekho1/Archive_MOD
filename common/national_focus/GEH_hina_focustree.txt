@@ -648,7 +648,11 @@ focus_tree = {
 			hidden_trigger = {
 				has_country_flag = hina_assembly_c_flag
 			}
-        }
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         completion_reward = {
             add_political_power = 20
 			add_stability = -0.10
@@ -675,6 +679,12 @@ focus_tree = {
         x = 2
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_iori_route_focus
         }
@@ -692,6 +702,12 @@ focus_tree = {
         x = 1
         y = 1
         cost = 10
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_preparation_of_war_with_pantemonium
         }
@@ -709,6 +725,12 @@ focus_tree = {
         x = -1
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_preparation_of_war_with_pantemonium
         }
@@ -726,6 +748,12 @@ focus_tree = {
         x = 0
         y = 3
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_propaganda_spread
 		}
@@ -750,6 +778,18 @@ focus_tree = {
         x = -1
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+			else = {
+				if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+			}
+		}
         prerequisite = {
             focus = GEH_iori_route_focus
         }
@@ -769,6 +809,12 @@ focus_tree = {
         x = 0
         y = 2
         cost = 10
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_systemic_militarization
         }
@@ -789,6 +835,12 @@ focus_tree = {
         x = -3
         y = 1
         cost = 10
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_iori_route_focus
         }
@@ -810,6 +862,12 @@ focus_tree = {
         x = 0
         y = 2
         cost = 10
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_leadership_of_the_executive_branch
         }
@@ -830,6 +888,12 @@ focus_tree = {
         x = 0
         y = 4
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_war_department
             focus = GEH_injecting_hostility
@@ -888,6 +952,10 @@ focus_tree = {
 			hidden_trigger = {
 				has_country_flag = hina_assembly_h_flag
 			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.10
@@ -895,6 +963,8 @@ focus_tree = {
 				remove = b_tjsehqnwkd
 				add = b_tjsehqnwkd2
 			}
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_tt
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = 1 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -907,6 +977,12 @@ focus_tree = {
         x = 1
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_hina_route_focus
         }
@@ -924,6 +1000,12 @@ focus_tree = {
         x = -1
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_hina_route_focus
         }
@@ -942,6 +1024,12 @@ focus_tree = {
         x = 0
         y = 3
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_distinction_of_zealous_members
         }
@@ -965,6 +1053,12 @@ focus_tree = {
         x = -3
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_hina_route_focus
         }
@@ -982,6 +1076,12 @@ focus_tree = {
         x = 0
         y = 2
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_one_person_leadership_system
         }
@@ -1061,6 +1161,10 @@ focus_tree = {
         cost = 5
 		available = {
 			is_subject = no
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
         prerequisite = {
             focus = GEH_prefect_team_fanaticism
@@ -1102,6 +1206,12 @@ focus_tree = {
         x = 3
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_hina_route_focus
         }
@@ -1119,6 +1229,12 @@ focus_tree = {
         x = 0
         y = 2
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_distribution_of_propaganda_materials_in_gehenna
         }
@@ -1136,6 +1252,12 @@ focus_tree = {
         x = -1
         y = 1
         cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
         prerequisite = {
             focus = GEH_prefect_team_fanaticism
         }
@@ -1147,6 +1269,11 @@ focus_tree = {
 		}
         completion_reward = {
             GEH_popular_support_up_effect = yes
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
+			}
         }
         ai_will_do = {
             factor = 1
@@ -1188,6 +1315,10 @@ focus_tree = {
 			hidden_trigger = {
 				has_country_flag = hina_assembly_a_flag
 			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.02
@@ -1218,6 +1349,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_ako_route_focus
 		}
@@ -1235,6 +1372,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_ako_route_focus
 		}
@@ -1243,6 +1386,11 @@ focus_tree = {
 			swap_ruler_traits = {
 				remove = b_tjsehqnwkd
 				add = b_tjsehqnwkd_week
+			}
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
 			}
 		}
 		ai_will_do = {
@@ -1256,6 +1404,12 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_deterioration_of_manmajeon_authority
 		}
@@ -1280,6 +1434,12 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_prefect_team_democracy
 		}
@@ -1318,6 +1478,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_prefect_team_democracy
 		}
@@ -1349,6 +1515,12 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_prefect_team_democracy
 		}
@@ -1370,7 +1542,13 @@ focus_tree = {
 		relative_position_id = GEH_prefect_team_democracy
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_heroism_propaganda
 		}
@@ -1382,6 +1560,8 @@ focus_tree = {
 		}
 		completion_reward = {
             GEH_popular_support_up_effect = yes
+			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_Lslow_tt
+			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 80 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -1424,6 +1604,10 @@ focus_tree = {
 			hidden_trigger = {
 				has_country_flag = hina_assembly_normal_flag
 			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
 		completion_reward = {
 			add_stability = 0.10
@@ -1439,6 +1623,12 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_main_route_focus
 		}
@@ -1472,6 +1662,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_main_route_focus
 		}
@@ -1489,6 +1685,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_continuing_rule
 		}
@@ -1503,6 +1705,11 @@ focus_tree = {
 					add = GEH_military_chairman_2
 				}
 			}
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1515,6 +1722,12 @@ focus_tree = {
 		x = -3
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_bavaria_governance_method
 		}
@@ -1533,6 +1746,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_bavaria_governance_method
 		}
@@ -1550,6 +1769,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
+		}
 		prerequisite = {
 			focus = GEH_bavaria_governance_method
 		}
@@ -1625,6 +1850,10 @@ focus_tree = {
 				has_capitulated = no
 				NOT = { has_war_with = ROOT }
 			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
 		completion_reward = {
 			every_country = {
@@ -1668,6 +1897,10 @@ focus_tree = {
 					is_in_faction = no
 					GEM =  { is_in_faction = no }
 				}
+			}
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
 			}
 		}
 		prerequisite = {
@@ -1735,6 +1968,12 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GEH_pursuing_peaceful_unification
+		}
+		available = {
+			if = { 
+				limit = { has_global_flag = GEH_BTBOTS_END_flag }
+				has_global_flag = GEH_BTBOTS_END_NEXT_flag
+			}
 		}
 		completion_reward = {
 			add_popularity = {
@@ -1955,9 +2194,9 @@ focus_tree = {
 		cancelable = no
 		ai_will_do = { base = 1000 }
         available = {
-			has_country_flag = GEH_unified_gehenna_flag
 			has_completed_focus = GEH_zero_congress_focus
 			has_completed_focus = GEH_second_congress_focus
+			has_country_flag = GEH_unified_gehenna_flag
         }
 		offset = {
 			trigger = {
@@ -1989,6 +2228,11 @@ focus_tree = {
                 state = 55
             }
             GEH_popular_support_up_effect = yes
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			}
 		}
 	}
     focus = {
@@ -2754,7 +2998,7 @@ focus_tree = {
     focus = {
 		id = GEH_Army_Reformation
 		icon = GFX_goal_Perfect_team_iori_focus
-		cost = 10
+		cost = 5
 		x = -6
 		y = 1
         relative_position_id = GEH_first_congress_focus
@@ -2815,7 +3059,7 @@ focus_tree = {
     focus = {
 		id = GEH_Leverage_Perfect_team_strengths
 		icon = GFX_goal_GEH_sundoboo
-		cost = 10
+		cost = 5
 		x = 2
 		y = 1
         relative_position_id = GEH_Army_Reformation
@@ -3401,6 +3645,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+            GEH_popular_support_up_effect = yes
 			add_ideas = GEM_ethnic_hatred_idea
 		}
 	}
@@ -3488,7 +3733,7 @@ focus_tree = {
     focus = {
 		id = GEH_war_focus_7
 		icon = GFX_goal_generic_defence
-		cost = 5
+		cost = 2
 		x = 3
 		y = 1
         relative_position_id = GEH_war_focus_1
@@ -3500,12 +3745,17 @@ focus_tree = {
 		}
 		completion_reward = {
             unlock_decision_category_tooltip = GEH_war_defence_category
+			unlock_decision_tooltip = {
+				decision = GEH_defense
+				show_effect_tooltip = yes # default is no
+				show_modifiers = yes # default is no
+			}
 		}
 	}
     focus = {
 		id = GEH_war_focus_8
 		icon = GFX_focus_ITA_peasants_rise
-		cost = 5
+		cost = 2
 		x = -1
 		y = 1
         relative_position_id = GEH_war_focus_7
@@ -3516,13 +3766,17 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-            custom_effect_tooltip = GEH_restoration_TT
+			unlock_decision_tooltip = {
+				decision = GEH_restoration
+				show_effect_tooltip = yes # default is no
+				show_modifiers = yes # default is no
+			}
 		}
 	}
     focus = {
 		id = GEH_war_focus_9
 		icon = GFX_focus_attack_TRN
-		cost = 5
+		cost = 2
 		x = 1
 		y = 1
         relative_position_id = GEH_war_focus_7
@@ -3533,7 +3787,11 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-
+			unlock_decision_tooltip = {
+				decision = GEH_attack_to_TRM
+				show_effect_tooltip = yes # default is no
+				show_modifiers = yes # default is no
+			}
 		}
 	}
     focus = {
@@ -3660,34 +3918,60 @@ focus_tree = {
             focus = GEH_war_factory_focus_4
             focus = GEH_war_factory_focus_3
         }
+		mutually_exclusive = {
+			focus = GEH_war_focus_3
+		}
 		available = {
 		}
 		completion_reward = {
-            add_war_support = 0.05
             add_stability = 0.05
+            GEH_popular_support_up_effect = yes
 		}
 	}
     focus = {
-		id = GEH_unlimited_conscription
-		icon = GFX_goal_generic_military_sphere
+		id = GEH_war_focus_3
+		icon = GFX_goal_generic_political_pressure
 		cost = 5
-		x = -1
+		x = 1
 		y = 1
-        relative_position_id = GEH_war_factory_focus_4
-		ai_will_do = { base = 1000 }
-        prerequisite = {
-            focus = GEH_war_factory_focus_4
+        relative_position_id = GEH_war_focus_8
+		ai_will_do = { 
+            base = 1000 
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
         }
+        prerequisite = {
+            focus = GEH_war_focus_8
+            focus = GEH_war_focus_9
+        }
+		mutually_exclusive = {
+			focus = GEH_war_focus_2
+		}
 		available = {
 		}
 		completion_reward = {
-            add_ideas = GEH_unlimited_conscription
+            add_war_support = 0.10
+            custom_effect_tooltip = GEH_RU
+            add_to_variable = {
+				GEH_RU_army_defence_factor = 0.05
+				tooltip = army_defence_factor_tt
+			}
+            add_to_variable = {
+				GEH_RU_army_core_defence_factor = 0.05
+				tooltip = army_core_defence_factor_tt
+			}
 		}
 	}
     focus = {
 		id = GEH_chinatsu_focus_1
 		icon = GFX_goal_Perfect_team_chinatsu_focus
-		cost = 10
+		cost = 2
         x = -4
         y = 1
         relative_position_id = GEH_Trinity_war
@@ -3766,6 +4050,9 @@ focus_tree = {
         prerequisite = {
             focus = GEH_chinatsu_focus_1
         }
+        prerequisite = {
+            focus = GEH_war_focus_1
+        }
 		completion_reward = {
             custom_effect_tooltip = GEH_chinatsu_focus_4_tt
             add_to_variable = { GEH_CH_conscription_factor = 0.05 }
@@ -3776,26 +4063,60 @@ focus_tree = {
     focus = {
 		id = GEH_three_congress_focus
 		icon = GFX_goal_GEH_newgehenna
-		cost = 10
+		cost = 5
 
 		relative_position_id = GEH_first_congress_focus
-		x = -1
-		y = 7
+		x = -9
+		y = 8
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus_no_hina
+		}
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_completed_focus = GEH_zero_congress_focus
+			}
+		}
+
+		available_if_capitulated = yes
 
 		available = {
 			is_subject = no
-			55 ={
-				is_controlled_by = ROOT
+			OR = {
+				has_completed_focus = GEH_military_leadership_committee
+				has_completed_focus = GEH_gehenna_leader
+				has_completed_focus = GEH_student_peoples_will
+				has_completed_focus = GEH_sword_defending_gehenna_peoples
+				has_completed_focus = GEH_institutional_stabilization
 			}
-			64 ={
-				is_controlled_by = ROOT
+			has_completed_focus = GEH_factory_focus_1
+			has_completed_focus = GEH_Trinity_war
+			custom_trigger_tooltip = {
+				tooltip = GEH_three_congress_focus_trigger
+				count_triggers = {
+					amount = 3
+					has_completed_focus = GEH_look_to_the_west
+					has_completed_focus = GEH_west_army_focus_1
+					has_completed_focus = GEH_west_army_focus_2
+					has_completed_focus = GEH_west_army_focus_3
+					has_completed_focus = GEH_Leverage_Perfect_team_strengths
+					has_completed_focus = GEH_prefect_army_focus_1
+					has_completed_focus = GEH_prefect_army_focus_2
+					has_completed_focus = GEH_prefect_army_focus_3
+					has_completed_focus = GEH_Army_focus_1
+					has_completed_focus = GEH_Army_focus_2
+					has_completed_focus = GEH_Army_focus_3
+				}
 			}
-			
+			NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+		}
+
+		cancel = {
+			has_global_flag = GEH_BTBOTS_END_flag
 		}
         
-		allow_branch = {
-			is_debug = yes
-		}
 		ai_will_do = {
 			base = 100
 			modifier = {
@@ -3808,20 +4129,207 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			GEH_popular_support_up_effect = yes
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			}
+		}
+	}
+    focus = {
+		id = GEH_three_congress_focus_no_hina
+		icon = GFX_goal_GEH_sad_hina
+		cost = 5
 
+		relative_position_id = GEH_three_congress_focus
+		x = 3
+		y = 0
+		text_icon = GER_inner_circle_focus_style
+
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus
+		}
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_completed_focus = GEH_zero_congress_focus
+			}
+		}
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_three_congress_focus_no_hina_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_dkzh
+						FLAG_DAYS = [?GEH_three_congress_focus_no_hina_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_three_congress_focus_no_hina_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_dkzh
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
+		}
+        
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = hina_assembly_h_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_htt
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_a_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_att
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_c_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ctt
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_normal_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ntt
+			}
+			else = {
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ftt
+				if = { 
+					limit = {
+						is_subject = no
+						any_other_country = {
+							OR = {
+								has_country_flag = GEH_unified_gehenna_flag
+								original_tag = GEM
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_other_country = {
+								original_tag = GEM
+							}
+						}
+						random_country = {
+							limit = { original_tag = GEM }
+							annex_country = {
+								target = ROOT
+								transfer_troops = yes
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { has_country_flag = GEH_unified_gehenna_flag }
+							annex_country = {
+								target = ROOT
+								transfer_troops = yes
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject = no
+						has_capitulated = no
+					}
+					every_enemy_country = {
+						set_country_flag = GEH_create_dynamic_country_enemy_flag
+					}
+					create_dynamic_country = {
+						original_tag = GEH
+						set_cosmetic_tag = gehenna_unification_cosmetic
+						hidden_effect = {
+							add_popularity = {
+								ideology = neutrality
+								popularity = 1
+							}
+							set_politics = {
+								ruling_party = neutrality
+							}
+							add_ideas = BA_student_conscription_idea
+							kill_ideology_leader = neutrality
+							kill_ideology_leader = democratic
+							kill_ideology_leader = fascism
+							kill_ideology_leader = communism
+						}
+						annex_country = {
+							target = ROOT
+							transfer_troops = yes
+						}
+						every_country = {
+							limit = { has_country_flag = GEH_create_dynamic_country_enemy_flag }
+							declare_war_on = {
+								target = PREV
+								type = annex_everything
+							}
+							clr_country_flag = GEH_create_dynamic_country_enemy_flag
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						annex_country = {
+							target = ROOT
+							transfer_troops = yes
+						}
+					}
+				}
+			}
 		}
 	}
     focus = {
 		id = GEH_woe_to_the_vanquished
-		icon = GFX_goal_lol_focus_2
-		cost = 1
+		icon = GFX_goal_TRN_Blocking_attacks_from_the_outside
+		cost = 2
 
 		relative_position_id = GEH_three_congress_focus
-		x = -5
+		x = -6
 		y = 1
 
 		available = {
 			is_subject = no
+			count_triggers = {
+				amount = 9
+				controls_state = 5
+				controls_state = 28
+				controls_state = 60
+				controls_state = 61
+				controls_state = 62
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				controls_state = 763
+				controls_state = 988
+			}
 		}
         prerequisite = {
             focus = GEH_three_congress_focus
@@ -3838,7 +4346,113 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 60
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 5
+						state = 60
+						state = 61
+						state = 62
+						state = 63
+						state = 64
+						state = 65
+						state = 66
+						state = 67
+						state = 68
+						state = 763
+					}
+					NOT = { is_core_of = ROOT }
+					resistance > 0
+				}
+				add_resistance = -5
+				add_compliance = 5
+			}
+		}
+	}
+    focus = {
+		id = GEH_woe_to_the_vanquished_2
+		icon = GFX_focus_GEH_expulsion_of_pandemonium
+		cost = 2
 
+		relative_position_id = GEH_woe_to_the_vanquished
+		x = 2
+		y = 0
+
+		available = {
+			is_subject = no
+			count_triggers = {
+				amount = 18
+				controls_state = 5
+				controls_state = 42
+				controls_state = 50
+				controls_state = 51
+				controls_state = 52
+				controls_state = 53
+				controls_state = 54
+				controls_state = 55
+				controls_state = 56
+				controls_state = 57
+				controls_state = 58
+				controls_state = 59
+				controls_state = 86
+				controls_state = 188
+				controls_state = 762
+				controls_state = 763
+				controls_state = 807
+				controls_state = 909
+				controls_state = 987
+				controls_state = 990
+				controls_state = 978
+			}
+		}
+        prerequisite = {
+            focus = GEH_three_congress_focus
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 60
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 5
+						state = 42
+						state = 50
+						state = 51
+						state = 52
+						state = 53
+						state = 54
+						state = 55
+						state = 56
+						state = 57
+						state = 58
+						state = 59
+						state = 86
+						state = 188
+						state = 762
+						state = 763
+						state = 807
+						state = 909
+						state = 987
+						state = 990
+						state = 978
+					}
+					NOT = { is_core_of = ROOT }
+					resistance > 0
+				}
+				add_resistance = -5
+				add_compliance = 5
+			}
 		}
 	}
     focus = {
@@ -3847,7 +4461,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = GEH_woe_to_the_vanquished
-		x = -2
+		x = -1
 		y = 1
 
 		available = {
@@ -3876,8 +4490,8 @@ focus_tree = {
 		icon = GFX_focus_ARG_strengthening_the_concordancia
 		cost = 5
 
-		relative_position_id = GEH_woe_to_the_vanquished
-		x = 0
+		relative_position_id = GEH_woe_to_the_vanquished_2
+		x = -1
 		y = 1
 
 		available = {
@@ -3885,6 +4499,7 @@ focus_tree = {
 		}
         prerequisite = {
             focus = GEH_woe_to_the_vanquished
+            focus = GEH_woe_to_the_vanquished_2
         }
 		ai_will_do = {
 			base = 100
@@ -3898,7 +4513,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+			add_stability = 0.10
+			GEH_popular_support_up_effect = yes
 		}
 	}
     focus = {
@@ -3906,15 +4522,15 @@ focus_tree = {
 		icon = GFX_focus_generic_public_works
 		cost = 5
 
-		relative_position_id = GEH_woe_to_the_vanquished
-		x = 2
+		relative_position_id = GEH_woe_to_the_vanquished_2
+		x = 1
 		y = 1
 
 		available = {
 			is_subject = no
 		}
         prerequisite = {
-            focus = GEH_woe_to_the_vanquished
+            focus = GEH_woe_to_the_vanquished_2
         }
 		ai_will_do = {
 			base = 100
@@ -4056,7 +4672,40 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = GEH_last_focus_3_tt
+		}
+	}
+    focus = {
+		id = GEH_last_focus_effect
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
 
+		relative_position_id = GEH_last_focus_3
+		x = 0
+		y = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEH_last_focus_effect_tt
+				always = no
+			}
+		}
+        prerequisite = {
+            focus = GEH_last_focus_3
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = GEH_last_focus_effect_tt2
 		}
 	}
 }
