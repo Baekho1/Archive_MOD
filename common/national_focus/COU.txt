@@ -194,7 +194,7 @@ focus_tree = {
 
 	focus = { #연방산업위원회 설립
 		id = COU_establishment_of_federal_industrial_committee
-		icon = GFX_focus_BEL_independent_neutral_and_loyal
+		icon = GFX_focus_COU_aoi_with_companys
 		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority }
 		x = -3
 		y = 3
