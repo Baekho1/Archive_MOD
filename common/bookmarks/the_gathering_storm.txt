@@ -203,29 +203,31 @@ bookmarks = {
 
 		KPD = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = KPD_GATHERING_STORM_DESC
 			ideology = communism
 		}
 
 		RE1 = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = RE1_GATHERING_STORM_DESC
 			ideology = communism
 		}
 
 		RE2 = {
 			minor = yes
+			history = RE2_GATHERING_STORM_DESC
 			ideology = communism
 		}
 
 		RE3 = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = RE3_GATHERING_STORM_DESC
 			ideology = communism
 		}
 
 		RE4 = {
 			minor = yes
+			history = RE4_GATHERING_STORM_DESC
 			ideology = communism
 		}
 
@@ -303,7 +305,7 @@ bookmarks = {
 
 		SLO = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = SLO_GATHERING_STORM_DESC
 			ideology = democratic
 		}
 

@@ -845,6 +845,7 @@ on_actions = {
 						last_election = "1936.1.1"
 						election_frequency = 48
 					}
+					BA_halo_tech_tool_effect = yes
 				}
 				GEK = {
 					if = {

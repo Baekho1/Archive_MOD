@@ -479,7 +479,7 @@ GEH_kirara:0 "夜桜キララ"
  GEH_WE_NEED_MANY_SADAN_desc: "ゲヘナAIが師団をあまりにも作らないので、とりあえずこのような国民精神を付与しました。トリニティを少しでも防いでくれれば嬉しいです"
 #ゲヘナ マトコ
 #フラグ
- student_councils_target_flag:0 "§Y新たなエデン条約§!締結国が存在します"
+ KVT_student_councils_flag:0 "§Y新たなエデン条約§!締結国が存在します"
  GEM_eden_treaty_bad_flag:0 "§Yエデン条約§!が失敗しました"
  GEM_eden_treaty_flag:0 "§C総学生会の仲裁が成功しました§!"
  GEM_corporate_headquarters_destroyed_flag:0 "§Rこの企業は現在、本社が破壊されており使用できません。§!"
