@@ -194,7 +194,7 @@ focus_tree = {
 
 	focus = { #연방산업위원회 설립
 		id = COU_establishment_of_federal_industrial_committee
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_BEL_independent_neutral_and_loyal
 		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority }
 		x = -3
 		y = 3
@@ -209,19 +209,12 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
-			add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			set_country_flag = COU_yes_sanub
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
-			}
+			#custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
+			#add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
+			country_event = COU_event.10
+			#custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
+			#add_one_random_civilian_factory = yes
+			#set_country_flag = COU_yes_sanub
 		}
 	}
 

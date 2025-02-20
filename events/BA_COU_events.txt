@@ -200,6 +200,35 @@ country_event = { #총학생회장 실종
 	}
 	
 }
+
+country_event = { 
+	id = COU_event.1001
+	title = COU_event.1001.t
+	desc = COU_event.1001.desc
+	picture = GFX_COU_event_gsc_meetingroom_night
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = COU
+		NOT = { has_global_flag = COU_event_1001_flag }
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	immediate = {
+		set_global_flag = COU_event_1001_flag
+	}
+
+	option = { 
+		name = COU_event.1001.a
+		custom_effect_tooltip = COU_tooltip_GSP_bad
+		add_stability = -0.01
+	}
+	
+}
+
 country_event = { #샬레랑 경쟁시키기
 	id = COU_event.2
 	title = COU_event.2.t
@@ -516,6 +545,28 @@ country_event = {
 			 mark_focus_tree_layout_dirty = yes
 			 complete_national_focus = COU_focus_in_the_darkness
 	    }
+	}
+}
+
+##기업인들과의 만남 
+country_event = { 
+	id = COU_event.10
+	title = COU_event.10.t
+	desc = COU_event.10.desc
+	picture = GFX_report_event_communist_leader
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.10.a
+		custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
+		add_one_random_civilian_factory = yes
+		custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
+		add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
 	}
 }
 
