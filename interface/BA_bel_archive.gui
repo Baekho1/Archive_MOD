@@ -1,7 +1,7 @@
 guiTypes = {
 	#Example Scripted GUI Window
 	containerWindowType = {
-		name = "bel_story_archive_gui_Window"
+		name = "story_archive_gui_Window"
 		size = { width = 680 height = 400 }
 		Orientation = CENTER
 		moveable = yes
@@ -24,7 +24,7 @@ guiTypes = {
 
 		# TODO: 버튼이 동적으로 생성되도록 작업하기
 		containerWindowType = {
-			name = "bel_story_archive_container_for_grid"
+			name = "story_archive_container_for_grid"
 			Orientation = upper_left
 			size = {width=200 height=300}
 			position = {x=-20 y=50}
@@ -38,7 +38,7 @@ guiTypes = {
 			}
 
 			gridBoxType = {
-				name = "bel_story_archive_grid_box"
+				name = "story_archive_grid_box"
 				position = { x = 50 y = 0}
 				#The size of the gridbox
 				size = { width = 100%% height = 100%% }
@@ -54,7 +54,7 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "bel_story_archive_gui"
+			name = "story_archive_gui"
 			size = { width=400 height=400 }
 			position = {
 				x = 180
@@ -62,7 +62,7 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "bel_story_archive_title_text"
+				name = "story_archive_title_text"
 
 				maxWidth = 420
 				maxHeight = 20
@@ -77,13 +77,13 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "bel_story_archive_desc_text"
+				name = "story_archive_desc_text"
 
 				maxWidth = 420
 				maxHeight = 280
 				position = {
 					x = 20
-					y = 30
+					y = 30 
 				}
 
 				font = "hoi_18b"
@@ -99,12 +99,12 @@ guiTypes = {
 		size = {width=200 height=50}
 			
 		buttonType = {
-			name = btn_[?v]_archive_[?i]
+			name = btn_[?story_arc_value]_archive_[?story_arc_index]
 			quadTextureSprite ="GFX_button_123x34"
 			position = { x=0 y=0 }
 			#This will write onto the button the value and index of the array
-			buttonText = "[ROOT.GetStoryArchiveButtonTextByNation]"
 			buttonFont = "hoi_18b"
+			buttonText = story_archive_button # BEL_story_event.1.t
 		}
 	}
 }

@@ -1,9 +1,9 @@
 scripted_gui = {
-	bel_story_archive_gui = {
+	story_archive_gui = {
 		
 		context_type = player_context
 		
-		window_name = "bel_story_archive_gui_Window"
+		window_name = "story_archive_gui_window"
 
 		visible = {
 			ROOT = {
@@ -13,23 +13,24 @@ scripted_gui = {
 						value = 1
 					}
 				}
+				
 			}
 
 			#has_variable = BEL_story_archive			
 		}
 
 		dynamic_lists = {
-			bel_story_archive_grid_box = {
+			story_archive_grid_box = {
 				array = story_archive_national_array
 
 				#value of the current array index. Optional. Default value is v.
-				value = v
+				value = story_arc_value
 
 				#current array index. Optional. Default value is i.
-				index = i
+				index = story_arc_index
 				
 				#This will change the scope to the value if yes
-				change_scope = no
+				#change_scope = no
 
 				#The GUI drawn for each index
 				entry_container = "story_archive_gui_array"
@@ -44,10 +45,12 @@ scripted_gui = {
 				}
 			}
 
-			"btn_[?v]_archive_[?i]_click" = {
+			"btn_[?story_arc_value]_archive_[?story_arc_index]_click" = {
 				set_variable = {
-					story_event_var = i
+					story_event_var = story_arc_index
 				}
+				log = "story_arc_value = [?story_arc_value]"
+				log = "story_arc_index = [?story_arc_index]"
 				add_to_variable = {
 					var = story_event_var 
 					value = 1
