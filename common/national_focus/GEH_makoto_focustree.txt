@@ -3988,7 +3988,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				has_country_flag = GEM_eden_treaty_bad_flag
-				has_country_flag = student_councils_target_flag
+				has_country_flag = KVT_student_councils_flag
 				TRM = {
 					OR = {
 						is_puppet_of = GEM
@@ -4027,7 +4027,7 @@ focus_tree = {
 			else_if = {
 				limit = {
 					any_country = {
-						has_country_flag = student_councils_target_flag
+						has_country_flag = KVT_student_councils_flag
 						is_faction_leader = yes
 					}
 				}
@@ -4044,7 +4044,7 @@ focus_tree = {
 						id = GEM
 						value = 200
 					}
-					limit = { has_country_flag = student_councils_target_flag }
+					limit = { has_country_flag = KVT_student_councils_flag }
 					country_event = generic.2
 				}
 			}

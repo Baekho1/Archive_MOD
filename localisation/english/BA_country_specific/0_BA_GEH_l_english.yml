@@ -221,7 +221,9 @@
  GEH_war_factory_focus_4: "게헨나 야포"
  GEH_war_factory_focus_4_desc: "게헨나의 포 제조사가 직접 개량한 게헨나만의 야포입니다. 다른 야포와의 차이점은 화력이 강하다는 점입니다."
  GEH_war_focus_2: "선전부 창설"
- GEH_war_focus_2_desc: "선전부를 창설하여 학생들에게 두려움을 덜어내야합니다."
+ GEH_war_focus_2_desc: "선전부를 창설하여 전쟁 도중 선도부의 업적을 홍보하고, 선도부에 대한 지지를 확대해야 합니다.."
+ GEH_war_focus_3: "게헨나 수호 집중"
+ GEH_war_focus_3_desc: "우리의 그 어떤 목표보다 중요한 목표는 게헨나를 수호하는 것입니다.."
  GEH_unlimited_conscription: "징병 제한 제거"
  GEH_unlimited_conscription_desc: ""
  GEH_chinatsu_focus_1: "의료부 격상"
@@ -253,6 +255,7 @@
  GEH_trinity_focus_5: "현지 경찰 설립"
  GEH_trinity_focus_6: "강철의 학원"
  GEH_last_focus_3: "결과"
+ GEH_last_focus_3_tt: "§Y소라사키 히나§!는 마참내 권력에서 해방되었습니다.\n\n§Y후속 중점도§!가 나타납니다."
  GEH_woe_to_the_vanquished: "패배자에겐 비애뿐"
  GEH_woe_to_the_vanquished_2: "하나의 게헨나, 하나의 지도자"
 
@@ -495,6 +498,10 @@
  GEH_basking_in_the_brilliance_of_their_serenade_mission: "악화"
  GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt: "§R우리는 아직 무슨 수를 쓰더라도 길을 걸어가는 것을 끝낼 수 없습니다.§!"
  GEH_basking_in_the_brilliance_of_their_serenade_mission_tt: "§R소라사키 히나의 상태가 한 단계 악화됩니다.§!"
+ GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt: "§C소라사키 히나의 상태가 한 단계 완화됩니다.§!"
+ GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt: "§G소라사키 히나의 악화 속도가 느려집니다.§!\n"
+ GEH_basking_in_the_brilliance_of_their_serenade_mission_Lslow_tt: "§C소라사키 히나의 악화 속도가 크게 느려집니다.§!\n"
+
 
  GEH_basking_in_the_brilliance_of_their_serenade_decision: "선도부의 지원"
  GEH_basking_in_the_brilliance_of_their_serenade_decision_tt: "§R이 결정은 단 한번 수행할 수 있습니다.§!\n\n§G소라사키 히나의 상태가 처음으로 회복됩니다.§!\n§R그러나 단 악화 속도가 빨라집니다.§!\n"

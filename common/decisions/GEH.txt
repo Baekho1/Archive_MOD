@@ -61,6 +61,28 @@ GEH_war_defence_category = {
 			FROM = { remove_dynamic_modifier = { modifier = GEH_attack_states } }
 		}
 	}
+	GEH_attack_to_TRM = {
+		icon = GFX_decision_generic_scorched_earth
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			has_war_with = TRM
+			surrender_progress < 1
+		}
+
+		days_remove = 120
+
+		cost = 0
+		
+		targeted_modifier = {
+			tag = TRM
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.05
+		}
+	}
 }
 GEH_State_government_dismantlement_work_category = {
 	GEH_state_government_dismantlement_work = {
@@ -474,12 +496,19 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 		available =  {
 			custom_trigger_tooltip = {
 				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
-				always = no
+				OR = {
+					has_completed_focus = GEH_gehenna_leader
+					has_completed_focus = GEH_last_focus_3
+				}
 			}
 		}
 
 		activation = {
 			always = no
+		}
+
+		cancel_trigger = {
+			has_global_flag = GEH_BTBOTS_END_flag
 		}
 
 		is_good = no
