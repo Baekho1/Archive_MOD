@@ -2016,6 +2016,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_establishment_of_emergency_measures_committee"
 		textureFile = "gfx/interface/goals/COU/COU_establishment_of_emergency_measures_committee.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_meet"
+		textureFile = "gfx/interface/goals/COU/COU_meet.png"
+	}
 	
 	
 	####카이저라이히 돚거
