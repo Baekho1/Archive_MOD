@@ -2228,8 +2228,11 @@ focus_tree = {
                 state = 55
             }
             GEH_popular_support_up_effect = yes
-			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
-			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			}
 		}
 	}
     focus = {
@@ -4127,8 +4130,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			GEH_popular_support_up_effect = yes
-			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
-			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
+			}
 		}
 	}
     focus = {
