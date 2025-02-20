@@ -581,6 +581,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/cou/COU_cut_tower.png"
 	}
 	spriteType = {
+		name = "GFX_idea_COU_empty_of_monarchs"
+		texturefile = "gfx/interface/ideas/cou/COU_empty_of_monarchs.png"
+	}
+	spriteType = {
 		name = "GFX_idea_COU_dutch_collaboraters"
 		texturefile = "gfx/interface/ideas/cou/COU_dutch_collaboraters.png"
 	}

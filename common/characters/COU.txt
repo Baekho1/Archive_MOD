@@ -10,7 +10,7 @@ characters={
 		country_leader={
     		desc=COU_XXX_desc
 			ideology=conservatism
-			traits={ COU_dictator dictator }
+			traits={ COU_dictator COU_arona_notgood }
 			expire="1965.1.1.1"
 		}
 	}

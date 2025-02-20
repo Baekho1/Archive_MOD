@@ -12,7 +12,7 @@ bookmarks = {
 			ideology = democratic
 			ideas = {
 				COU_admin_confusion
-				COU_cut_tower
+				COU_empty_of_monarchs
 				COU_dutch_collaboraters
 			}
 			focuses = {

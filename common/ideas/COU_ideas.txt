@@ -1007,6 +1007,27 @@ ideas = {
 
         }
 		
+		COU_empty_of_monarchs = { #군주들의 공백
+            picture = COU_empty_of_monarchs 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+				political_power_factor  -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+            }
+
+        }
+		
 		COU_dutch_collaboraters = { #현지인 협력자들
             picture = COU_dutch_collaboraters 
             allowed = {

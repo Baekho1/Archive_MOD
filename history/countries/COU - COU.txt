@@ -121,7 +121,8 @@ add_ideas = {
 	disarmed_nation
 	BA_isolation
 	civilian_economy
-	COU_cut_tower
+	COU_empty_of_monarchs
+	#COU_cut_tower
 	COU_dutch_collaboraters
 }
 

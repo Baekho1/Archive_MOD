@@ -710,9 +710,17 @@ leader_traits = {
 	}
 	COU_dictator = { #키보토스 총학생회장
 		random = no
-		political_power_factor = 0.10
-		stability_factor = 0.15
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.1
+		stability_factor = 0.1
 		war_support_factor = 0.10
+	}
+	COU_arona_notgood = { #과로
+		random = no
+		
+		political_power_factor = -0.5
+		stability_factor = 0.05
+		compliance_growth = 0.02
 	}
 	COU_new_dictator = { #총학생회장 권한대행
 		random = no
