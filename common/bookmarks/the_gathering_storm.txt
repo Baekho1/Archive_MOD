@@ -7,18 +7,18 @@ bookmarks = {
 		default_country = COU
 		default = yes
 
-		COU = {
-			history = COU_GATHERING_STORM_DESC
-			ideology = democratic
+		RED={
+			history = RED_GATHERING_STORM_DESC
+			ideology = communism
 			ideas = {
-				COU_admin_confusion
-				COU_empty_of_monarchs
-				COU_dutch_collaboraters
+				RED_threat_of_coup
+				RED_doomed_army_idea
+				RED_doomed_economy_idea
 			}
 			focuses = {
-				COU_impeachment_of_chief_executive
-				COU_establishment_of_emergency_measures_committee
-				COU_focus_in_the_darkness
+				RED_accept_trotskism
+				RED_dipose_cherino
+				RED_no_error_at_ideology
 			}
 		}
 
@@ -52,18 +52,18 @@ bookmarks = {
 			}
 		}
 
-		RED={
-			history = RED_GATHERING_STORM_DESC
-			ideology = communism
+		COU = {
+			history = COU_GATHERING_STORM_DESC
+			ideology = democratic
 			ideas = {
-				RED_threat_of_coup
-				RED_doomed_army_idea
-				RED_doomed_economy_idea
+				COU_admin_confusion
+				COU_empty_of_monarchs
+				COU_dutch_collaboraters
 			}
 			focuses = {
-				RED_accept_trotskism
-				RED_dipose_cherino
-				RED_no_error_at_ideology
+				COU_impeachment_of_chief_executive
+				COU_establishment_of_emergency_measures_committee
+				COU_focus_in_the_darkness
 			}
 		}
 
@@ -100,6 +100,92 @@ bookmarks = {
 				SHA_Strengthening_Genryumon
 				SHA_local_harmony
 			}		
+		}
+
+		RE1 = {
+			minor = yes
+			history = RE1_GATHERING_STORM_DESC
+			ideology = communism
+		}
+
+		RE2 = {
+			minor = yes
+			history = RE2_GATHERING_STORM_DESC
+			ideology = communism
+		}
+
+		RE3 = {
+			minor = yes
+			history = RE3_GATHERING_STORM_DESC
+			ideology = communism
+		}
+
+		RE4 = {
+			minor = yes
+			history = RE4_GATHERING_STORM_DESC
+			ideology = communism
+		}
+
+		ZZZ = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+
+		FRA = {
+			minor = yes
+			history = FRA_GATHERING_STORM_DESC_1
+			ideology = neutrality
+			ideas = {
+				FRA_emergency_mobil
+				FRA_resist_strike
+				FRA_exile
+			}
+			focuses = {
+				TRM_newfocus_27
+				TRN_yurijono_seia
+				TRN_nagisa_gyehek
+			}
+		}
+
+		ZZZ = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+
+		BLM = {
+			minor = yes
+			ideology = neutrality
+		}
+
+		GEK = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+
+		ARI = {
+			minor = yes
+			history = ARI_GATHERING_STORM_DESC
+			ideology = neutrality
+			ideas = {
+				BA_exiles_of_the_future
+				BA_ARI_bitter_revanchism
+				BA_ARI_tragedy
+			}
+		}
+
+		NSD = {
+			minor = yes
+			history = Debug_BA_gathering_storm_desc
+			ideology = neutrality
+		}
+
+		KPD = {
+			minor = yes
+			history = KPD_GATHERING_STORM_DESC
+			ideology = communism
 		}
 
 		ZZZ = {
@@ -143,92 +229,6 @@ bookmarks = {
 				KSP_police_nation
 				KSP_kanna_dictator
 			}
-		}
-
-		ZZZ = {
-			minor = yes
-			history = Debug_BA_gathering_storm_desc
-			ideology = neutrality
-		}
-
-		FRA = {
-			minor = yes
-			history = FRA_GATHERING_STORM_DESC_1
-			ideology = neutrality
-			ideas = {
-				FRA_emergency_mobil
-				FRA_resist_strike
-				FRA_exile
-			}
-			focuses = {
-				TRM_newfocus_27
-				TRN_yurijono_seia
-				TRN_nagisa_gyehek
-			}
-		}
-
-		ZZZ = {
-			minor = yes
-			history = Debug_BA_gathering_storm_desc
-			ideology = neutrality
-		}
-
-		BLM = {
-			minor = yes
-			ideology = neutrality
-		}
-
-		ZZZ = {
-			minor = yes
-			history = Debug_BA_gathering_storm_desc
-			ideology = neutrality
-		}
-
-		ARI = {
-			minor = yes
-			history = ARI_GATHERING_STORM_DESC
-			ideology = neutrality
-			ideas = {
-				BA_exiles_of_the_future
-				BA_ARI_bitter_revanchism
-				BA_ARI_tragedy
-			}
-		}
-
-		ZZZ = {
-			minor = yes
-			history = Debug_BA_gathering_storm_desc
-			ideology = neutrality
-		}
-
-		KPD = {
-			minor = yes
-			history = KPD_GATHERING_STORM_DESC
-			ideology = communism
-		}
-
-		RE1 = {
-			minor = yes
-			history = RE1_GATHERING_STORM_DESC
-			ideology = communism
-		}
-
-		RE2 = {
-			minor = yes
-			history = RE2_GATHERING_STORM_DESC
-			ideology = communism
-		}
-
-		RE3 = {
-			minor = yes
-			history = RE3_GATHERING_STORM_DESC
-			ideology = communism
-		}
-
-		RE4 = {
-			minor = yes
-			history = RE4_GATHERING_STORM_DESC
-			ideology = communism
 		}
 
 		ZZZ = {
