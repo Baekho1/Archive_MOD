@@ -307,7 +307,7 @@ focus_tree = {
 	
 	focus = { #행정위원회 권한 축소
 		id = COU_reduction_of_administrative_committee_authority
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_COU_kaya_with_generals
 		prerequisite = { focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
 		x = 3
 		y = 3
@@ -322,16 +322,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			custom_effect_tooltip = COU_reduction_of_administrative_committee_authority_tt
-			add_to_variable = { COU_emergency_measures_committee_political_advisor_cost_factor = -0.25 }
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
-			}
+			country_event = COU_event.11
 		}
 	}
 
