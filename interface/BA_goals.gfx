@@ -2678,4 +2678,8 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
 	}
 
+	spriteType = {
+		name = "GFX_GEI_DEC_hesade_plan"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"
+	}
 }

@@ -2120,5 +2120,63 @@ country_event = {
 	}
 }
 
+# 인간의 역사
+country_event = {
+	id = GEI_DEC_event.5
+	title = GEI_DEC_event.5.t
+	desc = GEI_DEC_event.5.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.5.a
+	}
+}
+
+# 무너지는 신들의 고향
+country_event = {
+	id = GEI_DEC_event.6
+	title = GEI_DEC_event.6.t
+	desc = GEI_DEC_event.6.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.5.a
+	}
+}
+
+# 기계의 여명
+country_event = {
+	id = GEI_DEC_event.8
+	title = GEI_DEC_event.8.t
+	desc = GEI_DEC_event.8.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.8.a
+	}
+}
+
+# 싯딤의 상자 확보
+country_event = {
+	id = GEI_DEC_event.7
+	title = GEI_DEC_event.7.t
+	desc = GEI_DEC_event.7.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.7.a
+	}
+}
+
+
+
 
 
