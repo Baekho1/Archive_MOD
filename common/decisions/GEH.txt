@@ -498,7 +498,7 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
 				OR = {
 					has_completed_focus = GEH_gehenna_leader
-					has_completed_focus = GEH_last_focus_3
+					has_completed_focus = GEH_three_congress_focus
 				}
 			}
 		}
@@ -581,5 +581,71 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 			}
 		}
     }
+}
+GEH_trinity_integration = {
+	GEH_trinity_integration_target = {
+		icon = GFX_decision_generic_arrest
+		state_target = yes
+		on_map_mode = map_and_decisions_view 
+		target_array = global.TRM_state_array
+		allowed = {
+			tag = GEH
+		}
+		target_trigger = {
+			FROM = {
+				NOT = { has_state_flag = GEH_trinity_integration_target_flag }
+				is_controlled_by = GEH
+			}
+		}
+		fire_only_once = no
+		available = {
+			FROM = { compliance > 30 }
+		}
+		ai_will_do = {
+			factor = 400
+		}
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				set_state_flag = GEH_trinity_integration_target_flag
+				custom_effect_tooltip = GEH_trinity_integration_target_tt
+				add_compliance = 5
+			}
+		}
+	}
+	GEH_trinity_integration_complete = {
+		icon = GFX_decision_generic_confiscation
+		state_target = yes
+		on_map_mode = map_and_decisions_view 
+		target_array = global.TRM_state_array
+		allowed = {
+			tag = GEH
+		}
+		target_trigger = {
+			FROM = {
+				has_state_flag = GEH_trinity_integration_target_flag
+			}
+		}
+		fire_only_once = no
+		available = {
+			FROM = {
+				is_controlled_by = GEH
+				compliance > 50
+			}
+			political_power_daily > 0
+		}
+		ai_will_do = {
+			factor = 400
+		}
+		days_remove = 30
+		modifier = {
+			political_power_cost = 0.25
+		}
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
 }
 
