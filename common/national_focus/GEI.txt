@@ -716,7 +716,7 @@ focus_tree = {
 
 	# 데카그라마톤 승리 
 
-	#베아트리체의 승리
+
 	focus = {
 		id = GEI_DEC_victory
 		icon = GFX_GEI_DEC_victory
@@ -730,7 +730,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GEI_beateulicheuiseungli}
 
 		available = {
-			has_country_flag = GEI_Beatrice_win_flag
+			
 		}
 		search_filters = {
 			
@@ -739,6 +739,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {id = GEI_DEC_event.0}
+			
 				}
 			}
 	# 오래된 질문 		
@@ -764,6 +765,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {id = GEI_DEC_event.2}
+			set_cosmatic_tag = GEI_DEC
 				}
 	}
     
@@ -789,6 +791,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {id = GEI_DEC_event.3}
+			set_cosmetic_tag = GEI_DEC
 				}
 	}
 
@@ -925,7 +928,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-
+			add_ideas = GEI_automatic_ideas
 		}
 	}
 
@@ -950,7 +953,17 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-
+			random_owned_controlled_state = {
+    			limit = {
+        			is_core_of = PREV
+    			}
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 10
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -979,10 +992,10 @@ focus_tree = {
     			limit = {
         			is_core_of = PREV
     			}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -1038,9 +1051,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			country_event = {id = GEI_DEC_event.7}
+
+			load_focus_tree = GEI_DEC_focus_tree
 		}
 	}
-
-
 }

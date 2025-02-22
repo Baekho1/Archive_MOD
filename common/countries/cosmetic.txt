@@ -1619,6 +1619,10 @@ GEI_The_Colour = {
 	color = rgb { 80 0 140 }
 	color_ui = rgb { 0 0 0 }
 }
+GEI_DEC = {
+	color = rgb { 234 138 0 }
+	color_ui = rgb { 234 138 0 }
+}
 LAI_SPAIN = { ### 라 이베리아 이스터에그 ###
 	color = rgb { 255 222 94 }
 	color_ui = rgb { 255 222 94 }

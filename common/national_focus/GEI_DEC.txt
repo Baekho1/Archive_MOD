@@ -1,0 +1,66 @@
+focus_tree = { 
+	id = GEI_DEC_focus_tree
+	continuous_focus_position = { x = 4000 y = 200 } 
+#	shared_focus = BA_new_world_technology
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GEI
+		}
+	}
+
+    # 실패
+    focus = {
+		id = GEI_DEC_fail
+		icon = GFX_GEI_DEC_fail
+
+		x = 0
+		y = 2
+
+		cost = 1
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+            add_stability = -0.1
+			add_war_support = -0.1
+            country_event = {id = GEI_DEC_event.7}
+		}
+	}
+
+    # 절대존재의 의무
+
+    focus = {
+		id = GEI_DEC_Duty
+		icon = GFX_GEI_DEC_Duty 
+
+		x = 0
+		y = 2
+        relative_position_id = GEI_DEC_fail 
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_fail}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+}
+
