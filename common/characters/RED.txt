@@ -12,7 +12,7 @@ characters = {
 		}
 		country_leader={
 			ideology = war_communism
-			traits={ b_tjrlwkd hate_soviet}
+			traits={ hate_soviet b_tjrlwkd }
 			expire="1965.1.1.1"
 		}
 		field_marshal={
@@ -180,7 +180,7 @@ characters = {
 
 		country_leader={
 			ideology= syndicalism
-			traits={ leader_of_publicworks hate_soviet}
+			traits={ hate_soviet leader_of_publicworks }
 			expire="1965.1.1.1"
 		}
 
@@ -211,7 +211,7 @@ characters = {
 		country_leader = {
 			ideology = trotskyism
 			traits = {
-				permanent_revolutionary hate_soviet
+				hate_soviet permanent_revolutionary 
 			}
 		}
 		advisor = {

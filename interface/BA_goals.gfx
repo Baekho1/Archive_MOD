@@ -2024,6 +2024,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_aoi_with_companys"
 		textureFile = "gfx/interface/goals/COU/COU_aoi_with_companys.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_kaya_with_generals"
+		textureFile = "gfx/interface/goals/COU/COU_kaya_with_generals.png"
+	}
 	
 	
 	####카이저라이히 돚거

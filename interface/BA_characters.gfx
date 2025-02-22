@@ -198,6 +198,10 @@ spriteTypes = {
 		name = "GFX_leaders_council_democracy"
 		textureFile = "gfx/leaders/KAI/engineer_group.tga"
 	}
+	spriteType = {
+		name = "GFX_leader_COU_cornelis_van_geelkerken"
+		textureFile = "gfx/leaders/COU/leader_COU_cornelis_van_geelkerken.png"
+	}
 	
 	
 	spriteType = {
@@ -244,6 +248,55 @@ spriteTypes = {
 		name = "GFX_julien_lahaut"
 		textureFile = "gfx/interface/advisors/COU/좌파_JulienLahaut.tga"
 	}
+	
+	##Collaboraters
+	spriteType = {
+		name = "GFX_portrait_COU_willy_coppens_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_willy_coppens_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_mike_donnet_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_mike_donnet_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_leon_degrelle_military_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_leon_degrelle_military_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_COU_henri_de_man_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_henri_de_man_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_COU_edouard_van_den_burgen_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_edouard_van_den_burgen_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_charles_count_of_flanders_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_charles_count_of_flanders_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_august_borms_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_august_borms_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_albert_deveze_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_albert_deveze_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_achille_van_acker_small"
+		textureFile = "gfx/interface/advisors/COU/portrait_COU_achille_van_acker_small.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COU_cornelis_van_geelkerken"
+		textureFile = "gfx/interface/advisors/COU/idea_COU_cornelis_van_geelkerken.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COU_anton_mussert"
+		textureFile = "gfx/interface/advisors/COU/idea_COU_anton_mussert.png"
+	}
+	
 	spriteType = {
 		name = "GFX_MIYAKO_small"
 		textureFile = "gfx/interface/advisors/SRT/SRT_Spot_1.tga"

@@ -40,7 +40,7 @@
 		}
 	}
 	offset = {
-		x = 10
+		x = 14
 		y = 0
 		trigger = {
 			OR = {
@@ -236,7 +236,7 @@ shared_focus = {
 		}
 		modifier = {
 			tag = RED
-			add = -10
+			add = -100
 		}
 	}
 
@@ -301,6 +301,10 @@ shared_focus = {
 			factor = 2
 			date > 1941.01.01
 		}
+		modifier = {
+			tag = RED
+			add = -100
+		}
 	}
 
 	available = {
@@ -357,6 +361,10 @@ shared_focus = {
 		modifier = {
 			factor = 2
 			date > 1942.01.01
+		}
+		modifier = {
+			tag = RED
+			add = -100
 		}
 	}
 
@@ -426,6 +434,10 @@ shared_focus = {
 			factor = 2
 			date > 1941.01.01
 		}
+		modifier = {
+			tag = RED
+			add = -100
+		}
 	}
 
 	available = {
@@ -483,6 +495,10 @@ shared_focus = {
 		modifier = {
 			factor = 2
 			date > 1942.01.01
+		}
+		modifier = {
+			tag = RED
+			add = -100
 		}
 	}
 
@@ -557,6 +573,10 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
+		modifier = {
+			tag = RED
+			add = -100
+		}
 		
 	}
 
@@ -601,6 +621,10 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
+		modifier = {
+			tag = RED
+			add = -100
+		}
 		
 	}
 
@@ -658,6 +682,10 @@ shared_focus = {
 			factor = 2
 			date > 1941.01.01
 		}
+		modifier = {
+			tag = RED
+			add = -100
+		}
 	}
 
 	available = {
@@ -706,6 +734,10 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
+		modifier = {
+			tag = RED
+			add = -100
+		}
     	base = 5
 	}
 

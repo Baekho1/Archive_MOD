@@ -633,7 +633,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_0"
-				quadTextureSprite = "GFX_COU_intro"
+				quadTextureSprite = "GFX_RED_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -672,7 +672,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_3"
-				quadTextureSprite = "GFX_RED_intro"
+				quadTextureSprite = "GFX_COU_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -805,7 +805,7 @@ guiTypes = {
 			position = { x = 10   y = 180 }
 			size = { width = 172  height = 96 }
 			clipping = yes
-			#hide = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_0_bg"
@@ -815,8 +815,8 @@ guiTypes = {
 
 				iconType = {
 					name = "backdrop_texture_0"
-					quadTextureSprite = "GFX_COU_intro"
-					position = { x = 2  y = 50 }
+					quadTextureSprite = "GFX_RED_intro"
+					position = { x = 2  y = 55 }
 				}
 			}
 		}
@@ -836,7 +836,7 @@ guiTypes = {
 				iconType = {
 					name = "backdrop_texture_1"
 					quadTextureSprite = "GFX_MIL_intro"
-					position = { x = 2  y = 50 }
+					position = { x = 2  y = 55 }
 				}
 			}
 		}
@@ -846,6 +846,7 @@ guiTypes = {
 			position = { x = 354   y = 180 }
 			size = { width = 172  height = 96 }
 			clipping = yes
+			hide = yes
 
 			containerWindowType = {
 				name = "coverup_2_bg"
@@ -856,7 +857,7 @@ guiTypes = {
 				iconType = {
 					name = "backdrop_texture_2"
 					quadTextureSprite = "GFX_TRM_intro"
-					position = { x = 3  y = 50 }
+					position = { x = 3  y = 55 }
 				}
 			}
 		}
@@ -866,7 +867,6 @@ guiTypes = {
 			position = { x = 526   y = 180 }
 			size = { width = 172  height = 96 }
 			clipping = yes
-			hide = yes
 
 			containerWindowType = {
 				name = "coverup_3_bg"
@@ -876,8 +876,8 @@ guiTypes = {
 
 				iconType = {
 					name = "backdrop_texture_3"
-					quadTextureSprite = "GFX_RED_intro"
-					position = { x = 3  y = 2 }
+					quadTextureSprite = "GFX_COU_intro"
+					position = { x = 3  y = 55 }
 				}
 			}
 		}
@@ -897,7 +897,7 @@ guiTypes = {
 				iconType = {
 					name = "backdrop_texture_4"
 					quadTextureSprite = "GFX_GEH_other_intro"
-					position = { x = 2  y = 50 }
+					position = { x = 2  y = 55 }
 				}
 			}
 		}
@@ -917,7 +917,7 @@ guiTypes = {
 				iconType = {
 					name = "backdrop_texture_5"
 					quadTextureSprite = "GFX_HYA_intro"
-					position = { x = 2  y = 50 }
+					position = { x = 2  y = 55 }
 				}
 			}
 		}
@@ -937,7 +937,7 @@ guiTypes = {
 				iconType = {
 					name = "backdrop_texture_6"
 					quadTextureSprite = "GFX_SHA_other_intro"
-					position = { x = 2  y = 50 }
+					position = { x = 2  y = 55 }
 				}
 			}
 		}

@@ -794,4 +794,416 @@ characters={
 			}
 		}
 	}
+	
+	##협력자들
+	COU_willy_coppens = {  
+			advisor = {
+				slot = air_chief
+				idea_token = COU_willy_coppens
+				ledger = air
+				allowed = {
+					original_tag = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {
+					air_chief_reform_1
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			name = BEL_willy_coppens
+			portraits = {
+				army ={
+					small = GFX_portrait_COU_willy_coppens_small
+				}
+			}
+	}
+	
+	COU_mike_donnet = {
+			advisor = {
+				slot = air_chief
+				idea_token = COU_mike_donnet
+				ledger = air
+				allowed = {
+					original_tag = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {
+					air_chief_ground_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			name = BEL_mike_donnet
+			portraits = {
+				army = {
+					small = GFX_portrait_COU_mike_donnet_small
+				}
+			}
+	}
+	
+	COU_leon_degrelle = {
+			name = BEL_leon_degrelle
+			portraits={
+				civilian={
+					large = GFX_portrait_BEL_leon_degrelle 
+					small = GFX_portrait_COU_leon_degrelle_military_small 
+				}
+				army = {
+					large = GFX_portrait_BEL_leon_degrelle 
+					small = GFX_portrait_COU_leon_degrelle_military_small 
+				}
+			}
+			#country_leader = {
+			#	ideology = rexism
+			#	expire = 1965.1.1.1
+			#	id = -1
+			#	traits={ BEL_belgian_inquisitor }
+			#}
+			advisor={
+			    slot = political_advisor
+			    idea_token = COU_leon_degrelle
+			    allowed  = { tag  = COU }
+			    available = {
+    				has_completed_focus = COU_reduction_of_administrative_committee_authority 
+				    has_completed_focus = COU_focus_contact_with_flandern
+				}
+			    traits  = { BEL_belgian_inquisitor }
+		    }
+	}
+	
+	COU_edouard_van_den_burgen = {
+			advisor = {
+				slot = political_advisor
+				idea_token = COU_edouard_van_den_burgen
+				allowed  = {
+					tag  = COU
+				}
+				traits  = {
+					BEL_mobilization_proponent 
+				}
+			}
+			advisor={
+				slot = theorist
+				idea_token = COU_edouard_van_den_burgen_theoristt
+				ledger = army
+				allowed = {
+					original_tag = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {
+					military_theorist
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			name = BEL_edouard_van_den_burgen
+			portraits = {
+				army = {
+					small = GFX_portrait_COU_edouard_van_den_burgen_small
+				}
+			}
+	}
+	
+	COU_charles_count_of_flanders_person = {
+			name = BEL_charles_count_of_flanders_person
+			portraits={
+				civilian={
+					large = GFX_portrait_BEL_charles_count_of_flanders 
+					small = GFX_portrait_COU_charles_count_of_flanders_small 
+				}
+			}
+#			country_leader = {
+#				ideology = despotism
+#				expire = 1965.1.1.1
+#				id = -1
+#				traits = { BEL_royal_regent }
+#			}
+			advisor={
+				slot = political_advisor
+				idea_token = COU_charles_count_of_flanders_person
+				allowed = {
+					tag = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {
+					BEL_quiet_royal
+				}
+				on_add = {
+					owner = {
+						country_event = { id = COU_event.12 }
+					}
+			    }
+				cost = 150
+				ai_will_do = {
+					factor = 0.000
+				}
+			}
+	}
+	
+	COU_august_borms = {
+			advisor = {
+				slot = political_advisor
+				idea_token = COU_august_borms
+				allowed  = {
+					tag  = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits  = {
+					fascist_demagogue 
+				}
+			}
+			name = BEL_august_borms
+			portraits = {
+				army = {
+					small = GFX_portrait_COU_august_borms_small
+				}
+			}
+	}
+	
+	COU_albert_deveze = {
+			advisor = {
+				slot = political_advisor
+				idea_token = COU_albert_deveze
+				allowed  = {
+					tag  = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits  = {
+					BEL_minister_of_national_defence_deveze 
+				}
+			}
+			advisor={
+				slot = high_command
+				idea_token = COU_albert_deveze2
+				ledger = army
+				allowed = {
+					tag = COU
+				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }	
+				traits = {
+					army_entrenchment_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			name = BEL_albert_deveze
+			portraits = {
+				army = {
+					small = GFX_portrait_COU_albert_deveze_small
+				}
+			}
+	}
+	
+	COU_anton_mussert={
+		name=HOL_anton_mussert
+		portraits={
+			civilian={
+				large="GFX_portrait_hol_anton_mussert"
+				small="GFX_idea_COU_anton_mussert"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = COU_anton_mussert
+			allowed  = {
+				tag  = COU
+			}
+			available = { 
+			    has_completed_focus = COU_reduction_of_administrative_committee_authority 
+			    has_completed_focus = COU_focus_unarrest_mussert
+			}
+			traits  = {
+			    COU_leader_of_dutch_nazi 
+			}
+		}
+		#country_leader={
+		#	ideology=fascism_ideology
+		#	traits={ leider }
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	
+	COU_cornelis_van_geelkerken={
+		advisor={
+			slot = political_advisor
+			idea_token = COU_cornelis_van_geelkerken
+			allowed  = {
+					tag  = COU
+				}
+				available = { 
+				   has_completed_focus = has_completed_focus = COU_focus_unarrest_mussert
+				   has_completed_focus = COU_reduction_of_administrative_committee_authority 
+				}
+				traits  = {
+					prince_of_terror 
+				}
+		}
+		name=HOL_cornelis_van_geelkerken
+		portraits={
+			army={
+			    large="GFX_leader_COU_cornelis_van_geelkerken"
+				small="GFX_idea_COU_cornelis_van_geelkerken"
+			}
+		}
+	}
+	
+	COU_oscar_michiels = {
+			name = BEL_oscar_michiels
+			portraits={
+				army = {
+					large = GFX_portrait_BEL_oscar_michiels 
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = { career_officer organizer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 2
+			}
+	}
+	
+	COU_victor_van_strydonck_de_burkel = {
+			name = BEL_victor_van_strydonck_de_burkel
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_victor_van_strydonck_de_burke
+					small = GFX_portrait_BEL_victor_van_strydonck_de_burke_small
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = { cavalry_officer career_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+			}
+	}
+	
+	COU_jules_pire = {
+			name = BEL_jules_pire
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_jules_pire
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = { career_officer urban_assault_specialist }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+	}
+	
+	COU_victor_descamps = {
+			name = BEL_victor_descamps
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_victor_descamps
+					small = GFX_portrait_BEL_victor_descamps_small
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = { ranger infantry_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+			}
+	}
+	
+	COU_fernand_verstraete = {
+			name = BEL_fernand_verstraete
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_fernand_verstraete 
+					small = GFX_portrait_BEL_fernand_verstraete_small 
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {  }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+	}
+	
+	COU_georges_timmermans = {
+			name = BEL_georges_timmermans
+			portraits = {
+				army = {
+					large=GFX_portrait_BEL_georges_timmermans
+					small=GFX_portrait_BEL_georges_timmermans_small
+				}
+			}
+			navy_leader = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = { bold }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				maneuvering_skill = 3
+				coordination_skill = 1
+			}
+	}
+	
+	COU_raoul_daufresne_de_la_chevalerie = {
+			name = BEL_raoul_daufresne_de_la_chevalerie
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_raoul_daufresne_de_la_chevalerie
+					small = GFX_portrait_BEL_raoul_daufresne_de_la_chevalerie_small
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+	}
+	
+	COU_yvan_gerard = {
+			name = BEL_yvan_gerard
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_yvan_gerard
+					small = GFX_portrait_BEL_yvan_gerard_small
+				}
+			}
+			corps_commander = {
+			    visible = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+	}
 }

@@ -201,6 +201,25 @@ recruit_character = COU_anton_pannekoek
 recruit_character = COU_central_labor_union
 recruit_character = COU_council_democracy
 
+##collaboraters 
+recruit_character = COU_yvan_gerard
+recruit_character = COU_raoul_daufresne_de_la_chevalerie
+recruit_character = COU_georges_timmermans
+recruit_character = COU_fernand_verstraete
+recruit_character = COU_victor_descamps
+recruit_character = COU_jules_pire
+recruit_character = COU_victor_van_strydonck_de_burkel
+recruit_character = COU_oscar_michiels
+recruit_character = COU_cornelis_van_geelkerken
+recruit_character = COU_anton_mussert
+recruit_character = COU_albert_deveze
+recruit_character = COU_august_borms
+recruit_character = COU_charles_count_of_flanders_person
+recruit_character = COU_edouard_van_den_burgen
+recruit_character = COU_leon_degrelle
+recruit_character = COU_mike_donnet
+recruit_character = COU_willy_coppens
+
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 		set_technology = {
