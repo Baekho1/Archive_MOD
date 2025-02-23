@@ -123,6 +123,7 @@ ideas = {
 			modifier = {
 				compliance_growth = 1.5
 				resistance_growth = -0.5
+				communism_drift = 0.05
 			}
 		}
 		RED_world_revolution_1 = { #세계혁명!

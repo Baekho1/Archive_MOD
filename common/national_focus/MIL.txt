@@ -8532,6 +8532,9 @@ focus_tree = {
 		prerequisite = { focus = MIL_refugee_problem }
 		x = -1
 		y = 1
+		ai_will_do = {
+			base = -99
+		}
 		mutually_exclusive = {
 			focus = MIL_non_interference_compromise
 		}

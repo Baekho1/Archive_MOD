@@ -1088,7 +1088,9 @@ ideas = {
 			}
 			
 			traits = { RED_designer }
-
+			ai_will_do = {
+				base = 9999
+			}
 			on_add = {
 				add_dynamic_modifier = {
 					modifier = RED_labor_party_dynamic_modifier

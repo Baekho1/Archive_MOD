@@ -331,7 +331,12 @@ RED_invite_trotskists_dec_cat = {
 		available = {
 			any_owned_state = {
 				NOT = {
-					is_core_of = RED
+					OR = {
+						is_core_of = RED
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+					}
 					is_claimed_by = RED
 				}
 			}
@@ -379,7 +384,15 @@ RED_invite_trotskists_dec_cat = {
 				}
 				FROM = {
 					OR = {
-						is_major = no
+						AND = {
+							is_major = no
+							NOT = {
+								any_country = {
+									is_ally_with = FROM
+									is_major = yes
+								}
+							}
+						}
 						Kivotos_tag = yes
 					}
 					any_country = {

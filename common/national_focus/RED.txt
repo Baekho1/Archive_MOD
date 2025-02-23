@@ -64,7 +64,7 @@ focus_tree = {
 		y = 0
 		cost = 4
 		ai_will_do = {
-			base = 30
+			base = 9999
 		}
 		available = {
 			NOT = {
@@ -150,7 +150,7 @@ focus_tree = {
 		cost = 4
 		relative_position_id = RED_road_to_south
 		ai_will_do = {
-			base = 300
+			base = 9999
 		}
 		available = {
 			NOT = {
@@ -855,7 +855,7 @@ focus_tree = {
 			}
 			add_timed_idea = {
 				idea = RED_industrial_futurization_idea
-				days = 240
+				days = 180
 			}
 		}
 	}
@@ -926,7 +926,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_controlled_factories > 70
+			num_of_controlled_factories > 75
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -3014,7 +3014,7 @@ focus_tree = {
 		relative_position_id = RED_land_research
 		cost = 2
 		ai_will_do = {
-			base = 300
+			base = 9999
 		}
 		offset = {
 			x = -6
@@ -3280,7 +3280,7 @@ focus_tree = {
 		relative_position_id = RED_club_focus_0
 		cost = 2
 		ai_will_do = {
-			base = 300
+			base = 9999
 		}
 		available = {
 			NOT = {
@@ -3386,7 +3386,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		ai_will_do = {
-			base = 300
+			base = 9999
 		}
 		relative_position_id = RED_club_focus_0
 		cost = 2
@@ -6525,6 +6525,13 @@ focus_tree = {
 		completion_reward = {
 			925 = {
 				transfer_state_to = RE4
+			}
+			hidden_effect = {
+				RE4 = {
+					declare_war_on = {
+						target = FIN
+					}
+				}
 			}
 			set_autonomy = {
 				target = RE4
