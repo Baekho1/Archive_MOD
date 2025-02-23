@@ -169,7 +169,8 @@ COLOUR_swallow_earth_technology_desc:0 ""
  GEI_The_Colour_character:0 "§0색채§!"
  GEI_kuroko:0 "스나오오카미 시로코"
  GEI_prena_sensei:0 "프레나파테스"
-GEI_ARONA:0 "A.R.O.N.A."
+ GEI_ARONA:0 "A.R.O.N.A."
+ GEI_DEC_decagramaton:0 "데카그라마톤"
 
  #이벤트
  GEI_event.1.t:0 "의견 충돌"

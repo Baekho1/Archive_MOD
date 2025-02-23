@@ -13,12 +13,12 @@ focus_tree = {
     # 실패
     focus = {
 		id = GEI_DEC_fail
-		icon = GFX_GEI_DEC_fail
+		icon = GFX_GEI_DEC_old_answer
 
-		x = 0
+		x = 10
 		y = 2
 
-		cost = 1
+		cost = 0
 		
 
 		available = {
@@ -48,6 +48,226 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_fail}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_automatic_factory
+		icon = GFX_GEI_DEC_automatic_factory
+
+		x = 2
+		y = 2
+        relative_position_id = GEI_DEC_Duty
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_Duty}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_otomaton
+		icon = GFX_GEI_DEC_otomaton
+
+		x = -1
+		y = 1
+        relative_position_id = GEI_DEC_automatic_factory
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_automatic_factory}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_no_name_gods
+		icon = GFX_GEI_DEC_no_name_gods
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_otomaton
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_otomaton}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_effection
+		icon = GFX_GEI_DEC_effection
+
+		x = 1
+		y = 1
+        relative_position_id = GEI_DEC_automatic_factory
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_automatic_factory}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_base_camp
+		icon = GFX_GEI_base_camp
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_effection
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_effection}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_ghost_signal
+		icon = GFX_GEI_ghost_signal
+
+		x = 1
+		y = 1
+        relative_position_id = GEI_DEC_no_name_gods
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_no_name_gods}
+		prerequisite = { focus = GEI_DEC_base_camp}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_god_knows
+		icon = GFX_GEI_DEC_gods_knows
+
+		x = -2
+		y = 2
+        relative_position_id = GEI_DEC_Duty
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_Duty}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = KAI }
+				owns_state = 131
+				owns_state = 931
+				owns_state = 130
+				owns_state = 132
+				owns_state = 129
+				owns_state = 128
+				owns_state = 338
+				owns_state = 123
+				owns_state = 127
+				owns_state = 126
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = KAI
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_last_question
+		icon = GFX_GEI_DEC_last_question
+
+		x = 0
+		y = 2
+        relative_position_id = GEI_DEC_god_knows
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_god_knows}
 		
 
 		available = {

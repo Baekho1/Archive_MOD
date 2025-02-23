@@ -729,9 +729,14 @@ focus_tree = {
 		prerequisite = { focus = GEI_uigyeonchungdol }
 		mutually_exclusive = { focus = GEI_beateulicheuiseungli}
 
+		ai_will_do = {
+			factor = 0
+		}
+
 		available = {
 			
 		}
+
 		search_filters = {
 			
 						FOCUS_FILTER_ANNEXATION
@@ -739,9 +744,32 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {id = GEI_DEC_event.0}
-			
+
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+				}
+
+		set_politics = {
+				ruling_party = neutrality
+    			elections_allowed = no
+    			election_frequency = 48
+    			long_name = GEI_DEC_decagramaton
+    			name = GEI_DEC_decagramaton
+			}
+
+		add_country_leader_role = {
+				character = GEI_DEC_decagramaton
+				promote_leader = yes
+				country_leader = {
+					ideology = neutrality
+					expire = "1965.1.1.1"
+				traits = { GEI_the_presence_of_heteromorphs GEI_self_righteous_ruler }
 				}
 			}
+
+		}
+	}
 	# 오래된 질문 		
 
 	focus = {

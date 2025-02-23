@@ -2682,4 +2682,24 @@ spriteTypes = {
 		name = "GFX_GEI_DEC_hesade_plan"
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"
 	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_automatic_factory"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_effection"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_god_knows"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_last_question"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"
+	}
 }

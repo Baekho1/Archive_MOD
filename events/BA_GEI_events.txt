@@ -18,7 +18,7 @@ country_event = {
 
 	option = { 
 		name = GEI_event.1.b
-		set_country_flag = GEI_Beatrice
+		set_country_flag = GEI_DEC
 		complete_national_focus = GEI_DEC_victory
 	}
 }

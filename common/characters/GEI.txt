@@ -98,4 +98,22 @@ characters={
 			}
 		}
 	}
+	GEI_DEC_decagramaton={
+		name=GEI_DEC_decagramaton
+		portraits={
+			civilian={
+				large="gfx/leaders/GEI/GEI_DEC_decagramaton.png"
+			}
+			army={
+				large="gfx/leaders/GEI/GEI_DEC_decagramaton.png"
+				small= "gfx/interface/advisors/GEI/Beatrice.tga"
+			}
+		}
+		country_leader = {
+			ideology=despotism
+			traits={ GEI_the_presence_of_heteromorphs GEI_unknown_contractor }
+			expire="1965.1.1.1"
+		}
+	}
 }
+

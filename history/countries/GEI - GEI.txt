@@ -82,6 +82,8 @@ recruit_character = rpakxmfldk
 recruit_character = GEI_Kuroko
 recruit_character = GEI_ARONA
 recruit_character = GEI_prena_sensei
+recruit_character = GEI_DEC_decagramaton
+
 set_convoys = 140
 
 set_politics = {
