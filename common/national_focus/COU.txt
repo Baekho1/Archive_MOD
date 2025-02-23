@@ -66,7 +66,6 @@ focus_tree = {
 			if = {
 				limit = { has_country_flag = MISSINGGSCP }
 				add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
-				promote_character = COU_RIN
 				add_political_power = 100
 				add_stability = 0.1
 				add_popularity = {
@@ -449,16 +448,6 @@ focus_tree = {
 					election_frequency = 48
 					elections_allowed = no
 				}
-				add_country_leader_trait = COU_new_dictator
-			}
-			else_if = { limit = { fascism > 0.35 }
-				set_politics = {	
-					ruling_party = fascism
-					last_election = "1936.1.1"
-					election_frequency = 48
-					elections_allowed = no
-				}
-				add_country_leader_trait = COU_new_dictator
 			}
 			else_if = { limit = { communism > 0.35 }
 				set_politics = {	
@@ -467,32 +456,7 @@ focus_tree = {
 					election_frequency = 48
 					elections_allowed = no
 				}
-				add_country_leader_trait = COU_new_dictator
 				news_event = { id = BA_news.86 hours = 8 }
-			}
-			else = {
-				add_country_leader_trait = COU_new_dictator
-			}
-			COU_cut_tower_down_effect = yes
-			set_party_name = {
-				ideology = democratic
-				long_name = COU_next_democratic_party_long
-				name = COU_next_democratic_party
-			}
-			set_party_name = {
-				ideology = communism
-				long_name = COU_next_communism_party_long
-				name = COU_next_communism_party
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = COU_next_fascism_party_long
-				name = COU_next_fascism_party
-			}
-			set_party_name = {
-				ideology = neutrality
-				long_name = COU_next_neutrality_party_long
-				name = COU_next_neutrality_party
 			}
 		}
 	}
@@ -594,11 +558,15 @@ focus_tree = {
         icon = GFX_COU_momoka_arrest
         x = -3
         y = 2
-        cost = 5
+        cost = 3
 		prerequisite = { focus = COU_focus_remove_the_line }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		     country_event = COU_event.13
+			 add_days_mission_timeout = {
+			     mission = COU_rin_getout_kaya
+			     days = 50
+		     }
         }
 	}
 	
@@ -607,11 +575,15 @@ focus_tree = {
         icon = GFX_COU_ayumu_arrest
         x = -1
         y = 2
-        cost = 5
+        cost = 3
 		prerequisite = { focus = COU_focus_remove_the_line }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		     country_event = COU_event.14
+		     add_days_mission_timeout = {
+			     mission = COU_rin_getout_kaya
+			     days = 50
+		     }
         }
 	}
 	
@@ -620,12 +592,15 @@ focus_tree = {
         icon = GFX_SRT_focus_we_are_srt
         x = -2
         y = 3
-        cost = 5
+        cost = 10
 		prerequisite = { focus = COU_focus_arrest_momoka }
 		prerequisite = { focus = COU_focus_arrest_ayumu }
 		relative_position_id = COU_focus_in_the_darkness
+		select_effect = { 
+		     country_event = { id = COU_event.15 days = 5 }
+		}
         completion_reward = {
-		    
+		     custom_effect_tooltip = COU_tooltip_srt_gonna_make_shit
         }
 	}
 	
@@ -4672,11 +4647,13 @@ focus_tree = {
 	#경세제민 [經世濟民] : 세상을 다스리고 백성을 구제함.
 	focus = { #저지대 산업화	
 		id = COU_economy_focus_0
-		icon = GFX_focus_generic_modernize_industry
+		icon = GFX_focus_hol_the_zuiderzee_works
 		x = 42
 		y = 0
 		cost = 5
 		available = {
+			owns_state = 7
+			owns_state = 36
 		}
 		bypass = {
 		}
@@ -4684,6 +4661,30 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_the_zuiderzee_works
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = industry
+			}
+			7 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			36 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = { news_event = { id = mtg_news.47 days = 1 } }
 		}
 	}
 	focus = { #공공사업 기획	
@@ -4729,12 +4730,15 @@ focus_tree = {
 	focus = { #D.U. 종합도시계획
 		id = COU_economy_focus_3
 		icon = GFX_focus_spa_the_spanish_miracle
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = COU_economy_focus_2
 		cost = 5
 		prerequisite = {
 			focus = COU_economy_focus_2
+		}
+		prerequisite = {
+			focus = COU_economy_focus_19
 		}
 		available = {
 			owns_state = 7
@@ -4749,61 +4753,15 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	focus = { #자위더르해 사업 재개
-		id = COU_economy_focus_4
-		icon = GFX_focus_hol_the_zuiderzee_works
-		x = 0
-		y = 2
-		relative_position_id = COU_economy_focus_1
-		cost = 5
-		prerequisite = {
-			focus = COU_economy_focus_1
-		}
-		available = {
-			owns_state = 7
-			owns_state = 36
-		}
-		bypass = {
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = HOL_the_zuiderzee_works
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 2
-				category = industry
-			}
-			7 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			36 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			hidden_effect = { news_event = { id = mtg_news.47 days = 1 } }
-		}
-	}
 	focus = { #란드스타트 개발
 		id = COU_economy_focus_5
 		icon = GFX_goal_generic_consumer_goods
-		x = -3
-		y = 1
-		relative_position_id = COU_economy_focus_4
+		x = -2
+		y = 2
+		relative_position_id = COU_economy_focus_2
 		cost = 5
 		prerequisite = {
-			focus = COU_economy_focus_4
+			focus = COU_economy_focus_8
 		}
 		available = {
 			owns_state = 7
@@ -4867,12 +4825,12 @@ focus_tree = {
 	focus = { #잔드스타트 개발
 		id = COU_economy_focus_6
 		icon = GFX_focus_generic_industry_1
-		x = -1
-		y = 1
-		relative_position_id = COU_economy_focus_4
+		x = 2
+		y = 2
+		relative_position_id = COU_economy_focus_2
 		cost = 5
 		prerequisite = {
-			focus = COU_economy_focus_4
+			focus = COU_economy_focus_19
 		}
 		mutually_exclusive = {
 			focus = COU_economy_focus_5

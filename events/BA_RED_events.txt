@@ -685,6 +685,7 @@ country_event = { #재건채권 만료
 				target = RED
 				modifier = RED_dont_pay
 			}
+			country_event = RED_generic.7
 		}
 		activate_mission = RED_mission_rebuild_bill_no_pay_outdate
 	}
@@ -728,7 +729,7 @@ country_event = { #돈 갚음
 		}
 	}
 }
-country_event = { #갚는 거 미룸룸
+country_event = { #갚는 거 미룸
 	id = RED_generic.7
 	title = RED_generic.7.t
 	desc = RED_generic.7.d
@@ -3499,7 +3500,7 @@ country_event = { # 군정청: 00의 봄
 	}
 	
 	option = { #독립!
-		name = RED_instability_system.4.a
+		name = RED_instability_system.4.a	
 		if = { limit = { is_subject = yes }
 			overlord = {
 				save_global_event_target_as = RED_instability_system_independence_overlord_target
@@ -3904,13 +3905,9 @@ country_event = { # 고틀란드냐 전쟁이냐
 			FROM = {
 				transfer_state = 124
 				add_state_core = 124
-				transfer_state = 910
-				add_state_core = 910
-				set_country_flag = RED_GEK_gave_goatland_flag
 			}
 			ROOT = {
 				remove_state_claim = 124
-				remove_state_claim = 910
 			}
 		}
 	}
@@ -3989,12 +3986,10 @@ country_event = { # 독일 수락
 		ROOT = {
 			transfer_state = 124
 			add_state_core = 124
-			transfer_state = 910
-			add_state_core = 910
+			set_country_flag = RED_GEK_gave_goatland_flag
 		}
 		FROM = {
 			remove_state_claim = 124
-			remove_state_claim = 910
 		}
 	}
 }
@@ -4231,14 +4226,14 @@ country_event = { #군통권 내놔
 		}
 		give_military_access = RED
 		RED = {
-			give_guarantee = THIS
+			give_guarantee = ROOT
 		}
 	}
 	option = { #ㅗ
 		name = RED_event.10.b
 		RED = {
 			create_wargoal = {
-				target = THIS
+				target = ROOT
 				type = annex_everything
 			}
 		}

@@ -1382,6 +1382,9 @@ focus_tree = {
 					modifier = RED_investment_more
 				}
 			}
+			remove_dynamic_modifier = {
+				modifier = RED_investment_modifier
+			}
 		}
 	}
 	focus = {
@@ -1500,7 +1503,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_civilian_factories > 80
+			num_of_factories > 80
 		}
 		completion_reward = {
 			add_ideas = RED_land_developing
@@ -4237,7 +4240,11 @@ focus_tree = {
 							has_idea = RED_military_government_idea_3
 							has_idea = RED_military_government_idea_4
 						}
+						NOT = {
+							has_idea = RED_autonomous_state_idea
+						}
 						exists = yes
+						
 					}
 				}
 				custom_effect_tooltip = RED_welcome_immigrate_tt_1
@@ -5815,7 +5822,6 @@ focus_tree = {
 		relative_position_id = RED_cherino_s_systemic_revolution
 		mutually_exclusive = {
 			focus = RED_democratic_planned_economy
-			focus = RED_industrial_democracy
 		}
 		cost = 4
 		completion_reward = {
@@ -5835,7 +5841,6 @@ focus_tree = {
 		relative_position_id = RED_cherino_s_systemic_revolution
 		mutually_exclusive = {
 			focus = RED_free_soviets
-			focus = RED_industrial_democracy
 		}
 		cost = 4
 		completion_reward = {
@@ -6267,6 +6272,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = RED_foreign_policy
 		completion_reward = {
+			custom_effect_tooltip = RED_unlock_operation_tt
 		}
 	}
 	focus = {
@@ -6446,7 +6452,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = RED_GEK_gave_goatland_flag_tt
 				has_country_flag = {
-					flag = RED_GEK_gave_goatland_flagg
+					flag = RED_GEK_gave_goatland_flag
 					days > 180
 				}
 			}
@@ -6524,6 +6530,13 @@ focus_tree = {
 				target = RE4
 				autonomy_state = autonomy_supervised_state
 			}
+			hidden_effect = {
+				RE4 = {
+					declare_war_on = {
+						target = FIN
+					}
+				}
+			}
 			every_state = {
 				limit = {
 					is_core_of = FIN
@@ -6532,7 +6545,7 @@ focus_tree = {
 			}
 			create_wargoal = {
 				target = FIN
-				type = annex_everything
+				type = liberate_wargoal
 			}
 		}
 	}

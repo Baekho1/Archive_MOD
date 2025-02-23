@@ -236,7 +236,7 @@ set_technology = {
 	fuel_refining = 1
 }
 
-set_stability = 0.4
+set_stability = 0.3
 set_war_support = 0.4
 set_research_slots = 3
 add_command_power = 10

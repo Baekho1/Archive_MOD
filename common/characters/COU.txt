@@ -41,7 +41,7 @@ characters={
 		country_leader={
 			desc=COU_RIN_desc
 			ideology=liberalism
-			traits = { COU_power_struggle }
+			traits = { COU_dictator_rin COU_power_struggle }
 			expire="1965.1.1.1"
 		}
 		advisor = {
@@ -883,6 +883,7 @@ characters={
 				allowed  = {
 					tag  = COU
 				}
+				available = { has_completed_focus = COU_reduction_of_administrative_committee_authority }
 				traits  = {
 					BEL_mobilization_proponent 
 				}
@@ -1003,17 +1004,17 @@ characters={
 			}
 	}
 	
-	COU_anton_mussert={
-		name=HOL_anton_mussert
+	COU_alfred_haighton={
+		name=COU_alfred_haighton
 		portraits={
 			civilian={
-				large="GFX_portrait_hol_anton_mussert"
-				small="GFX_idea_COU_anton_mussert"
+				large="GFX_leader_portrait_COU_alfred_heighton"
+				small="GFX_idea_COU_alfred_haighton"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = COU_anton_mussert
+			idea_token = COU_alfred_heighton
 			allowed  = {
 				tag  = COU
 			}

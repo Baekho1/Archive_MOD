@@ -11,7 +11,9 @@
  RED_focus_shortcut_war: "반파시즘 성전"
  RED_focus_shortcut_rearming_2: "재무장: 군제개혁"
  RED_focus_shortcut_rearming_1: "재무장: 군수산업"
- RED_focus_shortcut_industry_1: "산업: 경제개발"
+ RED_focus_shortcut_industry_1: "산업: 산업 기획"
+ RED_focus_shortcut_industry_3: "산업: 완전 고용"
+ RED_focus_shortcut_industry_4: "산업: A.E.P."
  RED_focus_shortcut_industry_2: "산업: 동아리"
  RED_focus_politic_1: "정치: 트로츠키"
  RED_focus_politic_2: "정치: 마리나"
@@ -187,7 +189,7 @@
  RED_kivotos_halo_militia_add3_tt: "£GFX_unit_halo_militia_icon_small §C헤일로 민병§!의 §Y편제 제한§!: §G+3§!\n"
  RED_kivotos_halo_militia_add6_tt: "£GFX_unit_halo_militia_icon_small §C헤일로 민병§!의 §Y편제 제한§!: §G+6§!\n"
  RED_enlarge_secret_police: "공안부"
- RED_enlarge_secret_police_desc: "경비국의 단속에도 불구하고 학원의 통치에 순응하지 않는 인민들이 곳곳에 숨어있습니다. 우리는 이들을 감시하고 충성적인 인민들에게 우선적으로 직업을 할당하기 위해 비밀경찰을 확대할 것 입니다."
+ RED_enlarge_secret_police_desc: ""
  RED_enemy_of_class: "계급의 적"
 
  RED_advance_security: "경비국 강화"
@@ -271,6 +273,10 @@
  RED_support_geh: "게헨나 지원"
  RED_trade_with_KAI: "민간 교류 활성화"
  RED_infiltrate_trm: "트리니티에의 잠입"
+ RED_unlock_operation_tt: "@TRM§Y[TRM.getadjective]§!을(를) 대상으로 하는 §Y작전§! §G사용가능§!:\n§Y위조지폐 발행§!, §Y생화학 무기 살포§!"
+
+ BA_fake_money_gang: "위조지폐 발행"
+ BA_fake_money_gang_desc: "ㅈㄱㄴ"
 
  RED_attack_sov: "소련 확보"
  RED_attack_sov_desc: "소비에트 지도자의 독선적인 행보는 우리의 혁명에 위협이 되고 있기에, 우리가 혁명을 완수하려면 이들과 맞서 싸워야 하는 건 기정사실이 되었습니다. 그리고 이제 때가 되었습니다."

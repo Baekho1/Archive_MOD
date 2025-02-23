@@ -110,9 +110,12 @@ characters = {
 			}
 		}
 		scientist = {
-			traits = { scientist_trait_nuclear_warfare_expert scientist_trait_bright}
+			traits = { scientist_trait_bright scientist_trait_nuclear_warfare_expert }
 			skills = {
-				specialization_nuclear = 1
+				specialization_nuclear = 2
+			}
+			visible = {
+				always = yes
 			}
 		}
 		advisor={
@@ -864,6 +867,7 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_SOV_aleksandr_shlyapnikov"
+				large = "gfx/leaders/RED/RED_alexander_shliapnikov.tga"
 			}
 		}
 		allowed_civil_war = { 
@@ -960,6 +964,7 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_SOV_yevgeny_preobrazhensky"
+				large = "gfx/leaders/RED/RED_yevgeni_preobrazhensky.tga"
 			}
 		}
 
@@ -1261,7 +1266,7 @@ characters = {
 				 NOR_shipping_capitalist
 			}
 			visible = {
-				has_completed_focus = RED_economy_focus_12
+				has_completed_focus = RED_economy_focus_11
 			}
 			available = {
 				OR = {

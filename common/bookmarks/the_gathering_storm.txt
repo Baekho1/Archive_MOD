@@ -161,7 +161,7 @@ bookmarks = {
 
 		GEK = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = GEK_gathering_storm_desc
 			ideology = neutrality
 		}
 
@@ -178,7 +178,7 @@ bookmarks = {
 
 		NSD = {
 			minor = yes
-			history = Debug_BA_gathering_storm_desc
+			history = NSD_gathering_storm_desc
 			ideology = neutrality
 		}
 

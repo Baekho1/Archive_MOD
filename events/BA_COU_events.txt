@@ -163,18 +163,8 @@ country_event = { #총학생회장 실종
 	picture = GFX_COU_subway
 	
 	fire_only_once = yes
+	is_triggered_only = yes
 	
-	trigger = {
-		original_tag = COU
-		NOT = { has_global_flag = COU_event_1_flag }
-	}
-	mean_time_to_happen = {
-		days = 10
-		modifier = {
-			factor = 0.5
-			date > 1936.01.05
-		}
-	}
 	immediate = {
 		set_global_flag = COU_event_1_flag
 	}
@@ -191,7 +181,8 @@ country_event = { #총학생회장 실종
     		target = SHE
 		}
 		
-		promote_character = COU_null
+		#promote_character = COU_null
+		promote_character = COU_RIN
 		
 		country_event = { id = COU_event.2 hours = 8 }
 		news_event = { id = BA_news.76 days = 7 }
@@ -215,10 +206,15 @@ country_event = {
 		NOT = { has_global_flag = COU_event_1001_flag }
 	}
 	mean_time_to_happen = {
-		days = 7
+		days = 10
+		modifier = {
+			factor = 0.5
+			date > 1936.01.05
+		}
 	}
 	immediate = {
 		set_global_flag = COU_event_1001_flag
+		hidden_effect = { country_even = { id = COU_event.1 days = 3 } }
 	}
 
 	option = { 
@@ -502,6 +498,7 @@ country_event = {
 	immediate = {
 	    hidden_effect = {
 		    activate_mission = COU_rin_getout_kaya
+			country_event = { id = COU_event.19 days = 10 }
 		}
 	}
 
@@ -605,6 +602,151 @@ country_event = {
 
 	option = { 
 		name = COU_event.12.a
+	}
+}
+
+##모모카-아우우 관련 
+country_event = { 
+	id = COU_event.13
+	title = COU_event.13.t
+	desc = COU_event.13.desc
+	picture = GFX_report_event_picture_arrest_momoka
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.13.a
+		custom_effect_tooltip = COU_MOMOKA_ARREST_tt
+		set_country_flag = MOMOKA_ARREST
+		custom_effect_tooltip = COU_tooltip_momoka_thats_all_right
+		add_stability = -0.01
+	}
+}
+
+country_event = { 
+	id = COU_event.14
+	title = COU_event.14.t
+	desc = COU_event.14.desc
+	picture = GFX_report_event_picture_arrest_ayumu
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.14.a
+		custom_effect_tooltip = COU_AYUMU_ARREST_tt
+		set_country_flag = AYUMU_ARREST
+		custom_effect_tooltip = COU_tooltip_ayumu_thats_all_right
+		add_stability = -0.01
+	}
+}
+
+country_event = { 
+	id = COU_event.15
+	title = COU_event.15.t
+	desc = COU_event.15.desc
+	picture = GFX_event_mega_cities_SRT
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.15.a
+		country_event = { id = COU_event.16 days = 2 }
+	}
+}
+
+country_event = { 
+	id = COU_event.16
+	title = COU_event.16.t
+	desc = COU_event.16.desc
+	picture = GFX_event_mega_cities_SRT
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.16.a
+		country_event = { id = COU_event.17 days = 3 }
+	}
+}
+
+country_event = { 
+	id = COU_event.17
+	title = COU_event.17.t
+	desc = COU_event.17.desc
+	picture = GFX_report_event_she_srt_integration
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.17.a
+		complete_national_focus = COU_focus_recruit_srt
+		country_event = { id = COU_event.18 days = 1 } 
+		news_event = { id = BA_news.126 hours = 4 }
+		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		add_to_variable = { var = COU_rin_percen value = 10 }
+	}
+}
+
+country_event = { 
+	id = COU_event.18
+	title = COU_event.18.t
+	desc = COU_event.18.desc
+	picture = GFX_event_cyberpunk
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.18.a
+		add_days_mission_timeout = {
+			 mission = COU_rin_getout_kaya
+		     days = 50
+	    }
+	}
+}
+
+##하이네의 지지
+country_event = { 
+	id = COU_event.19
+	title = COU_event.19.t
+	desc = COU_event.19.desc
+	picture = GFX_COU_interrogationroom
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.19.a
+		clr_country_flag = COU_deagree_out_rin3
+		set_country_flag = COU_agree_out_rin3
+		custom_effect_tooltip = COU_tooltip_jaime_accept_yoon
+		custom_effect_tooltip = COU_tooltip_jaime_umm
+		add_stability = 0.01
 	}
 }
 

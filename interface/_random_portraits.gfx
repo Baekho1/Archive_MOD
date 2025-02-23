@@ -92,6 +92,10 @@ spriteTypes = {
 		name = "GFX_Portrait_BlueArchive_TRM_scientists_04"
 		texturefile = "gfx/leaders/ZZZ_scientists/Portrait_BlueArchive_TRM_scientists_04.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_BlueArchive_RED_nodoka"
+		texturefile = "gfx/leaders/ZZZ_scientists/Portrait_BlueArchive_RED_nodoka.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_Portrait_BlueArchive_COU_Generic_1"

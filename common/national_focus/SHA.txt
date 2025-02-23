@@ -1984,10 +1984,16 @@ focus_tree = {
 				add_claim_by = SHA
 			}
 			every_country = {
-				limit = { Kivotos_school_tag = yes }
-				create_wargoal = {
-					target = PREV
-					type = puppet_wargoal_focus
+				limit = { 
+					Kivotos_school_tag = yes 
+					NOT = { original_tag = SHA }
+					NOT = { is_puppet_of = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
 				}
 			}
 			every_country = {
