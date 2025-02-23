@@ -10,23 +10,21 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 
 	days = 35
 	network_strength = 40
-	operatives = 1
+	operatives = 2
 
 	visible = {
-		OR = {
-			tag = RED
-			tag = TRM
+		network_strength = {
+			target = FROM
+			value > 25
 		}
+		tag = RED
 		FROM = {
-			OR = {
-				tag = RED
-				tag = TRM
-			}
+			tag = TRM
 		}
 	}
 
 	available = {
-		
+		has_completed_focus = RED_infiltrate_trm
 	}
 
 	requirements = {

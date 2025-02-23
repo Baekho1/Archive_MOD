@@ -179,7 +179,7 @@ RED_service_n_dedication = { #봉사와 헌신
 	visible = {
 		has_completed_focus = RED_new_economy_focus_4
 	}
-	priority = 50
+	priority =150
 	picture = GFX_decision_cat_picture_NOR_rousing_proletariat
 }
 RED_debt = { #다가오는 대출 만료

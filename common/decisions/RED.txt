@@ -14,6 +14,9 @@ RED_seek_allies_dec_cat = {
 		visible = {
 			has_completed_focus = RED_trade_with_KAI
 		}
+		ai_will_do = {
+			base = 10
+		}
 		cost = 30
 		complete_effect = {
 			RED = {
@@ -46,6 +49,9 @@ RED_seek_allies_dec_cat = {
 		visible = {
 			has_completed_focus = RED_trade_with_KAI
 		}
+		ai_will_do = {
+			base = 10
+		}
 		cost = 30
 		complete_effect = {
 			KAI = {
@@ -71,6 +77,9 @@ RED_seek_allies_dec_cat = {
 			POL = {
 				is_faction_leader = yes
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 		target_trigger = {
 			FROM = {
@@ -193,6 +202,9 @@ RED_invite_trotskists_dec_cat = {
 			has_completed_focus = RED_armed_workers
 			
 		}
+		ai_will_do = {
+			base = 100
+		}
 		target_trigger = {
 			FROM = {
 				has_war_with = RED
@@ -230,6 +242,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_POL_looming_peasants_strike
 		visible = {
 			has_completed_focus = RED_war_communism_focus
+		}
+		ai_will_do = {
+			base = 100
 		}
 		cost = 30
 		days_remove = 120
@@ -285,6 +300,9 @@ RED_invite_trotskists_dec_cat = {
 				is_core_of = SMI
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 		cost = 30
 		days_remove = 60
 		remove_effect = {
@@ -318,6 +336,9 @@ RED_invite_trotskists_dec_cat = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1000
+		}
 		complete_effect = {
 			if = {
 				limit = {
@@ -347,6 +368,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_generic_ignite_civil_war
 		visible = {
 			has_completed_focus = RED_liberation_of_the_kibotus_states
+		}
+		ai_will_do = {
+			base = 100
 		}
 		target_trigger = {
 			if = {
@@ -413,6 +437,9 @@ RED_invite_trotskists_dec_cat = {
 			RED_yevgeny_preobrazhensky = {
 				has_character_flag = RED_invited_trotskist
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 		complete_effect = {
 			if = {
@@ -577,6 +604,9 @@ RED_invite_trotskists_dec_cat = {
 				has_character_flag = RED_invited_trotskist
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 		complete_effect = {
 			if = {
 				limit = {
@@ -629,7 +659,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_ivn_ivr
-					add_idea = RED_exile_committee_ivr_alk_krl
+					add_idea = RED_exile_committee_ivr_krl_ivn
 				}
 			}
 			else_if = {
@@ -734,6 +764,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
 		fire_only_once = yes
 		cost = 80
+		ai_will_do = {
+			base = 100
+		}
 		visible = {
 			has_country_flag = RED_exile_committee_made_flag
 			RED_aleksandr_shlyapnikov = {
@@ -896,6 +929,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
 		fire_only_once = yes
 		cost = 80
+		ai_will_do = {
+			base = 100
+		}
 		visible = {
 			has_country_flag = RED_exile_committee_made_flag
 			ROOT = {
@@ -1060,6 +1096,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_SOV_the_anti_soviet_trotskyist_center
 		fire_only_once = yes
 		cost = 80
+		ai_will_do = {
+			base = 100
+		}
 		visible = {
 			has_country_flag = RED_exile_committee_made_flag
 			ROOT = {
@@ -1224,6 +1263,9 @@ RED_invite_trotskists_dec_cat = {
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		cost = 10
+		ai_will_do = {
+			base = 100
+		}
 		complete_effect = {
 			add_ideas = RED_exile_committee
 			set_country_flag = RED_exile_committee_made_flag
@@ -1253,6 +1295,9 @@ RED_invite_trotskists_dec_cat = {
 	RED_invite_ivan_smirnov_dec = {
 		#데려오기 / 초빙
 		icon = GFX_decision_SOV_left_opposition_state
+		ai_will_do = {
+			base = 100
+		}
 		available = {
 			if = {
 				limit = {
@@ -1326,6 +1371,9 @@ RED_invite_trotskists_dec_cat = {
 	}
 	RED_invite_ivar_smilga_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
+		ai_will_do = {
+			base = 100
+		}
 		available = {
 			if = {
 				limit = {
@@ -1405,6 +1453,9 @@ RED_invite_trotskists_dec_cat = {
 	}
 	RED_invite_karl_radek_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
+		ai_will_do = {
+			base = 100
+		}
 		available = {
 			if = {
 				limit = {
@@ -1484,6 +1535,9 @@ RED_invite_trotskists_dec_cat = {
 	}
 	RED_invite_yevgeny_preobrazhensky_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
+		ai_will_do = {
+			base = 100
+		}
 		available = {
 			if = {
 				limit = {
@@ -1557,6 +1611,9 @@ RED_invite_trotskists_dec_cat = {
 	}
 	RED_invite_aleksandr_shlyapnikov_dec = {
 		icon = GFX_decision_SOV_left_opposition_state
+		ai_will_do = {
+			base = 100
+		}
 		available = {
 			has_equipment = {
 				infantry_equipment > 99
@@ -3957,7 +4014,15 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_political_discourse
 		days_mission_timeout = 120
 		available = {
-			has_completed_focus = RED_HYUSIK
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_focus = RED_HYUSIK
+			}
 		}
 		activation = {
 			always = no
@@ -4004,10 +4069,18 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_prepare_civil_war
 		days_mission_timeout = 240
 		available = {
-			has_completed_focus = RED_minori_diplo_6
-			has_completed_focus = RED_rehabilitated_military
-			has_army_manpower = {
-				size > 399999
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_focus = RED_minori_diplo_6
+				has_completed_focus = RED_rehabilitated_military
+				has_army_manpower = {
+					size > 399999
+				}
 			}
 		}
 		activation = {
@@ -4055,7 +4128,15 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_merge_plant_materiel
 		days_mission_timeout = 480
 		available = {
-			num_of_factories > 99
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_factories > 99
+			}
 		}
 		activation = {
 			always = no
@@ -4166,10 +4247,18 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_political_rally
 		days_mission_timeout = 120
 		available = {
-			NOT = {
-				is_in_array = {
-					array = global.kivotos_alliance
-					value = ROOT
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				NOT = {
+					is_in_array = {
+						array = global.kivotos_alliance
+						value = ROOT
+					}
 				}
 			}
 		}
@@ -4210,7 +4299,15 @@ RED_demand_cat = {
 		icon = GFX_decision_SWI_no_elected_president
 		days_mission_timeout = 150
 		available = {
-			has_tech = tech_field_hospital
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_tech = tech_field_hospital
+			}
 		}
 		activation = {
 			always = no
@@ -4251,7 +4348,15 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_army_support
 		days_mission_timeout = 120
 		available = {
-			has_completed_focus = RED_soldier_union
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_focus = RED_soldier_union
+			}
 		}
 		activation = {
 			always = no
@@ -4291,7 +4396,15 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_army_support
 		days_mission_timeout = 180
 		available = {
-			has_stability > 0.95
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_stability > 0.95
+			}
 		}
 		activation = {
 			always = no
@@ -4331,23 +4444,31 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_motorized
 		days_mission_timeout = 360
 		available = {
-			141 = {
-				infrastructure > 4
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
 			}
-			913 = {
-				infrastructure > 4
-			}
-			919 = {
-				infrastructure > 4
-			}
-			140 = {
-				infrastructure > 4
-			}
-			915 = {
-				infrastructure > 4
-			}
-			139 = {
-				infrastructure > 4
+			else = {
+				141 = {
+					infrastructure > 4
+				}
+				913 = {
+					infrastructure > 4
+				}
+				919 = {
+					infrastructure > 4
+				}
+				140 = {
+					infrastructure > 4
+				}
+				915 = {
+					infrastructure > 4
+				}
+				139 = {
+					infrastructure > 4
+				}
 			}
 		}
 		activation = {
@@ -4395,8 +4516,24 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_factory
 		days_mission_timeout = 250
 		available = {
-			has_completed_focus = RED_future_production_line
-			arms_factory > 39
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				if = {
+					limit = {
+						has_completed_focus = RED_industrial_planning
+					}
+					has_completed_focus = RED_future_production_line
+					arms_factory > 39
+				}
+				else = {
+					arms_factory > 44
+				}
+			}
 		}
 		activation = {
 			always = no
@@ -4438,7 +4575,15 @@ RED_demand_cat = {
 		icon = GFX_decision_oil
 		days_mission_timeout = 360
 		available = {
-			synthetic_refinery > 5
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				synthetic_refinery > 5
+			}
 		}
 		activation = {
 			always = no
@@ -4506,14 +4651,22 @@ RED_demand_cat = {
 		icon = GFX_decision_generic_political_discourse
 		days_mission_timeout = 560
 		available = {
-			37 = {
-				is_core_of = RED
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
 			}
-			110 = {
-				is_core_of = RED
-			}
-			918 = {
-				is_core_of = RED
+			else = {
+				37 = {
+					is_core_of = RED
+				}
+				110 = {
+					is_core_of = RED
+				}
+				918 = {
+					is_core_of = RED
+				}
 			}
 		}
 		activation = {
@@ -4696,7 +4849,15 @@ RED_demand_cat = {
 		icon = GFX_decision_SOV_the_workers_dictatorship
 		days_mission_timeout = 320
 		available = {
-			has_completed_focus = RED_work_for_worker
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_focus = RED_work_for_worker
+			}
 		}
 		activation = {
 			always = no
@@ -4744,7 +4905,15 @@ RED_demand_cat = {
 		icon = GFX_decision_SOV_secure_the_administration
 		days_mission_timeout = 320
 		available = {
-			has_completed_focus = RED_worker_republic
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_focus = RED_worker_republic
+			}
 		}
 		activation = {
 			always = no
@@ -5402,6 +5571,9 @@ RED_debt = {
 	}
 	RED_no_more_pay = {
 		#상환 포기
+		ai_will_do = {
+			base = 10
+		}
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			OR = {
