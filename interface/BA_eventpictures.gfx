@@ -228,6 +228,10 @@ spriteTypes = {
 		name = "GFX_event_Shanhaijing_won_news"
 		texturefile = "gfx/event_pictures/Shanhaijing_won_news.tga"
 	}
+	spriteType = {
+		name = "GFX_news_event_COU_SRT"
+		texturefile = "gfx/event_pictures/news_event_COU_SRT.png"
+	}
 #
 
 
@@ -625,6 +629,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_picture_mussert"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_mussert.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_arrest_momoka"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_arrest_momoka.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_arrest_ayumu"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_arrest_ayumu.png"
 	}
 	
 	
