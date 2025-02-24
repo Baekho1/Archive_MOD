@@ -1039,19 +1039,19 @@ characters={
 			slot = political_advisor
 			idea_token = COU_cornelis_van_geelkerken
 			allowed  = {
-					tag  = COU
-				}
-				available = { 
-				   has_completed_focus = has_completed_focus = COU_focus_unarrest_mussert
-				   has_completed_focus = COU_reduction_of_administrative_committee_authority 
-				}
-				traits  = {
-					prince_of_terror 
-				}
+				tag  = COU
+			}
+			available = {
+				has_completed_focus = COU_focus_unarrest_mussert
+				has_completed_focus = COU_reduction_of_administrative_committee_authority 
+			}
+			traits  = {
+				prince_of_terror 
+			}
 		}
 		name=HOL_cornelis_van_geelkerken
-		portraits={
-			army={
+		portraits = {
+			army = {
 			    large="GFX_leader_COU_cornelis_van_geelkerken"
 				small="GFX_idea_COU_cornelis_van_geelkerken"
 			}

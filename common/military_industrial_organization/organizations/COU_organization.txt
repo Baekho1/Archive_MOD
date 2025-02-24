@@ -230,7 +230,7 @@ COU_renard_organization_no_wuw = {
 	}
 }
 
-BEL_avions_fairey = {
+COU_avions_fairey = {
 	name = avions_fairey
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_generic_air_manufacturer_1

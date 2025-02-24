@@ -191,16 +191,32 @@ focus_tree = {
 		}
 	}
 
-	focus = { #연방산업위원회 설립
+	focus = {
 		id = COU_establishment_of_federal_industrial_committee
 		icon = GFX_focus_COU_aoi_with_companys
-		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority }
+		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
 		x = -3
 		y = 3
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
 		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
+			OR = {
+				NOT = { has_completed_focus = COU_normalization_of_administration }
+				custom_trigger_tooltip = {
+					tooltip = COU_cut_tower_has_tt
+					NOT = {
+						has_idea = COU_cut_tower
+						has_idea = COU_cut_tower_0
+						has_idea = COU_cut_tower_1
+						has_idea = COU_cut_tower_2
+						has_idea = COU_cut_tower_3
+						has_idea = COU_cut_tower_4
+						has_idea = COU_cut_tower_5
+						has_idea = COU_cut_tower_6
+						has_idea = COU_cut_tower_7
+					}
+				}
+			}
 		}
 		search_filters = {
 			
@@ -304,16 +320,47 @@ focus_tree = {
 		}
 	}
 	
-	focus = { #행정위원회 권한 축소
+	focus = {
 		id = COU_reduction_of_administrative_committee_authority
-		icon = GFX_focus_COU_kaya_with_generals
-		prerequisite = { focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
+		icon = {
+			value = GFX_focus_COU_kaya_with_generals
+			trigger = {
+				OR = {
+					NOT = { has_completed_focus = COU_normalization_of_administration }
+					has_government = fascism
+				}
+			}
+		}
+		icon = {
+			value = GFX_focus_generic_army_doctrines_2
+			trigger = {
+				has_completed_focus = COU_normalization_of_administration
+				NOT = { has_government = fascism }
+			}
+		}
+		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
 		x = 3
 		y = 3
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
 		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
+			OR = {
+				NOT = { has_completed_focus = COU_normalization_of_administration }
+				custom_trigger_tooltip = {
+					tooltip = COU_cut_tower_has_tt
+					NOT = {
+						has_idea = COU_cut_tower
+						has_idea = COU_cut_tower_0
+						has_idea = COU_cut_tower_1
+						has_idea = COU_cut_tower_2
+						has_idea = COU_cut_tower_3
+						has_idea = COU_cut_tower_4
+						has_idea = COU_cut_tower_5
+						has_idea = COU_cut_tower_6
+						has_idea = COU_cut_tower_7
+					}
+				}
+			}
 		}
 		search_filters = {
 			
