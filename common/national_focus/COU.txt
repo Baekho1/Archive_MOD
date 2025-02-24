@@ -482,7 +482,7 @@ focus_tree = {
 	#어둠 속에서 도사리며
 	focus = {
 		id = COU_focus_in_the_darkness
-		icon = GFX_focus_COU_evolve
+		icon = GFX_COU_in_the_darkness
 		#prerequisite = { focus = COU_normalization_of_administration }
 		mutually_exclusive = { focus = COU_stabilization_of_the_student_council focus = COU_establishment_of_autonomous_system }
 		allow_branch = {
