@@ -655,7 +655,7 @@ characters={
 
 	#
 	COU_julien_lahaut = { #줄리엥 라오
-		name=COU_paul_de_groot
+		name=COU_julien_lahaut
 		portraits={
 			civilian={
 				small="GFX_julien_lahaut"

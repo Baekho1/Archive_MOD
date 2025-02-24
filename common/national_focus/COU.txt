@@ -30,21 +30,6 @@ focus_tree = {
 	focus = { #비상대책위원회 수립
 		id = COU_establishment_of_emergency_measures_committee
 		icon = GFX_focus_COU_establishment_of_emergency_measures_committee
-		offset = {
-			x = -15
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_autonomous_legislation
-					has_completed_focus = COU_student_council_amendment
-					has_completed_focus = COU_impeachment_of_chief_executive
-				}
-			}
-		}
 		x = 32
 		y = 0
 		cost = 10
@@ -774,7 +759,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 15
+			x = 7
 			y = 0
 			trigger = {
 				has_game_rule = {
