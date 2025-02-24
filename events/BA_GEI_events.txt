@@ -272,7 +272,7 @@ country_event = {
 		}
 		add_stability = -1
 		add_war_support = -1
-		load_focus_tree = GEI_The_Colour_Focus_tree
+		
 		set_cosmetic_tag = GEI_The_Colour
 
 		leave_faction = yes

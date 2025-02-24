@@ -2706,4 +2706,19 @@ spriteTypes = {
 		name = "GFX_GEI_DEC_last_question"
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"
 	}
+
+	spriteType = {
+		name = "GFX_GEI_ghost_signal"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_no_name_gods"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_my_war"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.png"
+	}
 }

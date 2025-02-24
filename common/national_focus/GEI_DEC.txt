@@ -90,7 +90,7 @@ focus_tree = {
 
 	focus = {
 		id = GEI_DEC_otomaton
-		icon = GFX_GEI_DEC_otomaton
+		icon = GFX_GEI_DEC_stabilization
 
 		x = -1
 		y = 1
@@ -109,9 +109,14 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			add_command_power = 100
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_manpower = 30000
 		}
 	}
+
+	# 이름 없는 신들의 기술 활용용
 
 	focus = {
 		id = GEI_DEC_no_name_gods
@@ -134,7 +139,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			remove_ideas = GEI_lack_of_mystery
+			add_ideas = GEI_DEC_no_name_gods
 		}
 	}
 
@@ -159,6 +165,28 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			set_technology = {
+				decagrammaton_weapons_2 = 1
+			}
+			add_to_variable = {
+				var = BA_decagrammaton_division_cap
+				value = 4
+			}
+			# 대충 데카그라마톤을 생성하는 디시전 추가
+			set_division_template_cap = {
+				division_template = "Decagrammaton Division"	
+				division_cap = BA_decagrammaton_division_cap
+			}
+			create_equipment_variant = {
+				name = "normal_Decagrammaton_Part"
+				type = decagrammaton_equipment_1
+				upgrades = {
+					tank_reliability_upgrade = 5
+					tank_engine_upgrade = 5
+					tank_armor_upgrade = 5
+					mech_cost_upgrade = 5
+				}
+			}
 			
 		}
 	}
@@ -184,9 +212,41 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+
+			add_manpower = 6500
+			custom_effect_tooltip = kivotos_halo_add6_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 6 }
+				BA_halo_infantry_cap_edit_effect = yes
+
+				ARI = {
+					country_event = { id = ARI_event.3 hours = 8 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1. Arius Infantry Brigade\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.3" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Arius Infantry Brigade\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.3" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Arius Infantry Brigade\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.3" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"4. Arius Infantry Brigade\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.3" 
+					owner = ROOT
+				}
+			}
+		
 			
 		}
 	}
+
+	# 유령신호
 
 	focus = {
 		id = GEI_DEC_ghost_signal
@@ -210,10 +270,27 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			every_country = {
+				limit = {
+					NOT = {
+						kivotos_tag = no
+						tag = GEI
+					}
+				}
+				add_stability = -0.15
+				add_war_support = -0.15
+				add_opinion_modifier = {
+					target = GEI
+					modifier = GEI_hostile_status
+				}
+			}
+			news_event = { id = BA_news.127 hours = 6 }
+			add_manpower = 200000
 			
 		}
 	}
 
+	# 신의 뜻대로
 	focus = {
 		id = GEI_DEC_god_knows
 		icon = GFX_GEI_DEC_gods_knows
@@ -224,6 +301,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_Duty}
+		prerequisite = { focus = GEI_DEC_ghost_signal}
 		
 
 		available = {
@@ -251,7 +329,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+			declare_war_on = {
 				target = KAI
 				type = annex_everything
 			}
@@ -268,6 +346,57 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_god_knows}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_metal
+		icon = GFX_GEI_DEC_metal
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_last_question
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_last_question}
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_my_war
+		icon = GFX_GEI_DEC_my_war
+
+		x = 2
+		y = 2
+        relative_position_id = GEI_DEC_metal
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_metal}
+		prerequisite = { focus = GEI_DEC_ghost_signal}
 		
 
 		available = {

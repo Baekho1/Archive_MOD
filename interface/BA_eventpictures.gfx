@@ -232,6 +232,11 @@ spriteTypes = {
 		name = "GFX_news_event_COU_SRT"
 		texturefile = "gfx/event_pictures/news_event_COU_SRT.png"
 	}
+
+	spriteType = { 
+		name = "GFX_GEI_DEC_ghost"
+		texturefile = "gfx/event_pictures/news_event_GEI_DEC_ghost.tga"
+	}
 #
 
 

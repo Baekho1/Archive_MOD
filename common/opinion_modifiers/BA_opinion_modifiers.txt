@@ -44,6 +44,9 @@ opinion_modifiers = {
 	GEI_hostile_status = {
 		value = -1000
 	}
+	GEI_DEC_hostile_ai = {
+		value = -100
+	}
 	SHE_help_from_SRT_modifier = {
 		value = 130
 	}

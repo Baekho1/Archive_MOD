@@ -1,4 +1,4 @@
-﻿add_namespace = BA_news
+add_namespace = BA_news
 
 # little entente reformed 
 news_event = { #총학생회장 실종
@@ -4896,9 +4896,28 @@ news_event = { # 불쌍한 난동꾼들
     }
 }
 
+news_event = { # 유령신호
+    id = BA_news.127
+    title = BA_news.127.t
+    desc = BA_news.127.d
+    picture = GFX_GEI_DEC_ghost
 
+    major = yes
+    is_triggered_only = yes
 
-
+    option = { # 우리가 간다 
+        name = BA_news.127.a
+        trigger = {
+			tag = GEI
+        }
+    }
+    option = { #재미있군!
+        name = BA_news.127.b
+        trigger = {
+			NOT = { tag = GEI }
+        }
+    }
+}
 
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112

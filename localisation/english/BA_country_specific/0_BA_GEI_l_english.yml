@@ -718,6 +718,9 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  decagrammaton_equipment_2: "완전히 색채화된 데카그라마톤"
  decagrammaton_equipment_2_desc: "색채의 힘으로 완전히 강화된 데카그라마톤 장비입니다."
 
+ normal_Decagrammaton_Part: "데카그라마톤 부품"
+ normal_Decagrammaton_Part_desc: "평범한 데카그라마톤 장비입니다. 현지의 낙후된 기술력으로 공격력에 하락이 있습니다."
+
  # Tooltips
  GEI_transformation_center_complete_tt:0 "변형 센터가 완성됩니다"
  GEI_consciousness_training_complete_tt:0 "의식 훈련 프로그램이 확립됩니다"
@@ -836,7 +839,9 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_automatic_ideas:0 "자동화공정"
  GEI_automatic_ideas_desc:0 "기존의 비효율적인 유기체들의 공정을 대체하여 새로운 자동화공정을 도입했습니다. 이는 유기체들이 보다 안락한 삶을 살게함과 동시에 생산효율의 혁신을 가져올 수 있을 것 입니다."
 
- 
+ # 데카그라마톤 modifiers 
+
+ GEI_DEC_hostile_ai:0 "유령신호의 근원"
 
 
 

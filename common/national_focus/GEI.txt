@@ -711,6 +711,8 @@ focus_tree = {
 					GEI_The_Passage
 				}
 			}
+			
+			load_focus_tree = GEI_The_Colour_Focus_tree
 		}
 	}
 
@@ -1084,3 +1086,5 @@ focus_tree = {
 		}
 	}
 }
+
+GEI_The_Colour_Focus_tree
