@@ -88,11 +88,9 @@
  COU_focus_the_new_gscp_desc: "기존 총학생회장은 어디론가 사라져 영원히 돌아오지 않을 것임이 분명함에 따라 실장들은 카야를 새로운 총학생회장으로서 추대하기로 결정했습니다. 시라누이 카야는 새로운 총학생회장으로서 키보토스에서 총학생회장이 돌아왔다는 것을 마땅히 증명해보일 것입니다."
  
 
-#중도
+#린
  COU_stabilization_of_the_student_council: "총학생회의 안정"
  COU_stabilization_of_the_student_council_desc: "다행히 일부 잡음이 있었지만, 총학생회는 안정을 되찾았습니다. 하지만 재무실장인 오키 아오이가 이전 샬레와의 충돌과 관련한 건으로 회의 소집을 요청하였습니다."
- COU_impeachment_of_chief_executive: "권한대행 탄핵"
- COU_impeachment_of_chief_executive_desc: "§g\"당신은 총학생회장이 아니야. 수석행정관. 대행 완장을 찬다고 해서 당신이 그 사람이 되는건 아니니까.\"§!\n\n나나가미 린 수석행정관은 비록 샬레라는 조직 때문이었다고 하나, 그 과정 중에 총학생회장을 격하함으로써 용납할 수 없는 선을 넘었습니다. 우리는 이번 회의에 불신임 투표를 가결해 수석행정관을 탄핵할 것입니다."
  COU_student_council_amendment: "학생회 개정안"
  COU_student_council_amendment_desc: "§2\"제 의견과 다르다고 해서 권위를 내세워 타인을 억압할 수는 없습니다.\"§!\n\n이번 회의를 통해 나나가미 린 총학생회장 대행은 학생회 개정안을 발표하면서 반대파들의 불만을 잠재우고 키보토스 총학생회의 총학생회장 권한대행으로써 최선을 다할 것임을 천명하였습니다."
  COU_analog_adminstration: "아날로그식 행정체계"
@@ -121,14 +119,9 @@
  COU_defensive: "방어적"
  COU_student_council_for_all: "모두를 위한 학생회"
  COU_financial_health: "재무 건전화"
- COU_politics_for_students: "학생을 위한 정치"
  COU_large_scale_recruitment: "대규모 공채"
- COU_enhancement_of_president_authority: "회장 권한 강화"
  COU_student_council_search: "학생회장 수색"
- COU_small_student_council: "작은 학생회"
  COU_kivotos_armory: "키보토스 병기창"
- COU_research_department: "연구부"
- COU_our_investigation_agency: "우리의 수사국"
  COU_regulation_relaxation: "전시 규제 완화"
  COU_local_business: "지역 사업"
  COU_research_institute: "연구 단지"
@@ -165,6 +158,10 @@
  COU_kivotos_company: "키보토스 주식회사"
  COU_death_merchant: "죽음의 상인"
  COU_expansion_of_maritime_trade_routes: "해상 무역로 확장"
+
+#아오이
+ COU_impeachment_of_chief_executive: "권한대행 탄핵"
+ COU_impeachment_of_chief_executive_desc: "§g\"당신은 총학생회장이 아니야. 수석행정관. 대행 완장을 찬다고 해서 당신이 그 사람이 되는건 아니니까.\"§!\n\n나나가미 린 수석행정관은 비록 샬레라는 조직 때문이었다고 하나, 그 과정 중에 총학생회장을 격하함으로써 용납할 수 없는 선을 넘었습니다. 우리는 이번 회의에 불신임 투표를 가결해 수석행정관을 탄핵할 것입니다."
 
 #좌파
  COU_strengthening_bonds_tt: "국가의 수도 주에 §G1개의 건설 슬롯§!과 §Y1개의 민간공장§! 추가."

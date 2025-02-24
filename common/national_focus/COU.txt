@@ -524,7 +524,7 @@ focus_tree = {
 		id = COU_focus_in_the_darkness
 		icon = GFX_COU_in_the_darkness
 		#prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_stabilization_of_the_student_council focus = COU_establishment_of_autonomous_system }
+		mutually_exclusive = { focus = COU_conservative_defenseism focus = COU_establishment_of_autonomous_system focus = COU_stabilization_of_the_student_council }
 		allow_branch = {
 			if = {
 				limit = {
@@ -539,7 +539,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 20
+			x = 25
 			y = -1
 			trigger = {
 				NOT = {
@@ -710,7 +710,7 @@ focus_tree = {
 		id = COU_stabilization_of_the_student_council
 		icon = GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_establishment_of_autonomous_system }
+		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_establishment_of_autonomous_system focus = COU_conservative_defenseism }
 		allow_branch = {
 			if = {
 				limit = {
@@ -719,8 +719,22 @@ focus_tree = {
 						option = HIDE
 					}
 				}
+				NOT = { has_completed_focus = COU_impeachment_of_chief_executive }
 				NOT = { has_completed_focus = COU_autonomous_legislation }
 				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
+			}
+		}
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = COU_student_council_amendment
+				}
 			}
 		}
 		x = 7
@@ -729,14 +743,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			is_subject = no
-			communism < 0.20
-			fascism < 0.20
+			democratic > 0.40
 		}
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
+			has_government = democratic
 		}
 		search_filters = {
 			
@@ -745,6 +755,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 30
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 		}
 	}
 
@@ -752,7 +769,7 @@ focus_tree = {
 		id = COU_establishment_of_autonomous_system
 		icon = GFX_focus_SWE_urbanization
 		prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_stabilization_of_the_student_council }
+		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_stabilization_of_the_student_council focus = COU_conservative_defenseism }
 		allow_branch = {
 			if = {
 				limit = {
@@ -806,14 +823,40 @@ focus_tree = {
 		}
 	}
 
-	focus = { #권한대행 탄핵
-		id = COU_impeachment_of_chief_executive
-		icon = GFX_COU_choice_AOI
-		prerequisite = { focus = COU_stabilization_of_the_student_council }
-		mutually_exclusive = { focus = COU_student_council_amendment }
-		x = 1
+	focus = { #보수적 방어주의
+		id = COU_conservative_defenseism
+		icon = GFX_focus_BEL_dietsland
+		prerequisite = { focus = COU_normalization_of_administration }
+		mutually_exclusive = { focus = COU_establishment_of_autonomous_system focus = COU_focus_in_the_darkness focus = COU_stabilization_of_the_student_council }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = COU_autonomous_legislation }
+				NOT = { has_completed_focus = COU_student_council_amendment }
+				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
+			}
+		}
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = COU_impeachment_of_chief_executive
+				}
+			}
+		}
+		x = 16
 		y = 1
-		relative_position_id = COU_stabilization_of_the_student_council
+		relative_position_id = COU_normalization_of_administration
 		cost = 5
 		available = {
 			is_subject = no
@@ -828,8 +871,44 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			add_political_power = 30
 			set_politics = {
 				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = { #권한대행 탄핵
+		id = COU_impeachment_of_chief_executive
+		icon = GFX_COU_choice_AOI
+		prerequisite = { focus = COU_conservative_defenseism }
+		x = 0
+		y = 1
+		relative_position_id = COU_conservative_defenseism
+		cost = 5
+		available = {
+			is_subject = no
+			neutrality > 0.40
+		}
+		bypass = {
+			has_government = neutrality
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+			hidden_effect = { #collapse focus tree
+				load_focus_tree = {
+					tree = COU_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -842,8 +921,7 @@ focus_tree = {
 		id = COU_student_council_amendment
 		icon = GFX_COU_choice_RIN
 		prerequisite = { focus = COU_stabilization_of_the_student_council }
-		mutually_exclusive = { focus = COU_impeachment_of_chief_executive }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = COU_stabilization_of_the_student_council
 		cost = 5
@@ -860,8 +938,12 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = democratic
+			hidden_effect = { #collapse focus tree
+				load_focus_tree = {
+					tree = COU_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
 			}
 			add_popularity = {
 				ideology = democratic
@@ -879,7 +961,6 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = COU_student_council_amendment
-			focus = COU_impeachment_of_chief_executive
 		}
 		bypass = {
 			custom_trigger_tooltip = {
@@ -1845,22 +1926,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { # 학생을 위한 정치
-		id = COU_politics_for_students
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
-		x = 3
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = COU_impeachment_of_chief_executive
-		prerequisite = {
-			focus = COU_impeachment_of_chief_executive
-		}
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
-
 	focus = { # 대규모 공채
 		id = COU_large_scale_recruitment
 		icon = GFX_focus_generic_full_employment
@@ -1913,169 +1978,6 @@ focus_tree = {
 		relative_position_id = COU_kivotos_armory
 		prerequisite = {
 			focus = COU_kivotos_armory
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = { # 회장 권한 강화
-		id = COU_enhancement_of_president_authority
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 5
-		x = 3
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = COU_politics_for_students
-		mutually_exclusive = {
-			focus = COU_small_student_council
-		}
-		prerequisite = {
-			focus = COU_politics_for_students
-		}
-		completion_reward = {
-			add_country_leader_trait = dictator
-		}
-	}
-
-
-	focus = { # 경제관리부
-		id = COU_finance_department
-		icon = GFX_focus_generic_self_management
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		relative_position_id = COU_enhancement_of_president_authority
-		prerequisite = {
-			focus = COU_enhancement_of_president_authority
-		}
-		completion_reward = {
-			add_ideas = COU_finance_department_idea
-		}
-	}
-
-	focus = { # 우리의 수사국
-		id = COU_our_investigation_agency
-		icon = GFX_focus_generic_secret_service_agency
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = COU_finance_department
-		prerequisite = {
-			focus = COU_finance_department
-		}
-		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
-		completion_reward = {
-			create_intelligence_agency = {
-				name = COU_our_agency_name
-				icon = GFX_intelligence_agency_logo_cou				
-			}
-		}
-	}
-
-
-	focus = { # 작은 학생회
-		id = COU_small_student_council
-		icon = GFX_focus_SOV_merge_plants
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		mutually_exclusive = {
-			focus = COU_enhancement_of_president_authority
-		}
-		relative_position_id = COU_politics_for_students
-		prerequisite = {
-			focus = COU_politics_for_students
-		}
-		completion_reward = {
-			add_ideas = COU_small_government_idea
-		}
-	}
-
-	focus = { # 규제 완화
-		id = COU_regulation_relaxation
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		relative_position_id = COU_small_student_council
-		prerequisite = {
-			focus = COU_small_student_council
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-		}
-	}
-
-	focus = { # 현지 기업
-		id = COU_local_business
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		relative_position_id = COU_enhancement_of_president_authority
-		prerequisite = {
-			focus = COU_small_student_council
-			focus = COU_enhancement_of_president_authority
-		}
-		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-		}
-	}
-
-	focus = { # 연구 단지
-		id = COU_research_institute
-		icon = GFX_focus_research2
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		relative_position_id = COU_local_business
-		prerequisite = {
-			focus = COU_regulation_relaxation
-		}
-		prerequisite = {
-			focus = COU_local_business
 		}
 		completion_reward = {
 			add_research_slot = 1
@@ -4515,7 +4417,7 @@ focus_tree = {
 	focus = { #물류 운송망 복원
 		id = COU_restoration_of_logistics_network
 		icon = GFX_goal_generic_railroad
-		prerequisite = { focus = COU_establishment_of_autonomous_system focus = COU_student_council_amendment focus = COU_impeachment_of_chief_executive }
+		prerequisite = { focus = COU_establishment_of_autonomous_system focus = COU_student_council_amendment }
 		offset = {
 			x = 1
 			y = 0
