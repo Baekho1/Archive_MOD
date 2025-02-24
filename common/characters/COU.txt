@@ -9,7 +9,7 @@ characters={
 		gender = female
 		country_leader={
     		desc=COU_XXX_desc
-			ideology=conservatism
+			ideology=cou_ideology
 			traits={ COU_dictator COU_arona_notgood }
 			expire="1965.1.1.1"
 		}
@@ -23,7 +23,7 @@ characters={
 		}
 		country_leader={
 			desc=COU_null_desc
-			ideology=liberalism
+			ideology=cou_ideology
 			traits={ COU_vacancy }
 			expire="1965.1.1.1"
 		}
@@ -40,7 +40,7 @@ characters={
 		gender = female
 		country_leader={
 			desc=COU_RIN_desc
-			ideology=liberalism
+			ideology=cou_ideology
 			traits = { COU_dictator_rin COU_power_struggle }
 			expire="1965.1.1.1"
 		}
@@ -68,6 +68,17 @@ characters={
 				COU_RIN_SET1 
 			}
 			cost = 150
+		}
+		field_marshal={
+			traits = {
+			    politically_connected
+				infantry_officer
+			}
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=1
 		}
 	}
 
@@ -109,6 +120,14 @@ characters={
 				COU_AOI_SET1 
 			}
 			cost = 150
+		}
+		corps_commander={
+			traits = { politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
 		}
 	}
 	COU_KAYA = {
@@ -189,6 +208,14 @@ characters={
 			}
 			cost = 150
 		}
+		corps_commander={
+			traits = { politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=3
+	    }
 	}
 	COU_MOMOKA = { #모모카
 		name=COU_MOMOKA
@@ -229,6 +256,14 @@ characters={
 			}
 			cost = 150
 		}
+		corps_commander={
+			traits = { }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
 	}
 	COU_HAINE = { #하이네
 		name=COU_HAINE
@@ -259,12 +294,20 @@ characters={
 				COU_HAINE_SET1
 			}
 		}
+		corps_commander={
+			traits = { front_line_general }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=1
+		}
 	}
 	COU_SMOMO = { #스모모
 		name=COU_SMOMO
 		portraits={
 			civilian={
-				#large="GFX_leaders_HAINE"
+				large="GFX_leaders_COU_SMOMO_portrait_leader"
 				small="GFX_SMOMO" 
 			}
 		}
@@ -283,6 +326,28 @@ characters={
 			}
 			cost = 150
 		}
+		advisor={
+			slot = navy_chief
+			idea_token = COU_smomo_navy
+			ledger = navy
+			allowed = {
+				tag = COU
+			}
+			available = {
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 109
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
 	}
 	COU_willem_drees = { #빌럼 드리스
 		name=COU_willem_drees
@@ -298,8 +363,8 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
-			visible = {
-				has_completed_focus = COU_autonomous_legislation
+			available = {
+				has_completed_focus = COU_establishment_of_federal_industrial_committee
 			}
 			traits = {
 				captain_of_industry

@@ -159,6 +159,10 @@ spriteTypes = {
 		textureFile = "gfx/leaders/COU/COU_HAINE_portrait_leader.png"
 	}
 	spriteType = {
+		name = "GFX_leaders_COU_SMOMO_portrait_leader"
+		textureFile = "gfx/leaders/COU/COU_SMOMO_portrait_leader.png"
+	}
+	spriteType = {
 		name = "GFX_leaders_COU_XXX"
 		textureFile = "gfx/leaders/COU/COU_XXX.dds"
 	}

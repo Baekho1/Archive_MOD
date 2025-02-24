@@ -76,6 +76,11 @@ ideologies = {
 				color = { 34 52 155 }
 			}
 			
+			cou_ideology = {
+				can_be_randomly_selected = no
+				color = { 229 247 250 }
+			}
+			
 		#BA_MOD_FIX/
 		}
 

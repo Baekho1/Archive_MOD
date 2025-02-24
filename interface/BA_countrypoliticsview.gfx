@@ -80,6 +80,10 @@ spriteTypes = {
 		name = "GFX_ideology_cou_kaya_dictatorship"
 		texturefile = "gfx/interface/ideologies/cou_kaya_dictatorship.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_cou_ideology"
+		texturefile = "gfx/interface/ideologies/cou_ideology.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_technocracy"
