@@ -482,7 +482,7 @@ focus_tree = {
 	#어둠 속에서 도사리며
 	focus = {
 		id = COU_focus_in_the_darkness
-		icon = GFX_COU_in_the_darkness
+		icon = GFX_focus_COU_evolve
 		#prerequisite = { focus = COU_normalization_of_administration }
 		mutually_exclusive = { focus = COU_stabilization_of_the_student_council focus = COU_establishment_of_autonomous_system }
 		allow_branch = {
@@ -562,6 +562,7 @@ focus_tree = {
 		prerequisite = { focus = COU_focus_remove_the_line }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
+		     add_political_power = 25
 		     country_event = COU_event.13
 			 add_days_mission_timeout = {
 			     mission = COU_rin_getout_kaya
@@ -579,6 +580,7 @@ focus_tree = {
 		prerequisite = { focus = COU_focus_remove_the_line }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
+		     add_political_power = 25
 		     country_event = COU_event.14
 		     add_days_mission_timeout = {
 			     mission = COU_rin_getout_kaya

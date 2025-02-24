@@ -64,7 +64,7 @@
  AOi_UNARREST_tt: "§Y[COU.COU_AOI.GetName]§!(을)를 석방합니다."
  COU_tooltip_kaya_started: "§Y[COU.COU_KAYA.GetName]§!가 §R왕좌를 위한 게임을 시작했습니다.§!"
  ##focus 
- COU_focus_in_the_darkness: "어둠 속에서 도사리며"
+ COU_focus_in_the_darkness: "진화"
  COU_focus_in_the_darkness_desc: "..."
  COU_focus_remove_the_line: "린 불신임"
  COU_focus_remove_the_line_desc: "[COU.COU_RIN.GetName]은 총학생회를 이끌 자질이 되지 않습니다. 끝도 없이 유악한 그녀는 마음에 들지 않습니다. 린이 총학생회장 대행의 권위를 내세워 임원들을 굴복시킨다면 좀 더 일을 쉽게 처리하실 수 있으실 텐데. 그런데 그러하지 못하시지 않습니까? 대행의 권위는, 마땅히 [COU.COU_KAYA.GetName]에게 주어져야 합니다."
