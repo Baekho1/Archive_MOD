@@ -313,6 +313,7 @@ focus_tree = {
 				OR = {
 					NOT = { has_completed_focus = COU_normalization_of_administration }
 					has_government = fascism
+					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
 				}
 			}
 		}
@@ -320,7 +321,10 @@ focus_tree = {
 			value = GFX_focus_generic_army_doctrines_2
 			trigger = {
 				has_completed_focus = COU_normalization_of_administration
-				NOT = { has_government = fascism }
+				NOT = {
+					has_government = fascism
+					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
+				}
 			}
 		}
 		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
@@ -354,6 +358,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = COU_event.11
+			if = {
+				limit = { NOT = { has_completed_focus = COU_normalization_of_administration } }
+				set_country_flag = COU_reduction_of_administrative_committee_authority_flag
+			}
 		}
 	}
 
