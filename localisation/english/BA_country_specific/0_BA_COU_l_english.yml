@@ -558,6 +558,8 @@
 
  COU_strengthening_influence_tt: "영향력 §G+5%§!"
 
+ SHE_strengthening_influence_trigger_tooltip: "[ROOT.GetNameDefCap](은)는 §H영향력 점수§!를 §Y50%§! 이상 가짐"
+
  COU_strengthening_influence_cp_tt:0 "£command_power  §Y10§!"
  COU_strengthening_influence_cp_tt_blocked:0 "£command_power  §R10§!"
  COU_strengthening_influence_stv_tt:0 "£stability_icon  §Y5§!"
