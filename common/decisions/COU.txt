@@ -34,7 +34,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = 5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value
@@ -78,7 +78,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = 5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value
@@ -126,7 +126,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = 5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value
@@ -160,6 +160,15 @@ COU_division_of_military = {
 			}
 		}
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SHE_strengthening_influence_trigger_tooltip
+				check_variable = {
+					global.COU_division_of_military_value > 50
+				}
+			}
+		}
+
 		visible = {
 		}
 
@@ -173,7 +182,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = -5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value
@@ -198,6 +207,15 @@ COU_division_of_military = {
 			base = 40
 		}
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SHE_strengthening_influence_trigger_tooltip
+				check_variable = {
+					global.COU_division_of_military_value > 50
+				}
+			}
+		}
+
 		days_remove = 25
 
 		custom_cost_text = COU_strengthening_influence_cp_tt
@@ -217,7 +235,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = -5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value
@@ -246,6 +264,15 @@ COU_division_of_military = {
 			}
 		}
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SHE_strengthening_influence_trigger_tooltip
+				check_variable = {
+					global.COU_division_of_military_value > 50
+				}
+			}
+		}
+
 		days_remove = 25
 
 		custom_cost_text = COU_strengthening_influence_stv_tt
@@ -265,7 +292,7 @@ COU_division_of_military = {
 			add_to_variable = { global.COU_division_of_military_value = -5 }
 			clamp_variable = {
 				var = global.COU_division_of_military_value
-				min = 0
+				min = 50
 			}
 			clamp_variable = {
 				var = global.COU_division_of_military_value

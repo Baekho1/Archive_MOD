@@ -32,7 +32,7 @@ focus_tree = {
 		icon = GFX_focus_COU_establishment_of_emergency_measures_committee
 		x = 32
 		y = 0
-		cost = 10
+		cost = 5
 		dynamic = yes
 		available = {
 		}
@@ -480,8 +480,12 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			remove_country_leader_trait = COU_power_struggle
-			if = { limit = { neutrality > 0.35 }
+			if = { limit = { democratic > 0.35 }
+				remove_country_leader_trait = COU_power_struggle
+				add_political_power = 60
+			}
+			else_if = { limit = { neutrality > 0.35 }
+				remove_country_leader_trait = COU_power_struggle
 				set_politics = {	
 					ruling_party = neutrality
 					last_election = "1936.1.1"
@@ -489,8 +493,13 @@ focus_tree = {
 					elections_allowed = no
 				}
 			}
+			else_if = { limit = { fascism > 0.35 }
+				add_stability = -0.05
+				custom_effect_tooltip = COU_normalization_of_administration_tt
+			}
 			else_if = { limit = { communism > 0.35 }
-				set_politics = {	
+				remove_country_leader_trait = COU_power_struggle
+				set_politics = {
 					ruling_party = communism
 					last_election = "1936.1.1"
 					election_frequency = 48
