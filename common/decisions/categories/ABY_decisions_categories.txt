@@ -642,3 +642,15 @@ ABY_descision_category_invite_balkan = {
 		has_country_flag = ABY_flag_balkan_invite
 	}
 }
+ABY_descision_category_puppet_nephthys = {
+	#picture = GFX_decisions_fra_wigi
+
+	priority = 500
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_country_flag = ABY_flag_nephthys_balkan
+	}
+}
