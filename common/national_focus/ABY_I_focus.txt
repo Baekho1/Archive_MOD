@@ -8238,7 +8238,7 @@ focus_tree = {
 			set_technology = { railway_gun = 1 }
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1
-				name = "Syemmata class 381/40"
+				name = "Mini-S class 381/40"
 			}
 		}
 	}
@@ -10030,7 +10030,7 @@ focus_tree = {
 			focus = ABY_focus_rnstkwovks   #이전 중점
 		}
 		mutually_exclusive = {
-			focus = ABY_focus_spring_of_ABYDOS   #반대되는 중점
+			   #반대되는 중점
 		}
 		x = 1     #좌표
 		y = 1
@@ -10065,158 +10065,6 @@ focus_tree = {
 					traits = { ABY_trait_wolf_god ABY_trait_school_leader_2 }
 				}
 			}
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_spring_of_ABYDOS #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_track_left   #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_rnstkwovks   #이전 중점
-		}
-		mutually_exclusive = {
-			focus = ABY_focus_attack_them   #반대되는 중점
-		}
-		x = 5     #좌표
-		y = 1
-		relative_position_id = ABY_focus_track_left
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			set_country_flag = ABY_flag_autofocus
-			set_country_flag = ABY_flag_auto_communism
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_with_left_anti #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_spring_of_ABYDOS   #이전 중점
-		}
-		x = -1     #좌표
-		y = 1
-		relative_position_id = ABY_focus_spring_of_ABYDOS
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			has_country_flag = ABY_flag_recovered_ABYDOS
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_reunite_ABYDOS #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_spring_of_ABYDOS   #이전 중점
-		}
-		x = 1     #좌표
-		y = 1
-		relative_position_id = ABY_focus_spring_of_ABYDOS
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_remember_masaryk #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_reunite_ABYDOS   #이전 중점
-		}
-		prerequisite = {
-			focus = ABY_focus_with_left_anti   #이전 중점
-		}
-		x = -1     #좌표
-		y = 1
-		relative_position_id = ABY_focus_reunite_ABYDOS
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_victory_of_people #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_remember_masaryk   #이전 중점
-		}
-		x = 0     #좌표
-		y = 2
-		relative_position_id = ABY_focus_remember_masaryk
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -10344,7 +10192,7 @@ focus_tree = {
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
-		x = 3     #좌표
+		x = 1     #좌표
 		y = 1
 		relative_position_id = ABY_focus_great_marshal
 		bypass = {
@@ -10413,7 +10261,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ABY_focus_attack_TRM   #반대되는 중점
 		}
-		x = -2     #좌표
+		x = -1     #좌표
 		y = 1
 		relative_position_id = ABY_focus_no_council
 		bypass = {
@@ -10445,13 +10293,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ABY_focus_syemmata_plan
-			focus = ABY_focus_attack_TRM
-			focus = ABY_focus_victory_of_people   #이전 중점
+			focus = ABY_focus_attack_TRM   #이전 중점
 		}
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
-		x = 2     #좌표
+		x = 1     #좌표
 		y = 1
 		relative_position_id = ABY_focus_syemmata_plan
 		bypass = {
@@ -10510,7 +10357,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ABY_focus_syemmata_plan   #반대되는 중점
 		}
-		x = 0     #좌표
+		x = 1     #좌표
 		y = 1
 		relative_position_id = ABY_focus_no_council
 		bypass = {
@@ -10923,7 +10770,7 @@ focus_tree = {
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
-		x = 0     #좌표
+		x = -1     #좌표
 		y = 1
 		relative_position_id = ABY_focus_rnrrkxhdwp
 		bypass = {
