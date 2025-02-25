@@ -756,3 +756,18 @@ if = {
 	}
 }
 
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = socialism
+}
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = fascism_ideology
+}
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = despotism
+}

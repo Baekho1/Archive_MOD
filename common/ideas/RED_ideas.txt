@@ -1795,6 +1795,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
 				army_morale_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05

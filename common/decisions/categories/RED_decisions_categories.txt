@@ -209,7 +209,7 @@ RED_soviet_aid_to_poum_decision_category = { #Dec cat for aiding the POUM
 	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
 
 	allowed = {
-		original_tag = SOV
+		original_tag = RED
 	}
 
 	visible = {
