@@ -3918,6 +3918,11 @@ focus_tree = {
 			set_global_flag = SOV_covert_support_for_poum_flag
 			custom_effect_tooltip = SOV_covert_support_for_spanish_poum_tt
 			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPC
+				value = 9999
+			}
 		}
 	}
 	focus = {

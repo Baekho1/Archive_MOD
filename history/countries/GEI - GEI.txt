@@ -15,6 +15,7 @@ add_ideas = {
 	GEI_local_resistance
 	GEI_lack_of_mystery
 	GEI_collapsed_lab
+	BA_isolation
 }
 set_technology = {
 	kivotos_infantry_weapons = 1
