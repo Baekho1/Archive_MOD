@@ -442,6 +442,19 @@
  PublicWorksDepartment: "적색전선 (용역부)"
  LaborParty: "적색전선 (용역부)"
 
+ MEX_democratic_party:0 "비조직된 민주주의자들"
+ MEX_democratic_party_long:0 "비조직된 민주주의자들"
+ MEX_christian_democracy_party:0 "PAN"
+ MEX_christian_democracy_party_long:0 "PAN - 국민행동당"
+ MEX_communism_party:0 "PCM"
+ MEX_communism_party_long:0 "PCM - 멕시코 공산당"
+ MEX_fascism_party:0 "UNS"
+ MEX_fascism_party_long:0 "UNS - 국민공동통치연합"
+ MEX_neutrality_party:0 "PNR"
+ MEX_neutrality_party_long:0 "PNR - 멕시코 혁명당"
+
+
+
 #공용 재구성
  BA_communism_party_name_rerolling_0:0 "공산주의"
  BA_communism_party_name_rerolling_1:0 "공산당"

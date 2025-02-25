@@ -3,6 +3,22 @@ characters={
 	#### BA MOD
 	####
 
+	MEX_adolfo_lopez_mateos={
+		name=MEX_adolfo_lopez_mateos
+		portraits={
+			civilian={
+				large="gfx/leaders/MEX/Portrait_MEX_adolfo_lopez_mateos.png"
+			}
+		}
+
+		country_leader={
+			desc = "MEX_mateos_desc"
+			ideology= mex_christian_democracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	MEX_pablo_quiroga_escamilla ={
 		name=MEX_pablo_quiroga_escamilla
 		portraits={
@@ -110,7 +126,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=falangism
+			ideology= synarchism
 			traits={ fascist_militia_leader }
 			expire="1965.1.1.1"
 			id=-1
@@ -238,7 +254,11 @@ characters={
 			legacy_id=712
 		}
 		country_leader={
-			ideology=moderatism
+			desc = "MEX_cardenas_desc"
+			traits = {
+				MEX_veteran
+			}
+			ideology= mex_corporatism
 			expire="1965.1.1.1"
 			id=-1
 		}

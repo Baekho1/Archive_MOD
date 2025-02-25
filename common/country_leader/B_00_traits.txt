@@ -3810,6 +3810,9 @@ leader_traits = {
 		army_defence_factor = 0.5
 		army_speed_factor = 0.5
 	}
+	MEX_veteran = {
+		war_support_factor = 0.1
+	}
 
 	
 
