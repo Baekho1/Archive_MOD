@@ -1,0 +1,48 @@
+defined_text = { #결속도
+	name = POL_solidarity_text
+	text = { #매우 높음
+		trigger = {
+		}
+		localization_key = "POL_solidarity_text_very_high"
+	}
+	text = { #높음
+		trigger = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 80
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = "POL_solidarity_text_high"
+	}
+	text = { #보통
+		trigger = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 60
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = "POL_solidarity_text_mid"
+	}
+	text = { #낮음
+		trigger = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = "POL_solidarity_text_low"
+	}
+	text = { #매우 낮음
+		trigger = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = "POL_solidarity_text_very_low"
+	}
+}

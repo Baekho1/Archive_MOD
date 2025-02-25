@@ -1,0 +1,27 @@
+add_namespace = MEX_tutorial
+add_namespace = MEX_event
+
+# BA Events
+country_event = { #멕시코 튜토리얼
+	id = MEX_tutorial.0
+	title = MEX_tutorial.0.t
+	desc = MEX_tutorial.0.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+    is_triggered_only = yes
+
+	option = { 
+		name = MEX_tutorial.0.a 
+		country_event = MEX_tutorial.1
+	}
+}
+
+country_event = { #멕시코 튜토리얼 2
+	id = MEX_tutorial.1
+	title = MEX_tutorial.1.t
+	desc = MEX_tutorial.1.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+    is_triggered_only = yes
+	option = { 
+		name = MEX_tutorial.1.a 
+	}
+}

@@ -4,6 +4,16 @@
 
 set_variable = { country_intro_page_count = 4 } #Intro screen
 
+recruit_character = MEX_pablo_quiroga_escamilla
+recruit_character = MEX_pablo_macias_valenzuela
+recruit_character = MEX_joaquin_amaro_dominguez
+recruit_character = MEX_juan_gonzalez_cabral
+recruit_character = MEX_francisco_luis_urquizo_benavides
+
+####
+####
+####
+
 capital = 277
 
 oob = "MEX_1936"

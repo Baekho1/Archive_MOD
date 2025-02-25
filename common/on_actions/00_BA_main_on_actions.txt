@@ -1,4 +1,28 @@
 on_actions = {
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = POL
+					NOT = {
+						has_global_flag = sov_pol_war_superevent_trigger_flag
+					}
+					NOT = {
+						has_war_with = SOV
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_ally_with = POL
+							original_tag = POL
+						}
+					}
+					country_event = BA_intermarium_solidarity_event.1
+				}
+			}
+		}
+	}
 	on_ruling_party_change = {
 		effect = {
 			if = {

@@ -1,3 +1,270 @@
+POL_intermarium_at_war = { #바다 사이의 개념
+	POL_together_train = { #미엥지모제 공동 훈련 프로그램 참여
+		icon = GFX_decision_eng_blackshirt_march
+		modifier = {
+			political_power_cost = 0.05
+			mobilization_speed = 0.05
+			planning_speed = 0.05
+		}
+		visible = {
+			has_country_flag = intermarium_no_train
+		}
+		days_remove = -1
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = {
+					POL_solidarity_var = 3
+					tooltip = POL_solidarity_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = POL_solidarity_var
+							value = 97
+							compare = less_than_or_equals
+						}
+					}
+					POL = {
+					add_to_variable = {
+						POL_solidarity_var = 3
+						tooltip = POL_solidarity_tt
+					}
+				}
+			}
+			}
+			clr_country_flag = intermarium_no_train
+		}
+		days_re_enable = 1
+		cancel_trigger = {
+			has_country_flag = intermarium_no_train
+		}
+		cost = 30
+		ai_will_do = {
+			base = 1
+		}
+	}
+	POL_together_train_no = { #훈련은 노노노
+		icon = GFX_decision_eng_blackshirt_march
+		days_re_enable = 1
+		visible = {
+			NOT = {
+				has_country_flag = intermarium_no_train
+			}
+		}
+		complete_effect = {
+			set_country_flag = intermarium_no_train
+			effect_tooltip = {
+				add_to_variable = {
+					POL_solidarity_var = -3
+					tooltip = POL_solidarity_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = POL_solidarity_var
+							value = 3
+							compare = greater_than_or_equals
+						}
+					}
+					POL = {
+						add_to_variable = {
+							POL_solidarity_var = -3
+							tooltip = POL_solidarity_tt
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power < 1
+			}
+		}
+	}
+	POL_together_store = { #장비 공동 비축
+		icon = GFX_decision_generic_industry
+		days_re_enable = 50
+		days_remove = 20
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			base = 2
+		}
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = {
+					POL_solidarity_var = 1
+					tooltip = POL_solidarity_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = POL_solidarity_var
+							value = 99
+							compare = less_than_or_equals
+						}
+					}
+					POL = {
+						add_to_variable = {
+							POL_solidarity_var = 1
+							tooltip = POL_solidarity_tt
+						}
+						add_to_variable = {
+							POL_solidarity_unit_var = 1
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = POL_together_store_tt
+		}
+		custom_cost_text = decision_cost_ie_2000
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 1999
+			}
+		}
+	}
+	POL_together_trump = { #방위비 납부
+		icon = GFX_decision_generic_factory
+		days_re_enable = 30
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			has_war = no
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		custom_cost_trigger = {
+			num_of_available_civilian_factories > 0
+		}
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = {
+					POL_solidarity_var = 2
+					tooltip = POL_solidarity_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = POL_solidarity_var
+							value = 98
+							compare = less_than_or_equals
+						}
+					}POL = {
+						add_to_variable = {
+							POL_solidarity_var = 2
+							tooltip = POL_solidarity_tt
+						}
+					}
+				}
+			}
+			POL = {
+				add_to_variable = {
+					POL_solidarity_trump_var = 1
+					tooltip = POL_solidarity_trump_tt
+				}
+			}
+		}
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = POL_together_trump_tt
+		}
+	}
+	POL_together_help = { #전선 국가 지원
+		icon = GFX_decision_generic_operation
+		days_re_enable = 90
+		days_remove = 10
+		custom_cost_text = decision_cost_ie_500
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+		visible = {
+			has_war = yes
+		}
+		available = {
+			any_other_country = {
+				is_ally_with = POL
+				surrender_progress > 0.5
+			}
+			surrender_progress < 0.5
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = {
+					POL_solidarity_var = 3
+					tooltip = POL_solidarity_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = POL_solidarity_var
+							value = 97
+							compare = less_than_or_equals
+						}
+					}POL = {
+						add_to_variable = {
+							POL_solidarity_var = 3
+							tooltip = POL_solidarity_tt
+						}
+					}
+				}
+			}
+		}
+		remove_effect = {
+			every_other_country = {
+				limit = {
+					is_ally_with = POL
+					surrender_progress > 0.5
+				}
+				if = {
+					limit = {
+						has_idea = POL_aid_idea
+					}
+					modify_timed_idea = {
+						idea = POL_aid_idea
+						days = 120
+					}
+				}
+				else = {
+					add_timed_idea = {
+						idea = POL_aid_idea
+						days = 120
+					}
+				}
+			}
+		}
+	}
+}
 POL_polish_in_german = {
 	POL_sabo_volunteer = { #폴란드계 의용군
 		icon = GFX_decision_generic_protection

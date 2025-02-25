@@ -203,6 +203,11 @@ on_actions = {
 					}
 				}
 			}
+			MEX = {
+				country_event = {
+					id = MEX_tutorial.0
+				}
+			}
 			FRM = {
 				become_exiled_in = {
 					target = FRA

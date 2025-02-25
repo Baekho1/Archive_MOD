@@ -395,6 +395,9 @@ RED_zenkyoutou_TOP_GFXUI_reload = {
 	set_variable = { RED_redwinter_progress_2_var = RED_redwinter_TOP1_var_temp }
 }
 RED_population_solve = {
+	add_to_variable = {
+		RED_population_var = -1
+	}
 	if = {
 		limit = {
 			has_idea = RED_population_saturation_4
