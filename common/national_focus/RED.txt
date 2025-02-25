@@ -3785,6 +3785,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
+		ai_will_do = {
+			base = 330
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -3851,6 +3854,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		ai_will_do = {
+			base = 330
+		}
 		completion_reward = {
 			add_ai_strategy = {
 				type = send_volunteers_desire
@@ -3875,19 +3881,45 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_communist_instigation
 		}
+		ai_will_do = {
+			base = 330
+		}
 		relative_position_id = RED_new_inteligence_agency
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = {
-				has_global_flag = spanish_civil_war
+			SOV_soviet_civil_war_not_started = yes
+			NOT = { has_global_flag = scw_over } #Allowed Soviets to do this before SCW starts, so that they can make Spanish AI go POUM
+			OR = {
+				NOT = { has_global_flag = SPR_anarchist_uprising_flag }
+				AND = {
+					country_exists = SPC
+					NOT = { has_war_with = SPC }
+					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
+				}
 			}
-			SPD = {
-				exists = yes
+		}
+		bypass = {
+			SPR = { #Tooltip purposes
+				OR = {
+					has_global_flag = scw_over
+					AND = {
+						has_global_flag = SPR_anarchist_uprising_flag
+						OR = {
+							NOT = { SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution } }
+							NOT = { country_exists = SPC }
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
+			SOV_paranoia_low_increase_effect = yes 
+
+			set_global_flag = SOV_covert_support_for_poum_flag
+			custom_effect_tooltip = SOV_covert_support_for_spanish_poum_tt
+			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
 		}
 	}
 	focus = {
@@ -5534,12 +5566,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			custom_trigger_tooltip = {
-				tooltip = RED_all_power_to_redwinter_tt
-				check_variable = {
-					var = red_game_snake_tail_see
-					value = 5
-					compare = greater_than_or_equals
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				num_of_factories > 80
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = RED_all_power_to_redwinter_tt
+					check_variable = {
+						var = red_game_snake_tail_see
+						value = 5
+						compare = greater_than_or_equals
+					}
 				}
 			}
 			NOT = {

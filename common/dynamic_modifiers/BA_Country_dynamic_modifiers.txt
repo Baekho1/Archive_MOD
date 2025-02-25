@@ -1521,7 +1521,7 @@ POL_trump_eat = { #공동군사기금
 	enable = {
 		has_war_with = SOV
 	}
-	military_factory_donations = POL_solidarity_trump_var
+	military_factory_donations = POL.POL_solidarity_trump_var
 	icon = GFX_idea_GER_economy_of_conquest
 	custom_modifier_tooltip = POL_trump_eat_tt
 }

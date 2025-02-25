@@ -443,7 +443,9 @@
 
  POL_trump_eat: "미엥지모제 공동군사기금"
  POL_trump_eat_tt: "\n조건 충족시 제거: §Y@SOV소련§!과 전쟁 중이 아님"
- POL_sov_war_mission_tt: "우리는 다음과 같이 결속도를 얻습니다:\n- 항복하지 않은 동맹국마다 §G+3§!\n- 빼앗은 §Y@SOV소련§!의 주마다 §G+0.5§!\n- 항복한 동맹마다 §R-5.0§!\n- 빼앗긴 우리의 주마다 §R-0.5§!\n\n"
+
+ POL_sov_war_mission: "지속되는 전쟁"
+ POL_sov_war_mission_tt: "우리는 다음과 같이 결속도를 얻습니다:\n- 항복하지 않은 동맹국마다 §G+1§!\n- 빼앗은 §Y@SOV소련§!의 주마다 §G+0.5§!\n- 항복한 동맹마다 §R-5.0§!\n- 빼앗긴 우리의 주마다 §R-0.5§!\n\n"
 
  POL_enhance_attacktion: "공세 강화"
  POL_enhance_attacktion_tt: "§Y결속도§!가 §G매우 높음§! 이상" 

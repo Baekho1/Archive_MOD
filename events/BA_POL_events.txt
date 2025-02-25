@@ -11,7 +11,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		set_variable = {
-			POL_solidarity_var = 100
+			POL_solidarity_var = 80
 		}
 		set_variable = {
 			POL_solidarity_unit_var = 0
@@ -1996,7 +1996,7 @@ country_event = {#신규 동맹국 가입해서 결속도 떨어짐
 	desc = BA_intermarium_solidarity_event.1.d
 	is_triggered_only = yes
 	option = { 
-		name = BA_pol_event.1.a
+		name = BA_intermarium_solidarity_event.1.a
 		effect_tooltip = {
 			add_to_variable = {
 				POL_solidarity_var = -5
@@ -2030,7 +2030,7 @@ country_event = {#공동 군사 기금
 	desc = BA_intermarium_solidarity_event.2.d
 	is_triggered_only = yes
 	option = { 
-		name = BA_pol_event.2.a
+		name = BA_intermarium_solidarity_event.2.a
 		add_dynamic_modifier = {
 			modifier = POL_trump_eat
 		}
@@ -2042,7 +2042,7 @@ country_event = {#공동 방위군
 	desc = BA_intermarium_solidarity_event.3.d
 	is_triggered_only = yes
 	option = { 
-		name = BA_pol_event.3.a
+		name = BA_intermarium_solidarity_event.3.a
 		division_template = {
 			name = "Intermarium Joint Defence Force"
 			regiments = {
@@ -2088,7 +2088,7 @@ country_event = {#공동 방위군
 			create_unit = {
 				division = "name = \"Intermarium Joint Defence Force\" division_template = \"Intermarium Joint Defence Force\" start_experience_factor = 0.4 start_equipment_factor = 1"
 				owner = ROOT
-				count = POL_solidarity_unit_var
+				count = POL.POL_solidarity_unit_var
 			}
 		}
 	}
@@ -2099,7 +2099,7 @@ country_event = {#단독강화범!!
 	desc = BA_intermarium_solidarity_event.4.d
 	is_triggered_only = yes
 	option = { 
-		name = BA_pol_event.4.a
+		name = BA_intermarium_solidarity_event.4.a
 		effect_tooltip = {
 			POL = {
 				add_to_variable = {
@@ -2116,7 +2116,7 @@ country_event = {#단독강화하자~
 	desc = BA_intermarium_solidarity_event.5.d
 	is_triggered_only = yes
 	option = { #그래
-		name = BA_pol_event.5.a
+		name = BA_intermarium_solidarity_event.5.a
 		FROM = {
 			leave_faction = yes
 			every_country = {
@@ -2188,7 +2188,7 @@ country_event = {#단독강화하자~
 		}
 	}
 	option = { #싫어
-		name = BA_pol_event.5.b
+		name = BA_intermarium_solidarity_event.5.b
 		ai_chance = {
 			base = 0
 			modifier = {
