@@ -106,24 +106,43 @@ bookmarks = {
 			minor = yes
 			history = RE1_GATHERING_STORM_DESC
 			ideology = communism
+			ideas = {
+				RED_academic_regime_dominance_idea
+				RED_democratic_resistancel_idea
+				RED_military_government_idea_1
+			}
 		}
 
 		RE2 = {
 			minor = yes
 			history = RE2_GATHERING_STORM_DESC
 			ideology = communism
+			ideas = {
+				RED_academic_regime_dominance_idea
+				RED_democratic_resistancel_idea
+				RED_military_government_idea_1
+			}
 		}
 
 		RE3 = {
 			minor = yes
 			history = RE3_GATHERING_STORM_DESC
 			ideology = communism
+			ideas = {
+				RED_academic_regime_dominance_idea
+				RED_democratic_resistancel_idea
+				RED_military_government_idea_1
+			}
 		}
 
 		RE4 = {
 			minor = yes
 			history = RE4_GATHERING_STORM_DESC
 			ideology = communism
+			ideas = {
+				RED_academic_regime_dominance_idea
+				RED_military_government_idea_exit
+			}
 		}
 
 		ZZZ = {
@@ -142,9 +161,9 @@ bookmarks = {
 				FRA_exile
 			}
 			focuses = {
-				TRM_newfocus_27
-				TRN_yurijono_seia
-				TRN_nagisa_gyehek
+				FRA_start_0
+				FRA_focus_resist_1
+				FRA_focus_resistance_5
 			}
 		}
 

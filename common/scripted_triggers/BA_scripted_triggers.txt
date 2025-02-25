@@ -211,6 +211,7 @@ tag_has_path_guide = {
 		original_tag = SHA
 		original_tag = SRT
 		original_tag = COU
+		tag = RED #모두가 오리지널을 외칠 때, 형은 혼자 tag를 외쳐! 😎
 
 
 	### Non - Kivotos ###

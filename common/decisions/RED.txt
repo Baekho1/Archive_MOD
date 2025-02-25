@@ -355,7 +355,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				set_autonomy = {
 					target = RE5
-					autonomy_state = autonomy_supervised_state
+					autonomy_state = autonomy_collaboration_government
 				}
 			}
 			every_owned_state = {

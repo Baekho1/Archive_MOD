@@ -346,6 +346,10 @@
  BA_pol_event.41.a: "해방하자."
  BA_pol_event.41.b: "프로이센의 제후국으로 만들자."
  BA_pol_event.41.c: "프로이센에 병합하자."
+
+ BA_intermarium_solidarity_event.1.t: "새로운 동맹국"
+ BA_intermarium_solidarity_event.1.d: "새로운 동맹국 [FROM.FROM.getname]이(가) [POL.getfactionname]에 가입했습니다. 이는 기쁜 소식이지만, 조율해야 할 의견이 하나 더 늘었다는 걸 의미하기도 합니다."
+ BA_intermarium_solidarity_event.1.a: "이런."
  
  
  #디시전
@@ -397,6 +401,29 @@
  POL_polishize_66: "[66.getname] 폴란드화"
  POL_polishize_68: "[68.getname] 폴란드화"
  POL_polishize_63: "[63.getname] 폴란드화"
+
+ POL_intermarium_at_war: "바다 사이의 개념"
+ POL_intermarium_at_war_desc: "\n\n\n\n£GFX_decision_POL_solidarity\n\n\n\n\n\n\n 북해와 지중해를 가로지르는 거대한 동맹이 형성되고 있지만, 우리는 오직 '반소비에트'를 위한 공동 전선으로써 결성됐습니다. 이러한 구조의 취약점은 바로 언제든지 연대가 깨질 수 있다는 것이며, 동맹국들은 결속 아래 끝까지 항전할 것인지, 생존을 위해 구차히 타협할지에의 고민을 손에서 놓지 않을 것입니다.\n\n                         현재 결속도는 [POL_solidarity_text]\n"
+ POL_solidarity_text_very_high: "§G[?POL.POL_solidarity_var](매우 높음)§!입니다."
+ POL_solidarity_text_high: "§Y[?POL.POL_solidarity_var](높음)§!입니다."
+ POL_solidarity_text_mid: "§Y[?POL.POL_solidarity_var](보통)§!입니다."
+ POL_solidarity_text_low: "§Y[?POL.POL_solidarity_var](낮음)§!입니다."
+ POL_solidarity_text_very_low: "§R[?POL.POL_solidarity_var](매우 낮음)§!입니다."
+ 
+ POL_solidarity_tt: "결속도: $RIGHT|+=1$\n"
+ POL_solidarity_trump_tt: "방위비: $RIGHT|+=1$\n"
+ POL_solidarity_idea: "미엥지모제 결속\n\n§W현재 결속도는 [POL_solidarity_text]§!"
+
+ POL_together_train: "공동 훈련 프로그램 참여"
+ POL_together_train_no: "훈련 취소"
+ intermarium_no_train: "동원 취소"
+ POL_together_store: "장비 공동 비축"
+ POL_together_trump: "방위비 납부"
+ POL_together_store_tt: "\n비축된 장비로 §Y@SOV소련§!과의 전쟁에서 미엥지모제 공동 방위군이 구성될 것입니다.\n"
+ POL_together_trump_tt: "\n납부된 방위비는 §Y@SOV소련§!과의 전쟁에서 동맹국 전원에게의 군수공장으로 되돌아올 것입니다.\n\n납부된 방위비 총합: §Y[?POL.POL_solidarity_trump_var]§!\n"
+ POL_together_help: "전선 국가 지원"
+
+ POL_aid_idea: "동맹국들의 지원"
 
  POL_road_to_intermarium_union: "인터마리움 연방"
  POL_road_to_intermarium_union_desc: "인터마리움은 동유럽의 약소국들과 폴란드가 힘을 합친다면 독일과 소련이라는 두 거대한 위협에 맞설 수 있다는 희망 속에서 태어난 대담한 계획이었습니다. 이는 단순한 정치적 동맹을 넘어, 자유와 독립을 갈망하는 민족들의 절실한 꿈이었습니다.\n\n하지만 운명의 장난인지, 이 원대한 계획의 설계자인 피우수트스키가 갑작스럽게 사망하면서 인터마리움의 불꽃은 꺼져가는 듯했습니다. 그의 죽음과 함께 많은 이들의 희망도 사그라들었습니다.\n\n그러나 역사는 때로 예상치 못한 방향으로 흐릅니다. 소련이라는 거대한 적에 맞서 싸우며, 이들 국가들 사이에 피로 맺어진 유대감이 형성되었습니다. 전쟁의 포화 속에서 태어난 이 연대는, 과거 어느 정치적 협약보다도 강력했습니다.\n\n이제, 발트해와 흑해 사이의 국가들은 새로운 가능성을 마주하고 있습니다. 공동의 고난을 겪은 이들이 하나로 뭉친다면, 단순한 동맹을 넘어 진정한 연방의 탄생도 꿈꿀 수 있을 것입니다. 이는 더 이상 지도 위의 선이 아닌, 자유와 독립을 향한 열망으로 묶인 강력한 공동체가 될 것입니다."

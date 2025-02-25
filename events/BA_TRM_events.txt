@@ -7046,7 +7046,6 @@ country_event = {
 	trigger = {
 		tag = TRM
 		has_war_with = RED
-		has_completed_focus = TRM_We_need_Denmark_milk
 	}
 	
 	option = {
