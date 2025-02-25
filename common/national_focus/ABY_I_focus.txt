@@ -10312,33 +10312,23 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_government = communism
-				}
-				remove_country_leader_trait = ABY_trait_neko_god
-				add_country_leader_trait = ABY_trait_neko_god_2
-				create_wargoal = {
-					type = topple_government
-					target = MIL
-				}
-				create_wargoal = {
-					type = topple_government
-					target = COU
-				}
-				create_wargoal = {
-					type = topple_government
-					target = KSP
-				}
-				create_wargoal = {
-					type = topple_government
-					target = SHE
-				}
+			remove_country_leader_trait = ABY_trait_neko_god
+			add_country_leader_trait = ABY_trait_neko_god_2
+			create_wargoal = {
+				type = topple_government
+				target = MIL
 			}
-			if = {
-				limit = {
-					has_government = democratic
-				}
+			create_wargoal = {
+				type = topple_government
+				target = COU
+			}
+			create_wargoal = {
+				type = topple_government
+				target = KSP
+			}
+			create_wargoal = {
+				type = topple_government
+				target = SHE
 			}
 			#중점 완료시 얻는 보상
 		}

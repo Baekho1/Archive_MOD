@@ -5975,7 +5975,9 @@ ideas = {
 				conscription_factor = -2
 				production_speed_arms_factory_factor = 0.25
 				production_speed_industrial_complex_factor = 0.25
-				cic_to_overlord_factor = -0.5
+				mic_to_overlord_factor = 1
+				cic_to_overlord_factor = 0.25
+				local_resources_factor = 1
 			}
 		}
 		ABY_idea_economic_press = {

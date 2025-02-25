@@ -19721,8 +19721,6 @@ ABY_descision_category_debug = {
 					limit = {
 						OR = {
 							is_core_of = SUD
-							is_core_of = ETH
-							is_core_of = AFA
 							is_core_of = SAU
 							is_core_of = YEM
 							is_core_of = OMA
@@ -19730,10 +19728,10 @@ ABY_descision_category_debug = {
 							is_core_of = IRQ
 							is_core_of = LBA
 							is_core_of = ALG
+							is_core_of = KUR
 							state = 844
 							state = 559
 							state = 269
-							state = 550
 							state = 446
 							state = 455
 							state = 454
@@ -19750,6 +19748,9 @@ ABY_descision_category_debug = {
 							state = 786
 							state = 557
 							state = 553
+							state = 268
+							state = 413
+							state = 421
 						}
 					}
 					transfer_state_to = EGY
@@ -19798,29 +19799,36 @@ ABY_descision_category_debug = {
 					limit = {
 						OR = {
 							is_core_of = SUD
-							is_core_of = ETH
-							is_core_of = AFA
+							is_core_of = SAU
+							is_core_of = YEM
+							is_core_of = OMA
 							is_core_of = SYR
+							is_core_of = IRQ
 							is_core_of = LBA
-							is_core_of = KEN
+							is_core_of = ALG
+							is_core_of = KUR
 							state = 844
 							state = 559
 							state = 269
-							state = 550
 							state = 446
 							state = 455
 							state = 454
+							state = 656
+							state = 658
+							state = 765
+							state = 665
+							state = 458
+							state = 290
+							state = 462
+							state = 461
+							state = 783
+							state = 699
+							state = 786
+							state = 557
 							state = 553
-							state = 855
-							state = 679
-							state = 856
-							state = 350
-							state = 344
-							state = 183
-							state = 182
-							state = 164
-							state = 186
-							state = 548
+							state = 268
+							state = 413
+							state = 421
 						}
 					}
 					transfer_state_to = EGY
@@ -21680,7 +21688,11 @@ ABY_descision_category_invite_balkan = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 804
+					state = 103
+					state = 109
+					state = 104
+					state = 45 
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -21692,11 +21704,9 @@ ABY_descision_category_invite_balkan = {
 
 		target_trigger = {
 			FROM = { 
-				state = 804
-				state = 103
-				state = 109
-				state = 104
-				state = 45 
+				OR = {
+					state = 109
+				}
 			}
 		}
 
@@ -21711,7 +21721,11 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_YUG
-			has_full_control_of_state = FROM
+			has_full_control_of_state =  804
+			has_full_control_of_state =  103
+			has_full_control_of_state =  109
+			has_full_control_of_state =  104
+			has_full_control_of_state =  45 
 		}
 
 		cost = 0
@@ -21739,7 +21753,7 @@ ABY_descision_category_invite_balkan = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 105
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -21751,7 +21765,9 @@ ABY_descision_category_invite_balkan = {
 
 		target_trigger = {
 			FROM = { 
-				state = 105
+				OR = {
+					state = 105
+				}
 			}
 		}
 
@@ -21766,7 +21782,7 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_YUG
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 105
 		}
 
 		cost = 0
@@ -21790,7 +21806,13 @@ ABY_descision_category_invite_balkan = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 764
+					state = 107
+					state = 108
+					state = 802
+					state = 106
+					state = 970
+					state = 803
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -21802,13 +21824,9 @@ ABY_descision_category_invite_balkan = {
 
 		target_trigger = {
 			FROM = { 
-				state = 764
-				state = 107
-				state = 108
-				state = 802
-				state = 106
-				state = 970
-				state = 803
+				OR = {
+					state = 107
+				}
 			}
 		}
 
@@ -21823,7 +21841,13 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_YUG
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 764
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 802
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 803
 		}
 
 		cost = 0
@@ -21853,18 +21877,6 @@ ABY_descision_category_invite_balkan = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
-			}
-			highlight_color_while_active = 3
-			highlight_color_before_active = 2
-		}
-
-		on_map_mode = map_only
-
-		state_target = yes
-
-		target_trigger = {
-			FROM = { 
 				AND = {
 					is_core_of = ITA
 					NOT = {
@@ -21879,6 +21891,18 @@ ABY_descision_category_invite_balkan = {
 					}
 				}
 			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		on_map_mode = map_only
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = { 
+				state = 2
+			}
 		}
 
         allowed = {
@@ -21892,7 +21916,22 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_ITA
-			FROM = {
+			every_state = {
+				limit = {
+					AND = {
+						is_core_of = ITA
+						NOT = {
+							OR = {
+								state = 159
+								state = 160
+								state = 850
+								state = 39
+								state = 736
+								state = 852
+							}
+						}
+					}
+				}
 				is_controlled_by_ROOT_or_subject = yes
 			}
 		}
@@ -21937,7 +21976,10 @@ ABY_descision_category_puppet_nephthys = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 83
+					state = 84
+					state = 76
+					state = 79
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -21949,10 +21991,9 @@ ABY_descision_category_puppet_nephthys = {
 
 		target_trigger = {
 			FROM = { 
-				state = 83
-				state = 84
-				state = 76
-				state = 79
+				OR = {
+					state = 76
+				}
 			}
 		}
 
@@ -21967,7 +22008,10 @@ ABY_descision_category_puppet_nephthys = {
 
 		available = {
 			has_country_flag = ABY_flag_nephthys_puppet
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 83
+			has_full_control_of_state = 84
+			has_full_control_of_state = 76
+			has_full_control_of_state = 79
 		}
 
 		cost = 0
@@ -21984,7 +22028,16 @@ ABY_descision_category_puppet_nephthys = {
 				original_tag = TRA
 				copy_tag = TRA
 				set_cosmetic_tag = ABY_neptis_nation_2
-				FROM = {
+				every_state = {
+					limit = {
+						OR = {
+							
+							state = 83
+							state = 84
+							state = 76
+							state = 79
+						}
+					}
 					transfer_state_to = PREV
 					add_core_of = PREV
 				}
@@ -21998,7 +22051,7 @@ ABY_descision_category_puppet_nephthys = {
 				ABY = {
 					set_autonomy = {
 						target = PREV
-						autonomy_state = autonomy_collaboration_government
+						autonomy_state = autonomy_personal_union
 					}
 				}
 			}
@@ -22008,7 +22061,15 @@ ABY_descision_category_puppet_nephthys = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 82
+					state = 764
+					state = 104
+					state = 804
+					state = 105
+					state = 107
+					state = 108
+					state = 802
+					state = 803
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -22020,15 +22081,9 @@ ABY_descision_category_puppet_nephthys = {
 
 		target_trigger = {
 			FROM = { 
-				state = 82
-				state = 764
-				state = 104
-				state = 804
-				state = 105
-				state = 107
-				state = 108
-				state = 802
-				state = 803
+				OR = {
+					state = 107
+				}
 			}
 		}
 
@@ -22043,7 +22098,15 @@ ABY_descision_category_puppet_nephthys = {
 
 		available = {
 			has_country_flag = ABY_flag_nephthys_puppet
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 82
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 105
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 802
+			has_full_control_of_state = 803
 		}
 
 		cost = 0
@@ -22060,7 +22123,20 @@ ABY_descision_category_puppet_nephthys = {
 				original_tag = SER
 				copy_tag = SER
 				set_cosmetic_tag = ABY_neptis_nation_3
-				FROM = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 82
+							state = 764
+							state = 104
+							state = 804
+							state = 105
+							state = 107
+							state = 108
+							state = 802
+							state = 803
+						}
+					}
 					transfer_state_to = PREV
 					add_core_of = PREV
 				}
@@ -22074,7 +22150,7 @@ ABY_descision_category_puppet_nephthys = {
 				ABY = {
 					set_autonomy = {
 						target = PREV
-						autonomy_state = autonomy_collaboration_government
+						autonomy_state = autonomy_personal_union
 					}
 				}
 			}
@@ -22084,7 +22160,23 @@ ABY_descision_category_puppet_nephthys = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 151
+					state = 846
+					state = 847
+					state = 3
+					state = 845
+					state = 735
+					state = 158
+					state = 993
+					state = 161
+					state = 162
+					state = 157
+					state = 2
+					state = 117
+					state = 849
+					state = 156
+					state = 115
+					state = 114
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -22096,23 +22188,9 @@ ABY_descision_category_puppet_nephthys = {
 
 		target_trigger = {
 			FROM = { 
-				state = 151
-				state = 846
-				state = 847
-				state = 3
-				state = 845
-				state = 735
-				state = 158
-				state = 993
-				state = 161
-				state = 162
-				state = 157
-				state = 2
-				state = 117
-				state = 849
-				state = 156
-				state = 115
-				state = 114
+				OR = {
+					state = 2
+				}
 			}
 		}
 
@@ -22127,7 +22205,23 @@ ABY_descision_category_puppet_nephthys = {
 
 		available = {
 			has_country_flag = ABY_flag_nephthys_puppet
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 151
+			has_full_control_of_state = 846
+			has_full_control_of_state = 847
+			has_full_control_of_state = 3
+			has_full_control_of_state = 845
+			has_full_control_of_state = 735
+			has_full_control_of_state = 158
+			has_full_control_of_state = 993
+			has_full_control_of_state = 161
+			has_full_control_of_state = 162
+			has_full_control_of_state = 157
+			has_full_control_of_state = 2
+			has_full_control_of_state = 117
+			has_full_control_of_state = 849
+			has_full_control_of_state = 156
+			has_full_control_of_state = 115
+			has_full_control_of_state = 114
 		}
 
 		cost = 0
@@ -22144,7 +22238,28 @@ ABY_descision_category_puppet_nephthys = {
 				original_tag = TOS
 				copy_tag = TOS
 				set_cosmetic_tag = ABY_neptis_nation_4
-				FROM = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 151
+							state = 846
+							state = 847
+							state = 3
+							state = 845
+							state = 735
+							state = 158
+							state = 993
+							state = 161
+							state = 162
+							state = 157
+							state = 2
+							state = 117
+							state = 849
+							state = 156
+							state = 115
+							state = 114
+						}
+					}
 					transfer_state_to = PREV
 					add_core_of = PREV
 				}
@@ -22158,7 +22273,7 @@ ABY_descision_category_puppet_nephthys = {
 				ABY = {
 					set_autonomy = {
 						target = PREV
-						autonomy_state = autonomy_collaboration_government
+						autonomy_state = autonomy_personal_union
 					}
 				}
 			}
@@ -22168,7 +22283,13 @@ ABY_descision_category_puppet_nephthys = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 81
+					state = 46
+					state = 971
+					state = 77
+					state = 211
+					state = 801
+					state = 48
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -22180,13 +22301,9 @@ ABY_descision_category_puppet_nephthys = {
 
 		target_trigger = {
 			FROM = { 
-				state = 81
-				state = 46
-				state = 971
-				state = 77
-				state = 211
-				state = 801
-				state = 48
+				OR = {
+					state = 77
+				}
 			}
 		}
 
@@ -22201,7 +22318,13 @@ ABY_descision_category_puppet_nephthys = {
 
 		available = {
 			has_country_flag = ABY_flag_nephthys_puppet
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 81
+			has_full_control_of_state = 46
+			has_full_control_of_state = 971
+			has_full_control_of_state = 77
+			has_full_control_of_state = 211
+			has_full_control_of_state = 801
+			has_full_control_of_state = 48
 		}
 
 		cost = 0
@@ -22218,7 +22341,18 @@ ABY_descision_category_puppet_nephthys = {
 				original_tag = MOL
 				copy_tag = MOL
 				set_cosmetic_tag = ABY_neptis_nation_5
-				FROM = {
+				every_state = {
+					limit = {
+						OR = {
+						state = 81
+						state = 46
+						state = 971
+						state = 77
+						state = 211
+						state = 801
+						state = 48
+						}
+					}
 					transfer_state_to = PREV
 					add_core_of = PREV
 				}
@@ -22232,7 +22366,7 @@ ABY_descision_category_puppet_nephthys = {
 				ABY = {
 					set_autonomy = {
 						target = PREV
-						autonomy_state = autonomy_collaboration_government
+						autonomy_state = autonomy_personal_union
 					}
 				}
 			}
@@ -22242,7 +22376,20 @@ ABY_descision_category_puppet_nephthys = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				state = FROM
+					state = 934
+					state = 44
+					state = 805
+					state = 106
+					state = 970
+					state = 212
+					state = 184
+					state = 185
+					state = 731
+					state = 47
+					state = 186
+					state = 187
+					state = 182
+					state = 164
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -22254,20 +22401,9 @@ ABY_descision_category_puppet_nephthys = {
 
 		target_trigger = {
 			FROM = { 
-				state = 934
-				state = 44
-				state = 805
-				state = 106
-				state = 970
-				state = 212
-				state = 184
-				state = 185
-				state = 731
-				state = 47
-				state = 186
-				state = 187
-				state = 182
-				state = 164
+				OR = {
+					state = 731
+				}
 			}
 		}
 
@@ -22282,7 +22418,20 @@ ABY_descision_category_puppet_nephthys = {
 
 		available = {
 			has_country_flag = ABY_flag_nephthys_puppet
-			has_full_control_of_state = FROM
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 212
+			has_full_control_of_state = 184
+			has_full_control_of_state = 185
+			has_full_control_of_state = 731
+			has_full_control_of_state = 47
+			has_full_control_of_state = 186
+			has_full_control_of_state = 187
+			has_full_control_of_state = 182
+			has_full_control_of_state = 164
 		}
 
 		cost = 0
@@ -22299,7 +22448,26 @@ ABY_descision_category_puppet_nephthys = {
 				original_tag = ALB
 				copy_tag = ALB
 				set_cosmetic_tag = ABY_neptis_nation_6
-				FROM = {
+				every_state = {
+					limit = {
+						OR = {
+							
+						state = 934
+						state = 44
+						state = 805
+						state = 106
+						state = 970
+						state = 212
+						state = 184
+						state = 185
+						state = 731
+						state = 47
+						state = 186
+						state = 187
+						state = 182
+						state = 164
+						}
+					}
 					transfer_state_to = PREV
 					add_core_of = PREV
 				}
@@ -22313,7 +22481,7 @@ ABY_descision_category_puppet_nephthys = {
 				ABY = {
 					set_autonomy = {
 						target = PREV
-						autonomy_state = autonomy_collaboration_government
+						autonomy_state = autonomy_personal_union
 					}
 				}
 			}
