@@ -350,7 +350,23 @@
  BA_intermarium_solidarity_event.1.t: "새로운 동맹국"
  BA_intermarium_solidarity_event.1.d: "새로운 동맹국 [FROM.FROM.getname]이(가) [POL.getfactionname]에 가입했습니다. 이는 기쁜 소식이지만, 조율해야 할 의견이 하나 더 늘었다는 걸 의미하기도 합니다."
  BA_intermarium_solidarity_event.1.a: "이런."
- 
+ BA_intermarium_solidarity_event.2.t: "공동 군사 기금"
+ BA_intermarium_solidarity_event.2.d: "우리의 방위비가 공동 군사 기금으로 되돌아왔습니다."
+ BA_intermarium_solidarity_event.2.a: "좋군!" 
+ BA_intermarium_solidarity_event.3.t: "공동 방위군"
+ BA_intermarium_solidarity_event.3.d: "비축한 장비로 훈련한 공동 방위군이 전개됩니다."
+ BA_intermarium_solidarity_event.3.a: "보람이 있군."
+ BA_intermarium_solidarity_event.4.t: "[FROM.getname]의 단독강화"
+ BA_intermarium_solidarity_event.4.d: "[FROM.getname]은(는) 동맹을 배신하고 단독으로 소련과 강화하였습니다."
+ BA_intermarium_solidarity_event.4.a: "젠장."
+ BA_intermarium_solidarity_event.5.t: "[FROM.getname]의 단독강화 요청"
+ BA_intermarium_solidarity_event.5.d: "[FROM.getname]은(는) 미엥지모제로부터의 탈퇴를 조건으로 우리와 협상을 원하고 있습니다."
+ BA_intermarium_solidarity_event.5.a: "그들이 원하는 대로 해라."
+ BA_intermarium_solidarity_event.5.b: "말도 안되는 소리."
+ BA_intermarium_solidarity_event.6.t: "미엥지모제의 붕괴"
+ BA_intermarium_solidarity_event.6.d: "동맹국 간 결속은 풍전등화에 불과했습니다. 거대한 적 앞에 우리는 굴복하고 말았습니다."
+ BA_intermarium_solidarity_event.6.a: "제길."
+
  
  #디시전
  BA_sov_making_ssr_cat: "SSR 설립"
@@ -424,6 +440,22 @@
  POL_together_help: "전선 국가 지원"
 
  POL_aid_idea: "동맹국들의 지원"
+
+ POL_trump_eat: "미엥지모제 공동군사기금"
+ POL_trump_eat_tt: "\n조건 충족시 제거: §Y@SOV소련§!과 전쟁 중이 아님"
+ POL_sov_war_mission_tt: "우리는 다음과 같이 결속도를 얻습니다:\n- 항복하지 않은 동맹국마다 §G+3§!\n- 빼앗은 §Y@SOV소련§!의 주마다 §G+0.5§!\n- 항복한 동맹마다 §R-5.0§!\n- 빼앗긴 우리의 주마다 §R-0.5§!\n\n"
+
+ POL_enhance_attacktion: "공세 강화"
+ POL_enhance_attacktion_tt: "§Y결속도§!가 §G매우 높음§! 이상" 
+ POL_enhance_defence: "지연전 유도"
+ POL_enhance_defence_tt: "§Y결속도§!가 §Y높음§! 이상"
+ POL_enhance_propaganda: "선전과 호소"
+ POL_enhance_propaganda_tt: "§Y결속도§!가 §Y보통§! 이하"
+ POL_enhance_defence_deadly: "결사항전"
+ POL_enhance_defence_deadly_tt: "§Y결속도§!가 §Y낮음§! 이하"
+ POL_enhance_dedication: "중앙에 헌신"
+ POL_selfish_peace_tt: "§Y결속도§!가 §R매우 낮음§! 이하"
+ POL_selfish_peace: "단독 강화"
 
  POL_road_to_intermarium_union: "인터마리움 연방"
  POL_road_to_intermarium_union_desc: "인터마리움은 동유럽의 약소국들과 폴란드가 힘을 합친다면 독일과 소련이라는 두 거대한 위협에 맞설 수 있다는 희망 속에서 태어난 대담한 계획이었습니다. 이는 단순한 정치적 동맹을 넘어, 자유와 독립을 갈망하는 민족들의 절실한 꿈이었습니다.\n\n하지만 운명의 장난인지, 이 원대한 계획의 설계자인 피우수트스키가 갑작스럽게 사망하면서 인터마리움의 불꽃은 꺼져가는 듯했습니다. 그의 죽음과 함께 많은 이들의 희망도 사그라들었습니다.\n\n그러나 역사는 때로 예상치 못한 방향으로 흐릅니다. 소련이라는 거대한 적에 맞서 싸우며, 이들 국가들 사이에 피로 맺어진 유대감이 형성되었습니다. 전쟁의 포화 속에서 태어난 이 연대는, 과거 어느 정치적 협약보다도 강력했습니다.\n\n이제, 발트해와 흑해 사이의 국가들은 새로운 가능성을 마주하고 있습니다. 공동의 고난을 겪은 이들이 하나로 뭉친다면, 단순한 동맹을 넘어 진정한 연방의 탄생도 꿈꿀 수 있을 것입니다. 이는 더 이상 지도 위의 선이 아닌, 자유와 독립을 향한 열망으로 묶인 강력한 공동체가 될 것입니다."

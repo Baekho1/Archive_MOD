@@ -743,7 +743,6 @@ BA_sov_making_ssr_cat = {
 			controls_state = 84
 			controls_state = 83
 			controls_state = 82
-			controls_state = 766
 		}
 		complete_effect = {
 			if = {
@@ -760,7 +759,6 @@ BA_sov_making_ssr_cat = {
 						set_state_controller = 84
 						set_state_controller = 83
 						set_state_controller = 82
-						set_state_controller = 766
 						set_state_controller = 971
 					}
 				}
@@ -775,7 +773,6 @@ BA_sov_making_ssr_cat = {
 						transfer_state = 84
 						transfer_state = 83
 						transfer_state = 82
-						transfer_state = 766
 						transfer_state = 971
 						if = {
 							limit = {
@@ -814,7 +811,6 @@ BA_sov_making_ssr_cat = {
 					transfer_state = 84
 					transfer_state = 83
 					transfer_state = 82
-					transfer_state = 766
 					transfer_state = 971
 					if = {
 						limit = {

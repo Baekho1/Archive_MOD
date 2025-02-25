@@ -1609,8 +1609,35 @@ news_event = { #소폴전쟁
 				}
 			}
 		}
+		effect_tooltip = {
+			add_to_variable = {
+				POL_solidarity_var = -10
+				tooltip = POL_solidarity_tt
+			}
+		}
+		if = {
+			limit = {
+				tag = POL
+			}
+			hidden_effect = {
+				add_to_variable = {
+					POL_solidarity_var = -10
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
 		trigger = {
 			is_ally_with = POL
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_intermarium_solidarity_event.2
+				days = 2
+			}
+			country_event = {
+				id = BA_intermarium_solidarity_event.3
+				days = 10
+			}
 		}
 	}
 	option = {
@@ -4916,6 +4943,20 @@ news_event = { # 유령신호
         trigger = {
 			NOT = { tag = GEI }
         }
+    }
+}
+
+news_event = { # 미엥지모제의 붕괴
+    id = BA_news.128
+    title = BA_news.128.t
+    desc = BA_news.128.d
+    picture = GFX_news_event_polish_resistance_warsaw
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 우리가 간다 
+        name = BA_news.128.a
     }
 }
 

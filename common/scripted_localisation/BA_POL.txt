@@ -2,6 +2,11 @@ defined_text = { #결속도
 	name = POL_solidarity_text
 	text = { #매우 높음
 		trigger = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 80
+				compare = greater_than
+			}
 		}
 		localization_key = "POL_solidarity_text_very_high"
 	}

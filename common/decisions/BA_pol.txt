@@ -264,6 +264,383 @@ POL_intermarium_at_war = { #바다 사이의 개념
 			}
 		}
 	}
+	POL_sov_war_mission = { #지속되는 전쟁
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = 30
+		activation = {
+			is_ally_with = POL
+			has_war_with = SOV
+		}
+		is_good = no
+		available = {
+			has_war = no
+		}
+		timeout_effect = {
+			custom_effect_tooltip = POL_sov_war_mission_tt
+			effect_tooltip = {
+				every_country = {
+					limit = {
+						is_ally_with = POL
+						has_war_with = SOV
+						has_capitulated = no
+					}
+					add_to_variable = {
+						POL_solidarity_var = 3
+						tooltip = POL_solidarity_tt
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = SOV
+						any_country = {
+							is_ally_with = POL
+							has_war_with = SOV
+							controls_state = prev
+						}
+					}
+					add_to_variable = {
+						POL_solidarity_var = 0.5
+						tooltip = POL_solidarity_tt
+					}
+				}
+				every_country = {
+					limit = {
+						is_ally_with = POL
+						has_war_with = SOV
+						has_capitulated = yes
+					}
+					add_to_variable = {
+						POL_solidarity_var = -5
+						tooltip = POL_solidarity_tt
+					}
+				}
+				every_state = {
+					limit = {
+						any_country = {
+							is_ally_with = POL
+							has_war_with = SOV
+							owns_state = PREV
+						}
+						SOV = {
+							PREV = {
+								is_controlled_by_ROOT_or_ally = yes
+							}
+						}
+					}
+					add_to_variable = {
+						POL_solidarity_var = -0.5
+						tooltip = POL_solidarity_tt
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POL
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							is_ally_with = POL
+							has_war_with = SOV
+							has_capitulated = no
+						}
+						add_to_variable = {
+							POL_solidarity_var = 3
+							tooltip = POL_solidarity_tt
+						}
+					}
+					every_state = {
+						limit = {
+							is_owned_by = SOV
+							any_country = {
+								is_ally_with = POL
+								has_war_with = SOV
+								controls_state = prev
+							}
+						}
+						add_to_variable = {
+							POL_solidarity_var = 0.5
+							tooltip = POL_solidarity_tt
+						}
+					}
+					every_country = {
+						limit = {
+							is_ally_with = POL
+							has_war_with = SOV
+							has_capitulated = yes
+						}
+						add_to_variable = {
+							POL_solidarity_var = -5
+							tooltip = POL_solidarity_tt
+						}
+					}
+					every_state = {
+						limit = {
+							any_country = {
+								is_ally_with = POL
+								has_war_with = SOV
+								owns_state = PREV
+							}
+							SOV = {
+								PREV = {
+									is_controlled_by_ROOT_or_ally = yes
+								}
+							}
+						}
+						add_to_variable = {
+							POL_solidarity_var = -0.5
+							tooltip = POL_solidarity_tt
+						}
+					}
+				}
+			}
+		}
+	}
+	#전쟁 중 사용하는 디시전들
+	POL_enhance_attacktion = { #공세 강화
+		icon = GFX_decision_hol_draw_up_staff_plans
+		visible = {
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_enhance_attacktion_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 80
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_re_enable = 30
+		days_remove = 60
+		modifier = {
+			attack_bonus_against_cores = 0.03
+			army_attack_factor = 0.05
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 10
+	}
+	POL_enhance_defence = { #지연전 유도
+		icon = GFX_decision_generic_fortification
+		visible = {
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_enhance_defence_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 40
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_re_enable = 30
+		days_remove = 60
+		modifier = {
+			attack_bonus_against_cores = 0.05
+			dig_in_speed = 0.2
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 10
+	}
+	POL_enhance_propaganda = { #선전과 호소
+		icon = GFX_decision_eng_propaganda_campaigns
+		visible = {
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 80
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_enhance_propaganda_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 60
+					compare = less_than_or_equals
+				}
+			}
+		}
+		days_re_enable = 30
+		days_remove = 60
+		modifier = {
+			war_support_weekly = 0.005
+		}
+		complete_effect = {
+			POL = {
+				add_to_variable = {
+					POL_solidarity_var = 2
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 10
+	}
+	POL_enhance_defence_deadly = { #결사항전
+		icon = GFX_decision_generic_civil_support
+		visible = {
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 60
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_enhance_defence_deadly_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+		}
+		days_remove = -1
+		modifier = {
+			max_dig_in_factor = 0.2
+			army_defence_against_major_factor = 0.05
+			weekly_manpower = 500
+		}
+		cancel_trigger = {
+			has_war = no
+		}
+		complete_effect = {
+			POL = {
+				add_to_variable = {
+					POL_solidarity_var = 3
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 10
+	}
+	POL_enhance_dedication = { #중앙에 헌신
+		icon = GFX_decision_generic_army_support
+		visible = {
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 60
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_enhance_defence_deadly_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+		}
+		days_remove = -1
+		modifier = {
+			surrender_limit = 0.4
+			political_power_factor = -0.1
+			consumer_goods_factor = -0.1
+		}
+		cancel_trigger = {
+			has_war = no
+		}
+		complete_effect = {
+			POL = {
+				add_to_variable = {
+					POL_solidarity_var = 3
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 10
+	}
+	POL_selfish_peace = { #단독 강화
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			NOT = {
+				original_tag = POL
+			}
+			has_war_with = SOV
+			is_ally_with = POL
+			check_variable = {
+				var = POL_solidarity_var
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_selfish_peace_tt
+				check_variable = {
+					var = POL_solidarity_var
+					value = 20
+					compare = less_than_or_equals
+				}
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			SOV = {
+				country_event = {
+					id = BA_intermarium_solidarity_event.5
+					days = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				leave_faction = yes
+				POL = {
+					add_to_variable = {
+						POL_solidarity_var = -5
+						tooltip = POL_solidarity_tt
+					}
+				}
+				every_country = {
+					limit = {
+						has_war_with = PREV
+						is_ally_with = SOV
+					}
+					white_peace = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cost = 30
+	}
 }
 POL_polish_in_german = {
 	POL_sabo_volunteer = { #폴란드계 의용군

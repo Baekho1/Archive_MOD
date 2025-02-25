@@ -1517,7 +1517,14 @@ ARI_anarchism_society = { #아나키즘 사회
 	conscription = ARI_anarch_state_conscription
 	drift_defence_factor = ARI_anarch_state_drift_defence_factor
 }
-
+POL_trump_eat = { #공동군사기금 
+	enable = {
+		has_war_with = SOV
+	}
+	military_factory_donations = POL_solidarity_trump_var
+	icon = GFX_idea_GER_economy_of_conquest
+	custom_modifier_tooltip = POL_trump_eat_tt
+}
 POL_attacker_from_other_demention = { #이계의 침략자
 	enable = {
 		always = yes
