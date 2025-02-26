@@ -852,7 +852,7 @@ country_event = {
 		set_country_flag = COU_agree_out_rin2
 		custom_effect_tooltip = COU_tooltip_smomo_accept_yoon
 		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
-		add_to_variable = { var = COU_rin_percen value = 10 
+		add_to_variable = { var = COU_rin_percen value = 10 }
 		add_political_power = 75
 	}
 }
