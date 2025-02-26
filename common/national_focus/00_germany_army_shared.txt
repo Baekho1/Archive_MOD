@@ -9610,7 +9610,7 @@ shared_focus = { #이계 종교 포용
 }
 shared_focus = { #트리니티 기독교 포용
 	id = GEK_RM_rel_focus_16
-	icon = GFX_goal_focus_TRM_cooperation
+	icon = GFX_focus_chi_mission_to_the_TRN
 	prerequisite = {
 		focus = GEK_RM_rel_focus_8
 	}

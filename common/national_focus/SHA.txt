@@ -13,7 +13,7 @@
 
 focus_tree = {
 	id = SHA_focus_tree
-	continuous_focus_position = { x = 0 y = 600 } 
+	continuous_focus_position = { x = 1000 y = 1000 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Austrian_oppression_continues
 		icon = GFX_focus_GER_anschluss
-		x = 40
+		x = 50
 		y = 0
 		cost = 10
 
@@ -830,25 +830,13 @@ focus_tree = {
 
 
 		completion_reward = {
-			custom_effect_tooltip = SHA_military_change
-			add_to_variable = {
-				SHA_militray_army_attack_factor = 0.05
-				tooltip = army_attack_factor_tt
-			}
-			add_to_variable = {
-				SHA_military_army_morale_factor = 0.05
-				tooltip = army_morale_factor_tt
-			}
-			add_to_variable = {
-				SHA_militray_army_org_factor = -0.05
-				tooltip = army_org_factor_tt
-			}
+			add_country_leader_trait = SHA_architect_of_fascism_trait
 		}
 	}
 
-	# 산해경 인민의 영도자
+	# 개인숭배
 	focus = {
-		id = SHA_leader_of_the_people
+		id = SHA_cult_of_personality
 		icon = GFX_focus_SHA_cavalry_charge
 		x = 3
 		y = 1
@@ -862,31 +850,31 @@ focus_tree = {
 
 
 		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15
-				tooltip = party_popularity_stability_factor_tt
-			}
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_fascism_drift = 0.03 
-				tooltip = fascism_drift_tt
+			add_political_power = 25
+			add_timed_idea = {
+				idea = SHA_Shintani_kais_cult_of_personality_ns
+				days = 180
 			}
 		}
 	}
 
 	# 
 	focus = {
-		id = SHA_leader_of_the_shanhaijing
+		id = SHA_rebirth_fo_shanhaijing
 		icon = GFX_focus_SHA_cavalry_charge
 		x = 0
 		y = 3
-		relative_position_id = SHA_leader_of_the_people
+		relative_position_id = SHA_cult_of_personality
 		cost = 5
 
-		prerequisite = { focus = SHA_leader_of_the_people }
+		prerequisite = { focus = SHA_cult_of_personality }
 		prerequisite = { 
 			focus = SHA_architect_of_fascism
 			focus = SHA_great_commander
+		}
+
+		allow_branch = {
+			always = no 
 		}
 
 		available = { }
@@ -894,15 +882,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_party_popularity_stability_factor = 0.15
-				tooltip = party_popularity_stability_factor_tt
-			}
-			add_to_variable = { 
-				SHA_Shanhaijinfascism_fascism_drift = 0.03 
-				tooltip = fascism_drift_tt
-			}
+
 		}
 	}
 
@@ -1453,7 +1433,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Diplomacy_with_Kivotos
 		icon = GFX_focus_usa_focus_on_europe
-		x = 9
+		x = 4
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fact
 		search_filters = {  }
@@ -1475,7 +1455,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Gehenna_Dip
 		icon = GFX_focus_chi_mission_to_the_GEH
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = SHA_Diplomacy_with_Kivotos
 		search_filters = {  }
@@ -1519,15 +1499,14 @@ focus_tree = {
 	focus = {
 		id = SHA_Millenium_Dip
 		icon = GFX_focus_chi_mission_to_the_MIL
-		x = -1
+		x = 3
 		y = 1
-		relative_position_id = SHA_Trinity_Dip
+		relative_position_id = SHA_Diplomacy_with_Kivotos
 		search_filters = {  }
 		cost = 5
 
 		prerequisite = { 
-			focus = SHA_Trinity_Dip 
-			focus = SHA_Gehenna_Dip
+			focus = SHA_Diplomacy_with_Kivotos
 		}
 		mutually_exclusive = {  }
 
@@ -1544,7 +1523,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Diplomacy_with_hungary
 		icon = GFX_focus_generic_befriend_hungary
-		x = 3
+		x = -3
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fact
 		search_filters = {  }
@@ -1555,7 +1534,9 @@ focus_tree = {
 			focus = SHA_Diplomacy_with_ITA
 		}
 
-		available = { }
+		available = {
+			is_subject = no
+		}
 		bypass = { }
 
 
@@ -1568,7 +1549,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Diplomacy_with_ITA
 		icon = GFX_focus_befriend_italy
-		x = 2
+		x = -4
 		y = 0
 		relative_position_id = SHA_Diplomacy_with_hungary
 		search_filters = {  }
@@ -1579,7 +1560,9 @@ focus_tree = {
 			focus = SHA_Diplomacy_with_hungary
 		}
 
-		available = { }
+		available = {
+			is_subject = no
+		}
 		bypass = { }
 
 
@@ -1592,7 +1575,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Intervention_in_the_Balkan_situation
 		icon = GFX_focus_generic_balkans_focus
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = SHA_Diplomacy_with_hungary
 		search_filters = {  }
@@ -1607,7 +1590,9 @@ focus_tree = {
 			focus = SHA_support_italy
 		}
 
-		available = { }
+		available = {
+			is_subject = no
+		}
 		bypass = { }
 
 
@@ -1620,7 +1605,7 @@ focus_tree = {
 	focus = {
 		id = SHA_recognition_of_Hungarian_sovereignty
 		icon = GFX_focus_HUN_wherever_the_cross_points
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SHA_Diplomacy_with_hungary
 		search_filters = {  }
@@ -1632,7 +1617,9 @@ focus_tree = {
 			focus = SHA_support_italy
 		}
 
-		available = { }
+		available = {
+			is_subject = no
+		}
 		bypass = { }
 
 
@@ -1645,7 +1632,7 @@ focus_tree = {
 	focus = {
 		id = SHA_support_italy
 		icon = GFX_focus_ITA_cavalry_charge
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SHA_Diplomacy_with_ITA
 		search_filters = {  }
@@ -1657,7 +1644,9 @@ focus_tree = {
 			focus = SHA_recognition_of_Hungarian_sovereignty
 		}
 
-		available = { }
+		available = {
+			is_subject = no
+		}
 		bypass = { }
 
 
@@ -1958,6 +1947,23 @@ focus_tree = {
 		cancelable = no
 
 		completion_reward = {
+			every_other_country = {
+				limit = {
+					Kivotos_school_tag = yes 
+					NOT = { original_tag = SHA }
+					NOT = { is_puppet_of = ROOT }
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = SHA_clash_of_civilizations_idea
 			every_state = {
 				limit = {
@@ -1982,19 +1988,6 @@ focus_tree = {
 					}
 				}
 				add_claim_by = SHA
-			}
-			every_country = {
-				limit = { 
-					Kivotos_school_tag = yes 
-					NOT = { original_tag = SHA }
-					NOT = { is_puppet_of = ROOT }
-				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = puppet_wargoal_focus
-					}
-				}
 			}
 			every_country = {
 				limit = { 
@@ -2245,15 +2238,22 @@ focus_tree = {
 				SHA_Shanhaijinfascism_justify_war_goal_time = -0.75
 				tooltip = justify_war_goal_time_tt
 			}
-			every_country = {
-				limit = { is_major = yes }
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = annex_everything
+			every_other_country = {
+				limit = {
+					is_major = yes
+					NOT = { is_puppet_of = SHA }
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
 					}
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
 			every_country = {
 				limit = { 
 					NOT = { 
@@ -2748,8 +2748,8 @@ focus_tree = {
 
 		available = {
 			check_variable = {
-				tooltip = SHA_economic_health_2_tt
-				SHA_aup_anger < 2
+				tooltip = SHA_economic_health_5_tt
+				SHA_aup_anger < 6
 			}
 		}
 		bypass = { }
@@ -3806,9 +3806,9 @@ focus_tree = {
 	}
 
 
-	#############
+	##############
 	####군사 중점####
-	#############
+	##############
 	
 
 	# 육군 개편
@@ -4491,6 +4491,184 @@ focus_tree = {
 			mio:SHA_tank_equipment_organization = {
 				unlock_mio_trait_tooltip = SHA_mio_trait_merge_plant_factory_output
 			}
+		}
+	}
+	###########
+	####공군####
+	###########
+
+	# 오스트리아 공군 긴빠이 대작전
+	focus = {
+		id = SHA_osterreichische_luftstreitkrafte
+		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
+		x = -17
+		y = 0
+		relative_position_id = SHA_address_the_army
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		cost = 3
+
+		prerequisite = { }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			air_experience = 50
+
+			add_tech_bonus = {
+				name = SHA_osterreichische_luftstreitkrafte
+				bonus = 0.75
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	# 국가항공국 설립
+	focus = {
+		id = SHA_National_Aviation_Administration
+		icon = GFX_focus_generic_air_bases
+		x = 0
+		y = 1
+		relative_position_id = SHA_osterreichische_luftstreitkrafte
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		cost = 5
+
+		prerequisite = { focus = SHA_osterreichische_luftstreitkrafte }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_one_random_military_factory = yes
+			unlock_military_industrial_organization_tooltip = mio:SHA_SNAA_organization
+			
+			custom_effect_tooltip = tooltip_white_line
+			
+			add_dynamic_modifier = { modifier = SHA_airforce }
+		}
+	}
+
+	# 
+	focus = {
+		id = SHA_focus_on_domestic_production
+		icon = GFX_goal_generic_build_airforce
+		x = 2
+		y = 1
+		relative_position_id = SHA_National_Aviation_Administration
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_National_Aviation_Administration }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 항공산업 부흥
+	focus = {
+		id = SHA_aviation_industry_revival
+		icon = GFX_focus_SMB_purchase_aircraft
+		x = 0
+		y = 1
+		relative_position_id = SHA_focus_on_domestic_production
+		search_filters = { }
+		cost = 10
+
+		prerequisite = { focus = SHA_focus_on_domestic_production }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 푀닉스 항공기 공장 
+	focus = {
+		id = SHA_foenix_aircraft_factory
+		icon = GFX_goal_generic_air_fighter2
+		x = 1
+		y = 1
+		relative_position_id = SHA_aviation_industry_revival
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_aviation_industry_revival }
+		mutually_exclusive = { focus = SHA_Sauerwerke }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 산해경 자우어베르케
+	focus = {
+		id = SHA_Sauerwerke
+		icon = GFX_focus_generic_cas_aircraft
+		x = -1
+		y = 1
+		relative_position_id = SHA_aviation_industry_revival
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_aviation_industry_revival }
+		mutually_exclusive = { focus = SHA_foenix_aircraft_factory }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+		}
+	}
+
+	# 
+	focus = {
+		id = SHA_airforce_school
+		icon = GFX_focus_FIN_expand_air_force_academy
+		x = -2
+		y = 1
+		relative_position_id = SHA_focus_on_domestic_production
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_focus_on_domestic_production }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_airforce_change
+			add_to_variable = { 
+				SHA_airforce_air_ace_generation_chance_factor = 0.2 
+				tooltip = air_ace_generation_chance_factor_tt 
+			}
+			add_to_variable = { 
+				AUS_airforce_air_untrained_pilots_penalty_factor = -0.1 
+				tooltip = air_untrained_pilots_penalty_factor_tt 
+			}
+
 		}
 	}
 

@@ -1364,11 +1364,7 @@ country_event = { #간섭위원회 설치
 				target = SPC
 				can_send_volunteers = yes
 			}
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = SPC
-				value = 50
-			}
+			set_country_flag = BA_can_send_volunteers_to_anarchists_flag
 		}
 		else = {
 			add_ai_strategy = {

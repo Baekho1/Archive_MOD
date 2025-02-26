@@ -6781,6 +6781,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.06 }
+			add_ideas = TRN_JTF_political_commissar_ns
 			country_event = trinity.14
 		}
 	}
@@ -6834,8 +6835,10 @@ focus_tree = {
 			set_country_leader_ideology = pater_nazism
 			set_rule = { can_create_factions = yes }
 			add_country_leader_trait = TRN_mika_trait_1
-			
-			news_event = { id = BA_news.3 days = 3 }
+			set_country_leader_ideology = pater_nazism
+			hidden_effect = {
+				news_event = { id = BA_news.3 days = 3 }
+			}
 		}
 	}
 }

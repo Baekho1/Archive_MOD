@@ -4,6 +4,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_Shintani_kais_cult_of_personality_ns"
+		texturefile = "gfx/interface/ideas/SHA/SHA_Shintani_kais_cult_of_personality_ns.tga"
+	}
+	spriteType = {
+		name = "GFX_Shanhaijing_MIO_airforce"
+		texturefile = "gfx/interface/ideas/SHA/MIO_국가항공국.tga"
+	}
+	spriteType = {
 		name = "GFX_Shanhaijing_MIO_artill"
 		texturefile = "gfx/interface/ideas/SHA/MIO_산해경박겨포부.tga"
 	}

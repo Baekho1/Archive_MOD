@@ -473,7 +473,7 @@ characters={
 		}
 	}
 	TRN_dlclzk = { # 이치카
-		name=TRN_dlwlzk
+		name=TRN_dlclzk
 		portraits={
 			army={
 				large= GFX_TRN_Nakamasa_Ichika_Portrait

@@ -315,7 +315,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				political_power_cost = 0.3
+				political_power_gain = -0.3
 				stability_factor = 0.15
 				}
 			}
@@ -1286,6 +1286,14 @@ ideas = {
 				political_power_gain = -0.2
 				stability_factor = 0.05
 				disabled_ideas = 1
+			}
+		}
+		TRN_JTF_political_commissar_ns = {
+			picture = TRM_justice_task_force
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+				experience_gain_army = -0.01
 			}
 		}
 	}

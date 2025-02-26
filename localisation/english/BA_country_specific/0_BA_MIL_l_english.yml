@@ -1691,3 +1691,11 @@
 
  MIL_automated_robotic_armament_cost:0 "£pol_power  §Y5§! £command_power  §Y10§!"
  MIL_automated_robotic_armament_cost_blocked:0 "£pol_power  §R5§! £command_power  §R10§!"
+
+# 뉴스 사건
+ MIL_news.1.t: "권력투쟁에서 승리한 $fldh$"
+ MIL_news.1.desc: "대전이 사태 이후 벌어진 밀레니엄과 프랑스의 전쟁은 밀레니엄의 승리로 종결되었습니다. 프랑스 정부는 망명길에 올랐지만, 프랑스 시민들은 그럴 수 없었습니다. 밀레니엄 대책 회의에서는 프랑스 시민 문제에 대한 해결책을 두고 격렬한 논쟁이 벌어졌으며, 결국 $fldh$가 토론에서 승리하였습니다.\n\n또한, 그녀는 토론에서 보여준 지도력을 인정받아 세미나의 총재로 선출되었습니다. 강력한 통제를 추구하는 $fldh$가 세미나의 전권을 쥐게 되었다는 소식은 프랑스 저항군에게 결코 반가운 일이 아닐 것입니다."
+ MIL_news.1.a: "이게 가장 합리적이야."
+ MIL_news.1.b: "그녀가 밀레니엄을 잘 이끌 수 있을까?"
+ MIL_news.1.c: "관심이 가는 군"
+ MIL_news.1.d: ""

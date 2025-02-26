@@ -2946,6 +2946,12 @@ leader_traits = {
 		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.2
 		sp_rockets_ballistic_missile_speed_factor = 0.2
 	}
+	SHA_architect_of_fascism_trait = {
+		random = no
+		fascism_drift = 0.1
+		master_ideology_drift = 0.1
+		puppet_cost_factor = -0.2
+	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
 		political_power_factor = -0.30
