@@ -1827,8 +1827,12 @@
  RED_your_economy_normalize: "채권 상환"
 
  RED_soviet_aid_to_poum_decision_category: "$SOV_soviet_aid_to_poum_decision_category$"
-
-
+ RED_organize_covert_depots_poum: "$SOV_organize_covert_depots_poum$"
+ RED_send_infantry_equipment_poum: "$SOV_send_infantry_equipment_poum$"
+ RED_organize_popular_brigades_poum: "$SOV_organize_popular_brigades_poum$"
+ RED_send_elite_commandos_poum: "$SOV_send_elite_commandos_poum$"
+ RED_organize_popular_speeches_poum: "$SOV_organize_popular_speeches_poum$"
+ RED_infiltrate_stalinist_plans_in_spain_poum: "$SOV_infiltrate_stalinist_plans_in_spain_poum$"
 
  #권력의 균형 
  RED_power_balance: "사무국 권력투쟁"

@@ -4543,7 +4543,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			base = 15
+			base = -15
 		}
 		completion_reward = {
 			effect_tooltip = {

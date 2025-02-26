@@ -285,7 +285,7 @@ POL_intermarium_at_war = { #바다 사이의 개념
 						has_capitulated = no
 					}
 					add_to_variable = {
-						POL_solidarity_var = 2
+						POL_solidarity_var = 1
 						tooltip = POL_solidarity_tt
 					}
 				}
@@ -342,9 +342,11 @@ POL_intermarium_at_war = { #바다 사이의 개념
 							has_war_with = SOV
 							has_capitulated = no
 						}
-						add_to_variable = {
-							POL_solidarity_var = 3
-							tooltip = POL_solidarity_tt
+						POL ={
+							add_to_variable = {
+								POL_solidarity_var = 1
+								tooltip = POL_solidarity_tt
+							}
 						}
 					}
 					every_state = {
@@ -356,9 +358,11 @@ POL_intermarium_at_war = { #바다 사이의 개념
 								controls_state = prev
 							}
 						}
-						add_to_variable = {
-							POL_solidarity_var = 0.5
-							tooltip = POL_solidarity_tt
+						POL = {
+							add_to_variable = {
+								POL_solidarity_var = 0.5
+								tooltip = POL_solidarity_tt
+							}
 						}
 					}
 					every_country = {
@@ -367,9 +371,11 @@ POL_intermarium_at_war = { #바다 사이의 개념
 							has_war_with = SOV
 							has_capitulated = yes
 						}
-						add_to_variable = {
-							POL_solidarity_var = -5
-							tooltip = POL_solidarity_tt
+						POL = {
+							add_to_variable = {
+								POL_solidarity_var = -5
+								tooltip = POL_solidarity_tt
+							}
 						}
 					}
 					every_state = {
@@ -385,9 +391,11 @@ POL_intermarium_at_war = { #바다 사이의 개념
 								}
 							}
 						}
-						add_to_variable = {
-							POL_solidarity_var = -0.5
-							tooltip = POL_solidarity_tt
+						POL = {
+							add_to_variable = {
+								POL_solidarity_var = -0.5
+								tooltip = POL_solidarity_tt
+							}
 						}
 					}
 				}
@@ -457,8 +465,8 @@ POL_intermarium_at_war = { #바다 사이의 개념
 		days_re_enable = 30
 		days_remove = 60
 		modifier = {
-			attack_bonus_against_cores = 0.05
-			dig_in_speed = 0.2
+			defense_bonus_against_cores = 0.05
+			dig_in_speed_factor = 0.2
 		}
 		ai_will_do = {
 			base = 40

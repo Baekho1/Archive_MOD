@@ -210,6 +210,10 @@ spriteTypes = {
 		name = "GFX_leader_portrait_COU_alfred_heighton"
 		textureFile = "gfx/leaders/COU/portrait_COU_alfred_heighton.png"
 	}
+	spriteType = {
+		name = "GFX_leader_portrait_COU_leon_degrelle"
+		textureFile = "gfx/leaders/COU/portrait_COU_leon_degrelle.png"
+	}
 	
 	
 	spriteType = {

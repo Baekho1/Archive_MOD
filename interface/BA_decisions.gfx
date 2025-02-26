@@ -598,6 +598,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_picure_COU_norin.png"
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_decision_meet_with_the_smomo"
+		texturefile = "gfx/interface/decisions/meet_with_the_smomo.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_meet_with_the_aoi"
+		texturefile = "gfx/interface/decisions/meet_with_the_aoi.png"
+		legacy_lazy_load = no
+	}
 	#발!키!리!
 	spriteType = {
 		name = "GFX_decision_category_wakamo_picture"

@@ -91,6 +91,7 @@ BA_highlander = { #하이랜더 철도학원
 					level = 1
 				}
 			}
+			custom_effect_tooltip = BA_nationalize_highlander_tt
 			if = {
 				limit = {
 					check_variable = {
