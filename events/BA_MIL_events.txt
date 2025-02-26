@@ -3803,7 +3803,7 @@ news_event = { # 리오의 밀레니엄 권력투쟁 승리
 	id = MIL_news.1
 	title = MIL_news.1.t
 	desc = MIL_news.1.desc
-	picture = GFX_news_event_Millennium_Rio
+	picture = GFX_news_event_Millennium_Rio_memorial
 	
 	major = yes
 	is_triggered_only = yes
@@ -3825,6 +3825,70 @@ news_event = { # 리오의 밀레니엄 권력투쟁 승리
 	
 	option = {
 		name = MIL_news.1.c
+		trigger = {
+			NOT = { Kivotos_school_tag = yes }
+		}
+	}
+}
+
+news_event = { # 히마리리의 밀레니엄 권력투쟁 승리
+	id = MIL_news.2
+	title = MIL_news.2.t
+	desc = MIL_news.2.desc
+	picture = GFX_news_event_Millennium_Himari
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = MIL_news.2.a
+		trigger = {
+			TAG = MIL
+		}
+	}
+	
+	option = {
+		name = MIL_news.1.b
+		trigger = {
+			Kivotos_school_tag = yes
+            NOT = { TAG = MIL }
+		}
+	}
+	
+	option = {
+		name = MIL_news.1.c
+		trigger = {
+			NOT = { Kivotos_school_tag = yes }
+		}
+	}
+}
+
+news_event = { # 축출된 리오
+	id = MIL_news.3
+	title = MIL_news.3.t
+	desc = MIL_news.3.desc
+	picture = GFX_news_event_Millennium_Rio
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = MIL_news.3.a
+		trigger = {
+			TAG = MIL
+		}
+	}
+	
+	option = {
+		name = MIL_news.3.b
+		trigger = {
+			Kivotos_school_tag = yes
+            NOT = { TAG = MIL }
+		}
+	}
+	
+	option = {
+		name = MIL_news.3.c
 		trigger = {
 			NOT = { Kivotos_school_tag = yes }
 		}

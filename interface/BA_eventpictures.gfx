@@ -1,10 +1,18 @@
 spriteTypes = {
 
-# 뉴스 이벤트 사진
+# 뉴스 이벤트 
 
+	spriteType = {
+		name = "GFX_news_event_Millennium_Himari"
+		texturefile = "gfx/event_pictures/news_event_Millennium_Himari.tga"
+	}
 	spriteType = {
 		name = "GFX_news_event_Millennium_Rio"
 		texturefile = "gfx/event_pictures/news_event_Millennium_Rio.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_Millennium_Rio_memorial"
+		texturefile = "gfx/event_pictures/news_event_Millennium_Rio_memorial.tga"
 	}
 
 	spriteType = {
