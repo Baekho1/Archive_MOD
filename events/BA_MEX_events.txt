@@ -13,6 +13,10 @@ country_event = { #멕시코 튜토리얼
 		name = MEX_tutorial.0.a 
 		country_event = MEX_tutorial.1
 	}
+
+	option = { 
+		name = MEX_tutorial.0.b
+	}
 }
 
 country_event = { #멕시코 튜토리얼 2
@@ -23,5 +27,40 @@ country_event = { #멕시코 튜토리얼 2
     is_triggered_only = yes
 	option = { 
 		name = MEX_tutorial.1.a 
+	}
+}
+
+country_event = { #멕시코 인물소개 - 마테오스
+	id = MEX_tutorial.2
+	title = MEX_tutorial.2.t
+	desc = MEX_tutorial.2.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+    is_triggered_only = yes
+	option = { 
+		name = MEX_tutorial.2.a 
+		country_event = { id = MEX_tutorial.3 days = 3 }
+	}
+}
+
+country_event = { #멕시코 인물소개 - 카르데나스
+	id = MEX_tutorial.3
+	title = MEX_tutorial.3.t
+	desc = MEX_tutorial.3.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+    is_triggered_only = yes
+	option = { 
+		name = MEX_tutorial.3.a 
+		country_event = { id = MEX_tutorial.4 days = 3 }
+	}
+}
+
+country_event = { #멕시코 인물소개 - 우르키사
+	id = MEX_tutorial.4
+	title = MEX_tutorial.4.t
+	desc = MEX_tutorial.4.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+    is_triggered_only = yes
+	option = { 
+		name = MEX_tutorial.4.a 
 	}
 }

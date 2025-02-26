@@ -21,6 +21,11 @@ add_ideas = {
 	MEX_divided_army
 }
 
+country_event = {
+	id = MEX_tutorial.2
+	days = 10
+}
+
 ####
 ####
 ####
