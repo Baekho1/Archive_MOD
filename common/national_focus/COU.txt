@@ -662,11 +662,19 @@ focus_tree = {
         x = 2
         y = 1
         cost = 5
-		available = { has_completed_focus = COU_focus_remove_the_line }
+		available = {
+   		    #has_completed_focus = COU_focus_remove_the_line 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_completed_by_decision
+			}
+			always = no
+		}
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		     #add_political_power = 75
+		     #country_event = COU_event.20
+			 custom_effect_tooltip = COU_tooltip_how_to_activae_this_focus_one
         }
 	}
 	

@@ -648,6 +648,14 @@ spriteTypes = {
 		name = "GFX_report_event_picture_arrest_ayumu"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_arrest_ayumu.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_aoi"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_aoi.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_smomo"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_smomo.png"
+	}
 	
 	
 	###

@@ -495,4 +495,188 @@ COU_getout_rin_decision = {
 		      country_event = COU_event.9
 		 }
 	}
+	COU_increasing_the_crisis = {
+
+		icon = generic_ignite_civil_war
+
+		 allowed = { 
+		    original_tag = COU
+		    always = no
+		 }
+		
+		 available = { 
+			 NOT = { has_country_flag = COU_flag_acivate_norin_decision }
+		 }
+		
+		 days_mission_timeout = 30
+		
+		 is_good = no
+				
+		 activation = { always = no }
+		
+		 timeout_effect = {
+		      add_political_power = -45
+			  add_command_power = -5
+		 }
+	}
+	##실장 2명 회유 
+	COU_gets_aoi_first_eco_crisis = {
+
+		icon = meet_with_the_aoi
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+			 has_country_flag = COU_unlock_hwaeu_aoi_smomo
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 7
+		 fire_only_once = yes
+		 #days_re_enable = 30
+		
+		 cost = 50
+		 
+		 modifier = {
+		     consumer_goods_expected_value = 0.05
+		 }
+		
+		 remove_effect = {
+		     country_event = COU_event.23
+		 }
+	}
+	COU_gets_smomo_cou_supports_kaya = {
+
+		icon = meet_with_the_smomo
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+			 has_country_flag = COU_unlock_hwaeu_aoi_smomo
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 14
+		 fire_only_once = yes
+		 #days_re_enable = 30
+		
+		 cost = 100
+		 
+		 modifier = {
+		     
+		 }
+		
+		 remove_effect = {
+		     country_event = COU_event.24
+		 }
+	}
+	##린 탄핵 - 기간 연장하기
+	COU_attack_the_cou_workers = {
+
+		icon = generic_assassination
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 10
+		 fire_only_once = yes
+		 #days_re_enable = 45
+		
+		 cost = 50
+		 
+		 modifier = {
+		     political_power_factor = -0.05
+		 }
+		
+		 remove_effect = {
+		     country_event = COU_event.21
+		     add_days_mission_timeout = {
+			     mission = COU_rin_getout_kaya
+		         days = 90
+	         }
+		 }
+	}
+	
+	COU_use_fascist_militas = {
+
+		icon = generic_independence
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 14
+		 days_re_enable = 45
+		
+		 custom_cost_trigger = {
+			 command_power > 24
+		 }
+
+		 custom_cost_text = decision_cost_CP_25 
+		 
+		 modifier = {
+		     
+		 }
+		
+		 remove_effect = {
+		     add_days_mission_timeout = {
+			     mission = COU_rin_getout_kaya
+		         days = 45
+	         }
+		 }
+	}
+	
+    COU_workers_notworks_bruh = {
+
+		icon = generic_civil_support
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 14
+		 days_re_enable = 30
+		
+		 cost = 45
+		 
+		 modifier = {
+		     industrial_capacity_factory = -0.05
+		 }
+		
+		 remove_effect = {
+		     add_days_mission_timeout = {
+			     mission = COU_rin_getout_kaya
+		         days = 45
+	         }
+		 }
+	}
+    
+	
 }
