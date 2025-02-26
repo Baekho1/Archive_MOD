@@ -2248,6 +2248,22 @@ SHA_Shanhaijin_Army = {
 	enemy_army_bonus_air_superiority_factor = SHA_military_enemy_army_bonus_air_superiority_factor
 }
 
+SHA_airforce = {
+	enable = { always = yes }
+	icon = GFX_idea_SHA_airforce
+	experience_gain_air = SHA_airforce_xp_gain_air
+	airforce_intel_factor = SHA_airforce_airforce_intel_factor
+	ground_attack_factor = SHA_airforce_ground_attack_factor
+	air_superiority_efficiency = SHA_airforce_air_superiority_efficiency
+	air_doctrine_cost_factor = SHA_airforce_air_doctrine_cost_factor
+	industrial_capacity_factory = SHA_airforce_industrial_capacity_factory
+	production_speed_air_base_factor = SHA_airforce_production_speed_air_base_factor
+	production_speed_anti_air_building_factor = SHA_airforce_production_speed_anti_air_building_factor
+	production_speed_radar_station_factor = SHA_production_speed_radar_station_factor
+	air_ace_generation_chance_factor = SHA_airforce_air_ace_generation_chance_factor
+	air_untrained_pilots_penalty_factor = SHA_airforce_air_untrained_pilots_penalty_factor
+}
+
 SHA_aup_modifier = {
 	political_power_cost = SHA_aup_pp
 	stability_factor = SHA_aup_stability

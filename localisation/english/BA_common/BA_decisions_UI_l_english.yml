@@ -417,6 +417,7 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
 
  TRM_sanctus_popularity__20_tt:0 "§Y상투스 분파§! 영향력: §Y-20§!"
  TRM_sanctus_popularity__15_tt:0 "§Y상투스 분파§! 영향력: §Y-15§!"
+ TRM_sanctus_popularity__5_tt:0 "§Y상투스 분파§! 영향력: §Y-5§!"
  TRM_sanctus_popularity_5_tt:0 "§Y상투스 분파§! 영향력: §Y+5§!"
  TRM_sanctus_popularity_10_tt:0 "§Y상투스 분파§! 영향력: §Y+10§!"
  TRM_sanctus_popularity_15_tt:0 "§Y상투스 분파§! 영향력: §Y+15§!"
