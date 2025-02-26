@@ -31,6 +31,7 @@ characters={
 			}
 		}
 		corps_commander={
+			desc = "MEX_escamilla_desc"
 			traits={ infantry_officer war_hero }
 			skill=2
 			attack_skill=3
@@ -88,11 +89,12 @@ characters={
 			}
 		}
 		corps_commander={
+			desc = "MEX_cabral_desc"
 			traits={ brilliant_strategist }
 			skill=3
-			attack_skill=1
+			attack_skill=3
 			defense_skill=2
-			planning_skill=1
+			planning_skill=2
 			logistics_skill=2
 			legacy_id=716
 		}
@@ -106,7 +108,8 @@ characters={
 				small="GFX_portrait_MEX_francisco_luis_urquizo_benavides" #This is really a generic portrait
 			}
 		}
-		corps_commander={
+		field_marshal={
+			desc = "MEX_benavides_desc"
 			traits={ }
 			skill=2
 			attack_skill=1

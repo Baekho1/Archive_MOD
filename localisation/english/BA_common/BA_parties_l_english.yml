@@ -442,8 +442,8 @@
  PublicWorksDepartment: "적색전선 (용역부)"
  LaborParty: "적색전선 (용역부)"
 
- MEX_democratic_party:0 "PNR - 자유주의계"
- MEX_democratic_party_long:0 "PNR - 멕시코 혁명당 - 자유주의계"
+ MEX_democratic_party:0 "PNR - 혁신파"
+ MEX_democratic_party_long:0 "PNR - 멕시코 혁명당 - 혁신파"
  MEX_christian_democracy_party:0 "PAN"
  MEX_christian_democracy_party_long:0 "PAN - 국민행동당"
  MEX_communism_party:0 "PCM"
