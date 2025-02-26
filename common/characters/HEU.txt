@@ -175,7 +175,7 @@ characters={
 		gender = female
 
 		corps_commander={
-			traits={ trait_reckless }
+			traits={ trait_reckless front_line_general urban_assault_specialist }
 			skill=3
 			attack_skill=3
 			defense_skill=1
@@ -449,12 +449,18 @@ characters={
 		}
 	}
 
-	HEU_damian_kratzenberg={
+	HEU_damian_kratzenberg = {
 		portraits={
 			army={
 				large = GFX_portrait_LUX_damian_kratzenberg
 				small = GFX_portrait_LUX_damian_kratzenberg_small
 			}
+		}
+
+		country_leader={
+			ideology=nazism
+			traits={  }
+			id=-1
 		}
 
 		advisor={
@@ -477,7 +483,8 @@ characters={
 			}
 
 			traits = {
-				fascist_demagogue 
+				#fascist_demagogue 
+				LUX_vocal_pan_germanist
 			}
 			ai_will_do = {
 				factor = 0.000
