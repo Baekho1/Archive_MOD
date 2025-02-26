@@ -12,6 +12,15 @@ recruit_character = MEX_joaquin_amaro_dominguez
 recruit_character = MEX_juan_gonzalez_cabral
 recruit_character = MEX_francisco_luis_urquizo_benavides
 
+
+add_ideas = {
+	MEX_the_ghost_of_calles
+	MEX_incident_of_kivotos
+	MEX_british_oil_nationalization
+	MEX_la_reforma
+	MEX_divided_army
+}
+
 ####
 ####
 ####
@@ -138,21 +147,8 @@ recruit_character = MEX_maria_de_iturbide
 set_country_flag = monroe_doctrine
 
 set_convoys = 45
-set_stability = 0.2
+set_stability = 0.15
 set_war_support = 0.1
-
-IF = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = {
-		MEX_callistas
-		MEX_church_power_2
-		MEX_oil_concessions
-		MEX_politicised_army
-		MEX_cedillo_tension_2
-	}
-}
 
 1939.1.1 = {
 	add_political_power = 1198

@@ -13,6 +13,9 @@ characters={
 
 		country_leader={
 			desc = "MEX_mateos_desc"
+			traits = {
+				MEX_reformer
+			}
 			ideology= mex_christian_democracy
 			expire="1965.1.1.1"
 			id=-1
@@ -42,7 +45,7 @@ characters={
 		name=MEX_pablo_macias_valenzuela
 		portraits={
 			army={
-				large="GFX_portrait_MEX_pablo_macias_valenzuela" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_pablo_macias_valenzuela.png" #This is really a generic portrait
 				small="GFX_portrait_MEX_pablo_macias_valenzuela_small" #This is really a generic portrait
 			}
 		}
@@ -61,7 +64,7 @@ characters={
 		name=MEX_joaquin_amaro_dominguez
 		portraits={
 			army={
-				large="GFX_portrait_MEX_joaquin_amaro_dominguez" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_joaquin_amaro_dominguez.png" #This is really a generic portrait
 				small="GFX_portrait_MEX_joaquin_amaro_dominguez_small" #This is really a generic portrait
 			}
 		}
@@ -80,7 +83,7 @@ characters={
 		name=MEX_juan_gonzalez_cabral
 		portraits={
 			army={
-				large="GFX_portrait_MEX_juan_gonzalez_cabral" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_juan_gonzalez_cabral.png" #This is really a generic portrait
 				small="GFX_portrait_MEX_juan_gonzalez_cabral" #This is really a generic portrait
 			}
 		}
@@ -99,7 +102,7 @@ characters={
 		name=MEX_francisco_luis_urquizo_benavides
 		portraits={
 			army={
-				large="GFX_portrait_MEX_francisco_luis_urquizo_benavides" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_francisco_luis_urquizo_benavides.png" #This is really a generic portrait
 				small="GFX_portrait_MEX_francisco_luis_urquizo_benavides" #This is really a generic portrait
 			}
 		}
