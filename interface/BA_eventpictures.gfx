@@ -758,6 +758,42 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/HEU/mutsuki_asagi_dress.dds"
 	}
 
+	spriteType = {
+		name = "GFX_news_event_HEU_news_68"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_68.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_HEU_news_angry_mutsuki"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_angry_mutsuki.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_aru_charisma"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_charisma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_aru_dress"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_dress.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_hiori_kazano"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_hiori_kazano.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_makoto"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_makoto.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_satsuki"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_satsuki.dds"
+	}
+
+
 	# 밀레니엄 - 아리스루트
 	spriteType = {
 		name = "GFX_report_event_MIL_ARIS_1"
