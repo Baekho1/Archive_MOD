@@ -68,6 +68,9 @@ characters = {
 			allowed = {
 				tag = RED
 			}
+			ai_will_do = {
+				base = 10
+			}
 
 			visible = { NOT = { has_completed_focus = RED_dipose_cherino } }
 

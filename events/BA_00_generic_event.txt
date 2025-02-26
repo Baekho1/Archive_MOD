@@ -930,6 +930,7 @@ country_event = { #무료 민간 열차
 			type = train_equipment
 			amount = 2
 		}
+		custom_effect_tooltip =  Highlander.4_tt
 	}
 }
 country_event = { #생산 효율 성장+
@@ -943,6 +944,7 @@ country_event = { #생산 효율 성장+
 			idea = BA_highlander_buff_production
 			days = 60
 		}
+		custom_effect_tooltip =  Highlander.5_tt
 	}
 }
 country_event = { #노조미
@@ -956,6 +958,7 @@ country_event = { #노조미
 			idea = BA_tachibana_nozomi
 			days = 60
 		}
+		custom_effect_tooltip =  Highlander.6_tt
 	}
 }
 country_event = { #히카리
@@ -969,6 +972,7 @@ country_event = { #히카리
 			idea = BA_tachibana_hikari
 			days = 60
 		}
+		custom_effect_tooltip =  Highlander.7_tt
 	}
 }
 country_event = { #최대 투자국 변경
@@ -1356,6 +1360,7 @@ country_event = { #간섭위원회 설치
 		else_if = {
 			limit = {
 				OR = {
+					has_completed_focus = RED_accept_trotskism
 					has_completed_focus = RED_dipose_cherino
 					has_completed_focus = HYA_focus_90
 				}
