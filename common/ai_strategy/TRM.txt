@@ -77,7 +77,6 @@ TRM_fight_RED = {
 	}
 	ai_strategy = {
 		type = naval_invasion_focus
-		id = RED
-		value = 50
+		value = 99
 	}
 }

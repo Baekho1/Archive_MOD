@@ -1357,12 +1357,21 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 					tag = SPC
 					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
-				NOT = { 
+				NOT = {
 					AND = {
-						tag = ETH 
+						tag = ETH
 						ETH = {
 							has_completed_focus = ETH_support_spain
 						}
+					}
+				}
+				NOT = {#for BA mod
+					AND = {
+						OR = {
+							tag = RED 
+							tag = HYA
+						}
+						has_country_flag = BA_can_send_volunteers_to_anarchists_flag
 					}
 				}
 			}
@@ -1395,6 +1404,15 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 						ETH = {
 							has_completed_focus = ETH_support_spain
 						}
+					}
+				}
+				NOT = {#for BA mod
+					AND = {
+						OR = {
+							tag = RED 
+							tag = HYA
+						}
+						has_country_flag = BA_can_send_volunteers_to_anarchists_flag
 					}
 				}
 			}
