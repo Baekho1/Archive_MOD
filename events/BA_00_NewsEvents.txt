@@ -4946,19 +4946,39 @@ news_event = { # 유령신호
     }
 }
 
-<<<<<<< HEAD
-news_event = { # 키보토스 전역에서 발생한 소요사태
-    id = BA_news.129
-    title = BA_news.129.t
-    desc = BA_news.129.d
-    picture = GFX_GEI_DEC_riot
-=======
 news_event = { # 미엥지모제의 붕괴
     id = BA_news.128
     title = BA_news.128.t
     desc = BA_news.128.d
     picture = GFX_news_event_polish_resistance_warsaw
->>>>>>> bbb0e5c0292de6c260de16ee764cf18748cebe2f
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 우리가 간다 
+        name = BA_news.128.a
+    }
+}
+
+news_event = { # SRT 폐쇄
+    id = BA_news.129
+    title = BA_news.129.t
+    desc = BA_news.129.d
+    picture = GFX_news_event_COU_srt_banned
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 범부
+        name = BA_news.129.a
+    }
+}
+
+news_event = { # 키보토스 전역에서 발생한 소요사태
+    id = BA_news.130
+    title = BA_news.130.t
+    desc = BA_news.130.d
+    picture = GFX_GEI_DEC_riot
 
     major = yes
     is_triggered_only = yes
@@ -4974,7 +4994,7 @@ news_event = { # 미엥지모제의 붕괴
 				limit = {
 						is_ai = no
 				}
-				scoped_play_song = "BA_night_on_bald_mountain"
+				scoped_play_song = "BA_GEI_DEC_invasion"
 				set_country_flag = {
 					flag = BA_Super_Event_Visible
 					value = 27
