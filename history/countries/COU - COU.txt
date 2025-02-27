@@ -194,6 +194,7 @@ recruit_character = COU_NIKO
 recruit_character = COU_KURUMI
 recruit_character = COU_OTOGI
 
+recruit_character = COU_jan_baar
 recruit_character = COU_willem_drees
 recruit_character = COU_julien_lahaut
 recruit_character = COU_paul_de_groot

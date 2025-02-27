@@ -214,6 +214,10 @@ spriteTypes = {
 		name = "GFX_leader_portrait_COU_leon_degrelle"
 		textureFile = "gfx/leaders/COU/portrait_COU_leon_degrelle.png"
 	}
+	spriteType = {
+		name = "GFX_leader_portrait_COU_jan_baar"
+		textureFile = "gfx/leaders/COU/portrait_COU_jan_baar.png"
+	}
 	
 	
 	spriteType = {
@@ -311,6 +315,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COU_alfred_haighton"
 		textureFile = "gfx/interface/advisors/COU/idea_COU_alfred_haighton.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COU_jan_baar"
+		textureFile = "gfx/interface/advisors/COU/idea_COU_jan_baar.png"
 	}
 	
 	spriteType = {

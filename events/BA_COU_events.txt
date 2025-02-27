@@ -908,6 +908,26 @@ country_event = {
 	}
 }
 
+##인권보장실 설립 
+country_event = { 
+	id = COU_event.27
+	title = COU_event.27.t
+	desc = COU_event.27.desc
+	picture = GFX_report_event_picture_the_du
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.27.a
+		custom_effect_tooltip = COU_tooltip_the_new_days_of_humans
+		add_political_power = 25
+	}
+}
+
 
 ##테스트용 이벤트
 

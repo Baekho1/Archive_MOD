@@ -681,6 +681,14 @@ leader_traits = {
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 	}
+	COU_inguwan_bojang = { #인권보장실장
+		sprite = 13
+		random = no
+		
+		stability_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.10
+		production_factory_max_efficiency_factor = 0.10
+	}
 	COU_kivotos_nationalism = { #키보토스 민족주의
 		random = no
 		conscription = 0.02

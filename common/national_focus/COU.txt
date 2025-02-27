@@ -73,9 +73,9 @@ focus_tree = {
 		}
 	}
 	
-	focus = { #인권위원회 설립
+	focus = { #인권보장실 설립
 		id = COU_establishment_of_human_rights_committee
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_COU_establish_humans
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
 		x = 0
 		y = 1
@@ -92,6 +92,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
+			country_event = COU_event.27
 		}
 	}
 

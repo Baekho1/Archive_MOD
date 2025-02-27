@@ -2032,6 +2032,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_evolve"
 		textureFile = "gfx/interface/goals/COU/COU_evolve.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_establish_humans"
+		textureFile = "gfx/interface/goals/COU/COU_establish_humans.png"
+	}
 	
 	
 	####카이저라이히 돚거
