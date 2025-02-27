@@ -10667,12 +10667,20 @@ country_event = {
 	option = {
 		name = ABY_new_event.223.a
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_second_empire
+		ABY = {
+			country_event = {
+				id = ABY_new_event.224
+			}
+		}
 	}
 	option = {
 		name = ABY_new_event.223.b
-		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_holy_empire
+		ai_chance = { factor = 0 }
+		ABY = {
+			country_event = {
+				id = ABY_new_event.225
+			}
+		}
 	}
 }
 
@@ -10687,13 +10695,12 @@ country_event = {
 	option = {
 		name = ABY_new_event.224.a
 		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_shiroko
-	}
-
-	option = {
-		name = ABY_new_event.224.b
-		ai_chance = { factor = 100 }
-		complete_national_focus = ABY_focus_serika
+		ABY = {
+			annex_country = { 
+				target = SWI 
+				transfer_troops = yes 
+			}
+		}
 	}
 }
 
@@ -10709,17 +10716,8 @@ country_event = {
 		name = ABY_new_event.225.a
 		ai_chance = { factor = 0 }
 		ABY = {
-			annex_country = {
-				target = SLO
-			}
-		}
-	}
-	option = {
-		name = ABY_new_event.225.b
-		ai_chance = { factor = 100 }
-		ABY = {
-			declare_war_on = {
-				target = SLO
+			create_wargoal = {
+				target = SWI
 				type = annex_everything
 			}
 		}
@@ -10732,25 +10730,22 @@ country_event = {
 	desc = ABY_new_event.226.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = ABY_new_event.226.a
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 100 }
 		ABY = {
-			set_autonomy = {
-				target = SLO
-				autonomy_state = autonomy_puppet
+			country_event = {
+				id = ABY_new_event.227
 			}
 		}
 	}
 	option = {
 		name = ABY_new_event.226.b
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }
 		ABY = {
-			declare_war_on = {
-				target = SLO
-				type = puppet_wargoal_focus
+			country_event = {
+				id = ABY_new_event.228
 			}
 		}
 	}
@@ -10762,11 +10757,22 @@ country_event = {
 	desc = ABY_new_event.227.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = ABY_new_event.227.a
 		ai_chance = { factor = 100 }
+		FROM = {
+			set_variable = {
+				collaboration_formed_by = ABY
+			}
+		}
+		ABY = { puppet = FROM }
+		ABY = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_collaboration_government
+			}
+		}
 	}
 }
 
@@ -10776,54 +10782,13 @@ country_event = {
 	desc = ABY_new_event.228.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = ABY_new_event.228.a
 		ai_chance = { factor = 100 }
-	}
-	option = {
-		trigger = {
-			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
-			153 = { is_controlled_by = ABY }
-			152 = { is_controlled_by = ABY }
-			848 = { is_controlled_by = ABY }
-		}
-		name = ABY_new_event.228.b
-		ai_chance = { factor = 100 }
-		set_capital = {
-			state = 986
-		}
-		set_province_name = {
-			id = 732
-			name = ABY_name_abydos_0
-		}
-		set_province_name = {
-			id = 3585
-			name = ABY_name_abydos_1
-		}
-	}
-	option = {
-		trigger = {
-			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
-			153 = { is_controlled_by = ABY }
-			152 = { is_controlled_by = ABY }
-			848 = { is_controlled_by = ABY }
-		}
-		name = ABY_new_event.228.c
-		ai_chance = { factor = 100 }
-		set_capital = {
-			state = 4
-		}
-		set_province_name = {
-			id = 11666
-			name = ABY_name_abydos_0
-		}
-		set_province_name = {
-			id = 3585
-			name = ABY_name_abydos_1
+		create_wargoal = {
+			target = FROM
+			type = topple_government
 		}
 	}
 }

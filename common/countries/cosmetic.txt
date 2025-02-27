@@ -2203,13 +2203,13 @@ EGY_NOT_ENG = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
 }
-EGY_arab_united_republic = {
+EGY_arab_united_republic_democratic = {
 	color = rgb { 85 102 0 }
 	color_ui = rgb { 85 102 0 }
 }
 EGY_ABYDOS = {
-	color = rgb { 50 0 75 }
-	color_ui = rgb { 50 0 75 }
+	color = rgb { 0 102 85 }
+	color_ui = rgb { 0 102 85 }
 }
 CAN_restore = {
 	color = rgb { 119 48 39 }

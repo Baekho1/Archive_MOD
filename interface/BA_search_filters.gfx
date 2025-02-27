@@ -1,5 +1,13 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_FOCUS_FILTER_MILITARY_GOVERNMENT"
+		textureFile = "gfx/interface/focusview/filter/stability_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_MILITARY_POPULATION"
+		textureFile = "gfx/interface/focusview/filter/pol_violence.dds"
+	}
+	spriteType = {
 		name = "GFX_FOCUS_FILTER_ETHNIC_CONFLICT"
 		textureFile = "gfx/interface/focusview/filter/internal_affairs_icon.dds"
 	}

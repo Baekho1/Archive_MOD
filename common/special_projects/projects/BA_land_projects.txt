@@ -60,7 +60,7 @@ BA_sp_land_syemmata_railway_gun = {
 				}
 				create_railway_gun = {
 					equipment = syemmata_railway_gun_equipment_1
-					name = "Syemmata Railway Gun"
+					name = "Shemata Railway Gun"
 					location = 3418
 				}
 			}

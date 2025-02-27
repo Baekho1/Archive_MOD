@@ -71,6 +71,10 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
 		completion_reward = {
 			140 = {
 				add_building_construction = {
@@ -114,6 +118,10 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
 		completion_reward = {
 			38 = {
 				add_building_construction = {
@@ -151,6 +159,10 @@ focus_tree = {
 		relative_position_id = RED_road_to_south
 		ai_will_do = {
 			base = 9999
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		available = {
 			NOT = {
@@ -247,6 +259,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_economy_dev_plan
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -4
 		y = 1
 		relative_position_id = RED_economy_dev_plan
@@ -324,6 +339,10 @@ focus_tree = {
 				has_completed_focus = RED_industrial_planning
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -398,6 +417,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_economy_dev_plan
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -2
 		y = 1
 		relative_position_id = RED_economy_dev_plan
@@ -468,6 +490,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_industrial_planning
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -3
 		y = 1
 		relative_position_id = RED_industrial_planning
@@ -531,6 +556,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		offset = {
 			x = 2
 			trigger = {
@@ -579,6 +607,9 @@ focus_tree = {
 		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
 		prerequisite = {
 			focus = RED_industrial_planning
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 1
 		y = 1
@@ -641,6 +672,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_upgrade_army_industry
 			focus = RED_upgrade_heavy_industry
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 2
 		y = 1
@@ -705,6 +739,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_steel_casting_industry
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -1
 		y = 1
 		relative_position_id = RED_steel_casting_industry
@@ -750,6 +787,9 @@ focus_tree = {
 		icon = GFX_focus_generic_resource_extraction
 		prerequisite = {
 			focus = RED_steel_casting_industry
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 1
 		y = 1
@@ -803,6 +843,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_steel_casting_industry
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 0
 		y = 2
 		relative_position_id = RED_steel_casting_industry
@@ -827,6 +870,9 @@ focus_tree = {
 		icon = GFX_focus_GER_kdf_wagen
 		prerequisite = {
 			focus = RED_upgrade_heavy_industry
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 0
 		y = 3
@@ -865,6 +911,9 @@ focus_tree = {
 		icon = GFX_goal_munitions_factories
 		prerequisite = {
 			focus = RED_upgrade_army_industry
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 0
 		y = 3
@@ -914,6 +963,9 @@ focus_tree = {
 		icon = GFX_focus_GER_wirtschaftswunder
 		prerequisite = {
 			focus = RED_future_production_line
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = {
 			focus = RED_industrial_futurization
@@ -991,6 +1043,9 @@ focus_tree = {
 			focus = RED_new_economy_focus_16
 			focus = RED_economic_miracle
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 0
 		y = 8
 		relative_position_id = RED_land_research
@@ -1040,6 +1095,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		offset = {
 			x = -2
@@ -1097,6 +1155,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_0
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -1
 		y = 1
 		relative_position_id = RED_new_economy_focus_0
@@ -1135,6 +1196,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_1
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = -1
 		y = 1
 		relative_position_id = RED_new_economy_focus_1
@@ -1170,6 +1234,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		mutually_exclusive = {
 			focus = RED_new_economy_focus_2
 		}
@@ -1202,6 +1269,9 @@ focus_tree = {
 			focus = RED_new_economy_focus_2
 			focus = RED_new_economy_focus_3
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 0
 		y = 2
 		relative_position_id = RED_new_economy_focus_1
@@ -1231,6 +1301,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = RED_shock_therapy
@@ -1244,6 +1317,9 @@ focus_tree = {
 		icon = GFX_focus_SWE_defense_act
 		prerequisite = {
 			focus = RED_new_economy_focus_5
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 1
 		y = 3
@@ -1267,6 +1343,9 @@ focus_tree = {
 		icon = GFX_focus_generic_monetary_union
 		prerequisite = {
 			focus = RED_new_economy_focus_0
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 3
 		y = 1
@@ -1326,6 +1405,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_7
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 4
 		y = 2
 		relative_position_id = RED_new_economy_focus_0
@@ -1353,6 +1435,9 @@ focus_tree = {
 		icon = GFX_focus_ITA_devaluate_the_lire
 		prerequisite = {
 			focus = RED_new_economy_focus_7
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 3
 		y = 3
@@ -1394,6 +1479,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_9
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 2
 		y = 4
 		relative_position_id = RED_new_economy_focus_0
@@ -1429,6 +1517,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = RED_no_currency
@@ -1444,6 +1535,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_10
 			focus = RED_new_economy_focus_11
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		x = 3
 		y = 5
@@ -1468,6 +1562,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_new_economy_focus_11
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 5
 		y = 5
 		relative_position_id = RED_new_economy_focus_0
@@ -1491,6 +1588,9 @@ focus_tree = {
 		icon = GFX_focus_GER_autarky_ambitions
 		prerequisite = {
 			focus = RED_new_economy_focus_4
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = {
 			focus = RED_new_economy_focus_6
@@ -1523,6 +1623,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = RED_new_economy_focus_16
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -1554,6 +1657,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RED_land_developing
@@ -1572,6 +1678,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RED_land_research
 		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		offset = {
 			x = -6
 			trigger = {
@@ -1640,6 +1749,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_economy_focus_3
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		x = 1
 		y = 1
 		relative_position_id = RED_economy_focus_3
@@ -1664,9 +1776,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			add_popularity = {
@@ -3016,6 +3125,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 9999
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+		}
 		offset = {
 			x = -6
 			trigger = {
@@ -3042,9 +3154,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			add_political_power = 120
@@ -3078,8 +3187,12 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				date > 1940.1.1
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -3292,9 +3405,6 @@ focus_tree = {
 				has_idea = RED_threat_of_coup
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
 		completion_reward = {
 			remove_ideas = RED_threat_of_coup
 		}
@@ -3315,9 +3425,6 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			owns_state = 917
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			917 = {
@@ -3350,9 +3457,6 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			141 = {
@@ -3396,7 +3500,7 @@ focus_tree = {
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_MILITARY_POPULATION
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -3681,6 +3785,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
+		ai_will_do = {
+			base = 330
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -3747,6 +3854,9 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 		}
+		ai_will_do = {
+			base = 330
+		}
 		completion_reward = {
 			add_ai_strategy = {
 				type = send_volunteers_desire
@@ -3771,19 +3881,48 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_communist_instigation
 		}
+		ai_will_do = {
+			base = 330
+		}
 		relative_position_id = RED_new_inteligence_agency
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			NOT = {
-				has_global_flag = spanish_civil_war
+			SOV_soviet_civil_war_not_started = yes
+			NOT = { has_global_flag = scw_over } #Allowed Soviets to do this before SCW starts, so that they can make Spanish AI go POUM
+			OR = {
+				NOT = { has_global_flag = SPR_anarchist_uprising_flag }
+				AND = {
+					country_exists = SPC
+					NOT = { has_war_with = SPC }
+					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
+				}
 			}
-			SPD = {
-				exists = yes
+		}
+		bypass = {
+			SPR = { #Tooltip purposes
+				OR = {
+					has_global_flag = scw_over
+					AND = {
+						has_global_flag = SPR_anarchist_uprising_flag
+						OR = {
+							NOT = { SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution } }
+							NOT = { country_exists = SPC }
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
+			set_global_flag = SOV_covert_support_for_poum_flag
+			custom_effect_tooltip = SOV_covert_support_for_spanish_poum_tt
+			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPC
+				value = 9999
+			}
 		}
 	}
 	focus = {
@@ -3941,7 +4080,11 @@ focus_tree = {
 		ai_will_do = {
 			base = 15
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
 		completion_reward = {
+			custom_effect_tooltip = RED_enlarge_secret_police_tt
 			if = {
 				limit = {
 					RE1 = {
@@ -4010,6 +4153,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -4037,6 +4183,10 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			has_completed_focus = RED_improve_railway_network
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_POPULATION
+			FOCUS_FILTER_MILITARY_GOVERNMENT
 		}
 		mutually_exclusive = {
 			focus = RED_enticing_locals
@@ -4142,6 +4292,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_locals_problem
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
 		ai_will_do = {
 			base = 15
 		}
@@ -4190,6 +4343,9 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_merger_of_educational_institutions
 			focus = RED_large_administrative
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
 		}
 		available = {
 			NOT = {
@@ -4266,6 +4422,9 @@ focus_tree = {
 			focus = RED_enticing_locals
 			focus = RED_depress_locals
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -4279,6 +4438,7 @@ focus_tree = {
 				remove_idea = RED_security_idea
 				add_idea = RED_security_idea_1
 			}
+			custom_effect_tooltip = RED_enlarge_secret_police_tt
 			if = {
 				limit = {
 					RE1 = {
@@ -4362,6 +4522,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		#경비국 강화
 		id = RED_advance_security
@@ -4382,7 +4543,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			base = 15
+			base = -15
 		}
 		completion_reward = {
 			effect_tooltip = {
@@ -5408,12 +5569,20 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			custom_trigger_tooltip = {
-				tooltip = RED_all_power_to_redwinter_tt
-				check_variable = {
-					var = red_game_snake_tail_see
-					value = 5
-					compare = greater_than_or_equals
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				num_of_factories > 80
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = RED_all_power_to_redwinter_tt
+					check_variable = {
+						var = red_game_snake_tail_see
+						value = 5
+						compare = greater_than_or_equals
+					}
 				}
 			}
 			NOT = {
@@ -6005,10 +6174,15 @@ focus_tree = {
 			custom_effect_tooltip = RED_people_s_liberation_war_tt
 			every_other_country = {
 				limit = {
-					NOT = {
-						is_ally_with = RED
+					AND = {
+						is_major = no
+						NOT = {
+							any_country = {
+								is_ally_with = FROM
+								is_major = yes
+							}
+						}
 					}
-					is_major = no
 					any_other_country = {
 						is_ally_with = RED
 						is_neighbor_of = PREV
@@ -6164,7 +6338,7 @@ focus_tree = {
 	focus = {
 		#적극적 방어
 		id = RED_expansionism
-		icon = GFX_focus_GER_wunderwaffe
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		cost = 4
 		x = 1
 		y = 1
@@ -6530,6 +6704,7 @@ focus_tree = {
 				RE4 = {
 					declare_war_on = {
 						target = FIN
+						type = annex_everything
 					}
 				}
 			}
@@ -6541,6 +6716,7 @@ focus_tree = {
 				RE4 = {
 					declare_war_on = {
 						target = FIN
+						type = annex_everything
 					}
 				}
 			}
@@ -8309,6 +8485,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPC
+				value = 999
+			}
 			add_political_power = 50
 			unlock_decision_tooltip = RED_annex_NOR_decision
 			unlock_decision_tooltip = RED_annex_SWE_decision
@@ -8353,9 +8534,6 @@ focus_tree = {
 		relative_position_id = RED_the_threats_abound
 		cost = 2.9
 		available_if_capitulated = yes
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -8405,9 +8583,6 @@ focus_tree = {
 		relative_position_id = RED_maintaining_the_fire
 		cost = 2.9
 		available_if_capitulated = yes
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -10434,9 +10609,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_rearming_focus_1
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -11429,9 +11601,14 @@ focus_tree = {
 				has_country_flag = RED_there_is_coup_flag
 			}
 			OR = {
-				has_war = yes
 				has_completed_focus = RED_army_focus_5
 				has_completed_focus = RED_army_focus_7
+			}
+			has_completed_focus = RED_revolution_war_focus_15
+		}
+		bypass = {
+			NOT = {
+				has_idea = RED_doomed_army_idea_1
 			}
 		}
 		completion_reward = {
@@ -11555,7 +11732,11 @@ focus_tree = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			base = 0
+			modifier = {
+				add = 1
+				date > 1940.1.1
+			}
 		}
 		prerequisite = {
 			focus = RED_rearming_focus_0
@@ -12250,6 +12431,13 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = RED_rearming_focus_0
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				date > 1940.1.1
+			}
 		}
 		available = {
 			NOT = {
@@ -13689,9 +13877,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#전군 차량화
+		#기갑 활용
 		id = RED_revolution_war_focus_14
-		icon = GFX_focus_BRA_rubber_war
+		icon = GFX_focus_generic_tank_assault
 		cost = 4
 		relative_position_id = RED_revolution_war_focus_0
 		x = 3
@@ -13717,10 +13905,6 @@ focus_tree = {
 					remove_idea = RED_mobile_defense
 					add_idea = RED_mobile_defense_2
 				}
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 1000
 			}
 		}
 	}
@@ -13748,7 +13932,10 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = RED_counterattack
-				days = 300
+				days = 180
+			}
+			effect_tooltip = {
+				unlock_national_focus = RED_penal_battalions
 			}
 		}
 	}

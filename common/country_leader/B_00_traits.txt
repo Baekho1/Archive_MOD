@@ -1072,7 +1072,6 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		conscription = 0.02
-		power_balance_daily = -0.001
 	}
 	ABY_trait_neko_god = { #"고양이신"
 		random = no
@@ -1080,7 +1079,6 @@ leader_traits = {
 		communism_drift = 0.1
 		stability_factor = -0.1
 		conscription_factor = 0.15
-		power_balance_daily = -0.001
 	}
 	ABY_trait_neko_god_2 = { #"고양이신"
 		random = no
@@ -1255,7 +1253,6 @@ leader_traits = {
 		war_support_factor = 0.1
 		compliance_gain = 0.1
 		stability_weekly = 0.005
-		power_balance_daily = -0.002
 	}
 	ABY_trait_school_leader_4 = { #"학생회장"
 		random = no
@@ -1265,7 +1262,6 @@ leader_traits = {
 		war_support_factor = 0.1
 		JUSTIFY_WAR_GOAL_TIME = -0.75
 		conscription = 0.02
-		power_balance_daily = -0.002
 	}
 	ABY_trait_loyal_girl = { 
 		random = no
@@ -2950,6 +2946,12 @@ leader_traits = {
 		sp_rockets_medium_range_ballistic_missile_speed_factor = 0.2
 		sp_rockets_ballistic_missile_speed_factor = 0.2
 	}
+	SHA_architect_of_fascism_trait = {
+		random = no
+		fascism_drift = 0.1
+		master_ideology_drift = 0.1
+		puppet_cost_factor = -0.2
+	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
 		political_power_factor = -0.30
@@ -3814,7 +3816,12 @@ leader_traits = {
 		army_defence_factor = 0.5
 		army_speed_factor = 0.5
 	}
-
+	MEX_veteran = {
+		war_support_factor = 0.1
+	}
+	MEX_reformer = {
+		stability_factor = 0.05
+	}
 	
 
 

@@ -1,5 +1,6 @@
 add_namespace = TRM_event
 add_namespace = TRN_after_war_event
+add_namespace = trnedenwar
 add_namespace = TRN_faction_event
 add_namespace = TRN_collapse_event
 add_namespace = TRMDIP
@@ -4399,6 +4400,72 @@ country_event = { # 히요리 체포
 		add_stability = 0.015
 	}
 }
+unit_leader_event = {
+	id = trnedenwar.0
+	title = trnedenwar.0.t
+	desc = trnedenwar.0.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = trnedenwar.0.a
+		TRN_cmfnrl = {
+			unit_leader_event = { 
+				id = trnedenwar.1 
+			}
+		}
+	}
+}
+unit_leader_event = {
+	id = trnedenwar.1
+	title = trnedenwar.1.t
+	desc = trnedenwar.1.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = trnedenwar.1.a
+		TRN_gktmal = {
+			unit_leader_event = { 
+				id = trnedenwar.2
+			}
+		}
+	}
+}
+unit_leader_event = {
+	id = trnedenwar.2
+	title = trnedenwar.2.t
+	desc = trnedenwar.2.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = trnedenwar.2.a
+		TRN_dlclzk = {
+			unit_leader_event = { id = trnedenwar.3 }
+		}
+	}
+}
+unit_leader_event = {
+	id = trnedenwar.3
+	title = trnedenwar.3.t
+	desc = trnedenwar.3.desc
+	picture = GFX_event_none_picture
+	
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = trnedenwar.3.a
+
+	}
+}
 country_event = { 
 	id = TRN_after_war_event.1
 	title = TRN_after_war_event.1.t
@@ -7046,7 +7113,6 @@ country_event = {
 	trigger = {
 		tag = TRM
 		has_war_with = RED
-		has_completed_focus = TRM_We_need_Denmark_milk
 	}
 	
 	option = {
@@ -8495,6 +8561,7 @@ country_event = { # 미소노 미카 법
 		set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
 		custom_effect_tooltip = TRN_tooltip_delete_powers
+		set_country_flag = TRN_delete_power_flag
     }
 }
 country_event = { # 마지막 자유 발언
@@ -8599,7 +8666,7 @@ country_event = { # 가슴에 3발
 		}
         set_country_flag = TRM_event_59_flag
 		custom_effect_tooltip = TRM_sanctus_popularity__20_tt
-		add_to_variable = { TRM_sanctus_popularity = -30 }
+		add_to_variable = { TRM_sanctus_popularity = -20 }
 		TRM_internal_factions_popularity_change = yes
 		add_country_leader_role = {
 			character = TRN_empty
@@ -8660,6 +8727,9 @@ country_event = { # 사망 선언
 				}
 			}
 		}
+		custom_effect_tooltip = TRM_sanctus_popularity__5_tt
+		add_to_variable = { TRM_sanctus_popularity = -5 }
+		TRM_internal_factions_popularity_change = yes
 		effect_tooltip = {
 			TRN_tpdldk = { custom_effect_tooltip = kill_character_tt }
 		}
@@ -8682,9 +8752,8 @@ unit_leader_event = { # 미카의 호스트 취임
 			country_leader = {
 				ideology = tea_party_ideology
 				expire = "1965.1.1.1"
-				traits = {
-					TRM_pater_faction
-				}
+				traits = { TRM_pater_faction }
+				desc = TRN_alzk_leader_desc
 			}
 		}
 		effect_tooltip = {
@@ -8729,7 +8798,7 @@ unit_leader_event = { # 정의실현부의 음모?
 		add_stability = -0.03
     }
 }
-country_event = { # 정의실현부 작전
+country_event = { # 정의실현부 정치의원
 	id = trinity.14
 	title = trinity.14.t
 	desc = trinity.14.desc
@@ -8740,6 +8809,7 @@ country_event = { # 정의실현부 작전
 
 	option = {
 		name = trinity.14.a
+		remove_ideas = TRM_justice_task_force
 		every_unit_leader = {
 			limit = {
 				OR = {
@@ -8771,7 +8841,7 @@ country_event = { # 세이아 장례식
 		}
     }
 }
-country_event = { # 상투스 분파의 절멸
+country_event = { # 상투스 분파의 운명
 	id = trinity.16
 	title = trinity.16.t
 	desc = trinity.16.desc
@@ -8804,6 +8874,15 @@ country_event = { # 필리우스 분파의 운명
 		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
     }
+
+	option = {
+		name = trinity.17.b
+		add_popularity = { ideology = neutrality popularity = -0.02 }
+		add_stability = 0.02
+		custom_effect_tooltip = TRM_filius_del_tt
+		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
+		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+    }
 }
 country_event = { # 대법관 임명
 	id = trinity.18
@@ -8817,6 +8896,19 @@ country_event = { # 대법관 임명
 	option = {
 		name = trinity.18.a
 		add_political_power = 50
+    }
+}
+country_event = { # 티파티의 끝?
+	id = trinity.19
+	title = trinity.19.t
+	desc = trinity.19.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.19.a
     }
 }
 news_event = {

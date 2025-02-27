@@ -68,3 +68,15 @@ KPDNSD_raids_store_some_equipment = {
 		value = 20
 	}
 }
+TRM_fight_RED = {
+	allowed = {
+		original_tag = TRM
+	}
+	enable = {
+		has_war_with = RED
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 99
+	}
+}

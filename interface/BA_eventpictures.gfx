@@ -1,6 +1,19 @@
 spriteTypes = {
 
-# 뉴스 이벤트 사진
+# 뉴스 이벤트 
+
+	spriteType = {
+		name = "GFX_news_event_Millennium_Himari"
+		texturefile = "gfx/event_pictures/news_event_Millennium_Himari.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_Millennium_Rio"
+		texturefile = "gfx/event_pictures/news_event_Millennium_Rio.tga"
+	}
+	spriteType = {
+		name = "GFX_news_event_Millennium_Rio_memorial"
+		texturefile = "gfx/event_pictures/news_event_Millennium_Rio_memorial.tga"
+	}
 
 	spriteType = {
 		name = "GFX_news_event_WCH_wang_victory"
@@ -648,9 +661,14 @@ spriteTypes = {
 		name = "GFX_report_event_picture_arrest_ayumu"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_arrest_ayumu.png"
 	}
-	
-	
-	###
+	spriteType = {
+		name = "GFX_report_event_picture_aoi"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_aoi.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_smomo"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_smomo.png"
+	}
 	spriteType = {
 		name = "GFX_COU_event_109"
 		texturefile = "gfx/event_pictures/COU/COU_109.tga"
@@ -683,6 +701,17 @@ spriteTypes = {
 		name = "GFX_COU_event_302"
 		texturefile = "gfx/event_pictures/COU/COU_302.tga"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_srt_uprised"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_srt_uprised.png"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_COU_srt_banned"
+		texturefile = "gfx/event_pictures/COU_srt_banned.png"
+	}
+	
+	###
 	spriteType = {
 		name = "GFX_event_Canada_Worker"
 		texturefile = "gfx/event_pictures/Canada_Worker.tga"
@@ -757,6 +786,42 @@ spriteTypes = {
 		name = "GFX_report_event_mutsuki_asagi_dress"
 		texturefile = "gfx/event_pictures/HEU/mutsuki_asagi_dress.dds"
 	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_68"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_68.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_HEU_news_angry_mutsuki"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_angry_mutsuki.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_aru_charisma"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_charisma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_aru_dress"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_dress.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_hiori_kazano"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_hiori_kazano.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_makoto"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_makoto.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_HEU_news_satsuki"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_satsuki.dds"
+	}
+
 
 	# 밀레니엄 - 아리스루트
 	spriteType = {

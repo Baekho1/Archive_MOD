@@ -124,6 +124,7 @@ ideas = {
 				compliance_growth = 1.5
 				resistance_growth = -0.5
 				communism_drift = 0.05
+				autonomy_gain = -2.5
 			}
 		}
 		RED_world_revolution_1 = { #세계혁명!
@@ -1756,7 +1757,7 @@ ideas = {
 
 			modifier = {
 				experience_gain_factor = -0.1
-				land_doctrine_cost_factor = 0.45
+				land_doctrine_cost_factor = 1.45
 				army_attack_factor = -0.30
 				army_defence_factor = -0.30
 				army_speed_factor = -0.15
@@ -1776,7 +1777,7 @@ ideas = {
 
 			modifier = {
 				experience_gain_factor = -0.4
-				land_doctrine_cost_factor = 1.25
+				land_doctrine_cost_factor = 2.65
 				army_attack_factor = -0.50
 				army_defence_factor = -0.50
 				army_speed_factor = -0.25
@@ -1794,6 +1795,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
 				army_morale_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
@@ -2700,7 +2702,7 @@ ideas = {
 			modifier = {
 				industrial_factory_donations = 5
 				industrial_capacity_factory = 0.05
-				surrender_limit = 0.5
+				surrender_limit = 0.8
 			}
 			cancel = {
 				has_war = no
@@ -2713,7 +2715,7 @@ ideas = {
 				industrial_factory_donations = 5
 				industrial_capacity_factory = 0.08
 				production_lack_of_resource_penalty_factor = -0.1
-				surrender_limit = 0.5
+				surrender_limit = 0.8
 			}
 			cancel = {
 				has_war = no
@@ -2814,12 +2816,12 @@ ideas = {
 				army_core_defence_factor = 0.1
 				supply_combat_penalties_on_core_factor = -0.35
 				army_speed_factor = 0.1
-				supply_consumption_factor = -0.05
-				motorized_defence_factor = 0.05
+				army_armor_defence_factor = 0.05
 			}
 			equipment_bonus = {
-				motorized_equipment = {
-					build_cost_ic = -0.2
+				armor = {
+					soft_attack = 0.05
+					supply_consumption = -0.05
 				}
 			}
 		}
@@ -2830,23 +2832,23 @@ ideas = {
 				army_core_defence_factor = 0.1
 				supply_combat_penalties_on_core_factor = -0.35
 				army_speed_factor = 0.1
-				supply_consumption_factor = -0.05
-				motorized_defence_factor = 0.05
+				army_armor_defence_factor = 0.05
 				modifier_army_sub_unit_mountaineers_speed_factor = 0.1
 				modifier_army_sub_unit_mountaineers_max_org_factor = 0.1
 			}
 			equipment_bonus = {
-				motorized_equipment = {
-					build_cost_ic = -0.2
+				armor = {
+					soft_attack = 0.05
+					supply_consumption = -0.05
 				}
 			}
 		}
 		RED_counterattack = { #대반격
 			picture = HND_last_Offensive_ideas
 			modifier = {
-				breakthrough_factor = 0.75
-				army_core_attack_factor = 0.4
-				army_attack_factor = 0.35
+				breakthrough_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_attack_factor = 0.1
 			}
 			cancel = {
 				has_war = no

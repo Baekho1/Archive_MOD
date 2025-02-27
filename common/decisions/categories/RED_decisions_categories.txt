@@ -200,3 +200,29 @@ RED_red_horse_category = { #붉은말운동
 	}
 	icon = GFX_decision_category_SOV_merge_designers
 }
+
+RED_soviet_aid_to_poum_decision_category = { #Dec cat for aiding the POUM
+	priority = 31
+
+	icon = SOV_support_the_poum
+
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+
+	allowed = {
+		original_tag = RED
+	}
+
+	visible = {
+		has_completed_focus = RED_anti_stalin_in_spain
+		NOT = { has_global_flag = scw_over }
+		NOT = {
+			AND = {
+				has_global_flag = SPR_anarchist_uprising_flag
+				OR = {
+					NOT = { SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution } }
+					NOT = { country_exists = SPC }
+				}
+			}
+		}
+	}
+}

@@ -392,6 +392,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -409,6 +410,7 @@ characters={
 				career_officer
 				inspirational_leader
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=1
 			attack_skill=2
 			defense_skill=2
@@ -435,6 +437,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -451,6 +454,7 @@ characters={
 				front_line_general
 				infantry_officer
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=1
 			attack_skill=3
 			defense_skill=2
@@ -477,6 +481,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -493,6 +498,7 @@ characters={
 				trait_reckless
 				harsh_leader 
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=1
 			attack_skill=3
 			defense_skill=1
@@ -519,6 +525,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -535,6 +542,7 @@ characters={
 				career_officer
 				camouflage_expert
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=1
 			attack_skill=3
 			defense_skill=2
@@ -561,6 +569,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -579,6 +588,7 @@ characters={
 				trait_cautious
 				defensive_doctrine
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
 			attack_skill=3
 			defense_skill=4
@@ -610,6 +620,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -626,6 +637,7 @@ characters={
 				organizer
 				trickster
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -652,6 +664,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -668,6 +681,7 @@ characters={
 				front_line_general
 				career_officer
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -694,6 +708,7 @@ characters={
 			allowed = {
 				original_tag = COU
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			available = {
 			}
 			traits = {
@@ -710,6 +725,7 @@ characters={
 				career_officer
 				commando 
 			}
+			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
 			attack_skill=4
 			defense_skill=4
@@ -915,11 +931,11 @@ characters={
 			name = BEL_leon_degrelle
 			portraits={
 				civilian={
-					large = GFX_portrait_BEL_leon_degrelle 
+					large = GFX_leader_portrait_COU_leon_degrelle 
 					small = GFX_portrait_COU_leon_degrelle_military_small 
 				}
 				army = {
-					large = GFX_portrait_BEL_leon_degrelle 
+					large = GFX_leader_portrait_COU_leon_degrelle 
 					small = GFX_portrait_COU_leon_degrelle_military_small 
 				}
 			}

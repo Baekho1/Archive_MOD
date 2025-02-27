@@ -306,7 +306,7 @@ add_to_array = { #키보토스 국가
 }
 
 set_variable = { RED_prepare_of_arms = 0 } #군수중점 찍은 수
-
+set_variable = { RED_population_var = 5 } #인구 포화 단계
 #전공투
 set_variable = { RED_zenkyoutou_cat_political_power_factor = 0.02 }
 set_variable = { RED_zenkyoutou_cat_consumer_goods_factor = 0.15 }
@@ -756,3 +756,18 @@ if = {
 	}
 }
 
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = socialism
+}
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = fascism_ideology
+}
+create_country_leader = {
+	name = "Red Winter Student Council"
+	picture = GFX_portrait_SOV_supreme_soviet
+	ideology = despotism
+}

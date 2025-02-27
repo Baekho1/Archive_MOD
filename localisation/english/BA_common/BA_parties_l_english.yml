@@ -64,7 +64,7 @@
  cou_kaya_dictatorship:0 "초인독재"
  cou_kaya_dictatorship_desc:0 "초인독재는 시라누이 카야의 일인독재 체제를 일컫는 말입니다. 시라누이 카야는 본인을 '초인'이라고 자처하며, 국가의 제1통수권자이자 독재자로서 기능합니다. 비록 카야는 '초인'에는 거리가 먼 사람이지만요."
  cou_ideology:0 "행정위원회"
- cou_ideology_desc:0 "총학생회 행정위원회는 공식적으론 11개의 각 부서들과 총학생회장의 통솔 하에서 이루어진 정치 체계로 총학생회장의 리더쉽이 중요시하게 여겨집니다. 11명의 실장들과 총학생회장 휘하의 통제에서 행정위원회는 형식상으로던 실제읻던 키보토스 전역을 감독하고 관리합니다."
+ cou_ideology_desc:0 "총학생회 행정위원회는 공식적으론 11개의 각 부서들과 총학생회장의 통솔 하에서 이루어진 정치 체계로 총학생회장의 지도력이 중요시하게 여겨집니다. 11명의 실장들과 총학생회장 휘하의 통제에서 행정위원회는 형식상으로든 실제로든 키보토스 전역을 감독하고 관리합니다."
 
  srt_nationalism:0 "SRT 통제파"
  srt_nationalism_desc:0 "SRT통제파는 SRT의 통제를 주장하는 이념입니다. SRT의 통제는 SRT의 자율적인 사고 판단에 따라 국가의 모든 정책이 결정됩니다."
@@ -143,10 +143,10 @@
  DONDOTHAT:0 "§t금지된 정당입니다§!"
  debacle_short:0 "§g와해됨§!"
  debacle:0 "§g와해됨§!"
- MIKA_FASCISM_SHORT:0 "트리니티-독일 노동자당"
- MIKA_FASCISM_LONG:0 "민족사회주의 - 파테르 문화"
- Justice_Task_Force_LONG: "정의실현부"
- Justice_Task_Force: "정의실현부"
+ MIKA_FASCISM_SHORT:0 "티파티"
+ MIKA_FASCISM_LONG:0 "티파티 - 파테르 분파\n§g'강력한 인물이 필요하다. 트리니티에 대한 깊은 사랑과 신앙으로 충만하며, 강한 카리스마로 우리 모두를 이끌어 줄 인물이 말이다. 파테르 분파의 진리와 신념을 부정하는 자들에게 흔들리지 않고, 굳건한 의지로 우리의 길을 개척해 나갈 수 있는 지도자가 절실하다. 이제는 흔들림 없는 신념과 강력한 지도력을 갖춘 인물이 나서서 우리의 사명을 계승하고, 파테르 분파의 정신을 더욱 빛나게 할 때다.'\n\n제1차 공의회 이후, 파테르 분파는 군국주의적 색채가 사라지며 겉만 남은 보수주의, 엘리트주의, 권위주의 집단으로 변질되었습니다. 그러나 대전이 사태와 트리니티의 역사적 특수성이 맞물리면서, 파테르 분파는 다시 제1차 공의회 이전의 모습으로 돌아갔습니다. 이러한 변화는 단순한 우연이 아니라, 최초의 파테르 분파 수장이 가졌던 뜻의 연장선상에 있습니다. 현 수장 미소노 미카 또한 이 흐름을 이어받아, 위대하고 공정한 트리니티를 건설하겠다는 확고한 의지를 품고 있습니다. '트리니티는 스스로를 구원할 것이다!'§!\n"
+ Justice_Task_Force_LONG:0 "정의실현부"
+ Justice_Task_Force:0 "정의실현부"
  
  ARI_fascism_party:0 "아리우스 스쿼드"
  ARI_neutrality_party:0 "아츠코 파벌"
@@ -441,6 +441,19 @@
  RED_fascism_NSL_long:0 "붉은겨울 국가생디칼리즘 노동전선"
  PublicWorksDepartment: "적색전선 (용역부)"
  LaborParty: "적색전선 (용역부)"
+
+ MEX_democratic_party:0 "PNR - 혁신파"
+ MEX_democratic_party_long:0 "PNR - 멕시코 혁명당 - 혁신파"
+ MEX_christian_democracy_party:0 "PAN"
+ MEX_christian_democracy_party_long:0 "PAN - 국민행동당"
+ MEX_communism_party:0 "PCM"
+ MEX_communism_party_long:0 "PCM - 멕시코 공산당"
+ MEX_fascism_party:0 "UNS"
+ MEX_fascism_party_long:0 "UNS - 국민공동통치연합"
+ MEX_neutrality_party:0 "PNR - 카르데나스"
+ MEX_neutrality_party_long:0 "PNR - 멕시코 혁명당 - 카르데나스파"
+
+
 
 #공용 재구성
  BA_communism_party_name_rerolling_0:0 "공산주의"

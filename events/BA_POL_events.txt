@@ -10,8 +10,22 @@ country_event = {
 	}
 	fire_only_once = yes
 	option = {
+		set_variable = {
+			POL_solidarity_var = 80
+		}
+		set_variable = {
+			POL_solidarity_unit_var = 0
+		}
+		set_variable = {
+			POL_solidarity_trump_var = 0
+		}
 		name = BA_pol_event.1.a
 		complete_national_focus = POL_the_between_the_seas_concept
+		set_country_flag = intermarium_no_train
+		unlock_decision_category_tooltip = POL_intermarium_at_war
+		hidden_effect = {add_ideas = POL_solidarity_idea
+		}
+		set_country_flag = POL_solidarity_very_high_flag
 	}
 }
 
@@ -1970,5 +1984,252 @@ country_event = { #메클렌부르크와 튀링겐의 운명
 			transfer_state = 60
 		}
 		complete_national_focus = POL_inter_37
+	}
+}
+
+add_namespace = BA_intermarium_solidarity_event
+
+
+country_event = {#신규 동맹국 가입해서 결속도 떨어짐
+	id = BA_intermarium_solidarity_event.1
+	title = BA_intermarium_solidarity_event.1.t
+	desc = BA_intermarium_solidarity_event.1.d
+	is_triggered_only = yes
+	option = { 
+		name = BA_intermarium_solidarity_event.1.a
+		effect_tooltip = {
+			add_to_variable = {
+				POL_solidarity_var = -5
+				tooltip = POL_solidarity_tt
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					original_tag = POL
+					check_variable = {
+						var = POL_solidarity_var
+						value = 5
+						compare = greater_than_or_equals
+					}
+				}
+				POL = {
+					add_to_variable = {
+						POL_solidarity_var = -5
+						tooltip = POL_solidarity_tt
+					}
+				}
+
+			}
+		}
+	}
+}
+country_event = {#공동 군사 기금
+	id = BA_intermarium_solidarity_event.2
+	title = BA_intermarium_solidarity_event.2.t
+	desc = BA_intermarium_solidarity_event.2.d
+	is_triggered_only = yes
+	option = { 
+		name = BA_intermarium_solidarity_event.2.a
+		add_dynamic_modifier = {
+			modifier = POL_trump_eat
+		}
+	}
+}
+country_event = {#공동 방위군 
+	id = BA_intermarium_solidarity_event.3
+	title = BA_intermarium_solidarity_event.3.t
+	desc = BA_intermarium_solidarity_event.3.d
+	is_triggered_only = yes
+	option = { 
+		name = BA_intermarium_solidarity_event.3.a
+		division_template = {
+			name = "Intermarium Joint Defence Force"
+			regiments = {
+				infantry = {
+					x = 0
+					y = 0
+				}
+				infantry = {
+					x = 0
+					y = 1
+				}
+				infantry = {
+					x = 0
+					y = 2
+				}
+				infantry = {
+					x = 1
+					y = 0
+				}
+				infantry = {
+					x = 1
+					y = 1
+				}
+				infantry = {
+					x = 1
+					y = 2
+				}
+				infantry = {
+					x = 2
+					y = 0
+				}
+				infantry = {
+					x = 2
+					y = 1
+				}
+				infantry = {
+					x = 2
+					y = 2
+				}
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Intermarium Joint Defence Force\" division_template = \"Intermarium Joint Defence Force\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = ROOT
+				count = POL.POL_solidarity_unit_var
+			}
+		}
+	}
+}
+country_event = {#단독강화범!!
+	id = BA_intermarium_solidarity_event.4
+	title = BA_intermarium_solidarity_event.4.t
+	desc = BA_intermarium_solidarity_event.4.d
+	is_triggered_only = yes
+	option = { 
+		name = BA_intermarium_solidarity_event.4.a
+		effect_tooltip = {
+			POL = {
+				add_to_variable = {
+					POL_solidarity_var = -5
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
+	}
+}
+country_event = {#단독강화하자~
+	id = BA_intermarium_solidarity_event.5
+	title = BA_intermarium_solidarity_event.5.t
+	desc = BA_intermarium_solidarity_event.5.d
+	is_triggered_only = yes
+	option = { #그래
+		name = BA_intermarium_solidarity_event.5.a
+		FROM = {
+			leave_faction = yes
+			every_country = {
+				limit = {
+					has_war_with = PREV
+					is_ally_with = SOV
+				}
+				white_peace = PREV
+			}
+			POL = {
+				country_event = {
+					id = BA_intermarium_solidarity_event.4
+					days = 1
+				}
+				hidden_effect = {
+					add_to_variable = {
+						POL_solidarity_var = -5
+						tooltip = POL_solidarity_tt
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = ROM
+				}
+			}
+			SOV = {
+				transfer_state = 766
+				transfer_state = 78
+				transfer_state = 80
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = FIN
+				}
+			}
+			SOV = {
+				transfer_state = 146
+				transfer_state = 147
+				transfer_state = 722
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = TUR
+				}
+			}
+			SOV = {
+				transfer_state = 354
+				transfer_state = 800
+				transfer_state = 353
+				transfer_state = 352
+				transfer_state = 350
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = PER
+				}
+			}
+			SOV = {
+			}
+		}
+	}
+	option = { #싫어
+		name = BA_intermarium_solidarity_event.5.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				FROM = {
+					OR = {
+						original_tag = LIT
+						original_tag = EST
+						original_tag = LAT
+						original_tag = UKR
+					}
+				}
+				add = 999
+			}
+		}
+		FROM = {
+			country_event = {
+				id = RED_generic.3
+				days = 1
+			}
+		}
+	}
+}
+country_event = {#붕괴
+	id = BA_intermarium_solidarity_event.6
+	title = BA_intermarium_solidarity_event.6.t
+	desc = BA_intermarium_solidarity_event.6.d
+	trigger = {
+		tag = POL
+		has_war_with = SOV
+		check_variable = {
+			var = POL_solidarity_var
+			value = 0
+			compare = less_than_or_equals
+		}
+	}
+	option = { #ㅈㅈ
+		name = BA_intermarium_solidarity_event.6.a
+		dismantle_faction = yes
+		news_event = {
+			id = BA_news.128
+			days = 2
+		}
 	}
 }

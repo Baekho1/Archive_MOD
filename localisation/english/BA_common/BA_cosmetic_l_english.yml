@@ -524,13 +524,22 @@
  SHE_student_council: "키보토스 총학생회"
  SHE_student_council_DEF: "키보토스 총학생회"
  SHE_student_council_ADJ: "키보토스 총학생회"
+
+ EGY_arab_united_republic_fascism: "아랍 연합 공화국"
+ EGY_arab_united_republic_fascism_DEF: "아랍 연합 공화국"
+ EGY_arab_united_republic_democratic: "아랍 연합 공화국"
+ EGY_arab_united_republic_democratic_DEF: "아랍 연합 공화국"
+ EGY_arab_united_republic_neutrality: "아랍 연합 공화국"
+ EGY_arab_united_republic_neutrality_DEF: "아랍 연합 공화국"
+ EGY_arab_united_republic_communism: "아비도스 아랍 연합왕국"
+ EGY_arab_united_republic_communism_DEF: "아비도스 아랍 연합왕국"
+ EGY_arab_united_republic_fascism_ADJ: "아랍"
+ EGY_arab_united_republic_democratic_ADJ: "아랍"
+ EGY_arab_united_republic_neutrality_ADJ: "아랍"
+ EGY_arab_united_republic_communism_ADJ: "아랍"
  
- EGY_arab_united_republic: "아랍 연합 공화국"
- EGY_arab_united_republic_DEF: "아랍 연합 공화국"
- EGY_arab_united_republic_ADJ: "아랍"
- 
- EGY_ABYDOS: "아비도스 케메트 제국"
- EGY_ABYDOS_DEF: "아비도스 케메트 제국"
+ EGY_ABYDOS: "아비도스 아랍 연합왕국"
+ EGY_ABYDOS_DEF: "아비도스 아랍 연합왕국"
  EGY_ABYDOS_ADJ: "아비도스"
 
  ABY_provisional_government_fascism: "아비도스 주데텐 공화국"

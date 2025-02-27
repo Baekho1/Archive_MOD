@@ -537,6 +537,27 @@ ideas = {
             }
 
         }
+		
+		COU_ditchland_law = { #디츨란드법
+		    name = COU_focus_treaty_of_amsterdam
+            picture = BEL_burgundian_heritage_ns 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                has_government = fascism
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.15
+				war_support_factor = 0.05
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.05
+            }
+        }
     
 
 		COU_autonomous_legislation_idea = { #주권법
