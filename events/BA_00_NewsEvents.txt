@@ -1,0 +1,5063 @@
+add_namespace = BA_news
+
+# little entente reformed 
+news_event = { #총학생회장 실종
+	id = BA_news.1
+	title = BA_news.1.t
+	desc = BA_news.1.desc
+	picture = GFX_event_BA_news_1
+	#report_event_ace_promoted
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.1.a
+		trigger = {
+			TAG = COU
+		}
+	}
+	option = {
+		name = BA_news.1.b
+		trigger = {
+			TAG = SHE
+		}
+		custom_effect_tooltip = SHE_ba_news.1.b_tt
+		hidden_effect = {
+			unlock_decision_category_tooltip = COU_division_of_military
+			unlock_decision_tooltip = SHE_strengthening_influence_pp
+			unlock_decision_tooltip = SHE_strengthening_influence_cp
+			unlock_decision_tooltip = SHE_strengthening_influence_stv	
+		}
+	}
+	option = {
+		name = BA_news.1.c
+		trigger = {
+			OR = {
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+	option = {
+		name = BA_news.1.c
+		trigger = {
+			TAG = TRM
+		}
+		if = {
+			limit = { 
+				TRM = { 
+					has_completed_focus = TRM_newfocus_0
+				} 
+			}
+			TRM = { country_event = { id = TRM_event.2 days = 2 } }
+		}
+	}
+	option = {
+		name = BA_news.1.d
+		trigger = {
+			NOT = {
+				TAG = COU
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = TRM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+}
+news_event = { #샬레의 총학생회 합병
+	id = BA_news.2
+	title = BA_news.2.t
+	desc = BA_news.2.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.2.a
+		trigger = {
+			TAG = SHE
+		}
+	}
+	option = {
+		name = BA_news.2.b
+		trigger = {
+			OR = {
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+			}
+		}
+	}
+	option = {
+		name = BA_news.2.c
+		trigger = {
+			OR = {
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = TRM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+	option = {
+		name = BA_news.2.d
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+				}
+			}
+		}
+	}
+}
+news_event = { #미카의 집권
+	id = BA_news.3
+	title = BA_news.3.t
+	desc = BA_news.3.desc
+	picture = GFX_event_tmr_news_event_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { 
+			TRM = { add_threat = 5 }
+		}
+	}
+	
+	option = {
+		name = BA_news.3.a
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = BA_news.3.b
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				TAG = GEH
+				TAG = GEM
+				TAG = ABY
+				TAG = HYA
+			}
+		}
+	}
+	option = {
+		name = BA_news.3.c
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				TAG = KAI
+				TAG = MIL
+				TAG = GEI
+				TAG = SHE
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = RED
+				TAG = SHA
+			}
+		}
+	}
+	option = {
+		name = BA_news.3.d
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = GEH
+					TAG = GEM
+					TAG = ABY
+					TAG = HYA
+					TAG = KAI
+					TAG = MIL
+					TAG = GEI
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = RED
+					TAG = SHA
+					TAG = SHE
+					TAG = TRM
+				}
+			}
+		}
+	}
+}
+
+news_event = { #트리니티 게헨나 전쟁
+	id = BA_news.4
+	title = BA_news.4.t
+	desc = BA_news.4.desc
+	picture = GFX_event_eden_pact
+	
+	major = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = BA_Trinity_Gehenna_War
+	}
+	
+	option = {
+		name = BA_news.4.a
+		trigger = {
+			TAG = TRM
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.4.b
+		trigger = {
+			tag = GEH
+			tag = GEM
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.4.c
+		trigger = {
+			NOT ={
+				TAG = TRM
+				TAG = GEH
+				TAG = GEM
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_fall_schwarz"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 5
+					days = 15
+				}
+			}
+		}
+	}
+}
+news_event = { #트리니티의 승전
+	id = BA_news.5 
+	title = BA_news.5.t
+	desc = BA_news.5.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.5.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = BA_news.5.b
+		trigger = {
+			NOT ={
+				TAG = TRM
+			}
+		}
+	}
+}
+news_event = { #영국 붕괴
+	id = BA_news.6
+	title = BA_news.6.t
+	desc = BA_news.6.desc
+	picture = GFX_event_fall_britannia
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.6.a
+		trigger = {
+			TAG = ENG
+		}
+		hidden_effect = {
+			white_peace = KAI
+			remove_ideas = ENG_the_war_to_end_all_wars
+			CAN = {
+				white_peace = KAI
+			}
+			KAI = { set_country_flag = ENG_lose_global_flag }
+			hidden_effect = {
+				country_event = { id = IMP_event.12 days = 7 }
+			}
+		}
+	}
+	option = {
+		name = BA_news.6.b
+		trigger = {
+			TAG = KAI
+		}
+	}
+	option = {
+		name = BA_news.6.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = KAI
+				tag = FRA
+				tag = COG
+			}
+		}
+	}
+	option = {
+		name = BA_news.6.c
+		trigger = {
+			TAG = FRA
+		}
+		hidden_effect = {
+			complete_national_focus = FRA_focus_london_bridge
+		}
+	}
+	option = {
+		name = BA_news.6.e
+		trigger = { TAG = COG }
+        country_event = { id = COG_event.2 days = 21 }
+	}
+}
+news_event = { #독일 통일... 인척하는 연합법 통과
+	id = BA_news.7
+	title = BA_news.7.t
+	desc = BA_news.7.desc
+	picture = GFX_event_eden_pact
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.7.a
+		trigger = {
+			TAG = TRM
+		}
+		
+	}
+	option = {
+		name = BA_news.7.b
+		trigger = {
+			NOT ={
+				TAG = TRM
+			}
+		}
+	}
+}
+news_event = { # 트리니티 - 소련 전쟁
+	id = BA_news.8
+	title = BA_news.8.t
+	desc = BA_news.8.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.8.a
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_Russia_Trinity_war"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 2
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = BA_news.8.b
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_Russia_Trinity_war"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 2
+					days = 15
+				}
+			}
+		}
+		trigger = {
+				TAG = SOV
+		}
+	}
+	option = {
+		name = BA_news.8.c
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_Russia_Trinity_war"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 2
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			NOT ={
+				OR = {
+					TAG = TRM
+					TAG = SOV
+				}
+			}
+		}
+	}
+}
+news_event = { # 트리니티의 키보토스(으악 너무 강력해~)
+	id = BA_news.9
+	title = BA_news.9.t
+	desc = BA_news.9.desc
+	picture = GFX_event_tmr_news_event_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.9.a
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 6
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			has_cosmetic_tag = SHE_Kivotos
+		}
+	}
+	option = {
+		name = BA_news.9.b
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_piano_concerto_no2_in_c_minor_op18"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 6
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			NOT ={
+				has_cosmetic_tag = SHE_Kivotos
+			}
+		}
+	}
+}
+news_event = { # 샬레/키보토스 연방 선언
+	id = BA_news.10
+	title = BA_news.10.t
+	desc = BA_news.10.desc
+	picture = GFX_event_Kivotos_Union
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.10.a
+		trigger = {
+			has_cosmetic_tag = Kivotos_Union
+		}
+	}
+	option = {
+		name = BA_news.10.b
+		trigger = {
+			NOT ={
+				has_cosmetic_tag = Kivotos_Union
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = BA_news.10.c
+		trigger = {
+			has_government = communism
+			NOT ={
+				has_cosmetic_tag = Kivotos_Union
+			}
+		}
+	}
+}
+news_event = { # 이탈리아 지중해 진주
+	id = BA_news.11
+	title = BA_news.11.t
+	desc = BA_news.11.desc
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.11.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = BA_news.11.b
+		trigger = {
+			NOT ={
+				OR = {
+				TAG = ITA
+				TAG = ENG
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.11.c
+		trigger = {
+			TAG = ENG
+		}
+	}
+}
+news_event = { # 세이아 습격 사건
+	id = BA_news.12
+	title = BA_news.12.t
+	desc = BA_news.12.desc
+	picture = GFX_event_seia_cut
+		
+	major = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = TRM_flag_seia_cut
+	}
+	option = {
+		name = BA_news.12.a
+		trigger = {
+			TAG = TRM
+		}
+		unlock_decision_tooltip = TRN_who_is_criminal
+		set_country_flag = TRN_who_is_criminal_start
+	}
+	option = {
+		name = BA_news.12.c
+		trigger = {
+            NOT = { tag = TRM }
+		}
+	}
+}
+news_event = { ## 왕녀시여!
+	id = BA_news.13 
+	title = BA_news.13.t
+	desc = BA_news.13.desc
+	picture = GFX_event_BA_news_13
+	#report_event_ace_promoted
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.13.a
+	}
+}
+news_event = { # 일본의 조계지 점령
+	id = BA_news.14
+	title = BA_news.14.t
+	desc = BA_news.14.desc
+	picture = GFX_news_event_050
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.14.a
+		trigger = {
+			OR = {
+				tag = JAP
+				tag = MAN
+				tag = MEN
+			}
+		}
+	}
+	option = {
+		name = BA_news.14.b
+		trigger = {
+			NOT ={
+				OR = {
+					tag = JAP
+					tag = MAN
+					tag = MEN					
+					tag = SHE
+					tag = GEI
+					tag = ARI
+					tag = RED
+					tag = KAI
+					tag = MIL
+					tag = GEH
+					tag = GEM
+					tag = TRM
+					tag = SRT
+					tag = KSP
+					tag = HEU
+					tag = ABY
+					tag = HYA
+					tag = SHA
+					tag = BAC
+					tag = SUH
+					tag = INK
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.14.c
+		trigger = {
+			OR = {
+				tag = SHE
+				tag = GEI
+				tag = ARI
+				tag = RED
+				tag = KAI
+				tag = MIL
+				tag = GEH
+				tag = GEM
+				tag = TRM
+				tag = SRT
+				tag = KSP
+				tag = HEU
+				tag = ABY
+				tag = HYA
+				tag = SHA
+				tag = BAC
+				tag = SUH
+				tag = INK
+			}
+		}
+	}
+}
+news_event = { #색채의 침입
+	id = BA_news.15
+	title = BA_news.15.t
+	desc = BA_news.15.desc
+	picture = GFX_event_The_Colour
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.15.a
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_the_planets_mars"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 4
+					days = 15
+				}
+			}
+		}
+	}
+}
+news_event = { # 선도부 쿠데타
+	id = BA_news.16
+	title = BA_news.16.t
+	desc = BA_news.16.desc
+	picture = GFX_event_BA_news_16
+	#report_event_ace_promoted
+
+	major = yes
+
+	trigger = {
+		GEH = {
+			has_war_with = GEM
+		}
+		NOT = {
+			has_global_flag = geh_gem_war_superevent_trigger_flag
+		}
+	}
+
+	immediate = {
+		set_global_flag = geh_gem_war_superevent_trigger_flag
+	}
+	mean_time_to_happen = { days = 2 }
+	option = {
+		name = BA_news.16.a
+		trigger = {
+			tag = GEH
+		}
+	}
+	option = {
+		name = BA_news.16.b
+		trigger = {
+			tag = GEM
+		}
+	}
+	option = {
+		name = BA_news.16.c
+		trigger = {
+			tag = TRM
+		}
+	}
+	option = {
+		name = BA_news.16.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GEH
+					tag = GEM
+					tag = TRM
+				}
+			}
+		}
+	}
+}
+news_event = { #트리니티 붕괴
+	id = BA_news.17
+	title = BA_news.17.t
+	desc = BA_news.17.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.17.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = BA_news.17.b
+		trigger = {
+			TAG = GEH
+			TAG = GEM
+		}
+	}
+	option = {
+		name = BA_news.17.c
+		trigger = {
+			OR = {
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+	option = {
+		name = BA_news.17.d
+		trigger = {
+			NOT = {
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = TRM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+}
+news_event = { #뭔 이벤트임
+	id = BA_news.18
+	title = BA_news.18.t
+	desc = BA_news.18.desc
+	picture = GFX_event_The_Colour_wave
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.18.a
+	}
+}
+news_event = { #인도 내전
+	id = BA_news.19
+	title = BA_news.19.t
+	desc = BA_news.19.d
+	picture = GFX_event_BA_news_ind
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.19.a
+		trigger = { tag = HND }
+	}
+	option = {
+		name = BA_news.19.a
+		trigger = {
+			OR = {
+				tag = RAJ
+				tag = ENG
+			}
+		}
+	}
+	option = {
+		name = BA_news.19.a
+		trigger = { 
+			NOT = {
+				tag = HND
+				tag = RAJ
+				tag = ENG
+			}
+		}
+	}
+}
+news_event = { #안 씀
+	id = BA_news.20
+	title = BA_news.20.t
+	desc = BA_news.20.d
+	picture = GFX_event_BA_news_FRA_division
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	}
+	option = {
+	}
+}
+news_event = { #프랑스 수복 전쟁
+	id = BA_news.21
+	title = BA_news.21.t
+	desc = BA_news.21.d
+	picture = GFX_event_BA_fra_news_war
+	major = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		name = BA_news.21.a
+		add_war_support = 0.01
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = FRA
+			}
+		}
+		name = BA_news.21.b
+	}
+}
+news_event = { #밀레니엄에서 벌어진 학살
+	id = BA_news.22
+	title = BA_news.22.t
+	desc = BA_news.22.desc
+	picture = GFX_event_BA_news_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = BA_news.22.a
+		trigger = {
+			tag = MIL
+		}
+	}
+	option = {
+		name = BA_news.22.b
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+	}
+}
+news_event = { #캐나다 내전
+	id = BA_news.23
+	title = BA_news.23.t
+	desc = BA_news.23.desc
+	picture = GFX_event_BA_news_CAN_civil
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.23.a
+		trigger = {
+			original_tag = CAN
+		}
+	}
+	option = {
+		name = BA_news.23.b
+		trigger = {
+			NOT = {
+				original_tag = CAN
+			}
+		}
+	}
+}
+news_event = { #아트라하시스의 방주
+	id = BA_news.24
+	title = BA_news.24.t
+	desc = BA_news.24.desc
+	picture = GFX_event_BA_news_24
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.24.a
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_Codex_of_Omen"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 13
+					days = 15
+				}
+			}
+		}
+	}
+}
+news_event = { #밀레니엄의 붕괴
+	id = BA_news.25
+	title = BA_news.25.t
+	desc = BA_news.25.desc
+	picture = GFX_event_BA_news_End_of_Millennium
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			tag = MIL
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_final_destination_of_ark"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 12
+					days = 15
+				}
+			}
+		}
+		name = BA_news.25.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_final_destination_of_ark"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 12
+					days = 15
+				}
+			}
+		}
+		name = BA_news.25.b
+	}
+}
+news_event = { #바라트의 승리
+	id = BA_news.26
+	title = BA_news.26.t
+	desc = BA_news.26.d
+	picture = GFX_event_BA_news_bharat_win
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			tag = HND
+		}
+		name = BA_news.26.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = HND
+				tag = CAN
+			}
+		}
+		name = BA_news.26.b
+	}
+	option = {
+		trigger = {
+			tag = CAN
+		}
+		name = BA_news.26.c
+	}
+}
+news_event = { #밀레니엄 인공위성
+	id = BA_news.27
+	title = BA_news.27.t
+	desc = BA_news.27.d
+	picture = GFX_event_BA_news_27
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			tag = MIL
+		}
+		hidden_effect={
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "BA_Sputnik_Beeping"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 15
+					days = 15
+				}
+			}
+		}
+		name = BA_news.27.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+		hidden_effect={
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "BA_Sputnik_Beeping"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 15
+					days = 15
+				}
+			}
+		}
+		name = BA_news.27.b
+	}
+}
+news_event = { #스트레사 전선의 붕괴
+	id = BA_news.28
+	title = BA_news.28.t
+	desc = BA_news.28.d
+	picture = GFX_news_event_usa_japan_at_war
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_idea = PASTA_signatories_of_the_stresa_idea
+				}
+				remove_ideas = PASTA_signatories_of_the_stresa_idea
+			}
+		}
+	}
+	option = {
+		trigger = {
+			OR = {
+				tag = ITA
+				tag = FRA
+				tag = ENG
+			}
+		}
+		name = BA_news.28.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ITA
+					tag = FRA
+					tag = ENG
+				}
+			}
+		}
+		name = BA_news.28.b
+	}
+}
+news_event = { #의회를 해산한 페텡
+	id = BA_news.29
+	title = BA_news.29.t
+	desc = BA_news.29.d
+	picture = GFX_news_event_generic_parliament
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		name = BA_news.29.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = FRA
+			}
+		}
+		name = BA_news.29.b
+	}
+}
+news_event = { #제4인터내셔널 뉴스 이벤트
+	id = BA_news.30
+	title = BA_news.30.t
+	desc = BA_news.30.d_1
+	picture = GFX_news_event_023
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = SOV_fourth_international_fired
+	}
+
+	option = { # 비공산주의 다른 나라의 반응
+		name = BA_news.30.a
+		trigger = {
+			NOT = {	tag = RED }
+			OR = {
+				NOT = { has_government = communism }
+				has_country_flag = banned_communism_flag
+			}
+		}
+		add_ai_strategy = {
+			type = antagonize
+			id = FROM
+			value = 5
+		}
+	}
+	option = { #붉은겨울의 반응
+		name = BA_news.30.b
+		trigger = { tag = RED }
+		if = {
+			limit = {
+				has_completed_focus = RED_the_fourth_international
+			}
+			add_timed_idea = { idea = RED_the_fourth_international_idea days = 720 }
+		}
+	}
+	option = { # 붉은겨울 외 스탈린주의 공산주의 국가의 반응
+		name = BA_news.30.c
+		trigger = { 
+			NOT = {	tag = RED }
+			has_country_leader_ideology = stalinism
+			has_government = communism
+			NOT = { has_country_flag = banned_communism_flag }
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = SOV_fourth_international_bad
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_fourth_international_bad
+			}
+		}
+		add_ai_strategy = {
+			type = antagonize
+			id = FROM
+			value = 5
+		}
+	}
+	option = { # 붉은겨울 외 비스탈린주의 공산주의 국가의 반응
+		name = BA_news.30.d
+		trigger = { 
+			NOT = {	tag = RED }
+			NOT = { has_country_leader_ideology = stalinism }
+			has_government = communism
+			NOT = { has_country_flag = banned_communism_flag }
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = SOV_fourth_international_good
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_fourth_international_good
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 5
+		}
+	}
+}
+news_event = { #카이저 내전 소식
+	id = BA_news.31
+	title = BA_news.31.t
+	desc = BA_news.31.d
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.31.a
+		trigger = {
+			tag = KAI
+		}
+	}
+	option = {
+		name = BA_news.31.b
+		trigger = { 
+			NOT = { tag = KAI }
+		}
+	}
+}
+news_event = { # 아비도스 - 헝가리 이중제국 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+	id = BA_news.32
+	title = BA_news.32.t
+	desc = BA_news.32.desc
+	picture = GFX_news_event_royal_visit
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.32.a
+		trigger = { TAG = ABY }
+	}
+	option = {
+		name = BA_news.32.b
+		trigger = { TAG = HUN }
+	}
+	option = {
+		name = BA_news.32.c
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ABY
+					TAG = HUN
+				}
+			}
+		}
+	}
+}
+
+news_event = { # 예케 몽골 울루스
+	id = BA_news.33
+	title = BA_news.33.t
+	desc = BA_news.33.desc
+	picture = GFX_news_event_battle_for_the_bosporus
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.33.a
+		trigger = { TAG = MON }
+	}
+	option = {
+		name = BA_news.33.b
+		trigger = { NOT = { TAG = ABY } }
+	} 
+}
+news_event = { # 핵 분 열
+	id = BA_news.34
+	title = BA_news.34.t
+	desc = BA_news.34.d
+	picture = GFX_news_event_069
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_global_flag = TRM_OTTO_HAN_EVENT
+	}
+	
+	option = {
+		name = BA_news.34.a
+		trigger = {
+			tag = TRM
+		}
+	}
+	option = {
+		name = BA_news.34.b
+		trigger = { 
+			NOT = {
+				tag = TRM 
+			}
+		}
+	}
+}
+news_event = { #
+	id = BA_news.35
+	title = BA_news.35.t
+	desc = BA_news.35.d
+	picture = GFX_event_BA_fra_news_hali
+
+	major = yes
+	is_triggered_only = yes
+    
+	option = {
+		name = FRA_prov_event.71.a
+		trigger = {
+			OR = {
+				is_ally_with = FRA
+				is_ally_with = ENG
+				tag = FRA
+				tag = ENG
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					is_ally_with = FRA
+					is_ally_with = ENG
+					tag = FRA
+					tag = ENG
+				}
+			}
+		}
+		name = FRA_prov_event.71.b
+	}
+}
+
+news_event = { #에덴 핵폭발
+	id = BA_news.36
+	title = BA_news.36.t
+	desc = BA_news.36.d
+	picture = GFX__069
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.36.a
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_Megalith_Agnus_Dei"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 16
+					days = 15
+				}
+			}
+		}
+	}
+}
+news_event = { #소폴전쟁 
+	id = BA_news.37
+	title = BA_news.37.t
+	desc = BA_news.37.d
+	picture = GFX_news_event_FIN_heimosodat_volunteers
+	major = yes
+	trigger = {
+		SOV = {
+			has_war_with = POL
+		}
+		POL = {
+			is_faction_leader = yes
+		}
+		NOT = {
+			has_global_flag = sov_pol_war_superevent_trigger_flag
+		}
+	}
+	immediate = {
+		set_global_flag = sov_pol_war_superevent_trigger_flag
+	}
+	mean_time_to_happen = { days = 2 }
+	option = {
+		name = BA_news.37.a
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_red_cavarly"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 17
+					days = 15
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_ally_with = POL
+			}
+		}
+	}
+	option = {
+		name = BA_news.37.b
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_red_cavarly"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 17
+					days = 15
+				}
+			}
+		}
+		effect_tooltip = {
+			add_to_variable = {
+				POL_solidarity_var = -10
+				tooltip = POL_solidarity_tt
+			}
+		}
+		if = {
+			limit = {
+				tag = POL
+			}
+			hidden_effect = {
+				add_to_variable = {
+					POL_solidarity_var = -10
+					tooltip = POL_solidarity_tt
+				}
+			}
+		}
+		trigger = {
+			is_ally_with = POL
+		}
+		hidden_effect = {
+			country_event = {
+				id = BA_intermarium_solidarity_event.2
+				days = 2
+			}
+			country_event = {
+				id = BA_intermarium_solidarity_event.3
+				days = 10
+			}
+		}
+	}
+	option = {
+		name = BA_news.37.c
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_red_cavarly"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 17
+					days = 15
+				}
+			}
+			if = {
+				limit = {has_country_flag = SOV_UKR_dokrib_yes}
+				UKR = {
+					transfer_state = 192
+					transfer_state = 834
+					transfer_state = 198
+					transfer_state = 199
+					transfer_state = 93
+					declare_war_on = {
+						target = SOV
+					}					
+				}
+				POL = {
+					set_autonomy = {
+						target = UKR
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+		}
+		trigger = {
+			tag = SOV
+		}
+	}
+}
+
+news_event = { #츠카츠키 리오의 사임
+	id = BA_news.38
+	title = BA_news.38.t
+	desc = BA_news.38.d
+	picture = GFX_news_event_069
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.38.a
+		trigger = {
+			tag = MIL
+		}
+	}
+	option = {
+		name = BA_news.38.b
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+	}
+}
+
+news_event = { #츠카츠키 리오의 사임
+	id = BA_news.39
+	title = BA_news.39.t
+	desc = { 
+		text = BA_news.39.d
+		trigger = {
+			NOT = {
+				has_country_flag = MIL_45_event_flag
+			}
+		}
+	}
+	desc = { 
+		text = BA_news.39.df
+		trigger = {
+			has_country_flag = MIL_45_event_flag
+		}
+	}
+	picture = GFX_news_event_069
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.39.a
+		trigger = {
+			tag = MIL
+			NOT = {
+				has_country_flag = MIL_45_event_flag
+			}
+		}
+	}
+	option = {
+		name = BA_news.39.b
+		trigger = {
+			tag = MIL
+			has_country_flag = MIL_45_event_flag
+		}
+	}
+	option = {
+		name = BA_news.39.c
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+	}
+}
+
+news_event = { #브리튼 제도 격리
+	id = BA_news.40
+	title = BA_news.40.t
+	desc = BA_news.40.d
+	picture = GFX_news_event_generic_sign_treaty3
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.40.a
+		trigger = {
+			tag = CAN
+		}
+		set_country_flag = CAN_isolate_britain_isles_flag
+	}
+	option = {
+		name = BA_news.40.b
+		trigger = {
+			NOT = {
+				tag = CAN
+				tag = KAI
+			}
+		}
+		if = {
+			limit = {
+				Kivotos_school_tag = no
+			}
+			set_country_flag = CAN_isolate_britain_isles_flag
+		}
+	}
+	option = {
+		name = BA_news.40.c
+		trigger = {
+			tag = KAI
+		}
+		set_country_flag = CAN_isolate_britain_isles_flag
+	}
+}
+news_event = { # 소련의 승전
+	id = BA_news.41
+	title = BA_news.41.t
+	desc = BA_news.41.d
+	picture = GFX_news_event_german_reichstag_graffiti_ruins
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.41.a
+		trigger = { tag = SOV }
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_soviet_win"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 18
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.41.b
+		trigger = {
+			NOT = {
+				tag = SOV
+				tag = TRM
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_soviet_win"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 18
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.41.c
+		trigger = { tag = TRM }
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_soviet_win"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 1
+					days = 15
+				}
+				set_global_flag = sup_Soviet_Win
+			}
+		}
+	}
+}
+news_event = { # 다시 작동하는 에리두
+	id = BA_news.42
+	title = BA_news.42.t
+	desc = BA_news.42.d
+	picture = GFX_news_event_053
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.42.a
+	}
+}
+news_event = { #연합국 해체
+	id = BA_news.43
+	title = BA_news.43.t
+	desc = BA_news.43.d
+	picture = GFX_news_event_generic_naval_treaty
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.43.a
+	}
+}
+news_event = { #영국 파시 내전
+	id = BA_news.44
+	title = BA_news.44.t
+	desc = BA_news.44.d
+	picture = GFX_news_event_047
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.44.a
+	}
+}
+news_event = { #영국 내전 끝
+	id = BA_news.45
+	title = BA_news.45.t
+	desc = BA_news.45.d
+	picture = GFX_news_event_047
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.45.a
+	}
+}
+news_event = { #제2회 공회의
+	id = BA_news.46
+	title = BA_news.46.t
+	desc = BA_news.46.d
+	picture = GFX_news_event_040
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.46.a
+		trigger = {
+			tag = ARI
+		}
+	}
+	option = {
+		name = BA_news.46.b
+		trigger = {
+			tag = TRM
+		}
+	}
+	option = {
+		name = BA_news.46.c
+		trigger = {
+			NOT = { tag = ARI }
+			NOT = { tag = TRM }
+		}
+	}
+}
+news_event = { #축출된 페텡
+	id = BA_news.47
+	title = BA_news.47.t
+	desc = BA_news.47.d
+	picture = GFX_news_event_067
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.47.a
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = {
+		name = BA_news.47.b
+		trigger = {
+			NOT = {
+				tag = FRA
+			}
+		}
+	}
+}
+news_event = { #동아프리카 공동체 설립
+	id = BA_news.48
+	title = BA_news.48.t
+	desc = BA_news.48.d
+	picture = GFX_news_event_generic_african_unity
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.48.a
+	}
+}
+news_event = { #동독 1차 당대회
+	id = BA_news.49
+	title = BA_news.49.t
+	desc = BA_news.49.d
+	picture = GFX_event_KPD_news1
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.49.a
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = BA_news.49.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+}
+news_event = { #베를린 조약기구
+	id = BA_news.50
+	title = BA_news.50.t
+	desc = BA_news.50.d
+	picture = GFX_news_event_003
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.50.a
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = KPD
+			}
+		}
+	}
+	option = {
+		name = BA_news.50.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SOV
+					tag = KPD
+				}
+			}
+		}
+	}
+}
+news_event = { #백귀야행 내전
+	id = BA_news.51
+	title = BA_news.51.t
+	desc = BA_news.51.d
+	picture = GFX_news_event_cze_divided_nation
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.51.a
+		trigger = {
+			original_tag = HYA
+		}
+	}
+	option = {
+		name = BA_news.51.b
+		trigger = {
+			NOT = {
+				original_tag = HYA
+			}
+		}
+	}
+}
+news_event = { #습격당한 시로미 이오리
+	id = BA_news.52
+	title = BA_news.52.t
+	desc = BA_news.52.d
+	picture = GFX_event_Shiromi
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.52.a
+	}
+}
+news_event = { #게헨나의 권력을 잡은 흥신소
+	id = BA_news.53
+	title = BA_news.53.t
+	desc = BA_news.53.d
+	picture = GFX_event_news_aru
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.52.a
+	}
+}
+news_event = { #흥신소의 트리니티 포격
+	id = BA_news.54
+	title = BA_news.54.t
+	desc = BA_news.54.d
+	picture = GFX_news_event_021
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.54.a
+	}
+}
+news_event = { #폭파당한 시바사키 라멘
+	id = BA_news.55
+	title = BA_news.55.t
+	desc = BA_news.55.d
+	picture = GFX_news_event_spr_spanish_civil_war3
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.55.a
+	}
+}
+news_event = { #게헨나의 학생회장으로 선출된 리쿠하치마 아루
+	id = BA_news.56
+	title = BA_news.56.t
+	desc = BA_news.56.d
+	picture = GFX_event_news_aru
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.56.a
+	}
+}
+
+#붉은겨울(마리나 루트)
+news_event = { #이반 쿠팔라 축제 중 쿠데타
+	id = BA_news.57
+	title = BA_news.57.t
+	desc = BA_news.57.desc
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			tag = RED
+		}
+		name = BA_news.57.a
+	}
+	
+	option = {
+		trigger = {
+			tag = GEM
+		}
+		name = BA_news.57.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = RED
+				tag = GEM
+			}
+		}
+		name = BA_news.57.c
+	}
+}
+
+news_event = { #체코 임시정부 설립 
+	id = BA_news.58
+	title = BA_news.58.t
+	desc = BA_news.58.d
+	picture = GFX_event_BA_news_58
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.58.a
+	}
+}
+news_event = { #불가능성 정리
+	id = BA_news.59
+	title = BA_news.59.t
+	desc = BA_news.59.d
+	picture = GFX_news_event_ast_parliament_house
+	major = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			tag = MIL
+		}
+		name = BA_news.59.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+		name = BA_news.59.b
+		if = {
+			limit = { has_government = democratic }
+			add_stability = -0.05
+		}
+		else = {
+			add_stability = -0.10
+		}
+	}
+}
+news_event = { #제위에 오른 이부키
+	id = BA_news.60
+	title = BA_news.60.t
+	desc = BA_news.60.d
+	picture = GFX_event_BA_news_60
+	major = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			tag = GEM
+		}
+		name = BA_news.60.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = GEM
+			}
+		}
+		name = BA_news.60.b
+	}
+}
+
+news_event = { #발키리 괴뢰화
+	id = BA_news.61
+	title = BA_news.61.t
+	desc = BA_news.61.d
+	picture = GFX_event_BA_news_kanna_banned
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.61.a
+	}
+}
+
+news_event = { #콩스탕틴 합의
+	id = BA_news.62
+	title = BA_news.62.t
+	desc = BA_news.62.d
+	picture = GFX_news_event_038
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = ALG
+			}
+		}
+		name = BA_news.62.a
+	}
+	option = {
+		trigger = {
+			NOT={OR = {
+				tag = FRA
+				tag = ALG
+			}}
+		}
+		name = BA_news.62.b
+	}
+}
+news_event = { #알제리 독립 전쟁
+	id = BA_news.63
+	title = BA_news.63.t
+	desc = BA_news.63.d
+	picture = GFX_news_event_038
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = ALG
+			}
+		}
+		name = BA_news.63.a
+	}
+	option = {
+		trigger = {
+			NOT={OR = {
+				tag = FRA
+				tag = ALG
+			}}
+		}
+		name = BA_news.63.b
+	}
+}
+
+news_event = { #콩산당
+	id = BA_news.64
+	title = BA_news.64.t
+	desc = BA_news.64.d
+	picture = GFX_event_BA_news_58
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.64.a
+	}
+}
+
+news_event = { #자올지에 회담
+	id = BA_news.65
+	title = BA_news.65.t
+	desc = BA_news.65.d
+	picture = GFX_event_BA_news_58
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.65.a
+	}
+}
+news_event = { #프랑스 쿠데타!
+	id = BA_news.66
+	title = BA_news.66.t
+	desc = BA_news.66.desc
+	picture = GFX_event_BA_fra_news_war
+	major = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		FRA = {
+			add_country_leader_trait = FRA_leader
+		}
+		name = BA_news.66.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				tag = FRA
+			}
+		}
+		name = BA_news.66.b
+	}
+}
+
+news_event = { #발키리의 수사권 독립
+	id = BA_news.67
+	title = BA_news.67.t
+	desc = BA_news.67.d
+	picture = GFX_event_BA_kivotos
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { original_tag = KSP }
+			NOT = { original_tag = SHE }
+		}
+		name = BA_news.67.a
+	}
+	option = {
+		trigger = {
+			tag = KSP
+		}
+		name = BA_news.67.b
+	}
+	option = {
+		trigger = {
+			tag = SHE
+		}
+		name = BA_news.67.c
+	}
+}
+news_event = { # 세이아 취임식
+	id = BA_news.68
+	title = BA_news.68.t
+	desc = BA_news.68.desc
+	picture = GFX_event_BA_news_68
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { 
+                OR = {
+                    Kivotos_tag = yes
+                }
+            }
+		}
+		name = BA_news.68.a
+	}
+	option = {
+		trigger = {
+			tag = TRM
+		}
+		name = BA_news.68.b
+	}
+	option = {
+		trigger = {
+			Kivotos_tag = yes
+            NOT = {
+                tag = TRM
+            }
+		}
+		name = BA_news.68.c
+	}
+}
+news_event = { # 밀레니엄에서 일어난 반란
+	id = BA_news.69
+	title = BA_news.69.t
+	desc = BA_news.69.desc
+	picture = GFX_news_event_kiev_ruins
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { 
+                OR = {
+                    Kivotos_tag = yes
+                }
+            }
+		}
+		name = BA_news.69.a
+	}
+	option = {
+		trigger = {
+			tag = MIL
+		}
+		name = BA_news.69.b
+	}
+	option = {
+		trigger = {
+			Kivotos_tag = yes
+            NOT = {
+                tag = MIL
+            }
+		}
+		name = BA_news.68.c
+	}
+}
+
+# Trotsky Assassination
+news_event = {
+	id = BA_news.70
+	title = BA_news.70.t
+	desc = BA_news.70.d
+	picture = GFX_news_event_024
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = SOV
+				}
+				SOV_kill_trotsky_effect = yes
+			}
+		}
+	}
+	
+	option = {
+		name = BA_news.70.a
+		trigger = { 
+			NOT = {
+				TAG = SOV 
+				is_in_faction_with = SOV
+				has_completed_focus = RED_accept_trotskism
+			}
+		}
+	}
+	option = {
+		name = BA_news.70.q
+		trigger = {
+			NOT = { is_in_faction_with = SOV }
+			has_completed_focus = RED_accept_trotskism
+		}
+
+		effect_tooltip = {
+			retire_character = MEX_leon_trotsky
+		}
+	}
+
+	option = {
+		name = BA_news.70.b
+		trigger = { TAG = SOV }
+
+		if = {
+			limit = {
+				has_idea = trotskyite_plot_nsb
+			}
+			effect_tooltip = {
+				retire_character = SOV_lev_trotsky
+				swap_ideas = {
+					remove_idea = trotskyite_plot_nsb
+					add_idea = trotskyite_plot_purged
+				}
+			}
+		}
+	}
+
+	option = {
+		name = BA_news.70.c
+		trigger = { 
+			is_in_faction_with = SOV
+			NOT = {
+				tag = SOV
+			} 
+		}
+	}
+}
+news_event = { # 일본 내전
+	id = BA_news.71
+	title = { 
+		text = BA_news.71.t
+		trigger = {
+			has_completed_focus = JAP_cast_the_die
+		}
+	}
+	title = {
+		text = BA_news.71.2.t
+		trigger = {
+			has_completed_focus = JAP_pre_emptive_coup
+		}
+	}
+	desc = {
+		text = BA_news.71.d
+		trigger = {
+			has_completed_focus = JAP_cast_the_die
+		}
+	}
+	desc = {
+		text = BA_news.71.2.d
+		trigger = {
+			has_completed_focus = JAP_pre_emptive_coup
+		}
+	}
+	picture = GFX_news_event_japanese_parade
+
+	major = yes
+	is_triggered_only = no
+    fire_only_once = yes
+    trigger = {
+        tag = JAP
+		OR = {
+        	has_completed_focus = JAP_cast_the_die
+			has_completed_focus = JAP_pre_emptive_coup
+		}
+    }
+    mean_time_to_happen = {
+        days=2
+    }
+
+	option = {
+		name = news.7.a
+        trigger = {
+            NOT = {
+                original_tag = JAP
+            }
+        }
+	}
+	option = {
+		name = news.220.a
+        trigger = {
+            tag = JAP
+			has_completed_focus = JAP_cast_the_die
+			NOT = {
+            	has_country_leader = { id = 700 ruling_only = yes }
+			}
+        }
+	}
+	option = {
+		name = news.63.b
+        trigger = {
+            tag = JAP
+			has_completed_focus = JAP_pre_emptive_coup
+			NOT = {
+            	has_country_leader = { id = 700 ruling_only = yes }
+			}
+        }
+	}
+	option = {
+		name = news.117.b
+        trigger = {
+            has_country_leader = { id = 700 ruling_only = yes }
+        }
+	}
+}
+news_event = { # 스칸디나비아의 봄
+	id = BA_news.72
+	title = BA_news.72.t
+	desc = BA_news.72.d
+	picture = GFX_news_event_BOL_bolivian_socialist_revolution
+
+	major = yes
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = BA_news.72.a
+        trigger = {
+            NOT = {
+                tag = RED
+                tag = RE1
+                tag = RE2
+                tag = RE3
+                tag = RE4
+            }
+        }
+	}
+	option = {
+		name = BA_news.72.b
+        trigger = {
+			OR = {
+				tag = RED
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+			}
+        }
+	}
+}
+news_event = { # 산해경 병합
+	id = BA_news.73
+	title = BA_news.73.t
+	desc = BA_news.73.d
+	picture = GFX_news_event_german_speech
+	major = yes
+	is_triggered_only = yes
+	option = {
+		trigger = { TAG = TRM }
+		name = news.36.b
+	}
+	option = {
+		name = news.36.c
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = news.36.a
+		trigger = {
+			NOT = {
+				TAG = TRM
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = news.36.a
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+}
+news_event = { #영국 승전
+	id = BA_news.74
+	title = BA_news.74.t
+	desc = BA_news.74.d
+	picture = GFX_news_event_the_mediterranean_alliance
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.74.a
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				scoped_play_song = "BA_britain_win"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 8
+					days = 15
+				}
+			}
+		}
+	}
+}
+news_event = { # 반붉은겨울
+	id = BA_news.75
+	title = BA_news.75.t
+	desc = {
+		text = BA_news.75.d_soviet
+		trigger = {
+            OR = {
+			    tag = SOV
+                tag = RED
+            }
+		}
+	}
+	desc = {
+		text = BA_news.75.d_not_soviet
+		trigger = {
+			NOT = {
+				tag = SOV
+                tag = RED
+			}
+		}
+	}
+	picture = GFX_news_event_hitler_handshake
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.215.a
+		trigger = {
+			has_idea = anti_soviet_pact
+		}
+	}
+
+	option = {
+		name = news.215.b
+		trigger = {
+			has_government = communism
+			NOT = {
+				has_idea = anti_soviet_pact
+			}
+		}
+	}
+
+	option = {
+		name = news.215.c
+		trigger = {	
+			NOT = {
+				OR = {
+					has_government = communism
+					has_idea = anti_soviet_pact
+				}
+			}
+		}
+	}
+}
+news_event = { #죄수탈옥
+	id = BA_news.76
+	title = BA_news.76.t
+	desc = BA_news.76.desc
+	picture = GFX_event_BA_news_76
+
+	major = yes	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = KIABOTOS_Escape
+			KSP = {
+				set_country_flag = KSP_wakamo_sabotage_activated
+				#complete_national_focus = KSP_wakamo_problem
+				add_ideas = KSP_wakamo_sabotage
+			}
+		}
+	}
+		
+	option = {
+		name = BBA_italo_ethiopian_war_events.302.a
+		trigger = {
+			NOT = {
+				TAG = KSP
+			}
+		}
+	}
+	option = {
+		name = BA_news.76.b
+		trigger = {	
+			TAG = KSP
+		}
+	}
+}
+
+news_event = { #백야행제
+	id = BA_news.77
+	title = BA_news.77.t
+	desc = BA_news.77.desc
+	picture = GFX_event_HYA_news_1	
+
+	major = yes	
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.77.a
+		trigger = {
+			tag = HYA
+		}
+	}
+	option = {
+		name = BA_news.77.b
+		trigger = {
+			NOT = { 
+				tag = HYA
+			}
+		}
+	}
+}
+
+news_event = { #백귀야행 산해경 전쟁
+	id = BA_news.78
+	title = BA_news.78.t
+	desc = BA_news.78.desc
+	picture = GFX_event_BA_news_78	
+
+	major = yes	
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+		NOT = { has_global_flag = BA_news_78_flag }
+		SHA = { has_war_with = HYA }
+	}
+
+	immediate = {
+		set_global_flag = BA_news_78_flag
+	}
+
+	option = {
+		name = BA_news.78.a
+		trigger = {
+			tag = HYA
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_HYA_SHA_war_music"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 20
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.78.b
+		trigger = {
+			tag = SHA
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_HYA_SHA_war_music"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 20
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.78.c
+		trigger = {
+			NOT = { 
+				OR = {
+					tag = HYA
+					tag = SHA
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_HYA_SHA_war_music"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 20
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+news_event = { #붉은겨울 내전
+	id = BA_news.79
+	title = BA_news.79.t
+	desc = BA_news.79.desc
+	picture = GFX_news_event_ger_civil_war	
+
+	major = yes	
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.79.a
+		trigger = {
+			tag = RED
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_jap_warsow"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 19
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.79.b
+		trigger = {
+			OR = {
+				tag = RE2
+				is_puppet_of = RE2
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_jap_warsow"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 19
+					days = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = BA_news.79.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = RED
+					tag = RE2
+					is_puppet_of = RE2
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			hidden_effect = {
+				scoped_play_song = "BA_jap_warsow"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 19
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+news_event = { #밀레니엄에서 자행된 대량 학살
+	id = BA_news.80
+	title = BA_news.80.t
+	desc = BA_news.80.desc
+	picture = GFX_news_event_kiev_ruins	
+
+	major = yes	
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.80.a
+		trigger = {
+			tag = MIL
+		}
+	}
+	option = {
+		name = BA_news.80.b
+		trigger = {
+			NOT = {
+				tag = MIL
+			}
+		}
+		add_opinion_modifier = {
+			target = MIL
+			modifier = large_decrease
+		}
+	}
+}
+news_event = { # 트란실바니아를 양도한 ROM
+	id = BA_news.81
+	title = BA_news.81.t
+	desc = {
+        text = BA_news.81.desc
+        trigger = {
+            has_global_flag = ROM_select_only_north
+        }
+    }
+	desc = {
+        text = BA_news.81-2.desc
+        trigger = {
+            has_global_flag = ROM_select_all
+        }
+    }
+	picture = GFX_news_event_kiev_ruins	
+
+	major = yes	
+	is_triggered_only = yes
+
+	option = {
+		name = news.19.e
+		trigger = {
+			tag = TRM
+		}
+	}
+	option = {
+		name = news.15.e
+		trigger = {
+			tag = HUN
+		}
+	}
+	option = {
+		name = news.15.c
+		trigger = {
+			tag = ROM
+		}
+	}
+	option = {
+		name = news.15.a
+		trigger = {
+            NOT = {
+    			tag = ROM
+			    tag = HUN
+			    tag = TRM
+            }
+		}
+	}
+}
+news_event = {
+	id = BA_news.82
+	title = BA_news.82.t
+	desc = BA_news.82.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.82.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = { 
+		name = BA_news.82.b
+		trigger = { 
+			NOT = {
+				TAG = HUN
+			}
+		}
+	}
+}
+
+#Hungary restores Austria-Hungary
+news_event = {
+	id = BA_news.83
+	title = news.295.t
+	desc = BA_news.83.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.83.a
+		trigger = {
+			TAG = HUN
+		}
+	}
+	option = { 
+		name = BA_news.83.b
+		trigger = { 
+			NOT = {
+				TAG = HUN
+				TAG = ROM
+				TAG = YUG
+			}
+		}
+	}
+	option = { 
+		name = BA_news.83.c
+		trigger = { 
+			OR = {
+				TAG = ROM
+				TAG = YUG
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.84
+	title = BA_news.84.t
+	desc = BA_news.84.desc
+	picture = GFX_news_event_023
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.84.a
+		trigger = {
+			TAG = COU
+		}
+	}
+	option = { 
+		name = BA_news.84.b
+		trigger = { 
+			NOT = {
+				TAG = COU
+			}
+			has_government = communism
+		}
+	}
+	option = { 
+		name = BA_news.84.c
+		trigger = { 
+			NOT = {
+				TAG = COU
+				has_government = communism
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.85
+	title = BA_news.85.t
+	desc = BA_news.85.desc
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.85.a
+		trigger = {
+			TAG = COU
+		}
+	}
+	option = { 
+		name = BA_news.85.b
+		trigger = { 
+			NOT = {
+				TAG = COU
+			}
+			has_government = communism
+		}
+	}
+	option = { 
+		name = BA_news.85.c
+		trigger = { 
+			NOT = {
+				TAG = COU
+				has_government = communism
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.86
+	title = BA_news.86.t
+	desc = BA_news.86.desc
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.86.a
+		trigger = {
+			TAG = COU
+		}
+	}
+	option = { 
+		name = BA_news.86.b
+		trigger = { 
+			NOT = {
+				TAG = COU
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.87
+	title = BA_news.87.t
+	desc = BA_news.87.desc
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.87.a
+		trigger = {
+			TAG = global.kivotos_alliance_leader
+		}
+	}
+	option = { 
+		name = BA_news.87.b
+		trigger = { 
+			NOT = {
+				TAG = global.kivotos_alliance_leader
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.88
+	title = BA_news.88.t
+	desc = BA_news.88.desc
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.88.a
+		trigger = {
+			TAG = global.kivotos_alliance_leader
+		}
+	}
+	option = { 
+		name = BA_news.88.b
+		trigger = { 
+			NOT = {
+				TAG = global.kivotos_alliance_leader
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.89
+	title = BA_news.89.t
+	desc = BA_news.89.desc
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.89.a
+		trigger = {
+			is_in_array = {
+				array = global.kivotos_alliance
+				value = THIS
+			}
+		}
+	}
+	option = { 
+		name = BA_news.89.b
+		trigger = { 
+			NOT = {
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = THIS
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.90
+	title = BA_news.90.t
+	desc = {
+		text = BA_news.90.desc1
+		trigger = {
+			NOT = { has_global_flag = BA_news_90_flag }
+		}
+	}
+	desc = {
+		text = BA_news.90.desc2
+		trigger = {
+			has_global_flag = BA_news_90_flag
+		}
+	}
+
+	immediate = {
+		set_global_flag = BA_news_90_flag
+	}
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.90.a
+		trigger = {
+			is_in_array = {
+				array = global.kivotos_alliance
+				value = THIS
+			}
+		}
+	}
+	option = { 
+		name = BA_news.90.b
+		trigger = { 
+			NOT = {
+				is_in_array = {
+					array = global.kivotos_alliance
+					value = THIS
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.91
+	title = BA_news.91.t
+	desc = {
+		text = BA_news.91.desc
+		trigger = { 
+			SHA = { 
+				NOT = { has_completed_focus = SHA_Shintani_Kai_Follow }
+				NOT = { has_completed_focus = SHA_conservative_revolution }
+			}
+		}
+	}
+	desc = {
+		text = BA_news.91.2.desc
+		trigger = { 
+			SHA = { 
+				has_completed_focus = SHA_Shintani_Kai_Follow
+			}
+		}
+	}
+	desc = {
+		text = BA_news.91.3.desc
+		trigger = { 
+			SHA = { 
+				has_completed_focus = SHA_conservative_revolution
+			}
+		}
+	}
+	picture = GFX_event_Shanhaijing_won_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.91.a
+		trigger = { 
+			TAG = SHA 
+			NOT = { has_completed_focus = SHA_Shintani_Kai_Follow }
+		}
+	}
+	
+	option = {
+		name = BA_news.91.b
+		trigger = { 
+			TAG = SHA 
+			has_completed_focus = SHA_Shintani_Kai_Follow
+		}
+	}
+	option = { 
+		name = BA_news.91.c
+		trigger = { 
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+				SHA = { has_completed_focus = SHA_Shintani_Kai_Follow }
+			}
+			OR = {
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
+			}
+		}
+	}
+	option = { 
+		name = BA_news.91.d
+		trigger = { 
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+			}
+			SHA = { has_completed_focus = SHA_Shintani_Kai_Follow }
+			OR = {
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
+			}
+		}
+	}
+	option = { 
+		name = BA_news.91.e
+		trigger = { 
+			tag = HYA
+		}
+	}
+	option = { 
+		name = BA_news.91.f
+		trigger = { 
+			NOT = { 
+				tag = SHA 
+				tag = HYA
+				tag = TRM
+				tag = GEM
+				tag = GEH
+				tag = SHE
+				tag = COU
+				tag = KSP
+				tag = HEU
+				tag = MIL
+				tag = BLM
+				tag = ABY
+				#tag = HYA
+				tag = ARI
+				tag = KAI
+				tag = RE1
+				tag = RE2
+				tag = RE3
+				tag = RE4
+				tag = RED
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.92
+	title = BA_news.92.t
+	desc = BA_news.92.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BA_news.92.a
+		trigger = {
+			TAG = HYA
+		}
+	}
+	option = { 
+		name = BA_news.92.b
+		trigger = { 
+			NOT = {
+				TAG = HYA
+				TAG = SHA
+			}
+		}
+	}
+	option = {
+		name = BA_news.92.c
+		trigger = {
+			TAG = SHA
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+news_event = {
+	id = BA_news.93
+	title = BA_news.93.t
+	desc = BA_news.93.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	
+	trigger = {
+		ABY = {
+			exists = yes
+		}
+		HYA = {
+			exists = no
+		}
+		SHA = {
+			exists = no
+		}
+		has_global_flag = GFLAG_BAKSANWAR
+	}
+    fire_only_once = yes
+    mean_time_to_happen = {
+        days=1
+    }
+	
+	option = {
+		name = BA_news.93.a
+		trigger = {
+			TAG = ABY
+		}
+	}
+	option = { 
+		name = BA_news.93.b
+		trigger = { 
+			NOT = {
+				TAG = ABY
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.94
+	title = BA_news.94.t
+	desc = BA_news.94.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.94.a
+		trigger = {
+			original_tag = KSP
+		}
+	}
+	option = { 
+		name = BA_news.94.b
+		trigger = { 
+			NOT = {
+				original_tag = KSP
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.95
+	title = BA_news.95.t
+	desc = BA_news.95.desc
+	picture = GFX_event_news_event_5
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.95.a
+		trigger = {
+			original_tag = KSP
+		}
+	}
+	option = { 
+		name = BA_news.95.b
+		trigger = { 
+			NOT = {
+				original_tag = KSP
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.96
+	title = BA_news.96.t
+	desc = BA_news.96.desc
+	picture = GFX_news_event_saf_coup
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BA_news.96.a
+		trigger = {
+			TAG = USA
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "USA_The_Old_Order"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
+		}
+		
+	}
+
+    option = { # 키보토스 반응
+		name = BA_news.96.b
+		trigger = {
+			OR = {
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = TRM
+				TAG = GEH
+				TAG = GEM
+				TAG = BLM
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "USA_The_Old_Order"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
+		}
+	}
+
+    option = {  # 지구 국가 반응
+		name = BA_news.96.c
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+					TAG = USA
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "USA_The_Old_Order"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 21
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+
+
+
+# 미국 신질서 편입 선언
+news_event = { 
+    id = BA_news.97
+	title = BA_news.97.t
+	desc = BA_news.97.desc
+	picture = GFX_event_Kivotos_Union
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {  # 미국 반응
+		name = BA_news.97.a
+		trigger = {
+			OR = {
+				TAG = USA
+			}
+		}
+		hidden_effect = {
+			scoped_play_song = "USA_The_New_Order"
+		}
+	}
+
+	option = { # 키보토스 반응
+		name = BA_news.97.b
+		trigger = {
+			OR = {
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = GEH
+				TAG = GEM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+				TAG = BAC
+				TAG = SUH
+				TAG = INK
+			}
+		}
+	}
+
+
+	option = {  # 지구 국가 반응
+		name = BA_news.97.c
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+					TAG = USA
+				}
+			}
+		}
+		hidden_effect = {
+		scoped_play_song = "USA_The_New_Order"
+	}
+	}
+}
+news_event = {
+	id = BA_news.98
+	title = BA_news.98.t
+	desc = BA_news.98.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wtt_news.57.a
+		trigger = {
+			tag = POL
+		}
+	}
+	option = {
+		name = wtt_news.60.b
+		trigger = {
+			NOT = { tag = POL }
+			OR = {
+				tag = SOV
+				tag = TRM
+				tag = GEM
+				tag = MIL
+				tag = YUG
+				tag = ITA
+				tag = USA
+				tag = FRA
+				tag = ENG
+			}
+		}
+	}
+	option = {
+		name = wtt_news.68.b
+		trigger = {
+			NOT = { 
+				tag = POL 
+				tag = SOV
+				tag = TRM
+				tag = GEM
+				tag = MIL
+				tag = YUG
+				tag = ITA
+				tag = USA
+				tag = FRA
+				tag = ENG
+			}
+		}
+	}
+}
+news_event = {
+	id = BA_news.99
+	title = BA_news.99.t
+	desc = BA_news.99.desc
+	picture = GFX_news_event_japanese_army_parade
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.99.a
+		trigger = {
+			tag = JAP
+		}
+	}
+	option = {
+		name = BA_news.99.b
+		trigger = {
+			NOT = { 
+				tag = JAP 
+				tag = CHI
+			}
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+	option = {
+		name = BA_news.99.c
+		trigger = {
+			NOT = {  tag = JAP }
+			OR = {
+				tag = CHI
+				has_government = communism
+			}
+		}
+	}
+}
+news_event = { #뱅골 대기근
+	id = BA_news.100
+	title = BA_news.100.t
+	desc = BA_news.100.desc
+	picture = GFX_news_event_kiev_ruins
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.100.a
+		trigger = {
+			tag = ENG
+		}
+	}
+	option = {
+		name = BA_news.100.b
+		trigger = {
+			NOT = { 
+				tag = HND 
+				tag = ENG
+			}
+		}
+	}
+	option = {
+		name = BA_news.100.c
+		trigger = {
+			tag = HND
+		}
+	}
+}
+news_event = { #2차 대공황
+	id = BA_news.101
+	title = BA_news.101.t
+	desc = BA_news.101.desc
+	picture = GFX_event_BA_news_event_101
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BA_news.101.a
+		trigger = {
+			tag = USA
+		}
+		hidden_effect = {
+			scoped_play_song = dance_your_troubles_away
+		}
+	}
+	option = {
+		name = BA_news.101.b
+		trigger = {
+			tag = SOV
+		}
+	}
+	option = {
+		name = BA_news.101.c
+		trigger = {
+			NOT = { 
+				Kivotos_tag = yes
+				tag = USA
+				tag = SOV
+				tag = JAP
+			}
+		}
+	}
+	option = {
+		name = BA_news.101.d
+		trigger = {
+			Kivotos_tag = yes
+		}
+	}
+	option = {
+		name = BA_news.101.e
+		trigger = {
+			tag = JAP
+		}
+	}
+}
+news_event = { # 에드워드 즉위식
+	id = BA_news.102
+	title = BA_news.102.t
+	desc = BA_news.102.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = ENG_coronation_of_edwards
+	}
+
+	option = {
+		name = BA_news.102.a
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = CAN
+			}
+		}
+	}
+	option = {
+		name = news.38.a
+		trigger = {
+			NOT = {
+				tag = ENG
+				tag = CAN
+			}
+		}
+	}
+}
+
+# 비나 격퇴
+news_event = {
+	id = BA_news.103
+	title = BA_news.103.t
+	desc = BA_news.103.desc
+	picture = GFX_news_event_japanese_army_parade
+	
+	major = yes
+	fire_only_once = yes
+
+	# 체력이 빵이거나 혹은 대책위원회 입갤시
+	trigger = {
+		EGY = {
+			check_variable = {
+				EGY_Binah_health < 1
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			EGY_Binah_destroyed = yes
+		}
+	}
+
+	option = {
+		name = BA_news.103.a
+		trigger = {
+			tag = EGY
+		}
+	}
+	
+	option = {
+		name = BA_news.103.b
+		trigger = {
+			NOT = { tag = EGY }
+		}
+	}
+}
+
+news_event = {
+	id = BA_news.104
+	title = BA_news.104.t
+	desc = BA_news.104.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = BA_news.104.a
+		trigger = {
+			original_tag = ITA
+		}
+	}
+	option = {
+		name = BA_news.104.b
+		trigger = {
+			NOT = { original_tag = ITA }
+			NOT = { has_war_with = FROM }
+			NOT = { Kivotos_tag = yes }
+		}
+	}
+	option = {
+		name = BA_news.104.c
+		trigger = {
+			Kivotos_tag = yes
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+news_event = { #붉은겨울 대기근
+	id = BA_news.105
+	title = BA_news.105.t
+	desc = BA_news.105.desc
+	picture = GFX_news_event_indian_famine
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = BA_news.105.a
+		if = {
+			limit = {
+				tag = RED
+			}
+			add_timed_idea = {
+				idea = RED_famine
+				days = 360
+			}
+			141 = {
+				add_manpower = -1000000
+			}
+			140 = {
+				add_manpower = -1000000
+			}
+			915 = {
+				add_manpower = -1000000
+			}
+		}
+	}
+}
+
+news_event = { #블랙 마켓 붕괴
+	id = BA_news.106
+	title = BA_news.106.t
+	desc = BA_news.106.desc
+	picture = GFX_news_event_indian_famine
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = BA_news.106.a
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { original_tag = ITA }
+		}
+	}
+	option = {
+		name = BA_news.106.b
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+			NOT = { original_tag = ITA }
+		}
+	}
+	option = {
+		name = BA_news.106.c
+		trigger = {
+			original_tag = ITA
+		}
+	}
+}
+
+news_event = {
+    id = BA_news.107
+    title = BA_news.107.t
+    desc = BA_news.107.d
+    picture = GFX_news_event_tank_factory
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.107.a
+        trigger = {
+            tag = GEI
+        }
+    }
+
+    option = {
+        name = BA_news.107.b
+        trigger = {
+            NOT = { tag = GEI }
+        }
+    }
+}
+
+news_event = {
+    id = BA_news.108
+    title = BA_news.108.t
+    desc = BA_news.108.d
+    picture = GFX_news_event_038
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.108.a
+        trigger = {
+            tag = BLM
+        }
+    }
+
+    option = {
+        name = BA_news.108.b
+        trigger = {
+            NOT = { tag = BLM }
+        }
+    }
+}
+
+news_event = { #밀레니엄의 의용군 파견
+    id = BA_news.109
+    title = BA_news.109.t
+    desc = BA_news.109.d
+    picture = GFX_news_event_saf_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.109.a
+        trigger = {
+            tag = MIL
+        }
+    }
+
+    option = {
+        name = BA_news.109.b
+        trigger = {
+            NOT = { tag = MIL }
+        }
+    }
+}
+
+news_event = { #밀레니엄의 총체적 개입
+    id = BA_news.110
+    title = BA_news.110.t
+    desc = BA_news.110.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.110.a
+        trigger = {
+            tag = MIL
+        }
+    }
+
+    option = {
+        name = BA_news.110.b
+        trigger = {
+            NOT = { tag = MIL }
+        }
+    }
+}
+
+news_event = { # 미국 애니메이션 상영
+    id = BA_news.111
+    title = BA_news.111.t
+    desc = BA_news.111.d
+    picture = GFX_news_event_destroyers
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.111.a
+        trigger = {
+            tag = USA
+        }
+    }
+
+	option = {
+        name = BA_news.111.b
+        trigger = {
+            tag = SHA
+        }
+    }
+
+    option = {
+        name = BA_news.111.c
+        trigger = {
+            NOT = {
+				tag = USA
+			    tag = SHA
+		    }
+        }
+    }
+}
+
+
+news_event = { # 미국의 밀레니엄 독보
+    id = BA_news.112
+    title = BA_news.112.t
+    desc = BA_news.112.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.112.a
+        trigger = {
+            OR = {
+				tag = MIL
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.112.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = MIL
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 에덴 독보
+    id = BA_news.113
+    title = BA_news.113.t
+    desc = BA_news.113.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.113.a
+        trigger = {
+            OR = {
+				tag = GEM
+				tag = TRM
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.113.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = GEM
+				  tag = TRM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 총학생회 독보
+    id = BA_news.114
+    title = BA_news.114.t
+    desc = BA_news.114.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.114.a
+        trigger = {
+            OR = {
+				tag = COU
+			    tag = USA    
+			}
+        }
+    }
+
+    option = {
+        name = BA_news.114.b
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = COU
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 게헨나 따르기
+    id = BA_news.115
+    title = BA_news.115.t
+    desc = BA_news.115.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.115.a
+        trigger = {
+				tag = USA
+        }
+    }
+    option = {
+        name = BA_news.115.b
+        trigger = {
+				tag = GEM
+        }
+    }
+
+
+    option = {
+        name = BA_news.115.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = GEM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+
+news_event = { # 미국의 트리니티 따르기
+    id = BA_news.116
+    title = BA_news.116.t
+    desc = BA_news.116.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.116.a
+        trigger = {
+				tag = USA
+        }
+    }
+    option = {
+        name = BA_news.116.b
+        trigger = {
+				tag = TRM
+        }
+    }
+
+
+    option = {
+        name = BA_news.116.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = TRM
+				  tag= USA
+				  }	  
+			 }
+        }
+    }
+}
+
+news_event = { # 미국의 붉은겨울 따르기
+    id = BA_news.117
+    title = BA_news.117.t
+    desc = BA_news.117.d
+    picture = GFX_news_event_greek_civil_war
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.117.a
+        trigger = {
+				tag = USA
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_The_New_Order"
+	    }
+    }
+    option = {
+        name = BA_news.117.b
+        trigger = {
+				tag = RED
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_The_New_Order"
+	    }
+    }
+
+    option = {
+        name = BA_news.117.c
+        trigger = {
+            NOT = {
+				OR = {
+				  tag = USA
+				  tag = RED
+				  }	  
+			 }
+        }
+		hidden_effect = {
+		  scoped_play_song = "USA_The_New_Order"
+	    }
+    }
+}
+
+news_event = { # 왕징웨이의 국민정부 선언
+    id = BA_news.118
+    title = BA_news.118.t
+    desc = BA_news.118.d
+    picture = GFX_news_event_WCH_wang_victory
+
+    major = yes
+    is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			WCH = { set_cosmetic_tag = WCH_Nationalist_Government }
+		}
+	}
+
+    option = {
+        name = BA_news.118.a
+        trigger = {
+			OR = {
+				tag = WCH
+				tag = JAP
+				tag = MAN
+				tag = MEN
+			}
+        }
+    }
+    option = {
+        name = BA_news.118.b
+        trigger = {
+			NOT = {
+				tag = WCH
+				tag = JAP
+				tag = MAN
+				tag = MEN
+			}
+        }
+    }
+}
+
+news_event = { # 프랑스의 인도차이나 철수
+    id = BA_news.119
+    title = BA_news.119.t
+    desc = BA_news.119.d
+    picture = GFX_news_event_HUN_hungary_occupies_area
+
+    major = yes
+    is_triggered_only = yes
+
+
+    option = {
+        name = BA_news.119.a
+        trigger = {
+			tag = FRA
+        }
+    }
+    option = {
+        name = BA_news.119.b
+        trigger = {
+			NOT = {
+				tag = FRA
+				has_government = communism
+			}
+        }
+    }
+    option = {
+        name = BA_news.119.c
+        trigger = {
+			has_government = communism
+        }
+    }
+}
+
+
+news_event = { # 사악한 동맹이라니!
+    id = BA_news.120
+    title = BA_news.120.t
+    desc = BA_news.120.d
+    picture = GFX_news_event_generic_handshake
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.120.a
+        trigger = {
+			tag = USA
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_National_Anthem_But_Red"
+	    }
+    }
+    option = {
+        name = BA_news.120.b
+        trigger = {
+           tag = SOV
+        }
+		hidden_effect = {
+		 scoped_play_song = "USA_National_Anthem_But_Red"
+	   }
+    }
+    option = {
+        name = BA_news.120.c
+        trigger = {
+			NOT = {
+				tag = USA
+				tag = SOV
+			}
+        }
+		hidden_effect = {
+		scoped_play_song = "USA_National_Anthem_But_Red"
+	}
+    }
+}
+
+news_event = { # 미국이야말로 진정한 노동자의 나라!!
+    id = BA_news.121
+    title = BA_news.121.t
+    desc = BA_news.121.d
+    picture = GFX_news_event_king_speech
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.121.a
+        trigger = {
+			tag = USA
+        }
+		hidden_effect = {
+		 scoped_play_song = "lenin_speech"
+		 add_ideas = usa_my_way
+	    }
+    }
+    option = {
+        name = BA_news.121.b
+        trigger = {
+		   AND = {
+			 tag = USA
+             has_government = communism
+		   }
+        }
+		hidden_effect = {
+		 scoped_play_song = "lenin_speech"
+	   }
+    }
+    option = {
+        name = BA_news.121.c
+        trigger = {
+			AND = {
+				tag = USA
+				AND = {
+			       tag = USA
+                   has_government = communism
+		        }
+			}
+        }
+		hidden_effect = {
+		scoped_play_song = "lenin_speech"
+	}
+    }
+}
+
+
+news_event = { # 미국 신질서 내전
+    id = BA_news.122
+    title = BA_news.122.t
+    desc = BA_news.122.d
+    picture = GFX_news_event_king_speech
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.122.a
+        trigger = {
+			OR = {
+			  tag = USA
+			  tag = OFN
+			}
+        }
+    }
+    option = {
+        name = BA_news.122.b
+        trigger = {
+		   NOT = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			TAG = USA
+			TAG = OFN
+		   }
+        }
+    }
+    option = {
+        name = BA_news.122.c
+        trigger = {
+			OR = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			}
+        }
+    }
+}
+
+
+news_event = { # OFN 넉다운
+    id = BA_news.123
+    title = BA_news.123.t
+    desc = BA_news.123.d
+    picture = GFX_news_event_king_speech
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.122.a
+        trigger = {
+			OR = {
+			  tag = USA
+			  tag = OFN
+			}
+        }
+    }
+    option = {
+        name = BA_news.122.b
+        trigger = {
+		   NOT = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			TAG = USA
+			TAG = OFN
+		   }
+        }
+    }
+    option = {
+        name = BA_news.122.c
+        trigger = {
+			OR = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			}
+        }
+    }
+}
+
+
+news_event = { # OFN의 승리!
+    id = BA_news.124
+    title = BA_news.124.t
+    desc = BA_news.124.d
+    picture = GFX_news_event_king_speech
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.122.a
+        trigger = {
+			OR = {
+			  tag = USA
+			  tag = OFN
+			}
+        }
+    }
+    option = {
+        name = BA_news.122.b
+        trigger = {
+		   NOT = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			TAG = USA
+			TAG = OFN
+		   }
+        }
+    }
+    option = {
+        name = BA_news.122.c
+        trigger = {
+			OR = {
+			TAG = GEI
+			TAG = ARI
+			TAG = RED
+			TAG = KAI
+			TAG = MIL
+			TAG = TRM
+			TAG = GEH
+			TAG = GEM
+			TAG = BLM
+			TAG = KSP
+			TAG = HEU
+			TAG = ABY
+			TAG = HYA
+			TAG = SHA
+			TAG = BAC
+			TAG = SUH
+			TAG = INK
+			}
+        }
+    }
+}
+
+news_event = { # 버텨낸 트로츠키
+    id = BA_news.125
+    title = BA_news.125.t
+    desc = BA_news.125.d
+    picture = GFX_news_event_NOR_trotsky_frida
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { #트로츠키 동지 만세!
+        name = BA_news.125.a
+        trigger = {
+			has_government = communism
+			NOT = {
+				OR = {
+					is_ally_with = SOV
+					has_country_leader_ideology = stalinism
+				}
+			}
+        }
+    }
+    option = { #반혁명분자 😠
+        name = BA_news.125.b
+        trigger = {
+			has_government = communism
+			OR = {
+				is_ally_with = SOV
+				has_country_leader_ideology = stalinism
+			}
+        }
+    }
+    option = { #빨갱이들 알빠노
+        name = BA_news.125.c
+        trigger = {
+			NOT = {
+				has_government = communism
+			}
+        }
+    }
+}
+
+news_event = { # 불쌍한 난동꾼들
+    id = BA_news.126
+    title = BA_news.126.t
+    desc = BA_news.126.d
+    picture = GFX_news_event_COU_SRT
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { #아오 SRT시치 
+        name = BA_news.126.a
+        trigger = {
+			tag = COU
+        }
+    }
+    option = { #재미있군!
+        name = BA_news.126.b
+        trigger = {
+			NOT = { tag = COU }
+        }
+    }
+}
+
+news_event = { # 유령신호
+    id = BA_news.127
+    title = BA_news.127.t
+    desc = BA_news.127.d
+    picture = GFX_GEI_DEC_ghost
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 우리가 간다 
+        name = BA_news.127.a
+        trigger = {
+			tag = GEI
+        }
+    }
+    option = { # 그들에게 도대체 무슨 일이 일어난거죠?
+        name = BA_news.127.b
+        trigger = {
+			NOT = { tag = GEI }
+        }
+    }
+}
+
+<<<<<<< HEAD
+news_event = { # 키보토스 전역에서 발생한 소요사태
+    id = BA_news.129
+    title = BA_news.129.t
+    desc = BA_news.129.d
+    picture = GFX_GEI_DEC_riot
+=======
+news_event = { # 미엥지모제의 붕괴
+    id = BA_news.128
+    title = BA_news.128.t
+    desc = BA_news.128.d
+    picture = GFX_news_event_polish_resistance_warsaw
+>>>>>>> bbb0e5c0292de6c260de16ee764cf18748cebe2f
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 때가 되었다. 
+        name = BA_news.130.a
+        trigger = {
+			tag = GEI
+        }
+
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 27
+					days = 15
+				}
+			}
+		}
+    }
+    option = { # 그들에게 도대체 무슨 일이 일어난거죠?
+        name = BA_news.130.b
+        trigger = {
+			NOT = { tag = GEI }
+			hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 27
+					days = 15
+				}
+			}
+		}
+        }
+    }
+}
+
+#news_event = { # 미국 트리니티 에덴 점령
+#    id = BA_news.112
+#    title = BA_news.112.t
+#    desc = BA_news.112.d
+#    picture = GFX_news_event_destroyers
+#
+#    major = yes
+#    is_triggered_only = yes
+#
+#	trigger = {
+#		USA = has_control_of_state = 64
+#	}
+#
+#   option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.a
+#        trigger = {
+#            tag = USA
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.b
+#       trigger = {
+#			    AND = {
+#				   is_allied_with = TRM
+#                  has_war = yes
+#				}
+#        }
+#    }
+#
+#	option = {
+#		scoped_play_song = "order_of_the_day"
+#        name = BA_news.112.c
+#        trigger = {
+#			AND = {
+#			    NOT = { Kivotos_tag = yes }
+#			    has_war_with = TRM
+#				NOT = { tag = USA}
+#			}
+#        }
+#    }
+#		option = {
+#		scoped_play_song = "order_of_the_day"
+#      name = BA_news.112.d
+#       trigger = {
+#			AND = {
+#			  Kivotos_tag = yes 
+#			  NOT = { has_war_with = TRM } 
+#			}
+#        }
+#    }
+#		 
+#}
+
+
