@@ -600,6 +600,9 @@ focus_tree = {
 			country_event = COU_event.8
 		    custom_effect_tooltip = COU_tooltip_kaya_started_game
         }
+		ai_will_do = {
+			base = 100
+		}
 	}
 	
 	focus = {
@@ -618,6 +621,9 @@ focus_tree = {
 			     days = 50
 		     }
         }
+		ai_will_do = {
+			base = 100
+		}
 	}
 	
 	focus = {
@@ -636,6 +642,9 @@ focus_tree = {
 			     days = 50
 		     }
         }
+		ai_will_do = {
+			base = 100
+		}
 	}
 	
 	focus = {
@@ -653,6 +662,9 @@ focus_tree = {
         completion_reward = {
 		     custom_effect_tooltip = COU_tooltip_srt_gonna_make_shit
         }
+		ai_will_do = {
+			base = 100
+		}
 	}
 	
 	##디츨란드법
@@ -661,7 +673,7 @@ focus_tree = {
         icon = GFX_COU_treaty_of_amsterdam
         x = 2
         y = 1
-        cost = 5
+        cost = 0
 		available = {
    		    #has_completed_focus = COU_focus_remove_the_line 
 		    custom_trigger_tooltip = {
@@ -678,7 +690,7 @@ focus_tree = {
         }
 	}
 	
-	##뮈세르트 석방
+	##그 뭐시기 석방
 	focus = {
         id = COU_focus_unarrest_mussert
         icon = GFX_COU_unarrest_mussert
@@ -690,6 +702,9 @@ focus_tree = {
         completion_reward = {
 		    
         }
+		ai_will_do = {
+			base = 100
+		}
     }
 	
 	##플란데런과 접촉
@@ -704,6 +719,9 @@ focus_tree = {
         completion_reward = {
 		    
         }
+		ai_will_do = {
+			base = 100
+		}
     }
 	
 	focus = {
@@ -718,6 +736,9 @@ focus_tree = {
         completion_reward = {
 		    
         }
+		ai_will_do = {
+			base = 100
+		}
     }
     
 	

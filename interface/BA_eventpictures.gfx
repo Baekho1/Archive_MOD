@@ -664,9 +664,6 @@ spriteTypes = {
 		name = "GFX_report_event_picture_smomo"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_smomo.png"
 	}
-	
-	
-	###
 	spriteType = {
 		name = "GFX_COU_event_109"
 		texturefile = "gfx/event_pictures/COU/COU_109.tga"
@@ -699,6 +696,17 @@ spriteTypes = {
 		name = "GFX_COU_event_302"
 		texturefile = "gfx/event_pictures/COU/COU_302.tga"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_srt_uprised"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_srt_uprised.png"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_COU_srt_banned"
+		texturefile = "gfx/event_pictures/COU_srt_banned.png"
+	}
+	
+	###
 	spriteType = {
 		name = "GFX_event_Canada_Worker"
 		texturefile = "gfx/event_pictures/Canada_Worker.tga"

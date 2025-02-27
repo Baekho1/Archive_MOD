@@ -552,11 +552,10 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-                political_power_gain = 0.15
-				war_support_factor = 0.1
-				consumer_goods_expected_value = -0.05
+                political_power_gain = -0.15
+				war_support_factor = 0.05
+				consumer_goods_expected_value = 0.05
 				industrial_capacity_factory = 0.05
-                compliance_gain = 0.01
             }
         }
     

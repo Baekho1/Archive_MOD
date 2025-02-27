@@ -4960,6 +4960,20 @@ news_event = { # 미엥지모제의 붕괴
     }
 }
 
+news_event = { # SRT 폐쇄
+    id = BA_news.129
+    title = BA_news.129.t
+    desc = BA_news.129.d
+    picture = GFX_news_event_COU_srt_banned
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 범부
+        name = BA_news.129.a
+    }
+}
+
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112
 #    title = BA_news.112.t

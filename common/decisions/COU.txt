@@ -547,8 +547,48 @@ COU_getout_rin_decision = {
 		
 		 remove_effect = {
 		     country_event = COU_event.23
+			 set_country_flag = COU_unlock_aoi_two
+		 }
+		 
+		 ai_will_do = {
+			base = 20000
 		 }
 	}
+	
+	COU_gets_aoi_second_letsgo = {
+
+		icon = meet_with_the_aoi
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+			 has_country_flag = COU_unlock_hwaeu_aoi_smomo
+			 has_country_flag = COU_unlock_aoi_two
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 10
+		 fire_only_once = yes
+		 #days_re_enable = 30
+		
+		 cost = 75
+		 
+		 modifier = {
+		     consumer_goods_expected_value = 0.1
+		 }
+		
+		 remove_effect = {
+		     country_event = COU_event.25
+		 }
+		 ai_will_do = {
+			base = 20000
+		 }
+	}
+	
 	COU_gets_smomo_cou_supports_kaya = {
 
 		icon = meet_with_the_smomo
@@ -576,6 +616,42 @@ COU_getout_rin_decision = {
 		
 		 remove_effect = {
 		     country_event = COU_event.24
+		 }
+		 ai_will_do = {
+			base = 20000
+		 }
+	}
+	
+	COU_dutch_law_letsgo = {
+
+		 icon = COU_the_duch_law
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+			 has_country_flag = COU_unlock_hwaeu_aoi_smomo
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 14
+		 fire_only_once = yes
+		 #days_re_enable = 30
+		
+		 cost = 75
+		 
+		 modifier = {
+		     political_power_factor = -0.1
+		 }
+		
+		 remove_effect = {
+		     country_event = COU_event.20
+		 }
+		 ai_will_do = {
+			base = 20000
 		 }
 	}
 	##린 탄핵 - 기간 연장하기
@@ -610,6 +686,9 @@ COU_getout_rin_decision = {
 		         days = 90
 	         }
 		 }
+		 ai_will_do = {
+			base = 20000
+		 }
 	}
 	
 	COU_use_fascist_militas = {
@@ -636,14 +715,18 @@ COU_getout_rin_decision = {
 		 custom_cost_text = decision_cost_CP_25 
 		 
 		 modifier = {
-		     
+		     stability_weekly = -0.01
 		 }
 		
 		 remove_effect = {
+		     add_political_power = 30
 		     add_days_mission_timeout = {
 			     mission = COU_rin_getout_kaya
-		         days = 45
+		         days = 50
 	         }
+		 }
+		 ai_will_do = {
+			base = 20000
 		 }
 	}
 	
@@ -668,13 +751,18 @@ COU_getout_rin_decision = {
 		 
 		 modifier = {
 		     industrial_capacity_factory = -0.05
+			 industrial_capacity_dockyard = -0.05
 		 }
 		
 		 remove_effect = {
+		     add_political_power = -25
 		     add_days_mission_timeout = {
 			     mission = COU_rin_getout_kaya
 		         days = 45
 	         }
+		 }
+		 ai_will_do = {
+			base = 20000
 		 }
 	}
     
