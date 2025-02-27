@@ -25,7 +25,7 @@
 #산업
  RED_road_to_south: "남부 도로 재정비"
  RED_road_to_south_desc: "남부의 도로는 북부에 비하여 비교적 잘 구축되어 있습니다. 약간의 정비만 거치면 아주 유용하게 쓸 수 있을 것입니다."
- RED_road_to_south_tt: "\n§R인구 포화§!를 완화하는 §Y£GFX_decision_icon_small 결정§!입니다."
+ RED_road_to_south_tt: "\n§R인구 포화§!를 §G완화§!하는 §Y£GFX_decision_icon_small 결정§!입니다."
  RED_road_to_north: "북부 도로 재개발"
  RED_road_to_north_desc: "북부는 남부에 비해 낙후되어 있음에도 불구하고, 오히려 이 때문에 더 많은 가능성을 품고 있는 땅입니다. 기초적인 교통망 구축은 지역 개발의 첫걸음이니, 지금 당장 재개발을 시작합시다."
  RED_land_research: "주거 문제의 해결"
@@ -283,7 +283,9 @@
  RED_unlock_operation_tt: "@TRM§Y[TRM.getadjective]§!을(를) 대상으로 하는 §Y작전§! §G사용가능§!:\n§Y위조지폐 발행§!, §Y생화학 무기 살포§!"
 
  BA_fake_money_gang: "위조지폐 발행"
- BA_fake_money_gang_desc: "ㅈㄱㄴ"
+ BA_fake_money_gang_desc: "우리는 위조지폐를 발행하여 상대 국가의 경제에 씻을 수 없는 피해를 줄 것입니다."
+ BA_corona_gang: "생화학 무기 살포"
+ BA_corona_gang_desc: "옛날에 이런 걸 금지했던 기억이 있는 거 같은데."
 
  RED_attack_sov: "소련 확보"
  RED_attack_sov_desc: "소비에트 지도자의 독선적인 행보는 우리의 혁명에 위협이 되고 있기에, 우리가 혁명을 완수하려면 이들과 맞서 싸워야 하는 건 기정사실이 되었습니다. 그리고 이제 때가 되었습니다."
@@ -885,6 +887,9 @@
  RED_central_labor_union: "노동사회공학연구소"
  
 #이벤트
+ RED_ordinary_event.1.t: "수염을 잃어버린 체리노"
+ RED_ordinary_event.1.d: "\"\""
+
  RED_racing_sov.1.t: "[ROOT.getname] 추적 실패"
  RED_racing_sov.1.d: "우리는 [ROOT.getname]을(를) 추적하고자 했지만 아쉽게도 실패했습니다."
  RED_racing_sov.1.t_1: "[RED.getname]의 [ROOT.getname] 추적 실패"
@@ -1638,7 +1643,6 @@
  RED_invite_aleksandr_shlyapnikov_dec: "$SOV_aleksandr_shlyapnikov$ 초빙"
 
 
-
  RED_seek_allies_dec_cat: "외교"
  RED_seek_allies_dec: "공산주의 동맹 모색"
  RED_anti_sov_diplo_dec: "반소비에트 동맹 모색"
@@ -1783,13 +1787,7 @@
  RED_zenkyoutou_cat_desc: "용역부장 §t야스모리 미노리§!의 영광스러운 §Y사회주의 혁명§! 이후 학원은 대격변을 맞이했습니다. 자치조직을 통한 적극적인 의견 수용과 발빠른 변화 및 대처로 학원을 변혁해나간 용역부는 점점 한계에 부딪히는데, 이때 외부로 시야를 돌린 그들이 발견한 것은 이 시대에 존재했던 §Y다양한 방법론들§!이었습니다. 이 중 프랑스 및 에스파냐 등지에서 활발히 활동했던 §R아나코-생디칼리슴§!과 유럽 각지에 퍼진 사회주의 학생조직에서 영감을 받아, 중앙위원회에서 집중 육성한 집단이 바로 §Y전학공투회의§!, 일명 §t'전공투'§!로 불리는 국제 사회주의 학생조직입니다.\n"
  #RED_zenkyoutou_cat_desc: "\n\n£GFX_RED_senkyoutou \n\n\n\n 용역부장 §t야스모리 미노리§!의 영광스러운 §Y사회주의 혁명§! 이후 학원은 대격변을 맞이했습니다. 자치조직을 통한 적극적인 의견 수용과 발빠른 변화 및 대처로 학원을 변혁해나간 용역부는 점점 한계에 부딪히는데, 이때 외부로 시야를 돌린 그들이 발견한 것은 이 시대에 존재했던 §Y다양한 방법론들§!이었습니다. 이 중 프랑스 및 에스파냐 등지에서 활발히 활동했던 §R아나코-생디칼리슴§!과 유럽 각지에 퍼진 사회주의 학생조직에서 영감을 받아, 중앙위원회에서 집중 육성한 집단이 바로 §Y전학공투회의§!, 일명 §t'전공투'§!로 불리는 국제 사회주의 학생조직입니다. \n\n이들은 미노리의 §R혁명적 행동주의§!와 아나코-생디칼리슴의 §t비타협적 혁명론§!을 융합하여 탄생한 혁명적 학생 단체로서, 기존 용역부가 가졌던 §Y행동주의적 혁명론§!을 그대로 계승하여, 전 세계 국가들을 대상으로 사회주의자들이 일으킨 전 세계 각국의 반정부 시위를 주도하고 있습니다.\n\n 현재 키보토스는 대전이를 겪으며 기존의 §Y사회 모순§!이 극한으로 떠오르고 있습니다. §t전공투§!는 각 키보토스 학원 현지의 혁명적인 학생들이 모여서 구성되어 §Y붉은겨울 중앙위원회§!에 의해 지원받으며 활동하고 있는 반자치적인 조직입니다. 이들은 학원 내에서의 §Y사상 학습 투쟁§!뿐만 아니라, §Y이념 강연 세미나§!, §t노동자-농민 집회§!에의 참여, §t동맹 휴학§!과 §R적색 테러§! 및 §R지하조직 확장§! 등 전국 단위 §Y혁명적 사회주의 운동§!을 지원하며 모든 키보토스 학원을 대상으로 그들 지배계급의 추악한 행태와 그로 인해 비롯된 사회 모순들을 대중들에게 적나라하게 폭로하고 있습니다.\n\n\n\n\n\n"
  RED_install_zkt: "[FROM.Controller.getname]에 현지 전공투 설립"
-
- RED_winter_war_cat: "겨울대전"
- RED_winter_war_cat_desc: ""
- RED_winter_war_fake_money: "위조지폐 발행"
- RED_winter_war_fake_money_tt: "§Y적국§!이 §Y위조지폐§!를 아직 §Y발행§!하지 않았습니다."
- RED_winter_war_biochemical: "생화학 무기 살포"
- RED_winter_war_biochemical_tt: "§Y적국§!이 §Y생화학무기§!를 아직 §Y살포§!하지 않았습니다."
+"
 
  RED_population_issue_cat: "인구 문제"
  RED_population_issue_cat_desc: " 수백만에 이르는 학생들이 대전이로 넘어왔습니다. 도시 행정이 포화되고, 현지인들과의 갈등이 심화되고 있습니다. 또한 시간을 지체한다면 잉여 식량이 바닥 나며 기근을 야기할지도 모른다는 행정가들의 경고가 이어지고 있습니다.\n 중점 §Y$RED_club_focus_2$§!을 통해 §R인구 포화§!를 완화하는 §Y£GFX_decision_icon_small 결정§!들을 해금하세요!"

@@ -895,7 +895,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 	enable = {
 		always = yes
 	}
-	icon = GFX_idea_portrait_RED_minori
+	icon = GFX_idea_portrait_RED_minori_for_idea
 
 	industrial_capacity_factory = RED_labor_party_dynamic_modifier_industrial_capacity_factory
 	industrial_capacity_dockyard = 0.03

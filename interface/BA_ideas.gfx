@@ -868,6 +868,10 @@ spriteTypes = {
 	}
 	#붉겨
 	spriteType = {
+		name = "GFX_idea_portrait_RED_minori_for_idea"
+		textureFile = "gfx/interface/advisors/RED/RED_minori.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_portrait_RED_minori"
 		textureFile = "gfx/interface/advisors/RED/RED_alshfl.dds"
 	}

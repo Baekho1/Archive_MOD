@@ -1078,7 +1078,7 @@ ideas = {
 
 		RED_technician = { #용역부
 
-			picture = portrait_RED_minori
+			picture = portrait_RED_minori_for_idea
 			
 			allowed = {
 				tag = RED

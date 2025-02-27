@@ -9,6 +9,17 @@ add_namespace = RED_marina_event
 add_namespace = RED_generic
 add_namespace = RED_tro_event
 add_namespace = RED_racing_sov
+add_namespace = RED_ordinary_event
+
+country_event = { #일상 이벤트 1, 수염을 잃어버린 체리노
+	id = RED_ordinary_event.1
+	title = RED_ordinary_event.1.t
+	desc = RED_ordinary_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ordinary_event.1.a
+	}
+}
 
 unit_leader_event = { #못찾음 (붉겨)
 	id = RED_racing_sov.1
@@ -4865,12 +4876,7 @@ country_event = { #겨울대전
 	is_triggered_only = yes
 	option = {
 		name = RED_event.30.a
-		RED = {
-			unlock_decision_category_tooltip = RED_winter_war_cat
-		}
-		TRM = {
-			unlock_decision_category_tooltip = RED_winter_war_cat
-		}
+		add_war_support = 0.05
 	}
 }
 country_event = { #생화학 무기

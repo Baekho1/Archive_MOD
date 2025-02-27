@@ -1,12 +1,10 @@
-
 BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
-	icon = GFX_operations_rescue_captured_operative
-	map_icon = GFX_operations_rescue_captured_operative_map
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
 	name = BA_fake_money_gang
 	desc = BA_fake_money_gang_desc
 	priority = 990
 	prevent_captured_operative_to_die = yes
-
 
 	days = 35
 	network_strength = 40
@@ -20,6 +18,9 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 		tag = RED
 		FROM = {
 			tag = TRM
+			NOT = {
+				has_idea = RED_fake_money
+			}
 		}
 	}
 
@@ -27,8 +28,9 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 		has_completed_focus = RED_infiltrate_trm
 	}
 
-	requirements = {
-		has_war_with = FROM
+	equipment = {
+		infantry_equipment = 1000
+		support_equipment = 500
 	}
 
 
@@ -41,13 +43,122 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 
 	outcome_execute = { # SCOPE_OPERATION
 		FROM = {
-			add_ideas = RED_fake_money
+			country_event = RED_event.29
 		}
 	}
 
 	outcome_potential = {
 		FROM = {
 			add_ideas = RED_fake_money
+		}
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 25 }
+		infiltration_submarine = { base = 25 }
+		infiltration_paradrop = { 
+			base = 25 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		infiltration_diplomatic = {
+			base = 25
+			modifier = {
+				factor = 20
+				ROOT = { has_war = no }
+				FROM = {
+					has_war = no
+				}
+			}
+			modifier = {
+				FROM = {
+					has_war_with = ROOT
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = {
+		free_operative_free_in_transit = { base = 33 }
+		free_operative_liberate_camp = { base = 33 }
+		free_operative_smuggle_in_escape_gear = { base = 33 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 15 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 30 }
+		exfiltration_go_to_ground = { base = 30 }
+		exfiltration_submarine_pickup = { base = 25 }
+	}
+}
+BA_corona_gang = { ### 0 1/35 생화학 무기 살포
+	icon = GFX_operations_targeted_sabotage
+	map_icon = GFX_operations_targeted_sabotage_map
+	name = BA_corona_gang
+	desc = BA_corona_gang_desc
+	priority = 990
+	prevent_captured_operative_to_die = yes
+
+	days = 35
+	network_strength = 40
+	operatives = 2
+
+	visible = {
+		network_strength = {
+			target = FROM
+			value > 25
+		}
+		tag = RED
+		FROM = {
+			tag = TRM
+			NOT = {
+				has_idea = RED_biochemical
+			}
+		}
+	}
+
+	available = {
+		has_completed_focus = RED_infiltrate_trm
+		has_war_with = TRM
+	}
+
+	equipment = {
+		infantry_equipment = 1000
+		support_equipment = 500
+	}
+
+
+	equipment = {
+		
+	}
+	risk_chance = 0.1
+	experience = 2
+	cost_multiplier = 0 # we dont scale in cost for rescues
+
+	outcome_execute = { # SCOPE_OPERATION
+		FROM = {
+			country_event = RED_event.31
+		}
+	}
+
+	outcome_potential = {
+		FROM = {
+			add_ideas = RED_biochemical
 		}
 	}
 
