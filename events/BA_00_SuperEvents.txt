@@ -658,3 +658,29 @@ country_event = {	#미국 신질서 내전
 		name = BA_super.1.b
 	}
 }
+
+country_event = {	# 데카그라마톤 침공
+	id = BA_super.27
+	title = BA_super.27.t
+	desc = BA_super.27.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	option = {
+		name = BA_super.1.a
+		scoped_play_song = "BA_GEI_DEC_invasion"
+		set_country_flag = {
+			flag = BA_Super_Event_Visible
+			value = 27
+			days = 15
+		}
+	}
+	option = {
+		name = BA_super.1.b
+	}
+}

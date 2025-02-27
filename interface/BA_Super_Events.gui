@@ -167,6 +167,12 @@ guiTypes = {
             position = {x = 9 y = 68}
 			alwaystransparent = yes
         }
+        iconType = {
+            name = "BA_Super_Event_Image_BA_GEI_DEC"
+            spriteType = "GFX_sp_event_GEI_DEC"
+            position = {x = 9 y = 68}
+			alwaystransparent = yes
+        }
 
 
 

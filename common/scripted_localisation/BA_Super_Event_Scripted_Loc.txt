@@ -227,6 +227,16 @@ defined_text = {
         }
         localization_key = "sup_68_revolutions"
     }
+
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 27
+            }
+        }
+        localization_key = "sup_GEI_DEC"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_quote
@@ -455,6 +465,16 @@ defined_text = {
             }
         }
         localization_key = "sup_68_revolutions_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 27
+            }
+        }
+        localization_key = "sup_GEI_DEC_QUOTE"
     }
 }
 defined_text = {
@@ -685,6 +705,16 @@ defined_text = {
         }
         localization_key = "sup_68_revolutions_NAME"
     }
+
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_Visible
+                value = 27
+            }
+        }
+        localization_key = "sup_GEI_DEC_QUOTE_NAME"
+    }
 }
 defined_text = {
     name = get_BA_Super_Event_remark
@@ -913,6 +943,16 @@ defined_text = {
             }
         }
         localization_key = "sup_68_revolutions_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = {
+                flag = BA_Super_Event_GEI_DEC
+                value = 27
+            }
+        }
+        localization_key = "sup_GEI_DEC_REMARK"
     }
 }
 defined_text = {

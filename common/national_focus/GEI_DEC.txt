@@ -68,7 +68,7 @@ focus_tree = {
 		icon = GFX_GEI_DEC_automatic_factory
 
 		x = 2
-		y = 2
+		y = 1
         relative_position_id = GEI_DEC_Duty
 
 		cost = 1
@@ -113,6 +113,7 @@ focus_tree = {
 			add_war_support = 0.15
 			add_stability = 0.05
 			add_manpower = 30000
+			add_ideas = GEI_DEC_otomaton
 		}
 	}
 
@@ -253,7 +254,7 @@ focus_tree = {
 		icon = GFX_GEI_ghost_signal
 
 		x = 1
-		y = 1
+		y = 2
         relative_position_id = GEI_DEC_no_name_gods
 
 		cost = 1
@@ -277,13 +278,20 @@ focus_tree = {
 						tag = GEI
 					}
 				}
-				add_stability = -0.15
-				add_war_support = -0.15
+
+				add_timed_idea = {
+				idea = GEI_DEC_riot_ideas
+				days = 365
+			}
 				add_opinion_modifier = {
 					target = GEI
-					modifier = GEI_hostile_status
+					modifier = GEI_DEC_hostile_ai
 				}
 			}
+
+			add_stability = -0.10
+			add_war_support = -0.10
+
 			news_event = { id = BA_news.127 hours = 6 }
 			add_manpower = 200000
 			
@@ -295,13 +303,13 @@ focus_tree = {
 		id = GEI_DEC_god_knows
 		icon = GFX_GEI_DEC_gods_knows
 
-		x = -2
+		x = 0
 		y = 2
-        relative_position_id = GEI_DEC_Duty
+        relative_position_id = GEI_DEC_metal
 
 		cost = 1
-        prerequisite = { focus = GEI_DEC_Duty}
-		prerequisite = { focus = GEI_DEC_ghost_signal}
+        prerequisite = { focus = GEI_DEC_metal}
+
 		
 
 		available = {
@@ -365,12 +373,12 @@ focus_tree = {
 		id = GEI_DEC_metal
 		icon = GFX_GEI_DEC_metal
 
-		x = 0
+		x = -2
 		y = 1
-        relative_position_id = GEI_DEC_last_question
+        relative_position_id = GEI_DEC_Duty
 
 		cost = 1
-        prerequisite = { focus = GEI_DEC_last_question}
+        prerequisite = { focus = GEI_DEC_Duty}
 		
 
 		available = {
@@ -392,10 +400,10 @@ focus_tree = {
 
 		x = 2
 		y = 2
-        relative_position_id = GEI_DEC_metal
+        relative_position_id = GEI_DEC_last_question
 
 		cost = 1
-        prerequisite = { focus = GEI_DEC_metal}
+        prerequisite = { focus = GEI_DEC_last_question}
 		prerequisite = { focus = GEI_DEC_ghost_signal}
 		
 
@@ -408,6 +416,25 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			news_event = { id = BA_news.128 hours = 3}
+
+			every_country = {
+				limit = {
+					NOT = {
+						kivotos_tag = no
+						tag = GEI
+					}
+				}
+
+				add_timed_idea = {
+				idea = GEI_DEC_riot_riot_ideas
+				days = 365
+			}
+				add_opinion_modifier = {
+					target = GEI
+					modifier = GEI_DEC_hostile_ai
+				}
+			}
 			
 		}
 	}

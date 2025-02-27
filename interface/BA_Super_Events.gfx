@@ -121,6 +121,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	spriteType = {
+		name = "GFX_sp_event_GEI_DEC"
+		texturefile = "gfx/super_events/GEI_DEC_invasion.png"
+		legacy_lazy_load = no
+	}
+
 	##### 기본 세팅
 	spriteType = {
 		name = "GFX_blue_sp_event_window"

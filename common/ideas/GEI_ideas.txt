@@ -1532,20 +1532,85 @@ ideas = {
 			}
 
 			modifier = {
-				mobilization_speed = 0.5
-				training_time_factor = -0.1
+				mobilization_speed = -0.5
+				training_time_factor = +1
 				ai_focus_aggressive_factor = 3
-				justify_war_goal_time = -1
-				ai_desired_divisions_factor = 7.5
-				no_supply_grace = 100
+				#justify_war_goal_time = -1
 				attrition = -0.2
-				modifier_army_sub_unit_halo_infantry_attack_factor = 0.1
-                modifier_army_sub_unit_halo_infantry_defence_factor = 0.1
-				army_defence_factor = 0.05
-                army_attack_factor = 0.05
+				modifier_army_sub_unit_halo_infantry_attack_factor = 0.3
+                modifier_army_sub_unit_halo_infantry_defence_factor = 0.3
 			}
 
 			cancel_if_invalid = no
 		}
+
+		GEI_DEC_otomaton = {
+
+			picture = GFX_idea_GEI_erosion_army
+
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.2
+                army_attack_factor = 0.2
+				no_supply_grace = 300
+				ai_desired_divisions_factor = 7.5
+				army_strength_factor = 0.5
+
+			}
+
+			cancel_if_invalid = no
+		}
+
+		GEI_DEC_riot_ideas = { # 로봇시위
+            picture = GFX_idea_generic_secret_police
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = -0.1
+				production_factory_start_efficiency_factor = -0.1
+            }
+        }
+
+		GEI_DEC_riot_riot_ideas = { # 로봇폭동
+            picture = GFX_idea_generic_secret_police
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = -0.2
+				production_factory_start_efficiency_factor = -0.2
+            }
+        }
 	}
 }

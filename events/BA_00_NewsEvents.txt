@@ -4911,10 +4911,60 @@ news_event = { # 유령신호
 			tag = GEI
         }
     }
-    option = { #재미있군!
+    option = { # 그들에게 도대체 무슨 일이 일어난거죠?
         name = BA_news.127.b
         trigger = {
 			NOT = { tag = GEI }
+        }
+    }
+}
+
+news_event = { # 키보토스 전역에서 발생한 소요사태
+    id = BA_news.128
+    title = BA_news.128.t
+    desc = BA_news.128.d
+    picture = GFX_GEI_DEC_riot
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 때가 되었다. 
+        name = BA_news.128.a
+        trigger = {
+			tag = GEI
+        }
+
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 27
+					days = 15
+				}
+			}
+		}
+    }
+    option = { # 그들에게 도대체 무슨 일이 일어난거죠?
+        name = BA_news.128.b
+        trigger = {
+			NOT = { tag = GEI }
+			hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_night_on_bald_mountain"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 27
+					days = 15
+				}
+			}
+		}
         }
     }
 }
