@@ -16,6 +16,7 @@ HEU_aru_persona_decision_category = {
 	}
 	
 	HEU_aru_persona_schedule_buy = {
+		icon = GFX_decision_eng_install_government
 
 		#visible = {
 		#	check_variable = { global.aru_schedule_point < 6 }
@@ -55,6 +56,7 @@ HEU_aru_persona_decision_category = {
 	}
 
 	HEU_aru_persona_schedule_buy_2 = {
+		icon = GFX_decision_eng_install_government
 
 		visible = {
 			check_variable = { global.aru_schedule_point < 6 }
@@ -82,6 +84,7 @@ HEU_aru_persona_decision_category = {
 	}
 
 	HEU_aru_persona_wisdom = {
+		icon = GFX_decision_eng_trade_unions_support
 
 		available = { 
 			check_variable = { global.aru_schedule_point > 0 } 
@@ -156,6 +159,7 @@ HEU_aru_persona_decision_category = {
 	}
 	
 	HEU_aru_persona_kindness = {
+		icon = GFX_decision_generic_fundraising
 
 		available = { 
 			check_variable = { global.aru_schedule_point > 0 } 
@@ -230,6 +234,7 @@ HEU_aru_persona_decision_category = {
 	}
 	
 	HEU_aru_persona_resolution = {
+		icon = GFX_decision_generic_reorganize_irregulars
 
 		available = { 
 			check_variable = { global.aru_schedule_point > 0 } 
@@ -304,6 +309,7 @@ HEU_aru_persona_decision_category = {
 	}
 	
 	HEU_aru_persona_charisma = {
+		icon = GFX_decision_SWI_dismiss_council
 
 		available = { 
 			check_variable = { global.aru_schedule_point > 0 } 
@@ -5392,53 +5398,53 @@ HEU_german_reunification_war_decision_category = {
 		}
 	}
 	
-	HEU_west_germanic_unity_declaration = {
-		priority = 10
-
-		icon = GFX_decision_Gehenna_Emblem
-
-		available = {
-			#NOT = { has_completed_focus = HEU_germany_union }
-			#NOT = { country_exists = GEM }
-			controls_state = 55
-		}
-
-		visible = {
-			#NOT = { has_completed_focus = HEU_germany_union }
-		}
-
-		fire_only_once = yes
-
-		ai_will_do = { base = 100 } #
-
-		cost = 0
-
-		complete_effect = {
-			add_war_support = 0.05
-			set_cosmetic_tag = HEU_west_germanic_union
-			add_state_core = 56
-			add_state_core = 59
-			add_state_core = 57
-			add_state_core = 55
-			add_state_core = 51
-			add_state_core = 978
-			add_state_core = 987
-			add_state_core = 990
-			add_state_core = 42
-			add_state_core = 50
-			add_state_core = 52
-			add_state_core = 53
-			add_state_core = 54
-			set_global_flag = HEU_victory_west_germanic_union
-			country_event = { id = HEU_event.229 }
-			hidden_effect = {
-				country_event = { id = HEU.flavor_event.51 days = 7 }
-				country_event = { id = HEU.flavor_event.52 days = 14 }
-				country_event = { id = HEU.flavor_event.53 days = 21 }
-				country_event = { id = HEU.flavor_event.46 days = 30 }
-			}
-		}
-	}
+#	HEU_west_germanic_unity_declaration = {
+#		priority = 10
+#
+#		icon = GFX_decision_Gehenna_Emblem
+#
+#		available = {
+#			#NOT = { has_completed_focus = HEU_germany_union }
+#			#NOT = { country_exists = GEM }
+#			controls_state = 55
+#		}
+#
+#		visible = {
+#			#NOT = { has_completed_focus = HEU_germany_union }
+#		}
+#
+#		fire_only_once = yes
+#
+#		ai_will_do = { base = 100 } #
+#
+#		cost = 0
+#
+#		complete_effect = {
+#			add_war_support = 0.05
+#			set_cosmetic_tag = HEU_west_germanic_union
+#			add_state_core = 56
+#			add_state_core = 59
+#			add_state_core = 57
+#			add_state_core = 55
+#			add_state_core = 51
+#			add_state_core = 978
+#			add_state_core = 987
+#			add_state_core = 990
+#			add_state_core = 42
+#			add_state_core = 50
+#			add_state_core = 52
+#			add_state_core = 53
+#			add_state_core = 54
+#			set_global_flag = HEU_victory_west_germanic_union
+#			country_event = { id = HEU_event.229 }
+#			hidden_effect = {
+#				country_event = { id = HEU.flavor_event.51 days = 7 }
+#				country_event = { id = HEU.flavor_event.52 days = 14 }
+#				country_event = { id = HEU.flavor_event.53 days = 21 }
+#				country_event = { id = HEU.flavor_event.46 days = 30 }
+#			}
+#		}
+#	}
 	
 	HEU_german_annex_core_elsass_lothringen_states = {
 		priority = 1
@@ -6090,4 +6096,112 @@ HEU_story_archive = {
 			factor = 0
 		}
 	}
+}
+
+HEU_aru_internet_overdose_decision_category = {
+
+	HEU_aru_internet_overdose_the_last_time = {
+
+		icon = GFX_decision_revolt
+
+		activation = {
+			has_country_flag = HEU_damian_internet_flag
+		}
+
+		cancel_trigger = {
+			has_completed_focus = HEU_pro_gehenna_route_ending
+		}
+
+		available = {
+			has_completed_focus = HEU_pro_gehenna_route_ending
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		is_good = no
+		fire_only_once = yes
+
+		selectable_mission = no
+
+		days_mission_timeout = 1000
+
+		timeout_effect = {
+			custom_effect_tooltip = HEU_aru_internet_overdose_the_last_time_tt
+			hidden_effect = {
+				country_event = { id = HEU_event.261 }
+			}
+		}
+	}
+
+	HEU_aru_internet_overdose_collecting_keystone = {
+
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		activation = {
+			has_country_flag = HEU_damian_internet_flag
+			check_variable = { benriya_keystones < 4 }
+		}
+
+		cancel_trigger = {
+			OR = {
+				check_variable = { benriya_keystones = 4 }
+				check_variable = { benriya_keystones > 4 }
+			}
+		}
+		available = {
+			OR = {
+				check_variable = { benriya_keystones = 4 }
+				check_variable = { benriya_keystones > 4 }
+			}
+		}
+
+		ai_will_do = { 
+			factor = 100 
+		}
+
+		is_good = no
+		fire_only_once = no
+
+		selectable_mission = no
+
+		days_mission_timeout = 250
+
+		timeout_effect = {
+			add_to_variable = { benriya_keystones = 1 }
+
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { benriya_keystones = 1 } }
+					swap_ideas = {
+						remove_idea = HEU_anti_68_revolution_1
+						add_idea = HEU_anti_68_revolution_2
+					}
+				}
+				else_if = {
+					limit = { check_variable = { benriya_keystones = 2 } }
+					swap_ideas = {
+						remove_idea = HEU_anti_68_revolution_2
+						add_idea = HEU_anti_68_revolution_3
+					}
+				}
+				else_if = {
+					limit = { check_variable = { benriya_keystones = 3 } }
+					swap_ideas = {
+						remove_idea = HEU_anti_68_revolution_3
+						add_idea = HEU_anti_68_revolution_4
+					}
+				}
+				else_if = {
+					limit = { check_variable = { benriya_keystones = 4 } }
+					swap_ideas = {
+						remove_idea = HEU_anti_68_revolution_4
+						add_idea = HEU_anti_68_revolution_5
+					}
+				}
+			}
+		}
+	}
+
 }

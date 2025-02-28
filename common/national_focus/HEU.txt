@@ -3034,7 +3034,7 @@ focus_tree = {
 				}
 			}
 
-			add_stability = 0.2
+			add_stability = 0.1
 
 			unlock_decision_tooltip = HEU_aru_GSC_annex_core_east_belgium_states
 			unlock_decision_tooltip = HEU_aru_GSC_annex_core_west_belgium_states
@@ -3163,6 +3163,46 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEU_GSC_president_rikuhachima_GSC_annex
+		
+		relative_position_id = HEU_GSC_president_rikuhachima
+
+		icon = GFX_COU_in_the_darkness
+
+		prerequisite = { 
+			focus = HEU_GSC_president_rikuhachima_2
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = -2
+		y = 2
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			COU = {
+				COU_KAYA = {
+					set_nationality = HEU
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = HEU_pro_gehenna_route_ending
 		
 		relative_position_id = HEU_GSC_president_rikuhachima
@@ -3177,26 +3217,30 @@ focus_tree = {
 			factor = 100
 		}
 
+		select_effect = {
+			country_event = { id = HEU_event.262 }
+		}
+
 		search_filters = {  }
 
-		cost = 6.00
+		cost = 10.00
 
 		x = 0
 		y = 2
 
 		available = {
-            custom_trigger_tooltip = {
-                tooltip = THIS_IS_WIP_TT
-			    has_country_flag = GAEBALJUNG
-            }
+            #custom_trigger_tooltip = {
+            #    tooltip = THIS_IS_WIP_TT
+			#    has_country_flag = GAEBALJUNG
+            #}
 			#custom_trigger_tooltip = {
 			#	tooltip = HEU_pro_gehenna_route_ending_1_tt
 			#	has_completed_focus = HEU_civil_partnership
 			#}
-			#custom_trigger_tooltip = {
-			#	tooltip = HEU_pro_gehenna_route_ending_2_tt
-			#	NOT = { country_exists = GEI }
-			#}
+			custom_trigger_tooltip = {
+				tooltip = HEU_pro_gehenna_route_ending_2_tt
+				NOT = { country_exists = GEI }
+			}
 			#custom_trigger_tooltip = {
 			#	tooltip = HEU_pro_gehenna_route_ending_3_tt
 			#	check_variable = { global.HEU_core_GSC > 3 }
@@ -3210,10 +3254,152 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = HEU_pro_gehenna_route_ending_tt
+			clr_country_flag = HEU_damian_internet_flag
 
 			add_victory_points = {
 				province = 6583
-				value = 25
+				value = 10
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_GSC_president_rikuhachima_ending_after_1
+		
+		relative_position_id = HEU_pro_gehenna_route_ending
+
+		icon = GFX_goal_HEU_fnrtpa
+
+		prerequisite = { 
+			focus = HEU_pro_gehenna_route_ending
+		}
+
+		allow_branch = {
+			has_country_flag = HEU_68_rev_ending_1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = -1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			custom_effect_tooltip = HEU_GSC_president_rikuhachima_ending_after_1_tt
+			hidden_effect = {
+				country_event = { id = HEU_event.277 days = 365 }
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_GSC_president_rikuhachima_ending_after_2
+		
+		relative_position_id = HEU_pro_gehenna_route_ending
+
+		icon = GFX_focus_generic_field_hostpital
+
+		prerequisite = { 
+			focus = HEU_pro_gehenna_route_ending
+		}
+
+		allow_branch = {
+			has_country_flag = HEU_68_rev_ending_1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 1
+		y = 1
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = HEU_GSC_president_rikuhachima_ending_after_3
+		
+		relative_position_id = HEU_pro_gehenna_route_ending
+
+		icon = GFX_focus_spa_the_spanish_miracle
+
+		prerequisite = { 
+			focus = HEU_GSC_president_rikuhachima_ending_after_1
+		}
+
+		prerequisite = { 
+			focus = HEU_GSC_president_rikuhachima_ending_after_2
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		search_filters = {  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					HEU_damian_kratzenberg = {
+						has_character_flag = HEU_true_damian_dead_flag
+					}
+				}
+				HEU_damian_kratzenberg = {
+					unit_leader_event = { id = HEU_event.279 }
+				}
+			}
+			else = {
+				HEU_damian_kratzenberg = {
+					unit_leader_event = { id = HEU_event.278 }
+				}
 			}
 		}
 	}
