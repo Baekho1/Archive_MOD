@@ -11,6 +11,10 @@ recruit_character = MEX_pablo_macias_valenzuela
 recruit_character = MEX_joaquin_amaro_dominguez
 recruit_character = MEX_juan_gonzalez_cabral
 recruit_character = MEX_francisco_luis_urquizo_benavides
+recruit_character = MEX_jose_antonio_urquiza
+recruit_character = MEX_pablo_gonzalez_garza
+recruit_character = MEX_marcelino_garcia_barragan
+recruit_character = MEX_agustin_olachea_aviles
 
 
 add_ideas = {
@@ -109,7 +113,6 @@ IF = {
 }
 
 recruit_character = MEX_lazaro_cardenas
-recruit_character = MEX_salvador_abascal
 recruit_character = MEX_adolfo_de_la_huerta
 recruit_character = MEX_dionisio_encina
 recruit_character = MEX_hernan_laborde

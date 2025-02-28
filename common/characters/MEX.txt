@@ -61,6 +61,25 @@ characters={
 		}
 	}
 
+	MEX_pablo_gonzalez_garza ={
+		name=MEX_pablo_gonzalez_garza
+		portraits={
+			army={
+				large="gfx/leaders/MEX/Portrait_MEX_ppablo_gonzalez_garza.png" #This is really a generic portrait
+				small="GFX_portrait_MEX_pablo_gonzalez_garza_small" #This is really a generic portrait
+			}
+		}
+		field_marshal ={
+			traits={ career_officer war_hero }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=714
+		}
+	}
+
 	MEX_joaquin_amaro_dominguez ={
 		name=MEX_joaquin_amaro_dominguez
 		portraits={
@@ -119,7 +138,61 @@ characters={
 			legacy_id=717
 		}
 	}
+
+	MEX_jose_antonio_urquiza={
+		name=MEX_jose_antonio_urquiza
+		portraits={
+			civilian={
+				large="gfx/leaders/MEX/Portrait_MEX_jose_antonio_urquiza.png"
+			}
+		}
+		country_leader={
+			desc = "MEX_urquiza_desc"
+			ideology= synarchism
+			traits={ }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_marcelino_garcia_barragan ={
+		name=MEX_marcelino_garcia_barragan
+		portraits={
+			army={
+				large="gfx/leaders/MEX/Portrait_MEX_marcelino_garcia_barragan.png" #This is really a generic portrait
+				small="GFX_portrait_MEX_marcelino_garcia_barragan" #This is really a generic portrait
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=716
+		}
+	}
 	
+	MEX_agustin_olachea_aviles ={
+		name=MEX_agustin_olachea_aviles
+		portraits={
+			army={
+				large="gfx/leaders/MEX/Portrait_MEX_agustin_olachea_aviles.png" #This is really a generic portrait
+				small="GFX_portrait_MEX_agustin_olachea_aviles" #This is really a generic portrait
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=716
+		}
+	}
+
 	####
 	####
 	####
@@ -128,14 +201,27 @@ characters={
 		name=MEX_salvador_abascal
 		portraits={
 			civilian={
-				large="GFX_portrait_MEX_Salvador_Abascal"
+				large="gfx/leaders/MEX/Portrait_MEX_salvador_abascal.png"
+				small="gfx/leaders/MEX/Advisor_MEX_salvador_abascal.png"
 			}
 		}
-		country_leader={
-			ideology= synarchism
-			traits={ fascist_militia_leader }
-			expire="1965.1.1.1"
-			id=-1
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_jose_vasconcelos
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_the_gold_shirts
+				}
+			}
+			traits = {
+				syncretic_revanchist 
+			}
 		}
 	}
 
