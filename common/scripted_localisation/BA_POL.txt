@@ -17,6 +17,11 @@ defined_text = { #결속도
 				value = 80
 				compare = less_than_or_equals
 			}
+			check_variable = {
+				var = POL_solidarity_var
+				value = 60
+				compare = greater_than_or_equals
+			}
 		}
 		localization_key = "POL_solidarity_text_high"
 	}
@@ -27,6 +32,11 @@ defined_text = { #결속도
 				value = 60
 				compare = less_than_or_equals
 			}
+			check_variable = {
+				var = POL_solidarity_var
+				value = 40
+				compare = greater_than_or_equals
+			}
 		}
 		localization_key = "POL_solidarity_text_mid"
 	}
@@ -36,6 +46,11 @@ defined_text = { #결속도
 				var = POL_solidarity_var
 				value = 40
 				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = POL_solidarity_var
+				value = 20
+				compare = greater_than_or_equals
 			}
 		}
 		localization_key = "POL_solidarity_text_low"

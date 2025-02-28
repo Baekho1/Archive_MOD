@@ -3022,6 +3022,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				news_event = { id = HEU_news.6 hours = 3 }
+				country_event = { id = HEU_event.257 days = 30 }
 			}
 
 			set_cosmetic_tag = HEU_GSC
