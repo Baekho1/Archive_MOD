@@ -1378,4 +1378,16 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_total_assault_kaitenger.dds"
         legacy_lazy_load = no
     }
+
+	spriteType = {
+        name = "GFX_HEU_idol_aru_daisuki"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_idol_aru_daisuki.dds"
+        legacy_lazy_load = no
+    }
+
+	spriteType = {
+        name = "GFX_HEU_hiori_kazano_icon"
+        texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_hiori_kazano_icon.dds"
+        legacy_lazy_load = no
+    }
 }
