@@ -3392,14 +3392,10 @@ focus_tree = {
 						has_character_flag = HEU_true_damian_dead_flag
 					}
 				}
-				HEU_damian_kratzenberg = {
-					unit_leader_event = { id = HEU_event.279 }
-				}
+				country_event = { id = HEU_event.279 }
 			}
 			else = {
-				HEU_damian_kratzenberg = {
-					unit_leader_event = { id = HEU_event.278 }
-				}
+				country_event = { id = HEU_event.278 }
 			}
 		}
 	}
