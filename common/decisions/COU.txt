@@ -519,6 +519,37 @@ COU_getout_rin_decision = {
 			  add_command_power = -5
 		 }
 	}
+	COU_demand_establish_humans_land = {
+
+		icon = generic_confiscation
+
+		 allowed = { 
+		    original_tag = COU
+		    always = no
+		 }
+		
+		 available = { 
+			 has_completed_focus = COU_establishment_of_human_rights_committee
+		 }
+		
+		 days_mission_timeout = 60
+		
+		 is_good = no
+				
+		 activation = { always = no }
+		
+		 timeout_effect = {
+		      add_stability = -0.05
+			  add_political_power = -150
+			  custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		      add_to_variable = { var = COU_rin_percen value = 10 }
+		 }
+		 
+		 complete_effect = {
+		    custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		    add_to_variable = { var = COU_rin_percen value = 10 }
+		 }
+	}
 	##실장 2명 회유 
 	COU_gets_aoi_first_eco_crisis = {
 
@@ -616,6 +647,7 @@ COU_getout_rin_decision = {
 		
 		 remove_effect = {
 		     country_event = COU_event.24
+			 set_country_flag = SMOMO_AGREE
 		 }
 		 ai_will_do = {
 			base = 20000
@@ -632,7 +664,8 @@ COU_getout_rin_decision = {
 		
 		 visible = { 
 		     has_country_flag = COU_flag_acivate_norin_decision
-			 has_country_flag = COU_unlock_hwaeu_aoi_smomo
+			 has_country_flag = AOI_AGREED
+			 has_country_flag = SMOMO_AGREE
 		 }
 		
 		 is_good = no
@@ -649,6 +682,10 @@ COU_getout_rin_decision = {
 		
 		 remove_effect = {
 		     country_event = COU_event.20
+			 add_popularity = { 
+		        ideology = fascism
+		        popularity = 0.15
+		     }
 		 }
 		 ai_will_do = {
 			base = 20000
@@ -720,6 +757,10 @@ COU_getout_rin_decision = {
 		
 		 remove_effect = {
 		     add_political_power = 30
+			 add_popularity = { 
+		        ideology = fascism
+		        popularity = 0.05
+		     }
 		     add_days_mission_timeout = {
 			     mission = COU_rin_getout_kaya
 		         days = 50

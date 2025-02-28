@@ -92,7 +92,38 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
-			country_event = COU_event.27
+			custom_effect_tooltip = available_political_advisor
+	        show_ideas_tooltip = COU_jan_baars
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+	focus = { #SRT 처우, 카야루트시 따로 처리할거임 
+		id = COU_focus_reestablish_srt
+		icon = GFX_SRT_focus_karbarlog
+		prerequisite = { focus = COU_establishment_of_human_rights_committee }
+		x = 0
+		y = 2
+		relative_position_id = COU_establishment_of_emergency_measures_committee
+		cost = 8
+		available = {
+			NOT = { has_completed_focus = COU_focus_in_the_darkness }
+			has_country_flag = COU_flag_fucking_srt
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+		     clr_country_flag = SRT_BANNED
+			 custom_effect_tooltip = COU_tooltip_one_more_chance
+			 country_event = COU_event.28
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 
@@ -697,11 +728,14 @@ focus_tree = {
         icon = GFX_COU_unarrest_mussert
         x = 1
         y = 2
-        cost = 5
+        cost = 3
 		prerequisite = { focus = COU_focus_treaty_of_amsterdam }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		    add_command_power = 10
+			country_event = COU_event.30
+		    custom_effect_tooltip = available_political_advisor
+	        show_ideas_tooltip = COU_alfred_heighton
         }
 		ai_will_do = {
 			base = 100
@@ -714,11 +748,12 @@ focus_tree = {
         icon = GFX_focus_BEL_degrelle
         x = 3
         y = 2
-        cost = 5
+        cost = 3
 		prerequisite = { focus = COU_focus_treaty_of_amsterdam }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		    custom_effect_tooltip = available_political_advisor
+	        show_ideas_tooltip = COU_leon_degrelle
         }
 		ai_will_do = {
 			base = 100

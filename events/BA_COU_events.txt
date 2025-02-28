@@ -498,6 +498,7 @@ country_event = {
 		    activate_mission = COU_rin_getout_kaya
 			activate_mission = COU_increasing_the_crisis
 			country_event = { id = COU_event.19 days = 10 }
+			country_event = { id = COU_event.29 days = 2 }
 		}
 	}
 
@@ -532,6 +533,8 @@ country_event = {
 		add_stability = -0.1
 		clr_country_flag = UNLOCK_KAYA_CONTENTS
 		clr_country_flag = COU_flag_acivate_norin_decision
+		set_country_flag = KAYA_ARREST
+		custom_effect_tooltip = COU_KAYA_ARREST_tt
 		custom_effect_tooltip = COU_tooltip_remove_kaya_contents
 		hidden_effect = { #collapse focus tree
 			 load_focus_tree = {
@@ -879,6 +882,7 @@ country_event = {
 		custom_effect_tooltip = COU_tooltip_aoi_okay
 		clr_country_flag = COU_deagree_out_rin
 		set_country_flag = COU_agree_out_rin
+		set_country_flag = AOI_AGREED
 		custom_effect_tooltip = COU_tooltip_aoi_accept_yoon
 		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
 		add_to_variable = { var = COU_rin_percen value = 10 }
@@ -925,6 +929,70 @@ country_event = {
 		name = COU_event.27.a
 		custom_effect_tooltip = COU_tooltip_the_new_days_of_humans
 		add_political_power = 25
+	}
+}
+
+##SRT 복귀
+country_event = { 
+	id = COU_event.28
+	title = COU_event.28.t
+	desc = COU_event.28.desc
+	picture = GFX_report_event_she_srt_integration
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.28.a
+		custom_effect_tooltip = COU_tooltip_srt_got_backed_and
+	}
+}
+
+##인권보장실 설립 요구 
+country_event = { 
+	id = COU_event.29
+	title = COU_event.29.t
+	desc = COU_event.29.desc
+	picture = GFX_report_event_generic_croatia_handshake
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.29.a
+		activate_mission = COU_demand_establish_humans_land
+		#custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		#add_to_variable = { var = COU_rin_percen value = 10 }
+	}
+}
+
+##중점2개 
+country_event = { 
+	id = COU_event.30
+	title = COU_event.30.t
+	desc = COU_event.30.desc
+	picture = GFX_report_event_picture_the_du
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.30.a
+		custom_effect_tooltip = COU_tooltip_letsgo_fascists
+		add_popularity = { 
+		    ideology = fascism
+		    popularity = 0.1
+		}
+		#event 추가 연계
 	}
 }
 

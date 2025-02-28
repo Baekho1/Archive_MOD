@@ -586,14 +586,14 @@ characters={
 				front_line_general
 				career_officer
 				trait_cautious
-				defensive_doctrine
+				inspirational_leader
 			}
 			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
-			attack_skill=3
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
 		}
 		country_leader={
 			desc=COU_YUKINO_desc
@@ -724,6 +724,7 @@ characters={
 				COU_SRT_special_academy
 				career_officer
 				commando 
+				camouflage_expert
 			}
 			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=3
@@ -890,7 +891,12 @@ characters={
 			   visible = {
 			  	   has_completed_focus = COU_establishment_of_human_rights_committee
 			   }
-			   cost = 100
+			   cost = 150
+			   on_add = {
+					owner = {
+						country_event = { id = COU_event.27 }
+					}
+			    }
 		    }
 			portraits = {
 				civilian = {
@@ -973,7 +979,7 @@ characters={
 			    idea_token = COU_leon_degrelle
 			    allowed  = { tag  = COU }
 			    available = {
-    				has_completed_focus = COU_reduction_of_administrative_committee_authority 
+    				#has_completed_focus = COU_reduction_of_administrative_committee_authority 
 				    has_completed_focus = COU_focus_contact_with_flandern
 				}
 			    traits  = { BEL_belgian_inquisitor }
@@ -1112,7 +1118,7 @@ characters={
 				tag  = COU
 			}
 			available = { 
-			    has_completed_focus = COU_reduction_of_administrative_committee_authority 
+			    #has_completed_focus = COU_reduction_of_administrative_committee_authority 
 			    has_completed_focus = COU_focus_unarrest_mussert
 			}
 			traits  = {
@@ -1135,7 +1141,6 @@ characters={
 				tag  = COU
 			}
 			available = {
-				has_completed_focus = COU_focus_unarrest_mussert
 				has_completed_focus = COU_reduction_of_administrative_committee_authority 
 			}
 			traits  = {

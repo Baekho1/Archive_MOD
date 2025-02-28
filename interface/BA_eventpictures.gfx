@@ -709,10 +709,30 @@ spriteTypes = {
 		name = "GFX_report_event_picture_the_du"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_the_du.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_kaya_3"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_kaya_3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_pen_and_papeer"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_pen_and_papeer.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_rabbit_uprised"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_rabbit_uprised.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COU_srt_divided"
+		texturefile = "gfx/event_pictures/COU/report_event_COU_srt_divided.png"
+	}
 	
 	spriteType = {
 		name = "GFX_news_event_COU_srt_banned"
 		texturefile = "gfx/event_pictures/COU_srt_banned.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_COU_kaya"
+		texturefile = "gfx/event_pictures/news_event_COU_kaya.png"
 	}
 	
 	###
