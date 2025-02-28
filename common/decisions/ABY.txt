@@ -16116,7 +16116,7 @@ ABY_descision_category_pay_dept = {
 	
 	ABY_descision_pay_dept = {
 		priority = 1
-		days_remove = 365
+		days_remove = 180
 
 		cost = 0
 		
@@ -16134,7 +16134,7 @@ ABY_descision_category_pay_dept = {
 		}    
 
 		modifier = {
-			political_power_gain = -0.1
+			political_power_gain = -0.05
 		}      
 
 		complete_effect = {
@@ -19751,6 +19751,9 @@ ABY_descision_category_debug = {
 							state = 268
 							state = 413
 							state = 421
+							state = 344
+							state = 835
+							state = 836
 						}
 					}
 					transfer_state_to = EGY
@@ -19829,6 +19832,9 @@ ABY_descision_category_debug = {
 							state = 268
 							state = 413
 							state = 421
+							state = 344
+							state = 835
+							state = 836
 						}
 					}
 					transfer_state_to = EGY
@@ -21877,19 +21883,18 @@ ABY_descision_category_invite_balkan = {
 		icon = GFX_decision_eng_trade_unions_support
 		highlight_states = {
 			highlight_state_targets = {
-				AND = {
-					is_core_of = ITA
-					NOT = {
-						OR = {
-							state = 159
-							state = 160
-							state = 850
-							state = 39
-							state = 736
-							state = 852
-						}
-					}
-				}
+				state = 735
+				state = 993
+				state = 158
+				state = 114
+				state = 161
+				state = 162
+				state = 157
+				state = 2
+				state = 849
+				state = 117
+				state = 156
+				state = 115
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -21916,24 +21921,18 @@ ABY_descision_category_invite_balkan = {
 
 		available = {
 			has_country_flag = ABY_flag_divide_ITA
-			every_state = {
-				limit = {
-					AND = {
-						is_core_of = ITA
-						NOT = {
-							OR = {
-								state = 159
-								state = 160
-								state = 850
-								state = 39
-								state = 736
-								state = 852
-							}
-						}
-					}
-				}
-				is_controlled_by_ROOT_or_subject = yes
-			}
+			735 = {is_controlled_by_ROOT_or_subject = yes}
+			993 = {is_controlled_by_ROOT_or_subject = yes}
+			158 = {is_controlled_by_ROOT_or_subject = yes}
+			114 = {is_controlled_by_ROOT_or_subject = yes}
+			161 = {is_controlled_by_ROOT_or_subject = yes}
+			162 = {is_controlled_by_ROOT_or_subject = yes}
+			157 = {is_controlled_by_ROOT_or_subject = yes}
+			2 = {is_controlled_by_ROOT_or_subject = yes}
+			849 = {is_controlled_by_ROOT_or_subject = yes}
+			117 = {is_controlled_by_ROOT_or_subject = yes}
+			156 = {is_controlled_by_ROOT_or_subject = yes}
+			115 = {is_controlled_by_ROOT_or_subject = yes}
 		}
 
 		cost = 0

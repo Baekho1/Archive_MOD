@@ -5663,7 +5663,6 @@ ideas = {
 				surrender_limit = -0.35
 				drift_defence_factor = -0.7
 				resistance_target_on_our_occupied_states = -0.2
-				non_core_manpower = 0.2
 			}
 		}
 		ABY_idea_two_01 = {
@@ -5679,7 +5678,38 @@ ideas = {
 				surrender_limit = -0.3
 				drift_defence_factor = -0.6
 				resistance_target_on_our_occupied_states = -0.1
-				non_core_manpower = 0.2
+			}
+		}
+		ABY_idea_two_02 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.4
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+				conscription_factor = -0.05
+			}
+		}
+		ABY_idea_two_03 = {
+			allowed_civil_war = {
+                always = yes
+            }
+			removal_cost = -1 
+			# picture = 
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrender_limit = -0.3
+				drift_defence_factor = -0.7
+				resistance_target_on_our_occupied_states = -0.2
+				conscription_factor = 0.05
 			}
 		}
 		ABY_idea_two_000 = {

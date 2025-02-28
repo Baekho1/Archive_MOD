@@ -342,11 +342,11 @@ form_arabia_category = {
 		}
 
 		available = {
-			controls_state = 550
+			controls_state = 708
 		}
 
 		remove_effect = {
-			550 = { add_core_of = ROOT }
+			708 = { add_core_of = ROOT }
 		}
 
 		ai_will_do = {
@@ -385,6 +385,8 @@ form_arabia_category = {
 
 		available = {
 			controls_state = 844
+			controls_state = 835
+			controls_state = 836
 			controls_state = 559
 			controls_state = 269
 		}
@@ -393,6 +395,8 @@ form_arabia_category = {
 			844 = { add_core_of = ROOT }
 			559 = { add_core_of = ROOT }
 			269 = { add_core_of = ROOT }
+			835 = { add_core_of = ROOT }
+			836 = { add_core_of = ROOT }
 		}
 
 		ai_will_do = {
