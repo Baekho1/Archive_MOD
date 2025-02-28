@@ -497,7 +497,7 @@ RED_invite_trotskists_dec_cat = {
 				}
 				swap_ideas = {
 					remove_idea = RED_exile_committee_ivr
-					add_idea = RED_exile_committee_alk_yev_ivr
+					add_idea = RED_exile_committee_yev_ivr
 				}
 			}
 			else_if = {
@@ -6464,6 +6464,9 @@ RED_bop_category = {
 				id = RED_power_balance
 				value = -0.05
 			}
+		}
+		visible = {
+			has_completed_focus = RED_long_live_the_workers_government
 		}
 		cost = 10
 		days_re_enable = 10

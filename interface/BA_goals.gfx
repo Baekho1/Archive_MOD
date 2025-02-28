@@ -304,6 +304,14 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_RED_momiji"
+		texturefile = "gfx/interface/goals/RED/RED_momiji.tga"
+	}
+	SpriteType = {
+		name = "GFX_RED_pudding"
+		texturefile = "gfx/interface/goals/RED/RED_pudding_icon.tga"
+	}
+	SpriteType = {
 		name = "GFX_RED_free_soviets"
 		texturefile = "gfx/interface/goals/RED/RED_free_soviets.tga"
 	}
