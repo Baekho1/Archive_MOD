@@ -1986,8 +1986,6 @@ ABY_two_dynamic_modifier = {
 	}
 	icon = ETH_conservative_high_command
 
-	non_core_manpower = 0.2
-
 	political_power_factor = ABY_var_political_power_factor
 	stability_factor = ABY_var_stability_factor
 	war_support_factor = ABY_var_war_support_factor

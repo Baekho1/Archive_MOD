@@ -516,12 +516,14 @@ characters={
 		name = SHA_secret_agent
 		gender = female
 		portraits={
-			civilian={
-				large= GFX_Portrait_BlueArchive_SHA_Generic_1
-			}
-			army={
-				large= GFX_Portrait_BlueArchive_SHA_Generic_1
-			}
+			civilian={ large= GFX_Portrait_BlueArchive_SHA_Generic_1 }
+			army={ large= GFX_Portrait_BlueArchive_SHA_Generic_1 }
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1.1"
+			id = -1
+			traits = {  }
 		}
 	}
 

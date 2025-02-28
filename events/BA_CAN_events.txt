@@ -302,21 +302,6 @@ country_event = { #망명정부 승인
 			}
 		}
 	}
-	option = { #그없
-		name = IMP_event.13.b
-		ai_chance = {
-			base = 10
-			modifier = {
-				is_historical_focus_on = no
-				factor = 3
-			}
-		}
-		add_political_power = 150
-		add_war_support = 0.05
-		ENG = {
-			country_event = { id = IMP_event.2 hours = 8 }
-		}
-	}
 }
 country_event = { #캐나다 독립전쟁
 	id = IMP_event.14

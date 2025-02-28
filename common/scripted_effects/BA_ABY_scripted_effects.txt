@@ -275,7 +275,15 @@ ABY_69_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			69 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -284,8 +292,13 @@ ABY_69_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			69 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_69_complete
 			if = {
@@ -469,7 +482,15 @@ ABY_9_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			9 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -478,8 +499,13 @@ ABY_9_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			9 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_9_complete
 			if = {
@@ -663,7 +689,15 @@ ABY_74_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			74 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -672,8 +706,13 @@ ABY_74_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			74 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_74_complete
 			if = {
@@ -857,7 +896,15 @@ ABY_72_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			72 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -866,8 +913,13 @@ ABY_72_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			72 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_72_complete
 			if = {
@@ -1051,7 +1103,15 @@ ABY_75_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			75 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -1060,8 +1120,13 @@ ABY_75_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			75 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_75_complete
 			if = {
@@ -1245,7 +1310,15 @@ ABY_972_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			972 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -1254,8 +1327,13 @@ ABY_972_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			972 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_972_complete
 			if = {
@@ -1439,7 +1517,15 @@ ABY_986_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			986 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -1448,8 +1534,13 @@ ABY_986_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			986 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_986_complete
 			if = {
@@ -1633,7 +1724,15 @@ ABY_975_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			975 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -1642,8 +1741,13 @@ ABY_975_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			975 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_975_complete
 			if = {
@@ -1827,7 +1931,15 @@ ABY_4_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			4 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -1836,8 +1948,13 @@ ABY_4_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			4 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_4_complete
 			if = {
@@ -2021,7 +2138,15 @@ ABY_976_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			976 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -2030,8 +2155,13 @@ ABY_976_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			976 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_976_complete
 			if = {
@@ -2215,7 +2345,15 @@ ABY_152_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			152 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -2224,8 +2362,13 @@ ABY_152_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			152 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_152_complete
 			if = {
@@ -2409,7 +2552,15 @@ ABY_153_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			153 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -2418,8 +2569,13 @@ ABY_153_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			153 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_153_complete
 			if = {
@@ -2603,7 +2759,15 @@ ABY_848_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			848 = {
-				add_compliance = 50
+				add_core_of = ABY
+			}
+			add_to_variable = {ABY_var_conscription_factor = -0.05}
+			add_to_variable = {ABY_var_surrender_limit = -0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_02
+				}
 			}
 		}
 		else_if = {
@@ -2612,8 +2776,13 @@ ABY_848_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			848 = {
-				add_core_of = ABY
+			add_to_variable = {ABY_var_conscription_factor = 0.05}
+			add_to_variable = {ABY_var_surrender_limit = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_two_00
+					add_idea = ABY_idea_two_03
+				}
 			}
 			set_country_flag = ABY_flag_848_complete
 			if = {

@@ -1273,6 +1273,56 @@ ideas = {
 				fascism_drift = 0.1
 			}
 		}
+		
+		# 항공기 생산 집중
+		SHA_domestic_air_production = {
+			allowed = {
+				tag = SHA
+			}
+			picture = man_five_year_plan_air
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05 
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		# 항공기 생산 집중 - 소비재 디버프 없음
+		SHA_domestic_air_production_2 = {
+			name = SHA_domestic_air_production
+			allowed = {
+				tag = SHA
+			}
+			picture = man_five_year_plan_air
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05 
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
 
 
 

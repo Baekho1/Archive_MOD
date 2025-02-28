@@ -3355,7 +3355,13 @@ country_event = { #영광스러운 승리의 날
 
 	picture = GFX_report_event_aru_rikuhachima_senaka
 
-    is_triggered_only = yes
+    fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		controls_state = 55
+		has_completed_focus = HEU_doubt_pandemonium_society
+	}
 
 	option = { 
 		name = HEU_event.229.a 
@@ -3369,8 +3375,30 @@ country_event = { #영광스러운 승리의 날
 			news_event = {
 				id = HEU_news.16
 			}
-		}
+			
+			add_war_support = 0.05
+			set_cosmetic_tag = HEU_west_germanic_union
 
+			add_state_core = 56
+			add_state_core = 59
+			add_state_core = 57
+			add_state_core = 55
+			add_state_core = 51
+			add_state_core = 978
+			add_state_core = 987
+			add_state_core = 990
+			add_state_core = 42
+			add_state_core = 50
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 54
+			set_global_flag = HEU_victory_west_germanic_union
+
+			country_event = { id = HEU.flavor_event.51 days = 7 }
+			country_event = { id = HEU.flavor_event.52 days = 14 }
+			country_event = { id = HEU.flavor_event.53 days = 21 }
+			country_event = { id = HEU.flavor_event.46 days = 30 }
+		}
 	}
 
 }
@@ -4029,6 +4057,453 @@ country_event = { #울지 마
 
 	}
 }
+
+country_event = { #카자노 히오리 양에게
+	id = HEU_event.257
+	title = HEU_event.257.t
+	desc = HEU_event.257.desc
+	picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.257.a 
+		ai_chance = {
+			base = 10
+		}
+
+		country_event = { id = HEU_event.258 days = 4 }
+	}
+}
+
+country_event = { #안녕하세요, 선생님
+	id = HEU_event.258
+	title = HEU_event.258.t
+	desc = HEU_event.258.desc
+	picture = GFX_COU_sky1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.258.a 
+		ai_chance = {
+			base = 10
+		}
+
+		country_event = { id = HEU_event.259 hours = 8 }
+	}
+}
+
+country_event = { #크래프트 챔버
+	id = HEU_event.259
+	title = HEU_event.259.t
+	desc = HEU_event.259.desc
+	picture = GFX_event_mega_cities_COU
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.259.a 
+		ai_chance = {
+			base = 10
+		}
+
+		country_event = { id = HEU.flavor_event.75 hours = 8 }
+	}
+}
+
+country_event = { #이대로 보낼 수 없어요
+	id = HEU_event.260
+	title = HEU_event.260.t
+	desc = HEU_event.260.desc
+	picture = GFX_event_mega_cities_COU
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.260.a 
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #다미안 크라첸베르크의 죽음
+	id = HEU_event.261
+	title = HEU_event.261.t
+	desc = HEU_event.261.desc
+	picture = GFX_COU_sky1
+
+	immediate = {
+		HEU_damian_kratzenberg = {
+			set_character_flag = HEU_true_damian_dead_flag
+		}
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.261.a 
+		ai_chance = {
+			base = 10
+		}
+
+		set_portraits = {
+			character = HEU_damian_kratzenberg
+			army = { 
+				large ="gfx/leaders/HEU/HEU_hiori_kazano.dds" 
+				small= "gfx/interface/advisors/HEU/HEU_hiori_kazano.dds"
+			}
+			civilian = { 
+				large ="gfx/leaders/HEU/HEU_hiori_kazano.dds" 
+				small= "gfx/interface/advisors/HEU/HEU_hiori_kazano.dds"
+			}
+		}
+
+		HEU_damian_kratzenberg = {
+			set_character_name = {
+				name = HEU_hiori_kazano
+			}
+		}
+	}
+}
+
+country_event = { #승전
+	id = HEU_event.262
+	title = HEU_event.262.t
+	desc = HEU_event.262.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = HEU_pro_gehenna_route_ending
+			
+			remove_ideas = HEU_anti_68_revolution_1
+			remove_ideas = HEU_anti_68_revolution_2
+			remove_ideas = HEU_anti_68_revolution_3
+			remove_ideas = HEU_anti_68_revolution_4
+			remove_ideas = HEU_anti_68_revolution_5
+		}
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.262.a 
+		ai_chance = {
+			base = 10
+		}
+
+		if = {
+			limit = {
+				HEU_damian_kratzenberg = {
+					has_character_flag = HEU_true_damian_dead_flag
+				}
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU_event.263 }
+			}
+		}
+		else = {
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU_event.270 }
+			}
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 1
+	id = HEU_event.263
+	title = HEU_event.263.t
+	desc = HEU_event.263.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.263.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.264 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 2
+	id = HEU_event.264
+	title = HEU_event.264.t
+	desc = HEU_event.264.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.264.a 
+		
+		HEU_damian_kratzenberg = {
+			unit_leader_event = { id = HEU_event.265 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 3
+	id = HEU_event.265
+	title = HEU_event.265.t
+	desc = HEU_event.265.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.265.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.266 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 4
+	id = HEU_event.266
+	title = HEU_event.266.t
+	desc = HEU_event.266.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.266.a 
+		
+		HEU_damian_kratzenberg = {
+			unit_leader_event = { id = HEU_event.267 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 5
+	id = HEU_event.267
+	title = HEU_event.267.t
+	desc = HEU_event.267.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.267.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.268 }
+		}
+	}
+}
+
+unit_leader_event = { #보편적인 기적의 시발점
+	id = HEU_event.268
+	title = HEU_event.268.t
+	desc = HEU_event.268.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.268.a 
+		
+		hidden_effect = {
+			country_event = { id = HEU_event.269 days = 3 }
+		}
+	}
+}
+
+country_event = { #앞으로의 이야기
+	id = HEU_event.269
+	title = HEU_event.269.t
+	desc = HEU_event.269.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.269.a 
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = HEU_game_victory_tt
+		set_country_flag = HEU_68_rev_ending_1
+		mark_focus_tree_layout_dirty = yes
+		
+		set_country_leader_description = {
+			desc = HEU_aru_fascist_leader_68_happy_ending_desc
+		}
+
+		hidden_effect = {
+			news_event = { id = HEU_news.26 hours = 4 }
+		}
+	}
+}
+
+### 해피엔딩 (3년 타임리미트)
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 1
+	id = HEU_event.270
+	title = HEU_event.270.t
+	desc = HEU_event.270.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.263.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.271 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 2
+	id = HEU_event.271
+	title = HEU_event.271.t
+	desc = HEU_event.271.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.271.a 
+		
+		HEU_damian_kratzenberg = {
+			unit_leader_event = { id = HEU_event.272 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 3
+	id = HEU_event.272
+	title = HEU_event.272.t
+	desc = HEU_event.272.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.272.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.273 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 4
+	id = HEU_event.273
+	title = HEU_event.273.t
+	desc = HEU_event.273.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.273.a 
+		
+		HEU_damian_kratzenberg = {
+			unit_leader_event = { id = HEU_event.274 }
+		}
+	}
+}
+
+unit_leader_event = { #그리고 모든 기적이 시작되는 곳 - 페이즈 5
+	id = HEU_event.274
+	title = HEU_event.274.t
+	desc = HEU_event.274.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.274.a 
+		
+		HEU_aru = {
+			unit_leader_event = { id = HEU_event.275 }
+		}
+	}
+}
+
+unit_leader_event = { #보편적인 기적의 시발점
+	id = HEU_event.275
+	title = HEU_event.275.t
+	desc = HEU_event.275.desc
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.275.a 
+		
+		hidden_effect = {
+			country_event = { id = HEU_event.276 days = 3 }
+		}
+	}
+}
+
+country_event = { #앞으로의 이야기
+	id = HEU_event.276
+	title = HEU_event.276.t
+	desc = HEU_event.276.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.276.a 
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = HEU_game_victory_tt
+		set_country_flag = HEU_68_rev_ending_1
+		mark_focus_tree_layout_dirty = yes
+		
+		set_country_leader_description = {
+			desc = HEU_aru_fascist_leader_68_happy_ending_desc
+		}
+
+		hidden_effect = {
+			news_event = { id = HEU_news.26 hours = 4 }
+		}
+	}
+}
+
+country_event = { #베르크 추모공원
+	id = HEU_event.277
+	title = HEU_event.277.t
+	desc = HEU_event.277.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.277.a 
+		ai_chance = {
+			base = 10
+		}
+		add_ideas = HEU_way_to_forgiveness_1
+	}
+}
+
+country_event = { #다미안 크라첸베르크
+	id = HEU_event.278
+	title = HEU_event.278.t
+	desc = HEU_event.278.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.278.a 
+		ai_chance = {
+			base = 10
+		}
+		retire_character = HEU_damian_kratzenberg
+
+		SHE_Arona = {
+			set_nationality = HEU
+		}
+	}
+}
+
+country_event = { #다미안 크라첸베르크
+	id = HEU_event.279
+	title = HEU_event.279.t
+	desc = HEU_event.279.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.279.a 
+		ai_chance = {
+			base = 10
+		}
+
+		set_country_flag = HEU_damian_general_flag
+	}
+}
+
 
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
@@ -5447,6 +5922,400 @@ country_event = { #룩셈부르크의 첫 인터넷 사이트
 	}
 }
 
+country_event = { #직업 찾기
+	id = HEU.flavor_event.66
+	title = HEU.flavor_event.66.t
+	desc = HEU.flavor_event.66.desc
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.66.a 
+
+	}
+}
+
+country_event = { #나라 망했다!
+	id = HEU.flavor_event.67
+	title = HEU.flavor_event.67.t
+	desc = HEU.flavor_event.67.desc
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.67.a 
+
+	}
+}
+
+country_event = { #룩셈부르크 계승법 논의
+	id = HEU.flavor_event.68
+	title = HEU.flavor_event.68.t	
+	
+	desc = {
+		text = HEU.flavor_event.68.desc.a
+		trigger = { 
+			AND = {
+				HEU_gkfnzk = {
+					NOT = { has_character_flag = HEU_aru_bride }
+				}
+				HEU_ancmzl = {
+					NOT = { has_character_flag = HEU_aru_bride }
+				}
+				HEU_zkdyzh = {
+					NOT = { has_character_flag = HEU_aru_bride }
+				}
+			}
+		}
+	}
+	
+	desc = {
+		text = HEU.flavor_event.68.desc.b
+		trigger = { 
+			OR = {
+				HEU_gkfnzk = {
+					has_character_flag = HEU_aru_bride
+				}
+				HEU_ancmzl = {
+					has_character_flag = HEU_aru_bride
+				}
+				HEU_zkdyzh = {
+					has_character_flag = HEU_aru_bride
+				}
+			}
+		}
+	}
+
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.68.a 
+
+	}
+
+	option = { 
+		name = HEU.flavor_event.68.b
+
+	}
+}
+
+country_event = { #AI 아루 시험 작동
+	id = HEU.flavor_event.70
+	title = HEU.flavor_event.70.t
+	desc = HEU.flavor_event.70.desc
+	picture = GFX_event_mega_cities_HEU
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.70.a 
+
+	}
+}
+
+country_event = { #인터넷과 함께 하는 68혁명!
+	id = HEU.flavor_event.71
+	title = HEU.flavor_event.71.t
+	desc = HEU.flavor_event.71.desc
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.71.a 
+
+	}
+}
+
+country_event = { #인터넷과 함께 하는 반혁명
+	id = HEU.flavor_event.72
+	title = HEU.flavor_event.72.t
+	desc = HEU.flavor_event.72.desc
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.72.a 
+
+	}
+}
+
+country_event = { #혁명에 반대하는 것도 혁명이다
+	id = HEU.flavor_event.73
+	title = HEU.flavor_event.73.t
+	desc = HEU.flavor_event.73.desc
+	picture = GFX_report_event_luxembourg_city
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.73.a 
+
+	}
+}
+
+country_event = { #SNS 카자노 히오리입니다!!
+	id = HEU.flavor_event.74
+	title = HEU.flavor_event.74.t
+	desc = HEU.flavor_event.74.desc
+	picture = GFX_event_none_picture
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.74.a 
+
+	}
+}
+
+country_event = { #다미안 선생님
+	id = HEU.flavor_event.75
+	title = HEU.flavor_event.75.t
+	desc = HEU.flavor_event.75.desc
+	picture = GFX_event_mega_cities_COU
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.75.a 
+
+		set_country_flag = HEU_damian_internet_flag
+		custom_effect_tooltip = HEU_damian_internet_tt
+
+		hidden_effect = {
+			country_event = { id = HEU.flavor_event.81 hours = 8 }
+			add_ideas = HEU_anti_68_revolution_1
+
+			#### 흥신소/다미안 플레이버들 ####
+			
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.76 days = 150 } #질문
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.86 days = 250 } #2D를 넘어 3D로
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.77 days = 300 } #유대볼셰비즘자본가
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.78 days = 450 } #걱정
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.79 days = 600 } #선생
+			}
+			HEU_damian_kratzenberg = {
+				unit_leader_event = { id = HEU.flavor_event.80 days = 750 } #건강
+			}
+			country_event = { id = HEU_event.260 days = 900 }
+			
+			# 아루
+			HEU_aru = {
+				unit_leader_event = { id = HEU.flavor_event.83 days = 35 } #카자노 히오리 뒷조사
+			}
+			HEU_aru = {
+				unit_leader_event = { id = HEU.flavor_event.84 days = 365 } #잠 방송
+			}
+		}
+		
+	}
+}
+
+unit_leader_event = { #질문
+	id = HEU.flavor_event.76
+	title = HEU.flavor_event.76.t
+	desc = HEU.flavor_event.76.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.76.a 
+
+	}
+}
+
+unit_leader_event = { #유대볼셰비즘자본가
+	id = HEU.flavor_event.77
+	title = HEU.flavor_event.77.t
+	desc = HEU.flavor_event.77.desc
+
+    is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+	option = { 
+		name = HEU.flavor_event.77.a 
+
+	}
+}
+
+unit_leader_event = { #걱정
+	id = HEU.flavor_event.78
+	title = HEU.flavor_event.78.t
+	desc = HEU.flavor_event.78.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.78.a 
+
+	}
+}
+
+unit_leader_event = { #선생
+	id = HEU.flavor_event.79
+	title = HEU.flavor_event.79.t
+	desc = HEU.flavor_event.79.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.79.a 
+
+	}
+}
+
+unit_leader_event = { #건강
+	id = HEU.flavor_event.80
+	title = HEU.flavor_event.80.t
+	desc = HEU.flavor_event.80.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.80.a 
+
+	}
+}
+
+country_event = { #인방을 하라고?!
+	id = HEU.flavor_event.81
+	title = HEU.flavor_event.81.t
+	desc = HEU.flavor_event.81.desc
+	picture = GFX_report_event_aru_rikuhachima
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.81.a 
+
+		hidden_effect = {
+			news_event = { id = HEU_news.25 hours = 4 }
+			HEU_aru = {
+				unit_leader_event = { id = HEU.flavor_event.82 days = 3 } #리쿠하치마 아루 데뷔 방송
+			}
+		}
+	}
+}
+
+unit_leader_event = { #리쿠하치마 아루 데뷔 방송
+	id = HEU.flavor_event.82
+	title = HEU.flavor_event.82.t
+	desc = HEU.flavor_event.82.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.82.a 
+
+	}
+}
+
+unit_leader_event = { #카자노 히오리 뒷조사
+	id = HEU.flavor_event.83
+	title = HEU.flavor_event.83.t
+	desc = HEU.flavor_event.83.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.83.a 
+
+	}
+}
+
+unit_leader_event = { #잠 방송
+	id = HEU.flavor_event.84
+	title = HEU.flavor_event.84.t
+	desc = HEU.flavor_event.84.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.84.a 
+
+	}
+}
+
+country_event = { #색채와의 전쟁
+	id = HEU.flavor_event.85
+	title = HEU.flavor_event.85.t
+	desc = HEU.flavor_event.85.desc
+	picture = GFX_report_event_Problem_Solver_68
+
+    fire_only_once = yes
+
+	trigger = {
+		original_tag = HEU
+		has_war_with = GEI
+		has_country_flag = HEU_damian_internet_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = { 
+		name = HEU.flavor_event.85.a 
+		ai_chance = {
+			base = 10
+		}
+
+		add_war_support = 0.05
+	}
+}
+
+unit_leader_event = { #2D를 넘어 3D로!
+	id = HEU.flavor_event.86
+	title = HEU.flavor_event.86.t
+	desc = HEU.flavor_event.86.desc
+
+	trigger = {
+		has_country_flag = HEU_damian_internet_flag
+	}
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.86.a 
+
+	}
+}
+
 country_event = { #흥신소의 일상
 	id = HEU.persona_event.100
 	title = HEU.persona_event.100.t
@@ -6692,7 +7561,7 @@ news_event = {
 	id = HEU_news.2
 	title = HEU_news.2.t
 	desc = HEU_news.2.desc
-	picture = GFX_news_event_generic_parliament
+	picture = GFX_news_event_HEU_news_68
 	
 	major = yes
 	is_triggered_only = yes
@@ -6842,7 +7711,7 @@ news_event = {
 	id = HEU_news.6
 	title = HEU_news.6.t
 	desc = HEU_news.6.desc
-	picture = GFX_news_event_generic_sign_treaty1
+	picture = GFX_news_event_HEU_news_aru_charisma
 	
 	major = yes
 	is_triggered_only = yes
@@ -7016,7 +7885,7 @@ news_event = {
 	id = HEU_news.12
 	title = HEU_news.12.t
 	desc = HEU_news.12.desc
-	picture = GFX_news_event_generic_sign_treaty2
+	picture = GFX_news_event_HEU_news_makoto
 	
 	major = yes
 	is_triggered_only = yes
@@ -7070,7 +7939,7 @@ news_event = {
 		}
 	}
 
-	picture = GFX_event_news_aru
+	picture = GFX_news_event_HEU_news_aru_dress
 	
 	major = yes
 	is_triggered_only = yes
@@ -7361,7 +8230,7 @@ news_event = {
 		}
 	}
 
-	picture = GFX_event_BA_news_16
+	picture = GFX_news_event_HEU_news_angry_mutsuki
 	
 	major = yes
 	is_triggered_only = yes
@@ -7383,6 +8252,39 @@ news_event = {
 
 	option = {
 		name = HEU_news.21.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 리쿠하치마 아루의 즉위식
+news_event = {
+	id = HEU_news.22
+	title = HEU_news.22.t
+	desc = HEU_news.22.desc
+	picture = GFX_news_event_HEU_news_aru_charisma
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.22.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.22.b
+		trigger = {
+			NOT = { tag = HEU }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = HEU_news.22.c
 		trigger = {
 			Kivotos_tag = no
 		}
@@ -7415,7 +8317,7 @@ news_event = {
 		}
 	}
 
-	picture = GFX_event_news_aru
+	picture = GFX_news_event_HEU_news_aru_dress
 	
 	major = yes
 	is_triggered_only = yes
@@ -7490,6 +8392,72 @@ news_event = {
 
 	option = {
 		name = HEU_news.24.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 총학생회 권력 투쟁
+news_event = {
+	id = HEU_news.25
+	title = HEU_news.25.t
+	desc = HEU_news.25.desc
+	picture = GFX_news_event_HEU_news_hiori_kazano
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.25.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.25.b
+		trigger = {
+			NOT = { tag = HEU }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = HEU_news.25.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 혼란이 종식된 총학생회 혁명위원회
+news_event = {
+	id = HEU_news.26
+	title = HEU_news.26.t
+	desc = HEU_news.26.desc
+	picture = GFX_news_event_HEU_news_hiori_kazano
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HEU_news.26.a
+		trigger = {
+			tag = HEU
+		}
+	}
+
+	option = {
+		name = HEU_news.26.b
+		trigger = {
+			NOT = { tag = HEU }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = {
+		name = HEU_news.26.c
 		trigger = {
 			Kivotos_tag = no
 		}

@@ -969,16 +969,12 @@ focus_tree = {
 				has_global_flag = TRINITY_WON_THE_GEHENNA
 			}
 		}
-        prerequisite = { focus = TRM_Library_Committee }
-		prerequisite = { focus = TRM_Trinity_socialism }
-		prerequisite = { focus = TRN_gyungje_hyu_ul_bub }
-		prerequisite = { focus = TRN_muchabyeol_jingbyeong }
 		ai_will_do = {
 			base = 4000
 		}
 		relative_position_id = TRM_Library_Committee
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		completion_reward = {
 			#country_event = { id = TRM_event.35 }
 			unlock_decision_category_tooltip = TRN_after_war_decisions

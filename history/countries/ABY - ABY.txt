@@ -95,8 +95,8 @@ set_variable = {ABY_industry_progress_var = 0}
 set_variable = {ABY_rebuild_progress_var = 0}
 set_variable = {ABY_unite_progress_var = 0}
 
-set_variable = {ABY_industry_cost_var = 50}
-set_variable = {ABY_rebuild_cost_var = 50}
+set_variable = {ABY_industry_cost_var = 60}
+set_variable = {ABY_rebuild_cost_var = 35}
 set_variable = {ABY_unite_cost_var = 50}
 set_variable = {ABY_government_cost_var = 75}
 set_variable = {ABY_government_var = 0}

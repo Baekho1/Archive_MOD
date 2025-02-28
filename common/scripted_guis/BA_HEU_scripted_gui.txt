@@ -47,3 +47,11 @@ scripted_gui = {
 
 	}
 }
+
+scripted_gui = {
+	HEU_aru_internet_overdose_decision_ui = {
+		context_type = decision_category
+		window_name = "HEU_aru_internet_overdose_gui_window"
+		
+	}
+}
