@@ -80,17 +80,6 @@ country_event = {
 			long_name = SHA_Radical_party_long
 			name = SHA_Radical_party
 		}
-		SHA_secret_agent ={
-			add_country_leader_role = {
-				country_leader = {
-					ideology = fascism_ideology
-					expire = "1965.1.1.1"
-					id = -1
-					traits = {  }
-				}
-				promote_leader = yes
-			}
-		}
 	}
 }
 
@@ -294,6 +283,35 @@ unit_leader_event = {
 				cost = 75
 				traits = { army_chief_organizational_2 }
 			}
+		}
+	}
+}
+
+# 금의환향
+country_event = {
+	id = shafas.11
+	title = shafas.11.t
+	desc = shafas.11.d
+	picture = GFX_report_event_generic_italian_fascists
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.11.a
+		set_politics = { ruling_party = fascism }
+		set_party_name = {
+			ideology = fascism
+			long_name = SHA_Shintani_KAI_party_long
+			name = SHA_Shintani_KAI_party
+		}
+		BA_ban_democratic_effect = yes
+		BA_ban_communism_effect = yes
+		BA_ban_neutrality_effect = yes
+		if = {
+			limit = {
+				has_character = SHA_KAI
+			}
+			promote_character = SHA_KAI
 		}
 	}
 }

@@ -13,7 +13,7 @@
 
 focus_tree = {
 	id = SHA_focus_tree
-	continuous_focus_position = { x = 1000 y = 1000 } 
+	continuous_focus_position = { x = 700 y = 1600 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -24,35 +24,35 @@ focus_tree = {
 	}
 	default = no
 
-	shortcut = {
-		name = SHA_economic_path_shortcut
-		target = SHA_teleological_planning 
-		scroll_wheel_factor = 1
-	}
-
-	shortcut = {
-		name = SHA_militray_path_shortcut
-		target = SHA_address_the_army
-		scroll_wheel_factor = 1
-	}
-	
-	shortcut = {
-		name = SHA_dip_path_shortcut
-		target = SHA_Shanhaijing_fact
-		scroll_wheel_factor = 1
-	}
-
-	shortcut = {
-		name = SHA_non_history_path_shortcut
-		target = SHA_Austrian_oppression_continues 
-		scroll_wheel_factor = 0.75
-	}
-	
-	shortcut = {
-		name = SHA_history_path_shortcut
-		target = SHA_Kisaki_Suppression 
-		scroll_wheel_factor = 0.65
-	}
+#	shortcut = {
+#		name = SHA_economic_path_shortcut
+#		target = SHA_teleological_planning 
+#		scroll_wheel_factor = 1
+#	}
+#
+#	shortcut = {
+#		name = SHA_militray_path_shortcut
+#		target = SHA_address_the_army
+#		scroll_wheel_factor = 1
+#	}
+#	
+#	shortcut = {
+#		name = SHA_dip_path_shortcut
+#		target = SHA_Shanhaijing_fact
+#		scroll_wheel_factor = 1
+#	}
+#
+#	shortcut = {
+#		name = SHA_non_history_path_shortcut
+#		target = SHA_Austrian_oppression_continues 
+#		scroll_wheel_factor = 0.75
+#	}
+#	
+#	shortcut = {
+#		name = SHA_history_path_shortcut
+#		target = SHA_Kisaki_Suppression 
+#		scroll_wheel_factor = 0.65
+#	}
 	
 
 	##############
@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Austrian_oppression_continues
 		icon = GFX_focus_GER_anschluss
-		x = 50
+		x = 30
 		y = 0
 		cost = 10
 
@@ -318,15 +318,23 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
 					}
-					mark_focus_tree_layout_dirty = yes
 				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -434,7 +442,6 @@ focus_tree = {
 							SHA_T4a
 						}
 					}
-					promote_leader = yes
 				}
 			}
 		}
@@ -554,22 +561,13 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = SHA_Shintani_Kai_Follow
-			fascism > 0.45
+			fascism > 0.40
 		}
 		bypass = { }
 
 		relative_position_id = SHA_Kisaki_Suppression
 
 		completion_reward = {
-			set_politics = { ruling_party = fascism }
-			set_party_name = {
-				ideology = fascism
-				long_name = SHA_Shintani_KAI_party_long
-				name = SHA_Shintani_KAI_party
-			}
-			BA_ban_democratic_effect = yes
-			BA_ban_communism_effect = yes
-			BA_ban_neutrality_effect = yes
 			if = { 
 				limit = { has_idea = SHA_Peking_Opera }
 				remove_ideas = SHA_Peking_Opera
@@ -579,6 +577,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = shanews.03 days = 04 }
 			}
+			country_event = shafas.11
 		}
 	}
 
@@ -910,21 +909,23 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_conservative_revolution_tt
-			set_temp_variable = {
-				var = conservative_revolution_var
-				value = party_popularity@fascism
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = conservative_revolution_var
-			}
-			multiply_temp_variable = {
-				var = conservative_revolution_var
-				value = -1
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = conservative_revolution_var
+			hidden_effect = {
+				set_temp_variable = {
+					var = conservative_revolution_var
+					value = party_popularity@fascism
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = conservative_revolution_var
+				}
+				multiply_temp_variable = {
+					var = conservative_revolution_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = conservative_revolution_var
+				}
 			}
 			if = { 
 				limit = { 
@@ -1741,7 +1742,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line 
 			unlock_decision_category_tooltip = SHA_invade_of_Hyakkiyako_cat
 			set_country_flag = SHA_invade_of_Hyakkiyako_flag
-			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_tt
+			custom_effect_tooltip = SHA_war_with_southern_kivotos_decision_tt
 			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_def_tt
 		}
 	}
@@ -2630,7 +2631,7 @@ focus_tree = {
 	focus = {
 		id = SHA_relief_work
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = -15
+		x = -20
 		y = 0
 		relative_position_id = SHA_Austrian_oppression_continues
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -2654,7 +2655,7 @@ focus_tree = {
 	focus = {
 		id = SHA_establish_the_SEZ
 		icon = GFX_goal_state_economy
-		x = 6
+		x = 9
 		y = 1
 		relative_position_id = SHA_relief_work
 		cost = 5
@@ -2848,7 +2849,7 @@ focus_tree = {
 	focus = {
 		id = SHA_austria_unemployment_relief
 		icon = GFX_focus_ETH_adopt_the_lira
-		x = -6
+		x = -3
 		y = 1
 		relative_position_id = SHA_relief_work
 		cost = 5
@@ -2889,7 +2890,7 @@ focus_tree = {
 
 		search_filters = { }
 
-		cost = 7
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2946,7 +2947,7 @@ focus_tree = {
 
 		search_filters = { }
 
-		cost = 7
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3418,7 +3419,7 @@ focus_tree = {
 	focus = {
 		id = SHA_architechtual_advancements
 		icon = GFX_focus_GER_kdf_wagen
-		x = 0
+		x = 3
 		y = 1
 		relative_position_id = SHA_relief_work
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3815,8 +3816,8 @@ focus_tree = {
 	focus = {
 		id = SHA_address_the_army
 		icon = GFX_goal_SHA_Army_Training
-		x = -30
-		y = 0
+		x = -21
+		y = 6
 		relative_position_id = SHA_Austrian_oppression_continues
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		cost = 3
@@ -4264,17 +4265,42 @@ focus_tree = {
 		}
 	}
 
+	# 장비개발부
+	focus = {
+		id = SHA_Equipment_Development_Department
+		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
+		x = -10
+		y = 1
+		relative_position_id = SHA_relief_work
+		search_filters = {  }
+		cost = 5
+
+		prerequisite = { focus = SHA_relief_work }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			unlock_military_industrial_organization_tooltip = mio:SHA_infantry_equipment_organization
+			mio:SHA_infantry_equipment_organization = {
+				add_mio_size = 1
+			}
+		}
+	}
+
 	# 현대화 전쟁
 	focus = {
 		id = SHA_military_production
 		icon = GFX_focus_generic_reorient_production
-		x = -9
+		x = 3
 		y = 1
-		relative_position_id = SHA_address_the_army
+		relative_position_id = SHA_Equipment_Development_Department
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 5
 
-		prerequisite = { focus = SHA_address_the_army }
+		prerequisite = { focus = SHA_Equipment_Development_Department }
 		mutually_exclusive = { }
 
 		available = { }
@@ -4293,31 +4319,6 @@ focus_tree = {
 				}
 			}
 			unlock_military_industrial_organization_tooltip = mio:SHA_tank_equipment_organization
-		}
-	}
-
-	# 장비개발부
-	focus = {
-		id = SHA_Equipment_Development_Department
-		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
-		x = 2
-		y = 0
-		relative_position_id = SHA_military_production
-		search_filters = {  }
-		cost = 5
-
-		prerequisite = { focus = SHA_address_the_army }
-		mutually_exclusive = { }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-			unlock_military_industrial_organization_tooltip = mio:SHA_infantry_equipment_organization
-			mio:SHA_infantry_equipment_organization = {
-				add_mio_size = 1
-			}
 		}
 	}
 
@@ -4375,6 +4376,33 @@ focus_tree = {
 				add_mio_size = 3
 				add_mio_funds = 500
 				add_mio_research_bonus = 0.1
+			}
+		}
+	}
+
+	# 부대 지원
+	focus = {
+		id = SHA_supporting_the_troops
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		relative_position_id = SHA_Mortar_Development_Department
+		search_filters = {  }
+		cost = 5
+
+		prerequisite = { focus = SHA_Mortar_Development_Department }
+		mutually_exclusive = { }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHA_supporting_the_troops
+				bonus = 0.25
+				uses = 2
+				category = support_tech
 			}
 		}
 	}
@@ -4497,46 +4525,17 @@ focus_tree = {
 	####공군####
 	###########
 
-	# 오스트리아 공군 긴빠이 대작전
-	focus = {
-		id = SHA_osterreichische_luftstreitkrafte
-		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
-		x = -17
-		y = 0
-		relative_position_id = SHA_address_the_army
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		cost = 3
-
-		prerequisite = { }
-		mutually_exclusive = {  }
-
-		available = { }
-		bypass = { }
-
-
-		completion_reward = {
-			air_experience = 50
-
-			add_tech_bonus = {
-				name = SHA_osterreichische_luftstreitkrafte
-				bonus = 0.75
-				uses = 2
-				category = air_equipment
-			}
-		}
-	}
-
 	# 국가항공국 설립
 	focus = {
 		id = SHA_National_Aviation_Administration
-		icon = GFX_focus_generic_air_bases
-		x = 0
-		y = 1
-		relative_position_id = SHA_osterreichische_luftstreitkrafte
+		icon = GFX_focus_generic_copy_plane_designs
+		x = -10
+		y = 0
+		relative_position_id = SHA_address_the_army
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		cost = 5
 
-		prerequisite = { focus = SHA_osterreichische_luftstreitkrafte }
+		prerequisite = { }
 		mutually_exclusive = {  }
 
 		available = { }
@@ -4550,6 +4549,35 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			
 			add_dynamic_modifier = { modifier = SHA_airforce }
+		}
+	}
+
+	# 오스트리아 공군 긴빠이 대작전
+	focus = {
+		id = SHA_osterreichische_luftstreitkrafte
+		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
+		x = 0
+		y = 1
+		relative_position_id = SHA_National_Aviation_Administration
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		cost = 3
+
+		prerequisite = { focus = SHA_National_Aviation_Administration }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			air_experience = 50
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = SHA_osterreichische_luftstreitkrafte
+				bonus = 0.75
+				uses = 2
+				category = air_equipment
+			}
 		}
 	}
 
@@ -4571,15 +4599,15 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			add_ideas = SHA_domestic_air_production
 		}
 	}
 
-	# 항공산업 부흥
+	# 항공 산업 투자
 	focus = {
-		id = SHA_aviation_industry_revival
+		id = SHA_aviation_industry_investment
 		icon = GFX_focus_SMB_purchase_aircraft
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SHA_focus_on_domestic_production
 		search_filters = { }
@@ -4594,6 +4622,22 @@ focus_tree = {
 
 		completion_reward = {
 
+			custom_effect_tooltip = SHA_airforce_change
+			add_to_variable = { 
+				SHA_airforce_industrial_capacity_factory = 0.05 
+				tooltip = industrial_capacity_factory_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			mio:SHA_SNAA_organization = {
+				add_mio_size = 2
+				add_mio_funds_gain_factor = 0.1
+				add_mio_research_bonus = 0.05
+			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				add_idea = SHA_domestic_air_production_2
+				remove_idea = SHA_domestic_air_production
+			}
 		}
 	}
 
@@ -4603,11 +4647,11 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter2
 		x = 1
 		y = 1
-		relative_position_id = SHA_aviation_industry_revival
+		relative_position_id = SHA_aviation_industry_investment
 		search_filters = { }
 		cost = 5
 
-		prerequisite = { focus = SHA_aviation_industry_revival }
+		prerequisite = { focus = SHA_aviation_industry_investment }
 		mutually_exclusive = { focus = SHA_Sauerwerke }
 
 		available = { }
@@ -4615,7 +4659,11 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			custom_effect_tooltip = tooltip_white_line
+			mio:SHA_SNAA_organization = {
+				add_mio_size = 1
+				add_mio_funds = 500
+			}
 		}
 	}
 
@@ -4625,11 +4673,11 @@ focus_tree = {
 		icon = GFX_focus_generic_cas_aircraft
 		x = -1
 		y = 1
-		relative_position_id = SHA_aviation_industry_revival
+		relative_position_id = SHA_aviation_industry_investment
 		search_filters = { }
 		cost = 5
 
-		prerequisite = { focus = SHA_aviation_industry_revival }
+		prerequisite = { focus = SHA_aviation_industry_investment }
 		mutually_exclusive = { focus = SHA_foenix_aircraft_factory }
 
 		available = { }
@@ -4641,7 +4689,34 @@ focus_tree = {
 		}
 	}
 
-	# 
+	# 공중 전략
+	focus = {
+		id = SHA_aerial_strategies
+		icon = GFX_focus_SOV_flying_clubs
+		x = -2
+		y = 1
+		relative_position_id = SHA_Sauerwerke
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_Sauerwerke 
+			focus = SHA_foenix_aircraft_factory
+		}
+		prerequisite = { focus = SHA_radar_effort }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			custom_effect_tooltip = SHA_airforce_change
+			add_to_variable = { SHA_airforce_ground_attack_factor = 0.1 tooltip = ground_attack_factor_tt }
+			add_to_variable = { SHA_airforce_air_superiority_efficiency = 0.1 tooltip = air_superiority_efficiency_tt }
+		}
+	}
+
+	# 산해경 항공학교
 	focus = {
 		id = SHA_airforce_school
 		icon = GFX_focus_FIN_expand_air_force_academy
@@ -4651,7 +4726,10 @@ focus_tree = {
 		search_filters = { }
 		cost = 5
 
-		prerequisite = { focus = SHA_focus_on_domestic_production }
+		prerequisite = { 
+			focus = SHA_focus_on_domestic_production 
+			focus = SHA_air_base_intiative
+		}
 		mutually_exclusive = {  }
 
 		available = { }
@@ -4669,6 +4747,143 @@ focus_tree = {
 				tooltip = air_untrained_pilots_penalty_factor_tt 
 			}
 
+		}
+	}
+
+	# 공군기지 건설 주력
+	focus = {
+		id = SHA_air_base_intiative
+		icon = GFX_focus_generic_air_bases
+		x = -2
+		y = 1
+		relative_position_id = SHA_National_Aviation_Administration
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_National_Aviation_Administration }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				
+				prioritize = { 153 } 
+
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}	
+			}
+
+			custom_effect_tooltip = SHA_airforce_change
+			add_to_variable = { 
+				SHA_airforce_production_speed_air_base_factor = 0.1 
+				tooltip = production_speed_air_base_factor_tt 
+			}	
+
+		}
+	}
+
+	# 산하이징 대공포
+	focus = {
+		id = SHA_shanhaijing_anti_air_effort
+		icon = GFX_focus_generic_air_defense
+		x = -1
+		y = 1
+		relative_position_id = SHA_air_base_intiative
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_air_base_intiative }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 4 } #니더외스터라이히
+
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}	
+			}
+
+			custom_effect_tooltip = SHA_airforce_change
+			add_to_variable = { 
+				SHA_airforce_production_speed_anti_air_building_factor = 0.1 
+				tooltip = production_speed_anti_air_building_factor_tt 
+			}
+		}
+	}
+
+	# 레이더 기술 연구
+	focus = {
+		id = SHA_radar_effort
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		relative_position_id = SHA_shanhaijing_anti_air_effort
+		search_filters = { }
+		cost = 5
+
+		prerequisite = { focus = SHA_shanhaijing_anti_air_effort }
+		mutually_exclusive = {  }
+
+		available = { }
+		bypass = { }
+
+
+		completion_reward = {
+			IF = {
+				limit = { has_tech = cavity_magnatron }
+
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					prioritize = { 152 } #니더외스터라이히
+
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}	
+				}
+
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					
+					prioritize = { 153 } # 니더외스터라이히
+
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}	
+				}
+
+				ELSE = {
+					add_tech_bonus = {
+						name = AUS_radar_effort
+						bonus = 0.5
+						uses = 1
+						category = radar_tech
+					}
+				}
+			}
+
+			custom_effect_tooltip = AUS_airforce_intro_tt
+			add_to_variable = { AUS_production_speed_radar_station_factor = 0.1 tooltip = production_speed_radar_station_factor_tt }
 		}
 	}
 

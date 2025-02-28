@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SHA/SHA_Shintani_kais_cult_of_personality_ns.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_airforce"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_airforce.tga"
+	}
+	spriteType = {
 		name = "GFX_Shanhaijing_MIO_airforce"
 		texturefile = "gfx/interface/ideas/SHA/MIO_국가항공국.tga"
 	}
