@@ -6704,7 +6704,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 101
 			tag = TRM
 		}
 	}
@@ -6799,6 +6799,7 @@ focus_tree = {
 		select_effect = {
 			country_event = { id = trinity.16 days = 05 } # 상투스 분파의 절멸
 			country_event = { id =  trinity.17 days = 10 } # 필리우스 분파의 운명
+			country_event = { id = trinity.19 days = 15 } # 파테르 분파 내부의 불충
 		}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = -0.06 }
@@ -8469,7 +8470,7 @@ focus_tree = {
 		relative_position_id = TRM_Streamline_Intelligence_Gathering
 		x = 1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			base = 300
 			modifier = {

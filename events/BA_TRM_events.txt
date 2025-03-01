@@ -8898,7 +8898,7 @@ country_event = { # 대법관 임명
 		add_political_power = 50
     }
 }
-country_event = { # 티파티의 끝?
+country_event = { # 파테르 분파 내부의 불충
 	id = trinity.19
 	title = trinity.19.t
 	desc = trinity.19.desc
@@ -8930,8 +8930,6 @@ news_event = {
 		trigger = {
 			TAG = TRM
 		}
-		unlock_decision_tooltip = TRN_who_is_criminal
-		set_country_flag = TRN_who_is_criminal_start
 	}
 	option = {
 		name = trinitynews.1.b
@@ -8957,68 +8955,6 @@ news_event = {
 	}
 	option = {
 		name = BA_news.1.d
-		trigger = {
-			NOT = {
-				OR = {
-					TAG = SHE
-					TAG = GEI
-					TAG = ARI
-					TAG = RED
-					TAG = KAI
-					TAG = MIL
-					TAG = GEH
-					TAG = GEM
-					TAG = TRM
-					TAG = SRT
-					TAG = KSP
-					TAG = HEU
-					TAG = ABY
-					TAG = HYA
-					TAG = SHA
-					TAG = BAC
-					TAG = SUH
-					TAG = INK
-				}
-			}
-		}
-	}
-}
-news_event = {
-	id = trinitynews.1000
-	title = trinitynews.1000.t
-	desc = trinitynews.1000.desc
-	picture = GFX_news_MIL_Animated_Hatsune_Miku
-	
-	major = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		
-	}
-	option = {
-		name = trinitynews.1000.a
-		trigger = {
-			OR = {
-				TAG = SHE
-				TAG = GEI
-				TAG = ARI
-				TAG = RED
-				TAG = KAI
-				TAG = MIL
-				TAG = TRM
-				TAG = GEH
-				TAG = GEM
-				TAG = SRT
-				TAG = KSP
-				TAG = HEU
-				TAG = ABY
-				TAG = HYA
-				TAG = SHA
-			}
-		}
-	}
-	option = {
-		name = trinitynews.1000.b
 		trigger = {
 			NOT = {
 				OR = {

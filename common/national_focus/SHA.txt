@@ -4528,7 +4528,7 @@ focus_tree = {
 	# 국가항공국 설립
 	focus = {
 		id = SHA_National_Aviation_Administration
-		icon = GFX_focus_generic_copy_plane_designs
+		icon = GFX_goal_generic_design_equipment_standards
 		x = -10
 		y = 0
 		relative_position_id = SHA_address_the_army
