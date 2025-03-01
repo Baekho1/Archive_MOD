@@ -909,9 +909,9 @@ BA_news.93.b:0 "믿을 수 없는 일이 벌어졌다."
  sup_GEI_DEC_REMARK: "거짓된 낙원도 낙원인가?"
  
  sup_COU_KAYA_LETSGo: "카야 대행 취임"
- sup_KAYA_LETSGo_QUOTE: "...그런 중우정치 같은 방법으로는,\n아무것도 해결하지 못합니다.\n키보토스는, 초인에 의해 지휘되어야 합니다."
+ sup_COU_KAYA_LETSGo_QUOTE: "...그런 중우정치 같은 방법으로는,\n아무것도 해결하지 못합니다.\n키보토스는, 초인에 의해 지휘되어야 합니다."
  sup_COU_KAYA_LETSGo_QUOTE_NAME: "- 시라누이 카야"
- sup_KAYA_LETSGo_REMARK: "어둠 속에서 고개를 들다"
+ sup_COU_KAYA_LETSGo_REMARK: "어둠 속에서 고개를 들다"
 
  #아리우스 이벤트#
  ARI_all_blood.t:0 "'모든 피는 평등하다' 연설"
