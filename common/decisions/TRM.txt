@@ -1840,6 +1840,10 @@ TRN_country_collapse_decisions = {
 			has_war_with = TRM
 		}
 		available = {
+			check_variable = {
+				global.KPD_country_collapse_decisions_value > 50
+				tooltip = KSP_country_collapse_value_up_tt
+			}
 		}
 		
 		fire_only_once = yes
