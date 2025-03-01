@@ -263,6 +263,11 @@
  GEH_last_focus_3_tt: "§Y후속 중점도§!가 나타납니다."
  GEH_woe_to_the_vanquished: "패배자에겐 비애뿐"
  GEH_woe_to_the_vanquished_2: "하나의 게헨나, 하나의 지도자"
+ #챕터 6
+ GEH_last_focus_effect_h_rout: "소라사키 히나의 위대한 기록"
+ GEH_last_focus_effect_a_rout: "선도부의 새로운 개혁"
+ GEH_last_focus_effect_c_rout: "피로 물든 얼룩 지우기"
+ GEH_last_focus_effect_normal_rout: "소라사키 히나의 은퇴식"
 
  GEH_last_focus_effect: "미래를 향해"
  GEH_last_focus_effect_tt: "이 중점은 §Y$GEH_last_focus_3$§! 중점 완료시 온전한 중점 계통도로 변경될 것입니다."
@@ -479,6 +484,7 @@
 # 정신건강 컨텐츠
  GEH_basking_in_the_brilliance_of_their_serenade_FUCK: "굳세어라"
  GEH_basking_in_the_brilliance_of_their_serenade_FUCK_desc: "소라사키 히나는 게헨나의 선도부장이며 대중적으로는 강인한 지도자이자 초인으로 알려져 있습니다. 하지만 소라사키 히나에게, 초인이라는 말은 스스로에게 맞지 않다고 여길 것입니다.\n\n아니, 정말 그럴까요? 누가 뭐라하더라도 소라사키 히나는 이제 분명한 초인이자 위대한 선도부장이며 공포의 통치자이자 게헨나 선도부의 '제1대전제'입니다. 이러한 소라사키 히나는 누가 보더라도 강인한 초인입니다.\n\n§O선도부장은 이제 영원히 통치할 것입니다.§!\n\n§O게헨나의 위대한 지도자§!가 길을 창조해 걸어가고 있습니다."
+ GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission: "제관의 무게"
 
  GEH_basking_in_the_brilliance_of_their_serenade: "마지막으로 남아있는 것"
  GEH_basking_in_the_brilliance_of_their_serenade_desc: "소라사키 히나는 게헨나의 선도부장이며 대중적으로는 강인한 지도자이자 초인으로 알려져 있습니다. 하지만 소라사키 히나에게, 초인이라는 말은 스스로에게 맞지 않다고 여길 것입니다.\n\n소라사키 히나는 위대한 선도부장도, 공포의 통치자도 아닙니다. 그저 하나의 여린 인간이자 위태로운 심리 상태를 지닌 학생입니다. 그러나 소라사키 히나는 스스로 초인이 되기로 마음먹었습니다. 자신을 따르는 수많은 선도부원과 게헨나 학생들. 그리고 임원들의 믿음 위에 소라사키 히나는 두 발로 걸어 나왔습니다.\n\n§p초인이 되는 방법은 무엇이 있을까요?§!\n\n[GEH_basking_in_the_brilliance_of_their_serenade_text_tt]"
@@ -502,6 +508,7 @@
 
  GEH_basking_in_the_brilliance_of_their_serenade_mission: "악화"
  GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt: "§R우리는 아직 무슨 수를 쓰더라도 길을 걸어가는 것을 끝낼 수 없습니다.§!"
+ GEH_basking_in_the_brilliance_of_their_serenade_FUCK_trigger_tt: "§R이제는 무슨 수를 쓰더라도 길을 걸어가는 것을 끝낼 수 없습니다.§!"
  GEH_basking_in_the_brilliance_of_their_serenade_mission_tt: "§R소라사키 히나의 상태가 한 단계 악화됩니다.§!"
  GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt: "§C소라사키 히나의 상태가 한 단계 완화됩니다.§!"
  GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt: "§G소라사키 히나의 악화 속도가 느려집니다.§!\n"
@@ -540,3 +547,7 @@
  GEH_BTBOTS.7.desc: "늦은 밤, 회의실의 불빛이 하나 둘 꺼져갈 무렵, 소라사키 히나는 집무실 구석에서 깊은 한숨과 함께 마지막 결단을 내렸다. 하루 종일 쌓였던 서류와 지켜내야 할 수많은 결정들, 그리고 치나츠의 세심한 도움마저도 더는 버틸 수 없는 무거운 책임감으로 다가왔다. 그 무게에 짓눌린 그녀의 내면에서는, 더 이상 견딜 수 없는 고통과 좌절이 소리 없이 쌓여 갔다.\n\n결국, 그녀는 한 장의 사표를 작성한 후, 아무런 예고 없이 그 자리를 떠났다. 사표가 놓인 책상 위엔, 한때 강인했던 리더의 흔적이 고스란히 남아 있었다. 임원들이 모여 있는 회의실에서는, 그녀의 부재가 곧바로 감지되었고, 남은 이들은 당혹감과 깊은 슬픔에 잠겼다.\n\n소라사키 히나의 행방은 그날 밤 이후로 전혀 알려지지 않았고, 게헨나 학원 안에는 그녀가 남긴 마지막 항의와 같은 무거운 공허감만이 잔존했다. 그녀의 사표는 단순한 이탈의 표시가 아니라, 너무나도 버거웠던 책임과 고통 앞에 한 인간이 내린 비극적인 선택임이, 그 자리에 남은 이들만이 묵묵히 받아들일 수밖에 없었다."
  GEH_BTBOTS.7.a: "\"미안해. 모두.\""
  GEH_BTBOTS_END_tt: "§Y$GEH_three_congress_focus_no_hina$§! 중점이 자동으로 진행될 것입니다."
+
+ GEH_BTBOTS.100.t: "결심, 구겨진 종이"
+ GEH_BTBOTS.100.desc: "밤은 깊었고, 집무실의 창밖에는 희미한 불빛들만이 도시를 비추고 있었다. 며칠 동안 이어진 고민과 갈등 속에서, 소라사키 히나는 마침내 마지막 결정을 내릴 시간이 되었음을 직감했다.\n\n책상 위에는 아직 제출하지 않은 사표가 놓여 있었다. 몇 시간 전만 해도 그것이 유일한 선택이라고 생각했지만, 지금 그녀의 손끝은 조금도 그 종이를 향하지 않았다.\n\n무너져 내릴 것 같았던 자신. 끝없는 업무와 책임감에 짓눌려 도망치고 싶었던 나날들. 하지만 그녀가 떠난다면, 누가 이 학원을 지킬 것인가?\n\n천천히 숨을 고르며, 그녀는 일어나 창가로 다가갔다. 어둠 속에서도 꺼지지 않는 불빛들, 그곳에 있을 학생들과 동료들의 얼굴이 떠올랐다. 그들이 그녀에게 바라는 것은 한순간의 휴식이 아니라, 흔들리지 않는 지도자의 모습이었다.\n\n그 순간, 깊은 혼란 속에서도 하나의 확신이 그녀를 사로잡았다.\n\n소라사키 히나는 손을 뻗어, 사표를 천천히 구겨버렸다. 그리고 다시 한 번, 학원과 동료들을 위해 나아가기로 결심했다.\n\n문틈 너머에서 들려오는 익숙한 발걸음 소리에 그녀는 조용히 몸을 돌렸다. 이제, 더 이상 흔들리지 않을 것이다."
+ GEH_BTBOTS.100.a: "\"내가 이끌어야만 해.\""

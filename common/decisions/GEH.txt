@@ -494,6 +494,21 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 		}
 
 		available =  {
+			has_global_flag = GEH_BTBOTS_END_flag
+		}
+
+		visible = {
+			NOT = {
+				has_completed_focus = GEH_gehenna_leader
+				has_completed_focus = GEH_three_congress_focus
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_trigger_tt
 				OR = {
@@ -503,15 +518,7 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 			}
 		}
 
-		activation = {
-			always = no
-		}
-
-		cancel_trigger = {
-			has_global_flag = GEH_BTBOTS_END_flag
-		}
-
-		is_good = no
+		is_good = yes
 
 		days_mission_timeout = var:GEH_basking_in_the_brilliance_of_their_serenade_mission?240
 
@@ -581,6 +588,35 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
 			}
 		}
     }
+}
+GEH_basking_in_the_brilliance_of_their_serenade_FUCK = {
+	GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission = { 
+		priority = 99
+
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			original_tag = GEH
+		}
+
+		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_trigger_tt
+				always = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 1080
+
+		timeout_effect = {
+		}
+	}
 }
 GEH_trinity_integration = {
 	GEH_trinity_integration_target = {
