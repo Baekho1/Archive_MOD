@@ -81,8 +81,8 @@ characters={
 		name=MEX_pablo_gonzalez_garza
 		portraits={
 			army={
-				large="gfx/leaders/MEX/Portrait_MEX_ppablo_gonzalez_garza.png" #This is really a generic portrait
-				small="GFX_portrait_MEX_pablo_gonzalez_garza_small" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_pablo_gonzalez_garza.png" #This is really a generic portrait
+				small="GFX_idea_MEX_pablo_gonzalez" #This is really a generic portrait
 			}
 		}
 		field_marshal ={
@@ -93,6 +93,26 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=720
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_pablo_gonzalez_garza
+			cost = 50.000
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_triumph_over_the_cristeros 
+				}
+			}
+			traits = {
+				prince_of_terror 
+			}
 		}
 	}
 
@@ -242,7 +262,7 @@ characters={
 		name=MEX_juan_andreu_almazan
 		portraits={
 			army={
-				small="GFX_idea_MEX_juan_andreu"
+				small="gfx/leaders/MEX/Advisor_MEX_juan_andreu_almazan.tga"
 			}
 		}
 		advisor={
@@ -262,7 +282,7 @@ characters={
 		name=MEX_ignacio_anaya
 		portraits={
 			army={
-				small="GFX_idea_MEX_juan_andreu"
+				small="gfx/leaders/MEX/Advisor_MEX_ignacio_anaya.tga"
 			}
 		}
 		advisor={
@@ -282,7 +302,7 @@ characters={
 		name=MEX_jose_genaro_kingo_nonaka
 		portraits={
 			army={
-				small="GFX_idea_MEX_jose_genaro_kingo_nonaka"
+				small="gfx/leaders/MEX/Advisor_MEX_jose_genaro_kingo_nonaka.tga"
 			}
 		}
 		advisor={
@@ -302,7 +322,7 @@ characters={
 		name=MEX_emilio_portes_gil
 		portraits={
 			army={
-				small="GFX_idea_MEX_juan_andreu"
+				small="gfx/leaders/MEX/Advisor_MEX_emilio_portes_gil.tga"
 			}
 		}
 		advisor={
@@ -1289,35 +1309,6 @@ characters={
 			}
 			traits = {
 				captain_of_industry 
-			}
-		}
-	}
-
-	MEX_pablo_gonzalez={
-		name=MEX_pablo_gonzalez
-		portraits={
-			army={
-				small="GFX_idea_MEX_pablo_gonzalez"
-				large = "GFX_portrait_MEX_pablo_gonzalez" #Can become unit leader
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_pablo_gonzalez
-			cost = 50.000
-			allowed = {
-				original_tag = MEX
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_triumph_over_the_cristeros 
-				}
-			}
-			traits = {
-				prince_of_terror 
 			}
 		}
 	}
