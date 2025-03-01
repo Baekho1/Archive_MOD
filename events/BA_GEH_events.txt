@@ -891,6 +891,19 @@ country_event = { #
 		}
 	}
 }
+country_event = { #
+	id = GEH_BTBOTS.101
+	title = GEH_BTBOTS.101.t
+	desc = GEH_BTBOTS.101.desc
+	picture = GFX_event_GEH_hina_event_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.101.a
+		add_stability = -0.10
+	}
+}
 
 
 

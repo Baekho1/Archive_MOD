@@ -615,6 +615,7 @@ GEH_basking_in_the_brilliance_of_their_serenade_FUCK = {
 		days_mission_timeout = 1080
 
 		timeout_effect = {
+			country_event = GEH_BTBOTS.101
 		}
 	}
 }
