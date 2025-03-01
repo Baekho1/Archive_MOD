@@ -120,14 +120,14 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 2
+			base = 0
 		}
 
 		complete_effect = {
 			add_stability = 0.05
 			set_global_flag = TRM_proclamation_of_mecklenburg_isolation_zone_flag
 			add_to_variable = {
-				global.KPD_country_collapse_decisions_value = -10
+				global.KPD_country_collapse_decisions_value = -20
 				tooltip = KPD_country_collapse_value_tt
 			}
         }
@@ -156,14 +156,14 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 2
+			base = 0
 		}
 
 		complete_effect = {
 			add_stability = 0.05
 			set_global_flag = TRM_proclamation_of_lower_schleswig_isolation_zone_flag
 			add_to_variable = {
-				global.NSD_country_collapse_decisions_value = -10
+				global.NSD_country_collapse_decisions_value = -20
 				tooltip = NSD_country_collapse_value_tt
 			}
         }
