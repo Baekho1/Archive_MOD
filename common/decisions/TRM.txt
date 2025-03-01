@@ -1842,7 +1842,7 @@ TRN_country_collapse_decisions = {
 		available = {
 			check_variable = {
 				global.KPD_country_collapse_decisions_value > 50
-				tooltip = KSP_country_collapse_value_up_tt
+				tooltip = KPD_country_collapse_value_up_tt
 			}
 		}
 		
