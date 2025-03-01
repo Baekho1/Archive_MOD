@@ -1159,13 +1159,19 @@ country_event = { #군정청이 뭐야?
 		name = RED_generic.25.a
 	}
 }
-country_event = { #군제개혁이 뭐야?
+country_event = { #군정청 공업화 어케 하실?
 	id = RED_generic.26
 	title = RED_generic.26.t
 	desc = RED_generic.26.d
 	is_triggered_only = yes
-	option = { #굿
+	option = { #현지인 도와주죠
 		name = RED_generic.26.a
+		complete_national_focus = RED_develope_local_industry
+	}
+	option = { #계획경제 ㄱㄱ
+		name = RED_generic.26.b
+		complete_national_focus = RED_local_economic_plan
+		add_political_power = -30
 	}
 }
 

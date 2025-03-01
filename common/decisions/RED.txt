@@ -2477,7 +2477,7 @@ RED_forced_relocation_policy = {
 		}
 		available = {
 			FROM = {
-				compliance > 25
+				compliance > 65
 			}
 			political_power_daily > 0.2
 			has_stability > 0.15

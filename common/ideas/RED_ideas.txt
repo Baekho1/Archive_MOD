@@ -7,6 +7,25 @@ ideas = {
 		}
 	}
     country = {
+		RED_industrial_intergration = { #산업 통합
+			picture = generic_central_management
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				communism_drift = 0.1
+				custom_modifier_tooltip = RED_industrial_intergration_tt
+			}
+			on_remove = {
+				transfer_navy = {
+					target = RED
+				}
+				RED = {
+					annex_country = {
+						target = THIS
+						transfer_troops = yes
+					}
+				}
+			}
+		}
 		RED_quantity_to_quality_jil = { #양질전화의 법칙 (질)
 		 	name = RED_quantity_to_quality
 			picture = man_five_year_plan_tank

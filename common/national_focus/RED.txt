@@ -241,14 +241,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -836,13 +828,6 @@ focus_tree = {
 					level = 2
 				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-				}
-			}
 			add_timed_idea = {
 				idea = RED_industrial_futurization_idea
 				days = 180
@@ -929,21 +914,6 @@ focus_tree = {
 				category = industry
 				bonus = 0.5
 				uses = 2
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = RED
-					infrastructure < 5
-				}
-				BA_increase_state_category_by_one_level = yes
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -3915,7 +3885,7 @@ focus_tree = {
 		icon = GFX_SOV_the_fourth_international_ccp_2d_sov_compatibility
 		cost = 4
 		relative_position_id = RED_accept_trotskism
-		x = 1
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = RED_accept_trotskism
@@ -3955,7 +3925,7 @@ focus_tree = {
 		icon = GFX_focus_NORDIC_com_form_alliance
 		cost = 4
 		relative_position_id = RED_accept_trotskism
-		x = 0
+		x = 1
 		y = 2
 		prerequisite = {
 			focus = RED_the_fourth_international
@@ -4293,7 +4263,7 @@ focus_tree = {
 		#공안부
 		id = RED_enlarge_secret_police
 		icon = GFX_focus_BEL_national_redoubt_at_antwerp
-		cost = 2
+		cost = 4
 		relative_position_id = RED_restore_the_security
 		x = -1
 		y = 1
@@ -4399,10 +4369,659 @@ focus_tree = {
 		}
 	}
 	focus = {
+		#군정권역 공업화
+		id = RED_industry_of_mil_gov
+		icon = GFX_focus_SWE_landsverk
+		cost = 2
+		relative_position_id = RED_enlarge_secret_police
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RED_enlarge_secret_police
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			OR = {
+				has_completed_focus = RED_depress_locals
+				has_completed_focus = RED_enticing_locals
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					infrastructure > 3
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			hidden_effect = {
+				country_event = RED_generic.26
+			}
+		}
+	}
+	focus = {
+		#현지 산업 개발안
+		id = RED_develope_local_industry
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 2
+		relative_position_id = RED_industry_of_mil_gov
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RED_industry_of_mil_gov
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		mutually_exclusive = {
+			focus = RED_local_economic_plan
+		}
+		completion_reward = {
+			custom_effect_tooltip = RED_develope_local_industry_tt
+		}
+	}
+	focus = {
+		#하달식 경제 계획
+		id = RED_local_economic_plan
+		icon = GFX_focus_DEN_limited_regulations
+		cost = 2
+		relative_position_id = RED_industry_of_mil_gov
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RED_industry_of_mil_gov
+		}
+		mutually_exclusive = {
+			focus = RED_develope_local_industry
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			custom_effect_tooltip = RED_local_economic_plan_tt
+		}
+	}
+	focus = {
+		#사회 개조
+		id = RED_social_reform
+		icon = GFX_focus_generic_treaty
+		cost = 2
+		relative_position_id = RED_industry_of_mil_gov
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = RED_local_economic_plan
+			focus = RED_develope_local_industry
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RED_enticing_locals
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE1
+						is_core_of = RE2
+						is_core_of = RE3
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = RED_social_reform_modifier
+					days = 720
+				}
+			}
+		}
+	}
+	focus = {
+		#개조
+		id = RED_develop_re1
+		icon = GFX_focus_SWE_danish_communists
+		cost = 6
+		relative_position_id = RED_social_reform
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = RED_social_reform
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			any_owned_state = {
+				is_core_of = RE1
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE1
+					}
+				}
+				add_compliance = 10
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RED = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE1
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = RED
+						}
+						OR = {
+							is_core_of = RE1
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RED_local_industralisation
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#개발
+		id = RED_develop_re2
+		icon = GFX_focus_SWE_norwegian_communists
+		cost = 6
+		relative_position_id = RED_social_reform
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RED_social_reform
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			any_owned_state = {
+				is_core_of = RE2
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE2
+					}
+				}
+				add_compliance = 10
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RED = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE2
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = RED
+						}
+						OR = {
+							is_core_of = RE2
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RED_local_industralisation
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#개발
+		id = RED_develop_re3
+		icon = GFX_focus_FIN_utilize_the_sami
+		cost = 6
+		relative_position_id = RED_social_reform
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RED_social_reform
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			any_owned_state = {
+				is_core_of = RE3
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = RED
+					}
+					OR = {
+						is_core_of = RE3
+					}
+				}
+				add_compliance = 10
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RED = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE3
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = RED
+						}
+						OR = {
+							is_core_of = RE3
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RED_local_industralisation
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		#수평적 통합
+		id = RED_horizontal_intergration
+		icon = GFX_focus_generic_treaty
+		cost = 2
+		relative_position_id = RED_industry_of_mil_gov
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = RED_local_economic_plan
+			focus = RED_develope_local_industry
+		}
+		allow_branch = {
+			has_completed_focus = RED_enticing_locals
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_subject_of = RED
+					has_idea = RED_autonomous_state_idea
+				}
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	focus = {
+		#산업 통합
+		id = RED_intergrate_re1
+		icon = GFX_focus_generic_develop_denmark_silhouette
+		cost = 6
+		relative_position_id = RED_horizontal_intergration
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = RED_horizontal_intergration
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			RE1 = {
+				has_idea = RED_autonomous_state_idea
+				exists = yes
+				is_subject_of = RED
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			RE1 = {
+				add_timed_idea = {
+					idea = RED_industrial_intergration
+					days = 360
+				}
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RED = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE1
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = RED
+						}
+						OR = {
+							is_core_of = RE1
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RED_local_industralisation
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#산업 통합
+		id = RED_intergrate_re2
+		icon = GFX_focus_generic_develop_norway_silhouette
+		cost = 6
+		relative_position_id = RED_horizontal_intergration
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RED_horizontal_intergration
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			RE2 = {
+				has_idea = RED_autonomous_state_idea
+				exists = yes
+				is_subject_of = RED
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			RE2 = {
+				add_timed_idea = {
+					idea = RED_industrial_intergration
+					days = 360
+				}
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RED = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE2
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = RED
+						}
+						OR = {
+							is_core_of = RE2
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RED_local_industralisation
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#산업 통합
+		id = RED_intergrate_re3
+		icon = GFX_focus_FIN_utilize_the_sami
+		cost = 6
+		relative_position_id = RED_horizontal_intergration
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RED_horizontal_intergration
+		}
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			RE3 = {
+				has_idea = RED_autonomous_state_idea
+				exists = yes
+				is_subject_of = RED
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_GOVERNMENT
+		}
+		completion_reward = {
+			RE3 = {
+				add_timed_idea = {
+					idea = RED_industrial_intergration
+					days = 360
+				}
+			}
+			if = {
+				limit = {
+					RED = {
+						has_completed_focus = RED_local_economic_plan
+					}
+				}
+				RE3 = {
+					random_owned_state = {
+						limit = {
+							is_core_of = RE3
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						BA_increase_state_category_by_one_level = yes
+					}
+				}
+			}
+			else = {
+				RE3 = {
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = RED
+							}
+							OR = {
+								is_core_of = RE3
+							}
+						}
+						add_dynamic_modifier = {
+							modifier = RED_local_industralisation
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
 		#강제 이주 정책
 		id = RED_depress_locals
 		icon = GFX_focus_generic_nordic_territory
-		cost = 4
+		cost = 6
 		relative_position_id = RED_locals_problem
 		x = -1
 		y = 1
@@ -4528,6 +5147,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
+				load_focus_tree = {
+					tree = RED_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			hidden_effect = {
 				country_event = {
 					id = RED_tro_event.6
 					days = 2
@@ -4561,7 +5187,7 @@ focus_tree = {
 		#현지 공산당 수용
 		id = RED_welcome_immigrate
 		icon = GFX_focus_generic_communist
-		cost = 2
+		cost = 4
 		relative_position_id = RED_enticing_locals
 		x = 1
 		y = 1
@@ -4587,53 +5213,53 @@ focus_tree = {
 			base = 15
 		}
 		completion_reward = {
-			custom_effect_tooltip = RED_welcome_immigrate_tt
+			custom_effect_tooltip = RED_enlarge_secret_police_tt
 			if = {
 				limit = {
-					any_other_country = {
-						has_idea = RED_autonomous_state_idea
+					RE1 = {
+						exists = yes
+						is_subject_of = RED
 					}
 				}
-				every_other_country = {
-					limit = {
-						has_idea = RED_autonomous_state_idea
-					}
-					transfer_navy = {
-						target = RED
-					}
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						add_core_of = RED
-					}
-					RED = {
-						annex_country = {
-							target = prev
-							transfer_troops = yes
-						}
+				RE1 = {
+					RED_instability_system_down_effect = yes
+					set_party_name = {
+						ideology = communism
+						long_name = DEN_communism_party
+						name = DEN_communism_party_long
 					}
 				}
 			}
 			if = {
 				limit = {
-					any_country = {
-						OR = {
-							has_idea = RED_military_government_idea_1
-							has_idea = RED_military_government_idea_2
-							has_idea = RED_military_government_idea_3
-							has_idea = RED_military_government_idea_4
-						}
-						NOT = {
-							has_idea = RED_autonomous_state_idea
-						}
+					RE2 = {
 						exists = yes
-						
+						is_subject_of = RED
 					}
 				}
-				custom_effect_tooltip = RED_welcome_immigrate_tt_1
-				uncomplete_national_focus = {
-					focus = RED_welcome_immigrate
+				RE2 = {
+					RED_instability_system_down_effect = yes
+					set_party_name = {
+						ideology = communism
+						long_name = NOR_communism_party
+						name = NOR_communism_party_long
+					}
+				}
+			}
+			if = {
+				limit = {
+					RE3 = {
+						exists = yes
+						is_subject_of = RED
+					}
+				}
+				RE3 = {
+					RED_instability_system_down_effect = yes
+					set_party_name = {
+						ideology = communism
+						long_name = SWE_communism_party
+						name = SWE_communism_party_long
+					}
 				}
 			}
 		}
@@ -4708,13 +5334,10 @@ focus_tree = {
 		icon = GFX_focus_ARG_the_buenos_aires_conference
 		cost = 4
 		relative_position_id = RED_depress_locals
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		prerequisite = {
 			focus = RED_depress_locals
-		}
-		prerequisite = {
-			focus = RED_enlarge_secret_police
 		}
 		available = {
 			NOT = {
@@ -4732,7 +5355,7 @@ focus_tree = {
 				}
 			}
 			add_political_power = -60
-			every_owned_state = {
+			every_state = {
 				limit = {
 					NOT = {
 						is_core_of = RED
@@ -4743,10 +5366,23 @@ focus_tree = {
 						is_core_of = RE3
 					}
 				}
-				add_manpower = 1000
-				add_extra_state_shared_building_slots = 1
-				add_resistance = -5
-				add_compliance = 5
+				effect_tooltip = {
+					add_manpower = 1000
+					add_extra_state_shared_building_slots = 1
+					add_resistance = -5
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						is_owned_by = RED
+					}
+					hidden_effect = {
+						add_manpower = 1000
+						add_extra_state_shared_building_slots = 1
+						add_resistance = -5
+						add_compliance = 5
+					}
+				}
 			}
 		}
 	}
@@ -4757,7 +5393,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		cost = 4
 		relative_position_id = RED_enemy_of_class
-		x = 0
+		x = 1
 		y = 1
 		mutually_exclusive = {
 			focus = RED_all_power_to_redwinter
@@ -4805,7 +5441,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_advance_security
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RED_advance_security
 		available = {
@@ -4887,7 +5523,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_redbear_editorial
 		}
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = RED_redbear_editorial
 		cost = 2
@@ -7080,7 +7716,7 @@ focus_tree = {
 	focus = {
 		#발트 패권
 		id = RED_hegemony_on_balt
-		icon = GFX_focus_GER_subduing_the_baltic_states
+		icon = GFX_focus_FIN_keepers_of_the_baltic_countries
 		cost = 4
 		relative_position_id = RED_political_realism
 		x = 4

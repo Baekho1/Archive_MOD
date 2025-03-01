@@ -253,6 +253,16 @@ FRA_algeria_resistance = {
 	ground_attack_factor = -0.75
 	local_org_regain = -0.5
 }
+RED_local_industralisation = {
+	icon = GFX_modifiers_ETH_state_development
+	local_building_slots = 1
+	state_production_speed_buildings_factor = 0.06
+}
+RED_social_reform_modifier = {
+	icon = GFX_modifiers_GER_socialist_movement
+	compliance_growth = 0.03
+	resistance_growth = -0.15
+}
 RED_bunker_modifier = {
 	icon = GFX_unplanned_offensive
 	attacker_modifier = yes
