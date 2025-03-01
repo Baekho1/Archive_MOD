@@ -2223,6 +2223,7 @@ country_event = {#붕괴
 			value = 0
 			compare = less_than_or_equals
 		}
+		is_in_faction = yes
 	}
 	option = { #ㅈㅈ
 		name = BA_intermarium_solidarity_event.6.a

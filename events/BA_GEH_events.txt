@@ -858,4 +858,53 @@ country_event = { #
 }
 
 
+country_event = { #
+	id = GEH_BTBOTS.100
+	title = GEH_BTBOTS.100.t
+	desc = GEH_BTBOTS.100.desc
+	picture = GFX_event_GEH_hina_eventpicture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.100.a
+		add_stability = 0.05
+		add_war_support = 0.01
+		set_portraits = {
+			character = GEH_hina
+			civilian = { 
+				large = GFX_GEH_Hina_Dress_Portrait 
+				small = GFX_GEH_Hina_Dress_advisor
+			}
+			army = { large = GFX_GEH_Hina_Dress_Portrait }
+		}
+		set_portraits = {
+			character = GEH_dkzh
+			civilian = { 
+				large = GFX_GEH_Ako_Dress_Portrait 
+				small = GFX_GEH_Ako_Dress_advisor
+			}
+			army = { 
+				large = GFX_GEH_Ako_Dress_Portrait 
+				small = GFX_GEH_Ako_Dress_advisor
+			}
+		}
+	}
+}
+country_event = { #
+	id = GEH_BTBOTS.101
+	title = GEH_BTBOTS.101.t
+	desc = GEH_BTBOTS.101.desc
+	picture = GFX_event_GEH_hina_event_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH_BTBOTS.101.a
+		add_stability = -0.10
+	}
+}
+
+
+
 

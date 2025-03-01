@@ -8555,11 +8555,6 @@ country_event = { # 미소노 미카 법
 			ideology = fascism
 			popularity = 0.20
 		}
-		set_politics = { ruling_party = fascism elections_allowed = no }
-		custom_effect_tooltip = TRM_pater_union_tt
-		remove_country_leader_trait = TRM_pater_faction
-		set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
-		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
 		custom_effect_tooltip = TRN_tooltip_delete_powers
 		set_country_flag = TRN_delete_power_flag
     }
@@ -8752,7 +8747,10 @@ unit_leader_event = { # 미카의 호스트 취임
 			country_leader = {
 				ideology = tea_party_ideology
 				expire = "1965.1.1.1"
-				traits = { TRM_pater_faction }
+				traits = { 
+					TRM_pater_faction
+					TRN_mika_trait_1
+				}
 				desc = TRN_alzk_leader_desc
 			}
 		}
@@ -8909,6 +8907,19 @@ country_event = { # 파테르 분파 내부의 불충
 
 	option = {
 		name = trinity.19.a
+    }
+}
+unit_leader_event = { # 기사단국 선포
+	id = trinity.20
+	title = trinity.20.t
+	desc = trinity.20.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.20.a
     }
 }
 news_event = {

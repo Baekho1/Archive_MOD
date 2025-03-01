@@ -157,6 +157,9 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 2
+			visible = {
+				has_completed_focus = RED_club_focus_11
+			}
 		}
 		advisor={
 			slot = navy_chief
@@ -460,6 +463,9 @@ characters = {
 			}
 		}
 		navy_leader = {
+			visible = {
+				has_completed_focus = RED_club_focus_11
+			}
 			traits = { aviation_enthusiast alcoholic }
 			skill = 2
 			attack_skill = 3
