@@ -36,6 +36,27 @@ country_event = { #일상 이벤트 3, 227호 온천장
 	is_triggered_only = yes
 	option = { 
 		name = RED_ordinary_event.3.a
+		country_event = RED_ordinary_event.4
+	}
+}
+country_event = { #일상 이벤트 4, 227호 온천장 - 2
+	id = RED_ordinary_event.4
+	title = RED_ordinary_event.4.t
+	desc = RED_ordinary_event.4.d
+	is_triggered_only = yes
+	option = { 
+		name = RED_ordinary_event.4.a
+		set_country_flag = RED_onsen_flag
+		effect_tooltip = {
+			unlock_national_focus = RED_club_focus_11
+		}
+		hidden_effect = {
+			load_focus_tree = {
+				tree = RED_focus_tree
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 }
 

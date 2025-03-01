@@ -3408,7 +3408,7 @@ leader_traits = {
 	RED_momiji_trait_good = { #문헌정보학자
 		sprite = 13
 		random = no
-		research_speed_factor = 0.2
+		research_speed_factor = 0.15
 	}
 	RED_yakumo_trait = { #기회주의적인 출판부장
 		sprite = 13
