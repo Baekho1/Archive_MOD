@@ -92,7 +92,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=3
-			legacy_id=714
+			legacy_id=720
 		}
 	}
 
@@ -186,7 +186,7 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=716
+			legacy_id=718
 		}
 	}
 	
@@ -204,7 +204,7 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=716
+			legacy_id=719
 		}
 	}
 
@@ -286,14 +286,14 @@ characters={
 			}
 		}
 		advisor={
-			desc = "MEX_anaya_desc"
+			desc = "MEX_nonaka_desc"
 			slot = political_advisor
-			idea_token = MEX_ignacio_anaya_almazan
+			idea_token = MEX_jose_genaro_kingo_nonaka
 			allowed = {
 				original_tag = MEX
 			}
 			traits = {
-				MEX_ignacio_anaya_trait
+				MEX_jose_genaro_kingo_nonaka_trait
 			}
 		}
 	}

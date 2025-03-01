@@ -19,6 +19,7 @@ recruit_character = MEX_agustin_olachea_aviles
 recruit_character = MEX_juan_andreu_almazan
 recruit_character = MEX_ignacio_anaya
 recruit_character = MEX_emilio_portes_gil
+recruit_character = MEX_jose_genaro_kingo_nonaka 
 
 add_ideas = {
 	MEX_the_ghost_of_calles
