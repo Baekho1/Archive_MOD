@@ -16,6 +16,9 @@ recruit_character = MEX_pablo_gonzalez_garza
 recruit_character = MEX_marcelino_garcia_barragan
 recruit_character = MEX_agustin_olachea_aviles
 
+recruit_character = MEX_juan_andreu_almazan
+recruit_character = MEX_ignacio_anaya
+recruit_character = MEX_emilio_portes_gil
 
 add_ideas = {
 	MEX_the_ghost_of_calles
@@ -23,6 +26,15 @@ add_ideas = {
 	MEX_british_oil_nationalization
 	MEX_la_reforma
 	MEX_divided_army
+}
+
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+	add_ideas = {
+		MEX_emilio_portes_gil
+	}
 }
 
 country_event = {
@@ -127,9 +139,7 @@ recruit_character = MEX_heriberto_corona
 recruit_character = MEX_antonio_cardenas_rodriguez
 recruit_character = MEX_jesus_garza_siller
 recruit_character = MEX_gilberto_limon
-recruit_character = MEX_pablo_macias
 recruit_character = MEX_jose_gonzalo_escobar
-recruit_character = MEX_agustin_olachea
 recruit_character = MEX_leon_trotsky
 recruit_character = MEX_saturnino_cedillo
 recruit_character = MEX_hector_meixueiro

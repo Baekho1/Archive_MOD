@@ -3964,5 +3964,29 @@ leader_traits = {
 		political_power_factor = -0.15
 		custom_modifier_tooltip = "불쌍함"
 	}
+
+	## 멕시코 ##
+
+	MEX_juan_andreu_almazan_trait = { # 베테랑 사업가
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.05
+		army_attack_factor = 0.05
+	}
+
+	MEX_ignacio_anaya_trait = { # 훌륭한 주방장
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		war_stability_factor = 0.05
+	}
+
+	MEX_emilio_portes_gil_trait = { # 막시마토의 흔적
+		random = no
+		sprite = 13
+		political_power_factor = 0.10
+		war_support_factor = -0.05
+	}
 }
  

@@ -59,6 +59,22 @@ characters={
 			logistics_skill=2
 			legacy_id=714
 		}
+
+		advisor={
+			slot = high_command
+			idea_token = MEX_pablo_macias
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	MEX_pablo_gonzalez_garza ={
@@ -159,7 +175,7 @@ characters={
 		name=MEX_marcelino_garcia_barragan
 		portraits={
 			army={
-				large="gfx/leaders/MEX/Portrait_MEX_marcelino_garcia_barragan.png" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_marcelino_garcia_barragan.tga" #This is really a generic portrait
 				small="GFX_portrait_MEX_marcelino_garcia_barragan" #This is really a generic portrait
 			}
 		}
@@ -178,8 +194,7 @@ characters={
 		name=MEX_agustin_olachea_aviles
 		portraits={
 			army={
-				large="gfx/leaders/MEX/Portrait_MEX_agustin_olachea_aviles.png" #This is really a generic portrait
-				small="GFX_portrait_MEX_agustin_olachea_aviles" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_agustin_olachea_aviles.tga" #This is really a generic portrait
 			}
 		}
 		corps_commander={
@@ -193,10 +208,6 @@ characters={
 		}
 	}
 
-	####
-	####
-	####
-
 	MEX_salvador_abascal={
 		name=MEX_salvador_abascal
 		portraits={
@@ -207,10 +218,11 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = MEX_jose_vasconcelos
+			idea_token = MEX_salvador_abascal
 			allowed = {
 				original_tag = MEX
 			}
+
 			available = {
 				if = {
 					limit = {
@@ -219,11 +231,98 @@ characters={
 					has_completed_focus = MEX_focus_the_gold_shirts
 				}
 			}
+
 			traits = {
 				syncretic_revanchist 
 			}
 		}
 	}
+
+	MEX_juan_andreu_almazan ={
+		name=MEX_juan_andreu_almazan
+		portraits={
+			army={
+				small="GFX_idea_MEX_juan_andreu"
+			}
+		}
+		advisor={
+			desc = "MEX_almazan_desc"
+			slot = political_advisor
+			idea_token = MEX_juan_andreu_almazan
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_juan_andreu_almazan_trait 
+			}
+		}
+	}
+
+	MEX_ignacio_anaya ={
+		name=MEX_ignacio_anaya
+		portraits={
+			army={
+				small="GFX_idea_MEX_juan_andreu"
+			}
+		}
+		advisor={
+			desc = "MEX_anaya_desc"
+			slot = political_advisor
+			idea_token = MEX_ignacio_anaya_almazan
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_ignacio_anaya_trait
+			}
+		}
+	}
+
+	MEX_jose_genaro_kingo_nonaka ={
+		name=MEX_jose_genaro_kingo_nonaka
+		portraits={
+			army={
+				small="GFX_idea_MEX_jose_genaro_kingo_nonaka"
+			}
+		}
+		advisor={
+			desc = "MEX_anaya_desc"
+			slot = political_advisor
+			idea_token = MEX_ignacio_anaya_almazan
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_ignacio_anaya_trait
+			}
+		}
+	}
+
+	MEX_emilio_portes_gil ={
+		name=MEX_emilio_portes_gil
+		portraits={
+			army={
+				small="GFX_idea_MEX_juan_andreu"
+			}
+		}
+		advisor={
+			desc = "MEX_gil_desc"
+			slot = political_advisor
+			idea_token = MEX_emilio_portes_gil
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_emilio_portes_gil_trait
+			}
+
+			can_be_fired = no
+		}
+	}
+
+	####
+	####
+	####
 
 	MEX_adolfo_de_la_huerta={ 
 		name=MEX_adolfo_de_la_huerta
@@ -382,8 +481,7 @@ characters={
 		name=MEX_heliodoro_charis
 		portraits={
 			army={
-				large="GFX_portrait_MEX_heliodoro_charis" #This is really a generic portrait
-				small="GFX_portrait_MEX_heliodoro_charis_small" #This is really a generic portrait
+				large="gfx/leaders/MEX/Portrait_MEX_heliodoro_charis.tga" #This is really a generic portrait
 			}
 		}
 		corps_commander={
@@ -420,7 +518,7 @@ characters={
 		name=MEX_manuel_perez_trevino
 		portraits={
 			army={
-				large="GFX_portrait_MEX_manuel_perez_trevino"
+				large="gfx/leaders/MEX/Portrait_MEX_manuel_perez_trevino.tga"
 				small=GFX_portrait_MEX_manuel_perez_trevino_small
 			}
 		}
@@ -667,28 +765,6 @@ characters={
 		}
 	}
 
-	MEX_agustin_olachea={
-		name=MEX_agustin_olachea
-		portraits={
-			army={
-				small="GFX_idea_generic_air_europe_3"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = MEX_agustin_olachea
-			ledger = air
-			allowed = {
-				original_tag = MEX
-			}
-			
-			traits = {
-				air_warfare_theorist
-			}
-		}
-	}
-
 
 	### ARMY CHIEFS ###
 
@@ -867,6 +943,20 @@ characters={
 				factor = 1.000
 			}
 		}
+
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = MEX_luis_farell
+			ledger = air
+			allowed = {
+				original_tag = MEX
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
 		
 		corps_commander={
 			traits={ war_hero }
@@ -900,30 +990,6 @@ characters={
 			}
 			traits = {
 				air_strategic_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	MEX_pablo_macias={
-		name=MEX_pablo_macias
-		portraits={
-			army={
-				small=GFX_portrait_MEX_pablo_macias_small
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = MEX_pablo_macias
-			ledger = army
-			allowed = {
-				original_tag = MEX
-			}
-			traits = {
-				army_regrouping_2
 			}
 			cost = 100
 			ai_will_do = {
