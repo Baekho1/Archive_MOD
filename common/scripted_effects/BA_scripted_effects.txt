@@ -2830,6 +2830,9 @@ GEH_deb_eff = {
 		hours = 8
 	}
 }
+deb_delunit = { 
+	delete_unit = { }
+}
 ABY_halo_militia_ban_effect = { #실행된 범위의 헤일로 민병을 0으로 만들고 헤일로 보병 사단 추가 효과에 영향을 받지 않게 만듭니다.
 	custom_effect_tooltip = BA_halo_militia_ban_effect_tt
 	hidden_effect = { # 헤일로 민병 밴

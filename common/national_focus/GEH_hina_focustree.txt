@@ -1193,6 +1193,13 @@ focus_tree = {
 				}
 			}
 			if = {
+				limit = { has_country_leader_with_trait = b_tjsehqnwkd_start }
+				swap_ruler_traits = {
+					remove = b_tjsehqnwkd_start
+					add = b_tjsehqnwkd3
+				}
+			}
+			if = {
 				limit = { has_country_leader_with_trait = b_tjsehqnwkd_week }
 				swap_ruler_traits = {
 					remove = b_tjsehqnwkd_week
