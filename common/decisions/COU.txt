@@ -691,6 +691,36 @@ COU_getout_rin_decision = {
 			base = 20000
 		 }
 	}
+	##SRT 분탕 
+	COU_SRT_buntang_rabbits_first = {
+
+		icon = srt_icon
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     has_country_flag = COU_flag_acivate_norin_decision
+		     has_country_flag = SRT_STARTED_BUNTANGS_KAYA
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 3
+		 fire_only_once = yes
+		 #days_re_enable = 45
+		
+		 cost = 0
+		
+		 complete_effect = {
+		     country_event = COU_event.36
+		 }
+		 ai_will_do = {
+			base = 20000
+		 }
+	}
+	
 	##린 탄핵 - 기간 연장하기
 	COU_attack_the_cou_workers = {
 
@@ -806,6 +836,40 @@ COU_getout_rin_decision = {
 			base = 20000
 		 }
 	}
-    
+}
+
 	
+	
+##카야의 상태
+COU_situation_of_the_kaya = {
+	COU_workers_notworks_bruh222 = {
+
+		icon = generic_civil_support
+
+		 allowed = { 
+		    original_tag = COU 
+		 }
+		
+		 visible = { 
+		     #has_country_flag = COU_flag_acivate_norin_decision
+		 }
+		
+		 is_good = no
+		 
+		 days_remove = 14
+		 days_re_enable = 30
+		
+		 cost = 45
+		 
+		 modifier = {
+		     industrial_capacity_factory = -0.05
+			 industrial_capacity_dockyard = -0.05
+		 }
+		
+		 remove_effect = {
+		 }
+		 ai_will_do = {
+			base = 0
+		 }
+	}
 }

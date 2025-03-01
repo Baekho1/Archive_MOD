@@ -725,6 +725,10 @@ spriteTypes = {
 		name = "GFX_report_event_COU_srt_divided"
 		texturefile = "gfx/event_pictures/COU/report_event_COU_srt_divided.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_the_letter"
+		texturefile = "gfx/event_pictures/COU/report_event_picture_the_letter.png"
+	}
 	
 	spriteType = {
 		name = "GFX_news_event_COU_srt_banned"

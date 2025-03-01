@@ -78,3 +78,22 @@ COU_getout_rin_decision = {
 	
 	scripted_gui = COU_rin_getout
 }
+
+##카야의 상태
+COU_situation_of_the_kaya = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = COU
+	}
+
+	visible = {
+		is_debug = yes 
+		is_ai = no
+		##개발중 임시 
+		#has_country_flag = 
+	}
+	priority = 250
+	
+	scripted_gui = COU_situaiton_of_kaya
+}

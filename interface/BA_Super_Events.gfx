@@ -120,7 +120,11 @@ spriteTypes = {
 		texturefile = "gfx/super_events/68_revolutions.dds"
 		legacy_lazy_load = no
 	}
-
+    spriteType = {
+		name = "GFX_sp_event_COU_KAYA_LETSGo"
+		texturefile = "gfx/super_events/COU_KAYA_LETSGo.png"
+		legacy_lazy_load = no
+	}
 	spriteType = {
 		name = "GFX_sp_event_GEI_DEC"
 		texturefile = "gfx/super_events/GEI_DEC_invasion.png"

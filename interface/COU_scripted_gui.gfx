@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_decision_COU_haime"
 		texturefile =  "gfx/interface/decisions/COU_haime.png"
 	}
+	spriteType = {
+		name = "GFX_decision_COU_leader_frame_kaya"
+		texturefile = "gfx/interface/decisions/COU_leader_frame_kaya.png"
+	}
 }

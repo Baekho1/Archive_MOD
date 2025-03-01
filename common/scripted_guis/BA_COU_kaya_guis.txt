@@ -7,5 +7,14 @@ scripted_gui = {
             
 		}
 	}
+	
+	COU_situaiton_of_kaya = {
+		context_type = decision_category
+		window_name = "COU_situation_of_kaya_window"
+		effects = {
+
+            
+		}
+	}
 }
 

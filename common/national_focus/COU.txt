@@ -90,6 +90,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+		    remove_ideas = COU_empty_of_monarchs
 			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
 			custom_effect_tooltip = available_political_advisor
@@ -680,8 +681,8 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = COU_focus_recruit_srt
-        icon = GFX_SRT_focus_we_are_srt
+        id = COU_focus_recruit_minori
+        icon = GFX_focus_minori
         x = -2
         y = 3
         cost = 10
@@ -689,7 +690,7 @@ focus_tree = {
 		prerequisite = { focus = COU_focus_arrest_ayumu }
 		relative_position_id = COU_focus_in_the_darkness
 		select_effect = { 
-		     country_event = { id = COU_event.15 days = 5 }
+		     #country_event = { id = COU_event.15 days = 5 }
 		}
         completion_reward = {
 		     custom_effect_tooltip = COU_tooltip_srt_gonna_make_shit
@@ -752,6 +753,8 @@ focus_tree = {
 		prerequisite = { focus = COU_focus_treaty_of_amsterdam }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
+		    add_political_power = 10
+			country_event = COU_event.33
 		    custom_effect_tooltip = available_political_advisor
 	        show_ideas_tooltip = COU_leon_degrelle
         }
@@ -766,6 +769,18 @@ focus_tree = {
         x = 2
         y = 3
         cost = 5
+		available = {
+		    custom_trigger_tooltip = {
+			    tooltip = COU_tooltip_all_agreed_tanhak
+				has_country_flag = COU_agree_out_rin
+				has_country_flag = COU_agree_out_rin2
+				has_country_flag = COU_agree_out_rin3
+			}
+			custom_trigger_tooltip = {
+				tooltip = COU_tooltip_percent_back
+				check_variable = { COU_rin_percen > 99 }
+			}
+		}
 		prerequisite = { focus = COU_focus_unarrest_mussert }
 		prerequisite = { focus = COU_focus_contact_with_flandern }
 		relative_position_id = COU_focus_in_the_darkness

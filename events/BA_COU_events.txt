@@ -478,6 +478,7 @@ country_event = {
 				keep_completed = yes
 			 }
 			 mark_focus_tree_layout_dirty = yes
+			 country_event = { id = COU_event.31 hours = 6 }
 			 complete_national_focus = COU_focus_in_the_darkness
 	    }
 	}
@@ -654,7 +655,7 @@ country_event = {
 	id = COU_event.15
 	title = COU_event.15.t
 	desc = COU_event.15.desc
-	picture = GFX_event_mega_cities_SRT
+	picture = GFX_report_event_picture_pen_and_papeer
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -664,6 +665,7 @@ country_event = {
 
 	option = { 
 		name = COU_event.15.a
+		custom_effect_tooltip = COU_tooltip_srt_fox_notbanned
 		country_event = { id = COU_event.16 days = 2 }
 	}
 }
@@ -682,6 +684,9 @@ country_event = {
 
 	option = { 
 		name = COU_event.16.a
+		custom_effect_tooltip = COU_tooltip_yukino_idk_everything
+		add_political_power = 5
+		add_command_power = 5
 		country_event = { id = COU_event.17 days = 3 }
 	}
 }
@@ -700,11 +705,13 @@ country_event = {
 
 	option = { 
 		name = COU_event.17.a
-		complete_national_focus = COU_focus_recruit_srt
-		country_event = { id = COU_event.18 days = 1 } 
-		news_event = { id = BA_news.126 hours = 4 }
-		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
-		add_to_variable = { var = COU_rin_percen value = 10 }
+		custom_effect_tooltip = COU_tooltip_fox_real_in_kaya
+		country_event = { id = COU_event.35 days = 1 }
+		#complete_national_focus = COU_focus_recruit_srt
+		#country_event = { id = COU_event.18 days = 1 } 
+		#news_event = { id = BA_news.126 hours = 4 }
+		#custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		#add_to_variable = { var = COU_rin_percen value = 10 }
 	}
 }
 
@@ -735,7 +742,7 @@ country_event = {
 	id = COU_event.19
 	title = COU_event.19.t
 	desc = COU_event.19.desc
-	picture = GFX_COU_interrogationroom
+	picture = GFX_report_event_picture_the_letter
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -816,6 +823,7 @@ country_event = {
 	option = { 
 		name = COU_event.22.a
 		custom_effect_tooltip = COU_tooltip_kaya_gets_scared
+		country_event = { id = COU_event.34 days = 4 }
 	}
 }
 
@@ -844,7 +852,7 @@ country_event = {
 	id = COU_event.24
 	title = COU_event.24.t
 	desc = COU_event.24.desc
-	picture = GFX_report_event_picture_smomo
+	picture = GFX_report_event_picture_the_letter
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -869,7 +877,7 @@ country_event = {
 	id = COU_event.25
 	title = COU_event.25.t
 	desc = COU_event.25.desc
-	picture = GFX_report_event_picture_aoi
+	picture = GFX_report_event_picture_the_letter
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -993,6 +1001,144 @@ country_event = {
 		    popularity = 0.1
 		}
 		#event 추가 연계
+		country_event = { id = COU_event.32 days = 7 }
+	}
+}
+
+###막간을이용한아오이의월권경고쇼
+country_event = { 
+	id = COU_event.31
+	title = COU_event.31.t
+	desc = COU_event.31.desc
+	picture = GFX_report_event_picture_the_letter
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.31.a
+		custom_effect_tooltip = COU_tooltip_rin_says_what
+		add_political_power = 5
+	}
+}
+
+country_event = { 
+	id = COU_event.32
+	title = COU_event.32.t
+	desc = COU_event.32.desc
+	picture = GFX_report_event_picture_the_du
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.32.a
+		custom_effect_tooltip = COU_tooltip_fascists_agree_kaya
+		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		add_to_variable = { var = COU_rin_percen value = 10 }
+	}
+}
+
+##드그렐 씨에게 
+country_event = { 
+	id = COU_event.33
+	title = COU_event.33.t
+	desc = COU_event.33.desc
+	picture = GFX_report_event_picture_the_letter
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.33.a
+		custom_effect_tooltip = COU_tooltip_flanderns_agree_kaya
+		custom_effect_tooltip = COU_tooltip_high_five_kim_daejung_agrees
+		add_to_variable = { var = COU_rin_percen value = 5 }
+	}
+}
+
+##공포를 줘야겠다 - FOX 소대 동원 
+country_event = { 
+	id = COU_event.34
+	title = COU_event.34.t
+	desc = COU_event.34.desc
+	picture = GFX_report_event_picture_srt_uprised
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.34.a
+		custom_effect_tooltip = COU_tooltip_srt_foxs_agree_to_kaya
+		add_political_power = 5
+		country_event = { id = COU_event.15 days = 1 }
+	}
+}
+
+country_event = { 
+	id = COU_event.35
+	title = COU_event.35.t
+	desc = COU_event.35.desc
+	picture = GFX_COU_interrogationroom
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.35.a
+		custom_effect_tooltip = COU_tooltip_srt_can_able_to_use
+	}
+}
+
+country_event = { 
+	id = COU_event.36
+	title = COU_event.36.t
+	desc = COU_event.36.desc
+	picture = GFX_report_event_COU_srt_divided
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.36.a
+		country_event = COU_event.37 
+	}
+}
+
+country_event = { 
+	id = COU_event.37
+	title = COU_event.37.t
+	desc = COU_event.37.desc
+	picture = GFX_report_event_COU_srt_divided
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.37.a
+		custom_effect_tooltip = COU_tooltip_rabbit_joins_fox
+		custom_effect_tooltip = COU_tooltip_activate_buntangs_srt
 	}
 }
 
@@ -1010,6 +1156,20 @@ country_event = {
 
 	option = { 
 		name = COU_event.100000.a
+		##슈퍼이벤트 테스트 
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "BA_COU_KAYA_LETSGo"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 26
+					days = 15
+				}
+			}
+		}
 		trigger = {
 		   NOT = { is_ai = yes }
 		}

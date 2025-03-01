@@ -1,5 +1,5 @@
 guiTypes = {
-	##키로가 내각 
+	##린 탄핵 
 	containerWindowType = {
 		name = "COU_getout_rin_window"
 		position = { x = 0 y = 0 }	
@@ -72,6 +72,58 @@ guiTypes = {
 			text = "[COU_deoragree_out_rinthree]"
 			format = left
 			maxHeight = 24
+		}
+	}
+	
+	##카야의 상태
+	containerWindowType = {
+		name = "COU_situation_of_kaya_window"
+		position = { x = 0 y = 0 }	
+		size = { width = 350% height= 480 }
+		
+		##카야 설명 고귀하신 
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_NAM"
+			position = { x = 167 y = -5 }
+			font = "hoi_36header"
+			text = "COU_THE_KAYA_GUI_NAME"
+			format = left
+			maxHeight = 24
+		}
+		
+		##주접들 
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_DESCS_1"
+			position = { x = 185 y = 230 }
+			font = "hoi_36header"
+			text = "COU_THE_KAYA_GUI_DESCSS"
+			format = right
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_DESCS_2"
+			position = { x = 101 y = 230 }
+			font = "hoi_36header"
+			format = left
+			text = "COU_THE_KAYA_GUI_DESCSSS"
+			maxHeight = 24
+		}
+		
+		##예쁜 아이콘 
+		iconType = { 
+			name = "icon_decision_COU_kaya_frame"
+			spriteType = "GFX_decision_COU_leader_frame_kaya"
+			pdx_tooltip = "[COU.COU_KAYA.GetName]"
+			position = { x = 75 y = 40 }
+			scale = 1
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_NAME_KAYA_S"
+			position = { x = 174 y = 310 }
+			font = "hoi_36header"
+			text = "COU_THE_KAYA_GUI_NAME_KAYA"
+			maxHeight = 24
+			scale = 1.5
 		}
 	}
 }

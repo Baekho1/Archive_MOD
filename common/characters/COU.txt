@@ -297,8 +297,8 @@ characters={
 		corps_commander={
 			traits = { front_line_general }
 			skill=3
-			attack_skill=4
-			defense_skill=4
+			attack_skill=3
+			defense_skill=3
 			planning_skill=1
 			logistics_skill=1
 		}
@@ -443,7 +443,7 @@ characters={
 			traits = {
 				BA_category_halo_1
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -485,7 +485,7 @@ characters={
 			available = {
 			}
 			traits = {
-				army_regrouping_1
+				army_artillery_3
 			}
 			cost = 150
 			ai_will_do = {
@@ -500,9 +500,9 @@ characters={
 			}
 			visible = { NOT = { has_country_flag = SRT_BANNED } }
 			skill=1
-			attack_skill=3
+			attack_skill=4
 			defense_skill=1
-			planning_skill=2
+			planning_skill=3
 			logistics_skill=2
 		}
 	}
@@ -668,9 +668,9 @@ characters={
 			available = {
 			}
 			traits = {
-				army_artillery_1
+				army_regrouping_2
 			}
-			cost = 150
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -712,7 +712,7 @@ characters={
 			available = {
 			}
 			traits = {
-				army_infantry_1
+				army_infantry_2
 			}
 			cost = 150
 			ai_will_do = {
