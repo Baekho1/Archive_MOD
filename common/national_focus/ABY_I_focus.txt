@@ -12673,7 +12673,7 @@ focus_tree = {
 
     focus = {
         id = ABY_focus_reversed_halo
-        icon = GFX_focus_PLACEHOLDER
+        icon = GFX_focus_unknown
         prerequisite = {
             focus = ABY_focus_bloodthirst_of_lion
         }
@@ -12811,7 +12811,7 @@ focus_tree = {
     }
 
     focus = { #백귀야행 관광 사업 복원
-        id = ABY_focus_restore_hyakkiyakou_sightseeing
+        id = ABY_focus_restore_sightseeing
         icon = GFX_focus_SWE_per_albin_bus
         prerequisite = { focus = ABY_focus_southern_kivotos_industries }
         x = -2
@@ -12829,7 +12829,7 @@ focus_tree = {
     }
 
     focus = { #주데텐란트 요새 확장
-        id = ABY_focus_expand_sudetenland_fortress
+        id = ABY_focus_expand_fortress
         icon = GFX_goal_generic_fortify_city
         prerequisite = { 
             focus = ABY_focus_effort_for_peace
@@ -12845,7 +12845,7 @@ focus_tree = {
     }
 
     focus = { #분리주의자 설득
-        id = ABY_focus_persuade_seperatists
+        id = ABY_focus_negotiation_again
         icon = GFX_focus_ICE_hrafninn_flygur
         prerequisite = { 
             focus = ABY_focus_southern_kivotos_industries 
@@ -12868,17 +12868,17 @@ focus_tree = {
     }
 
     focus = { #대책위의 정통성(쿠로미 세리카는 실질적인 일인자로서 남키보토스를 치리할 것입니다.)
-        id = ABY_focus_by_legitimacy_of_taskforce
+        id = ABY_focus_serika_dictatorship
         icon = GFX_focus_rom_royal_dictatorship
         prerequisite = { 
-            focus = ABY_focus_persuade_seperatists
+            focus = ABY_focus_negotiation_again
         }
         mutually_exclusive = {
             focus = ABY_focus_restore_democracy
         }
         x = -2
         y = 1
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12890,11 +12890,11 @@ focus = { #키보토스인 우선
         id = ABY_focus_kivotos_priority
         icon = GFX_focus_generic_monarchist_workers
         prerequisite = { 
-            focus = ABY_focus_by_legitimacy_of_taskforce
+            focus = ABY_focus_serika_dictatorship
         }
         x = -3
         y = 2
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12906,11 +12906,11 @@ focus = { #키보토스인 우선
         id = ABY_focus_new_kivotos_council
         icon = GFX_focus_GER_fund_the_film_department
         prerequisite = { 
-            focus = ABY_focus_by_legitimacy_of_taskforce
+            focus = ABY_focus_serika_dictatorship
         }
         x = -1
         y = 2
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12929,7 +12929,7 @@ focus = { #키보토스인 우선
         }
         x = -2
         y = 3
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12941,14 +12941,14 @@ focus = { #키보토스인 우선
         id = ABY_focus_restore_democracy
         icon = GFX_goal_support_democracy
         prerequisite = { 
-            focus = ABY_focus_persuade_seperatists 
+            focus = ABY_focus_negotiation_again 
         }
         mutually_exclusive = {
-            focus = ABY_focus_by_legitimacy_of_taskforce
+            focus = ABY_focus_serika_dictatorship
         }
         x = 2
         y = 1
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12964,7 +12964,7 @@ focus = { #키보토스인 우선
         }
         x = 1
         y = 2
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12980,7 +12980,7 @@ focus = { #키보토스인 우선
         }
         x = 3
         y = 2
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -12999,7 +12999,7 @@ focus = { #키보토스인 우선
         }
         x = 2
         y = 3
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
@@ -13016,7 +13016,7 @@ focus = { #키보토스인 우선
         }
         x = 0
         y = 4
-        relative_position_id = ABY_focus_persuade_seperatists
+        relative_position_id = ABY_focus_negotiation_again
         cost = 5
 
         completion_reward = {
