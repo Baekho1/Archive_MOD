@@ -20,6 +20,45 @@ country_event = { #일상 이벤트 1, 수염을 잃어버린 체리노
 		name = RED_ordinary_event.1.a
 	}
 }
+country_event = { #일상 이벤트 2, 227호 특별반의 불평
+	id = RED_ordinary_event.2
+	title = RED_ordinary_event.2.t
+	desc = RED_ordinary_event.2.d
+	is_triggered_only = yes
+	option = { 
+		name = RED_ordinary_event.2.a
+	}
+}
+country_event = { #일상 이벤트 3, 227호 온천장
+	id = RED_ordinary_event.3
+	title = RED_ordinary_event.3.t
+	desc = RED_ordinary_event.3.d
+	is_triggered_only = yes
+	option = { 
+		name = RED_ordinary_event.3.a
+		country_event = RED_ordinary_event.4
+	}
+}
+country_event = { #일상 이벤트 4, 227호 온천장 - 2
+	id = RED_ordinary_event.4
+	title = RED_ordinary_event.4.t
+	desc = RED_ordinary_event.4.d
+	is_triggered_only = yes
+	option = { 
+		name = RED_ordinary_event.4.a
+		set_country_flag = RED_onsen_flag
+		effect_tooltip = {
+			unlock_national_focus = RED_club_focus_11
+		}
+		hidden_effect = {
+			load_focus_tree = {
+				tree = RED_focus_tree
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
 
 unit_leader_event = { #못찾음 (붉겨)
 	id = RED_racing_sov.1
@@ -153,7 +192,7 @@ country_event = { #체리노-트로츠키 대립 시작
 		hidden_effect = {
 			country_event = {
 				id = RED_tro_event.4
-				days = 1
+				days = 2
 			}
 		}
 	}
@@ -166,6 +205,10 @@ country_event = { #모미지를 찾아간 체리노
 	is_triggered_only = yes
 	option = { #
 		name = RED_tro_event.4.a
+		country_event = {
+			id = RED_reading.1
+			days = 2
+		}
 	}
 }
 country_event = { #망명위원회 설립
@@ -4112,7 +4155,6 @@ country_event = { #권력쟁투 시작
 			id = RED_power_balance
 			set_value = -0.2
 		}
-		unlock_decision_tooltip = RED_giving_pudding
 	}
 }
 country_event = { #트로츠키-체리노 대립 / 출판부

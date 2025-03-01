@@ -3831,7 +3831,7 @@ news_event = { # 리오의 밀레니엄 권력투쟁 승리
 	}
 }
 
-news_event = { # 히마리리의 밀레니엄 권력투쟁 승리
+news_event = { # 히마리의 밀레니엄 권력투쟁 승리
 	id = MIL_news.2
 	title = MIL_news.2.t
 	desc = MIL_news.2.desc
@@ -3891,6 +3891,68 @@ news_event = { # 축출된 리오
 		name = MIL_news.3.c
 		trigger = {
 			NOT = { Kivotos_school_tag = yes }
+		}
+	}
+}
+news_event = {
+	id = MIL_news.4
+	title = MIL_news.4.t
+	desc = MIL_news.4.desc
+	picture = GFX_news_MIL_Animated_Hatsune_Miku
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = MIL_news.4.a
+		trigger = {
+			OR = {
+				TAG = SHE
+				TAG = GEI
+				TAG = ARI
+				TAG = RED
+				TAG = KAI
+				TAG = MIL
+				TAG = TRM
+				TAG = GEH
+				TAG = GEM
+				TAG = SRT
+				TAG = KSP
+				TAG = HEU
+				TAG = ABY
+				TAG = HYA
+				TAG = SHA
+			}
+		}
+	}
+	option = {
+		name = MIL_news.4.b
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHE
+					TAG = GEI
+					TAG = ARI
+					TAG = RED
+					TAG = KAI
+					TAG = MIL
+					TAG = GEH
+					TAG = GEM
+					TAG = TRM
+					TAG = SRT
+					TAG = KSP
+					TAG = HEU
+					TAG = ABY
+					TAG = HYA
+					TAG = SHA
+					TAG = BAC
+					TAG = SUH
+					TAG = INK
+				}
+			}
 		}
 	}
 }

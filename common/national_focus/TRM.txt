@@ -6770,7 +6770,10 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			has_government = fascism
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
 		}
 		ai_will_do = {
 
@@ -6778,7 +6781,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.06 }
 			add_ideas = TRN_JTF_political_commissar_ns
-			country_event = trinity.14
+			country_event = trinity.14 #정의실현부 정치의원
 		}
 	}
 	focus = {
@@ -6791,14 +6794,18 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			has_government = fascism
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
 		}
 		ai_will_do = {
 
 		}
 		select_effect = {
 			country_event = { id = trinity.16 days = 05 } # 상투스 분파의 절멸
-			country_event = { id =  trinity.17 days = 10 } # 필리우스 분파의 운명
+			country_event = { id =  trinity.17 days = 15 } # 필리우스 분파의 운명
+			country_event = { id = trinity.19 days = 25 } # 파테르 분파 내부의 불충
 		}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = -0.06 }
@@ -6819,7 +6826,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_government = fascism
+			has_country_leader = {
+				character = TRN_alzk
+				ruling_only = yes
+			}
 		}
 		ai_will_do = {
 
@@ -6827,14 +6837,31 @@ focus_tree = {
 		completion_reward = {
 			set_cosmetic_tag = TRINITY_REICH
 			add_political_power = 100
+			if = {
+				limit = { has_idea = TRN_broken_balance_ns }
+				remove_ideas = TRN_broken_balance_ns
+			}
+			if = {
+				limit = { has_idea = TRN_political_instability_ns }
+				remove_ideas = TRN_political_instability_ns
+			}
 			
-			set_country_leader_ideology = pater_nazism
-			set_rule = { can_create_factions = yes }
-			add_country_leader_trait = TRN_mika_trait_1
-			set_country_leader_ideology = pater_nazism
+			effect_tooltip = { country_event = trinity.20 }
+			hidden_effect = {
+				TRN_alzk = { 
+					unit_leader_event = trinity.20 
+					add_country_leader_trait = TRN_mika_trait_1
+				}
+			}
+			#set_rule = { can_create_factions = yes }
 			hidden_effect = {
 				news_event = { id = BA_news.3 days = 3 }
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				remove_country_leader_trait = TRM_pater_faction
 			}
+			custom_effect_tooltip = TRM_pater_union_tt
+			set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
+			TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
 		}
 	}
 }
@@ -8469,7 +8496,7 @@ focus_tree = {
 		relative_position_id = TRM_Streamline_Intelligence_Gathering
 		x = 1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			base = 300
 			modifier = {

@@ -3378,13 +3378,18 @@ leader_traits = {
 		resistance_growth = -0.15
 	}
 
-	hate_soviet = {
+	hate_soviet = { #반소비에트 정서
 		random = no
 		sprite = 13
 		ai_strategy = {
 			type = antagonize
 			id = SOV
 			value = 100
+		}
+		ai_strategy = {
+			type = alliance
+			id = SOV
+			value = -500
 		}
 	}
 	RED_SWE_minister_of_trade = { #무역업 
@@ -3403,7 +3408,7 @@ leader_traits = {
 	RED_momiji_trait_good = { #문헌정보학자
 		sprite = 13
 		random = no
-		research_speed_factor = 0.075
+		research_speed_factor = 0.15
 	}
 	RED_yakumo_trait = { #기회주의적인 출판부장
 		sprite = 13
@@ -3446,17 +3451,17 @@ leader_traits = {
 		sprite = 13
 		random = no
 		conscription_factor = 0.1
-		research_speed_factor = 0.025
+		research_speed_factor = 0.05
 	}
 	RED_meru_trait_realism = { #리얼리즘 만화가
 		sprite = 13
 		random = no
-		conscription_factor = 0.12
+		conscription_factor = 0.15
 	}
 	RED_meru_trait_money = { #상업문학 만화가
 		sprite = 13
 		random = no
-		conscription_factor = 0.05
+		conscription_factor = 0.1
 		consumer_goods_factor = -0.1
 	}
 	RED_socialist_millitary = { #사회주의 군사위원회

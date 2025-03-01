@@ -4971,6 +4971,7 @@ news_event = { # SRT 폐쇄
 
     option = { # 범부
         name = BA_news.129.a
+		COU = { set_country_flag = COU_flag_fucking_srt }
     }
 }
 
