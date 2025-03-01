@@ -1165,6 +1165,10 @@ focus_tree = {
 				limit = { has_global_flag = GEH_BTBOTS_END_flag }
 				has_global_flag = GEH_BTBOTS_END_NEXT_flag
 			}
+			has_country_leader = {
+				character = GEH_hina
+				ruling_only = yes
+			}
 		}
         prerequisite = {
             focus = GEH_prefect_team_fanaticism
@@ -1188,12 +1192,38 @@ focus_tree = {
 					value = -100
 				}
 			}
-			swap_ruler_traits = {
-				remove = b_tjsehqnwkd2
-				add = b_tjsehqnwkd3
+			if = {
+				limit = { has_country_leader_with_trait = b_tjsehqnwkd_start }
+				swap_ruler_traits = {
+					remove = b_tjsehqnwkd_start
+					add = b_tjsehqnwkd3
+				}
+			}
+			if = {
+				limit = { has_country_leader_with_trait = b_tjsehqnwkd_week }
+				swap_ruler_traits = {
+					remove = b_tjsehqnwkd_week
+					add = b_tjsehqnwkd3
+				}
+			}
+			if = {
+				limit = { has_country_leader_with_trait = b_tjsehqnwkd }
+				swap_ruler_traits = {
+					remove = b_tjsehqnwkd
+					add = b_tjsehqnwkd3
+				}
+			}
+			if = {
+				limit = { has_country_leader_with_trait = b_tjsehqnwkd2 }
+				swap_ruler_traits = {
+					remove = b_tjsehqnwkd2
+					add = b_tjsehqnwkd3
+				}
 			}
 			custom_effect_tooltip = GEH_gehenna_leader_tt
 			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
+			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission
+			country_event = GEH_BTBOTS.100
         }
         ai_will_do = {
             factor = 1
@@ -1273,6 +1303,10 @@ focus_tree = {
 				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
 				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
 				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
+				add_days_mission_timeout = {
+					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+					days = 40
+				}
 			}
         }
         ai_will_do = {
@@ -1391,6 +1425,10 @@ focus_tree = {
 				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
 				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
 				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
+				add_days_mission_timeout = {
+					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+					days = 40
+				}
 			}
 		}
 		ai_will_do = {
@@ -1560,8 +1598,15 @@ focus_tree = {
 		}
 		completion_reward = {
             GEH_popular_support_up_effect = yes
-			custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_Lslow_tt
-			add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 80 }
+			if = {
+				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
+				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_Lslow_tt
+				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 80 }
+				add_days_mission_timeout = {
+					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+					days = 80
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1709,6 +1754,10 @@ focus_tree = {
 				limit = { NOT = { has_global_flag = GEH_BTBOTS_END_flag } }
 				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_slow_tt
 				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 40 }
+				add_days_mission_timeout = {
+					mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
+					days = 40
+				}
 			}
 		}
 		ai_will_do = {
@@ -4084,6 +4133,9 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			has_completed_focus = GEH_zero_congress_focus
+			has_completed_focus = GEH_second_congress_focus
+			has_completed_focus = GEH_first_congress_focus
 			OR = {
 				has_completed_focus = GEH_military_leadership_committee
 				has_completed_focus = GEH_gehenna_leader
@@ -4793,6 +4845,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = GEH_last_focus_3_tt
+			if = {
+				limit = { has_country_flag = hina_assembly_h_flag }
+				set_country_flag = hina_assembly_h_next_flag
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_a_flag }
+				set_country_flag = hina_assembly_a_next_flag
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_c_flag }
+				set_country_flag = hina_assembly_c_next_flag
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_normal_flag }
+				set_country_flag = hina_assembly_normal_next_flag
+			}
 		}
 	}
     focus = {
@@ -4803,6 +4871,15 @@ focus_tree = {
 		relative_position_id = GEH_last_focus_3
 		x = 0
 		y = 2
+
+		allow_branch = {
+			NOT = { 
+				has_country_flag = hina_assembly_h_next_flag
+				has_country_flag = hina_assembly_a_next_flag
+				has_country_flag = hina_assembly_c_next_flag
+				has_country_flag = hina_assembly_normal_next_flag
+			}
+		}
 
 		available = {
 			custom_trigger_tooltip = {
@@ -4826,6 +4903,186 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = GEH_last_focus_effect_tt2
+		}
+	}
+    focus = {
+		id = GEH_last_focus_effect_h_rout
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_3
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_h_next_flag
+			}
+		}
+		
+		offset = {
+			x = 5
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_h_next_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_last_focus_3
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+    focus = {
+		id = GEH_last_focus_effect_a_rout
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_3
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_a_next_flag
+			}
+		}
+		
+		offset = {
+			x = 10
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_a_next_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_last_focus_3
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+    focus = {
+		id = GEH_last_focus_effect_c_rout
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_3
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_c_next_flag
+			}
+		}
+		
+		offset = {
+			x = 15
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_c_next_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_last_focus_3
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+    focus = {
+		id = GEH_last_focus_effect_normal_rout
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_3
+		x = 0
+		y = 2
+
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_country_flag = hina_assembly_normal_next_flag
+			}
+		}
+		
+		offset = {
+			x = 20
+			trigger = {
+				is_debug = yes
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = hina_assembly_normal_next_flag
+			}
+		}
+        prerequisite = {
+            focus = GEH_last_focus_3
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
 		}
 	}
 }

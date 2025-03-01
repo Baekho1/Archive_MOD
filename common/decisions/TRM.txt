@@ -120,14 +120,14 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 2
+			base = 0
 		}
 
 		complete_effect = {
 			add_stability = 0.05
 			set_global_flag = TRM_proclamation_of_mecklenburg_isolation_zone_flag
 			add_to_variable = {
-				global.KPD_country_collapse_decisions_value = -10
+				global.KPD_country_collapse_decisions_value = -20
 				tooltip = KPD_country_collapse_value_tt
 			}
         }
@@ -156,14 +156,14 @@ TRN_country_collapse_decisions = {
 		cost = 200
 
 		ai_will_do = {
-			base = 2
+			base = 0
 		}
 
 		complete_effect = {
 			add_stability = 0.05
 			set_global_flag = TRM_proclamation_of_lower_schleswig_isolation_zone_flag
 			add_to_variable = {
-				global.NSD_country_collapse_decisions_value = -10
+				global.NSD_country_collapse_decisions_value = -20
 				tooltip = NSD_country_collapse_value_tt
 			}
         }
@@ -254,6 +254,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
@@ -343,6 +344,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
@@ -432,6 +434,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = KPD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_KPD_flag }
@@ -773,6 +776,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
@@ -846,6 +850,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
@@ -919,6 +924,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = KPD_start_KPD_flag }
@@ -993,6 +999,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = NSD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
@@ -1082,6 +1089,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = NSD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
@@ -1171,6 +1179,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = NSD
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = TRM_start_NSD_flag }
@@ -1512,6 +1521,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
@@ -1585,6 +1595,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
@@ -1658,6 +1669,7 @@ TRN_country_collapse_decisions = {
 		visible = {
 			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
 			has_war_with = TRM
+			NOT = { has_global_flag = KPD_declaration_of_resistance_flag }
 		}
 		available = {
 			NOT = { has_country_flag = NSD_start_NSD_flag }
@@ -1828,10 +1840,6 @@ TRN_country_collapse_decisions = {
 			has_war_with = TRM
 		}
 		available = {
-			check_variable = {
-				global.KPD_country_collapse_decisions_value > 50
-				tooltip = KPD_country_collapse_value_up_tt
-			}
 		}
 		
 		fire_only_once = yes
@@ -1861,6 +1869,10 @@ TRN_country_collapse_decisions = {
 					keep_unit_leaders_trigger = {
 						always = yes
 					}
+				}
+				delete_unit = {
+					state = 61
+					disband = yes #will refund equipment and manpower
 				}
 			}
 			hidden_effect = {
@@ -1990,6 +2002,14 @@ TRN_country_collapse_decisions = {
 				}
 			}
 			set_variable = { global.KPD_country_collapse_decisions_value = 0 }
+			
+			hidden_effect = {
+				transfer_state = 61
+				set_capital = {
+					state = 61
+					remember_old_capital = no
+				}
+			}
         }
 	}
 	NSD_declaration_of_resistance = { # 항쟁 선포
@@ -2036,6 +2056,10 @@ TRN_country_collapse_decisions = {
 					keep_unit_leaders_trigger = {
 						always = yes
 					}
+				}
+				delete_unit = {
+					state = 66
+					disband = yes #will refund equipment and manpower
 				}
 			}
 			hidden_effect = {
@@ -2150,6 +2174,14 @@ TRN_country_collapse_decisions = {
 				}
 			}
 			set_variable = { global.NSD_country_collapse_decisions_value = 0 }
+			
+			hidden_effect = {
+				transfer_state = 66
+				set_capital = {
+					state = 66
+					remember_old_capital = no
+				}
+			}
         }
 	}
 	TCA_declaration_of_resistance = { # 
@@ -2211,6 +2243,46 @@ TRN_country_collapse_decisions = {
 			every_country = {
 				limit = { has_war_with = ROOT }
 				white_peace = ROOT
+			}
+        }
+	}
+	TRM_declaration_of_resistance = { # 
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = TRM
+		}
+		
+		visible = {
+			has_global_flag = KPD_declaration_of_resistance_flag
+			has_global_flag = NSD_declaration_of_resistance_flag
+			NOT = {
+				has_war_with = KPD
+				has_war_with = NSD
+			}
+			NOT = { has_global_flag = TRN_country_collapse_decisions_end_flag }
+		}
+		available = {
+			has_global_flag = KPD_declaration_of_resistance_flag
+			has_global_flag = NSD_declaration_of_resistance_flag
+			NOT = {
+				has_war_with = KPD
+				has_war_with = NSD
+			}
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 4000
+		}
+
+		complete_effect = {
+			set_global_flag = TRN_country_collapse_decisions_end_flag
+			add_stability = 0.10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 200
 			}
         }
 	}
