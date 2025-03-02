@@ -9,9 +9,6 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
 }
 division_template = {
@@ -36,7 +33,7 @@ units = {
 		}
 		location = 9692
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0.1
 	}
 	division = {
 		division_name = {
@@ -45,7 +42,7 @@ units = {
 		}
 		location = 3484
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -54,7 +51,7 @@ units = {
 		}
 		location = 3581
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -63,7 +60,7 @@ units = {
 		}
 		location = 11539
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -72,7 +69,7 @@ units = {
 		}
 		location = 9539
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -81,7 +78,7 @@ units = {
 		}
 		location = 555
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -90,7 +87,7 @@ units = {
 		}
 		location = 11522
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
@@ -99,13 +96,13 @@ units = {
 		}
 		location = 11554
 		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		start_experience_factor = 0
 	}
 	division = {
 		name = "Rychle Vojská Skupina 'Kalinciak'"
 		location = 9692
 		division_template = "Mobilná Skupina" 
-		start_experience_factor = 0.2
+		start_experience_factor = 0.3
 	}
 }
 
@@ -117,8 +114,7 @@ instant_effect = {
 			creator = "SLO"
 		}
 		requested_factories = 1
-		progress = 0.37
-		efficiency = 100
+		efficiency = 15
 	}
 	add_equipment_production = {
 		equipment = {
@@ -126,7 +122,6 @@ instant_effect = {
 			creator = "SLO"
 		}
 		requested_factories = 1
-		progress = 0.69
-		efficiency = 100
+		efficiency = 15
 	}
 }

@@ -510,8 +510,13 @@
  seia_desc:0 "두 번째 신비의 시작"
  seia_long:0 "상투스"
  
-
  KAP_communism_party:0 "유노오카"
  KAP_democratic_party:0 "만요슈"
  KAP_fascism_party:0 "신기칸"
  KAP_neutrality_party:0 "우라노츠카사"
+
+ SLO_communism_party:0 "슬로바키아 공산당"
+ SLO_democratic_party:0 "슬로바키아 국민당"
+ SLO_fascism_party:0 "슬로바키아 인민당"
+ SLO_fascism_party_long:0 "흘린카의 슬로바키아 인민당"
+ SLO_neutrality_party:0 "슬로바키아 의회"
