@@ -185,7 +185,7 @@ country_event = { #총학생회장 실종
 		#promote_character = COU_null
 		promote_character = COU_RIN
 		
-		country_event = { id = COU_event.2 hours = 8 }
+		#country_event = { id = COU_event.2 hours = 8 }
 		news_event = { id = BA_news.76 days = 7 }
 		set_country_flag = MISSINGGSCP
 		mark_focus_tree_layout_dirty = yes
@@ -666,7 +666,10 @@ country_event = {
 	option = { 
 		name = COU_event.15.a
 		custom_effect_tooltip = COU_tooltip_srt_fox_notbanned
-		country_event = { id = COU_event.16 days = 2 }
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.16 days = 2 }
+		}
 	}
 }
 
@@ -685,9 +688,12 @@ country_event = {
 	option = { 
 		name = COU_event.16.a
 		custom_effect_tooltip = COU_tooltip_yukino_idk_everything
-		add_political_power = 5
-		add_command_power = 5
-		country_event = { id = COU_event.17 days = 3 }
+		add_political_power = 25
+		add_command_power = 25
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.17 days = 3 }
+	    }
 	}
 }
 
@@ -706,7 +712,10 @@ country_event = {
 	option = { 
 		name = COU_event.17.a
 		custom_effect_tooltip = COU_tooltip_fox_real_in_kaya
-		country_event = { id = COU_event.35 days = 1 }
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.35 days = 1 }
+		}
 		#complete_national_focus = COU_focus_recruit_srt
 		#country_event = { id = COU_event.18 days = 1 } 
 		#news_event = { id = BA_news.126 hours = 4 }
@@ -758,7 +767,7 @@ country_event = {
 		custom_effect_tooltip = COU_tooltip_jaime_accept_yoon
 		custom_effect_tooltip = COU_tooltip_jaime_umm
 		add_stability = 0.01
-		add_political_power = 50
+		add_political_power = 75
 	}
 }
 
@@ -783,6 +792,7 @@ country_event = {
 		add_ideas = COU_ditchland_law
 		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
 		add_to_variable = { var = COU_rin_percen value = 10 }
+	    complete_national_focus = COU_focus_treaty_of_amsterdam
 	}
 }
 
@@ -822,8 +832,12 @@ country_event = {
 
 	option = { 
 		name = COU_event.22.a
+		add_political_power = 75
 		custom_effect_tooltip = COU_tooltip_kaya_gets_scared
-		country_event = { id = COU_event.34 days = 4 }
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.34 days = 4 }
+		}
 	}
 }
 
@@ -843,7 +857,7 @@ country_event = {
 	option = { 
 		name = COU_event.23.a
 		custom_effect_tooltip = COU_tooltip_aoi_started_hondon
-		add_political_power = 25
+		add_political_power = 50
 	}
 }
 
@@ -868,7 +882,7 @@ country_event = {
 		custom_effect_tooltip = COU_tooltip_smomo_accept_yoon
 		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
 		add_to_variable = { var = COU_rin_percen value = 10 }
-		add_political_power = 50
+		add_political_power = 75
 	}
 }
 
@@ -936,7 +950,7 @@ country_event = {
 	option = { 
 		name = COU_event.27.a
 		custom_effect_tooltip = COU_tooltip_the_new_days_of_humans
-		add_political_power = 25
+		add_political_power = 150
 	}
 }
 
@@ -1001,7 +1015,10 @@ country_event = {
 		    popularity = 0.1
 		}
 		#event 추가 연계
-		country_event = { id = COU_event.32 days = 7 }
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.32 days = 7 }
+		}
 	}
 }
 
@@ -1083,7 +1100,10 @@ country_event = {
 		name = COU_event.34.a
 		custom_effect_tooltip = COU_tooltip_srt_foxs_agree_to_kaya
 		add_political_power = 5
-		country_event = { id = COU_event.15 days = 1 }
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.15 days = 1 }
+		}
 	}
 }
 
@@ -1101,6 +1121,7 @@ country_event = {
 
 	option = { 
 		name = COU_event.35.a
+		set_country_flag = SRT_STARTED_BUNTANGS_KAYA
 		custom_effect_tooltip = COU_tooltip_srt_can_able_to_use
 	}
 }
@@ -1119,7 +1140,10 @@ country_event = {
 
 	option = { 
 		name = COU_event.36.a
-		country_event = COU_event.37 
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = COU_event.37 
+		}
 	}
 }
 
@@ -1137,10 +1161,218 @@ country_event = {
 
 	option = { 
 		name = COU_event.37.a
+		set_country_flag = COU_tooltip_rabbit_join_fox
 		custom_effect_tooltip = COU_tooltip_rabbit_joins_fox
 		custom_effect_tooltip = COU_tooltip_activate_buntangs_srt
 	}
 }
+
+country_event = { 
+	id = COU_event.38
+	title = COU_event.38.t
+	desc = COU_event.38.desc
+	picture = GFX_report_event_picture_minori_two
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.38.a
+		add_stability = -0.01
+		add_political_power = 25
+		custom_effect_tooltip = COU_RED_MINORI_START
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.39 days = 7 }
+		}
+	}
+}
+
+country_event = { 
+	id = COU_event.39
+	title = COU_event.39.t
+	desc = COU_event.39.desc
+	picture = GFX_report_event_picture_the_letter
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.39.a
+		custom_effect_tooltip = COU_tooltip_kaya_and_minori
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   country_event = { id = COU_event.40 days = 7 }
+		}
+	}
+}
+
+country_event = { 
+	id = COU_event.40
+	title = COU_event.40.t
+	desc = COU_event.40.desc
+	picture = GFX_report_event_picture_minori_one
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.40.a
+	    custom_effect_tooltip = COU_tooltip_minori_ended_movement
+		RED = { country_event = { id = COU_event.42 days = 1 } }
+		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		add_to_variable = { var = COU_rin_percen value = 10 }
+	}
+}
+
+##붉겨쪽 
+country_event = { 
+	id = COU_event.41
+	title = COU_event.41.t
+	desc = COU_event.41.desc
+	picture = GFX_report_event_picture_minori_two
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.41.a
+	}
+}
+
+country_event = { 
+	id = COU_event.42
+	title = COU_event.42.t
+	desc = COU_event.42.desc
+	picture = GFX_report_event_picture_minori_two
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.42.a
+	}
+}
+
+##SRT 습격 
+country_event = { 
+	id = COU_event.43
+	title = COU_event.43.t
+	desc = COU_event.43.desc
+	picture = GFX_COU_event_meetingroom
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.43.a
+	    custom_effect_tooltip = COU_tooltip_kaya_holy
+		custom_effect_tooltip = COU_tooltip_high_five_kim_daejung_deagrees
+		add_to_variable = { var = COU_rin_percen value = -5 }
+	}
+}
+
+unit_leader_event = {
+	id = COU_event.44
+	title = COU_event.44.t
+	desc = COU_event.44.desc
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = { 
+		name = COU_event.44.a
+	    custom_effect_tooltip = COU_tooltip_kaya_ilikeit
+		if = {
+		   limit = { has_country_flag = COU_flag_acivate_norin_decision }
+		   hidden_effect = { country_event = { id = COU_event.43 days = 4 } }
+		}
+	}
+}
+
+unit_leader_event = {
+	id = COU_event.45
+	title = COU_event.45.t
+	desc = COU_event.45.desc
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = { 
+		name = COU_event.45.a
+	    custom_effect_tooltip = COU_tooltip_kaya_ilikeit2
+		custom_effect_tooltip = COU_tooltip_high_ten_kim_daejung_agrees
+		add_to_variable = { var = COU_rin_percen value = 10 }
+	}
+}
+
+##린 탄핵 
+country_event = { 
+	id = COU_event.46
+	title = COU_event.46.t
+	desc = COU_event.46.desc
+	picture = GFX_COU_event_203
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.46.a
+	    custom_effect_tooltip = COU_tooltip_getout_rin_end
+		add_popularity = { 
+		    ideology = democratic
+		    popularity = -0.1
+		}
+		add_popularity = { 
+		    ideology = fascism
+		    popularity = 0.1
+		}
+	    set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_political_power = 75
+		add_stability = 0.1
+		add_war_support = 0.1
+		news_event = { id = BA_news.132 }
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				scoped_play_song = "BA_COU_KAYA_LETSGo"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 28
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+
 
 
 ##테스트용 이벤트

@@ -422,6 +422,24 @@ on_actions = {
 				}
 				ROOT = { drop_cosmetic_tag = yes }
 			}
+			if = {
+				limit = { # 총학의 일방적 합병 
+				    AND = {
+				       ROOT = { original_tag = SHE }
+				       FROM = { original_tag = COU }
+			        }
+				}
+				COU = { annex_country = { target = SHE } }
+			}
+			if = {
+				limit = { # 샬레의 일방적 합병 
+				    AND = {
+				       ROOT = { original_tag = COU }
+				       FROM = { original_tag = SHE }
+			        }
+				}
+				SHE = { annex_country = { target = COU } }
+			}
 		}
 	}
 	on_state_control_changed = {

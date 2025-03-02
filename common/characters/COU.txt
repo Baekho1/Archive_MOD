@@ -141,6 +141,7 @@ characters={
 		gender = female
 		country_leader={
 			desc=COU_KAYA_desc
+			traits = { COU_dictator_rin COU_KAYA_TRAIT }
 			ideology=cou_kaya_dictatorship
 			expire="1965.1.1.1"
 		}

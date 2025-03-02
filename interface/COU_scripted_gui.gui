@@ -123,7 +123,6 @@ guiTypes = {
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_NAME_KAYA"
 			maxHeight = 24
-			scale = 1.5
 		}
 		
 		##카야의 상태
@@ -140,7 +139,6 @@ guiTypes = {
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_NAME_KAYA22"
 			maxHeight = 24
-			scale = 1
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_SITUATION_TEXT2"
@@ -148,7 +146,6 @@ guiTypes = {
 			font = "hoi_36header"
 			text = "[COU_SITUATION_OF_THE_KAYA_LEVELS]"
 			maxHeight = 24
-			scale = 1
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_SITUATION_EFFECT1"
@@ -156,15 +153,13 @@ guiTypes = {
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_NAME_EFFECT"
 			maxHeight = 24
-			scale = 1
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_SITUATION_EFFECT2"
-			position = { x = 224 y = 425 }
+			position = { x = 224 y = 415 }
 			font = "hoi_36header"
 			text = "[COU_SITUATION_OF_THE_KAYA_EFFECTS]"
 			maxHeight = 35
-			scale = 1
 		}
 	}
 }

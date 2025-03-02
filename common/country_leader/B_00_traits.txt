@@ -764,17 +764,10 @@ leader_traits = {
 	}
 	COU_power_struggle = { #권력 투쟁
 		random = no
-		political_power_factor = -0.20
-		stability_factor = -0.25
-		war_support_factor = -0.25
-		drift_defence_factor = -0.50
-	}
-	COU_power_struggle = { #권력 투쟁
-		random = no
-		political_power_factor = -0.20
-		stability_factor = -0.25
-		war_support_factor = -0.25
-		drift_defence_factor = -0.50
+		political_power_factor = -0.1
+		stability_factor = -0.1
+		war_support_factor = -0.1
+		drift_defence_factor = -0.25
 	}
 	COU_babo = {
 		random = no
@@ -782,6 +775,13 @@ leader_traits = {
 		stability_factor = -0.05
 		army_attack_factor = -0.025
 		army_defence_factor = -0.025
+	}
+	COU_KAYA_TRAIT = {
+		random = no
+		
+		war_support_factor = 0.05
+		army_morale_factor = 0.05
+		drift_defence_factor = 0.25
 	}
 	##Collaboraters
 	COU_leader_of_dutch_nazi = {

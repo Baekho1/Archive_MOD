@@ -77,6 +77,8 @@ COU_getout_rin_decision = {
 	priority = 230
 	
 	scripted_gui = COU_rin_getout
+	
+	visible_when_empty = yes
 }
 
 ##카야의 상태

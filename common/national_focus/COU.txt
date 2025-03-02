@@ -685,12 +685,16 @@ focus_tree = {
         icon = GFX_focus_minori
         x = -2
         y = 3
-        cost = 10
+        cost = 2
 		prerequisite = { focus = COU_focus_arrest_momoka }
 		prerequisite = { focus = COU_focus_arrest_ayumu }
 		relative_position_id = COU_focus_in_the_darkness
 		select_effect = { 
 		     #country_event = { id = COU_event.15 days = 5 }
+		}
+		select_effect = {
+		     country_event = COU_event.38
+			 RED = { country_event = COU_event.41 }
 		}
         completion_reward = {
 		     custom_effect_tooltip = COU_tooltip_srt_gonna_make_shit
@@ -768,7 +772,7 @@ focus_tree = {
         icon = GFX_focus_BEL_la_dame_blanche
         x = 2
         y = 3
-        cost = 5
+        cost = 1
 		available = {
 		    custom_trigger_tooltip = {
 			    tooltip = COU_tooltip_all_agreed_tanhak
@@ -778,14 +782,16 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = COU_tooltip_percent_back
-				check_variable = { COU_rin_percen > 99 }
+				check_variable = { COU_rin_percen > 79 }
 			}
 		}
 		prerequisite = { focus = COU_focus_unarrest_mussert }
 		prerequisite = { focus = COU_focus_contact_with_flandern }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		    
+		    add_political_power = 100
+			custom_effect_tooltip = COU_tooltip_letsgo_anti_rin_plans
+			set_country_flag = START_RIN_TANHAK
         }
 		ai_will_do = {
 			base = 100
