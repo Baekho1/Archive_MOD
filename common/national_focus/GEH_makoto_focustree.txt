@@ -4893,9 +4893,9 @@ focus_tree = {
 	}
 	focus = { #온천수를 찾아서
 		id = GEM_hot_spring
-		icon = GFX_focus_POL_resistance
+		icon = GFX_goal_GEH_hot_spring 
 		cost = 5.00
-		mutually_exclusive = {
+		mutually_exclusive = { 
 			focus = GEM_Neutralize_Makoto
 		}
 		mutually_exclusive = {
