@@ -3795,6 +3795,10 @@ country_event = { #1일 1선 (공산루트 엔딩)
 	option = { 
 		name = HEU_event.246.a 
 		custom_effect_tooltip = HEU_game_victory_tt
+
+		hidden_effect = {
+			news_event = { id = HEU_news.22 hours = 3 }
+		}
 	}
 }
 

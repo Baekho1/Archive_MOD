@@ -3999,5 +3999,34 @@ leader_traits = {
 		sprite = 13
 		stability_factor = 0.15
 	}
+
+	MEX_nicolas_rodriguez_carrasco_trait = { # 금빛셔츠단의 우두머리
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		army_defence_factor = 0.05
+	}
+
+	MEX_luis_maria_martinez_trait = { # 멕시코 가톨릭 대주교
+		random = no
+		sprite = 13
+		neutrality_drift = 0.1
+		stability_factor = 0.05
+	}
+
+	MEX_efrain_buenrostro_ochoa_trait = { # 훌륭한 경제장관
+		random = no
+		sprite = 13
+		neutrality_drift = 0.1
+		production_speed_dockyard_factor = 0.15
+		production_speed_infrastructure_factor = 0.15
+	}
+
+	MEX_salvador_abascal_trait = { # UNS의 2인자
+		random = no
+		sprite = 13
+		war_support_factor = 0.2
+		stability_factor = -0.1
+	}
 }
  

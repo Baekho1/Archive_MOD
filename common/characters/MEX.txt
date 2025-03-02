@@ -86,6 +86,7 @@ characters={
 			}
 		}
 		field_marshal ={
+			desc = "MEX_garza_desc"
 			traits={ career_officer war_hero }
 			skill=3
 			attack_skill=3
@@ -237,23 +238,15 @@ characters={
 			}
 		}
 		advisor={
+			desc = "MEX_abascal_desc"
 			slot = political_advisor
 			idea_token = MEX_salvador_abascal
 			allowed = {
 				original_tag = MEX
 			}
 
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_the_gold_shirts
-				}
-			}
-
 			traits = {
-				syncretic_revanchist 
+				MEX_salvador_abascal_trait
 			}
 		}
 	}
@@ -337,6 +330,69 @@ characters={
 			}
 
 			can_be_fired = no
+		}
+	}
+
+	MEX_nicolas_rodriguez_carrasco ={
+		name=MEX_nicolas_rodriguez_carrasco
+		portraits={
+			army={
+				small="gfx/leaders/MEX/Advisor_MEX_nicolas_rodriguez_carrasco.tga"
+			}
+		}
+		advisor={
+			desc = "MEX_carrasco_desc"
+			slot = political_advisor
+			idea_token = MEX_nicolas_rodriguez_carrasco
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_nicolas_rodriguez_carrasco_trait 
+			}
+		}
+	}
+
+	MEX_luis_maria_martinez = {
+		name=MEX_luis_maria_martinez
+		portraits={
+			army={
+				large="GFX_portrait_MEX_Luis_Maria_Martinez"
+				small="gfx/leaders/MEX/Advisor_MEX_luis_maria_martinez.tga"
+			}
+		}
+
+		advisor={
+			desc = "MEX_martinez_desc"
+			slot = political_advisor
+			idea_token = MEX_luis_maria_martinez
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_luis_maria_martinez_trait 
+			}
+		}
+	}
+
+	MEX_efrain_buenrostro_ochoa = {
+		name=MEX_efrain_buenrostro_ochoa
+		portraits={
+			army={
+				small="gfx/leaders/MEX/Advisor_MEX_efrain_buenrostro_ochoa.tga"
+			}
+		}
+
+		advisor={
+			desc = "MEX_ochoa_desc"
+			slot = political_advisor
+			idea_token = MEX_efrain_buenrostro_ochoa
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_efrain_buenrostro_ochoa_trait 
+			}
 		}
 	}
 
@@ -431,15 +487,6 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_MEX_francisco_mugica" #Can become country leader (Non-aligned -> Moderatism) (Democratic -> Socialism) (Communism -> Marxism)
-			}
-		}
-	}
-
-	MEX_luis_maria_martinez = {
-		name=MEX_luis_maria_martinez
-		portraits={
-			civilian={
-				large="GFX_portrait_MEX_Luis_Maria_Martinez" #Can become country leader (Democratic -> Socialism)
 			}
 		}
 	}
