@@ -1157,6 +1157,7 @@ country_event = {
 	option = { 
 		name = COU_event.100000.a
 		##슈퍼이벤트 테스트 
+		set_country_flag = COU_KAYA_SIT_GOOD_ONE
 		hidden_effect = {
 			if = {
 				limit = {

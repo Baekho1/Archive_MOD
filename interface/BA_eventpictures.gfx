@@ -739,6 +739,17 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_COU_kaya.png"
 	}
 	
+	##붉겨
+	spriteType = {
+		name = "GFX_report_event_picture_minori_one"
+		texturefile = "gfx/event_pictures/report_event_picture_minori_one.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_minori_two"
+		texturefile = "gfx/event_pictures/report_event_picture_minori_two.png"
+	}
+	
+	
 	###
 	spriteType = {
 		name = "GFX_event_Canada_Worker"

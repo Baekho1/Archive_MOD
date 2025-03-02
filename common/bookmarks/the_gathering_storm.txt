@@ -71,9 +71,14 @@ bookmarks = {
 			history = GEM_GATHERING_STORM_DESC
 			ideology = fascism
 			ideas = {
-				BA_exiles_of_the_future
+				GEH_Manmajun_Bupae
+				GEH_individualism
+				GEH_german_nationalism_issue_2
 			}
 			focuses = {
+			    GEH_warning_sunjun
+			    GEM_maintaining_dictatorship
+				GEM_Neutralize_Makoto
 			}
 		}
 

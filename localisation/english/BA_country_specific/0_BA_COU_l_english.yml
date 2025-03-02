@@ -719,10 +719,23 @@
  COU_workers_notworks_bruh_desc:0 "충성스러운 노동자들은 언제나 준비되어 있습니다. 이들은 '린 대행이 물러나지 않는 한 일하지 않겠다' 라고 주장할 것이며 이는 린 대행의 정통성을 하락시킵니다."
  
  ##카야의 상태 디시전
+ COU_situation_of_the_kaya:0 "카야의 상태"
+ COU_situation_of_the_kaya_desc:0 "카야의 상태는 총학생회의 국정 운영 전반에 큰 영향을 미칩니다. §g상태가 좋으면 좋을 수록§! 추가적인 정치력 §G보너스§!를, §g좋지 않아질수록§! 정치력 §R페널티§!를 부여받습니다.\n"
  COU_THE_KAYA_GUI_NAME:0 "§g가장 고귀하시며§!"
  COU_THE_KAYA_GUI_DESCSS:0 "§g네덜란드 왕국의 여왕이신§!"
  COU_THE_KAYA_GUI_DESCSSS:0 "§g키보토스의 총학생회장이시자§!"
  COU_THE_KAYA_GUI_NAME_KAYA:0 "§Y시라누이 카야§!"
+ COU_THE_KAYA_GUI_NAME_KAYA22:0 "상태:"
+ COU_THE_KAYA_GUI_NAME_EFFECT:0 "변동치:"
+ COU_KAYA_SIT_BAD_TWO_LOC:0 "§R아주 좋지 않음§!"
+ COU_KAYA_SIT_BAD_ONE_LOC:0 "§Y좋지 않음§!"
+ COU_KAYA_SIT_GOOD_ONE_LOC:0 "§Y괜찮음§!"
+ COU_KAYA_SIT_GOOD_TWO_LOC:0 "§G아주 좋음§!"
+ COU_SOFTK_EFFECT_ONE:0 "§Y정치력 획득§! §R-15%§!"
+ COU_SOFTK_EFFECT_TWO:0 "§Y정치력 획득§! §R-5%§!"
+ COU_SOFTK_EFFECT_THREE:0 "§Y정치력 획득§! §G+5%§!"
+ COU_SOFTK_EFFECT_FOUR:0 "§Y정치력 획득§! §G+15%§!"
+ 
 
  #키보토스 통합 디시전
  BA_decisions_kivotos_public_bond: "키보토스 공채"

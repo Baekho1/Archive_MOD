@@ -33,27 +33,6 @@ defined_text = {
 }
 
 defined_text = {
-    name = COU_deoragree_out_rin
-    text = {
-        trigger = {
-            tag = COU
-			has_country_flag = COU_deagree_out_rin
-        }
-        localization_key = COU_deagree_out_rin_loc
-    }
-	text = {
-        trigger = {
-            tag = COU
-			has_country_flag = COU_agree_out_rin
-        }
-        localization_key = COU_agree_out_rin_loc
-    }
-	text = {
-		localization_key = "COU_deoragree_out_rin"
-	}
-}
-
-defined_text = {
     name = COU_establishment_of_emergency_measures_committee_tt
     text = {
         trigger = {
@@ -96,6 +75,27 @@ defined_text = {
 }
 
 defined_text = {
+    name = COU_deoragree_out_rin
+    text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_deagree_out_rin
+        }
+        localization_key = COU_deagree_out_rin_loc
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_agree_out_rin
+        }
+        localization_key = COU_agree_out_rin_loc
+    }
+	text = {
+		localization_key = "COU_deoragree_out_rin"
+	}
+}
+
+defined_text = {
     name = COU_deoragree_out_rintwo
     text = {
         trigger = {
@@ -134,6 +134,76 @@ defined_text = {
     }
 	text = {
 		localization_key = "COU_deoragree_out_rinthree"
+	}
+}
+
+defined_text = {
+    name = COU_SITUATION_OF_THE_KAYA_LEVELS
+    text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_BAD_TWO
+        }
+        localization_key = COU_KAYA_SIT_BAD_TWO_LOC
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_BAD_ONE
+        }
+        localization_key = COU_KAYA_SIT_BAD_ONE_LOC
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_GOOD_ONE
+        }
+        localization_key = COU_KAYA_SIT_GOOD_ONE_LOC
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_GOOD_TWO
+        }
+        localization_key = COU_KAYA_SIT_GOOD_TWO_LOC
+    }
+	text = {
+		localization_key = "COU_SITUATION_OF_THE_KAYA_LEVELS"
+	}
+}
+
+defined_text = {
+    name = COU_SITUATION_OF_THE_KAYA_EFFECTS
+    text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_BAD_TWO
+        }
+        localization_key = COU_SOFTK_EFFECT_ONE
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_BAD_ONE
+        }
+        localization_key = COU_SOFTK_EFFECT_TWO
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_GOOD_ONE
+        }
+        localization_key = COU_SOFTK_EFFECT_THREE
+    }
+	text = {
+        trigger = {
+            tag = COU
+			has_country_flag = COU_KAYA_SIT_GOOD_TWO
+        }
+        localization_key = COU_SOFTK_EFFECT_FOUR
+    }
+	text = {
+		localization_key = "COU_SITUATION_OF_THE_KAYA_EFFECTS"
 	}
 }
 

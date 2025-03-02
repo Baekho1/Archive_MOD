@@ -84,7 +84,7 @@ guiTypes = {
 		##카야 설명 고귀하신 
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_NAM"
-			position = { x = 167 y = -5 }
+			position = { x = 167 y = 5 }
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_NAME"
 			format = left
@@ -94,7 +94,7 @@ guiTypes = {
 		##주접들 
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_DESCS_1"
-			position = { x = 185 y = 230 }
+			position = { x = 185 y = 240 }
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_DESCSS"
 			format = right
@@ -102,7 +102,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_DESCS_2"
-			position = { x = 101 y = 230 }
+			position = { x = 101 y = 240 }
 			font = "hoi_36header"
 			format = left
 			text = "COU_THE_KAYA_GUI_DESCSSS"
@@ -113,17 +113,58 @@ guiTypes = {
 		iconType = { 
 			name = "icon_decision_COU_kaya_frame"
 			spriteType = "GFX_decision_COU_leader_frame_kaya"
-			pdx_tooltip = "[COU.COU_KAYA.GetName]"
-			position = { x = 75 y = 40 }
+			#pdx_tooltip = "COU_THE_KAYA_GUI_NAME_KAYA"
+			position = { x = 75 y = 50 }
 			scale = 1
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_NAME_KAYA_S"
-			position = { x = 174 y = 310 }
+			position = { x = 174 y = 320 }
 			font = "hoi_36header"
 			text = "COU_THE_KAYA_GUI_NAME_KAYA"
 			maxHeight = 24
 			scale = 1.5
+		}
+		
+		##카야의 상태
+		iconType = { 
+			name = "icon_decision_COU_kaya_frame2"
+			spriteType = "GFX_decision_KAYA_situation_of_kaya"
+			pdx_tooltip = "COU_THE_KAYA_GUI_NAME_KAYA"
+			position = { x = 45 y = 355 }
+			scale = 1
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_SITUATION_TEXT1"
+			position = { x = 154 y = 375 }
+			font = "hoi_36header"
+			text = "COU_THE_KAYA_GUI_NAME_KAYA22"
+			maxHeight = 24
+			scale = 1
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_SITUATION_TEXT2"
+			position = { x = 224 y = 375 }
+			font = "hoi_36header"
+			text = "[COU_SITUATION_OF_THE_KAYA_LEVELS]"
+			maxHeight = 24
+			scale = 1
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_SITUATION_EFFECT1"
+			position = { x = 143 y = 425 }
+			font = "hoi_36header"
+			text = "COU_THE_KAYA_GUI_NAME_EFFECT"
+			maxHeight = 24
+			scale = 1
+		}
+		instantTextBoxType = {
+			name ="COU_THE_KAYA_GUI_SITUATION_EFFECT2"
+			position = { x = 224 y = 425 }
+			font = "hoi_36header"
+			text = "[COU_SITUATION_OF_THE_KAYA_EFFECTS]"
+			maxHeight = 35
+			scale = 1
 		}
 	}
 }
