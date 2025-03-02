@@ -266,7 +266,7 @@ POL_intermarium_at_war = { #바다 사이의 개념
 	}
 	POL_sov_war_mission = { #지속되는 전쟁
 		icon = GFX_decision_generic_ignite_civil_war
-		days_mission_timeout = 30
+		days_mission_timeout = 20
 		activation = {
 			is_ally_with = POL
 			has_war_with = SOV
