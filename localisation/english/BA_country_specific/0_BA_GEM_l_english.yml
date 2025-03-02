@@ -845,6 +845,24 @@
  GEM_great_duty: "위대한 의무"
  GEM_great_duty_desc: "게헨나의 학생은 모두가 위대한 의무를 짊어지고 있습니다. 가장 강력한 학원이자 가장 강인한 학생으로서 우리는 게헨나를 위해 영원토록 충성할 것입니다."
 
+ #온개부 중점#
+ GEM_hot_spring: "온천수를 찾아서"
+ GEM_Geotechnical_Investigations: "지반 조사"
+ GEM_quire_equipment: "장비 확보"
+ GEM_Securing_explosives: "폭파물 확보"
+ GEM_Investigating_bedrock_layers: "암반층 조사"
+ GEM_Gunsmithing_supply_and_demand: "총포 수급"
+ GEM_Munitions_Factory_Raid: "무기공장 급습"
+ GEM_Militarization_of_Development: "개발부원 군사화"
+ GEM_Shortstop_organization: "유격대 조직"
+ GEM_kasumi_ready: "준비..."
+ GEM_kasumi_Ignition: "...점화"
+ GEM_kasumi_Blasting: "발파!"
+ GEM_imsiim_igu: "투지 증진"
+ GEM_imsi_igutdo: "열성적인 전사들"
+ GEM_digging_Tunnels: "땅굴 파기"
+ GEM_quietly_bomb_sound: "나직이 울리는 폭음"
+
 #국민정신
  GEH_german_nationalism_issue:0 "독일인의 국가"
  GEH_german_nationalism_issue_desc:0 "대전이를 통해 상당한 양의 학생들이 독일 지역으로 넘어왔음에도, 우리의 수는 여전히 소수입니다. 학생들의 신체 능력으로 독일인들의 공격을 격퇴하고 학원 생활을 문제없이 이어나가고 있으나, 저들이 조직적인 저항 능력을 갖추기 시작하면 심각한 위협이 될 수 있습니다."

@@ -20,7 +20,7 @@ shared_focus = {
 		}
 	}
 	offset = {
-		x = 25
+		x = 30
 		y = 0
 		trigger = {
 			original_tag = GEM

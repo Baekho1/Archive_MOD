@@ -1403,6 +1403,7 @@ focus_tree = {
 		icon = GFX_focus_GEH_maintaining_dictatorship
 		cost = 10.00
 		mutually_exclusive = { focus = GEM_Neutralize_Makoto }
+		mutually_exclusive = { focus = GEM_hot_spring }
 		allow_branch = {
 			if = {
 				limit = {
@@ -1548,6 +1549,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5.00
 		mutually_exclusive = { focus = GEM_maintaining_dictatorship }
+		mutually_exclusive = { focus = GEM_hot_spring }
 		allow_branch = {
 			if = {
 				limit = {
@@ -1624,7 +1626,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		x = 13
+		x = 6
 		y = 1
 		relative_position_id = GEM_Neutralize_Makoto
 		completion_reward = {
@@ -4887,6 +4889,195 @@ focus_tree = {
 		y = 4
 		relative_position_id = GEM_national_administration
 		completion_reward = {
+		}
+	}
+	focus = { #온천수를 찾아서
+		id = GEM_hot_spring
+		icon = GFX_focus_POL_resistance
+		cost = 5.00
+		mutually_exclusive = {
+			focus = GEM_Neutralize_Makoto
+		}
+		mutually_exclusive = {
+			focus = GEM_maintaining_dictatorship
+		}
+		relative_position_id = GEM_Neutralize_Makoto
+		x = 15
+		y = 0 
+
+		completion_reward = {
+			
+		}
+	}
+	focus = { #지반 조사
+		id = GEM_Geotechnical_Investigations
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 4.00
+		prerequisite = { focus = GEM_hot_spring }
+		relative_position_id = GEM_hot_spring
+		x = -2
+		y = 1
+		completion_reward = {
+
+		}
+	}
+	focus = { #장비 확보
+		id =  GEM_quire_equipment
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		cost = 4.00
+		prerequisite = { focus = GEM_hot_spring }
+		relative_position_id = GEM_hot_spring
+		x = 2
+		y = 1
+		completion_reward = {
+
+		}
+	}
+	focus = { #폭파물 확보
+		id = GEM_Securing_explosives
+		icon = GFX_focus_FIN_weapon_caches
+		cost = 4.00
+		prerequisite = { focus = GEM_quire_equipment }
+		relative_position_id = GEM_quire_equipment
+		x = 2
+		y = 1
+		completion_reward = {
+
+		}
+	}
+	focus = { #암반층 조사
+		id = GEM_Investigating_bedrock_layers
+		icon = GFX_focus_ITA_workers_unions
+		cost = 4.00
+		prerequisite = { focus = GEM_Geotechnical_Investigations }
+		x = -2
+		y = 1
+		relative_position_id = GEM_Geotechnical_Investigations
+		completion_reward = {
+
+		}
+	}
+	focus = { #총포 수급
+		id = GEM_Gunsmithing_supply_and_demand
+		icon = GFX_focus_ETH_peacekeeping_forces
+		cost = 4.00
+		prerequisite = { focus = GEM_quire_equipment }
+		relative_position_id = GEM_quire_equipment
+		x = 0
+		y = 1
+		completion_reward = {
+
+		}
+	}
+	focus = { #무기공장 급습
+		id = GEM_Munitions_Factory_Raid
+		icon = GFX_focus_FIN_the_cold_front	
+		cost = 4.00
+		prerequisite = { focus = GEM_Gunsmithing_supply_and_demand }
+		relative_position_id = GEM_Gunsmithing_supply_and_demand
+		x = 0
+		y = 2
+
+		completion_reward = { 
+
+		}
+	}
+	focus = { #개발부 군사화
+		id = GEM_Militarization_of_Development
+		icon = GFX_goal_generic_small_arms
+		cost = 4
+		prerequisite = { focus = GEM_Geotechnical_Investigations } 
+		relative_position_id = GEM_Geotechnical_Investigations
+		x = 0
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #유격대 조직
+		id = GEM_Shortstop_organization
+		icon = GFX_focus_GER_strafbataillon
+		cost = 4 
+		prerequisite = { focus = GEM_Militarization_of_Development }
+		relative_position_id = GEM_Militarization_of_Development
+		x = 0
+		y = 2
+
+		completion_reward = {
+
+		}
+	}
+	focus = { #투지 증진
+		id = GEM_imsiim_igu
+		icon = GFX_focus_AUS_protector_of_the_danube
+		cost = 4.00
+		prerequisite = { focus = GEM_Geotechnical_Investigations }
+		prerequisite = { focus = GEM_quire_equipment }
+		relative_position_id = GEM_Geotechnical_Investigations
+		x = 2
+		y = 1
+	}
+	focus = { #열성적인 전사들
+		id = GEM_imsi_igutdo
+		icon = GFX_focus_HABSBURG_defensive_hussars
+		cost = 4.00
+		prerequisite = {focus = GEM_imsiim_igu }
+		relative_position_id = GEM_imsiim_igu
+		x = 0
+		y = 1
+	}
+	focus = { #땅굴 파기
+		id = GEM_digging_Tunnels
+		icon = GFX_focus_generic_coal_mining
+		cost = 4.00
+		prerequisite = { focus = GEM_Investigating_bedrock_layers }
+		relative_position_id = GEM_Investigating_bedrock_layers
+		x = 0
+		y = 1
+	}
+	focus = { #나직이 울리는 폭음
+		id = GEM_quietly_bomb_sound
+		icon = GFX_focus_BEL_christian_corporatism
+		cost = 4.00
+		prerequisite = { focus = GEM_Securing_explosives }
+		relative_position_id = GEM_Securing_explosives
+		x = 0
+		y = 1
+	}
+	focus = { #준비...
+		id = GEM_kasumi_ready
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		cost = 4.00
+		relative_position_id  = GEM_Shortstop_organization
+		prerequisite = { focus = GEM_Shortstop_organization}
+		prerequisite = { focus = GEM_Munitions_Factory_Raid }
+		prerequisite = { focus = GEM_imsi_igutdo }
+		x = 2
+		y = 1
+	}
+	focus = { #점화...
+		id = GEM_kasumi_Ignition
+		icon = GFX_focus_ETH_african_wildfire
+		cost = 3.00
+		relative_position_id = GEM_kasumi_ready
+		x = 0
+		y = 1
+		prerequisite = { focus = GEM_kasumi_ready }
+		completion_reward = {
+
+		}
+	}
+	focus = { #발파!
+		id = GEM_kasumi_Blasting
+		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
+		cost = 2.00
+		x = 0
+		y = 1
+		prerequisite = { focus = GEM_kasumi_Ignition }
+		relative_position_id = GEM_kasumi_Ignition
+		completion_reward = {
+			
 		}
 	}
 }
