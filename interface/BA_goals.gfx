@@ -2044,6 +2044,34 @@ spriteTypes = {
 		name = "GFX_focus_COU_establish_humans"
 		textureFile = "gfx/interface/goals/COU/COU_establish_humans.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_nothing"
+		textureFile = "gfx/interface/goals/COU/nothing.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_king"
+		textureFile = "gfx/interface/goals/COU/king.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_sasang_nugak"
+		textureFile = "gfx/interface/goals/COU/사상누각.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_the_last_fate"
+		textureFile = "gfx/interface/goals/COU/잊혀진죄악.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_get_some_helps_ok"
+		textureFile = "gfx/interface/goals/COU/도움청하기.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_black_front"
+		textureFile = "gfx/interface/goals/COU/흑색전선.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_open_the_music"
+		textureFile = "gfx/interface/goals/COU/음악허용.png"
+	}
 	
 	
 	####카이저라이히 돚거

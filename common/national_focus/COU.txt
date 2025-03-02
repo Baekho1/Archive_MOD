@@ -610,14 +610,223 @@ focus_tree = {
         icon = GFX_COU_kaya_gscp
         x = 0
         y = 4
-        cost = 5
-		available = { always = no }
+        cost = 1.5
+		available = { has_country_flag = LETSGO_CHONGHAKS }
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
 		     
         }
 	}
+	
+	focus = {
+        id = COU_focus_let_be_the_queen
+        icon = GFX_focus_COU_king
+        x = -1
+        y = 1
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_the_new_gscp }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_use_the_news
+        icon = GFX_focus_generic_printing_press
+        x = 1
+        y = 1
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_the_new_gscp }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_sasang_nugak
+        icon = GFX_focus_COU_sasang_nugak
+        x = 0
+        y = 2
+        cost = 0
+		available = { always = no }
+		prerequisite = { focus = COU_focus_let_be_the_queen }
+		prerequisite = { focus = COU_focus_use_the_news }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##발키리 통제 
+	focus = {
+        id = COU_focus_checks_the_valkirie
+        icon = GFX_COU_balkiri_down
+        x = -1
+        y = 5
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_the_last_fate focus = COU_focus_the_meet }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##파시즘 학습
+	focus = {
+        id = COU_focus_learn_about_fascism
+        icon = GFX_COU_what_the_fuck_is_fascism
+        x = 1
+        y = 5
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_the_last_fate focus = COU_focus_the_meet }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##약속 이행
+	focus = {
+        id = COU_focus_yaksok_for_srt
+        icon = GFX_SRT_focus_memories
+        x = -2
+        y = 6
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_checks_the_valkirie }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##린의 처우 
+	focus = {
+        id = COU_focus_exclude_about_rin
+        icon = GFX_COU_AOI_exclude_RIN
+        x = 2
+        y = 6
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_learn_about_fascism }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##여흥 확대
+	focus = {
+        id = COU_focus_COU_open_the_music
+        icon = GFX_focus_COU_open_the_music
+        x = 0
+        y = 6
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_checks_the_valkirie focus = COU_focus_learn_about_fascism }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##내가 하늘에 서겠다
+	focus = {
+        id = COU_focus_road_to_the_choin
+        icon = GFX_COU_road_ot_choin
+        x = -6
+        y = 3
+        cost = 5
+		available = {  }
+		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
+		prerequisite = { focus = COU_focus_sasang_nugak }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_the_last_fate
+        icon = GFX_focus_COU_the_last_fate
+        x = -4
+        y = 4
+        cost = 5
+		available = {  }
+		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
+		prerequisite = { focus = COU_focus_road_to_the_choin }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_get_some_helps_ok
+        icon = GFX_focus_COU_get_some_helps_ok
+        x = -8
+        y = 4
+        cost = 5
+		available = {  }
+		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
+		prerequisite = { focus = COU_focus_road_to_the_choin }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##현지인 응디 
+	focus = {
+        id = COU_focus_lets_get_some_help
+        icon = GFX_focus_COU_nothing
+        x = 6
+        y = 3
+        cost = 5
+		available = {  }
+		mutually_exclusive = { focus = COU_focus_road_to_the_choin }
+		prerequisite = { focus = COU_focus_sasang_nugak }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_the_meet
+        icon = GFX_focus_COU_meet
+        x = 4
+        y = 4
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_lets_get_some_help }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	focus = {
+        id = COU_focus_COU_black_front
+        icon = GFX_focus_COU_black_front
+        x = 8
+        y = 4
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_lets_get_some_help }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
 	
 	####집권하기까지 필요한 중점들
 	##린 불신 
