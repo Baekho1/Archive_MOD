@@ -20,6 +20,10 @@ recruit_character = MEX_juan_andreu_almazan
 recruit_character = MEX_ignacio_anaya
 recruit_character = MEX_emilio_portes_gil
 recruit_character = MEX_jose_genaro_kingo_nonaka 
+recruit_character = MEX_nicolas_rodriguez_carrasco
+recruit_character = MEX_luis_maria_martinez
+recruit_character = MEX_efrain_buenrostro_ochoa
+recruit_character = MEX_salvador_abascal
 
 add_ideas = {
 	MEX_the_ghost_of_calles
@@ -159,7 +163,6 @@ recruit_character = MEX_plutarco_calles
 recruit_character = MEX_francisco_mugica
 recruit_character = MEX_jesus_degollado_guizar
 recruit_character = MEX_valentin_campa
-recruit_character = MEX_luis_maria_martinez
 recruit_character = MEX_indigenous_council
 recruit_character = MEX_maria_de_iturbide
 
