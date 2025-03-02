@@ -2486,10 +2486,10 @@ RED_forced_relocation_policy = {
 			factor = 400
 		}
 		fire_only_once = no
-		cost = 35
+		cost = 30
 		days_remove = 70
 		modifier = {
-			political_power_cost = 0.2
+			political_power_cost = 0.15
 			consumer_goods_factor = 0.1
 		}
 		complete_effect = {
@@ -6303,7 +6303,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.01
+				value = -0.05
 			}
 		}
 		cost = 5
@@ -6327,7 +6327,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.01
+				value = -0.05
 			}
 		}
 		cost = 5
@@ -6351,7 +6351,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.01
+				value = -0.05
 			}
 		}
 		cost = 5
@@ -6375,7 +6375,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = -0.01
+				value = -0.05
 			}
 		}
 		cost = 5
@@ -6394,7 +6394,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = 0.01
+				value = 0.05
 			}
 		}
 		cost = 5
@@ -6413,7 +6413,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = 0.01
+				value = 0.05
 			}
 		}
 		cost = 5
@@ -6432,7 +6432,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = 0.01
+				value = 0.05
 			}
 		}
 		cost = 5
@@ -6451,7 +6451,7 @@ RED_bop_category = {
 			}
 			add_power_balance_value = {
 				id = RED_power_balance
-				value = 0.01
+				value = 0.05
 			}
 		}
 		cost = 5
