@@ -5,9 +5,6 @@ add_timed_idea = {
 	days = 365
 }
 add_ideas = {
-	neutrality_idea
-	low_economic_mobilisation
-	limited_conscription
 	SLO_economy_chaos_idea1
 	SLO_newborn_army_idea1
 }
@@ -37,7 +34,8 @@ set_technology = {
 	bba_early_transport_plane = 1
 }
 
-set_oob = "SLO_1936_nsb"
+set_oob = "SLO_1936"
+set_air_oob = "SLO_1936_air"
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
@@ -103,10 +101,10 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 30
-	democratic = 20
-	fascism = 40
-	communism = 10
+	neutrality = 10
+	democratic = 30
+	fascism = 45
+	communism = 15
 }
 
 if = {

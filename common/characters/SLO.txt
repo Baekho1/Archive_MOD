@@ -46,6 +46,9 @@ characters={
 			ideology=oligarchism
 			expire="1965.1.1"
 			id=-1
+			traits = {
+				SLO_low_support
+			}
 		}
 	}
 	SLO_karol_smidke={ #카롤 슈미트케

@@ -1,0 +1,179 @@
+focus_tree = {
+	id = SLO_focus
+	continuous_focus_position = { x = 2100 y = 800 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = SLO
+		}
+	}
+	#FOCUS_FILTER_POLITICAL
+	#FOCUS_FILTER_INDUSTRY
+	#FOCUS_FILTER_RESEARCH
+	#FOCUS_FILTER_STABILITY
+	#FOCUS_FILTER_WAR_SUPPORT
+	#FOCUS_FILTER_MANPOWER
+	#FOCUS_FILTER_ANNEXATION
+	#FOCUS_FILTER_ARMY_XP
+	#FOCUS_FILTER_NAVY_XP
+	#FOCUS_FILTER_AIR_XP
+	#FOCUS_FILTER_HISTORICAL
+
+	### 민주, 민주주의 루트 ###
+	focus = {
+		#relative_position_id = SLO_foc_
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1
+		icon = GFX_goal_support_democracy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 0
+		prerequisite = {
+			#focus = SLO_foc_
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_2
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-1
+		icon = GFX_focus_AUS_lawmaking_leniency
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SLO_foc_1
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-2
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SLO_foc_1
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			has_government = neutrality
+		}
+		bypass = {
+			NOT = {
+				has_government = neutrality
+			}
+		}
+		completion_reward = {
+			remove_country_leader_trait = SLO_low_support
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-3
+		icon = GFX_goal_support_communism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -5
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-1
+		}
+		prerequisite = {
+			focus = SLO_foc_1-2
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
+	### 파시, 파시즘, 파시스트 루트 ###
+	focus = {
+		#relative_position_id = SLO_foc_
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_2
+		icon = GFX_focus_por_concordat
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 30
+		y = 0
+		prerequisite = {
+			#focus = SLO_foc_
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1
+		}
+		available = {
+			SLO_jozef_tiso = {
+				is_hired_as_advisor = yes
+			}
+		}
+		bypass = {
+
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SLO_vojtech_tuka
+		}
+	}
+}
