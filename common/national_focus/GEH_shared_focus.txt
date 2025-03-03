@@ -6,8 +6,8 @@ shared_focus = {
 		has_country_flag = GEH_unified_gehenna_flag
 	}
 	offset = {
-		x = -36
-		y = 10
+		x = -43
+		y = 0
 		trigger = {
 			original_tag = GEH
 		}

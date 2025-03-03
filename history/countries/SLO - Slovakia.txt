@@ -1,26 +1,41 @@
-﻿capital = 70
+capital = 70 #브라티슬라바
 
+add_timed_idea = {
+	idea = SLO_cze_exile_idea
+	days = 365
+}
 add_ideas = {
-	neutrality_idea
-	low_economic_mobilisation
-	extensive_conscription
+	SLO_economy_chaos_idea1
+	SLO_newborn_army_idea1
 }
 
 set_technology = {
-	gw_artillery = 1
-	interwar_artillery = 1
-	interwar_antiair = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	infantry_weapons2 = 1
-	support_weapons = 1
 	tech_support = 1
 	tech_recon = 1
 	tech_mountaineers = 1
-	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	basic_train = 1
+	## 전차
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	## 항공
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	early_bombs = 1
+	bba_early_transport_plane = 1
 }
 
-set_oob = "SLO_1936_nsb"
+set_oob = "SLO_1936"
+set_air_oob = "SLO_1936_air"
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
@@ -51,35 +66,135 @@ if = {
 }
 
 recruit_character = SLO_jozef_tiso
-recruit_character = SLO_jaroslav_kratochvil
-recruit_character = SLO_vojtech_daubner
-recruit_character = SLO_jozef_hora
-recruit_character = SLO_frano_kral
-recruit_character = SLO_jozef_snejdarek
-recruit_character = SLO_fritz_gejza
-recruit_character = SLO_frantisek_sadek
-recruit_character = SLO_stefan_tiso
-recruit_character = SLO_cyril_kuchta
-recruit_character = SLO_jindrich_honzl
-recruit_character = SLO_frantisek_straka
-recruit_character = SLO_karol_sidor
-recruit_character = SLO_emil_lendvay
-recruit_character = SLO_jozef_turanec
-recruit_character = SLO_gustav_malar
+recruit_character = SLO_slobak_council
+recruit_character = SLO_karol_smidke
 recruit_character = SLO_rudolf_viest
-recruit_character = SLO_janko_jesensky
+recruit_character = SLO_jan_golian
+recruit_character = SLO_augustin_malar
 recruit_character = SLO_ferdinand_catlos
-recruit_character = SLO_anton_pulanick
+recruit_character = SLO_stefan_hassik
+recruit_character = SLO_mikulas_ferjencik
+recruit_character = SLO_vojtech_tuka
+recruit_character = SLO_gustav_husak
+recruit_character = SLO_milan_hodza
+recruit_character = SLO_ivan_derer
+recruit_character = SLO_vavro_srobar
+recruit_character = SLO_ludovit_rajter
+recruit_character = SLO_jan_reznak
+recruit_character = SLO_otto_smik
+recruit_character = SLO_frantisek_cyprich
+recruit_character = SLO_jozef_gabcik
+recruit_character = SLO_jan_antonin_bata
+recruit_character = SLO_vaclav_klement
+recruit_character = SLO_ludvik_krejci
+recruit_character = SLO_sergey_voytsekhovsky
+recruit_character = SLO_alexander_mach
+recruit_character = SLO_andrej_hlinka
 
-
+set_stability = 0.35
+set_war_support = 0.50
+set_research_slots = 3
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 90
-	fascism = 5
-	communism = 5
+	neutrality = 10
+	democratic = 30
+	fascism = 45
+	communism = 15
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Tancik vz. 33"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "LT vz. 35"
+		type = light_tank_chassis_1
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+	create_equipment_variant = {
+		name = "TNH"
+		type = light_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Avia B.534"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Aero A.101"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "Letov S-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+
 }

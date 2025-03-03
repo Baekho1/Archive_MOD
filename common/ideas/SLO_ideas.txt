@@ -1,0 +1,94 @@
+ideas = {
+	country = {
+		SLO_cze_exile_idea = {
+			picture = CZE_planning_bonus
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.10
+				political_power_cost = 0.15
+				weekly_manpower = 250
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		SLO_economy_chaos_idea1 = {
+			picture = generic_economic_crisis
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.30
+				industrial_capacity_factory = -0.30
+			}
+		}
+		SLO_economy_chaos_idea2 = {
+			picture = generic_economic_crisis
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+			}
+		}
+		SLO_economy_chaos_idea3 = {
+			picture = generic_economic_crisis
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		SLO_newborn_army_idea1 = {
+			picture = generic_army_problems
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = -0.20
+				army_org_factor = -0.10
+				conscription_factor = -0.20
+				training_time_factor = 0.20
+				air_accidents_factor = 0.10
+			}
+		}
+		SLO_newborn_army_idea2 = {
+			picture = generic_army_problems
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = -0.10
+				army_org_factor = -0.05
+				conscription_factor = -0.10
+				training_time_factor = 0.10
+				air_accidents_factor = 0.05
+			}
+		}
+	}
+	industrial_concern = {
+		SLO_elektra = {
+			picture = CZE_elektra
+			allowed = {
+				original_tag = SLO
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		SLO_skoda_works_2 = {
+			picture = CZE_skoda_works_2
+			allowed = {
+				original_tag = SLO
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

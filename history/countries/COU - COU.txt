@@ -129,6 +129,9 @@ add_ideas = {
 ##카야루트 이벤트
 country_event = { id = COU_event.6 days = 30 }
 
+##데카르트, 무소유 투쟁!
+country_event = { id = COU_event.48 days = 72 }
+
 
 set_technology = {
 	kivotos_infantry_weapons = 1

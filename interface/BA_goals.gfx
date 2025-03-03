@@ -1612,6 +1612,10 @@ spriteTypes = {
 		name = "GFX_goal_GEH_sad_hina"
 		texturefile = "gfx/interface/goals/GEH/sad_hina.tga"  
 	}
+	spriteType = {
+		name = "GFX_goal_GEH_hot_spring"
+		textureFile = "gfx/interface/goals/GEH/GEH_hot_spring.tga"
+	}
 	# 흥신소68 중점 GFX
 	SpriteType = { 
 		name = "GFX_goal_HEU_dkfn"

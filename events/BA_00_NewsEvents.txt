@@ -5130,7 +5130,7 @@ news_event = { # 카야 신임 총학생회장
     id = BA_news.133
     title = BA_news.133.t
     desc = BA_news.133.d
-    picture = GFX_news_event_COU_kaya
+    picture = GFX_news_event_COU_kaya2
 
     major = yes
     is_triggered_only = yes
@@ -5147,6 +5147,38 @@ news_event = { # 카야 신임 총학생회장
 	
    option = { # 범부
         name = BA_news.133.b
+		trigger = { 
+		    NOT = { 
+		       OR = { 
+			      tag = COU 
+			      tag = SHE 
+			   }
+			}
+		}
+    }
+}
+
+news_event = { # 데카르트 시위!
+    id = BA_news.134
+    title = BA_news.134.t
+    desc = BA_news.134.d
+    picture = GFX_news_event_COU_decart
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.134.a
+		trigger = { 
+		    OR = { 
+			   tag = COU 
+			   tag = SHE 
+			}
+		}
+    }
+	
+   option = { 
+        name = BA_news.134.b
 		trigger = { 
 		    NOT = { 
 		       OR = { 

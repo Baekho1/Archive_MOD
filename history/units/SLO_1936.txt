@@ -1,6 +1,6 @@
 ﻿##### Division Templates #####
 division_template = {
-	name = "Pesi Divize"
+	name = "Pěší divize"
 	division_names_group = SLO_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -9,17 +9,28 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
 }
 division_template = {
-	name = "Mobilná Skupina" 
+	name = "Jezdecká brigáda"
 	division_names_group = SLO_CAV_01
 	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Rychlá divize" 
+	division_names_group = SLO_ARM_01
+	regiments = {
 		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
 		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
 	}
 	support = {
 		recon = { x = 0 y = 0 }   
@@ -35,77 +46,44 @@ units = {
 			name_order = 1
 		}
 		location = 9692
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		division_template = "Pěší divize"
+		start_experience_factor = 0.1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 3484
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		location = 3581
+		division_template = "Pěší divize"
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 3581
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		location = 11539
+		division_template = "Pěší divize"
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 11539
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 5
-		}
-		location = 9539
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 6
-		}
 		location = 555
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
+		division_template = "Pěší divize"
+		start_experience_factor = 0
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
-			name_order = 7
+			name_order = 1
 		}
-		location = 11522
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 11554
-		division_template = "Pesi Divize"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "Rychle Vojská Skupina 'Kalinciak'"
 		location = 9692
-		division_template = "Mobilná Skupina" 
-		start_experience_factor = 0.2
+		division_template = "Rychlá divize" 
+		start_experience_factor = 0.1
 	}
 }
 
@@ -117,8 +95,7 @@ instant_effect = {
 			creator = "SLO"
 		}
 		requested_factories = 1
-		progress = 0.37
-		efficiency = 100
+		efficiency = 15
 	}
 	add_equipment_production = {
 		equipment = {
@@ -126,7 +103,6 @@ instant_effect = {
 			creator = "SLO"
 		}
 		requested_factories = 1
-		progress = 0.69
-		efficiency = 100
+		efficiency = 15
 	}
 }

@@ -1403,7 +1403,7 @@ focus_tree = {
 	####외교 중점####
 	##############
 
-	# 산하이징 협정 창설
+	# 산해경 중앙특구 협정 창설
 	focus = {
 		id = SHA_Shanhaijing_fact
 		icon = GFX_goal_SHA_Southern_Kivotos
@@ -4315,7 +4315,7 @@ focus_tree = {
 					type = land_facility
 					level = 1
 					instant_build = yes    
-					province = 3700 # 산하이징
+					province = 3700 # 산해경 중앙특구
 				}
 			}
 			unlock_military_industrial_organization_tooltip = mio:SHA_tank_equipment_organization

@@ -156,7 +156,7 @@ news_event = { #미야비토 함락(산해경)
 		trigger = { TAG = HYA }
 	}
 }
-news_event = { #산하이징 함락(백귀야행)
+news_event = { #산해경 중앙특구 함락(백귀야행)
 	id = fallnews.5
 	title = fallnews.5.t
 	desc = fallnews.5.d

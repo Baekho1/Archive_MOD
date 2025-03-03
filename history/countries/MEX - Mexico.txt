@@ -24,6 +24,11 @@ recruit_character = MEX_nicolas_rodriguez_carrasco
 recruit_character = MEX_luis_maria_martinez
 recruit_character = MEX_efrain_buenrostro_ochoa
 recruit_character = MEX_salvador_abascal
+recruit_character = MEX_manuel_torres_bueno
+recruit_character = MEX_gustavo_saenz_de_sicilia
+
+# recruit_character = MEX_felix_diaz
+# recruit_character = MEX_porfirio_diaz_ortega 
 
 add_ideas = {
 	MEX_the_ghost_of_calles

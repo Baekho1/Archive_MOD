@@ -396,6 +396,48 @@ characters={
 		}
 	}
 
+	MEX_manuel_torres_bueno = {
+		name=MEX_manuel_torres_bueno
+		portraits={
+			army={
+				small="gfx/leaders/MEX/Advisor_MEX_manuel_torres_bueno.tga"
+			}
+		}
+
+		advisor={
+			desc = "MEX_bueno_desc"
+			slot = political_advisor
+			idea_token = MEX_manuel_torres_bueno
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_manuel_torres_bueno_trait 
+			}
+		}
+	}
+
+	MEX_gustavo_saenz_de_sicilia = {
+		name=MEX_gustavo_saenz_de_sicilia
+		portraits={
+			army={
+				small="gfx/leaders/MEX/Advisor_MEX_gustavo_saenz_de_sicilia.tga"
+			}
+		}
+
+		advisor={
+			desc = "MEX_sicilia_desc"
+			slot = political_advisor
+			idea_token = MEX_gustavo_saenz_de_sicilia
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				MEX_gustavo_saenz_de_sicilia_trait 
+			}
+		}
+	}
+
 	####
 	####
 	####

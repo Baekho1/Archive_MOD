@@ -1393,6 +1393,25 @@ country_event = {
 	}
 }
 
+##데카르트, 무소유 투쟁!
+country_event = { 
+	id = COU_event.48
+	title = COU_event.48.t
+	desc = COU_event.48.desc
+	picture = GFX_report_event_picture_decart
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.48.a
+		news_event = { id = BA_news.134 hours = 6 }
+	}
+}
+
 
 
 
