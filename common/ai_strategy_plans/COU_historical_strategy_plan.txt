@@ -44,12 +44,12 @@ COU_alternate_plan_momoka_1 = {
 
 	ai_national_focuses = {
 		COU_establishment_of_emergency_measures_committee
+		COU_expedited_administrative_processing
 		COU_expansion_of_autonomy
-		COU_reduction_of_administrative_committee_authority
+		COU_opening_of_local_culture
 		COU_infrastructure_restoration
 		COU_union_negotiation
 		COU_normalization_of_administration
-		COU_establishment_of_autonomous_system
 		COU_autonomous_legislation
 		COU_inclusion_of_union_in_administrative_committee
 
@@ -129,12 +129,12 @@ COU_alternate_plan_momoka_2 = {
 
 	ai_national_focuses = {
 		COU_establishment_of_emergency_measures_committee
+		COU_expedited_administrative_processing
 		COU_expansion_of_autonomy
-		COU_reduction_of_administrative_committee_authority
+		COU_opening_of_local_culture
 		COU_infrastructure_restoration
 		COU_union_negotiation
 		COU_normalization_of_administration
-		COU_establishment_of_autonomous_system
 		COU_autonomous_legislation
 		COU_inclusion_of_union_in_administrative_committee
 

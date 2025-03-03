@@ -12,9 +12,6 @@ country_event = { #린의 사병 조직
 	is_triggered_only = yes
 	
 	immediate = {
-		hidden_effect = {
-			country_event = { id = COU_start_event.4 days = 25 random_days = 5 }
-		}
 	}
 
 	option = { 
@@ -43,9 +40,6 @@ country_event = { #모모카의 회의 퇴출
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			country_event = { id = COU_start_event.1 days = 25 random_days = 5 }
-		}
 	}
 
 	option = { 
@@ -94,9 +88,6 @@ country_event = { #카야의 고민
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			country_event = { id = COU_start_event.5 days = 25 random_days = 5 }
-		}
 	}
 
 	option = { 
@@ -441,20 +432,8 @@ country_event = { #협력자 문제
 	is_triggered_only = yes
 
 	option = { 
-		name = COU_event.6.b
-		add_political_power = 25
-		add_stability = -0.05
-	}
-	
-	option = { 
 		name = COU_event.6.a
-		remove_ideas = COU_dutch_collaboraters
-		custom_effect_tooltip = COU_tooltip_kaya_get_move
-		country_event = { id = COU_event.7 hours = 6 }
-		trigger = {
-		   NOT = { is_ai = yes }
-		   ##개발용 땜빵
-		}
+		add_stability = -0.05
 	}
 }
 
@@ -473,13 +452,12 @@ country_event = {
 		set_country_flag = UNLOCK_KAYA_CONTENTS
 		custom_effect_tooltip = COU_tooltip_kaya_get_moved
 		hidden_effect = { #collapse focus tree
-			 load_focus_tree = {
+			load_focus_tree = {
 				tree = COU_focus_tree
 				keep_completed = yes
-			 }
-			 mark_focus_tree_layout_dirty = yes
-			 country_event = { id = COU_event.31 hours = 6 }
-			 complete_national_focus = COU_focus_in_the_darkness
+			}
+			mark_focus_tree_layout_dirty = yes
+			country_event = { id = COU_event.31 hours = 6 }
 	    }
 	}
 }
@@ -538,12 +516,11 @@ country_event = {
 		custom_effect_tooltip = COU_KAYA_ARREST_tt
 		custom_effect_tooltip = COU_tooltip_remove_kaya_contents
 		hidden_effect = { #collapse focus tree
-			 load_focus_tree = {
+			load_focus_tree = {
 				tree = COU_focus_tree
 				keep_completed = yes
-			 }
-			 mark_focus_tree_layout_dirty = yes
-			 complete_national_focus = COU_focus_in_the_darkness
+			}
+			mark_focus_tree_layout_dirty = yes
 	    }
 	}
 }
