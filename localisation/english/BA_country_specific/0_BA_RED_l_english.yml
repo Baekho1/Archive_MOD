@@ -351,6 +351,29 @@
  RED_no_war_but_class_war: "전쟁이 아니라 계급전쟁"
  RED_ideal_of_bolshevism_again: "볼셰비즘 이상 재현"
  RED_cherino_core_of_solidarity: "통일단결의 핵"
+ RED_day_of_victory: "승리의 날"
+ RED_return_of_left_oppisition: "좌익반대파의 귀환"
+ RED_revolutionary_trial: "혁명 재판"
+ RED_bolshevik_leninism: "볼셰비키-레닌주의"
+ RED_social_rebuild: "사회 복구 사업"
+ RED_rebuild_party: "전위당 재건"
+ RED_annex_party: "당 병합"
+ RED_fix_error: "이념적 오류 수정"
+ RED_creative_deconstructivism: "창조적 해체"
+ RED_federalization: "연방체"
+ RED_military_government: "소비에트 민정감독부"
+ RED_redwinter_in_world: "세계 속의 붉은겨울"
+ #소련중점돚거
+ RED_strengthen_the_trade_unions_by_sov: "$SOV_strengthen_the_trade_unions$"
+ RED_the_peoples_revolution: "$SOV_the_peoples_revolution$"
+ RED_the_supreme_soviet: "$SOV_the_supreme_soviet$"
+ RED_for_the_common_good: "$SOV_for_the_common_good$"
+ RED_victory_over_devastation: "$SOV_victory_over_devastation$"
+ RED_socialist_humanism: "$SOV_socialist_humanism$"
+ RED_regional_development: "$SOV_regional_development$"
+ RED_autonomous_soviet_republics: "$SOV_autonomous_soviet_republics$"
+ RED_international_union_of_soviet_republics: "$SOV_international_union_of_soviet_republics$"
+ 
 
  RED_liberation_of_the_kibotus_states: "키보토스 혁명전쟁"
  RED_liberation_of_the_kibotus_states_desc: "키보토스 학원들의 독재적 체제를 해체하고 인민의 국가를 수립하는 첫 번째 혁명 전쟁을 이뤄내야 합니다."
@@ -910,6 +933,19 @@
  RED_central_labor_union: "노동사회공학연구소"
  
 #이벤트
+ RED_ending_event.1.t: "승리의 날"
+ RED_ending_event.1.d: "언젠가 일어날 일이었습니다. 제2차 인터내셔널에서부터 시작한 마르크스주의 진영의 끝없는 분열은 [RED.getleader]에 의해서 종지부를 찍었습니다. 크렘린궁에는 붉은겨울의 깃발이 게양되었고, 더 이상 소비에트 연방이라는 주권체는 존재하지 않습니다!"
+ RED_ending_event.1.a: "길고 긴 이념전쟁이 끝났다."
+ RED_ending_event.2.t: "귀환한 좌익반대파"
+ RED_ending_event.2.d: " 스탈린 체제 하에서의 억압적 수탈에 지친 인민들이 자신을 반겨줄 것이라고 트로츠키는 생각했다. 그러나 실상은 달랐다.\n\n \"반소비에트 테러리스트가 나라를 망쳤어!\"\n\n \"뱀새끼는 꺼져라!\"\n\n \"압제자를 규탄한다!\"\n\n 충실한 스탈린주의자들의 정치적 공작에 의해서 연방 전반에서 반트로츠키주의 집회가 일어나고 있었고, 좌익반대파들의 향후는 순탄치 않을 것임이 분명해지고 있었다."
+ RED_ending_event.2.a: "젠장."
+ RED_ending_event.2_tt: "\n§R퍼지는 스탈린주의 정서를 막아야 합니다!§!"
+ RED_ending_event.3.t: "스탈린주의 저항"
+ RED_ending_event.3.d: "여전히 전쟁은 치뤄지고 있었습니다! 스탈린주의 파르티잔에 의해 도시 노동자들은 반혁명 대오 아래 단일히 조직되어 우리의 통제로부터 벗어나고자 하고 있으며, 농촌에서는 지속적으로 집단농장을 거점으로 스탈린주의 유격대가 활동하고 있습니다!"
+ RED_ending_event.3.a: "점점 심각해지는데?"
+ RED_ending_event.3_tt: "\n§R퍼지는 스탈린주의 파르티잔을 막아야 합니다!§!"
+
+
  RED_ordinary_event.1.t: "수염을 잃어버린 체리노"
  RED_ordinary_event.1.d: "\"\""
  RED_ordinary_event.2.t: "227호 특별반"
@@ -1662,6 +1698,10 @@
  RED_SMI_autonomy_state_modifier: "사미족 자치주"
  RED_social_reform_modifier: "사회 개조"
  RED_local_industralisation: "현지 공업화"
+ RED_stalinist_partisan: "스탈린주의 파르티잔"
+ RED_stalinist_partisan_1: "약화된 스탈린주의 파르티잔"
+ RED_stalinist_sentiments: "스탈린주의 정서"
+ RED_stalinist_sentiments_1: "약화된 스탈린주의 정서"
 
 #디시전
  RED_the_fifth_columnists: "[FROM.getname]에 제5열 조직"

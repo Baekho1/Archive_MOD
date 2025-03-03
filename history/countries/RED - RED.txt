@@ -21,6 +21,7 @@ set_autonomy = {
     target = RE4
     autonomy_state = autonomy_supervised_state
 }
+recruit_character = RED_supreme_soviet
 recruit_character = RED_Tomoe
 recruit_character = RED_nodoka
 recruit_character = RED_nodoka_hot

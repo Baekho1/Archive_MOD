@@ -1395,5 +1395,14 @@ characters = {
 			}
 		}
 	}
+	RED_supreme_soviet = { #Country Leader role added via focus
+		name = SOV_supreme_soviet
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_supreme_soviet
+			}
+		}
+	}
 }
 
