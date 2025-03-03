@@ -760,7 +760,6 @@ focus_tree = {
         y = 4
         cost = 5
 		available = {  }
-		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
 		prerequisite = { focus = COU_focus_road_to_the_choin }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
@@ -775,7 +774,6 @@ focus_tree = {
         y = 4
         cost = 5
 		available = {  }
-		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
 		prerequisite = { focus = COU_focus_road_to_the_choin }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
