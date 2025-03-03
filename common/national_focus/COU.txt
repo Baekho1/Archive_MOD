@@ -83,17 +83,25 @@ focus_tree = {
 			add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
 			add_political_power = 100
 			add_stability = 0.1
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
+			effect_tooltip = {
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.50
+				}
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.10
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.40
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.35
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.20
+				}
 			}
 			swap_ideas = {
 				remove_idea = COU_dutch_collaboraters
@@ -427,9 +435,15 @@ focus_tree = {
 					election_frequency = 48
 					elections_allowed = no
 				}
+				if = {
+					limit = { has_character = COU_MOMOKA }
+					COU_MOMOKA = {
+						add_country_leader_trait = COU_new_dictator
+					}
+				}
 				news_event = { id = BA_news.86 hours = 8 }
 			}
-			remove_ideas = COU_dutch_collaboraters
+			remove_ideas = COU_dutch_collaboraters_no_kaya_debuff
 		}
 	}
 	
@@ -2141,7 +2155,7 @@ focus_tree = {
 			}
 			remove_country_leader_role = {
 				character = COU_KAYA
-				ideology = gen_nazism
+				ideology = cou_kaya_dictatorship
 			}
 			remove_advisor_role = {
 				character = COU_KAYA
