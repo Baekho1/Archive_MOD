@@ -26,17 +26,8 @@ focus_tree = {
         }
 		available = {
 		}
-		x = 19
+		x = 30
 		y = 0
-		offset = {
-			trigger = {
-				OR = {
-					is_debug = yes
-					has_completed_focus = GEH_zero_congress_focus
-				}
-			}
-			x = 11
-		}
 		completion_reward = {
 			add_stability = 0.02
 			swap_ruler_traits = {
@@ -47,6 +38,7 @@ focus_tree = {
 			set_variable = { GEH_basking_in_the_brilliance_of_their_serenade_mission = 240 }
 			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_mission
 			set_country_flag = GEH_start_focus_flag
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -72,8 +64,9 @@ focus_tree = {
             country_event=hina.4
             add_political_power = 100
         }
-		x = 12
+		x = -7
 		y = 1
+		relative_position_id = GEH_start_focus
 		completion_reward = {
             custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
             effect_tooltip = {
@@ -441,6 +434,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 2
 		available = {
+			is_subject = no
 		}
         prerequisite = { focus = GEH_get_legitimacy }
         ai_will_do = {
@@ -454,6 +448,9 @@ focus_tree = {
                 has_idea = GEH_popular_support_5
             }
         }
+		bypass = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
         relative_position_id = GEH_get_legitimacy
 		x = -1
 		y = 1
@@ -467,6 +464,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		cost = 5
 		available = {
+			is_subject = no
             OR = {
                 has_idea = GEH_popular_support_3
                 has_idea = GEH_popular_support_4
@@ -477,6 +475,9 @@ focus_tree = {
         ai_will_do = {
             base = 40
         }
+		bypass = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
         relative_position_id = GEH_Conquer_the_Central
 		x = -1
 		y = 1
@@ -491,7 +492,10 @@ focus_tree = {
 		icon = GFX_goal_generic_army_mass_assault
         text = GEH_focus_8
 		cost = 2
-		available = { has_war_with = GEM }
+		available = {
+			is_subject = no
+			has_war_with = GEM
+		}
         prerequisite = { focus = GEH_attack_plan_ONE_FOUR_TWO }
         prerequisite = { focus = GEH_Pandemonium_Society_Building_Control }
         
@@ -513,6 +517,7 @@ focus_tree = {
 		icon = GFX_focus_generic_league_of_nations
 		cost = 5
 		available = {
+			is_subject = no
 		}
         prerequisite = { focus = GEH_get_legitimacy }
         available = {
@@ -523,6 +528,9 @@ focus_tree = {
                 has_idea = GEH_popular_support_5
             }
         }
+		bypass = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
         relative_position_id = GEH_get_legitimacy
 		x = 1
 		y = 1
@@ -535,6 +543,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_oy_alkoholiliike
 		cost = 2
 		available = {
+			is_subject = no
             OR = {
                 has_idea = GEH_popular_support_3
                 has_idea = GEH_popular_support_4
@@ -558,6 +567,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_varnplikt
 		cost = 2
 		available = {
+			is_subject = no
             OR = {
                 has_idea = GEH_popular_support_3
                 has_idea = GEH_popular_support_4
@@ -581,6 +591,7 @@ focus_tree = {
 		icon = GFX_goal_GEH_sundoboo
 		cost = 5
 		available = {
+			is_subject = no
             OR = {
                 has_idea = GEH_popular_support_4
                 has_idea = GEH_popular_support_5
@@ -606,7 +617,13 @@ focus_tree = {
 		icon = GFX_goal_GEH_perfect_team_hina
 		cost = 5
 		available = {
+			is_subject = no
             has_idea = GEH_popular_support_5
+			GEM = {
+				exists = yes
+				has_capitulated = no
+				is_subject = no
+			}
         }
         ai_will_do = {
             base = 80
@@ -617,6 +634,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
+			if = {
+				limit = { is_in_faction_with = GEM is_faction_leader = no }
+				leave_faction = yes
+			}
+			if = {
+				limit = { is_in_faction_with = GEM is_faction_leader = yes }
+				remove_from_faction = GEM
+			}
 			activate_mission = GEH_preparations_for_operation_countenance
 			custom_effect_tooltip = GEH_fear_eyes_tt
 		}
@@ -4206,7 +4231,7 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				is_debug = yes
-				has_completed_focus = GEH_zero_congress_focus
+				has_completed_focus = GEH_start_focus
 			}
 		}
 
@@ -4873,11 +4898,17 @@ focus_tree = {
 		y = 2
 
 		allow_branch = {
-			NOT = { 
-				has_country_flag = hina_assembly_h_next_flag
-				has_country_flag = hina_assembly_a_next_flag
-				has_country_flag = hina_assembly_c_next_flag
-				has_country_flag = hina_assembly_normal_next_flag
+			OR = {
+				is_debug = yes
+				AND = {
+					has_completed_focus = GEH_zero_congress_focus
+					NOT = { 
+						has_country_flag = hina_assembly_h_next_flag
+						has_country_flag = hina_assembly_a_next_flag
+						has_country_flag = hina_assembly_c_next_flag
+						has_country_flag = hina_assembly_normal_next_flag
+					}
+				}
 			}
 		}
 

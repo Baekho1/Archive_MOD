@@ -66,6 +66,14 @@ shared_focus = { #에덴 조약기구 수립
 		}
 	}
 
+	offset = {
+		x = 5
+		y = -8
+		trigger = {
+			tag = GEH
+		}
+	}
+
 	available = {
 		is_faction_leader = yes 
 		if = {
