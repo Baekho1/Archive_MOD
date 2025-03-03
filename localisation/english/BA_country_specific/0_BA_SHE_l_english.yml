@@ -217,6 +217,7 @@
  SHE_MIL_arona:0 "밀레니엄 연구 인공지능"
  SHE_SRT_arona:0 "SRT 통제 인공지능"
  SHE_Arona:0 "A.R.O.N.A"
+ SHE_Arona_start:0 "A.R.O.N.A (비활성화 상태)"
  SHE_Mini_Arona1:0 "M. A.R.O.N.A alpha"
  SHE_Mini_Arona2:0 "M. A.R.O.N.A beta"
  SHE_Mini_Arona3:0 "Admiral M. A.R.O.N.A"
@@ -228,6 +229,7 @@
 SHE_jayul_OS_gaeseon_tt: "§Y$SHE_Ai_manipulation_democratic$§! 결정의 기대값: §G+10§!\n\n"
 SHE_tongje_jungchu_gaeseon_tt: "§Y$SHE_Ai_manipulation_fascism$§! 결정의 기대값: §G+10§!\n\n"
 SHE_bunbae_cheje_gaeseon_tt: "§Y$SHE_Ai_manipulation_communism$§! 결정의 기대값: §G+5§!\n\n"
+SHE_aronagidong_tt: "§CA.R.O.N.A§!가 활동을 시작합니다!"
 SHE_craft_chamber_tt:0 "§O크래프트 챔버§!를 사용 할 수 있게 됩니다."
 SHE_officer_unlock_tt:0 "§C아로나§!를 §Y최고사령부§!와 §Y이론가§!로 사용 할 수 있게 됩니다."
 SHE_alonabogje_tt:0 "현장 지휘에 특화된 두 명의 §C미니 아로나§! 육군 장교와 한 명의 §C미니 아로나§! 제독이 등장할 것입니다."
@@ -551,6 +553,10 @@ SHE_bunbae_cheje_gaeseon_desc: "분배 체제를 개선하여 보다 효율적�
 
  #샬레
  SHE_ba_news.1.b_tt: "§Y생텀타워의 저항§! 해금"
+ SHE_datastream_0: "심각하게 손상된 데이터 스트림"
+ SHE_datastream_1: "손상된 데이터 스트림"
+ SHE_datastream_2: "불완전한 데이터 스트림"
+ SHE_datastream_3: "일부 누락된 데이터 스트림"
  SHE_integrated_system:0 "통합 프로토콜"
  SHE_central_labor_union_traits:0 "중앙 산업 노동조합"
  SHE_reasonable_distributor:0 "합리적인 분배자"

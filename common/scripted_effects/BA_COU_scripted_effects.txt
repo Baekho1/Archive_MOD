@@ -52,3 +52,129 @@ COU_cut_tower_down_effect = {
 		remove_ideas = COU_cut_tower_7
 	}
 }
+
+SHE_datastream_down = {
+	if = {
+		limit = { has_trait = SHE_datastream_0 }
+		effect_tooltip = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_0
+				add = SHE_datastream_1
+			}
+		}
+		hidden_effect = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_0
+				add = SHE_datastream_1
+			}
+			swap_country_leader_traits = {
+				ideology = socialism
+				remove = SHE_datastream_0
+				add = SHE_datastream_1
+			}
+			swap_country_leader_traits = {
+				ideology = leninism
+				remove = SHE_datastream_0
+				add = SHE_datastream_1
+			}
+			swap_country_leader_traits = {
+				ideology = fascism_aicontrol
+				remove = SHE_datastream_0
+				add = SHE_datastream_1
+			}
+		}
+	}
+	else_if = {
+		limit = { has_trait = SHE_datastream_1 }
+		effect_tooltip = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_1
+				add = SHE_datastream_2
+			}
+		}
+		hidden_effect = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_1
+				add = SHE_datastream_2
+			}
+			swap_country_leader_traits = {
+				ideology = socialism
+				remove = SHE_datastream_1
+				add = SHE_datastream_2
+			}
+			swap_country_leader_traits = {
+				ideology = leninism
+				remove = SHE_datastream_1
+				add = SHE_datastream_2
+			}
+			swap_country_leader_traits = {
+				ideology = fascism_aicontrol
+				remove = SHE_datastream_1
+				add = SHE_datastream_2
+			}
+		}
+	}
+	else_if = {
+		limit = { has_trait = SHE_datastream_2 }
+		effect_tooltip = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_2
+				add = SHE_datastream_3
+			}
+		}
+		hidden_effect = {
+			swap_country_leader_traits = {
+				ideology = aicontrol
+				remove = SHE_datastream_2
+				add = SHE_datastream_3
+			}
+			swap_country_leader_traits = {
+				ideology = socialism
+				remove = SHE_datastream_2
+				add = SHE_datastream_3
+			}
+			swap_country_leader_traits = {
+				ideology = leninism
+				remove = SHE_datastream_2
+				add = SHE_datastream_3
+			}
+			swap_country_leader_traits = {
+				ideology = fascism_aicontrol
+				remove = SHE_datastream_2
+				add = SHE_datastream_3
+			}
+		}
+	}
+	else_if = {
+		limit = { has_trait = SHE_datastream_3 }
+		effect_tooltip = {
+			remove_country_leader_trait = {
+				ideology = aicontrol
+				trait = SHE_datastream_3
+			}
+		}
+		hidden_effect = {
+			remove_country_leader_trait = {
+				ideology = aicontrol
+				trait = SHE_datastream_3
+			}
+			remove_country_leader_trait = {
+				ideology = socialism
+				trait = SHE_datastream_3
+			}
+			remove_country_leader_trait = {
+				ideology = leninism
+				trait = SHE_datastream_3
+			}
+			remove_country_leader_trait = {
+				ideology = fascism_aicontrol
+				trait = SHE_datastream_3
+			}
+		}
+	}
+}

@@ -176,7 +176,7 @@ country_event = { #총학생회장 실종
 		#promote_character = COU_null
 		promote_character = COU_RIN
 		
-		#country_event = { id = COU_event.2 hours = 8 }
+		country_event = { id = COU_event.2 hours = 8 }
 		news_event = { id = BA_news.76 days = 7 }
 		set_country_flag = MISSINGGSCP
 		mark_focus_tree_layout_dirty = yes
