@@ -7,6 +7,13 @@ ideas = {
 		}
 	}
     country = {
+		RED_NKVD = { #NKVD 장악
+			picture = nkvd_2
+			modifier = {
+				resistance_damage_to_garrison = -0.25
+				resistance_growth = -0.2
+			}
+		}
 		RED_industrial_intergration = { #산업 통합
 			picture = generic_central_management
 			modifier = {
