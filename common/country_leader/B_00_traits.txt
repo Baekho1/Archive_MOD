@@ -4028,6 +4028,19 @@ leader_traits = {
 		war_support_factor = 0.2
 		stability_factor = -0.1
 	}
+
+	MEX_manuel_torres_bueno_trait = { # 온화한 시나키스트
+		random = no
+		sprite = 13
+		recruitable_population_factor = 0.10
+	}
+
+	MEX_gustavo_saenz_de_sicilia_trait = { # 파시스트 영화감독
+		random = no
+		sprite = 13
+		fascism_drift = 0.15
+		war_support_factor = 0.1
+	}
 	
 	## 슬로바키아 ##
 	great_musician = {
