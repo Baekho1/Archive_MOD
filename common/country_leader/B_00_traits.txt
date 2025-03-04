@@ -2099,6 +2099,11 @@ leader_traits = {
 			communism_drift = -0.1
 		}
 	}
+	TRM_supreme_commander = {
+		random = no
+		max_command_power = 20
+		mobilization_laws_cost_factor = -0.25
+	}
 	TRM_histroy_loser = {
 		sprite = 13
 		random = no

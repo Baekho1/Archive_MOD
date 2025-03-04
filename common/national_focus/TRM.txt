@@ -6704,7 +6704,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 100
 			tag = TRM
 		}
 	}
@@ -6758,6 +6758,12 @@ focus_tree = {
 		completion_reward = {
 			country_event = trinity.4
 			add_political_power = 100
+			add_country_leader_trait = TRM_supreme_commander
+			hidden_effect = {
+				country_event = { id = trnstory.13 days = 20 } # 나치즘
+				country_event = { id = trnstory.15 days = 40 } # 동행인
+				country_event = { id = trnstory.14 days = 60 } # 충성경쟁
+			}
 		}
 	}
 	focus = {
@@ -6804,8 +6810,9 @@ focus_tree = {
 		}
 		select_effect = {
 			country_event = { id = trinity.16 days = 05 } # 상투스 분파의 절멸
-			country_event = { id =  trinity.17 days = 15 } # 필리우스 분파의 운명
+			country_event = { id = trinity.17 days = 15 } # 필리우스 분파의 운명
 			country_event = { id = trinity.19 days = 25 } # 파테르 분파 내부의 불충
+			country_event = { id = trinity.21 days = 50 random_days = 50 }
 		}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = -0.06 }
@@ -6850,14 +6857,58 @@ focus_tree = {
 			hidden_effect = {
 				TRN_alzk = { 
 					unit_leader_event = trinity.20 
-					add_country_leader_trait = TRN_mika_trait_1
 				}
 			}
 			#set_rule = { can_create_factions = yes }
 			hidden_effect = {
-				news_event = { id = BA_news.3 days = 3 }
 				set_politics = { ruling_party = fascism elections_allowed = no }
+				add_country_leader_trait = TRN_mika_trait_1
+				add_country_leader_trait = TRM_supreme_commander
+				set_country_leader_ideology = pater_nazism
+				set_party_name = {
+	    			ideology = fascism
+    				long_name = MIKA_FASCISM_LONG
+	    			name = MIKA_FASCISM_SHORT
+				}
+			}
+			hidden_effect = {
+				news_event = { id = BA_news.3 days = 3 }
 				remove_country_leader_trait = TRM_pater_faction
+				BA_ban_democratic_effect = yes
+				BA_ban_communism_effect = yes
+				BA_ban_neutrality_effect = yes
+				TRN_empty = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = tea_party_ideology
+							traits = {  }
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = tea_party_ideology
+							expire = "1965.1.1.1"
+							traits = {  }
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = marxism
+							traits = {  }
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = tea_party_neutrality_ideology
+							traits = {  }
+						}
+					}
+					
+				}
 			}
 			custom_effect_tooltip = TRM_pater_union_tt
 			set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
@@ -8457,7 +8508,7 @@ focus_tree = {
 		relative_position_id = TRM_encourage_radio_use
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 300
 			modifier = {
@@ -8819,7 +8870,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TRM_Trinity_Field_Artillery
-		cost = 5
+		cost = 6
 		completion_reward = {
 			custom_effect_tooltip = TRM_heer_modifier_change
 			add_to_variable = {
