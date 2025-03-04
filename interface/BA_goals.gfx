@@ -2076,6 +2076,34 @@ spriteTypes = {
 		name = "GFX_focus_COU_open_the_music"
 		textureFile = "gfx/interface/goals/COU/음악허용.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_fate_of_arona"
+		textureFile = "gfx/interface/goals/COU/fate_of_arona.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_rework_srt"
+		textureFile = "gfx/interface/goals/COU/SRT전면재교육.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_all_notbad"
+		textureFile = "gfx/interface/goals/COU/완전장악.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_look_the_mountain"
+		textureFile = "gfx/interface/goals/COU/주마간산.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_get_some_break"
+		textureFile = "gfx/interface/goals/COU/COU_get_some_break.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_dog_of_flanders"
+		textureFile = "gfx/interface/goals/COU/플랜더스의개.png"
+	}
+	spriteType = {
+		name = "GFX_focus_shutup"
+		textureFile = "gfx/interface/goals/COU/닥쳐.png"
+	}
 	
 	
 	####카이저라이히 돚거
