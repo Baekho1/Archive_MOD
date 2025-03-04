@@ -234,7 +234,8 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/MEX/Portrait_MEX_salvador_abascal.png"
-				small="gfx/leaders/MEX/Advisor_MEX_salvador_abascal.png"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_salvador_abascal.png"
 			}
 		}
 		advisor={
@@ -337,7 +338,8 @@ characters={
 		name=MEX_nicolas_rodriguez_carrasco
 		portraits={
 			army={
-				small="gfx/leaders/MEX/Advisor_MEX_nicolas_rodriguez_carrasco.tga"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_nicolas_rodriguez_carrasco.tga"
 			}
 		}
 		advisor={
@@ -358,7 +360,8 @@ characters={
 		portraits={
 			army={
 				large="GFX_portrait_MEX_Luis_Maria_Martinez"
-				small="gfx/leaders/MEX/Advisor_MEX_luis_maria_martinez.tga"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_luis_maria_martinez.tga"
 			}
 		}
 
@@ -379,7 +382,8 @@ characters={
 		name=MEX_efrain_buenrostro_ochoa
 		portraits={
 			army={
-				small="gfx/leaders/MEX/Advisor_MEX_efrain_buenrostro_ochoa.tga"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_efrain_buenrostro_ochoa.tga"
 			}
 		}
 
@@ -400,7 +404,8 @@ characters={
 		name=MEX_manuel_torres_bueno
 		portraits={
 			army={
-				small="gfx/leaders/MEX/Advisor_MEX_manuel_torres_bueno.tga"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_manuel_torres_bueno.tga"
 			}
 		}
 
@@ -421,7 +426,8 @@ characters={
 		name=MEX_gustavo_saenz_de_sicilia
 		portraits={
 			army={
-				small="gfx/leaders/MEX/Advisor_MEX_gustavo_saenz_de_sicilia.tga"
+				small="GFX_idea_generic_air_europe_1"
+				# small="gfx/leaders/MEX/Advisor_MEX_gustavo_saenz_de_sicilia.tga"
 			}
 		}
 
