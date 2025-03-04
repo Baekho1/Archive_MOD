@@ -8922,6 +8922,26 @@ unit_leader_event = { # 기사단국 선포
 		name = trinity.20.a
     }
 }
+country_event = { # 트리니티 의용군단
+	id = trinity.21
+	title = trinity.21.t
+	desc = trinity.21.desc
+	picture = GFX_report_event_french_resistance_01
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.21.a
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = 0.04 }
+		# 여기에 국민정신 입력
+		every_controlled_state = {
+			limit = { has_active_resistance = yes }
+			add_resistance = 25
+		}
+    }
+}
 news_event = {
 	id = trinitynews.1
 	title = trinitynews.1.t
@@ -9218,5 +9238,47 @@ country_event = { # 음모론 - 세이아는 살아계시다!
 	option = {
 		name = trnstory.12.a
 		add_stability = -0.005
+	}
+}
+country_event = { # 나치즘
+	id = trnstory.13
+	title = trnstory.13.t
+	desc = trnstory.13.desc
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.13.a
+
+	}
+}
+country_event = { # 충성경쟁
+	id = trnstory.14
+	title = trnstory.14.t
+	desc = trnstory.14.desc
+	picture = GFX_report_event_canada_ronnie
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.14.a
+
+	}
+}
+country_event = { # 동행인
+	id = trnstory.15
+	title = trnstory.15.t
+	desc = trnstory.15.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.15.a
+
 	}
 }

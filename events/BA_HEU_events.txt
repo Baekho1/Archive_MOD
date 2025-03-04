@@ -4089,6 +4089,10 @@ country_event = { #안녕하세요, 선생님
 
     is_triggered_only = yes
 
+	trigger = {
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
+	}
+
 	option = { 
 		name = HEU_event.258.a 
 		ai_chance = {
@@ -4106,6 +4110,10 @@ country_event = { #크래프트 챔버
 	picture = GFX_event_mega_cities_COU
 
     is_triggered_only = yes
+
+	trigger = {
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
+	}
 
 	option = { 
 		name = HEU_event.259.a 
@@ -4125,6 +4133,10 @@ country_event = { #이대로 보낼 수 없어요
 
     is_triggered_only = yes
 
+	trigger = {
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
+	}
+
 	option = { 
 		name = HEU_event.260.a 
 		ai_chance = {
@@ -4143,6 +4155,10 @@ country_event = { #다미안 크라첸베르크의 죽음
 		HEU_damian_kratzenberg = {
 			set_character_flag = HEU_true_damian_dead_flag
 		}
+	}
+
+	trigger = {
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
 	}
 
     is_triggered_only = yes
@@ -6213,6 +6229,10 @@ country_event = { #인방을 하라고?!
 	picture = GFX_report_event_aru_rikuhachima
     is_triggered_only = yes
 
+	trigger = {
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
+	}
+
 	option = { 
 		name = HEU.flavor_event.81.a 
 
@@ -6232,6 +6252,7 @@ unit_leader_event = { #리쿠하치마 아루 데뷔 방송
 
 	trigger = {
 		has_country_flag = HEU_damian_internet_flag
+		NOT = { complete_national_focus = HEU_pro_gehenna_route_ending }
 	}
 
     is_triggered_only = yes

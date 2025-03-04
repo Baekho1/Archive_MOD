@@ -6142,18 +6142,21 @@ HEU_aru_internet_overdose_decision_category = {
 		activation = {
 			has_country_flag = HEU_damian_internet_flag
 			check_variable = { benriya_keystones < 4 }
+			NOT = { has_completed_focus = HEU_pro_gehenna_route_ending }
 		}
 
 		cancel_trigger = {
 			OR = {
 				check_variable = { benriya_keystones = 4 }
 				check_variable = { benriya_keystones > 4 }
+				has_completed_focus = HEU_pro_gehenna_route_ending
 			}
 		}
 		available = {
 			OR = {
 				check_variable = { benriya_keystones = 4 }
 				check_variable = { benriya_keystones > 4 }
+				has_completed_focus = HEU_pro_gehenna_route_ending
 			}
 		}
 
