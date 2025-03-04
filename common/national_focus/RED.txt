@@ -4485,6 +4485,8 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_completed_focus = RED_enticing_locals
+				has_completed_focus = RED_dipose_cherino
+				has_completed_focus = RED_no_error_at_ideology
 			}
 		}
 		available = {
@@ -7333,11 +7335,19 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_return_of_left_oppisition
 		}
+		cancelable = no
 		x = -1
 		y = 1
 		relative_position_id = RED_return_of_left_oppisition
-		cost = 4
+		cost = 10
+		select_effect = {
+			country_event = {
+				id = RED_ending_event.4
+				days = 1
+			}
+		}
 		completion_reward = {
+			add_political_power = 30
 		}
 	}
 	focus = {
@@ -7352,6 +7362,19 @@ focus_tree = {
 		relative_position_id = RED_revolutionary_trial
 		cost = 4
 		completion_reward = {
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = RED_stalinist_sentiments
+				}
+				add_dynamic_modifier = {
+					modifier = RED_stalinist_sentiments_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -7366,6 +7389,13 @@ focus_tree = {
 		relative_position_id = RED_revolutionary_trial
 		cost = 4
 		completion_reward = {
+			unlock_decision_tooltip = RED_normalize_ukraine
+			unlock_decision_tooltip = RED_normalize_CA
+			unlock_decision_tooltip = RED_normalize_FE
+			unlock_decision_tooltip = RED_normalize_RUS
+			unlock_decision_tooltip = RED_normalize_KUB
+			unlock_decision_tooltip = RED_normalize_balt
+			unlock_decision_tooltip = RED_normalize_FIN
 		}
 	}
 	focus = {
@@ -7383,6 +7413,10 @@ focus_tree = {
 		relative_position_id = RED_social_rebuild
 		cost = 4
 		completion_reward = {
+			country_event = {
+				id = RED_ending_event.10
+				days = 2
+			}
 		}
 	}
 	focus = {
@@ -7758,6 +7792,13 @@ focus_tree = {
 						SOV_system_decentralization_idea
 						SOV_the_local_soviets_idea
 					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
 				}
 			}
 			# Armenia
@@ -7772,6 +7813,13 @@ focus_tree = {
 					add_ideas = {
 						SOV_system_decentralization_idea
 						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
 					}
 				}
 			}
@@ -7789,6 +7837,13 @@ focus_tree = {
 						SOV_system_decentralization_idea
 						SOV_the_local_soviets_idea
 					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
 				}
 			}
 
@@ -7804,6 +7859,13 @@ focus_tree = {
 					add_ideas = {
 						SOV_system_decentralization_idea
 						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
 					}
 				}
 			}

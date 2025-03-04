@@ -1,6 +1,7 @@
 RED_seek_allies_dec_cat = {
 	#외교
-	RED_trade_with_MIL = { #밀레니엄에 자원과 기술 교환
+	RED_trade_with_MIL = {
+		#밀레니엄에 자원과 기술 교환
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			RED = {
@@ -35,7 +36,8 @@ RED_seek_allies_dec_cat = {
 		}
 		fire_only_once = yes
 	}
-	RED_trade_with_KAI_low_fee = { #카이저에 저임금 노동자 파견
+	RED_trade_with_KAI_low_fee = {
+		#카이저에 저임금 노동자 파견
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			KAI = {
@@ -70,7 +72,8 @@ RED_seek_allies_dec_cat = {
 		}
 		fire_only_once = yes
 	}
-	RED_support_intermarium = { #인테르마리움 지원
+	RED_support_intermarium = {
+		#인테르마리움 지원
 		icon = GFX_decision_generic_industry
 		visible = {
 			has_completed_focus = RED_deal_with_fin
@@ -196,11 +199,635 @@ RED_seek_allies_dec_cat = {
 
 RED_invite_trotskists_dec_cat = {
 	#제4인터내셔널
-	RED_the_fifth_columnists = { #제5열 조직
+	RED_normalize_RUS = {
+		#서러시아-중앙시베리아
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				is_core_of = SOV
+				NOT = {
+					OR = {
+						is_core_of = FER
+						is_core_of = YAK
+						is_core_of = BYA
+						is_core_of = EVE
+						is_core_of = TAY
+					}
+					OR = {
+						is_core_of = KAZ
+						is_core_of = BUK
+						is_core_of = UZB
+						is_core_of = KHI
+						is_core_of = KYR
+						is_core_of = TMS
+					}
+					OR = {
+						is_core_of = CRI
+						is_core_of = KAL
+						is_core_of = GEO
+						is_core_of = DAG
+						is_core_of = ARM
+						is_core_of = AZR
+						is_core_of = NOA
+						is_core_of = ABK
+						is_core_of = CIN
+						is_core_of = KBK
+						state = 235
+						state = 234
+						state = 218
+						state = 238
+						state = 233
+						state = 236
+						state = 217
+						state = 245
+					}
+					OR = {
+						is_core_of = FIN
+						is_core_of = KAR
+						is_core_of = KOM
+						is_core_of = NEN
+						state = 213
+						state = 195
+						state = 880
+						state = 214
+						state = 879
+					}
+					OR = {
+						is_core_of = BLR
+						is_core_of = LIT
+						is_core_of = EST
+						is_core_of = LAT
+					}
+					is_core_of = UKR
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				is_core_of = SOV
+				NOT = {
+					OR = {
+						is_core_of = FER
+						is_core_of = YAK
+						is_core_of = BYA
+						is_core_of = EVE
+						is_core_of = TAY
+					}
+					OR = {
+						is_core_of = KAZ
+						is_core_of = BUK
+						is_core_of = UZB
+						is_core_of = KHI
+						is_core_of = KYR
+						is_core_of = TMS
+					}
+					OR = {
+						is_core_of = CRI
+						is_core_of = KAL
+						is_core_of = GEO
+						is_core_of = DAG
+						is_core_of = ARM
+						is_core_of = AZR
+						is_core_of = NOA
+						is_core_of = ABK
+						is_core_of = CIN
+						is_core_of = KBK
+						state = 235
+						state = 234
+						state = 218
+						state = 238
+						state = 233
+						state = 236
+						state = 217
+						state = 245
+					}
+					OR = {
+						is_core_of = FIN
+						is_core_of = KAR
+						is_core_of = KOM
+						is_core_of = NEN
+						state = 213
+						state = 195
+						state = 880
+						state = 214
+						state = 879
+					}
+					OR = {
+						is_core_of = BLR
+						is_core_of = LIT
+						is_core_of = EST
+						is_core_of = LAT
+					}
+					is_core_of = UKR
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						OR = {
+							is_core_of = FER
+							is_core_of = YAK
+							is_core_of = BYA
+							is_core_of = EVE
+							is_core_of = TAY
+						}
+						OR = {
+							is_core_of = KAZ
+							is_core_of = BUK
+							is_core_of = UZB
+							is_core_of = KHI
+							is_core_of = KYR
+							is_core_of = TMS
+						}
+						OR = {
+							is_core_of = CRI
+							is_core_of = KAL
+							is_core_of = GEO
+							is_core_of = DAG
+							is_core_of = ARM
+							is_core_of = AZR
+							is_core_of = NOA
+							is_core_of = ABK
+							is_core_of = CIN
+							is_core_of = KBK
+							state = 235
+							state = 234
+							state = 218
+							state = 238
+							state = 233
+							state = 236
+							state = 217
+							state = 245
+						}
+						OR = {
+							is_core_of = FIN
+							is_core_of = KAR
+							is_core_of = KOM
+							is_core_of = NEN
+							state = 213
+							state = 195
+							state = 880
+							state = 214
+							state = 879
+						}
+						OR = {
+							is_core_of = BLR
+							is_core_of = LIT
+							is_core_of = EST
+							is_core_of = LAT
+						}
+						is_core_of = UKR
+					}
+					is_core_of = SOV
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_FE = {
+		#극동
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				OR = {
+					is_core_of = FER
+					is_core_of = YAK
+					is_core_of = BYA
+					is_core_of = EVE
+					is_core_of = TAY
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				OR = {
+					is_core_of = FER
+					is_core_of = YAK
+					is_core_of = BYA
+					is_core_of = EVE
+					is_core_of = TAY
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = FER
+						is_core_of = YAK
+						is_core_of = BYA
+						is_core_of = EVE
+						is_core_of = TAY
+					}
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_CA = {
+		#중앙아시아
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				OR = {
+					is_core_of = KAZ
+					is_core_of = BUK
+					is_core_of = UZB
+					is_core_of = KHI
+					is_core_of = KYR
+					is_core_of = TMS
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				OR = {
+					is_core_of = KAZ
+					is_core_of = BUK
+					is_core_of = UZB
+					is_core_of = KHI
+					is_core_of = KYR
+					is_core_of = TMS
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = KAZ
+						is_core_of = BUK
+						is_core_of = UZB
+						is_core_of = KHI
+						is_core_of = KYR
+						is_core_of = TMS
+					}
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_KUB = {
+		#쿠반스텝-캅카스-남러시아 정상화
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				NOT = {
+					is_core_of = UKR
+				}
+				OR = {
+					is_core_of = CRI
+					is_core_of = KAL
+					is_core_of = GEO
+					is_core_of = DAG
+					is_core_of = ARM
+					is_core_of = AZR
+					is_core_of = NOA
+					is_core_of = ABK
+					is_core_of = CIN
+					is_core_of = KBK
+					state = 235
+					state = 234
+					state = 218
+					state = 238
+					state = 233
+					state = 236
+					state = 217
+					state = 245
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				NOT = {
+					is_core_of = UKR
+				}
+				OR = {
+					is_core_of = CRI
+					is_core_of = KAL
+					is_core_of = GEO
+					is_core_of = DAG
+					is_core_of = ARM
+					is_core_of = AZR
+					is_core_of = NOA
+					is_core_of = ABK
+					is_core_of = CIN
+					is_core_of = KBK
+					state = 235
+					state = 234
+					state = 218
+					state = 238
+					state = 233
+					state = 236
+					state = 217
+					state = 245
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = UKR
+					}
+					OR = {
+						is_core_of = CRI
+						is_core_of = KAL
+						is_core_of = GEO
+						is_core_of = DAG
+						is_core_of = ARM
+						is_core_of = AZR
+						is_core_of = NOA
+						is_core_of = ABK
+						is_core_of = CIN
+						is_core_of = KBK
+						state = 235
+						state = 234
+						state = 218
+						state = 238
+						state = 233
+						state = 236
+						state = 217
+						state = 245
+					}
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_FIN = {
+		#핀란드-북러시아 정상화
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				OR = {
+					is_core_of = FIN
+					is_core_of = KAR
+					is_core_of = KOM
+					is_core_of = NEN
+					state = 213
+					state = 195
+					state = 880
+					state = 214
+					state = 879
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				OR = {
+					is_core_of = FIN
+					is_core_of = KAR
+					is_core_of = KOM
+					is_core_of = NEN
+					state = 213
+					state = 195
+					state = 880
+					state = 214
+					state = 879
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = BLR
+						is_core_of = LIT
+						is_core_of = EST
+						is_core_of = LAT
+					}
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_balt = {
+		#발트-밸라루스 정상화
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				OR = {
+					is_core_of = BLR
+					is_core_of = LIT
+					is_core_of = EST
+					is_core_of = LAT
+				}
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				OR = {
+					is_core_of = BLR
+					is_core_of = LIT
+					is_core_of = EST
+					is_core_of = LAT
+				}
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = BLR
+						is_core_of = LIT
+						is_core_of = EST
+						is_core_of = LAT
+					}
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_normalize_ukraine = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		visible = {
+			any_owned_state = {
+				is_core_of = UKR
+			}
+			has_completed_focus = RED_social_rebuild
+		}
+		cost = 60
+		days_remove = 90
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = RED
+				is_core_of = UKR
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				custom_effect_tooltip = RED_normalize_tt
+				if = {
+					limit = {
+						compliance > 65
+					}
+					add_core_of = RED
+				}
+				else = {
+					add_compliance = 5
+				}
+				if = {
+					limit = {
+						RED = {
+							has_completed_focus = RED_rebuild_party
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = RED_stalinist_sentiments_1
+					}
+				}
+			}
+		}
+	}
+	RED_the_fifth_columnists = {
+		#제5열 조직
 		icon = GFX_decision_generic_nationalism
 		visible = {
 			has_completed_focus = RED_armed_workers
-			
 		}
 		ai_will_do = {
 			base = 100
@@ -217,8 +844,7 @@ RED_invite_trotskists_dec_cat = {
 			command_power > 24
 			has_army_experience > 14
 		}
-
-		custom_cost_text = decision_cost_CP_25_ArmXP_15 
+		custom_cost_text = decision_cost_CP_25_ArmXP_15
 		fire_only_once = no
 		days_remove = 30
 		remove_effect = {
@@ -286,7 +912,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 		}
 	}
-	RED_SMI_autonomy = { #사미족 자치주 설립
+	RED_SMI_autonomy = {
+		#사미족 자치주 설립
 		icon = GFX_decision_generic_form_nation
 		visible = {
 			has_completed_focus = RED_union_nation
@@ -5065,7 +5692,6 @@ RED_zenkyoutou_cat = {
 	}
 }
 
-
 RED_population_issue_cat = {
 	#인구문제
 	RED_population_issue_no_goods = {
@@ -5807,11 +6433,10 @@ RED_red_horse_category = {
 }
 
 RED_soviet_aid_to_poum_decision_category = {
-	RED_organize_covert_depots_poum = { #DECISION AVAILABLE PRIOR TO THE POUM SPLIT
+	RED_organize_covert_depots_poum = {
+		#DECISION AVAILABLE PRIOR TO THE POUM SPLIT
 		priority = 50
-
 		icon = ger_military_buildup
-
 		ai_will_do = {
 			base = 30
 			modifier = {
@@ -5820,38 +6445,33 @@ RED_soviet_aid_to_poum_decision_category = {
 				command_power < 50
 			}
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
 			has_global_flag = spanish_civil_war
 		}
-
 		visible = {
-			NOT = { has_global_flag = SPR_anarchist_uprising_flag }
-			NOT = { has_global_flag = scw_over }
+			NOT = {
+				has_global_flag = SPR_anarchist_uprising_flag
+			}
+			NOT = {
+				has_global_flag = scw_over
+			}
 			is_subject = no
 		}
-
 		cancel_if_not_visible = yes
-
 		fire_only_once = yes
-
 		days_remove = 30
-
 		custom_cost_trigger = {
 			command_power > 74
 		}
 		custom_cost_text = decision_cost_CP_75
-
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -75
 			}
 		}
-
 		remove_effect = {
 			set_global_flag = SOV_poum_has_covert_depots_from_soviets_flag
 			effect_tooltip = {
@@ -5891,50 +6511,45 @@ RED_soviet_aid_to_poum_decision_category = {
 			custom_effect_tooltip = decision_only_once_tt
 		}
 	}
-
 	RED_send_infantry_equipment_poum = {
 		priority = 50
-
 		icon = generic_industry
-
 		ai_will_do = {
 			base = 1.2
 			modifier = {
 				factor = 0.1
 				has_war = yes
-				has_equipment = { infantry_equipment < 10000 }
+				has_equipment = {
+					infantry_equipment < 10000
+				}
 			}
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
 		}
-
 		visible = {
 			SPR_scw_in_progress = yes
 			country_exists = SPC
-			SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			NOT = { has_war_with = SPC }
+			SPC = {
+				has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			}
+			NOT = {
+				has_war_with = SPC
+			}
 		}
-
 		days_remove = 30
-
 		days_re_enable = 90
-
 		custom_cost_trigger = {
 			command_power > 24
 		}
 		custom_cost_text = decision_cost_CP_25
-
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -25
 			}
 		}
-
 		remove_effect = {
 			effect_tooltip = {
 				SPC = {
@@ -5951,7 +6566,10 @@ RED_soviet_aid_to_poum_decision_category = {
 			}
 			hidden_effect = {
 				SPC = {
-					country_event = { id = NSB_soviet_foreign_politics_events.250 hours = 2 }
+					country_event = {
+						id = NSB_soviet_foreign_politics_events.250
+						hours = 2
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = RED
@@ -5962,73 +6580,83 @@ RED_soviet_aid_to_poum_decision_category = {
 			custom_effect_tooltip = SOV_default_poum_cd_tt
 		}
 	}
-
 	RED_organize_popular_brigades_poum = {
 		priority = 50
-
 		icon = generic_nationalism
-
 		ai_will_do = {
 			base = 1.2
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
 		}
-
 		visible = {
 			SPR_scw_in_progress = yes
 			country_exists = SPC
-			SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			NOT = { has_war_with = SPC }
+			SPC = {
+				has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			}
+			NOT = {
+				has_war_with = SPC
+			}
 		}
-
 		days_remove = 30
-
 		days_re_enable = 90
-
 		ai_hint_pp_cost = 25
 		custom_cost_trigger = {
 			command_power > 24
 			has_political_power > 24
 		}
 		custom_cost_text = decision_cost_CP_25_pp_25
-
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -25
 				add_political_power = -25
 			}
 		}
-
 		remove_effect = {
 			effect_tooltip = {
-				SPC ={
+				SPC = {
 					division_template = {
 						name = "International Marxist Brigades"
 						is_locked = yes
 						priority = 1
 						template_counter = 14
 						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
 						}
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"International Marxist Brigade\" division_template = \"International Marxist Brigades\" start_experience_factor = 0.1 start_equipment_factor = 1.0" owner = SPC count = 6
+							division = "name = \"International Marxist Brigade\" division_template = \"International Marxist Brigades\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+							owner = SPC
+							count = 6
 						}
 					}
 				}
 			}
 			hidden_effect = {
 				SPC = {
-					country_event = { id = NSB_soviet_spanish_civil_war.2 hours = 1 }
+					country_event = {
+						id = NSB_soviet_spanish_civil_war.2
+						hours = 1
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = RED
@@ -6039,48 +6667,41 @@ RED_soviet_aid_to_poum_decision_category = {
 			custom_effect_tooltip = SOV_default_poum_cd_tt
 		}
 	}
-
 	RED_send_elite_commandos_poum = {
 		priority = 50
-
 		icon = generic_military
-
 		ai_will_do = {
 			base = 1.2
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
 		}
-
 		visible = {
 			SPR_scw_in_progress = yes
 			country_exists = SPC
-			SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			NOT = { has_war_with = SPC }
+			SPC = {
+				has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			}
+			NOT = {
+				has_war_with = SPC
+			}
 		}
-
 		days_remove = 30
-
 		days_re_enable = 90
-
 		custom_cost_trigger = {
 			command_power > 49
 		}
 		custom_cost_text = decision_cost_CP_50
-
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -50
 			}
 		}
-
 		remove_effect = {
 			effect_tooltip = {
-				SPC ={
+				SPC = {
 					add_timed_idea = {
 						idea = SOV_soviet_commandos_poum
 						days = 180
@@ -6089,32 +6710,67 @@ RED_soviet_aid_to_poum_decision_category = {
 						name = "Soviet Special Brigades"
 						is_locked = yes
 						priority = 1
-						template_counter = 02
+						template_counter = 2
 						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 0
+								y = 2
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 2
+							}
 						}
 						support = {
-							engineer = { x = 0 y = 0 }
-							recon = { x = 0 y = 1 }
-							artillery = { x = 0 y = 2 }
-							anti_tank = { x = 0 y = 3 }
+							engineer = {
+								x = 0
+								y = 0
+							}
+							recon = {
+								x = 0
+								y = 1
+							}
+							artillery = {
+								x = 0
+								y = 2
+							}
+							anti_tank = {
+								x = 0
+								y = 3
+							}
 						}
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"Soviet Special Brigade\" division_template = \"Soviet Special Brigades\" start_experience_factor = 0.7 start_equipment_factor = 1.0" owner = SPC count = 2
+							division = "name = \"Soviet Special Brigade\" division_template = \"Soviet Special Brigades\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
+							owner = SPC
+							count = 2
 						}
 					}
 				}
 			}
 			hidden_effect = {
 				SPC = {
-					country_event = { id = NSB_soviet_spanish_civil_war.3 hours = 1 }
+					country_event = {
+						id = NSB_soviet_spanish_civil_war.3
+						hours = 1
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = RED
@@ -6123,7 +6779,9 @@ RED_soviet_aid_to_poum_decision_category = {
 				}
 				if = {
 					limit = {
-						NOT = { has_country_flag = SOV_send_elite_commandos_poum_flag }
+						NOT = {
+							has_country_flag = SOV_send_elite_commandos_poum_flag
+						}
 					}
 					set_country_flag = SOV_send_elite_commandos_poum_flag
 				}
@@ -6131,39 +6789,33 @@ RED_soviet_aid_to_poum_decision_category = {
 			custom_effect_tooltip = SOV_long_poum_cd_tt
 		}
 	}
-
 	RED_organize_popular_speeches_poum = {
 		priority = 50
-
 		icon = eng_propaganda_campaigns
-
 		ai_will_do = {
 			base = 1.2
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
 		}
-
 		visible = {
 			SPR_scw_in_progress = yes
 			country_exists = SPC
-			SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			NOT = { has_war_with = SPC }
+			SPC = {
+				has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			}
+			NOT = {
+				has_war_with = SPC
+			}
 		}
-
 		days_remove = 30
-
 		days_re_enable = 90
-
 		cost = 25
-
 		remove_effect = {
 			effect_tooltip = {
-				SPC ={
+				SPC = {
 					add_timed_idea = {
 						idea = SOV_popular_speeches_poum
 						days = 180
@@ -6174,22 +6826,39 @@ RED_soviet_aid_to_poum_decision_category = {
 						priority = 1
 						template_counter = 14
 						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
 						}
 					}
 					capital_scope = {
 						create_unit = {
-							division = "name = \"International Marxist Brigade\" division_template = \"International Marxist Brigades\" start_experience_factor = 0.1 start_equipment_factor = 1.0" owner = SPC count = 2
+							division = "name = \"International Marxist Brigade\" division_template = \"International Marxist Brigades\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+							owner = SPC
+							count = 2
 						}
 					}
 				}
 			}
 			hidden_effect = {
 				SPC = {
-					country_event = { id = NSB_soviet_spanish_civil_war.4 hours = 1 }
+					country_event = {
+						id = NSB_soviet_spanish_civil_war.4
+						hours = 1
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = RED
@@ -6200,57 +6869,55 @@ RED_soviet_aid_to_poum_decision_category = {
 			custom_effect_tooltip = SOV_default_poum_cd_tt
 		}
 	}
-
 	RED_infiltrate_stalinist_plans_in_spain_poum = {
 		priority = 50
-
 		icon = eng_propaganda_campaigns
-
 		ai_will_do = {
 			base = 1.2
 		}
-
 		allowed = {
 			original_tag = RED
 		}
-
 		available = {
-			NOT = { has_completed_focus = SOV_coup_detat }
+			NOT = {
+				has_completed_focus = SOV_coup_detat
+			}
 		}
-
 		visible = {
 			SPR_scw_in_progress = yes
 			country_exists = SPC
 			country_exists = SPD
-			NOT = { has_completed_focus = SOV_coup_detat }
-			SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			NOT = { has_war_with = SPC }
-			NOT = { is_in_faction_with = SPD }
+			NOT = {
+				has_completed_focus = SOV_coup_detat
+			}
+			SPC = {
+				has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			}
+			NOT = {
+				has_war_with = SPC
+			}
+			NOT = {
+				is_in_faction_with = SPD
+			}
 		}
-
 		cancel_if_not_visible = yes
-
 		days_remove = 30
-
 		fire_only_once = yes
-
 		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
 			command_power > 49
 			has_political_power > 14
 		}
 		custom_cost_text = decision_cost_CP_50_pp_15
-
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -50
 				add_political_power = -15
 			}
 		}
-
 		remove_effect = {
 			effect_tooltip = {
-				SPC ={
+				SPC = {
 					add_timed_idea = {
 						idea = SOV_agents_in_the_stalinist_command_poum
 						days = 365
@@ -6259,7 +6926,10 @@ RED_soviet_aid_to_poum_decision_category = {
 			}
 			hidden_effect = {
 				SPC = {
-					country_event = { id = NSB_soviet_spanish_civil_war.5 hours = 1 }
+					country_event = {
+						id = NSB_soviet_spanish_civil_war.5
+						hours = 1
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = RED

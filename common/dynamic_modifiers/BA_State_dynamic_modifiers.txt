@@ -256,6 +256,7 @@ FRA_algeria_resistance = {
 RED_stalinist_partisan = { #스탈린주의 파르티잔
 	icon = GFX_modifiers_SOV_invaders_must_die
 	resistance_growth = 0.50
+	resistance_target = 0.6
 }
 RED_stalinist_sentiments = { #스탈린주의 정서
 	icon = GFX_modifiers_generic_resistance
@@ -268,6 +269,7 @@ RED_stalinist_sentiments = { #스탈린주의 정서
 RED_stalinist_partisan_1 = { #스탈린주의 파르티잔
 	icon = GFX_modifiers_SOV_invaders_must_die
 	resistance_growth = 0.25
+	resistance_target = 0.3
 }
 RED_stalinist_sentiments_1 = { #스탈린주의 정서
 	icon = GFX_modifiers_generic_resistance
