@@ -7011,9 +7011,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#전쟁이 아니라 계급전쟁
-		id = RED_no_war_but_class_war
-		icon = GFX_focus_spr_class_war
+		#볼셰비즘 이상 재현
+		id = RED_ideal_of_bolshevism_again
+		icon = GFX_focus_ger_great_red_menace
 		prerequisite = {
 			focus = RED_party_central_dissolution
 			focus = RED_freedom_of_debate_unity_of_action
@@ -7023,16 +7023,16 @@ focus_tree = {
 		y = 3
 		relative_position_id = RED_cherino_s_systemic_revolution
 		mutually_exclusive = {
-			focus = RED_ideal_of_bolshevism_again
+			focus = RED_no_war_but_class_war
 		}
 		cost = 4
 		completion_reward = {
 		}
 	}
 	focus = {
-		#볼셰비즘 이상 재현
-		id = RED_ideal_of_bolshevism_again
-		icon = GFX_focus_ger_great_red_menace
+		#전쟁이 아니라 계급전쟁
+		id = RED_no_war_but_class_war
+		icon = GFX_focus_spr_class_war
 		prerequisite = {
 			focus = RED_free_soviets
 			focus = RED_democratic_planned_economy
@@ -7041,7 +7041,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = RED_cherino_s_systemic_revolution
 		mutually_exclusive = {
-			focus = RED_no_war_but_class_war
+			focus = RED_ideal_of_bolshevism_again
 		}
 		cost = 4
 		completion_reward = {
@@ -7093,6 +7093,8 @@ focus_tree = {
 			}
 		}
 	}
+
+
 	focus = {
 		#키보토스 혁명전쟁
 		id = RED_liberation_of_the_kibotus_states
@@ -7268,6 +7270,590 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		#승리의 날
+		id = RED_day_of_victory
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = {
+			focus = RED_attack_sov
+		}
+		available = {
+			owns_state = 219
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = RED_attack_sov
+		cost = 4
+		completion_reward = {
+			if = {
+				limit = {
+					RE5 = {
+						exists = yes
+					}
+				}
+				annex_country = {
+					target = RE5
+					transfer_troops = yes
+				}
+			}
+			country_event = {
+				id = RED_ending_event.1
+				days = 2
+			}
+		}
+	}
+	focus = {
+		#좌익반대파의 귀환
+		id = RED_return_of_left_oppisition
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = {
+			focus = RED_day_of_victory
+		}
+		x = -3
+		y = 1
+		mutually_exclusive = {
+			focus = RED_annex_party
+		}
+		relative_position_id = RED_day_of_victory
+		cost = 4
+		completion_reward = {
+			country_event = {
+				id = RED_ending_event.2
+				days = 1
+			}
+		}
+	}
+	focus = {
+		#혁명 재판
+		id = RED_revolutionary_trial
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = {
+			focus = RED_return_of_left_oppisition
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_return_of_left_oppisition
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#볼셰비키-레닌주의
+		id = RED_bolshevik_leninism
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		prerequisite = {
+			focus = RED_revolutionary_trial
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_revolutionary_trial
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#사회 복구 사업
+		id = RED_social_rebuild
+		icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = RED_return_of_left_oppisition
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_revolutionary_trial
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#전위당 재건
+		id = RED_rebuild_party
+		icon = GFX_focus_AUS_austromarxism
+		prerequisite = {
+			focus = RED_bolshevik_leninism
+		}
+		prerequisite = {
+			focus = RED_social_rebuild
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_social_rebuild
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#당 병합
+		id = RED_annex_party
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		prerequisite = {
+			focus = RED_day_of_victory
+		}
+		x = 3
+		y = 1
+		mutually_exclusive = {
+			focus = RED_return_of_left_oppisition
+		}
+		relative_position_id = RED_day_of_victory
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#이념적 오류 수정
+		id = RED_fix_error
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {
+			focus = RED_annex_party
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_annex_party
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#창조적 해체
+		id = RED_creative_deconstructivism
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = {
+			focus = RED_annex_party
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_annex_party
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#연방체
+		id = RED_federalization
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = {
+			focus = RED_creative_deconstructivism
+		}
+		prerequisite = {
+			focus = RED_fix_error
+		}
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = RED_military_government
+		}
+		relative_position_id = RED_creative_deconstructivism
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#소비에트 민정감독부
+		id = RED_military_government
+		icon = GFX_focus_generic_military_mission
+		prerequisite = {
+			focus = RED_creative_deconstructivism
+		}
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = RED_federalization
+		}
+		relative_position_id = RED_creative_deconstructivism
+		cost = 4
+		completion_reward = {
+		}
+	}
+	focus = {
+		#세계 속의 붉은겨울
+		id = RED_redwinter_in_world
+		icon = GFX_focus_GER_hegemony_over_europe
+		prerequisite = {
+			focus = RED_military_government
+			focus = RED_federalization
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_military_government
+		cost = 4
+		completion_reward = {
+		}
+	}
+
+	focus = { #노동조합 강화 by sov
+		id = RED_strengthen_the_trade_unions_by_sov
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = RED_rebuild_party focus = RED_redwinter_in_world }
+		x = 4
+		y = 1
+		relative_position_id = RED_rebuild_party
+		mutually_exclusive = { focus = RED_regional_development focus = RED_for_the_common_good }
+		cost = 10
+
+		available = {
+
+		}
+		                
+
+		completion_reward = {
+			add_political_power = 70
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.05
+			}
+			add_ideas = SOV_strong_trade_unions_idea
+			
+		}
+	}
+
+	focus = {
+		id = RED_the_peoples_revolution
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = RED_strengthen_the_trade_unions_by_sov }
+		x = 0
+		y = 1
+		relative_position_id = RED_strengthen_the_trade_unions_by_sov
+		cost = 10
+		available = {
+		}
+		                
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_ideas = SOV_the_peoples_revolution_idea
+		}
+	}
+
+	focus = { #최고 소비에트
+		id = RED_the_supreme_soviet
+		icon = GFX_focus_SOV_the_supreme_soviet
+		prerequisite = { focus = RED_the_peoples_revolution }
+		x = 0
+		y = 1
+		relative_position_id = RED_the_peoples_revolution
+		cost = 10
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_country_leader_role = {
+				character = "RED_supreme_soviet"
+				country_leader = {
+					ideology = marxism
+					traits = { strong_party_discipline }
+					expire = "1965.3.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
+	}
+	
+	focus = { #공익 추구
+		id = RED_for_the_common_good
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = RED_redwinter_in_world}
+		x = 1
+		y = 1
+		relative_position_id = RED_redwinter_in_world
+		cost = 10
+
+		mutually_exclusive = { focus = RED_strengthen_the_trade_unions_by_sov focus = RED_regional_development }
+
+		available = {
+			is_faction_leader = yes
+		}
+		                
+		search_filters = {}
+
+		completion_reward = {
+			every_subject_country = {
+				country_event = { id = NSB_soviet_for_the_common_good.1 hours = 4 }
+
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					add_ideas = SOV_for_the_common_good_subjects
+					add_autonomy_score = {
+						value = -100
+						localization = SOV_for_the_common_good
+					}
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_subject = no
+				}
+				country_event = { id = NSB_soviet_for_the_common_good.1 hours = 4 }
+
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					add_ideas = SOV_for_the_common_good_allies
+
+					if = {
+						limit = {
+							has_dlc = "Death or Dishonor"
+						}
+						add_relation_modifier = {
+							target = ROOT
+							modifier = SOV_for_the_common_good_relation
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RED_victory_over_devastation #SOV_get_rich_develop_the_country
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = RED_for_the_common_good }
+		x = 0
+		y = 1
+		relative_position_id = RED_for_the_common_good
+		cost = 10
+		available = {
+
+		}
+
+		completion_reward = {
+			set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0.15 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0.1 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_industry_repair_factor = 0.1 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_consumer_goods_factor = -0.02 } #Victory Over Devastation
+			custom_effect_tooltip = SOV_victory_over_devastation_tt
+
+			#Industrial Relocation duration halved
+			divide_variable = { SOV_industrial_relocation_days = 2 }
+			custom_effect_tooltip = SOV_victory_over_devastation_industrial_relocation_tt
+		}
+	}
+
+	focus = {
+		id = RED_socialist_humanism
+		icon = GFX_SOV_socialist_humanism_ccp_2d_sov_compatibility #GFX_focus_generic_socialist_science
+		prerequisite = { focus = RED_victory_over_devastation }
+		x = 0
+		y = 1
+		relative_position_id = RED_victory_over_devastation
+		cost = 10
+		available = {
+
+		}
+		                
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.1
+			add_research_slot = 1
+
+			if = {
+				limit = {
+					has_idea = SOV_politicized_military
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_humanism
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_politicized_military_keep
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_keep
+					add_idea = SOV_politicized_military_keep_humanism
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_politicized_military_swap
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_swap
+					add_idea = SOV_politicized_military_swap_humanism
+				}
+			}
+		}
+	}
+	focus = { #지역 개발
+		id = RED_regional_development
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = RED_rebuild_party focus = RED_redwinter_in_world }
+		x = -1
+		y = 1
+		relative_position_id = RED_rebuild_party
+		mutually_exclusive = { focus = RED_strengthen_the_trade_unions_by_sov 
+		focus = RED_for_the_common_good }
+		cost = 10
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 150 
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 202 # Kiev
+						state = 229 # Azerbaijan
+						state = 230 # Armenia
+						state = 231 # Georgia
+						state = 405 # tashkent
+						state = 408 # Vladivostok
+						state = 584 # Askabad
+						state = 586 # Alma Ata
+						state = 654 # Oyrot
+						state = 732 # Pamir
+						state = 743 # Dushanbe
+						state = 206 # minsk
+					}
+					free_building_slots = {
+					    building = industrial_complex 
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = RED_autonomous_soviet_republics
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RED_regional_development }
+		x = 0
+		y = 1
+		relative_position_id = RED_regional_development
+		
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_autonomous_soviet_republics_tt
+			# Georgia
+			IF = {
+				limit = { 231 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = GEO
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				GEO = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+				}
+			}
+			# Armenia
+			IF = {
+				limit = { 230 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = ARM
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				ARM = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+				}
+			}
+
+			# Axerbaijan
+			IF = {
+				limit = { 229 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = AZR
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				AZR = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+				}
+			}
+
+			# Belarus
+			IF = {
+				limit = { 206 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = BLR
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				BLR = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = RED_international_union_of_soviet_republics
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		prerequisite = { focus = RED_autonomous_soviet_republics }
+		x = 0
+		y = 1
+		relative_position_id = RED_autonomous_soviet_republics 
+		
+		cost = 10
+
+		available = {
+
+		}
+		
+
+		completion_reward = {
+			add_to_variable = { SOV_factionalism_overlord_trade_cost_factor = -0.10 } 
+			add_to_variable = { SOV_factionalism_popularity_stability_cost_factor = 0.10 } 
+			custom_effect_tooltip = SOV_international_union_of_soviet_republics_tt 
+			every_country = {
+				limit = { is_subject_of = ROOT }
+				add_ideas = { SOV_puppet_international_of_soviet_republics_idea }
+				custom_effect_tooltip = SOV_international_union_of_soviet_republics_puppet_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { is_capital = yes }
+						add_building_construction = {
+						    type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+						    type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+
 	focus = {
 		#대외 정책
 		id = RED_foreign_policy
@@ -10948,16 +11534,6 @@ focus_tree = {
 					level = 1
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = RED
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
 			add_to_variable = {
 				RED_prepare_of_arms = 1
 			}
@@ -11138,20 +11714,12 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
 				BA_increase_state_category_by_one_level = yes
 			}
 			916 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 				}
 				BA_increase_state_category_by_one_level = yes

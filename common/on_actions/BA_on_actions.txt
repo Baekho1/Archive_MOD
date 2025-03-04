@@ -28,6 +28,22 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
+			SHE = {
+				SHE_Arona = {
+					set_character_name = SHE_Arona_start
+					set_portraits = {
+						civilian={
+							large="GFX_portrait_she_Arona_start_large"
+						}
+						army={
+							large= "GFX_portrait_she_Arona_start_large"
+							small="gfx/interface/advisors/SHE/SHE_Arona.dds"
+						}
+					}
+				}
+			}
+		}
+		effect = {
 			#GEM iron concessions
 			GEM = {
 				give_resource_rights = { receiver = GEH state = 51 }

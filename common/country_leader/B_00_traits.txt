@@ -613,6 +613,26 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	SHE_datastream_0 = {#디버프
+		random = no
+		conscription_factor = -0.35
+		consumer_goods_factor = 0.60
+	}
+	SHE_datastream_1 = {#디버프
+		random = no
+		conscription_factor = -0.25
+		consumer_goods_factor = 0.45
+	}
+	SHE_datastream_2 = {#디버프
+		random = no
+		conscription_factor = -0.15
+		consumer_goods_factor = 0.30
+	}
+	SHE_datastream_3 = {#디버프
+		random = no
+		conscription_factor = -0.05
+		consumer_goods_factor = 0.15
+	}
 	SHE_integrated_system = {#통합 프토로콜
 		random = no
         stability_factor = 0.10

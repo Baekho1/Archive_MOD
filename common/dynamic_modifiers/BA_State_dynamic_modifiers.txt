@@ -253,6 +253,30 @@ FRA_algeria_resistance = {
 	ground_attack_factor = -0.75
 	local_org_regain = -0.5
 }
+RED_stalinist_partisan = { #스탈린주의 파르티잔
+	icon = GFX_modifiers_SOV_invaders_must_die
+	resistance_growth = 0.50
+}
+RED_stalinist_sentiments = { #스탈린주의 정서
+	icon = GFX_modifiers_generic_resistance
+	state_resources_factor = -0.25
+	recruitable_population_factor = -0.75
+	local_factories = -0.75
+	compliance_growth = -0.50
+	disable_strategic_redeployment = yes
+}
+RED_stalinist_partisan_1 = { #스탈린주의 파르티잔
+	icon = GFX_modifiers_SOV_invaders_must_die
+	resistance_growth = 0.25
+}
+RED_stalinist_sentiments_1 = { #스탈린주의 정서
+	icon = GFX_modifiers_generic_resistance
+	state_resources_factor = -0.15
+	recruitable_population_factor = -0.5
+	local_factories = -0.5
+	compliance_growth = -0.25
+	disable_strategic_redeployment = yes
+}
 RED_local_industralisation = {
 	icon = GFX_modifiers_ETH_state_development
 	local_building_slots = 1
@@ -260,7 +284,7 @@ RED_local_industralisation = {
 }
 RED_social_reform_modifier = {
 	icon = GFX_modifiers_GER_socialist_movement
-	compliance_growth = 0.03
+	compliance_growth = 0.05
 	resistance_growth = -0.15
 }
 RED_bunker_modifier = {

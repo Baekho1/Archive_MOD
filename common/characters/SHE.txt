@@ -61,22 +61,22 @@ characters={
 		}
 		country_leader={
 			ideology=aicontrol
-			traits={ }
+			traits={ SHE_datastream_0 }
 			expire="1965.1.1.1"
 		}
 		country_leader={
 			ideology=socialism
-			traits={ }
+			traits={ SHE_datastream_0 }
 			expire="1965.1.1.1"
 		}
 		country_leader={
 			ideology=leninism
-			traits={ }
+			traits={ SHE_datastream_0 }
 			expire="1965.1.1.1"
 		}
 		country_leader={
 			ideology=fascism_aicontrol
-			traits={ }
+			traits={ SHE_datastream_0 }
 			expire="1965.1.1.1"
 		}
 		advisor = {

@@ -5089,6 +5089,7 @@ news_event = { # 린 탄핵
     }
 }
 
+
 news_event = { # 카야 신임 총학생회장
     id = BA_news.133
     title = BA_news.133.t
@@ -5148,6 +5149,43 @@ news_event = { # 데카르트 시위!
 			      tag = COU 
 			      tag = SHE 
 			   }
+			}
+		}
+    }
+}
+
+news_event = { # 이념전쟁의 끝
+    id = BA_news.135
+    title = BA_news.135.t
+    desc = BA_news.135.d
+    picture = GFX_news_event_soviet_soldiers_ruins
+
+    major = yes
+    is_triggered_only = yes
+
+    option = { # 범부
+        name = BA_news.135.a
+		trigger = {
+			NOT = {
+				is_ally_with = RED
+			}
+			has_government = communism
+		}
+    }
+    option = { # 범부
+        name = BA_news.135.b
+		trigger = {
+			is_ally_with = RED
+		}
+    }
+    option = { # 범부
+        name = BA_news.135.c
+		trigger = {
+			NOT = {
+				is_ally_with = RED
+			}
+			NOT = {
+				has_government = communism
 			}
 		}
     }

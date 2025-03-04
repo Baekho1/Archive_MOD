@@ -10,6 +10,118 @@ add_namespace = RED_generic
 add_namespace = RED_tro_event
 add_namespace = RED_racing_sov
 add_namespace = RED_ordinary_event
+add_namespace = RED_ending_event
+
+
+
+country_event = { #승리의 날
+	id = RED_ending_event.1
+	title = RED_ending_event.1.t
+	desc = RED_ending_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ending_event.1.a
+		add_stability = 0.05
+		hidden_effect = {
+			news_event = {
+				id  = BA_news.134
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #좌익반대파의 귀환
+	id = RED_ending_event.2
+	title = RED_ending_event.2.t
+	desc = RED_ending_event.2.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ending_event.2.a
+		every_owned_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			add_resistance = 5
+			custom_effect_tooltip = RED_ending_event.2_tt
+			add_dynamic_modifier = {
+				modifier = RED_stalinist_sentiments
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_ending_event.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #스탈린주의 저항
+	id = RED_ending_event.3
+	title = RED_ending_event.3.t
+	desc = RED_ending_event.3.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ending_event.3.a
+		every_owned_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			add_compliance = -5
+			custom_effect_tooltip = RED_ending_event.3_tt
+			add_dynamic_modifier = {
+				modifier = RED_stalinist_partisan
+			}
+		}
+	}
+}
+country_event = { #혁명 재판
+	id = RED_ending_event.4
+	title = RED_ending_event.4.t
+	desc = RED_ending_event.4.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ending_event.4.a
+		add_stability = 0.05
+	}
+}
+country_event = { #혁명 재판 - 1, 주요 인물들
+	id = RED_ending_event.5
+	title = RED_ending_event.5.t
+	desc = RED_ending_event.5.d
+	is_triggered_only = yes
+	option = {
+		name = RED_ending_event.5.a
+		SOV = {
+			retire_character = SOV_iosif_stalin
+			retire_character = SOV_lazar_kaganovich
+			retire_character = SOV_vyacheslav_molotov
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SOV
+			}
+			add_compliance = 1
+		}
+	}
+}
+country_event = { #혁명 재판 - 2, NKVD
+	id = RED_ending_event.6
+	title = RED_ending_event.6.t
+	desc = RED_ending_event.6.d
+	is_triggered_only = yes
+	option = { #승인
+		name = RED_ending_event.6.a
+	}
+	option = { #일부 기각
+		name = RED_ending_event.6.b
+		add_stability = -0.05
+		custom_effect_tooltip = RED_ending_event.6_tt
+		add_timed_idea = {
+			idea = RED_NKVD
+			days = 180
+		}
+	}
+}
 
 country_event = { #일상 이벤트 1, 수염을 잃어버린 체리노
 	id = RED_ordinary_event.1

@@ -1,6 +1,6 @@
 focus_tree = {
 	id = COU_focus_tree
-	continuous_focus_position = { x = 1800 y = 200 } 
+	continuous_focus_position = { x = 1800 y = 5000 } 
 	shared_focus = BA_new_world_technology
 	country = {
 		factor = 0
@@ -26,14 +26,46 @@ focus_tree = {
 #                 ---`-' |  ,     .-./           ---`-'          |   | ,'             \   \  /  `--`----'      `--'---'   
 #                         `--`---'                               `----'                `----'                             
 #                                                                                                                         
+	
+	
+	focus = { #시작 중점 완료 불가
+		id = COU_establishment_of_emergency_measures_committee_NOT
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 0
+		cost = 5
+		allow_branch = {
+			NOT = { has_country_flag = MISSINGGSCP }
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_country_flag = MISSINGGSCP }
+			}
+		}
+		text_icon = NORDIC_focus_style
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+
+		cancelable = no
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
 
 	focus = { #비상대책위원회 수립
 		id = COU_establishment_of_emergency_measures_committee
 		icon = GFX_focus_COU_establishment_of_emergency_measures_committee
-		x = 32
+		mutually_exclusive = { focus = COU_focus_in_the_darkness }
+		x = 50
 		y = 0
 		cost = 5
-		dynamic = yes
 		available = {
 		}
 		text_icon = NORDIC_focus_style
@@ -48,83 +80,36 @@ focus_tree = {
 
 		cancelable = no
 		completion_reward = {
-			if = {
-				limit = { has_country_flag = MISSINGGSCP }
-				add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
-				add_political_power = 100
-				add_stability = 0.1
+			add_dynamic_modifier = { modifier = COU_emergency_measures_committee }
+			add_political_power = 100
+			add_stability = 0.1
+			effect_tooltip = {
 				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
+					ideology = democratic
+					popularity = -0.50
 				}
+			}
+			hidden_effect = {
 				add_popularity = {
 					ideology = fascism
-					popularity = 0.1
+					popularity = 0.40
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.35
 				}
 				add_popularity = {
 					ideology = communism
-					popularity = 0.1
+					popularity = 0.20
 				}
 			}
-			else = {
-				add_political_power = 100
-				add_stability = 0.1
+			swap_ideas = {
+				remove_idea = COU_dutch_collaboraters
+				add_idea = COU_dutch_collaboraters_no_kaya_debuff
 			}
-		}
-	}
-	
-	focus = { #인권보장실 설립
-		id = COU_establishment_of_human_rights_committee
-		icon = GFX_focus_COU_establish_humans
-		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = 0
-		y = 1
-		relative_position_id = COU_establishment_of_emergency_measures_committee
-		cost = 5
-		available = {
-			NOT = { has_completed_focus = COU_normalization_of_administration }
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-		    remove_ideas = COU_empty_of_monarchs
-			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
-			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
-			custom_effect_tooltip = available_political_advisor
-	        show_ideas_tooltip = COU_jan_baars
-		}
-		ai_will_do = {
-			base = 100
-		}
-	}
-	
-	focus = { #SRT 처우, 카야루트시 따로 처리할거임 
-		id = COU_focus_reestablish_srt
-		icon = GFX_SRT_focus_karbarlog
-		prerequisite = { focus = COU_establishment_of_human_rights_committee }
-		x = 0
-		y = 2
-		relative_position_id = COU_establishment_of_emergency_measures_committee
-		cost = 8
-		available = {
-			NOT = { has_completed_focus = COU_focus_in_the_darkness }
-			has_country_flag = COU_flag_fucking_srt
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-		     clr_country_flag = SRT_BANNED
-			 custom_effect_tooltip = COU_tooltip_one_more_chance
-			 country_event = COU_event.28
-		}
-		ai_will_do = {
-			base = 100
+			hidden_effect = {
+				country_event = { id = COU_start_event.2 days = 8 }
+			}
 		}
 	}
 
@@ -132,7 +117,7 @@ focus_tree = {
 		id = COU_crackdown_on_anti_kivotos_activities
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = -3
+		x = 3
 		y = 1
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -148,12 +133,8 @@ focus_tree = {
 			custom_effect_tooltip = COU_crackdown_on_anti_kivotos_activities_tt
 			add_to_variable = { COU_emergency_measures_committee_political_power_gain = 0.05 }
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
+				ideology = democratic
+				popularity = 0.10
 			}
 		}
 	}
@@ -162,7 +143,7 @@ focus_tree = {
 		id = COU_question_about_acting_authority
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = COU_crackdown_on_anti_kivotos_activities }
-		x = -4
+		x = 4
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -175,9 +156,11 @@ focus_tree = {
 					
 		}
 		completion_reward = {
+			custom_effect_tooltip = COU_establishment_of_human_rights_committee_tt
+			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.10 }
 			add_political_power = 120
 			add_popularity = {
-				ideology = fascism
+				ideology = democratic
 				popularity = 0.10
 			}
 		}
@@ -188,7 +171,7 @@ focus_tree = {
 		id = COU_strengthening_of_valkyrie_authority
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = COU_crackdown_on_anti_kivotos_activities }
-		x = -2
+		x = 2
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -202,52 +185,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = {
-				ideology = neutrality
+				ideology = democratic
 				popularity = 0.10
 			}
 			COU_cut_tower_down_effect = yes
-		}
-	}
-
-	focus = {
-		id = COU_establishment_of_federal_industrial_committee
-		icon = GFX_focus_COU_aoi_with_companys
-		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
-		x = -3
-		y = 3
-		relative_position_id = COU_establishment_of_emergency_measures_committee
-		cost = 5
-		available = {
-			OR = {
-				NOT = { has_completed_focus = COU_normalization_of_administration }
-				custom_trigger_tooltip = {
-					tooltip = COU_cut_tower_has_tt
-					NOT = {
-						has_idea = COU_cut_tower
-						has_idea = COU_cut_tower_0
-						has_idea = COU_cut_tower_1
-						has_idea = COU_cut_tower_2
-						has_idea = COU_cut_tower_3
-						has_idea = COU_cut_tower_4
-						has_idea = COU_cut_tower_5
-						has_idea = COU_cut_tower_6
-						has_idea = COU_cut_tower_7
-					}
-				}
-			}
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			#custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
-			#add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
-			country_event = COU_event.10
-			#custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
-			#add_one_random_civilian_factory = yes
-			#set_country_flag = COU_yes_sanub
 		}
 	}
 
@@ -255,7 +196,7 @@ focus_tree = {
 		id = COU_expedited_administrative_processing
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = COU_establishment_of_emergency_measures_committee }
-		x = 3
+		x = -3
 		y = 1
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -271,12 +212,8 @@ focus_tree = {
 			custom_effect_tooltip = COU_expedited_administrative_processing_tt
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = 0.05 }
 			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
 				ideology = communism
-				popularity = 0.05
+				popularity = 0.10
 			}
 			COU_cut_tower_down_effect = yes
 		}
@@ -286,7 +223,7 @@ focus_tree = {
 		id = COU_opening_of_local_culture
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = COU_expedited_administrative_processing }
-		x = 4
+		x = -4
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -303,7 +240,7 @@ focus_tree = {
 			add_to_variable = { COU_emergency_measures_committee_stability_factor = -0.05 }
 			add_to_variable = { COU_emergency_measures_committee_global_building_slots_factor = 0.05 }
 			add_popularity = {
-				ideology = democratic
+				ideology = communism
 				popularity = 0.10
 			}
 		}
@@ -313,7 +250,7 @@ focus_tree = {
 		id = COU_expansion_of_autonomy
 		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = COU_expedited_administrative_processing }
-		x = 2
+		x = -2
 		y = 2
 		relative_position_id = COU_establishment_of_emergency_measures_committee
 		cost = 5
@@ -338,34 +275,16 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = COU_reduction_of_administrative_committee_authority
-		icon = {
-			value = GFX_focus_COU_kaya_with_generals
-			trigger = {
-				OR = {
-					NOT = { has_completed_focus = COU_normalization_of_administration }
-					has_government = fascism
-					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
-				}
-			}
-		}
-		icon = {
-			value = GFX_focus_generic_army_doctrines_2
-			trigger = {
-				has_completed_focus = COU_normalization_of_administration
-				NOT = {
-					has_government = fascism
-					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
-				}
-			}
-		}
-		prerequisite = { focus = COU_strengthening_of_valkyrie_authority focus = COU_question_about_acting_authority focus = COU_opening_of_local_culture focus = COU_expansion_of_autonomy }
-		x = 3
-		y = 3
-		relative_position_id = COU_establishment_of_emergency_measures_committee
-		cost = 5
+	focus = { #SRT 처우, 카야루트시 따로 처리할거임 
+		id = COU_focus_reestablish_srt
+		icon = GFX_SRT_focus_karbarlog
+		prerequisite = { focus = COU_question_about_acting_authority focus = COU_strengthening_of_valkyrie_authority focus = COU_expansion_of_autonomy focus = COU_opening_of_local_culture }
+		x = -1
+		y = 1
+		relative_position_id = COU_question_about_acting_authority
+		cost = 8
 		available = {
+			has_country_flag = COU_flag_fucking_srt
 			OR = {
 				NOT = { has_completed_focus = COU_normalization_of_administration }
 				custom_trigger_tooltip = {
@@ -390,11 +309,12 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			country_event = COU_event.11
-			if = {
-				limit = { NOT = { has_completed_focus = COU_normalization_of_administration } }
-				set_country_flag = COU_reduction_of_administrative_committee_authority_flag
-			}
+		     clr_country_flag = SRT_BANNED
+			 custom_effect_tooltip = COU_tooltip_one_more_chance
+			 country_event = COU_event.28
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 
@@ -432,7 +352,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = COU_infrastructure_restoration }
 		mutually_exclusive = { focus = COU_union_negotiation }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = COU_infrastructure_restoration
 		cost = 5
@@ -451,11 +371,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_popularity = {
 				ideology = democratic
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = -0.05
+				popularity = 0.10
 			}
 		}
 	}
@@ -465,7 +381,7 @@ focus_tree = {
 		icon = GFX_focus_generic_communist
 		prerequisite = { focus = COU_infrastructure_restoration }
 		mutually_exclusive = { focus = COU_vertical_integration }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = COU_infrastructure_restoration
 		cost = 5
@@ -481,12 +397,8 @@ focus_tree = {
 			custom_effect_tooltip = COU_union_negotiation_tt
 			add_to_variable = { COU_emergency_measures_committee_factory_max_efficiency_factor = 0.10 }
 			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
+				ideology = communism
+				popularity = 0.10
 			}
 		}
 	}
@@ -501,10 +413,8 @@ focus_tree = {
 		cost = 5
 		available = {
 			OR = {
-				democratic > 0.35
-				neutrality > 0.35
-				fascism > 0.35
-				communism > 0.35
+				democratic > 0.50
+				communism > 0.50
 			}
 		}
 		search_filters = {
@@ -513,24 +423,11 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			if = { limit = { democratic > 0.35 }
+			if = { limit = { democratic > 0.50 }
 				remove_country_leader_trait = COU_power_struggle
 				add_political_power = 60
 			}
-			else_if = { limit = { neutrality > 0.35 }
-				remove_country_leader_trait = COU_power_struggle
-				set_politics = {	
-					ruling_party = neutrality
-					last_election = "1936.1.1"
-					election_frequency = 48
-					elections_allowed = no
-				}
-			}
-			else_if = { limit = { fascism > 0.35 }
-				add_stability = -0.05
-				custom_effect_tooltip = COU_normalization_of_administration_tt
-			}
-			else_if = { limit = { communism > 0.35 }
+			else_if = { limit = { communism > 0.50 }
 				remove_country_leader_trait = COU_power_struggle
 				set_politics = {
 					ruling_party = communism
@@ -538,27 +435,34 @@ focus_tree = {
 					election_frequency = 48
 					elections_allowed = no
 				}
+				if = {
+					limit = { has_character = COU_MOMOKA }
+					COU_MOMOKA = {
+						add_country_leader_trait = COU_new_dictator
+					}
+				}
 				news_event = { id = BA_news.86 hours = 8 }
 			}
+			remove_ideas = COU_dutch_collaboraters_no_kaya_debuff
 		}
 	}
-
-#                                                                                                                
-#                                                                                                                
-#                                                                           ___                                  
-#    ,---,     ,--,     .--.,                                             ,--.'|_    ,--,                        
-#  ,---.'|   ,--.'|   ,--.'  \         ,--,  __  ,-.                      |  | :,' ,--.'|    ,---.        ,---,  
-#  |   | :   |  |,    |  | /\/       ,'_ /|,' ,'/ /|                      :  : ' : |  |,    '   ,'\   ,-+-. /  | 
-#  :   : :   `--'_    :  : :    .--. |  | :'  | |' | ,---.     ,--.--.  .;__,'  /  `--'_   /   /   | ,--.'|'   | 
-#  :     |,-.,' ,'|   :  | |-,,'_ /| :  . ||  |   ,'/     \   /       \ |  |   |   ,' ,'| .   ; ,. :|   |  ,"' | 
-#  |   : '  |'  | |   |  : :/||  ' | |  . .'  :  / /    / '  .--.  .-. |:__,'| :   '  | | '   | |: :|   | /  | | 
-#  |   |  / :|  | :   |  |  .'|  | ' |  | ||  | ' .    ' /    \__\/: . .  '  : |__ |  | : '   | .; :|   | |  | | 
-#  '   : |: |'  : |__ '  : '  :  | : ;  ; |;  : | '   ; :__   ," .--.; |  |  | '.'|'  : |_|   :    ||   | |  |/  
-#  |   | '/ :|  | '.'||  | |  '  :  `--'   \  , ; '   | '.'| /  /  ,.  |  ;  :    ;|  | '.'\   \  / |   | |--'   
-#  |   :    |;  :    ;|  : \  :  ,      .-./---'  |   :    :;  :   .'   \ |  ,   / ;  :    ;`----'  |   |/       
-#  /    \  / |  ,   / |  |,'   `--`----'           \   \  / |  ,     .-./  ---`-'  |  ,   /         '---'        
-#  `-'----'   ---`-'  `--'                          `----'   `--`---'               ---`-'                       
-#                                                                                                                
+	
+#                                                                                                                     
+#         ,--.                                                                                                        
+#     ,--/  /|                                          ,-.----.                             ___                      
+#  ,---,': / '                                          \    /  \                          ,--.'|_                    
+#  :   : '/ /                                           ;   :    \   ,---.           ,--,  |  | :,'                   
+#  |   '   ,                                            |   | .\ :  '   ,'\        ,'_ /|  :  : ' :                   
+#  '   |  /     ,--.--.        .--,   ,--.--.           .   : |: | /   /   |  .--. |  | :.;__,'  /     ,---.          
+#  |   ;  ;    /       \     /_ ./|  /       \          |   |  \ :.   ; ,. :,'_ /| :  . ||  |   |     /     \         
+#  :   '   \  .--.  .-. | , ' , ' : .--.  .-. |         |   : .  /'   | |: :|  ' | |  . .:__,'| :    /    /  |        
+#  |   |    '  \__\/: . ./___/ \: |  \__\/: . .         ;   | |  \'   | .; :|  | ' |  | |  '  : |__ .    ' / |        
+#  '   : |.  \ ," .--.; | .  \  ' |  ," .--.; |         |   | ;\  \   :    |:  | : ;  ; |  |  | '.'|'   ;   /|        
+#  |   | '_\.'/  /  ,.  |  \  ;   : /  /  ,.  |         :   ' | \.'\   \  / '  :  `--'   \ ;  :    ;'   |  / |        
+#  '   : |   ;  :   .'   \  \  \  ;;  :   .'   \        :   : :-'   `----'  :  ,      .-./ |  ,   / |   :    |        
+#  ;   |,'   |  ,     .-./   :  \  \  ,     .-./        |   |.'              `--`----'      ---`-'   \   \  /         
+#  '---'      `--`---'        \  ' ;`--`---'            `---'                                         `----'          
+#                              `--`                                                                                   
     #####
 	##카야 루트
 	#어둠 속에서 도사리며
@@ -566,41 +470,15 @@ focus_tree = {
 		id = COU_focus_in_the_darkness
 		icon = GFX_COU_in_the_darkness
 		#prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_conservative_defenseism focus = COU_establishment_of_autonomous_system focus = COU_stabilization_of_the_student_council }
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = COU_autonomous_legislation }
-				NOT = { has_completed_focus = COU_student_council_amendment }
-				has_country_flag = UNLOCK_KAYA_CONTENTS
-			}
-		}
-		offset = {
-			x = 25
-			y = -1
-			trigger = {
-				NOT = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-			}
-		}
-		x = 0
-		y = 2
-		relative_position_id = COU_normalization_of_administration
-		cost = 0
-		available = { always = no }
+		x = 80
+		y = 0
+		mutually_exclusive = { focus = COU_establishment_of_emergency_measures_committee }
+		cost = 2
 		bypass = { has_government = fascism }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = COU_tooltip_kaya_started
+			country_event = { id = COU_event.7 hours = 4 }
 		}
 	}
 	
@@ -1004,193 +882,35 @@ focus_tree = {
 			base = 100
 		}
     }
-    
+
+#                                                                                                          
+#                                                                                                          
+#     ,---,                                  ,-.----.                             ___                      
+#    '  .' \                  ,--,           \    /  \                          ,--.'|_                    
+#   /  ;    '.       ,---.  ,--.'|           ;   :    \   ,---.           ,--,  |  | :,'                   
+#  :  :       \     '   ,'\ |  |,            |   | .\ :  '   ,'\        ,'_ /|  :  : ' :                   
+#  :  |   /\   \   /   /   |`--'_            .   : |: | /   /   |  .--. |  | :.;__,'  /     ,---.          
+#  |  :  ' ;.   : .   ; ,. :,' ,'|           |   |  \ :.   ; ,. :,'_ /| :  . ||  |   |     /     \         
+#  |  |  ;/  \   \'   | |: :'  | |           |   : .  /'   | |: :|  ' | |  . .:__,'| :    /    /  |        
+#  '  :  | \  \ ,''   | .; :|  | :           ;   | |  \'   | .; :|  | ' |  | |  '  : |__ .    ' / |        
+#  |  |  '  '--'  |   :    |'  : |__         |   | ;\  \   :    |:  | : ;  ; |  |  | '.'|'   ;   /|        
+#  |  :  :         \   \  / |  | '.'|        :   ' | \.'\   \  / '  :  `--'   \ ;  :    ;'   |  / |        
+#  |  | ,'          `----'  ;  :    ;        :   : :-'   `----'  :  ,      .-./ |  ,   / |   :    |        
+#  `--''                    |  ,   /         |   |.'              `--`----'      ---`-'   \   \  /         
+#                            ---`-'          `---'                                         `----'          
+#                                                                                                          
+
+	#아오이 루트는 없어. 그건 모두가 아는 진실이야.
 	
-	#######
-
-	focus = { #총학생회의 안정
-		id = COU_stabilization_of_the_student_council
-		icon = GFX_focus_ARG_strengthening_the_concordancia
-		prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_establishment_of_autonomous_system focus = COU_conservative_defenseism }
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = COU_impeachment_of_chief_executive }
-				NOT = { has_completed_focus = COU_autonomous_legislation }
-				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
-			}
-		}
-		offset = {
-			x = -7
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_student_council_amendment
-				}
-			}
-		}
-		x = 7
-		y = 1
-		relative_position_id = COU_normalization_of_administration
-		cost = 5
-		available = {
-			is_subject = no
-			democratic > 0.40
-		}
-		bypass = {
-			has_government = democratic
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			add_political_power = 30
-			set_politics = {
-				ruling_party = democratic
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.10
-			}
-		}
-	}
-
-	focus = { #자치 제도 확립
-		id = COU_establishment_of_autonomous_system
-		icon = GFX_focus_SWE_urbanization
-		prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_focus_in_the_darkness focus = COU_stabilization_of_the_student_council focus = COU_conservative_defenseism }
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = COU_student_council_amendment }
-				NOT = { has_completed_focus = COU_impeachment_of_chief_executive }
-				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
-			}
-		}
-		offset = {
-			x = 7
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_autonomous_legislation
-				}
-			}
-		}
-		x = -7
-		y = 1
-		relative_position_id = COU_normalization_of_administration
-		cost = 10
-		available = {
-			is_subject = no
-			communism > 0.40
-		}
-		bypass = {
-			has_government = communism
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			set_politics = {
-				ruling_party = communism
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-		}
-	}
-
-	focus = { #보수적 방어주의
-		id = COU_conservative_defenseism
-		icon = GFX_focus_BEL_dietsland
-		prerequisite = { focus = COU_normalization_of_administration }
-		mutually_exclusive = { focus = COU_establishment_of_autonomous_system focus = COU_focus_in_the_darkness focus = COU_stabilization_of_the_student_council }
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = COU_autonomous_legislation }
-				NOT = { has_completed_focus = COU_student_council_amendment }
-				NOT = { has_country_flag = UNLOCK_KAYA_CONTENTS }
-			}
-		}
-		offset = {
-			x = -16
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_impeachment_of_chief_executive
-				}
-			}
-		}
-		x = 16
-		y = 1
-		relative_position_id = COU_normalization_of_administration
-		cost = 5
-		available = {
-			is_subject = no
-			neutrality > 0.40
-		}
-		bypass = {
-			has_government = neutrality
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		completion_reward = {
-			add_political_power = 30
-			set_politics = {
-				ruling_party = neutrality
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.10
-			}
-		}
-	}
-
 	focus = { #권한대행 탄핵
 		id = COU_impeachment_of_chief_executive
 		icon = GFX_COU_choice_AOI
-		prerequisite = { focus = COU_conservative_defenseism }
+
+		allow_branch = {
+			always = no
+		}
 		x = 0
 		y = 1
-		relative_position_id = COU_conservative_defenseism
 		cost = 5
 		available = {
 			is_subject = no
@@ -1219,13 +939,55 @@ focus_tree = {
 		}
 	}
 
+#                                                                                                        
+#                                                                                                        
+#  ,-.----.                                ,-.----.                             ___                      
+#  \    /  \    ,--,                       \    /  \                          ,--.'|_                    
+#  ;   :    \ ,--.'|         ,---,         ;   :    \   ,---.           ,--,  |  | :,'                   
+#  |   | .\ : |  |,      ,-+-. /  |        |   | .\ :  '   ,'\        ,'_ /|  :  : ' :                   
+#  .   : |: | `--'_     ,--.'|'   |        .   : |: | /   /   |  .--. |  | :.;__,'  /     ,---.          
+#  |   |  \ : ,' ,'|   |   |  ,"' |        |   |  \ :.   ; ,. :,'_ /| :  . ||  |   |     /     \         
+#  |   : .  / '  | |   |   | /  | |        |   : .  /'   | |: :|  ' | |  . .:__,'| :    /    /  |        
+#  ;   | |  \ |  | :   |   | |  | |        ;   | |  \'   | .; :|  | ' |  | |  '  : |__ .    ' / |        
+#  |   | ;\  \'  : |__ |   | |  |/         |   | ;\  \   :    |:  | : ;  ; |  |  | '.'|'   ;   /|        
+#  :   ' | \.'|  | '.'||   | |--'          :   ' | \.'\   \  / '  :  `--'   \ ;  :    ;'   |  / |        
+#  :   : :-'  ;  :    ;|   |/              :   : :-'   `----'  :  ,      .-./ |  ,   / |   :    |        
+#  |   |.'    |  ,   / '---'               |   |.'              `--`----'      ---`-'   \   \  /         
+#  `---'       ---`-'                      `---'                                         `----'          
+#                                                                                                        
+
 	focus = { #학생회 개정안
 		id = COU_student_council_amendment
 		icon = GFX_COU_choice_RIN
-		prerequisite = { focus = COU_stabilization_of_the_student_council }
-		x = 0
+		prerequisite = { focus = COU_normalization_of_administration }
+		mutually_exclusive = {
+			focus = COU_autonomous_legislation
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = COU_autonomous_legislation }
+			}
+		}
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = COU_student_council_amendment
+			}
+		}
+		x = 7
 		y = 1
-		relative_position_id = COU_stabilization_of_the_student_council
+		relative_position_id = COU_normalization_of_administration
 		cost = 5
 		available = {
 			is_subject = no
@@ -2233,7 +1995,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_employment
 		cost = 5
 		x = -2
-		y = 1
+		y = 2
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		relative_position_id = COU_financial_health
 		prerequisite = {
@@ -2306,10 +2068,35 @@ focus_tree = {
 	focus = { #주권법
 		id = COU_autonomous_legislation
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = COU_establishment_of_autonomous_system }
-		x = 0
+		prerequisite = { focus = COU_normalization_of_administration }
+		mutually_exclusive = {
+			focus = COU_student_council_amendment
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = COU_student_council_amendment }
+			}
+		}
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = COU_autonomous_legislation
+			}
+		}
+		x = -6
 		y = 1
-		relative_position_id = COU_establishment_of_autonomous_system
+		relative_position_id = COU_normalization_of_administration
 		cost = 5
 		available = {
 		}
@@ -2349,8 +2136,8 @@ focus_tree = {
 		icon = GFX_focus_por_workers_of_iberia
 		prerequisite = { focus = COU_autonomous_legislation }
 		x = 0
-		y = 2
-		relative_position_id = COU_establishment_of_autonomous_system
+		y = 1
+		relative_position_id = COU_autonomous_legislation
 		cost = 5
 		available = {
 		}
@@ -2368,7 +2155,7 @@ focus_tree = {
 			}
 			remove_country_leader_role = {
 				character = COU_KAYA
-				ideology = gen_nazism
+				ideology = cou_kaya_dictatorship
 			}
 			remove_advisor_role = {
 				character = COU_KAYA
@@ -2390,22 +2177,9 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
 		mutually_exclusive = { focus = COU_resignation_of_acting_authority }
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_autonomous_legislation
-				}
-			}
-		}
-		x = 0
-		y = 3
-		relative_position_id = COU_establishment_of_autonomous_system
+		x = 1
+		y = 2
+		relative_position_id = COU_autonomous_legislation
 		cost = 5
 		ai_will_do = {
 			factor = 4000
@@ -2429,22 +2203,9 @@ focus_tree = {
 		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = COU_inclusion_of_union_in_administrative_committee }
 		mutually_exclusive = { focus = COU_logistics_control_of_student_council }
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_autonomous_legislation
-				}
-			}
-		}
-		x = -2
-		y = 3
-		relative_position_id = COU_establishment_of_autonomous_system
+		x = -1
+		y = 2
+		relative_position_id = COU_autonomous_legislation
 		cost = 5
 		ai_will_do = {
 			factor = 4000
@@ -4719,37 +4480,21 @@ focus_tree = {
 	focus = { #물류 운송망 복원
 		id = COU_restoration_of_logistics_network
 		icon = GFX_goal_generic_railroad
-		prerequisite = { focus = COU_establishment_of_autonomous_system focus = COU_student_council_amendment }
+		prerequisite = { focus = COU_autonomous_legislation focus = COU_student_council_amendment }
+		x = 6
+		y = 1
 		offset = {
-			x = 1
+			x = -7
 			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				OR = {
-					has_completed_focus = COU_autonomous_legislation
-				}
+				has_completed_focus = COU_student_council_amendment
 			}
 		}
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = COU_student_council_amendment
-					has_completed_focus = COU_impeachment_of_chief_executive
-				}
-			}
-		}
-		x = 4
-		y = 2
-		relative_position_id = COU_establishment_of_autonomous_system
+		relative_position_id = COU_autonomous_legislation
 		cost = 5
 		available = {
 		}
@@ -4890,11 +4635,28 @@ focus_tree = {
 		}
 	}
 
+#                                                                                                                                                       
+#                                                                                                                                                       
+#                                                              ___                                 ,---,.                                               
+#    ,--,                     ,---,                          ,--.'|_                             ,'  .' |                                               
+#  ,--.'|         ,---,     ,---.'|         ,--,             |  | :,'   __  ,-.                ,---.'   |   ,---.                     ,--,              
+#  |  |,      ,-+-. /  |    |   | :       ,'_ /|   .--.--.   :  : ' : ,' ,'/ /|                |   |   .'  '   ,'\                  ,'_ /|   .--.--.    
+#  `--'_     ,--.'|'   |    |   | |  .--. |  | :  /  /    '.;__,'  /  '  | |' |   .--,         :   :  :   /   /   |   ,---.    .--. |  | :  /  /    '   
+#  ,' ,'|   |   |  ,"' |  ,--.__| |,'_ /| :  . | |  :  /`./|  |   |   |  |   ,' /_ ./|         :   |  |-,.   ; ,. :  /     \ ,'_ /| :  . | |  :  /`./   
+#  '  | |   |   | /  | | /   ,'   ||  ' | |  . . |  :  ;_  :__,'| :   '  :  /, ' , ' :         |   :  ;/|'   | |: : /    / ' |  ' | |  . . |  :  ;_     
+#  |  | :   |   | |  | |.   '  /  ||  | ' |  | |  \  \    `. '  : |__ |  | '/___/ \: |         |   |   .''   | .; :.    ' /  |  | ' |  | |  \  \    `.  
+#  '  : |__ |   | |  |/ '   ; |:  |:  | : ;  ; |   `----.   \|  | '.'|;  : | .  \  ' |         '   :  '  |   :    |'   ; :__ :  | : ;  ; |   `----.   \ 
+#  |  | '.'||   | |--'  |   | '/  ''  :  `--'   \ /  /`--'  /;  :    ;|  , ;  \  ;   :         |   |  |   \   \  / '   | '.'|'  :  `--'   \ /  /`--'  / 
+#  ;  :    ;|   |/      |   :    :|:  ,      .-./'--'.     / |  ,   /  ---'    \  \  ;         |   :  \    `----'  |   :    ::  ,      .-./'--'.     /  
+#  |  ,   / '---'        \   \  /   `--`----'      `--'---'   ---`-'            :  \  \        |   | ,'             \   \  /  `--`----'      `--'---'   
+#   ---`-'                `----'                                                 \  ' ;        `----'                `----'                             
+#                                                                                 `--`                                                                  
+
 	#경세제민 [經世濟民] : 세상을 다스리고 백성을 구제함.
 	focus = { #저지대 산업화	
 		id = COU_economy_focus_0
 		icon = GFX_focus_hol_the_zuiderzee_works
-		x = 42
+		x = 7
 		y = 0
 		cost = 5
 		available = {
@@ -4931,6 +4693,30 @@ focus_tree = {
 				}
 			}
 			hidden_effect = { news_event = { id = mtg_news.47 days = 1 } }
+		}
+	}
+
+	focus = {
+		id = COU_establishment_of_federal_industrial_committee
+		icon = GFX_focus_COU_aoi_with_companys
+		x = -3
+		y = 0
+		relative_position_id = COU_economy_focus_0
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+			#custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
+			#add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
+			country_event = COU_event.10
+			#custom_effect_tooltip = COU_tooltip_unlock_dutch_belgium_cons
+			#add_one_random_civilian_factory = yes
+			#set_country_flag = COU_yes_sanub
 		}
 	}
 	focus = { #공공사업 기획	
@@ -5146,6 +4932,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = COU_economy_focus_0
+		}
+		prerequisite = {
+			focus = COU_establishment_of_federal_industrial_committee
 		}
 		available = {
 		}
@@ -5469,6 +5258,9 @@ focus_tree = {
 		prerequisite = {
 			focus = COU_economy_focus_9
 		}
+		prerequisite = {
+			focus = COU_establishment_of_human_rights_committee
+		}
 		available = {
 			34 = {
 				is_controlled_by_ROOT_or_ally = yes
@@ -5645,6 +5437,106 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+			}
+		}
+	}
+
+#                                                                                                                                                
+#                                                                ,-.----.                                                                        
+#    .--.--.            ____              ,--,    ,--,           \    /  \              ,--,              ___                                    
+#   /  /    '.        ,'  , `.          ,--.'|  ,--.'|           |   :    \           ,--.'|     ,--,   ,--.'|_    ,--,                          
+#  |  :  /`. /     ,-+-,.' _ |          |  | :  |  | :           |   |  .\ :   ,---.  |  | :   ,--.'|   |  | :,' ,--.'|                          
+#  ;  |  |--`   ,-+-. ;   , ||          :  : '  :  : '           .   :  |: |  '   ,'\ :  : '   |  |,    :  : ' : |  |,                .--.--.    
+#  |  :  ;_    ,--.'|'   |  || ,--.--.  |  ' |  |  ' |           |   |   \ : /   /   ||  ' |   `--'_  .;__,'  /  `--'_       ,---.   /  /    '   
+#   \  \    `.|   |  ,', |  |,/       \ '  | |  '  | |           |   : .   /.   ; ,. :'  | |   ,' ,'| |  |   |   ,' ,'|     /     \ |  :  /`./   
+#    `----.   \   | /  | |--'.--.  .-. ||  | :  |  | :           ;   | |`-' '   | |: :|  | :   '  | | :__,'| :   '  | |    /    / ' |  :  ;_     
+#    __ \  \  |   : |  | ,    \__\/: . .'  : |__'  : |__         |   | ;    '   | .; :'  : |__ |  | :   '  : |__ |  | :   .    ' /   \  \    `.  
+#   /  /`--'  /   : |  |/     ," .--.; ||  | '.'|  | '.'|        :   ' |    |   :    ||  | '.'|'  : |__ |  | '.'|'  : |__ '   ; :__   `----.   \ 
+#  '--'.     /|   | |`-'     /  /  ,.  |;  :    ;  :    ;        :   : :     \   \  / ;  :    ;|  | '.'|;  :    ;|  | '.'|'   | '.'| /  /`--'  / 
+#    `--'---' |   ;/        ;  :   .'   \  ,   /|  ,   /         |   | :      `----'  |  ,   / ;  :    ;|  ,   / ;  :    ;|   :    :'--'.     /  
+#             '---'         |  ,     .-./---`-'  ---`-'          `---'.|               ---`-'  |  ,   /  ---`-'  |  ,   /  \   \  /   `--'---'   
+#                            `--`---'                              `---`                        ---`-'            ---`-'    `----'               
+#                                                                                                                                                
+
+	focus = { #인권보장실 설립
+		id = COU_establishment_of_human_rights_committee
+		icon = GFX_focus_COU_establish_humans
+		x = 8
+		y = 0
+		relative_position_id = COU_economy_focus_0
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+		    remove_ideas = COU_empty_of_monarchs
+			custom_effect_tooltip = available_political_advisor
+	        show_ideas_tooltip = COU_jan_baars
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	
+#                                                                                                                    
+#                                                                                                                    
+#     ,---,                          ____                       ,---,.                                               
+#    '  .' \                       ,'  , `.                   ,'  .' |                                               
+#   /  ;    '.      __  ,-.     ,-+-,.' _ |                 ,---.'   |   ,---.                     ,--,              
+#  :  :       \   ,' ,'/ /|  ,-+-. ;   , ||                 |   |   .'  '   ,'\                  ,'_ /|   .--.--.    
+#  :  |   /\   \  '  | |' | ,--.'|'   |  ||    .--,         :   :  :   /   /   |   ,---.    .--. |  | :  /  /    '   
+#  |  :  ' ;.   : |  |   ,'|   |  ,', |  |,  /_ ./|         :   |  |-,.   ; ,. :  /     \ ,'_ /| :  . | |  :  /`./   
+#  |  |  ;/  \   \'  :  /  |   | /  | |--', ' , ' :         |   :  ;/|'   | |: : /    / ' |  ' | |  . . |  :  ;_     
+#  '  :  | \  \ ,'|  | '   |   : |  | ,  /___/ \: |         |   |   .''   | .; :.    ' /  |  | ' |  | |  \  \    `.  
+#  |  |  '  '--'  ;  : |   |   : |  |/    .  \  ' |         '   :  '  |   :    |'   ; :__ :  | : ;  ; |   `----.   \ 
+#  |  :  :        |  , ;   |   | |`-'      \  ;   :         |   |  |   \   \  / '   | '.'|'  :  `--'   \ /  /`--'  / 
+#  |  | ,'         ---'    |   ;/           \  \  ;         |   :  \    `----'  |   :    ::  ,      .-./'--'.     /  
+#  `--''                   '---'             :  \  \        |   | ,'             \   \  /  `--`----'      `--'---'   
+#                                             \  ' ;        `----'                `----'                             
+#                                              `--`                                                                  
+	
+	focus = {
+		id = COU_reduction_of_administrative_committee_authority
+		icon = {
+			value = GFX_focus_COU_kaya_with_generals
+			trigger = {
+				OR = {
+					NOT = { has_completed_focus = COU_normalization_of_administration }
+					has_government = fascism
+					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
+				}
+			}
+		}
+		icon = {
+			value = GFX_focus_generic_army_doctrines_2
+			trigger = {
+				has_completed_focus = COU_normalization_of_administration
+				NOT = {
+					has_government = fascism
+					has_country_flag = COU_reduction_of_administrative_committee_authority_flag
+				}
+			}
+		}
+		x = 14
+		y = 0
+		relative_position_id = COU_economy_focus_0
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+			country_event = COU_event.11
+			if = {
+				limit = { NOT = { has_completed_focus = COU_normalization_of_administration } }
+				set_country_flag = COU_reduction_of_administrative_committee_authority_flag
 			}
 		}
 	}

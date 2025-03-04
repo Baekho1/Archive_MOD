@@ -1026,7 +1026,29 @@ ideas = {
                 stability_factor = -0.25
                 generate_wargoal_tension = 0.40
             }
+        }
 
+        COU_fk_anti_sh = { #대샬레전
+            picture = generic_neutrality_drift_bonus 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                surrender_limit = -0.35
+            }
+
+            targeted_modifier = {
+                tag = SHE
+                attack_bonus_against = -0.35
+                defense_bonus_against = -0.35
+            }
         }
 		
 		COU_empty_of_monarchs = { #군주들의 공백
@@ -1067,6 +1089,26 @@ ideas = {
 				political_power_factor = -0.05
 				army_morale_factor = 0.05
 				production_speed_buildings_factor = 0.05
+            }
+
+        }
+		
+		COU_dutch_collaboraters_no_kaya_debuff = { #현지인 협력자들 디버프
+            name = COU_dutch_collaboraters
+            picture = COU_dutch_collaboraters 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                fascism_drift = 0.02
             }
 
         }
