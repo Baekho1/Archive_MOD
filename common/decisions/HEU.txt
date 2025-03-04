@@ -6149,15 +6149,15 @@ HEU_aru_internet_overdose_decision_category = {
 			OR = {
 				check_variable = { benriya_keystones = 4 }
 				check_variable = { benriya_keystones > 4 }
+				has_completed_focus = HEU_pro_gehenna_route_ending
 			}
-			has_completed_focus = HEU_pro_gehenna_route_ending
 		}
 		available = {
 			OR = {
 				check_variable = { benriya_keystones = 4 }
 				check_variable = { benriya_keystones > 4 }
+				has_completed_focus = HEU_pro_gehenna_route_ending
 			}
-			has_completed_focus = HEU_pro_gehenna_route_ending
 		}
 
 		ai_will_do = { 
