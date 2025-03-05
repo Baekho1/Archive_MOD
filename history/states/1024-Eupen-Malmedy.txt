@@ -1,6 +1,6 @@
 state={
-	id=989
-	name="STATE_989"
+	id=1024
+	name="STATE_1024"
 	history={
 		owner = KSP
 		add_core_of = KSP

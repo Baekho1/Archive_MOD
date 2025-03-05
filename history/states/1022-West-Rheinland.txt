@@ -1,8 +1,9 @@
+
 state={
-	id=990
-	name="STATE_990"
+	id=1022
+	name="STATE_1022"
 	resources={
-		steel=4.000
+		steel=11.000
 	}
 
 	history={
@@ -11,12 +12,12 @@ state={
 		add_core_of = RHI
 		add_core_of = PRE
 		victory_points = {
-			11435 5 
+			587 5 
 		}
 		buildings = {
 			infrastructure = 3
-			arms_factory = 4
-			industrial_complex = 2
+			arms_factory = 5
+			industrial_complex = 3
 			air_base = 1
 
 		}
@@ -26,10 +27,10 @@ state={
 	}
 
 	provinces={
-		11435 11470 11494 
+		587 3444 3547 9522 
 	}
-	manpower=44000
+	manpower=2100000
 	buildings_max_level_factor=1.000
-	state_category=large_city
+	state_category=metropolis
 	local_supplies=0.000
 }

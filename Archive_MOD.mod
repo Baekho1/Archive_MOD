@@ -21,6 +21,6 @@ dependencies={
 user_dir="BlueArchive"
 version="0.7.0"
 picture="thumbnail.png"
-supported_version="1.15.*"
+supported_version="1.16.*"
 path="mod/Archive_MOD"
 remote_file_id="2927583473"
