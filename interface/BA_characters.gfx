@@ -154,6 +154,23 @@ spriteTypes = {
 		name = "GFX_leaders_Kaya"
 		textureFile = "gfx/leaders/COU/COU_KAYA_portrait_leader.dds"
 	}
+	##KAYA FACES
+	spriteType = {
+		name = "GFX_leaders_kayaface_one"
+		textureFile = "gfx/leaders/COU/kayaface_one.png"
+	}
+	spriteType = {
+		name = "GFX_leaders_kayaface_two"
+		textureFile = "gfx/leaders/COU/kayaface_two.png"
+	}
+	spriteType = {
+		name = "GFX_leaders_kayaface_three"
+		textureFile = "gfx/leaders/COU/kayaface_three.png"
+	}
+	spriteType = {
+		name = "GFX_leaders_kayaface_four"
+		textureFile = "gfx/leaders/COU/kayaface_four.png"
+	}
 	spriteType = {
 		name = "GFX_leaders_HAINE"
 		textureFile = "gfx/leaders/COU/COU_HAINE_portrait_leader.png"
