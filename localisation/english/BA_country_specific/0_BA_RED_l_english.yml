@@ -369,11 +369,12 @@
  RED_the_supreme_soviet: "$SOV_the_supreme_soviet$"
  RED_for_the_common_good: "$SOV_for_the_common_good$"
  RED_victory_over_devastation: "$SOV_victory_over_devastation$"
+ RED_victory_over_devastation_tt: "소비재 공장: §Y-2.0%§!\n정당 인기도의 안정도 변동치: §G+15.00%§!\n항복 한계치: §G+10.00%§!\n공장 수리 속도: §G+10.00%§!"
  RED_socialist_humanism: "$SOV_socialist_humanism$"
  RED_regional_development: "$SOV_regional_development$"
  RED_autonomous_soviet_republics: "$SOV_autonomous_soviet_republics$"
  RED_international_union_of_soviet_republics: "$SOV_international_union_of_soviet_republics$"
- 
+ RED_international_union_of_soviet_republics_tt: "종주국 무역 비용: §G-10%§!\n정당 인기도의 안정도 변동치: §G+10%§!"
 
  RED_liberation_of_the_kibotus_states: "키보토스 혁명전쟁"
  RED_liberation_of_the_kibotus_states_desc: "키보토스 학원들의 독재적 체제를 해체하고 인민의 국가를 수립하는 첫 번째 혁명 전쟁을 이뤄내야 합니다."
@@ -876,10 +877,10 @@
 #툴팁/플래그
  RED_accept_trotskism_tt: "§Y$RED_lev_trotsky$§!는 이제 육군참모총장입니다"
  RED_heros_at_front_tt: "무작위 장군 두 명이 §Y$war_hero$§! 특성 획득"
- RED_winterarmy_advance_tt: "§Y$RED_winter_army_dynamic_modifier$§! 변동치:\n"
- RED_redwinter_office_tt: "§Y$RED_the_office_good_dynamic_modifier$§! 변동치:\n"
- RED_advance_intel_tt: "§Y$RED_RedWinterIntelligenceService_dynamic_modifier$§! 변동치:\n"
- RED_advance_publicwork_tt: "§Y$RED_labor_party_dynamic_modifier$§! 변동치:\n"
+ RED_winterarmy_advance_tt: "§Y$RED_winter_army_dynamic_modifier$§! 변동치\n"
+ RED_redwinter_office_tt: "§Y$RED_the_office_good_dynamic_modifier$§! 변동치\n"
+ RED_advance_intel_tt: "§Y$RED_RedWinterIntelligenceService_dynamic_modifier$§! 변동치\n"
+ RED_advance_publicwork_tt: "§Y$RED_labor_party_dynamic_modifier$§! 변동치\n"
  RED_work_to_worker_tt: "모든 §Y노동조합§! 국민정신이 §Y생디칼리즘§! 국민정신에 통합됩니다."
  RED_arrest_minori_tt: "§R$RED_minori$를 체포합니다.§!"
  RED_worker_republic_tt: "§Y생산을 향한 투쟁§! 국민정신과 §Y농업 기계화§!, §Y주 3일제§! 또는 §Y한정적인 주 3일제§! 국민정신이 §Y생디칼리즘§! 국민정신에 통합됩니다."

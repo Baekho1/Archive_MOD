@@ -7270,6 +7270,13 @@ focus_tree = {
 					}
 				}
 			}
+			hidden_effect = {
+				load_focus_tree = {
+					tree = RED_focus_tree
+					keep_completed = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 	focus = {
@@ -7287,6 +7294,9 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		allow_branch = {
+			has_completed_focus = RED_attack_sov
+		}
 		relative_position_id = RED_attack_sov
 		cost = 4
 		completion_reward = {
@@ -7318,6 +7328,9 @@ focus_tree = {
 		y = 1
 		mutually_exclusive = {
 			focus = RED_annex_party
+		}
+		available = {
+			has_completed_focus = RED_permanent_revolution
 		}
 		relative_position_id = RED_day_of_victory
 		cost = 4
@@ -7609,15 +7622,10 @@ focus_tree = {
 
 		completion_reward = {
 			every_subject_country = {
-				country_event = { id = NSB_soviet_for_the_common_good.1 hours = 4 }
-
-				custom_effect_tooltip = if_they_accept
-				effect_tooltip = {
-					add_ideas = SOV_for_the_common_good_subjects
-					add_autonomy_score = {
-						value = -100
-						localization = SOV_for_the_common_good
-					}
+				add_ideas = SOV_for_the_common_good_subjects
+				add_autonomy_score = {
+					value = -100
+					localization = SOV_for_the_common_good
 				}
 			}
 
@@ -7626,27 +7634,12 @@ focus_tree = {
 					is_in_faction_with = ROOT
 					is_subject = no
 				}
-				country_event = { id = NSB_soviet_for_the_common_good.1 hours = 4 }
-
-				custom_effect_tooltip = if_they_accept
-				effect_tooltip = {
-					add_ideas = SOV_for_the_common_good_allies
-
-					if = {
-						limit = {
-							has_dlc = "Death or Dishonor"
-						}
-						add_relation_modifier = {
-							target = ROOT
-							modifier = SOV_for_the_common_good_relation
-						}
-					}
-				}
+				add_ideas = SOV_for_the_common_good_allies
 			}
 		}
 	}
 
-	focus = {
+	focus = { #파괴를 딛고 일어난 승리
 		id = RED_victory_over_devastation #SOV_get_rich_develop_the_country
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = RED_for_the_common_good }
@@ -7659,15 +7652,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0.15 } #Victory Over Devastation
-			set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0.1 } #Victory Over Devastation
-			set_variable = { SOV_planned_economy_industry_repair_factor = 0.1 } #Victory Over Devastation
-			set_variable = { SOV_planned_economy_consumer_goods_factor = -0.02 } #Victory Over Devastation
-			custom_effect_tooltip = SOV_victory_over_devastation_tt
-
-			#Industrial Relocation duration halved
-			divide_variable = { SOV_industrial_relocation_days = 2 }
-			custom_effect_tooltip = SOV_victory_over_devastation_industrial_relocation_tt
+			custom_effect_tooltip = RED_redwinter_office_tt
+			set_variable = { RED_the_politburo_surrender_limit = 0.1 } #Victory Over Devastation
+			set_variable = { RED_the_politburo_popularity_stability_cost_factor = 0.15} #Victory Over Devastation
+			set_variable = { RED_the_politburo_industry_repair_factor = 0.1 } #Victory Over Devastation
+			set_variable = { RED_the_politburo_consumer_goods_factor = -0.02 } #Victory Over Devastation
+			custom_effect_tooltip = RED_victory_over_devastation_tt
 		}
 	}
 
@@ -7778,7 +7768,94 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_autonomous_soviet_republics_tt
+			# EST
+			IF = {
+				limit = { 812 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = LIT
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				EST = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
+				}
+			}
+			# LAT
+			IF = {
+				limit = { 808 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = LIT
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				LAT = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
+				}
+			}
+			# LIT
+			IF = {
+				limit = { 11 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = LIT
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				LIT = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
+				}
+			}
+			# UKR
+			IF = {
+				limit = { 202 = { is_owned_and_controlled_by = ROOT }}
+				release_autonomy = {
+					target = UKR
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+				UKR = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+					hidden_effect = {
+						every_core_state = {
+							remove_dynamic_modifier = {
+								modifier = RED_stalinist_sentiments_1
+							}
+						}
+					}
+				}
+			}
 			# Georgia
 			IF = {
 				limit = { 231 = { is_owned_and_controlled_by = ROOT }}
@@ -7889,12 +7966,13 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_to_variable = { SOV_factionalism_overlord_trade_cost_factor = -0.10 } 
-			add_to_variable = { SOV_factionalism_popularity_stability_cost_factor = 0.10 } 
-			custom_effect_tooltip = SOV_international_union_of_soviet_republics_tt 
+			add_to_variable = { RED_the_politburo_overlord_trade_cost_factor = -0.10} 
+			add_to_variable = { RED_the_politburo_popularity_stability_cost_factor = 0.10 } 
+			custom_effect_tooltip = RED_redwinter_office_tt
+			custom_effect_tooltip = RED_international_union_of_soviet_republics_tt 
 			every_country = {
 				limit = { is_subject_of = ROOT }
-				add_ideas = { SOV_puppet_international_of_soviet_republics_idea }
+				add_ideas = { SOV_puppet_international_of_soviet_republics_idea } 
 				custom_effect_tooltip = SOV_international_union_of_soviet_republics_puppet_tt
 				hidden_effect = {
 					random_owned_controlled_state = {

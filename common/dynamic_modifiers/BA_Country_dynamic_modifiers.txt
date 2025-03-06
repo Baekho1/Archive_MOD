@@ -843,6 +843,8 @@ RED_the_office_good_dynamic_modifier = { #사무국
 
 	icon = GFX_idea_POL_ideology_drift_defence
 
+	party_popularity_stability_factor = RED_the_politburo_popularity_stability_cost_factor
+	overlord_trade_cost_factor = RED_the_politburo_overlord_trade_cost_factor
 	offensive_war_stability_factor = RED_the_politburo_offensive_war_stability_factor
 	defensive_war_stability_factor = RED_the_politburo_defensive_war_stability_factor
 	consumer_goods_factor = RED_the_politburo_good_consumer_goods_factor
@@ -859,6 +861,8 @@ RED_the_office_good_dynamic_modifier = { #사무국
 	communism_drift = RED_the_politburo_communism_drift
 	compliance_growth = RED_the_politburo_compliance_growth
 	non_core_manpower = RED_the_politburo_non_core_manpower
+	consumer_goods_factor = RED_the_politburo_consumer_goods_factor
+	industry_repair_factor = RED_the_politburo_industry_repair_factor
 }
 RED_winter_army_dynamic_modifier = { # 겨울군대
 	enable = { always = yes }
