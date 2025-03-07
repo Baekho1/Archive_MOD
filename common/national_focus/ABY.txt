@@ -3872,7 +3872,7 @@ focus_tree = {
 						controls_state = 805
 						controls_state = 103
 						controls_state = 105
-						controls_state = 982
+						controls_state = 1017
 						controls_state = 185
 						controls_state = 731
 						controls_state = 47
@@ -5815,7 +5815,7 @@ focus_tree = {
 				104 = {add_core_of = ABY}
 				804 = {add_core_of = ABY}
 				163 = {add_core_of = ABY}
-				982 = {add_core_of = ABY}
+				1017 = {add_core_of = ABY}
 				852 = {add_core_of = ABY}
 				853 = {add_core_of = ABY}
 				736 = {add_core_of = ABY}
@@ -6856,7 +6856,7 @@ focus_tree = {
 						state = 102
 						state = 736
 						state = 852
-						state = 982
+						state = 1017
 						state = 853
 					}
 				}

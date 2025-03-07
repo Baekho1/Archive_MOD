@@ -6268,7 +6268,7 @@ TRM_kivotos_core_states_categories = {
                 tooltip = TRN_Holy_Mandate_Trigger_tt
 				102 = { is_owned_or_subject_trigger = yes }
                 853 = { is_owned_or_subject_trigger = yes }
-                982 = { is_owned_or_subject_trigger = yes }
+                1017 = { is_owned_or_subject_trigger = yes }
                 103 = { is_owned_or_subject_trigger = yes }
                 163 = { is_owned_or_subject_trigger = yes }
                 109 = { is_owned_or_subject_trigger = yes }
@@ -6322,7 +6322,7 @@ TRM_kivotos_core_states_categories = {
             highlight_state_targets = {
                 state = 102
                 state = 853
-                state = 982
+                state = 1017
                 state = 103
                 state = 163
                 state = 109

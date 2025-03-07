@@ -2201,7 +2201,7 @@ YUG_Urbanization_Categories = {
 		available = {
 			has_completed_focus = YUG_Northen_Urbanization
 			num_of_civilian_factories > 3
-			owns_state = 982
+			owns_state = 1017
 		}
 
 		ai_will_do = {
@@ -2217,7 +2217,7 @@ YUG_Urbanization_Categories = {
 		visible = {
 			tag = YUG
 			has_completed_focus = YUG_Northen_Urbanization
-			982 = {
+			1017 = {
 				has_state_category = large_town
 			}
 		}
@@ -2227,7 +2227,7 @@ YUG_Urbanization_Categories = {
 		}
 
 		remove_effect = {
-			982 = {
+			1017 = {
 				set_state_category = city
 			}
 		}
@@ -2239,7 +2239,7 @@ YUG_Urbanization_Categories = {
 			has_completed_focus = YUG_Northen_Urbanization
 			num_of_civilian_factories > 5
 			owns_state = 853
-			982 = {
+			1017 = {
 				has_state_category = city
 			}
 		}
@@ -2257,7 +2257,7 @@ YUG_Urbanization_Categories = {
 		visible = {
 			tag = YUG
 			has_completed_focus = YUG_Northen_Urbanization
-			982 = {
+			1017 = {
 				has_state_category = city
 			}
 		}
@@ -2267,7 +2267,7 @@ YUG_Urbanization_Categories = {
 		}
 
 		remove_effect = {
-			982 = {
+			1017 = {
 				set_state_category = large_city
 			}
 		}
@@ -2278,8 +2278,8 @@ YUG_Urbanization_Categories = {
 		available = {
 			has_completed_focus = YUG_Northen_Urbanization
 			num_of_civilian_factories > 5
-			owns_state = 982
-			982 = {
+			owns_state = 1017
+			1017 = {
 				has_state_category = large_city
 			}
 		}
@@ -2297,7 +2297,7 @@ YUG_Urbanization_Categories = {
 		visible = {
 			tag = YUG
 			has_completed_focus = YUG_Northen_Urbanization
-			982 = {
+			1017 = {
 				has_state_category = large_city
 			}
 		}
@@ -2307,7 +2307,7 @@ YUG_Urbanization_Categories = {
 		}
 
 		remove_effect = {
-			982 = {
+			1017 = {
 				set_state_category = metropolis
 			}
 		}
