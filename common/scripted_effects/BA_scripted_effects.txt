@@ -2549,7 +2549,7 @@ SOV_WIN_Great_Patriotic_War_2 = {
 				}
 				NOT = {
 					state = 735
-					state = 993
+					state = 1028
 				}
 			}
 			transfer_state_to = PREV

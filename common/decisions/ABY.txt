@@ -17839,7 +17839,7 @@ ABY_descision_category_debug = {
 							state = 163
 							state = 161
 							state = 158
-							state = 993
+							state = 1028
 							state = 735
 							state = 3
 							state = 845
@@ -18071,7 +18071,7 @@ ABY_descision_category_debug = {
 							state = 735
 							state = 21
 							state = 851
-							state = 993
+							state = 1028
 						}
 					}
 					add_core_of = PREV
@@ -18613,7 +18613,7 @@ ABY_descision_category_debug = {
 						OR = {
 							state = 21
 							state = 851
-							state = 993
+							state = 1028
 						}
 					}
 					add_core_of = PREV
@@ -21884,7 +21884,7 @@ ABY_descision_category_invite_balkan = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 735
-				state = 993
+				state = 1028
 				state = 158
 				state = 114
 				state = 161
@@ -21922,7 +21922,7 @@ ABY_descision_category_invite_balkan = {
 		available = {
 			has_country_flag = ABY_flag_divide_ITA
 			735 = {is_controlled_by_ROOT_or_subject = yes}
-			993 = {is_controlled_by_ROOT_or_subject = yes}
+			1028 = {is_controlled_by_ROOT_or_subject = yes}
 			158 = {is_controlled_by_ROOT_or_subject = yes}
 			114 = {is_controlled_by_ROOT_or_subject = yes}
 			161 = {is_controlled_by_ROOT_or_subject = yes}
@@ -22166,7 +22166,7 @@ ABY_descision_category_puppet_nephthys = {
 					state = 845
 					state = 735
 					state = 158
-					state = 993
+					state = 1028
 					state = 161
 					state = 162
 					state = 157
@@ -22211,7 +22211,7 @@ ABY_descision_category_puppet_nephthys = {
 			has_full_control_of_state = 845
 			has_full_control_of_state = 735
 			has_full_control_of_state = 158
-			has_full_control_of_state = 993
+			has_full_control_of_state = 1028
 			has_full_control_of_state = 161
 			has_full_control_of_state = 162
 			has_full_control_of_state = 157
@@ -22247,7 +22247,7 @@ ABY_descision_category_puppet_nephthys = {
 							state = 845
 							state = 735
 							state = 158
-							state = 993
+							state = 1028
 							state = 161
 							state = 162
 							state = 157
