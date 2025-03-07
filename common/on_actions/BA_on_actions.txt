@@ -55,6 +55,8 @@ on_actions = {
 		    #COU decision start 
 		    COU = { 
 			    activate_mission = COU_the_srt_problem 
+				activate_mission = COU_the_decart_problem
+				activate_mission = COU_the_normal_days_of_cou
 			    activate_mission = COU_regain_schedule_ticket
 			}
 		}

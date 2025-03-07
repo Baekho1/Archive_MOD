@@ -504,6 +504,74 @@ COU_decision_the_student_council = {
 		}
 	}
 	
+	COU_the_decart_problem = {
+		icon = generic_break_treaty
+		allowed = {
+			tag = COU
+			always = no
+		}
+
+		available = {
+		    NOT = { always = yes }
+		}
+
+		activation = { always = no }
+		
+		fire_only_once = yes
+		
+		is_good = no
+
+		days_mission_timeout = 1
+
+		timeout_effect = {
+			 country_event = COU_event.48
+		}
+	}
+	
+	COU_the_normal_days_of_cou = {
+
+		 icon = generic_political_address
+
+		 allowed = { 
+		    original_tag = COU
+		    always = no
+		 }
+		
+		 available = { 
+			 NOT = { always = yes }
+		 }
+		
+		 days_mission_timeout = 150
+		
+		 is_good = no
+				
+		 activation = { always = no }
+		
+		 timeout_effect = {
+		      custom_effect_tooltip = COU_tooltip_some_normal_days_event
+			  hidden_effect = {
+			      random_list = {
+					  1 = {
+						  country_event = { id = COU_event_normal_days.1 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.2 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.3 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.4 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.5 }
+					  }
+				  }
+			  }
+		      hidden_effect = { activate_mission = COU_the_normal_days_of_cou }
+		 }
+	}
+	
 	##스케줄 티켓 보충 
 	COU_regain_schedule_ticket = {
 

@@ -76,6 +76,31 @@ ideas = {
         production_speed_arms_factory_factor = 0.1
     }
 }
+        
+		COU_notwork_crisis = { ##데카르트와 무소유 투쟁 
+
+			name = COU_notwork_crisis
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				original_tag = COU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_expected_value = 0.1
+			    production_speed_buildings_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		
 		COU_world_revolution2 = { # 세계 혁명
             name = COU_world_revolution_idea
 

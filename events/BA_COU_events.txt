@@ -1,6 +1,7 @@
 add_namespace = COU_event
 add_namespace = COU_start_event
 add_namespace = COU_kivotos_alliance
+add_namespace = COU_event_normal_days
 
 country_event = { #린의 사병 조직
 	id = COU_start_event.1
@@ -1385,6 +1386,8 @@ country_event = {
 
 	option = { 
 		name = COU_event.48.a
+		custom_effect_tooltip = COU_tooltip_decart_mission_starts
+		add_ideas = COU_notwork_crisis
 		news_event = { id = BA_news.134 hours = 6 }
 	}
 }
@@ -1828,3 +1831,75 @@ country_event = { # 키보토스 협력기구 가입 거절
 		name = COU_kivotos_alliance.10.a
 	}
 }
+
+##일상 이벤트 
+country_event = { 
+	id = COU_event_normal_days.1
+	title = COU_event_normal_days.1.t
+	desc = COU_event_normal_days.1.desc
+	picture = GFX_event_none_picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.1.a
+		custom_effect_tooltip = COU_tooltip_normal_days_one
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.2
+	title = COU_event_normal_days.2.t
+	desc = COU_event_normal_days.2.desc
+	picture = GFX_event_none_picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.2.a
+		custom_effect_tooltip = COU_tooltip_normal_days_two
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.3
+	title = COU_event_normal_days.3.t
+	desc = COU_event_normal_days.3.desc
+	picture = GFX_report_event_picture_aoi
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.3.a
+		custom_effect_tooltip = COU_tooltip_normal_days_three
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.4
+	title = COU_event_normal_days.4.t
+	desc = COU_event_normal_days.4.desc
+	picture = GFX_report_event_picture_kaya_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.4.a
+		custom_effect_tooltip = COU_tooltip_normal_days_four
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.5
+	title = COU_event_normal_days.5.t
+	desc = COU_event_normal_days.5.desc
+	picture = GFX_report_event_picture_rabbit_uprised
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.5.a
+		custom_effect_tooltip = COU_tooltip_normal_days_five
+	}
+}
+

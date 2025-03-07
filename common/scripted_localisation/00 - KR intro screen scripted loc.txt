@@ -43,7 +43,6 @@ defined_text = {
 	text = { trigger = { original_tag = ARI }  localization_key = ARI_country_intro_header }
 	text = { trigger = { original_tag = KSP }  localization_key = KSP_country_intro_header }
 	text = { trigger = { original_tag = SHA }  localization_key = SHA_country_intro_header }
-	text = { trigger = { original_tag = SRT }  localization_key = SRT_country_intro_header }
 	text = { trigger = { original_tag = COU }  localization_key = COU_country_intro_header }
 
 	### Non - Kivotos
@@ -82,7 +81,6 @@ defined_text = {
 	text = { trigger = { original_tag = ARI }  localization_key = ARI_country_intro_content }
 	text = { trigger = { original_tag = KSP }  localization_key = KSP_country_intro_content }
 	text = { trigger = { original_tag = SHA }  localization_key = SHA_country_intro_content }
-	text = { trigger = { original_tag = SRT }  localization_key = SRT_country_intro_content }
 	text = { trigger = { original_tag = COU }  localization_key = COU_country_intro_content }
 	
 	### Non - Kivotos ###

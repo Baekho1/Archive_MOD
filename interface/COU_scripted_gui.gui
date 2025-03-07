@@ -119,7 +119,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name ="COU_THE_KAYA_GUI_NAME_KAYA_S"
-			position = { x = 174 y = 320 }
+			position = { x = 144 y = 320 }
 			font = "BA_36header"
 			text = "COU_THE_KAYA_GUI_NAME_KAYA"
 			maxHeight = 24

@@ -4821,6 +4821,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
+		    add_stability = 0.05
 			add_tech_bonus = {
 				name = HOL_the_zuiderzee_works
 				bonus = 1.0
@@ -4829,22 +4830,22 @@ focus_tree = {
 				category = industry
 			}
 			7 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+				add_extra_state_shared_building_slots = 3
+				set_building_level = {
+					 type = infrastructure
+					 level = 5
+					 instant_build = yes
+				 }
 			}
 			36 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+				add_extra_state_shared_building_slots = 3
+				set_building_level = {
+					 type = infrastructure
+					 level = 5
+					 instant_build = yes
 				}
 			}
-			hidden_effect = { news_event = { id = mtg_news.47 days = 1 } }
+			news_event = { id = mtg_news.47 days = 1 } 
 		}
 	}
 
@@ -4871,6 +4872,7 @@ focus_tree = {
 			#set_country_flag = COU_yes_sanub
 		}
 	}
+	
 	focus = { #공공사업 기획	
 		id = COU_economy_focus_1
 		icon = GFX_goal_generic_construction
@@ -4889,11 +4891,13 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
+		    add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = { #시라토리 개발	
 		id = COU_economy_focus_2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_PER_national_museum
 		x = -1
 		y = 1
 		relative_position_id = COU_economy_focus_1
@@ -4909,11 +4913,12 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
+		    remove_ideas = COU_notwork_crisis
 		}
 	}
 	focus = { #D.U. 종합도시계획
 		id = COU_economy_focus_3
-		icon = GFX_focus_spa_the_spanish_miracle
+		icon = GFX_focus_RAJ_protest_against_the_howell_monument
 		x = 1
 		y = 1
 		relative_position_id = COU_economy_focus_2
