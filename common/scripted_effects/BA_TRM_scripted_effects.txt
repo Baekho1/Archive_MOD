@@ -1520,7 +1520,7 @@ TRM_MIL_RK = {
 					transfer_state = 26
 					transfer_state = 20
 					transfer_state = 32
-					transfer_state = 992
+					transfer_state = 1027
 					transfer_state = 851
 					transfer_state = 21
 					transfer_state = 22
@@ -1671,7 +1671,7 @@ TRM_POL_RK = {
                 }
                 TRM = {
                     puppet = PREV
-			        transfer_state = 991
+			        transfer_state = 1026
 			        transfer_state = 87
 			        transfer_state = 98
                 }

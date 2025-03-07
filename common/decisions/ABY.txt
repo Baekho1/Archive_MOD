@@ -10832,7 +10832,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 
         available = {
 					controls_state = 88
-					controls_state = 991
+					controls_state = 1026
 					controls_state = 10
 					controls_state = 90
 					controls_state = 92
@@ -10854,7 +10854,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 						limit = {
 							OR = {
 								state = 88
-								state = 991
+								state = 1026
 								state = 10
 								state = 90
 								state = 92
@@ -15650,7 +15650,7 @@ ABY_kivotos_core_states_categories = {
 			    controls_state = 88
 			    controls_state = 91
 			    controls_state = 89
-			    controls_state = 991
+			    controls_state = 1026
 			    controls_state = 87
 			    controls_state = 98
             }
@@ -15663,7 +15663,7 @@ ABY_kivotos_core_states_categories = {
                 state = 10
                 state = 91
                 state = 89
-			    state = 991
+			    state = 1026
 			    state = 87
 			    state = 98
             }
@@ -15692,7 +15692,7 @@ ABY_kivotos_core_states_categories = {
 				set_cosmetic_tag = ABY_reichskomindante_POL
                 ABY = {
                     puppet = PREV
-			        transfer_state = 991
+			        transfer_state = 1026
 			        transfer_state = 87
 			        transfer_state = 98
                 }
@@ -17881,7 +17881,7 @@ ABY_descision_category_debug = {
 							state = 66
 							state = 67
 							state = 762
-							state = 991
+							state = 1026
 							state = 88
 							state = 91
 							state = 89
@@ -18067,7 +18067,7 @@ ABY_descision_category_debug = {
 							state = 17
 							state = 20
 							state = 32
-							state = 992
+							state = 1027
 							state = 735
 							state = 21
 							state = 851
@@ -18165,7 +18165,7 @@ ABY_descision_category_debug = {
 							state = 69
 							state = 972
 							state = 36
-							state = 991
+							state = 1026
 						}
 					}
 					transfer_state_to = ABY
@@ -18224,7 +18224,7 @@ ABY_descision_category_debug = {
 							state = 66
 							state = 67
 							state = 762
-							state = 991
+							state = 1026
 						}
 					}
 					transfer_state_to = CZE
@@ -18437,7 +18437,7 @@ ABY_descision_category_debug = {
 						OR = {
 							state = 20
 							state = 32
-							state = 992
+							state = 1027
 							state = 735
 						}
 					}
@@ -19670,7 +19670,7 @@ ABY_descision_category_debug = {
 								state = 89
 								state = 91
 								state = 88
-								state = 991
+								state = 1026
 								state = 92
 								state = 90
 								state = 87

@@ -482,7 +482,7 @@ BA_sov_pol_war_decision = {
 				state = 98
 				state = 87
 				state = 90
-				state = 991
+				state = 1026
 				state = 88
 				state = 92
 			}
@@ -633,10 +633,10 @@ BA_sov_making_ssr_cat = {
 						if = {
 							limit = {
 								ROOT = {
-									controls_state = 991
+									controls_state = 1026
 								}
 							}
-							transfer_state = 991
+							transfer_state = 1026
 						}
 
 						set_variable = { collaboration_formed_by = ROOT }
@@ -695,10 +695,10 @@ BA_sov_making_ssr_cat = {
 					if = {
 						limit = {
 							ROOT = {
-								controls_state = 991
+								controls_state = 1026
 							}
 						}
-						transfer_state = 991
+						transfer_state = 1026
 					}
 					set_variable = { collaboration_formed_by = ROOT }
 					ROOT = {

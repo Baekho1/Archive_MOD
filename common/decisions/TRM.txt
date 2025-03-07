@@ -5562,7 +5562,7 @@ TRM_kivotos_core_states_categories = {
                 88 = { is_owned_or_subject_trigger = yes }
                 91 = { is_owned_or_subject_trigger = yes }
                 89 = { is_owned_or_subject_trigger = yes }
-                991 = { is_owned_or_subject_trigger = yes }
+                1026 = { is_owned_or_subject_trigger = yes }
                 87 = { is_owned_or_subject_trigger = yes }
                 98 = { is_owned_or_subject_trigger = yes }
             }
@@ -5575,7 +5575,7 @@ TRM_kivotos_core_states_categories = {
                 state = 10
                 state = 91
                 state = 89
-			    state = 991
+			    state = 1026
 			    state = 87
 			    state = 98
             }
@@ -5897,7 +5897,7 @@ TRM_kivotos_core_states_categories = {
                 20 = { is_owned_or_subject_trigger = yes }
                 32 = { is_owned_or_subject_trigger = yes }
                 21 = { is_owned_or_subject_trigger = yes }
-                992 = { is_owned_or_subject_trigger = yes }
+                1027 = { is_owned_or_subject_trigger = yes }
                 851 = { is_owned_or_subject_trigger = yes }
                 31 = { is_owned_or_subject_trigger = yes }
                 806 = { is_owned_or_subject_trigger = yes }
@@ -5927,7 +5927,7 @@ TRM_kivotos_core_states_categories = {
 			state = 20
 			state = 32
 			state = 21
-			state = 992
+			state = 1027
 			state = 851
 			state = 31
 			state = 806

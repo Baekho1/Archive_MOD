@@ -1618,7 +1618,7 @@ FRA_prepare_war = {
 				22 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 				32 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 				21 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
-				992 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
+				1027 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 				851 = { if = { limit = { is_controlled_by = MIL } set_demilitarized_zone = yes } }
 			}
 			set_variable = { global.BA_resistance_se_var = 3 }
@@ -2395,7 +2395,7 @@ FRA_great_FRA = {
 			88 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
-			991 = {
+			1026 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
 			89 = {
@@ -2414,9 +2414,9 @@ FRA_great_FRA = {
 			hidden_effect = {
 				DNZ = {
 					transfer_state = 88
-					transfer_state = 991
+					transfer_state = 1026
 					add_state_core = 88
-					add_state_core = 991
+					add_state_core = 1026
 					set_cosmetic_tag = KRA_fra
 					FRA = {
 						set_autonomy = {

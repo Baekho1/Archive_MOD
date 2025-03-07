@@ -1621,7 +1621,7 @@ focus_tree = {
 		completion_reward = {
 			# Tripoli - Tobruk
 			build_railway = {
-				path = { 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 }
+				path = { 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 91027 1130 }
 			}
 
 			custom_effect_tooltip = ITA_libyan_railway_state_modifier_tt

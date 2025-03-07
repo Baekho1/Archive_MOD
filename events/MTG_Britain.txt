@@ -1859,7 +1859,7 @@ country_event = {
 									has_id = 989
 									has_id = 1025
 									has_id = 991
-									has_id = 992
+									has_id = 1027
 								}
 							}
 							set_nationality = event_target:democratic_uk_civil_war
