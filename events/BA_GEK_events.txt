@@ -1184,7 +1184,7 @@ country_event = { #내전!
 				ideology = democratic
 				size = 0.7
 				states = {
-					51 987 990 42
+					51 1022 990 42
 				}
 				hidden_effect = {
 					set_cosmetic_tag = GEK_in_civil_war

@@ -1773,8 +1773,8 @@ country_event = {#라인란트의 운명
 			}
 			transfer_state = 51
 			add_state_core = 51
-			transfer_state = 987
-			add_state_core = 987
+			transfer_state = 1022
+			add_state_core = 1022
 			transfer_state = 990
 			add_state_core = 990
 		}
@@ -1793,8 +1793,8 @@ country_event = {#라인란트의 운명
 		RHI = {
 			transfer_state = 51
 			add_state_core = 51
-			transfer_state = 987
-			add_state_core = 987
+			transfer_state = 1022
+			add_state_core = 1022
 			transfer_state = 990
 			add_state_core = 990
 			if = {

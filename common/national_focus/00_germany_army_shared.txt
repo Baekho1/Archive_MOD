@@ -5274,7 +5274,7 @@ shared_focus = { #메포 어음 확보
 			controls_state = 68
 			controls_state = 763
 			controls_state = 909
-			controls_state = 987
+			controls_state = 1022
 			controls_state = 990
 			controls_state = 978
 		}
@@ -8114,7 +8114,7 @@ shared_focus = { #서독 통일
 			controls_state = 58
 			controls_state = 59
 			controls_state = 909
-			controls_state = 987
+			controls_state = 1022
 			controls_state = 990
 			controls_state = 978
 		}

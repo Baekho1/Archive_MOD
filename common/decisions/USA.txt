@@ -4408,7 +4408,7 @@ USA_congress = {
 				state = 188
 				state = 763
 				state = 909
-				state = 987
+				state = 1022
 				state = 978
 				state = 990
 			}
@@ -4443,7 +4443,7 @@ USA_congress = {
 			controls_state = 188
 			controls_state = 763
 			controls_state = 909
-			controls_state = 987
+			controls_state = 1022
 			controls_state = 978
 			controls_state = 990
 		}
@@ -4491,7 +4491,7 @@ USA_congress = {
 				transfer_state = 188
 				transfer_state = 763
 				transfer_state = 909
-				transfer_state = 987
+				transfer_state = 1022
 				transfer_state = 978
 				transfer_state = 990
 				

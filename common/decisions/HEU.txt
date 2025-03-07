@@ -4872,7 +4872,7 @@ HEU_german_reunification_war_decision_category = {
 		}
 
 		available = {
-			controls_state = 987
+			controls_state = 1022
 			controls_state = 51
 			stockpile_ratio = {
 				archetype = infantry_equipment
@@ -4890,7 +4890,7 @@ HEU_german_reunification_war_decision_category = {
 			
 		highlight_states = {
 			highlight_state_targets = { 
-				state = 987 
+				state = 1022 
 				state = 51 
 		}
 		}
@@ -5178,7 +5178,7 @@ HEU_german_reunification_war_decision_category = {
 		}
 
 		available = {
-			controls_state = 987
+			controls_state = 1022
 			controls_state = 51
 		}
 		
@@ -5189,7 +5189,7 @@ HEU_german_reunification_war_decision_category = {
 		custom_cost_text = decision_cost_5_cp
 
 		highlight_states = {
-			highlight_state_targets = { state = 987 }
+			highlight_state_targets = { state = 1022 }
 		}
 
 		ai_will_do = {
@@ -5202,7 +5202,7 @@ HEU_german_reunification_war_decision_category = {
 		cancel_trigger = {
 			OR = {
 				NOT = {
-					controls_state = 987
+					controls_state = 1022
 					controls_state = 51
 				}
 				#has_war = no
@@ -5220,7 +5220,7 @@ HEU_german_reunification_war_decision_category = {
 			hidden_effect = {
 				HEU_create_militia_template = yes
 				random_controlled_state = {
-					prioritize = { 987 51 }
+					prioritize = { 1022 51 }
 					create_unit = {
 						division = "division_template = \"Benriya Germanische Befreiungsarmee\" start_experience_factor = 0.4"
 						owner = ROOT
@@ -5428,7 +5428,7 @@ HEU_german_reunification_war_decision_category = {
 #			add_state_core = 55
 #			add_state_core = 51
 #			add_state_core = 978
-#			add_state_core = 987
+#			add_state_core = 1022
 #			add_state_core = 990
 #			add_state_core = 42
 #			add_state_core = 50

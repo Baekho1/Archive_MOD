@@ -4585,7 +4585,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = GEH
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = GEH				
 					}
 					51 = {
@@ -4602,7 +4602,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = GEM
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = GEM				
 					}
 					51 = {
@@ -4619,7 +4619,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = HEU
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = HEU				
 					}
 					51 = {
@@ -4636,7 +4636,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = GEA
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = GEA				
 					}
 					51 = {
@@ -4653,7 +4653,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = GER
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = GER				
 					}
 					51 = {
@@ -4670,7 +4670,7 @@ focus_tree = {
 					990 = {
 						is_owned_and_controlled_by = GEK
 					}
-					987 = {
+					1022 = {
 						is_owned_and_controlled_by = GEK				
 					}
 					51 = {
