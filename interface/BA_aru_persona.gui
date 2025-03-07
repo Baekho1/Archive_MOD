@@ -20,7 +20,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Aru_Wisdom_text"
 			position = { x = 342 y = 108 }
-			font = "hoi_36header"
+			font = "BA_36header"
 			text = "[?Global.aru_stat_point_array^0]"
 			maxWidth = 100
 			maxHeight = 50
@@ -37,7 +37,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Aru_Kindness_text"
 			position = { x = 342 y = 228 }
-			font = "hoi_36header"
+			font = "BA_36header"
 			text = "[?Global.aru_stat_point_array^1]"
 			maxWidth = 100
 			maxHeight = 50
@@ -54,7 +54,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Aru_Resolution_text"
 			position = { x = 342 y = 348 }
-			font = "hoi_36header"
+			font = "BA_36header"
 			text = "[?Global.aru_stat_point_array^2]"
 			maxWidth = 100
 			maxHeight = 50
@@ -71,7 +71,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Aru_Charisma_text"
 			position = { x = 342 y = 468 }
-			font = "hoi_36header"
+			font = "BA_36header"
 			text = "[?Global.aru_stat_point_array^3]"
 			maxWidth = 100
 			maxHeight = 50

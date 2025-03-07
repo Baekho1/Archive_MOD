@@ -7,7 +7,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Info_title"
 			position = { x = 10 y = -11 }
-			font = "hoi_36header"
+			font = "BA_36header"
 			text = ABY_governmant_stability_text
 			pdx_tooltip = ABY_governmant_stability_change_text
 			maxWidth = 480
