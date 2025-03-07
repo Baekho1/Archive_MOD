@@ -521,7 +521,7 @@ COU_decision_the_student_council = {
 		
 		is_good = no
 
-		days_mission_timeout = 1
+		days_mission_timeout = 45
 
 		timeout_effect = {
 			 country_event = COU_event.48
