@@ -104,6 +104,7 @@ country_event = {
 		}
 		YEM = {
 			transfer_state = 659
+			transfer_state = 992
 		}
 		IRQ = {
 			transfer_state = 656
@@ -111,10 +112,6 @@ country_event = {
 		}
 		remove_resource_rights = 291
 		remove_resource_rights = 676
-		country_event = {
-			id = impindia.30
-			days = 3
-		}
 		country_event = {
 			id = ENG_british_warning_event.23
 			days = 6
@@ -329,10 +326,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ENG_british_warning_event.8.a
-		custom_effect_tooltip = CAN_HND_going_bad_tt
-		add_to_variable = {
-			HND_independence_var = 1
-		}
 		hidden_effect = { 
 			BRM = {
 				transfer_state = 288
@@ -483,7 +476,6 @@ country_event = {
 				}
 			}
 		}
-		activate_mission = CAN_HND_going_bad
 	}
 }
 
@@ -496,13 +488,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ENG_british_warning_event.9.a
-		HND = {
-			transfer_state = 435
-			transfer_state = 431
-			transfer_state = 432
-			transfer_state = 434
-			transfer_state = 430
-		}
 		PAK = {
 			transfer_state = 440
 			transfer_state = 442
@@ -513,9 +498,6 @@ country_event = {
 					id = ENG_british_warning_event.10
 					days = 3
 				}
-			}
-			HND = {
-				add_ideas = RAJ_marginalized_muslim_community
 			}
 			country_event = {
 				id = IMP_event.4
@@ -554,10 +536,6 @@ country_event = {
 	}
 	option = {
 		name = ENG_british_warning_event.10.a
-		declare_war_on = {
-			target = HND
-			type = annex_everything
-		}
 		ai_chance = {
 			factor = 100
 		}
@@ -566,12 +544,6 @@ country_event = {
 			RAJ_princely_states
 		}
 		hidden_effect = {
-			HND = {
-				country_event = {
-					id = ENG_british_warning_event.11
-					days = 1
-				}
-			}
 			news_event = BA_news.19
 		}
 	}
@@ -586,16 +558,7 @@ country_event = {
 			RAJ_princely_states
 		}
 		hidden_effect = {
-			HND = {
-				country_event = {
-					id = ENG_british_warning_event.11
-					days = 1
-				}
-			}
 			news_event = BA_news.19
-		}
-		HND = {
-			change_tag_from = RAJ
 		}
 	}
 	option = {
@@ -609,12 +572,6 @@ country_event = {
 			RAJ_princely_states
 		}
 		hidden_effect = {
-			HND = {
-				country_event = {
-					id = ENG_british_warning_event.11
-					days = 1
-				}
-			}
 			news_event = BA_news.19
 		}
 		PAK = {
@@ -652,18 +609,6 @@ country_event = {
 }
 
 country_event = {
-	id = ENG_british_warning_event.12	#대규모 민중 집회
-	title = ENG_british_warning_event.12.t
-	desc = ENG_british_warning_event.12.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = { #어서 그들을 해산해라!
-		name = ENG_british_warning_event.12.a
-		activate_mission = CAN_HND_bad_event_roop
-	}
-}
-
-country_event = {
 	id = ENG_british_warning_event.13	#안 씀
 	title = ENG_british_warning_event.13.t
 	desc = ENG_british_warning_event.13.d
@@ -686,493 +631,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ENG_british_warning_event.14.a
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.15	#총회
-	title = ENG_british_warning_event.15.t
-	desc = ENG_british_warning_event.15.d
-	picture = GFX_report_event_fascist_gathering
-	hidden = no
-	fire_only_once = yes
-	trigger = {
-		tag = HND
-		focus_progress = {
-			focus = HND_focus_deli_2
-			progress = 0.01
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.15.a
-		add_political_power = 5
-		set_variable = {
-			HND_bos = 0
-		}
-		set_variable = {
-			HND_pil = 0
-		}
-		set_variable = {
-			HND_neru = 0
-		}
-		set_variable = {
-			HND_gandi = 0
-		}
-		remove_ideas = HND_revolution
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.16
-				days = 3
-			}
-		}
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.16	#산업
-	title = ENG_british_warning_event.16.t
-	desc = ENG_british_warning_event.16.d
-	picture = GFX_report_event_bul_aircraft_repairs
-	hidden = no
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ENG_british_warning_event.16.a
-		add_to_variable = {
-			HND_bos = 1
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.17
-				days = 6
-			}
-		}
-		ai_chance = {
-			base = 20
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.16.b
-		add_to_variable = {
-			HND_pil = 1
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		ai_chance = {
-			base = 20
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.17
-				days = 6
-			}
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.16.c
-		add_to_variable = {
-			HND_neru = 1
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.17
-				days = 6
-			}
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.16.e
-		add_to_variable = {
-			HND_gandi = 1
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.17
-				days = 6
-			}
-		}
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.17	#군사
-	title = ENG_british_warning_event.17.t
-	desc = ENG_british_warning_event.17.d
-	picture = GFX_report_event_bul_aircraft_repairs
-	hidden = no
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ENG_british_warning_event.17.a
-		add_to_variable = {
-			HND_bos = 1
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.03
-		}
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			category = cat_mobile_warfare
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.18
-				days = 7
-			}
-		}
-		ai_chance = {
-			base = 20
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.17.b
-		add_to_variable = {
-			HND_pil = 1
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		ai_chance = {
-			base = 20
-		}
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			category = cat_mass_assault
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.18
-				days = 7
-			}
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.17.c
-		add_to_variable = {
-			HND_neru = 1
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			category = cat_superior_firepower
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.18
-				days = 7
-			}
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.17.e
-		add_to_variable = {
-			HND_gandi = 1
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			category = cat_grand_battle_plan
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.18
-				days = 7
-			}
-		}
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.18	#종교
-	title = ENG_british_warning_event.18.t
-	desc = ENG_british_warning_event.18.d
-	picture = GFX_report_event_bul_aircraft_repairs
-	hidden = no
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ENG_british_warning_event.18.a
-		add_to_variable = {
-			HND_bos = 1
-		}
-		add_to_variable = {
-			HND_gandi = 1
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.03
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.19
-				days = 7
-			}
-		}
-		ai_chance = {
-			base = 20
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.18.b
-		add_to_variable = {
-			HND_pil = 1
-		}
-		add_to_variable = {
-			HND_neru = 1
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		ai_chance = {
-			base = 20
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.19
-				days = 7
-			}
-		}
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.19	#외교
-	title = ENG_british_warning_event.19.t
-	desc = ENG_british_warning_event.19.d
-	picture = GFX_report_event_bul_aircraft_repairs
-	hidden = no
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ENG_british_warning_event.19.a
-		add_to_variable = {
-			HND_gandi = 1
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.20
-				days = 7
-			}
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.19.b
-		add_to_variable = {
-			HND_pil = 1
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.20
-				days = 7
-			}
-		}
-		ai_chance = {
-			base = 20
-		}
-	}
-	option = {
-		name = ENG_british_warning_event.19.c
-		add_to_variable = {
-			HND_bos = 1
-		}
-		add_to_variable = {
-			HND_neru = 1
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.03
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		hidden_effect = {
-			country_event = {
-				id = ENG_british_warning_event.20
-				days = 7
-			}
-		}
-		ai_chance = {
-			base = 20
-		}
-	}
-}
-
-country_event = {
-	id = ENG_british_warning_event.20	#종합
-	title = ENG_british_warning_event.20.t
-	desc = ENG_british_warning_event.20.d
-	picture = GFX_report_event_bul_aircraft_repairs
-	hidden = no
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		add_ideas = HND_revolution_hurt
-		name = ENG_british_warning_event.20.a
-		trigger = {
-			AND = {
-				check_variable = {
-					var = HND_bos
-					value = HND_neru
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_bos
-					value = HND_pil
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_bos
-					value = HND_gandi
-					compare = greater_than_or_equals
-				}
-			}
-		}
-		set_politics = {
-			ruling_party = fascism
-		}
-		complete_national_focus = HND_focus_deli_2
-		set_country_flag = HND_fascism_win
-		hidden_effect = {
-			load_focus_tree = {
-				tree = HND_focus_tree
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	option = {
-		add_ideas = HND_revolution_hurt
-		name = ENG_british_warning_event.20.b
-		trigger = {
-			AND = {
-				check_variable = {
-					var = HND_pil
-					value = HND_neru
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_pil
-					value = HND_gandi
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_pil
-					value = HND_bos
-					compare = greater_than_or_equals
-				}
-			}
-		}
-		retire_country_leader = yes
-		set_cosmetic_tag = HND_com
-		complete_national_focus = HND_focus_deli_2
-		set_country_flag = HND_communism_win
-		hidden_effect = {
-			load_focus_tree = {
-				tree = HND_focus_tree
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	option = {
-		add_ideas = HND_revolution_hurt
-		name = ENG_british_warning_event.20.c
-		trigger = {
-			AND = {
-				check_variable = {
-					var = HND_neru
-					value = HND_gandi
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_neru
-					value = HND_pil
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_neru
-					value = HND_bos
-					compare = greater_than_or_equals
-				}
-			}
-		}
-		set_politics = {
-			ruling_party = democratic
-		}
-		complete_national_focus = HND_focus_deli_2
-		ai_chance = {
-			base = 0
-		}
-	}
-	option = {
-		add_ideas = HND_revolution_hurt
-		name = ENG_british_warning_event.20.e
-		trigger = {
-			AND = {
-				check_variable = {
-					var = HND_gandi
-					value = HND_neru
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_gandi
-					value = HND_pil
-					compare = greater_than_or_equals
-				}
-				check_variable = {
-					var = HND_gandi
-					value = HND_bos
-					compare = greater_than_or_equals
-				}
-			}
-		}
-		set_politics = {
-			ruling_party = neutrality
-		}
-		complete_national_focus = HND_focus_deli_2
-		ai_chance = {
-			base = 0
-		}
 	}
 }
 
