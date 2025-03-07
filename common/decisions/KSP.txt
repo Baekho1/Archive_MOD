@@ -263,7 +263,7 @@ KSP_fight_with_wakamo = {
 			has_country_flag = KSP_wakamo_sabotage_activated # 재액의 여우가 풀려났음
 			NOT = {
 				34 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
-				989 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
+				1024 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 				974 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 				1018 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 			}
@@ -531,7 +531,7 @@ KSP_fight_with_wakamo = {
 			has_country_flag = KSP_wakamo_sabotage_activated
 		}
 		available = {
-			989 = {
+			1024 = {
 				NOT = {
 					has_state_flag = KSP_no_wakamo_here
 				}
@@ -546,7 +546,7 @@ KSP_fight_with_wakamo = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 989
+				state = 1024
 			}
 		}
 
@@ -558,7 +558,7 @@ KSP_fight_with_wakamo = {
 
 		complete_effect = {
 			set_country_flag = KSP_doing_decisions_wakamo
-			989 = {
+			1024 = {
 				set_state_flag = KSP_no_wakamo_here
 				add_dynamic_modifier = { modifier = KSP_wakamo_sabotage_state }
 			}
@@ -567,7 +567,7 @@ KSP_fight_with_wakamo = {
 
 		remove_effect = {
 			clr_country_flag = KSP_doing_decisions_wakamo
-			989 = {
+			1024 = {
 				clr_state_flag = KSP_no_wakamo_here
 				remove_dynamic_modifier = { modifier = KSP_wakamo_sabotage_state }
 			}
