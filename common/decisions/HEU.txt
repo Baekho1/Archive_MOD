@@ -5453,7 +5453,7 @@ HEU_german_reunification_war_decision_category = {
 
 		available = {
 			controls_state = 28
-			controls_state = 988
+			controls_state = 1023
 		}
 
 		visible = {
@@ -5469,7 +5469,7 @@ HEU_german_reunification_war_decision_category = {
 		complete_effect = {
 			add_war_support = 0.03
 			add_state_core = 28
-			add_state_core = 988
+			add_state_core = 1023
 		}
 	}
 	

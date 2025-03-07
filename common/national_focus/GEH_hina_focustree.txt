@@ -4594,7 +4594,7 @@ focus_tree = {
 							state = 990
 
 							state = 28
-							state = 988
+							state = 1023
 							state = 8
 						}
 					}

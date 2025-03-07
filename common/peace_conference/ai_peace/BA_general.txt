@@ -48,7 +48,7 @@ peace_ai_desires = {
 					state = 58 
 					state = 909
 					state = 28
-					state = 988
+					state = 1023
 				}
 			}
         }
@@ -75,7 +75,7 @@ peace_ai_desires = {
 					state = 58 
 					state = 909
 					state = 28
-					state = 988
+					state = 1023
 				}
 			}
         }

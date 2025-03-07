@@ -6147,7 +6147,7 @@ focus_tree = {
 		}
 		available = {
 			controls_state = 28
-			controls_state = 988
+			controls_state = 1023
 			controls_state = 8
 			controls_state = 42
 			controls_state = 990
@@ -6188,7 +6188,7 @@ focus_tree = {
 					add_core_of = PRE
 					transfer_state_to = PRE
 				}
-				988 = {
+				1023 = {
 					add_core_of = PRE
 					transfer_state_to = PRE
 				}

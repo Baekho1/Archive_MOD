@@ -1452,7 +1452,7 @@ TRM_THE_NEW_ORDER = {
 				state = 58
 				state = 909
 				state = 28
-				state = 988
+				state = 1023
 			}
 		}
 		transfer_state_to = TRM
@@ -2542,7 +2542,7 @@ SOV_WIN_Great_Patriotic_War_2 = {
 				OR ={
 					is_core_of = MIL
 					state = 28
-					state = 988
+					state = 1023
 					state = 1018
 					state = 29
 					state = 14
