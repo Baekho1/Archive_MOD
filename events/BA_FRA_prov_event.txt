@@ -5955,7 +5955,7 @@ country_event ={
 			}
 			BA_decrease_state_category_by_one_level = yes
 		}
-		984 = {
+		1019 = {
 			remove_building = {
 				type = industrial_complex
 				level = 2
@@ -5970,7 +5970,7 @@ country_event ={
 			}
 			BA_decrease_state_category_by_one_level = yes
 		}
-		985 = {
+		1020 = {
 			remove_building = {
 				type = industrial_complex
 				level = 2
