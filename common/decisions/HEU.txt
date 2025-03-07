@@ -3209,7 +3209,7 @@ HEU_aru_GSC_annex_decision_category = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					state = 983
+					state = 1018
 					state = 34
 					state = 980
 					state = 989
@@ -3354,14 +3354,14 @@ HEU_aru_GSC_annex_decision_category = {
 
 		highlight_states = {
 			highlight_state_targets = { 
-				state = 983
+				state = 1018
 				state = 34
 				state = 977
 			} 
 		}
 
 		visible = {
-			owns_state = 983
+			owns_state = 1018
 			owns_state = 34
 			owns_state = 977
 		}
@@ -3386,7 +3386,7 @@ HEU_aru_GSC_annex_decision_category = {
 		days_remove = 14
 
 		remove_effect = {
-			983 = {
+			1018 = {
 				add_core_of = ROOT
 			}
 			34 = {

@@ -2895,7 +2895,7 @@ focus_tree = {
 		completion_reward = {
 			34 = { add_claim_by = ROOT }
 			980 = { add_claim_by = ROOT }
-			983 = { add_claim_by = ROOT }
+			1018 = { add_claim_by = ROOT }
 			989 = { add_claim_by = ROOT }
 		}
 	}

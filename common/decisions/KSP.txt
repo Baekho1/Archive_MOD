@@ -265,7 +265,7 @@ KSP_fight_with_wakamo = {
 				34 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 				989 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 				974 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
-				983 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
+				1018 = { has_state_flag = KSP_no_wakamo_here } # 영향력 감소 플래그
 			}
 		}
 		available = {
@@ -633,7 +633,7 @@ KSP_fight_with_wakamo = {
 			has_country_flag = KSP_wakamo_sabotage_activated			
 		}
 		available = {
-			983 = {
+			1018 = {
 				NOT = {
 					has_state_flag = KSP_no_wakamo_here
 				}
@@ -647,7 +647,7 @@ KSP_fight_with_wakamo = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 983
+				state = 1018
 			}
 		}
 
@@ -659,7 +659,7 @@ KSP_fight_with_wakamo = {
 
 		complete_effect = {
 			set_country_flag = KSP_doing_decisions_wakamo
-			983 = {
+			1018 = {
 				set_state_flag = KSP_no_wakamo_here
 				add_dynamic_modifier = { modifier = KSP_wakamo_sabotage_state }
 			}
@@ -668,7 +668,7 @@ KSP_fight_with_wakamo = {
 
 		remove_effect = {
 			clr_country_flag = KSP_doing_decisions_wakamo
-			983 = {
+			1018 = {
 				clr_state_flag = KSP_no_wakamo_here
 				remove_dynamic_modifier = { modifier = KSP_wakamo_sabotage_state }
 			}

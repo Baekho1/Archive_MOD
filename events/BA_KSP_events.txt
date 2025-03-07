@@ -750,7 +750,7 @@ country_event = {
 				# 	}
 				# }
 				# KSP = {
-				# 	transfer_state = 983
+				# 	transfer_state = 1018
 				# 	transfer_state = 34		
 				# 	transfer_units_fraction = {
 				# 		target = THIS
@@ -801,7 +801,7 @@ country_event = {
 			}
 			start_civil_war = {				
 				# THIS = {
-				# 	transfer_state = 983
+				# 	transfer_state = 1018
 				# 	transfer_state = 34
 				# 	transfer_units_fraction = {
 				# 		target = KSP
