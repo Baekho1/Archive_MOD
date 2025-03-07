@@ -478,6 +478,267 @@ COU_nation_moving_forward = {
 	}
 }
 
+##총학생회 공용 디시전 
+COU_decision_the_student_council = {
+    COU_the_srt_problem = {
+		icon = srt_icon
+		allowed = {
+			tag = COU
+			always = no
+		}
+
+		available = {
+		    NOT = { always = yes }
+		}
+
+		activation = { always = no }
+		
+		fire_only_once = yes
+		
+		is_good = no
+
+		days_mission_timeout = 1
+
+		timeout_effect = {
+			 country_event = COU_event.49
+		}
+	}
+	
+	##스케줄 티켓 보충 
+	COU_regain_schedule_ticket = {
+
+		 icon = icon_schedule_ticke
+
+		 allowed = { 
+		    original_tag = COU
+		    always = no
+		 }
+		
+		 available = { 
+			 NOT = { always = yes }
+		 }
+		
+		 days_mission_timeout = 90
+		
+		 is_good = no
+				
+		 activation = { always = no }
+		
+		 timeout_effect = {
+		      if = {
+			     limit = {
+				     OR = {
+			        	check_variable = { global.aru_schedule_point = 6 }
+				        check_variable = { global.aru_schedule_point < 6 }
+			         }
+			     }
+				 add_to_variable = { global.aru_schedule_point = 1 }
+				 custom_effect_tooltip = COU_tooltip_gain_one_schedule_ticket
+			 }
+			 hidden_effect = { activate_mission = COU_regain_schedule_ticket }
+		 }
+	}
+	
+	##스케줄 티켓 컨텐츠 
+	COU_mission_the_aoi = {
+	    
+		icon = icon_schedule_ticke
+
+		available = {
+			 check_variable = { global.aru_schedule_point > 0 }
+			 NOT = { has_country_flag = COU_flag_mission_clearing }
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+		
+		fire_only_once = no
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		
+		modifier = {
+		     consumer_goods_expected_value = 0.05
+			 industrial_capacity_dockyard = 0.05
+             industrial_capacity_factory = 0.05
+             production_factory_efficiency_gain_factor = 0.05
+		}
+		
+		complete_effect = { 
+		     set_country_flag = COU_flag_mission_clearing
+		}
+
+		remove_effect = {
+			 clr_country_flag = COU_flag_mission_clearing
+		}
+	}
+	
+	COU_mission_the_momoka = {
+	    
+		icon = icon_schedule_ticke
+
+		available = {
+			 check_variable = { global.aru_schedule_point > 0 }
+			 NOT = { has_country_flag = COU_flag_mission_clearing }
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+		
+		fire_only_once = no
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		
+		modifier = {
+		     production_speed_arms_factory_factor = -0.05
+			 production_speed_industrial_complex_factor = 0.05
+			 production_speed_infrastructure_factor = 0.05
+			 production_speed_rail_way_factor = 0.05
+		}
+		
+		complete_effect = { 
+		     set_country_flag = COU_flag_mission_clearing
+		}
+
+		remove_effect = {
+			 clr_country_flag = COU_flag_mission_clearing
+		}
+	}
+	
+	COU_mission_the_ayumu = {
+	    
+		icon = icon_schedule_ticke
+
+		available = {
+			 check_variable = { global.aru_schedule_point > 0 }
+			 NOT = { has_country_flag = COU_flag_mission_clearing }
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+		
+		fire_only_once = no
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		
+		modifier = {
+		     political_power_factor =  0.1
+			 drift_defence_factor = 0.15
+			 political_advisor_cost_factor = -0.15
+			 economy_cost_factor = 0.15
+		}
+		
+		complete_effect = { 
+		     set_country_flag = COU_flag_mission_clearing
+		}
+
+		remove_effect = {
+			 clr_country_flag = COU_flag_mission_clearing
+		}
+	}
+	
+	COU_mission_the_kaya = {
+	    
+		icon = icon_schedule_ticke
+
+		available = {
+			 check_variable = { global.aru_schedule_point > 0 }
+			 NOT = { has_country_flag = COU_flag_mission_clearing }
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+		
+		fire_only_once = no
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		
+		modifier = {
+		     experience_gain_army = 0.01
+			 experience_gain_navy = 0.01
+			 experience_gain_air = 0.01
+			 conscription = 0.03
+			 stability_factor = -0.05
+			 war_support_factor = 0.1
+		}
+		
+		complete_effect = { 
+		     set_country_flag = COU_flag_mission_clearing
+		}
+
+		remove_effect = {
+			 clr_country_flag = COU_flag_mission_clearing
+		}
+	}
+	
+	COU_mission_the_jaine = {
+	    
+		icon = icon_schedule_ticke
+
+		available = {
+			 check_variable = { global.aru_schedule_point > 0 }
+			 NOT = { has_country_flag = COU_flag_mission_clearing }
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+		
+		fire_only_once = no
+
+		days_remove = 30
+
+		custom_cost_trigger = {
+			check_variable = { global.aru_schedule_point > 0 }
+		}
+
+		custom_cost_text = aru_schedule_1
+		
+		modifier = {
+		     stability_factor = 0.1
+			 war_support_factor = -0.05
+			 army_org_factor = 0.05
+			 training_time_factor = -0.15
+		}
+		
+		complete_effect = { 
+		     set_country_flag = COU_flag_mission_clearing
+		}
+
+		remove_effect = {
+			 clr_country_flag = COU_flag_mission_clearing
+		}
+	}
+}
+
+
 ##린 탄핵 
 COU_getout_rin_decision = {
      COU_rin_getout_kaya = {

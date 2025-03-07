@@ -5456,6 +5456,32 @@ focus_tree = {
 		}
 	}
 	
+	focus = { #프랑스인 자치 보장 
+		id = COU_focus_add_state_core_nord_fadcale
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 8
+		y = 1
+		relative_position_id = COU_economy_focus_0
+		cost = 10
+		available = {
+		}
+		prerequisite = { focus = COU_establishment_of_human_rights_committee }
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		completion_reward = {
+		    add_stability = 0.05
+			add_political_power = 25
+			country_event = COU_event.51
+			
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
 #                                                                                                                    
 #                                                                                                                    
 #     ,---,                          ____                       ,---,.                                               

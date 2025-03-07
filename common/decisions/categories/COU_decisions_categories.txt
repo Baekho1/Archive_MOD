@@ -60,6 +60,23 @@ COU_nation_moving_forward = {
 	priority = 200
 }
 
+##총학생회 공용 디시전 
+COU_decision_the_student_council = {
+    icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = COU
+	}
+
+	visible = {
+		is_subject = no
+	}
+	priority = 300
+	
+	visible_when_empty = yes
+}
+
+
 ##린 탄핵 
 COU_getout_rin_decision = {
 	icon = GFX_decision_category_generic_political_actions

@@ -51,6 +51,13 @@ on_actions = {
 				give_resource_rights = { receiver = GEH state = 1025 }
 			}
 		}
+		effect = { 
+		    #COU decision start 
+		    COU = { 
+			    activate_mission = COU_the_srt_problem 
+			    activate_mission = COU_regain_schedule_ticket
+			}
+		}
 		effect = {
 			every_state = {
 				limit = { 

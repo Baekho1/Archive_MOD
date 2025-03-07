@@ -606,6 +606,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_decision_icon_schedule_ticke"
+		texturefile = "gfx/interface/decisions/decision_icon_schedule_ticke.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_decision_srt_icon"
 		texturefile = "gfx/interface/decisions/srt_icon.png"
 		legacy_lazy_load = no
