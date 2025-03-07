@@ -92,12 +92,10 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = -0.1
 				consumer_goods_expected_value = 0.1
 			    production_speed_buildings_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
 			}
 		}
 		
