@@ -4517,7 +4517,7 @@ focus_tree = {
 				controls_state = 909
 				controls_state = 1022
 				controls_state = 978
-				controls_state = 990
+				controls_state = 1025
 			}
 		}
         prerequisite = {
@@ -4558,7 +4558,7 @@ focus_tree = {
 						state = 807
 						state = 909
 						state = 1022
-						state = 990
+						state = 1025
 						state = 978
 					}
 					NOT = { is_core_of = ROOT }
@@ -4591,7 +4591,7 @@ focus_tree = {
 							state = 909
 							state = 1022
 							state = 978
-							state = 990
+							state = 1025
 
 							state = 28
 							state = 1023

@@ -3286,7 +3286,7 @@ focus_tree = {
 				controls_state = 59
 				controls_state = 909
 				controls_state = 1022
-				controls_state = 990
+				controls_state = 1025
 			}
 
 			custom_trigger_tooltip = {

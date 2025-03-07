@@ -3146,7 +3146,7 @@ focus_tree = {
 			controls_state = 762
 			controls_state = 42
 			controls_state = 1022
-			controls_state = 990
+			controls_state = 1025
 			controls_state = 51
 			controls_state = 57
 			controls_state = 56
@@ -3227,7 +3227,7 @@ focus_tree = {
 			1022 = {
 				add_compliance = 15
 			}
-			990 = {
+			1025 = {
 				add_compliance = 15
 			}
 			51  = {
@@ -6150,7 +6150,7 @@ focus_tree = {
 			controls_state = 1023
 			controls_state = 8
 			controls_state = 42
-			controls_state = 990
+			controls_state = 1025
 			controls_state = 1022
 			controls_state = 50
 			controls_state = 51
@@ -6200,7 +6200,7 @@ focus_tree = {
 					add_core_of = PRE
 					transfer_state_to = PRE
 				}
-				990 = {
+				1025 = {
 					add_core_of = PRE
 					transfer_state_to = PRE
 				}

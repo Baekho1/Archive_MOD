@@ -7979,7 +7979,7 @@ form_byzantine_empire_category = {
 				set_province_name = { id = 6923 name = "Philippopolis" }
 				211 = { add_core_of = ROOT }
 				211 = { set_state_name = "Pyrgos" }
-				set_province_name = { id = 9902 name = "Poros" }
+				set_province_name = { id = 10252 name = "Poros" }
 				set_province_name = { id = 9783 name = "Odessos" }
 				106 = { add_core_of = ROOT }
 				970 = { add_core_of = ROOT }
@@ -13912,7 +13912,7 @@ greater_italy_category = {
 					set_state_name = ITA_italian_savoy_name
 				}
 				set_province_name = {
-				    id = 9909 
+				    id = 10259 
 				    name = ITA_italian_nice_name
 				} 
 				set_province_name = {

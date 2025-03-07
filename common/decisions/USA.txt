@@ -4410,7 +4410,7 @@ USA_congress = {
 				state = 909
 				state = 1022
 				state = 978
-				state = 990
+				state = 1025
 			}
 		}
 
@@ -4445,7 +4445,7 @@ USA_congress = {
 			controls_state = 909
 			controls_state = 1022
 			controls_state = 978
-			controls_state = 990
+			controls_state = 1025
 		}
 
 		ai_will_do = {
@@ -4493,7 +4493,7 @@ USA_congress = {
 				transfer_state = 909
 				transfer_state = 1022
 				transfer_state = 978
-				transfer_state = 990
+				transfer_state = 1025
 				
 				ROOT = {
 					set_autonomy = {

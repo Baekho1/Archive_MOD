@@ -5954,7 +5954,7 @@ country_event = {
 		1022 = {
 			add_compliance = 20
 		}
-		990 = {
+		1025 = {
 			add_compliance = 20
 		}
 		51  = {
@@ -6157,7 +6157,7 @@ country_event = {
 					state = 51
 					state = 42
 					state = 909
-					state = 990
+					state = 1025
 					state = 1022
 				}
 			}
@@ -12207,7 +12207,7 @@ country_event = {
 		1022 = {
 			add_compliance = 20
 		}
-		990 = {
+		1025 = {
 			add_compliance = 20
 		}
 		51  = {
@@ -12410,7 +12410,7 @@ country_event = {
 					state = 51
 					state = 42
 					state = 909
-					state = 990
+					state = 1025
 					state = 1022
 				}
 			}

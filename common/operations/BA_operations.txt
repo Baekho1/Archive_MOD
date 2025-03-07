@@ -3,7 +3,7 @@ BA_fake_money_gang = { ### 0 1/35 위조지폐 발행
 	map_icon = GFX_operations_steal_blueprints_map
 	name = BA_fake_money_gang
 	desc = BA_fake_money_gang_desc
-	priority = 990
+	priority = 1025
 	prevent_captured_operative_to_die = yes
 
 	days = 35
@@ -111,7 +111,7 @@ BA_corona_gang = { ### 0 1/35 생화학 무기 살포
 	map_icon = GFX_operations_targeted_sabotage_map
 	name = BA_corona_gang
 	desc = BA_corona_gang_desc
-	priority = 990
+	priority = 1025
 	prevent_captured_operative_to_die = yes
 
 	days = 35
