@@ -1145,14 +1145,6 @@ focus_tree = {
 		available = {
 
 		}
-		bypass = {
-			OR = {
-				HND = {
-					exists = no
-				}
-				is_ally_with = HND
-			}
-		}
 		prerequisite = {
 			focus = FRA_focus_old_6
 			focus = FRA_focus_old_12

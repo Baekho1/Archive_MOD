@@ -23,7 +23,7 @@
 
 allow_wargoals = {
 	name = "RULE_ALLOW_WARGOALS"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_wargoals"
 	option = {
 		name = "ALWAYS_FREE"
@@ -78,7 +78,7 @@ allow_wargoals = {
 }
 allow_access = {
 	name = "RULE_ALLOW_MILITARY_ACCESS"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_military_access_docking_rights"
 	default = {
 		name = "FREE"
@@ -99,7 +99,7 @@ allow_access = {
 
 allow_release_nations = {
 	name = "RULE_ALLOW_RELEASE_NATIONS"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_release_nations"
 	default = {
 		name = "FREE"
@@ -120,7 +120,7 @@ allow_release_nations = {
 
 allow_licensing = {
 	name = "RULE_ALLOW_LICENSING"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	required_dlc = "Death or Dishonor"
 	icon = "GFX_production_licenses"
 	option = {
@@ -147,7 +147,7 @@ allow_licensing = {
 
 allow_lend_lease = {
 	name = "RULE_ALLOW_LEND_LEASE"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_lend_lease"
 	option = {
 		name = "FREE"
@@ -178,7 +178,7 @@ allow_lend_lease = {
 
 allow_volunteers = {
 	name = "RULE_ALLOW_VOLUNTEERS"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_volunteers"
 	option = {
 		name = "ALWAYS_FREE"
@@ -204,7 +204,7 @@ allow_volunteers = {
 
 allow_guarantees = {
 	name = "RULE_ALLOW_GUARANTEES"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_guarantee_independence"
 	option = {
 		name = "ALWAYS_FREE"
@@ -230,7 +230,7 @@ allow_guarantees = {
 
 allow_revoke_guarantees = {
 	name = "RULE_ALLOW_REVOKE_GUARANTEES"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_revoke_guarantees"
 	default = {
 		name = "ALLOWED"
@@ -246,7 +246,7 @@ allow_revoke_guarantees = {
 
 allow_leave_faction = {
 	name = "RULE_ALLOW_LEAVE_FACTION"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_leave_faction"
 	default = {
 		name = "ALLOWED"
@@ -262,7 +262,7 @@ allow_leave_faction = {
 
 allow_kick_faction = {
 	name = "RULE_ALLOW_KICK_FACTION"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_kick_from_faction"
 	option = {
 		name = "ALLOWED"
@@ -278,7 +278,7 @@ allow_kick_faction = {
 
 allow_take_over_faction = {
 	name = "RULE_ALLOW_TAKE_OVER_FACTION"
-	group = "RULE_GROUP_GEKERAL_FOREIGN_POLICY"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	required_dlc = "Man the Guns"
 	icon = "GFX_take_over_faction_leadership"
 	option = {
@@ -1059,6 +1059,56 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_DEFAULT"
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
+
+	option = {
+		name = GOE_HISTORICAL
+		text = "RULE_OPTION_GOE_HISTORICAL"
+		desc = "RULE_OPTION_GOE_HISTORICAL_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_UNITED
+		text = "RULE_OPTION_GOE_INDIA_UNITED"
+		desc = "RULE_OPTION_GOE_INDIA_UNITED_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_FASCISM_BOSE
+		text = "RULE_OPTION_GOE_INDIA_FASCISM_BOSE"
+		desc = "RULE_OPTION_GOE_INDIA_FASCISM_BOSE_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_FASCISM_HINDUTVA 
+		text = "RULE_OPTION_GOE_INDIA_FASCISM_HINDUTVA"
+		desc = "RULE_OPTION_GOE_INDIA_FASCISM_HINDUTVA_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_EAST_INDIA_COMPANY
+		text = "RULE_OPTION_GOE_INDIA_EAST_INDIA_COMPANY"
+		desc = "RULE_OPTION_GOE_INDIA_EAST_INDIA_COMPANY_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_MUGHAL
+		text = "RULE_OPTION_GOE_INDIA_MUGHAL"
+		desc = "RULE_OPTION_GOE_INDIA_MUGHAL_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
+	option = {
+		name = GOE_INDIA_COMMUNISM
+		text = "RULE_OPTION_GOE_INDIA_COMMUNISM"
+		desc = "RULE_OPTION_GOE_INDIA_COMMUNISM_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+	}
+
 	option = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
@@ -1072,6 +1122,18 @@ RAJ_ai_behavior = {
 	}
 	option = {
 		name = FASCIST
+		text = "RULE_OPTION_FASCIST"
+		desc = "RULE_FASCIST_RAJ_AI_DESC"
+	}
+
+	option = {
+		name = FASCIST
+		text = "RULE_OPTION_FASCIST"
+		desc = "RULE_FASCIST_RAJ_AI_DESC"
+	}
+
+	option = {
+		name = HISTORICAL
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_RAJ_AI_DESC"
 	}
@@ -2677,6 +2739,138 @@ COG_AI_BEHAVIOR = {
 	}
 }
 
+AFG_ai_behavior = {
+	name = "AFG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Graveyard of Empires"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_AFG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCISM
+		text = "RULE_OPTION_FASCISM"
+		desc = "RULE_OPTION_FASCISM_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEMOCRATIC
+		text = "RULE_OPTION_DEMOCRATIC"
+		desc = "RULE_OPTION_DEMOCRATIC_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_COMMUNIST"
+		desc = "RULE_OPTION_COMMUNIST_AFG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+IRQ_ai_behavior = {
+	name = "IRQ_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Graveyard of Empires"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL_IRQ_AI"
+		desc = "RULE_OPTION_HISTORICAL_IRQ_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCISM
+		text = "RULE_OPTION_FASCISM_IRQ_AI"
+		desc = "RULE_OPTION_FASCISM_IRQ_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HASHEMITE_IRQ
+		text = "RULE_OPTION_HASHEMITE_IRQ_AI"
+		desc = "RULE_OPTION_HASHEMITE_IRQ_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = SIDQI_IRQ
+		text = "RULE_OPTION_SIDQI_IRQ_AI"
+		desc = "RULE_OPTION_SIDQI_IRQ_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = KURDISTAN_IRQ
+		text = "RULE_OPTION_KURDISTAN_IRQ_AI"
+		desc = "RULE_OPTION_KURDISTAN_IRQ_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+PER_ai_behavior = {
+	name = "PER_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "Graveyard of Empires"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL_PER_AI"
+		desc = "RULE_OPTION_HISTORICAL_PER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = IMPERIAL_PER
+		text = "RULE_OPTION_IMPERIAL_PER_AI"
+		desc = "RULE_OPTION_IMPERIAL_PER_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEMOCRATIC_PER
+		text = "RULE_OPTION_DEMOCRATIC_PER_AI"
+		desc = "RULE_OPTION_DEMOCRATIC_PER_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COMMUNISM_PER
+		text = "RULE_OPTION_COMMUNISM_PER_AI"
+		desc = "RULE_OPTION_COMMUNISM_PER_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = FASCISM_PER
+		text = "RULE_OPTION_FASCISM_PER_AI"
+		desc = "RULE_OPTION_FASCISM_PER_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
  ##   ##  #   # ###      ## ### ### #  # ###  
 #    #  # ## ## #       #   #    #  #  # #  # 
 # ## #### # # # ##       #  ##   #  #  # ###  
@@ -2852,6 +3046,11 @@ raj_fragmentation_status = {
 		text = "RULE_OPTION_RAJ_FRAGMENTED"
 		desc = "RULE_OPTION_RAJ_FRAGMENTED_DESC"
 	}
+	option = {
+		name = RAJ_PRINCELY_STATES_FREE
+		text = "RULE_OPTION_RAJ_PRINCELY_STATES_FREE"
+		desc = "RULE_OPTION_RAJ_PRINCELY_STATES_FREE_DESC"
+	}
 }
 eth_fragmentation_status = {
 	name = "ETH_FRAGMENTATION_STATUS" 
@@ -2947,7 +3146,7 @@ germany_fragmentation_status = {
 
 obsolete_focus_branches_visibility = {
 	name = "OBSOLETE_FOCUS_BRANCHES_VISIBILITY"
-	group = "RULE_GROUP_GEKERAL_UI"
+	group = "RULE_GROUP_GENERAL_UI"
 	default = {
 		name = HIDE
 		text = "RULE_OPTION_HIDE"

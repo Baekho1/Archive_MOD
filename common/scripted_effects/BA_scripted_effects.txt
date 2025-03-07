@@ -2056,13 +2056,6 @@ BRAVE_NEW_WORLD = {
 		transfer_state = 288
 		transfer_state = 640
 	}
-	HND = {
-		set_cosmetic_tag = HND_JAP
-		transfer_state = 430
-		transfer_state = 431
-		transfer_state = 432
-		transfer_state = 435
-	}
 	JAP = {
 		create_faction = JAP_greater_east_asian_co_prosperity_sphere
 		puppet = CHI
