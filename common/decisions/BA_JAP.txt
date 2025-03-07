@@ -399,13 +399,13 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 		icon = GFX_decision_jap_geacps
 		allowed = { }
 		available = { 
-            996 = { is_controlled_by_ROOT_or_subject = yes }
+            1031 = { is_controlled_by_ROOT_or_subject = yes }
             598 = { is_controlled_by_ROOT_or_subject = yes }
             613 = { is_controlled_by_ROOT_or_subject = yes }
 		}
         highlight_states = {
             highlight_state_targets = {
-				state = 996
+				state = 1031
                 state = 598
                 state = 613
             }
@@ -418,7 +418,7 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 		
 		complete_effect = {
 			WCH = {
-				transfer_state = 996
+				transfer_state = 1031
 				add_country_leader_role = {
 					character = KMT_Liang_Hongzhi
 					promote_leader = yes
@@ -449,7 +449,7 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 					OR = {
 						state = 598
 						state = 613
-						state = 996
+						state = 1031
 					}
 					OR = {
 						is_owned_by = ROOT
@@ -464,7 +464,7 @@ JAP_Greater_East_Asia_Co_Prosperity_Sphere = {
 					OR = {
 						state = 598
 						state = 613
-						state = 996
+						state = 1031
 					}
 					NOT = {
 						OR = {
