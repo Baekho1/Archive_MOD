@@ -100,10 +100,10 @@ country_event = {
 		if = {
 			limit = {
 				SHA = {
-					owns_state = 986
+					owns_state = 1021
 				}
 			}
-			transfer_state = 986
+			transfer_state = 1021
 		}
 		if = {
 			limit = {
@@ -526,10 +526,10 @@ country_event = {
 		if = {
 			limit = {
 				HYA = {
-					owns_state = 986
+					owns_state = 1021
 				}
 			}
-			transfer_state = 986
+			transfer_state = 1021
 		}
 		if = {
 			limit = {

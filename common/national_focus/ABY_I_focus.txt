@@ -449,7 +449,7 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			986 = {
+			1021 = {
 				set_demilitarized_zone = yes
 			}
 			custom_effect_tooltip = ABY_new_tt_33
@@ -1036,7 +1036,7 @@ focus_tree = {
 			ABY_4_unite_effect = yes
 			ABY_152_unite_effect = yes
 			ABY_153_unite_effect = yes
-			ABY_986_unite_effect = yes
+			ABY_1021_unite_effect = yes
 			ABY_975_unite_effect = yes
 			ABY_848_unite_effect = yes
 			ABY_976_unite_effect = yes
@@ -1559,7 +1559,7 @@ focus_tree = {
 			controls_state = 4
 			controls_state = 152
 			controls_state = 153
-			controls_state = 986
+			controls_state = 1021
 			controls_state = 975#중점 선행조건
 			controls_state = 976
 			controls_state = 848
@@ -4009,7 +4009,7 @@ focus_tree = {
 			ABY_4_rebuild_effect = yes
 			ABY_152_rebuild_effect = yes
 			ABY_153_rebuild_effect = yes
-			ABY_986_rebuild_effect = yes
+			ABY_1021_rebuild_effect = yes
 			ABY_975_rebuild_effect = yes
 			ABY_848_rebuild_effect = yes
 			ABY_976_rebuild_effect = yes
@@ -4053,7 +4053,7 @@ focus_tree = {
 			ABY_4_unite_effect = yes
 			ABY_152_unite_effect = yes
 			ABY_153_unite_effect = yes
-			ABY_986_unite_effect = yes
+			ABY_1021_unite_effect = yes
 			ABY_975_unite_effect = yes
 			ABY_848_unite_effect = yes
 			ABY_976_unite_effect = yes
@@ -8668,7 +8668,7 @@ focus_tree = {
 			controls_state = 4
 			controls_state = 152
 			controls_state = 153
-			controls_state = 986
+			controls_state = 1021
 			controls_state = 975#중점 선행조건
 			controls_state = 976
 			controls_state = 848
@@ -8679,7 +8679,7 @@ focus_tree = {
 			ABY_4_develop_effect = yes
 			ABY_152_develop_effect = yes
 			ABY_153_develop_effect = yes
-			ABY_986_develop_effect = yes
+			ABY_1021_develop_effect = yes
 			ABY_975_develop_effect = yes
 			ABY_848_develop_effect = yes
 			ABY_976_develop_effect = yes
@@ -8809,15 +8809,15 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
-			controls_state = 986
+			controls_state = 1021
 			#중점 선행조건
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = ABY_flag_986_develop_tt
-			ABY_986_develop_effect = yes
-			custom_effect_tooltip = ABY_flag_986_unite_tt
-			ABY_986_unite_effect = yes
+			custom_effect_tooltip = ABY_flag_1021_develop_tt
+			ABY_1021_develop_effect = yes
+			custom_effect_tooltip = ABY_flag_1021_unite_tt
+			ABY_1021_unite_effect = yes
 		}
 	}
 	focus = {
@@ -8843,13 +8843,13 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
-			controls_state = 986
+			controls_state = 1021
 			#중점 선행조건
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = ABY_flag_986_unite_tt
-			ABY_986_unite_effect = yes
+			custom_effect_tooltip = ABY_flag_1021_unite_tt
+			ABY_1021_unite_effect = yes
 			every_state = {
 				limit = {
 					AND = {
@@ -8863,7 +8863,7 @@ focus_tree = {
 							state = 4
 							state = 152
 							state = 153
-							state = 986
+							state = 1021
 							state = 975
 							state = 976
 							state = 848
@@ -9023,7 +9023,7 @@ focus_tree = {
 			controls_state = 4
 			controls_state = 152
 			controls_state = 153
-			controls_state = 986
+			controls_state = 1021
 			controls_state = 975#중점 선행조건
 			controls_state = 976
 			controls_state = 848
@@ -9045,7 +9045,7 @@ focus_tree = {
 							state = 4
 							state = 152
 							state = 153
-							state = 986
+							state = 1021
 							state = 975
 							state = 976
 							state = 848
@@ -10901,7 +10901,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_country_flag = ABY_flag_986_complete
+					has_country_flag = ABY_flag_1021_complete
 				}
 				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
 				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }

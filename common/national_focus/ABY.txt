@@ -2124,7 +2124,7 @@ focus_tree = {
 		}
 		available = {
 			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
+			1021 = { is_controlled_by = ABY }
 			153 = { is_controlled_by = ABY }
 			152 = { is_controlled_by = ABY }
 			848 = { is_controlled_by = ABY }
@@ -5517,13 +5517,13 @@ focus_tree = {
 			if = {
 				limit = {
 					4 = { is_controlled_by = ABY }
-					986 = { is_controlled_by = ABY }
+					1021 = { is_controlled_by = ABY }
 					153 = { is_controlled_by = ABY }
 					152 = { is_controlled_by = ABY }
 					848 = { is_controlled_by = ABY }
 				}
 				4 = { add_core_of = ABY }
-				986 = { add_core_of = ABY }
+				1021 = { add_core_of = ABY }
 				153 = { add_core_of = ABY }
 				152 = { add_core_of = ABY }
 				848 = { add_core_of = ABY }
@@ -5561,13 +5561,13 @@ focus_tree = {
 			if = {
 				limit = {
 					4 = { is_controlled_by = ABY }
-					986 = { is_controlled_by = ABY }
+					1021 = { is_controlled_by = ABY }
 					153 = { is_controlled_by = ABY }
 					152 = { is_controlled_by = ABY }
 					848 = { is_controlled_by = ABY }
 				}
 				4 = { add_core_of = ABY }
-				986 = { add_core_of = ABY }
+				1021 = { add_core_of = ABY }
 				153 = { add_core_of = ABY }
 				152 = { add_core_of = ABY }
 				848 = { add_core_of = ABY }

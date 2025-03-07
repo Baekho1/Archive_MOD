@@ -3514,7 +3514,7 @@ focus_tree = {
 			has_army_manpower = { size > 749999 }
 			NOT = { 
 				owns_state = 4
-				owns_state = 986
+				owns_state = 1021
 				owns_state = 152
 				owns_state = 153
 				owns_state = 848
@@ -3522,7 +3522,7 @@ focus_tree = {
         }
         bypass = {
 			controls_state = 4
-			controls_state = 986
+			controls_state = 1021
 			controls_state = 152
 			controls_state = 153
 			controls_state = 848
@@ -3549,7 +3549,7 @@ focus_tree = {
 						has_capitulated = no
 						OR = {
 							owns_state = 4
-							owns_state = 986
+							owns_state = 1021
 							owns_state = 152
 							owns_state = 153
 							owns_state = 848
@@ -3569,7 +3569,7 @@ focus_tree = {
 					NOT = { tag = SHA }
 					OR = {
 						owns_state = 4
-						owns_state = 986
+						owns_state = 1021
 						owns_state = 152
 						owns_state = 153
 						owns_state = 848
@@ -3580,7 +3580,7 @@ focus_tree = {
 						target = PREV
 						type = take_state
 						generator = {
-							4 986 152 153 848
+							4 1021 152 153 848
 						}
 					}
 				}

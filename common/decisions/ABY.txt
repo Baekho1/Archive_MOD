@@ -9232,7 +9232,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
         available = {
 			any_state = {
 				4 = {is_controlled_by = ABY}
-				986 = {is_controlled_by = ABY}
+				1021 = {is_controlled_by = ABY}
 				152 = {is_controlled_by = ABY}
 				848 = {is_controlled_by = ABY}
 				153 = {is_controlled_by = ABY}
@@ -10756,7 +10756,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 					controls_state = 153
 					controls_state = 152
 					controls_state = 4
-					controls_state = 986
+					controls_state = 1021
         }
 
 		fire_only_once = yes
@@ -10775,7 +10775,7 @@ ABY_descision_category_abydos_puppet = { # 연방조약 괴뢰
 								state = 153
 								state = 152
 								state = 4
-								state = 986
+								state = 1021
 							}
 						}
 						add_core_of = PREV
@@ -16339,7 +16339,7 @@ ABY_descision_category_provisional_government = {
 				every_other_country = {
 					limit = {
 						OR = {
-							controls_state = 986
+							controls_state = 1021
 							controls_state = 4
 							controls_state = 152
 							controls_state = 848
@@ -17886,7 +17886,7 @@ ABY_descision_category_debug = {
 							state = 91
 							state = 89
 							state = 80
-							state = 986
+							state = 1021
 						}
 					}
 					transfer_state_to = ABY
@@ -18120,7 +18120,7 @@ ABY_descision_category_debug = {
 							state = 66
 							state = 67
 							state = 762
-							state = 986
+							state = 1021
 							state = 4
 							state = 152
 							state = 153
@@ -18643,7 +18643,7 @@ ABY_descision_category_debug = {
 				every_state = {
 					limit = {
 						OR = {
-							state = 986
+							state = 1021
 							state = 4
 							state = 152
 							state = 153
@@ -20474,7 +20474,7 @@ ABY_descision_category_abydos_highschool = {
 			ABY_972_rebuild_effect = yes
         }
 	}
-	ABY_descision_develop_986 = {
+	ABY_descision_develop_1021 = {
         priority = 1
 
         allowed = {
@@ -20482,7 +20482,7 @@ ABY_descision_category_abydos_highschool = {
         }
 
 		visible = {
-			check_variable = { ABY_selected_state = 986 }
+			check_variable = { ABY_selected_state = 1021 }
 		}
 
         available = {
@@ -20494,7 +20494,7 @@ ABY_descision_category_abydos_highschool = {
 				}
 				tooltip = ABY_tt_develop_full
 			}
-			controls_state = 986
+			controls_state = 1021
         }
 
 		cost = ABY_industry_cost_var
@@ -20502,10 +20502,10 @@ ABY_descision_category_abydos_highschool = {
 		days_remove = 70
 
         remove_effect = {   
-			ABY_986_develop_effect = yes
+			ABY_1021_develop_effect = yes
         }
 	}
-	ABY_descision_unite_986 = {
+	ABY_descision_unite_1021 = {
         priority = 1
 
         allowed = {
@@ -20513,7 +20513,7 @@ ABY_descision_category_abydos_highschool = {
         }
 
 		visible = {
-			check_variable = { ABY_selected_state = 986 }
+			check_variable = { ABY_selected_state = 1021 }
 		}
 
         available = {
@@ -20525,7 +20525,7 @@ ABY_descision_category_abydos_highschool = {
 				}
 				tooltip = ABY_tt_unite_full
 			}
-			controls_state = 986
+			controls_state = 1021
         }
 
 		cost = ABY_unite_cost_var
@@ -20533,10 +20533,10 @@ ABY_descision_category_abydos_highschool = {
 		days_remove = 70
 
         remove_effect = {   
-			ABY_986_unite_effect = yes
+			ABY_1021_unite_effect = yes
         }
 	}
-	ABY_descision_rebuild_986 = {
+	ABY_descision_rebuild_1021 = {
         priority = 1
 
         allowed = {
@@ -20544,7 +20544,7 @@ ABY_descision_category_abydos_highschool = {
         }
 
 		visible = {
-			check_variable = { ABY_selected_state = 986 }
+			check_variable = { ABY_selected_state = 1021 }
 		}
 
         available = {
@@ -20556,7 +20556,7 @@ ABY_descision_category_abydos_highschool = {
 				}
 				tooltip = ABY_tt_rebuild_full
 			}
-			controls_state = 986
+			controls_state = 1021
         }
 
 		cost = ABY_rebuild_cost_var
@@ -20564,7 +20564,7 @@ ABY_descision_category_abydos_highschool = {
 		days_remove = 70
 
         remove_effect = {   
-			ABY_986_rebuild_effect = yes
+			ABY_1021_rebuild_effect = yes
         }
 	}
 	ABY_descision_develop_4 = {
@@ -21402,7 +21402,7 @@ ABY_descision_category_federal_government = {
 				ABY_4_unite_effect = yes
 				ABY_152_unite_effect = yes
 				ABY_153_unite_effect = yes
-				ABY_986_unite_effect = yes
+				ABY_1021_unite_effect = yes
 				ABY_975_unite_effect = yes
 				ABY_848_unite_effect = yes
 				ABY_976_unite_effect = yes

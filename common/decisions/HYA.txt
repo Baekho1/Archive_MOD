@@ -548,7 +548,7 @@ HYA_revenge_drama = {
 
 		available = {
 			controls_state = 972
-			controls_state = 986
+			controls_state = 1021
 		}
 
 		complete_effect = {	

@@ -1657,7 +1657,7 @@ country_event = {
 		every_other_country = {
 			limit = {
 				OR = {
-					controls_state = 986
+					controls_state = 1021
 					controls_state = 4
 					controls_state = 152
 					controls_state = 848
@@ -1870,7 +1870,7 @@ country_event = {
 		trigger = {
 			has_completed_focus = ABY_focus_great_donau
 		}
-		986 = { set_demilitarized_zone = no }
+		1021 = { set_demilitarized_zone = no }
 		4 = { set_demilitarized_zone = no }
 		972 = { set_demilitarized_zone = no }
 		153 = { set_demilitarized_zone = no }
@@ -1907,7 +1907,7 @@ country_event = {
 			size = 0.35
 			army_ratio = 0.35
 			states = {
-				972 74 153 4 986
+				972 74 153 4 1021
 			}
 			keep_all_characters = yes
 			set_cosmetic_tag = ABY_revolution
@@ -1935,7 +1935,7 @@ country_event = {
 			ABY_4_unite_effect = yes
 			ABY_152_unite_effect = yes
 			ABY_153_unite_effect = yes
-			ABY_986_unite_effect = yes
+			ABY_1021_unite_effect = yes
 			ABY_975_unite_effect = yes
 			ABY_848_unite_effect = yes
 			ABY_976_unite_effect = yes
@@ -2157,7 +2157,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.37.a
 		ai_chance = { factor = 100 }
-		986 = { set_demilitarized_zone = yes }
+		1021 = { set_demilitarized_zone = yes }
 		4 = { set_demilitarized_zone = yes }
 		972 = { set_demilitarized_zone = yes }
 		add_popularity = {
@@ -4457,7 +4457,7 @@ country_event = {
 	option = {
 		trigger = {
 			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
+			1021 = { is_controlled_by = ABY }
 			153 = { is_controlled_by = ABY }
 			152 = { is_controlled_by = ABY }
 			848 = { is_controlled_by = ABY }
@@ -4465,7 +4465,7 @@ country_event = {
 		name = ABY_new_event.128.b
 		ai_chance = { factor = 100 }
 		set_capital = {
-			state = 986
+			state = 1021
 		}
 		set_province_name = {
 			id = 732
@@ -4479,7 +4479,7 @@ country_event = {
 	option = {
 		trigger = {
 			4 = { is_controlled_by = ABY }
-			986 = { is_controlled_by = ABY }
+			1021 = { is_controlled_by = ABY }
 			153 = { is_controlled_by = ABY }
 			152 = { is_controlled_by = ABY }
 			848 = { is_controlled_by = ABY }
@@ -10031,7 +10031,7 @@ country_event = {
 						allow_spawning_on_enemy_provs = yes
 					}
 				}
-				986 = {
+				1021 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
@@ -10079,7 +10079,7 @@ country_event = {
 						allow_spawning_on_enemy_provs = yes
 					}
 				}
-				986 = {
+				1021 = {
 					create_unit = {
 						division = "name = \"German resistances\" division_template = \"German resistances\" start_experience_factor = 0 start_equipment_factor = 0.8"
 						owner = ABY
@@ -10269,7 +10269,7 @@ country_event = {
 	option = {
 		name = ABY_new_event.206.a
 		ai_chance = { factor = 100 }
-		986 = {
+		1021 = {
 			set_demilitarized_zone = no
 		}
 	}
@@ -10293,7 +10293,7 @@ country_event = {
 				active = yes
 			}
 			set_capital = {
-				state = 986
+				state = 1021
 				remember_old_capital = yes
 			}
 		}

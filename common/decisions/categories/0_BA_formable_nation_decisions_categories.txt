@@ -169,7 +169,7 @@ BA_from_southern_kivotos = {
 	}
 	on_map_area = {
         targets = {
-			4 986 152 153 848 69 74 75 72 9 69 53 52 54 976 975 972
+			4 1021 152 153 848 69 74 75 72 9 69 53 52 54 976 975 972
 		}
         name = southern_kivoto_decision
         zoom = 200
@@ -178,7 +178,7 @@ BA_from_southern_kivotos = {
 	highlight_states = {
 		highlight_state_targets = {
 			state = 4
-			state = 986
+			state = 1021
 			state = 152
 			state = 153
 			state = 848

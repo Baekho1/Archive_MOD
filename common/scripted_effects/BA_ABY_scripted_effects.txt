@@ -61,12 +61,12 @@ setup_central_map = {
 		set_variable = { 972:ABY_unite_var = 0 }
 		set_variable = { 972:ABY_rebuild_var = 0 }
 
-		add_to_array = { ABY_rework_map_array = 986 }
+		add_to_array = { ABY_rework_map_array = 1021 }
 		add_to_array = { ABY_map_x = 10 }
 		add_to_array = { ABY_map_y = 50 }
-		set_variable = { 986:ABY_central_var = 0 }
-		set_variable = { 986:ABY_unite_var = 0 }
-		set_variable = { 986:ABY_rebuild_var = 0 }
+		set_variable = { 1021:ABY_central_var = 0 }
+		set_variable = { 1021:ABY_unite_var = 0 }
+		set_variable = { 1021:ABY_rebuild_var = 0 }
 
 		add_to_array = { ABY_rework_map_array = 975 }
 		add_to_array = { ABY_map_x = 10 }
@@ -123,7 +123,7 @@ setup_central_map = {
 					state = 192
 					state = 193
 					state = 848
-					state = 986
+					state = 1021
 					state = 975
 					state = 976
 				}
@@ -1376,15 +1376,15 @@ ABY_972_rebuild_effect = {
 		}
 	central_map_calculate_frame = yes
 }
-ABY_986_develop_effect = {
-		set_variable = { ABY_selected_state = 986 }
+ABY_1021_develop_effect = {
+		set_variable = { ABY_selected_state = 1021 }
 		if = {
 			limit = {
 				check_variable = { ABY_selected_state:ABY_central_var = 0 }
 			}
 			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
 			add_to_variable = { ABY_industry_progress_var = 1 }
-			986 = {
+			1021 = {
             	add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1398,7 +1398,7 @@ ABY_986_develop_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
 			add_to_variable = { ABY_industry_progress_var = 1 }
-			986 = {
+			1021 = {
 				add_extra_state_shared_building_slots = 1
             	add_building_construction = {
 					type = industrial_complex
@@ -1413,7 +1413,7 @@ ABY_986_develop_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
 			add_to_variable = { ABY_industry_progress_var = 1 }
-			986 = {
+			1021 = {
 				add_extra_state_shared_building_slots = 1
             	add_building_construction = {
 					type = arms_factory
@@ -1428,7 +1428,7 @@ ABY_986_develop_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_central_var = 1 }
 			add_to_variable = { ABY_industry_progress_var = 1 }
-			986 = {
+			1021 = {
 				add_dynamic_modifier = {
 					modifier = ABY_modifier_develop
 				}
@@ -1438,7 +1438,7 @@ ABY_986_develop_effect = {
 			limit = {
 				check_variable = { ABY_selected_state:ABY_central_var = 4 }
 			}
-			986 = {
+			1021 = {
 				add_extra_state_shared_building_slots = 1
             	add_building_construction = {
 					type = industrial_complex
@@ -1449,15 +1449,15 @@ ABY_986_develop_effect = {
 		}
 	central_map_calculate_frame = yes
 }
-ABY_986_unite_effect = {
-		set_variable = { ABY_selected_state = 986 }
+ABY_1021_unite_effect = {
+		set_variable = { ABY_selected_state = 1021 }
 		if = {
 			limit = {
 				check_variable = { ABY_selected_state:ABY_unite_var = 0 }
 			}
 			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
 			add_to_variable = { ABY_unite_progress_var = 1 }
-			986 = {
+			1021 = {
 				add_dynamic_modifier = {
 					modifier = ABY_modifier_unite_1
 				}
@@ -1469,7 +1469,7 @@ ABY_986_unite_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_unite_var = 1 }
 			add_to_variable = { ABY_unite_progress_var = 1 }
-			986 = {
+			1021 = {
 				remove_dynamic_modifier = {
 					modifier = ABY_modifier_unite_1
 				}
@@ -1502,21 +1502,21 @@ ABY_986_unite_effect = {
 			limit = {
 				check_variable = { ABY_selected_state:ABY_unite_var = 3 }
 			}
-			986 = {
+			1021 = {
 				add_manpower = 50000
 			}
 		}
 	central_map_calculate_frame = yes
 }
-ABY_986_rebuild_effect = {
-		set_variable = { ABY_selected_state = 986 }
+ABY_1021_rebuild_effect = {
+		set_variable = { ABY_selected_state = 1021 }
 		if = {
 			limit = {
 				check_variable = { ABY_selected_state:ABY_rebuild_var = 0 }
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			986 = {
+			1021 = {
 				add_core_of = ABY
 			}
 			add_to_variable = {ABY_var_conscription_factor = -0.05}
@@ -1542,7 +1542,7 @@ ABY_986_rebuild_effect = {
 					add_idea = ABY_idea_two_03
 				}
 			}
-			set_country_flag = ABY_flag_986_complete
+			set_country_flag = ABY_flag_1021_complete
 			if = {
 				limit = {
 					NOT = {
@@ -3050,9 +3050,9 @@ central_map_calculate_frame = {
 								}
 							}
 							AND = {
-								check_variable = { v = 986 }
+								check_variable = { v = 1021 }
 								NOT = {
-									986 = {
+									1021 = {
 										is_controlled_by = ABY
 									}
 								}
