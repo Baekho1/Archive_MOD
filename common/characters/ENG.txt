@@ -228,6 +228,21 @@ characters={
 		}
 		
 	}
+
+	ENG_horatio_dundas={
+		name=ENG_horatio_dundas
+		portraits={
+			civilian={
+				large=GFX_portrait_ENG_horatio_dundas
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ quartermaster_general compassionate_gentleman }
+			expire="1945.1.1.12"
+			id=-1
+		}
+	}
 	
 	ENG_british_army={
 		name=ENG_british_army
@@ -1200,28 +1215,37 @@ characters={
 		}
 	}
 
-	ENG_frank_whittle={
-		name=ENG_frank_whittle
-		portraits={
-			army={
-				small="GFX_idea_frank_whittle"
+	ENG_frank_whittle = {
+		name = ENG_frank_whittle
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_frank_whittle
+				small = GFX_idea_frank_whittle
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = frank_whittle
-			ledger = air
-			allowed = {
-				original_tag = ENG
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_bright }
+			skills = {
+				specialization_air = 2
 			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
-			}
-		}		
+		}
+
+		#advisor = {
+		#	cost = 100
+		#	slot = theorist
+		#	idea_token = frank_whittle
+		#	ledger = air
+		#	allowed = {
+		#		original_tag = ENG
+		#	}
+		#	research_bonus = {
+		#		rocketry = 0.150
+		#	}
+		#	traits = {
+		#		rocket_scientist
+		#	}
+		#}		
 	}
 
 	ENG_jfc_fuller={
@@ -1248,7 +1272,71 @@ characters={
 				blitzkrieg_theorist
 			}
 			ai_will_do = {
-				factor = 1.000
+				base = 1
+			}
+		}
+	}
+
+	ENG_john_cockcroft = {
+		name = ENG_john_cockcroft
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_john_cockcroft
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	ENG_charles_goodeve = {
+		name = ENG_charles_goodeve
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_charles_goodeve
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	ENG_nevil_shute = {
+		name = ENG_nevil_shute
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_nevil_shute
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	ENG_robert_watson_watt = {
+		name = ENG_robert_watson_watt
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_robert_watson_watt
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
 			}
 		}
 	}
