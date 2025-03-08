@@ -3051,7 +3051,8 @@ RED_military_government_administration = {
 		cost = 30
 		days_remove = 45
 		available = {
-			always = no
+			has_country_flag = GAEBALJUNG
+			has_country_flag = RED_RE4_in_control_flag
 		}
 		modifier = {
 			consumer_goods_factor = 0.15

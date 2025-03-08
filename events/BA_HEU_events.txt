@@ -7648,7 +7648,10 @@ news_event = {
 	option = {
 		name = HEU_news.2.b
 		trigger = {
-			NOT = { tag = HEU }
+			NOT = { OR = {
+				has_government = communism
+				tag = HEU
+			}}
 		}
 		#hidden_effect = {
 		#	if = {
@@ -7663,6 +7666,13 @@ news_event = {
 		#		}
 		#	}
 		#}
+	}
+	option = {
+		name = HEU_news.2.c
+		trigger = {
+			has_government = communism
+			NOT = { tag = HEU }
+		}
 	}
 }
 
