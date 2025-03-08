@@ -2104,6 +2104,10 @@ spriteTypes = {
 		name = "GFX_focus_shutup"
 		textureFile = "gfx/interface/goals/COU/닥쳐.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_control_arona"
+		textureFile = "gfx/interface/goals/COU/싯딤의상자.png"
+	}
 	
 	
 	####카이저라이히 돚거

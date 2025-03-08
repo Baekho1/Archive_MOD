@@ -16,7 +16,7 @@ state={
 		}
 		add_core_of = FRA
 	}
-	manpower=38500
+	manpower=1582507
 	buildings_max_level_factor=1.000
 	state_category=megalopolis
 	local_supplies=0.000

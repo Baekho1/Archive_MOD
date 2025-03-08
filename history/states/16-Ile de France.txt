@@ -41,7 +41,7 @@ state={
 	provinces={
 		9523 9534 11506 
 	}
-	manpower=7038500
+	manpower=4465400
 	buildings_max_level_factor=1.000
 	state_category=advanced_megalopolis
 	local_supplies=0.000

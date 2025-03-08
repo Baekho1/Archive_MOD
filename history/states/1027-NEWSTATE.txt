@@ -11,13 +11,16 @@ state={
 			9736 1 
 		}
 
-		
+		buildings = {
+			infrastructure = 2
+
+		}
 
 	}
 	provinces={
 		764 3764 9736 6975
 	}
-	manpower=57500
+	manpower=110209 
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

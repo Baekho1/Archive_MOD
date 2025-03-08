@@ -1450,6 +1450,69 @@ country_event = {
 	}
 }
 
+##싯딤의 상자 이벤트: 통제권 재수복 
+country_event = { 
+	id = COU_event.52
+	title = COU_event.52.t
+	desc = COU_event.52.desc
+	picture = GFX_report_event_she_ipad
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.52.a
+		country_event = { id = COU_event.53 days = 30 }
+	}
+}
+
+country_event = { 
+	id = COU_event.53
+	title = COU_event.53.t
+	desc = COU_event.53.desc
+	picture = GFX_report_event_she_arona
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.53.a
+		custom_effect_tooltip = COU_tooltip_remove_sangtum_tower_debuff
+		add_stability = 0.1
+		COU_cut_tower_down_remove = yes 
+		country_event = { id = COU_event.54 days = 2 }
+	}
+}
+
+country_event = { 
+	id = COU_event.54
+	title = COU_event.54.t
+	desc = COU_event.54.desc
+	picture = GFX_report_event_she_arona_notgood
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.54.a
+		custom_effect_tooltip = COU_tooltip_arona_feels_bad
+		custom_effect_tooltip = kivotos_halo_add1_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 1 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+	}
+}
+
 
 
 

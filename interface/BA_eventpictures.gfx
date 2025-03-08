@@ -751,6 +751,24 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_COU_decart.png"
 	}
 	
+	##샬레 
+	spriteType = {
+		name = "GFX_report_event_she_ipad"
+		texturefile = "gfx/event_pictures/SHE/report_event_she_ipad.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_she_arona_good"
+		texturefile = "gfx/event_pictures/SHE/report_event_she_arona_good.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_she_arona_notgood"
+		texturefile = "gfx/event_pictures/SHE/report_event_she_arona_notgood.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_she_arona"
+		texturefile = "gfx/event_pictures/SHE/report_event_she_arona.png"
+	}
+	
 	##붉겨
 	spriteType = {
 		name = "GFX_report_event_picture_minori_one"
