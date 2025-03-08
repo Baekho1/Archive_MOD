@@ -114,23 +114,6 @@ country_event = { # 군사고문 내놓으세요 :rage:
 			}
 		}
 	}
-	
-	option = { # 씨발 이걸 왜 거부해?!
-		name = redpuppet.4.b 
-		ai_chance = {
-			base = 0
-		}
-		effect_tooltip = {
-			FROM = {
-				add_opinion_modifier = { target = ROOT modifier = SWI_rejected_our_request }
-			}
-		}
-		hidden_effect = {
-			FROM = {
-				country_event = { id = redpuppet.5 hours = 04 }
-			}
-		}
-	}
 }
 country_event = { # 감사링
 	id = redpuppet.5

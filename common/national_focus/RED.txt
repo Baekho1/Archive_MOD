@@ -4372,7 +4372,7 @@ focus_tree = {
 		#군정권역 공업화
 		id = RED_industry_of_mil_gov
 		icon = GFX_focus_SWE_landsverk
-		cost = 2
+		cost = 4
 		relative_position_id = RED_enlarge_secret_police
 		x = -1
 		y = 1
@@ -4851,8 +4851,9 @@ focus_tree = {
 				}
 			}
 			else = {
-				every_owned_state = {
+				every_state = {
 					limit = {
+						is_controlled_by_ROOT_or_ally = yes
 						NOT = {
 							is_core_of = RED
 						}
@@ -4926,8 +4927,9 @@ focus_tree = {
 				}
 			}
 			else = {
-				every_owned_state = {
+				every_state = {
 					limit = {
+						is_controlled_by_ROOT_or_ally = yes
 						NOT = {
 							is_core_of = RED
 						}
@@ -5002,8 +5004,9 @@ focus_tree = {
 			}
 			else = {
 				RE3 = {
-					every_owned_state = {
+					every_state = {
 						limit = {
+							is_controlled_by_ROOT_or_ally = yes
 							NOT = {
 								is_core_of = RED
 							}
@@ -5148,6 +5151,7 @@ focus_tree = {
 			base = 15
 		}
 		completion_reward = {
+			custom_effect_tooltip = RED_enticing_locals_tt
 			hidden_effect = {
 				load_focus_tree = {
 					tree = RED_focus_tree
@@ -6666,9 +6670,21 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_power_balance_side_active = {
+			is_power_balance_in_range = {
 				id = RED_power_balance
-				side = RED_trotsky_side
+				range = RED_tro_3
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_tro_2
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_tro_1
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_tro_0
 			}
 		}
 		x = -2
@@ -6708,9 +6724,21 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_power_balance_side_active = {
+			is_power_balance_in_range = {
 				id = RED_power_balance
-				side = RED_cherino_side
+				range = RED_che_3
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_che_2
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_che_1
+			}
+			is_power_balance_in_range = {
+				id = RED_power_balance
+				range = RED_che_0
 			}
 		}
 		completion_reward = {
