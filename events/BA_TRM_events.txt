@@ -8935,10 +8935,13 @@ country_event = { # 트리니티 의용군단
 		name = trinity.21.a
 		add_stability = -0.05
 		add_popularity = { ideology = communism popularity = 0.04 }
-		# 여기에 국민정신 입력
-		every_controlled_state = {
-			limit = { has_active_resistance = yes }
-			add_resistance = 25
+		add_ideas = TRM_trinity_volunteer_corps_ns
+		every_state = {
+			limit = { 
+				has_resistance = yes 
+				is_controlled_by = TRM
+			}
+			add_resistance = 10
 		}
     }
 }
@@ -9009,6 +9012,53 @@ news_event = {
 					TAG = INK
 				}
 			}
+		}
+	}
+}
+news_event = {
+	id = trinitynews.2
+	title = trinitynews.2.t
+	desc = trinitynews.2.desc
+	picture = GFX_event_tmr_news_event_1
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = TRM_flag_seia_cut
+		
+	}
+
+	option = {
+		name = trinitynews.2.a
+		trigger = {
+			TAG = TRM
+		}
+	}
+	option = {
+		name = trinitynews.2.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = TRM }
+			NOT = { original_tag = GEH }
+			NOT = { original_tag = GEM }
+			NOT = { original_tag = HEU }
+		}
+	}
+	option = {
+		name = trinitynews.2.c
+		trigger = {
+			OR = {
+				original_tag = GEM
+				original_tag = GEH
+				original_tag = HEU
+			}
+		}
+	}
+	option = {
+		name = trinitynews.2.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
 		}
 	}
 }
