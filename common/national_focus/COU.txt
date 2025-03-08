@@ -4807,7 +4807,7 @@ focus_tree = {
 	#경세제민 [經世濟民] : 세상을 다스리고 백성을 구제함.
 	focus = { #저지대 산업화	
 		id = COU_economy_focus_0
-		icon = GFX_focus_hol_the_zuiderzee_works
+		icon = GFX_focus_COU_focus_continue_the_bettter_lands
 		x = 7
 		y = 0
 		cost = 5

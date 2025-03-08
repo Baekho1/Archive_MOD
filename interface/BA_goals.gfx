@@ -2108,6 +2108,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_control_arona"
 		textureFile = "gfx/interface/goals/COU/싯딤의상자.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_focus_continue_the_bettter_lands"
+		textureFile = "gfx/interface/goals/COU/COU_focus_continue_the_bettter_lands.png"
+	}
 	
 	
 	####카이저라이히 돚거
