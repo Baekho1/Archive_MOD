@@ -2112,6 +2112,14 @@ spriteTypes = {
 		name = "GFX_focus_COU_focus_continue_the_bettter_lands"
 		textureFile = "gfx/interface/goals/COU/COU_focus_continue_the_bettter_lands.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_the_united_ntehralnds"
+		textureFile = "gfx/interface/goals/COU/COU_the_united_ntehralnds.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_then_the_ninjas"
+		textureFile = "gfx/interface/goals/COU/그때갑자기닌자가.png"
+	}
 	
 	
 	####카이저라이히 돚거

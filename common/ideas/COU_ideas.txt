@@ -1089,8 +1089,11 @@ ideas = {
             modifier = {
                 stability_factor = -0.05
 				political_power_factor  -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
+				compliance_gain = -0.01
             }
 
         }
@@ -1299,6 +1302,14 @@ ideas = {
 	          }
 			
 		  	  traits = { electronics_concern }
+			  
+			  on_add = {
+			      if = {
+				      limit = { NOT = { has_country_flag = PHILIPS_ADDED } }
+					  set_country_flag = PHILIPS_ADDED
+					  #country_event = { id =  days = 7 }
+				  }
+			  }
 		  }
 
 		  COU_distrigaz = {
