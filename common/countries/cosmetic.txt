@@ -1427,9 +1427,19 @@ COG_mittelafrikan_kingdom = {
 	color_ui = rgb { 51 51 51 }
 }
 
+EGY_brit_puppet = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
 reunified_germany = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 115 115 115 }
+}
+
+PAL_mandate = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
 }
 
 BEL_vnv_dominant =  {
@@ -1501,12 +1511,6 @@ BEL_european_union_leader = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }
 }
-
-AUS_european_union_leader = {
-	color = rgb { 0 51 153 }
-	color_ui = rgb { 0 51 153 }
-}
-
 
 JOR_emirate = {
 	color = rgb { 201 56 93 }
