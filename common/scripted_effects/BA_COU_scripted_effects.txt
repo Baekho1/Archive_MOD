@@ -55,28 +55,28 @@ COU_cut_tower_down_effect = {
 
 COU_cut_tower_down_remove = {
 	if = { limit = { has_idea = COU_cut_tower }
-		remove_idea = COU_cut_tower
+		remove_ideas = COU_cut_tower
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_0 }
-		remove_idea = COU_cut_tower_0
+		remove_ideas = COU_cut_tower_0
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_1 }
-		remove_idea = COU_cut_tower_1
+		remove_ideas = COU_cut_tower_1
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_2 }
-		remove_idea = COU_cut_tower_2
+		remove_ideas = COU_cut_tower_2
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_3 }
-		remove_idea = COU_cut_tower_3
+		remove_ideas = COU_cut_tower_3
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_4 }
-		remove_idea = COU_cut_tower_4
+		remove_ideas = COU_cut_tower_4
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_5 }
-		remove_idea = COU_cut_tower_5
+		remove_ideas = COU_cut_tower_5
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_6 }
-		remove_idea = COU_cut_tower_6
+		remove_ideas = COU_cut_tower_6
 	}
 	else_if = { limit = { has_idea = COU_cut_tower_7 }
 		remove_ideas = COU_cut_tower_7
