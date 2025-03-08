@@ -3,6 +3,10 @@ spriteTypes = {
 # 뉴스 이벤트 
 
 	spriteType = {
+		name = "GFX_news_event_Shanhaijing_shanhaijingpact"
+		texturefile = "gfx/event_pictures/news_event_Shanhaijing_shanhaijingpact.tga"
+	}
+	spriteType = {
 		name = "GFX_news_event_Millennium_Himari"
 		texturefile = "gfx/event_pictures/news_event_Millennium_Himari.tga"
 	}
