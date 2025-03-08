@@ -31,7 +31,7 @@ recruit_character = ENG_british_army
 set_variable = { country_intro_page_count = 2 } #Intro screen
 #/BA_MOD_FIX
 
-capital = 126
+capital = 132
 
 if = {
 	limit = {
