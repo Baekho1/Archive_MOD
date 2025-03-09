@@ -1303,11 +1303,15 @@ ideas = {
 			
 		  	  traits = { electronics_concern }
 			  
+			  ai_will_do = {
+				factor = 100
+			  }
+			  
 			  on_add = {
 			      if = {
 				      limit = { NOT = { has_country_flag = PHILIPS_ADDED } }
 					  set_country_flag = PHILIPS_ADDED
-					  #country_event = { id =  days = 7 }
+					  country_event = { id = COU_event.55 }
 				  }
 			  }
 		  }

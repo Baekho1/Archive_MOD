@@ -5082,11 +5082,11 @@ focus_tree = {
 	}
 	focus = { #필립스
 		id = COU_economy_focus_7
-		icon = GFX_focus_hol_philips
+		icon = GFX_focus_iphone
 		x = -3
 		y = 1
 		relative_position_id = COU_economy_focus_0
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = COU_economy_focus_0
 		}
@@ -5094,6 +5094,7 @@ focus_tree = {
 			focus = COU_establishment_of_federal_industrial_committee
 		}
 		available = {
+		    has_idea = COU_philips
 		}
 		bypass = {
 		}
@@ -5101,20 +5102,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			custom_effect_tooltip = HOL_philips_focus_tt
-			add_tech_bonus = {
-				name = HOL_philips_focus
-				bonus = 1.0
-				uses = 1
-				category = electronics
-			}
-			add_tech_bonus = {
-				name = HOL_philips_focus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = electronics
-			}
+			
 		}
 	}
 	focus = { #연구개발 집중

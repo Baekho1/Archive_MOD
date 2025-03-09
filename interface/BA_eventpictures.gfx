@@ -733,6 +733,10 @@ spriteTypes = {
 		name = "GFX_report_event_picture_decart"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_decart.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_anton_phillips"
+		texturefile = "gfx/event_pictures/report_event_picture_anton_phillips.png"
+	}
 	
 	spriteType = {
 		name = "GFX_news_event_COU_srt_banned"
@@ -749,6 +753,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_COU_decart"
 		texturefile = "gfx/event_pictures/news_event_COU_decart.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_COU_iphone"
+		texturefile = "gfx/event_pictures/news_event_COU_iphone.png"
 	}
 	
 	##샬레 

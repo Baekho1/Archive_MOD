@@ -2120,6 +2120,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_then_the_ninjas"
 		textureFile = "gfx/interface/goals/COU/그때갑자기닌자가.png"
 	}
+	spriteType = {
+		name = "GFX_focus_iphone"
+		textureFile = "gfx/interface/goals/COU/iphone.png"
+	}
 	
 	
 	####카이저라이히 돚거
