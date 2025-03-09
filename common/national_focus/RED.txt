@@ -6100,8 +6100,6 @@ focus_tree = {
 		select_effect = {
 		}
 		completion_reward = {
-			SOV = {
-			}
 			country_event = {
 				id = RED_tro_event.5
 				days = 1

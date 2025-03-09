@@ -1,4 +1,5 @@
 focus_tree = {
+	shared_focus = BA_ME_focus_-1
 	id = SYR_focus
 	country = {
 		factor = 0
@@ -1002,6 +1003,23 @@ focus_tree = {
 		prerequisite = {
 			focus = SYR_focus_com_28
 		}
+		available = {
+			date > 1941.1.1
+			454 = {
+				owner = {
+					NOT = {
+						is_ally_with = SYR
+					}
+				}
+			}
+			455 = {
+				owner = {
+					NOT = {
+						is_ally_with = SYR
+					}
+				}
+			}
+		}
 		bypass = {
 			owns_state = 454
 			owns_state = 455
@@ -1024,187 +1042,6 @@ focus_tree = {
 			}
 			add_state_core = 454
 			add_state_core = 455
-		}
-	}
-	focus = { #시나이 반도 탈환
-		id = SYR_focus_com_30
-		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -1
-		y = 12
-		available = {
-			has_completed_focus = SYR_focus_com_22
-		}
-		bypass = {
-			owns_state = 453
-		}
-		mutually_exclusive = {
-			focus = SYR_focus_com_31
-		}
-		prerequisite = {
-			focus = SYR_focus_com_29
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					owns_state = 453
-				}
-				SYR = {
-					declare_war_on = {
-						target = prev
-						type = take_core_state
-					}
-				}
-			}
-			add_state_core = 453
-		}
-	}
-	focus = { #이집트 해방
-		id = SYR_focus_com_31
-		icon = GFX_goal_generic_major_war
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 1
-		y = 12
-		available = {
-			has_completed_focus = SYR_focus_com_16
-		}
-		bypass = {
-			EGY = {
-				exists = no
-			}
-		}
-		mutually_exclusive = {
-			focus = SYR_focus_com_30
-		}
-		prerequisite = {
-			focus = SYR_focus_com_29
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = EGY
-				type = annex_everything
-			}
-		}
-	}
-	focus = { #바그다드로!
-		id = SYR_focus_com_32
-		icon = GFX_goal_generic_more_territorial_claims
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 0
-		y = 13
-		bypass = {
-			IRQ = {
-				exists = no
-			}
-		}
-		available = {
-			EGY = {
-				exists = no
-			}
-		}
-		prerequisite = {
-			focus = SYR_focus_com_31
-		}
-		completion_reward = {
-			declare_war_on = {
-				target = IRQ
-				type = annex_everything
-			}
-		}
-	}
-	focus = { #아라비아 진군
-		id = SYR_focus_com_33
-		icon = GFX_goal_generic_military_sphere
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 0
-		y = 14
-		prerequisite = {
-			focus = SYR_focus_com_32
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					SAU = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = SAU
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					QAT = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = QAT
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					UAE = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = UAE
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					OMA = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = OMA
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					YEM = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = YEM
-					type = annex_everything
-				}
-			}
-		}
-	}
-	focus = { #터키 분할
-		id = SYR_focus_com_34
-		icon = GFX_focus_generic_attack_turkey
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -2
-		y = 14
-		prerequisite = {
-			focus = SYR_focus_com_32
-		}
-		bypass = {
-			TUR = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			SOV = {
-				country_event = {
-					id = SYR_event.13
-					days = 3
-				}
-			}
 		}
 	}
 	focus = { #이란 분할

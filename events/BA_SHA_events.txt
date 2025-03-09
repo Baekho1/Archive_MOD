@@ -534,3 +534,71 @@ news_event = {
 		effect_tooltip = { add_threat = 5 }
 	}
 }
+
+news_event = {
+	id = shanews.04
+	title = shanews.04.t
+	desc = {
+		text = shanews.04.desc_c
+		trigger = {
+			SHA = { has_completed_focus = SHA_conservative_revolution }
+		}
+	}
+	desc = {
+		text = shanews.04.desc_s
+		trigger = {
+			SHA = { has_completed_focus = SHA_Kaguya_ousted }
+		}
+	}
+	desc = {
+		text = shanews.04.desc_nothing
+		trigger = {
+			SHA = { 
+				NOT = {
+					has_completed_focus = SHA_Kaguya_ousted 
+					has_completed_focus = SHA_conservative_revolution 
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_Shanhaijing_shanhaijingpact
+	
+	major = yes	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.a
+		trigger = { original_tag = SHA }
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.03.b
+		trigger = {
+			original_tag = HYA
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.c
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { original_tag = HYA }
+			NOT = { original_tag = SHA }
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+		
+	option = {
+		name = shanews.04.d
+		trigger = {
+			NOT = { Kivotos_tag = yes }
+		}
+		effect_tooltip = { add_threat = 3 }
+	}
+}

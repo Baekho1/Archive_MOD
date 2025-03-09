@@ -1,3 +1,12 @@
+ME_pan_arab_cooperation_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_CHL_carabineros_de_chile_fascist
+
+	custom_modifier_tooltip = ME_pan_arab_cooperation_modifier_tt
+	army_core_defence_factor = global.ME_pan_arab_cooperation_modifier_defence_var
+	industrial_capacity_factory = global.ME_pan_arab_cooperation_modifier_capacity_var
+}
 BLM_criminal_state = {
 	enable = { always = yes }
 
