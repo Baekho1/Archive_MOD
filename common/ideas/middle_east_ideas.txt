@@ -1,5 +1,14 @@
 ideas = {
 	country = {
+		#중동
+		ME_trade_treaty = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				min_export = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
 		#팔레스타인
 		PAL_jews_hoods = { #유대인 정착촌
 			picture = tfv_can_conscription_crisis

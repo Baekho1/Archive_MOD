@@ -293,65 +293,37 @@ country_event ={ #공산당 집권
 			popularity = 0.1
 		}
 	}
-}
-country_event ={ #이란 분할 계획
+} #.10부터 .15까지 안 씀
+country_event ={ #왕실에 충성을 맹세한 ㅇㅇ
 	id = SYR_event.10
 	title = SYR_event.10.t
 	desc = SYR_event.10.d
 	is_triggered_only = yes
-	option = { #ㅇㅋ
+	option = { #굿
 		name = SYR_event.10.a
-		add_state_claim = 416
-		add_state_claim = 419
-		add_state_claim = 420
-		SYR = {
-			country_event = {
-				id = SYR_event.11
-				days = 3
-			}
-		}
-		ai_chance = {
-			base = 100
-		}
-		set_country_flag = SYR_eat_per
-	}
-	option = { #ㄴ
-		name = SYR_event.10.b
-		SYR = {
-			country_event = {
-				id = SYR_event.12
-				days = 3
-			}
-		}
+		add_political_power = 10
 	}
 }
-country_event ={ #계획 수락
+country_event ={ #영연방 가입 요청
 	id = SYR_event.11
 	title = SYR_event.11.t
 	desc = SYR_event.11.d
 	is_triggered_only = yes
 	option = { #굿
 		name = SYR_event.11.a
-		if = {
-			limit = { #이란 분할
-				has_completed_focus = SYR_focus_com_35
-			}
-			set_country_flag = SYR_eat_per
-			declare_war_on = {
-				target = PER
-				type = take_core_state
-			}
-		}
-		else = { #터키 분할
-			set_country_flag = SYR_eat_tur
-			declare_war_on = {
-				target = TUR
-				type = take_core_state
+		add_to_faction = FROM
+	}
+	option = { #ㄴㄴ
+		name = SYR_event.11.b
+		FROM = {
+			country_event = {
+				id = SYR_event.12
+				days = 2
 			}
 		}
 	}
 }
-country_event ={ #계획 거절
+country_event ={ #ㅗ
 	id = SYR_event.12
 	title = SYR_event.12.t
 	desc = SYR_event.12.d
