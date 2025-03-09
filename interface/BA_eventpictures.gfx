@@ -265,6 +265,11 @@ spriteTypes = {
 # 국가 이벤트 
 
 	spriteType = {
+		name = "GFX_report_event_sha_shintani_kai"
+		texturefile = "gfx/event_pictures/report_event_sha_shintani_kai.png"
+	}
+
+	spriteType = {
 		name = "GFX_event_Shanhaijing_Konoe_Mina"
 		texturefile = "gfx/event_pictures/Shanhaijing_Konoe_Mina.tga"
 	}

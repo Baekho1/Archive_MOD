@@ -138,6 +138,12 @@ unit_leader_event = {
 
 	option = {
 		name = shafas.6.a
+		custom_effect_tooltip = SHA_KAGUYA_tt
+		custom_effect_tooltip = tooltip_white_line
+		show_ideas_tooltip = SHA_KAGUYA_political_advisor
+		hidden_effect = {
+			activate_advisor = SHA_KAGUYA_political_advisor
+		}
 	}
 }
 
@@ -313,6 +319,58 @@ country_event = {
 			}
 			promote_character = SHA_KAI
 		}
+	}
+}
+
+# 신타니 카이에 대한 논란
+country_event = {
+	id = shafas.12
+	title = shafas.12.t
+	desc = shafas.12.d
+	picture = GFX_report_event_sha_shintani_kai
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.12.a
+		add_ideas = SHA_shadow_of_Shintani_Kai
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = shafas_12_tt
+		SHA_KAI = {
+			unit_leader_event = { 
+				id = shafas.13
+			}
+		}
+	}
+}
+
+# 신타니 카이의 재판
+unit_leader_event = {
+	id = shafas.13
+	title = shafas.13.t
+	desc = shafas.13.d
+	picture = GFX_event_Shanhaijing_Konoe_Mina
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.13.a
+		ai_chance = { base = 10 }
+		remove_ideas = SHA_shadow_of_Shintani_Kai
+		effect_tooltip = { retire_character = SHA_KAI }
+		hidden_effect = {
+			SHA = {
+				SHA_KAI = { set_nationality = KBT }
+			}
+		}
+		add_stability = 0.05
+	}
+
+	option = {
+		name = shafas.13.b
+		ai_chance = { base = 0 }
+		remove_ideas = SHA_shadow_of_Shintani_Kai
+		add_stability = -0.15
 	}
 }
 
