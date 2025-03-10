@@ -4564,7 +4564,7 @@ country_event = { #네덜란드 행정관
 
 	option = { 
 		name = HEU_event.281.a 
-		
+
 	}
 }
 
@@ -6594,6 +6594,7 @@ country_event = { #...대결?
 
 		hidden_effect = {
 			country_event = { id = HEU.flavor_event.97 days = 4 }
+			news_event = { id = HEU_news.27 hours = 4 }
 		}
 	}
 }
