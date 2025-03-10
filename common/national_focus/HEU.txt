@@ -5163,7 +5163,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 5.00
+		cost = 4.00
 
 		x = -1
 		y = 1
@@ -5195,7 +5195,7 @@ focus_tree = {
 			focus = HEU_hidden_hina_focus_2
 		}
 
-		cost = 5.00
+		cost = 4.00
 
 		x = -1
 		y = 2
@@ -5234,7 +5234,7 @@ focus_tree = {
 			focus = HEU_hidden_hina_focus_1
 		}
 
-		cost = 5.00
+		cost = 3.00
 
 		x = 1
 		y = 1
@@ -5276,7 +5276,7 @@ focus_tree = {
 			focus = HEU_hidden_hina_focus_4
 		}
 
-		cost = 5.00
+		cost = 3.00
 
 		x = 1
 		y = 2
