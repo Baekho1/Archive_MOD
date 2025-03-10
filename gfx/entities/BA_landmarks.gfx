@@ -31,4 +31,19 @@ objectTypes = {
 			shader = "PdxMeshStandard"
 		}
 	}
+
+	pdxmesh = {
+		name = "landmark_RED_spa_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_RED_spa.mesh"
+
+		meshsettings = {
+			name = "landmark_RED_spaShape"
+			index = 0
+			texture_diffuse = "landmark_RED_alpa.dds"
+			texture_normal = "TRM_normal.dds"
+			texture_specular = "basic_specular.dds"
+			shader = "PdxMeshStandard"
+		}
+	}
+
 }
