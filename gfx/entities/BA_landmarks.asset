@@ -23,3 +23,13 @@ entity = {
 	scale = 2.3
 
 }
+
+entity = {
+	name = "building_landmark_RED_spa"
+	pdxmesh = "landmark_RED_spa_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 looping = no }
+
+	scale = 1.5
+}
