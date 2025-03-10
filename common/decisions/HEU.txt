@@ -2892,6 +2892,41 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 		fire_only_once = no
 	}
 	
+	HEU_problem_solver_68_hina = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+			NOT = { has_country_flag = HEU_problem_solver_68_flag }
+			
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+
+		cost = 25
+
+		days_remove = 30
+		days_re_enable = 120
+
+		remove_effect = {
+			clr_country_flag = HEU_problem_solver_68_flag
+		}
+
+		complete_effect = {
+			set_country_flag = HEU_problem_solver_68_flag
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+			army_attack_factor = 0.1
+			max_planning_factor = 0.15
+		}
+
+		fire_only_once = no
+	}
+
 	HEU_problem_solver_68_aru_proposal_mutsuki = {
 		icon = GFX_decision_Gehenna_Emblem
 
@@ -2971,6 +3006,11 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 			has_country_flag = HEU_hidden_communism_aru_marriage
 			has_completed_focus = HEU_rikuhachimaism_focus_5_2
 			has_completed_focus = HEU_rikuhachimaism_focus_mutsuki
+			NOT = {
+				GEH_hina = {
+					has_character_flag = HEU_aru_bride
+				}
+			}
 		}
 
 		ai_will_do = { base = 0 }
@@ -2994,6 +3034,11 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 			has_country_flag = HEU_hidden_communism_aru_marriage
 			has_completed_focus = HEU_rikuhachimaism_focus_5_2
 			has_completed_focus = HEU_rikuhachimaism_focus_kayoko
+			NOT = {
+				GEH_hina = {
+					has_character_flag = HEU_aru_bride
+				}
+			}
 		}
 
 		ai_will_do = { base = 0 }
@@ -3017,6 +3062,11 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 			has_country_flag = HEU_hidden_communism_aru_marriage
 			has_completed_focus = HEU_rikuhachimaism_focus_5_2
 			has_completed_focus = HEU_rikuhachimaism_focus_haruka
+			NOT = {
+				GEH_hina = {
+					has_character_flag = HEU_aru_bride
+				}
+			}
 		}
 
 		ai_will_do = { base = 0 }
@@ -3025,6 +3075,46 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 
 		complete_effect = {
 			country_event = { id = HEU_event.250 }
+		}
+
+		fire_only_once = yes
+	}
+	
+	HEU_com_problem_solver_68_aru_proposal_hina = {
+		icon = GFX_decision_Gehenna_Emblem
+
+		available = {
+		}
+		
+		visible = {
+			has_country_flag = HEU_hidden_communism_aru_marriage
+			has_completed_focus = HEU_rikuhachimaism_focus_5_2
+			has_completed_focus = HEU_hidden_hina_focus_6
+			AND = {
+				NOT = {
+					HEU_zkdyzh = {
+						has_character_flag = HEU_aru_bride
+					}
+				}
+				NOT = {
+					HEU_ancmzl = {
+						has_character_flag = HEU_aru_bride
+					}
+				}
+				NOT = {
+					HEU_gkfnzk = {
+						has_character_flag = HEU_aru_bride
+					}
+				}
+			}
+		}
+
+		ai_will_do = { base = 0 }
+
+		cost = 0
+
+		complete_effect = {
+			country_event = { id = HEU_event.280 }
 		}
 
 		fire_only_once = yes
