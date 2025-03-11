@@ -466,16 +466,8 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_political_power = 25
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			custom_effect_tooltip = tooltip_white_line
 			if = { 
-				limit = {
-					has_character = SHA_KAGUYA
-				}
+				limit = { has_character = SHA_KAGUYA }
 				SHA_KAGUYA = { add_country_leader_trait = SHA_ardent_conservative }
 			}
 			add_field_marshal_role = {
@@ -490,6 +482,11 @@ focus_tree = {
 				defense_skill=3
 				planning_skill=4
 				logistics_skill=3
+			}
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
 			}
 		}
 	}
@@ -516,7 +513,7 @@ focus_tree = {
 			SHA_Eastern_Alchemy_Society_idea_up = yes
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.05
 			}
 			add_political_power = 25
 		}
@@ -954,6 +951,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SHA_Kisaki_is_Doorkeeper_tt
 			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = SHA_Shintani_Kai_Follow }
+					country_event = { id = shafas.12 days = 35 }
+				}
 				SHA_KISAKI = { 
 					add_country_leader_role = {
 						country_leader = {
@@ -1027,6 +1028,11 @@ focus_tree = {
 		relative_position_id = SHA_conservative_revolution
 
 		completion_reward = {
+			set_party_name = {
+				ideology = neutrality
+				name = SHA_peking_opera_blackdragon_cop
+				long_name = SHA_peking_opera_blackdragon_cop_long
+			}
 			effect_tooltip = {
 				swap_ideas = {
 					add_idea = SHA_kaguya_idea_tooltip_3
@@ -1313,8 +1319,8 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = SHA_faup_idea
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
+				ideology = ROOT
+				popularity = -0.03
 			}
 		}
 	}
@@ -2853,7 +2859,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SHA_relief_work
-		cost = 5
+		cost = 2
 
 		prerequisite = { focus = SHA_relief_work }
 		mutually_exclusive = {  }
@@ -3221,7 +3227,7 @@ focus_tree = {
 		relative_position_id = SHA_austria_unemployment_relief
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

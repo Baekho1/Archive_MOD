@@ -1323,6 +1323,14 @@ ideas = {
 				}
 			}
 		}
+		SHA_shadow_of_Shintani_Kai = {
+			allowed = { tag = SHA }
+
+			modifier = {
+				drift_defence_factor = -0.025
+				political_power_gain = -0.025
+			}
+		}
 
 
 
