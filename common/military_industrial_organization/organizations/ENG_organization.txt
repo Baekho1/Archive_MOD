@@ -11,7 +11,7 @@ ENG_vickers_armstrong_eng_organization = {
 	include = generic_medium_tank_organization
 	icon = GFX_idea_vickers_armstrong_eng
 	
-	allowed = {
+	allowed = {	
 		OR = {
 			tag = ENG
 			tag = KAI
@@ -148,6 +148,7 @@ ENG_vauxhall_organization = {
 		OR = {
 			tag = ENG
 			tag = KAI
+			tag = SAF
 			AND = {
 				tag = POL # If Poland sets up a local one
 				OR = {
@@ -162,6 +163,14 @@ ENG_vauxhall_organization = {
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
+			}
+			AND = {
+				tag = BRA 
+				has_dlc = "Trial of Allegiance"
+			}
+			AND = {
+				tag = IRQ 
+				has_dlc = "Graveyard of Empires"
 			}
 		}
 	}
@@ -231,6 +240,25 @@ ENG_vauxhall_organization = {
 				}
 				#is_in_faction_with = ENG
 				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_vauxhall_mio_flag
+				}
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = IRQ } }
+			FROM = {
+				OR = {
+					has_idea = IRQ_anglo_iraqi_treaty
+					has_idea = IRQ_anglo_iraqi_mutual_defense_agreement
+				}
 			}
 		}
 	}
@@ -311,12 +339,37 @@ ENG_cammell_laird_organization = {
 	icon = GFX_idea_cammell_laird
 	
 	allowed = {	
+		has_dlc = "Arms Against Tyranny"
 		OR = {
 			tag = KAI
 			tag = ENG
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
 		}
-		has_dlc = "Arms Against Tyranny"
 	}
+
+	available = {
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_cammell_laird_mio_flag
+				}
+			}
+		}
+	}
+		
+
 
 	override_trait = {
 		token = generic_mio_trait_advanced_armor_design
@@ -508,7 +561,7 @@ ENG_supermarine_organization = {
 
 	research_categories = {	
 		mio_cat_all_light_fighter_and_modules 
-	#		mio_cat_all_naval_bomber_and_modules 
+#		mio_cat_all_naval_bomber_and_modules 
 			#Could be used to allow Supermarine to research naval bombs, but this could overpower English fighter MIO trait gain early on.
 	}
 
@@ -593,6 +646,7 @@ ENG_hawker_organization = {
 		OR = {
 			tag = KAI
 			tag = ENG
+			tag = SAF
 		}
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -605,8 +659,8 @@ ENG_de_havilland_organization = {
 		has_dlc = "Arms Against Tyranny"
 		OR = {
 			tag = ENG
+			tag = NOR 		
 			tag = KAI
-			tag = NOR	
 		}
 	}
 
@@ -623,6 +677,15 @@ ENG_de_havilland_organization = {
 				FROM = { NOT = { original_tag = KAI } }
 			}
 			FROM = { NOT = { has_war_with = KAI } }
+		}
+
+		if = {
+			limit = {
+				FROM = { tag = NOR }
+			}
+			FROM = {
+				has_completed_focus = NOR_invite_transnational_manufacturers
+			}
 		}
 	}
 }
@@ -679,6 +742,7 @@ ENG_fairey_aviation_organization = {
 			}
 			FROM = { NOT = { has_war_with = KAI } }
 		}
+
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
 			custom_trigger_tooltip = {
@@ -718,6 +782,29 @@ ENG_avro_organization = {
 		OR = {
 			tag = KAI
 			tag = ENG
+			tag = KAI
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+	}
+	available = {
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_avro_mio_flag
+				}
+			}
 		}
 	}
 }
@@ -770,6 +857,7 @@ ENG_rsaf_enfield_organization = {
 			}
 			FROM = { NOT = { has_war_with = KAI } }
 		}
+
 		if = {
 			limit = {
 				FROM = {
@@ -955,6 +1043,7 @@ ENG_royal_arsenal_organization = {
 			}
 			FROM = { NOT = { has_war_with = KAI } }
 		}
+
 		if = {
 			limit = {
 				FROM = {
@@ -997,6 +1086,10 @@ ENG_crossley_motors_organization = {
 				tag = LIT
 				has_dlc = "No Step Back"
 			}
+			AND = {
+				tag = IRQ
+				has_dlc = "Graveyard of Empires"
+			}
 		}
 	}
 
@@ -1033,6 +1126,16 @@ ENG_crossley_motors_organization = {
 			}
 			FROM = {
 				has_completed_focus = BALTIC_crossley_motors
+			}
+		}
+
+		IF = {
+			limit = { FROM = { original_tag = IRQ } }
+			FROM = {
+				OR = {
+					has_idea = IRQ_anglo_iraqi_treaty
+					has_idea = IRQ_anglo_iraqi_mutual_defense_agreement
+				}
 			}
 		}
 	}
