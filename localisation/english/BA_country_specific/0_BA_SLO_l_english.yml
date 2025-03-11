@@ -11,7 +11,8 @@
  SLO_newborn_army_idea1_desc:0 "체코슬로바키아군이 와해된 이후 급조된 슬로바키아군은 아직 와해된 체코슬로바키아군을 대체하지 못하고 있습니다."
  SLO_newborn_army_idea2:0 "신생 군대"
  SLO_newborn_army_idea2_desc:0 "슬로바키아군은 나날히 발전해나가고 있으나 아직 완전하다고 보기는 어렵습니다. 더욱더 진보해야 할 것입니다."
- SLO_hlinka_guard_idea:0 "흘린카 근위대"
+ SLO_fast_industrialization_idea:0 "급속 산업화"
+ SLO_czk_reform_idea:0 "코루나 개혁"
 
  ##국가중점##
  SLO_foc_1:0 "의회 소집"
@@ -24,8 +25,10 @@
  SLO_foc_1-4-3:0 "체코 망명자 개방"
  SLO_foc_1-4-4:0 "인근 국가와의 친선"
  SLO_foc_1-4-5:0 "중부 유럽 연맹"
- SLO_foc_1-4-6:0 "지역 요새화"
- SLO_foc_1-4-7:0 "농촌 지역 개발"
+ SLO_foc_1-4-6:0 "코루나 개혁"
+ SLO_foc_1-4-7:0 "교외 지역 개발"
+ SLO_foc_1-4-8:0 "산업화 개시"
+ SLO_foc_1-4-9:0 "급속 산업화"
  SLO_foc_2:0 "우익과 가톨릭의 연합"
 
  ##툴팁##

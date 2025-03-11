@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 1
+			add = 10
 			tag = SLO
 		}
 	}
@@ -250,7 +250,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 4
+		x = 5
 		y = 4
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -293,8 +293,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 3
-		y = 5
+		x = 4
+		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-3
 		}
@@ -340,7 +340,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 5
+		x = 6
 		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-3
@@ -368,48 +368,29 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-6
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_fra_devalue_the_franc
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-		x = -1
-		y = 5
+		x = 1
+		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-2
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-7
+			#focus = SLO_foc_
 		}
 		available = {
-			controls_state = 70
-			controls_state = 71
 		}
 		bypass = {
 		}
 		completion_reward = {
-			70 = {
-				set_building_level = {
-					type = bunker
-					level = 2
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-						level < 2
-					}
-				}
+			add_timed_idea = {
+				idea = SLO_czk_reform_idea
+				days = 180
 			}
-			71 = {
-				set_building_level = {
-					type = bunker
-					level = 2
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-						level < 2
-					}
-				}
-			}
+			SLO_economy_chaos_down = yes
 		}
 	}
 	focus = {
@@ -417,34 +398,55 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-7
 		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		x = 1
+		x = 0
 		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-2
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-6
+			#focus = SLO_foc_
 		}
 		available = {
-			controls_state = 70
-			controls_state = 71
 		}
 		bypass = {
 		}
 		completion_reward = {
-			70 = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}	
-			71 = {
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-8
+		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-4-2
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -452,6 +454,41 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-9
+		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-8
+			focus = SLO_foc_1-4-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 10
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = SLO_fast_industrialization_idea
 		}
 	}
 	### 파시, 파시즘, 파시스트 루트 ###

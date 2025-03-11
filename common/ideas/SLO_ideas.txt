@@ -62,6 +62,27 @@ ideas = {
 				air_accidents_factor = 0.05
 			}
 		}
+		SLO_fast_industrialization_idea = {
+			picture = ARG_public_works_investment
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05			
+				production_factory_efficiency_gain_factor = 0.05	
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.07
+				production_speed_infrastructure_factor = 0.07
+			}
+		}
+		SLO_czk_reform_idea = {
+			picture = PER_fund_state_intelligence_idea
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.10	
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 	industrial_concern = {
 		SLO_elektra = {
