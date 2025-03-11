@@ -2903,6 +2903,12 @@ HEU_problem_solver_68_decision_category = { #흥신소 68
 			}
 		}
 
+		visible = {
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
 		ai_will_do = { factor = 1 }
 
 		cost = 25
