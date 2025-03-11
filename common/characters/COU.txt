@@ -927,6 +927,14 @@ characters={
 			}
 	}
 	
+	COU_sancho_davilla_fernandez = {
+			portraits = {
+				civilian = {
+				    large = portrait_COU_sancho_davilla_fernandez
+				}
+			}
+	}
+	
 	COU_willy_coppens = {  
 			advisor = {
 				slot = air_chief
