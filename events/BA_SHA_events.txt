@@ -374,6 +374,26 @@ unit_leader_event = {
 	}
 }
 
+# 세력권 제안
+country_event = {
+	id = shafas.14
+	title = shafas.14.t
+	desc = shafas.14.d
+	picture = GFX_report_event_communist_leader
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafas.14.a
+
+	}
+
+	option = {
+		name = shafas.14.b
+
+	}
+}
+
 
 # 뉴스
 news_event = {
