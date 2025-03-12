@@ -34,8 +34,11 @@ SHA_historical = {
 
 		SHA_establish_the_SEZ
 		SHA_architechtual_advancements
-		SHA_courting_the_princess_of_industry
-		SHA_Construction_of_Kolnbrein_Dam
+		SHA_central_planning
+		SHA_union_control
+
+		SHA_Equipment_Development_Department
+		SHA_military_production
 		
 		SHA_address_the_army
 		SHA_Following_doorkeeper_footsteps
@@ -51,12 +54,11 @@ SHA_historical = {
 		SHA_industrial_exploitation
 		SHA_Leave_SHA
 		SHA_the_third_kivotos
-
-		SHA_central_planning
-
-		SHA_union_control
+		
+		SHA_courting_the_princess_of_industry
+		SHA_Construction_of_Kolnbrein_Dam
+		
 		SHA_establish_the_VES
-
 		SHA_solidarist_representation
 
 	}
