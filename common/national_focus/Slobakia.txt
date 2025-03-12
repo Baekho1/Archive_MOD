@@ -250,7 +250,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 5
+		x = 6
 		y = 4
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -293,8 +293,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 4
-		y = 6
+		x = 6
+		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-3
 		}
@@ -340,17 +340,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 6
-		y = 5
+		x = 5
+		y = 6
 		prerequisite = {
-			focus = SLO_foc_1-4-3
+			focus = SLO_foc_1-4-4
 		}
 		mutually_exclusive = {	
-			#focus = SLO_foc_
+			focus = SLO_foc_1-4-10
 		}
 		available = {
 			is_in_faction = no
 			OR = {
+				is_major = yes
 				num_of_factories > 15
 				has_army_manpower = { size > 50000 }
 			}
@@ -489,6 +490,211 @@ focus_tree = {
 				}
 			}
 			add_ideas = SLO_fast_industrialization_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-10
+		icon = GFX_focus_generic_polish_deal
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-4
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-5
+		}
+		available = {
+			is_in_faction = no
+			POL = {
+				has_completed_focus = POL_the_between_the_seas_concept
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-11
+		icon = GFX_focus_research
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-6
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-9
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SLO_bratislava_university_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-12
+		icon = GFX_focus_generic_university_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-11
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 15
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-13
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-4-2
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-14
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-4
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_war_with = ROM
+					has_war_with = YUG
+					has_war_with = POL
+				}
+			}
+		}
+		bypass = {
+			ROM = {
+				exists = no
+			}
+			YUG = {
+				exists = no
+			}
+			POL = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = free_trade
+					}
+				}
+				add_ideas = free_trade
+			}
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				ROM = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				YUG = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				POL = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
 		}
 	}
 	### 파시, 파시즘, 파시스트 루트 ###
