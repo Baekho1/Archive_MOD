@@ -917,7 +917,7 @@ ideas = {
 				production_speed_rail_way_factor = 0.1
 				production_speed_bunker_factor = 0.1
 				conscription_factor = 0.2
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.2
 			}
 		}
 		# 산해경 고립 - 보수 혁명
@@ -1170,7 +1170,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.2
 				production_factory_max_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
 				conscription = -0.005
 			}
 			research_bonus = {
@@ -1184,7 +1184,7 @@ ideas = {
 				political_power_gain = 0.1
 				production_factory_max_efficiency_factor = 0.15
 				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
 				conscription = -0.0075
 			}
 			research_bonus = {
@@ -1199,7 +1199,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.2
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				production_factory_efficiency_gain_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
 				production_factory_start_efficiency_factor = 0.1
 				conscription = -0.0075
 			}
