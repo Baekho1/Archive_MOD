@@ -250,7 +250,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 6
+		x = 7
 		y = 4
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -293,7 +293,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 6
+		x = 7
 		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-3
@@ -340,7 +340,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 5
+		x = 6
 		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-4
@@ -352,8 +352,7 @@ focus_tree = {
 			is_in_faction = no
 			OR = {
 				is_major = yes
-				num_of_factories > 15
-				has_army_manpower = { size > 50000 }
+				num_of_factories > 25
 			}
 		}
 		bypass = {
@@ -363,6 +362,36 @@ focus_tree = {
 				can_create_factions = yes
 			}
 			create_faction = SLO_faction_1
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_war_with = SLO
+						}
+						is_in_faction = no
+					}
+				}
+				YUG = {
+					country_event = {
+						id = generic.5
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_war_with = SLO
+						}
+						is_in_faction = no
+					}
+				}
+				ROM = {
+					country_event = {
+						id = generic.5
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -501,7 +530,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 7
+		x = 9
 		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-4
@@ -519,6 +548,11 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
+			POL = {
+				country_event = {
+					id = generic.2
+				}
+			}
 		}
 	}
 	focus = {
@@ -613,7 +647,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 6
+		x = 7
 		y = 7
 		prerequisite = {
 			focus = SLO_foc_1-4-4
@@ -693,6 +727,148 @@ focus_tree = {
 						id = SLO_event.1
 						hours = 6
 					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-15
+		icon = GFX_focus_generic_currency_reforms
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-14
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-16
+		icon = GFX_focus_generic_attack_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 5
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-1-16
+		}
+		available = {
+			is_faction_leader = yes
+			NOT = {
+				is_in_faction_with = HUN
+			}
+			POL = {
+				NOT = {
+					is_in_faction_with = HUN
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				HUN = {
+					exists = no
+				}
+				POL = {
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			HUN = {
+				add_opinion_modifier = { target = SLO modifier = large_decrease }
+			}
+			POL = {
+				country_event = {
+					id = SLO_event.4
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-17
+		icon = GFX_focus_generic_befriend_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-16
+		}
+		available = {
+			is_faction_leader = yes
+			has_completed_focus = SLO_foc_1-4-14
+		}
+		bypass = {
+		}
+		completion_reward = {
+			HUN = {
+				add_opinion_modifier = { target = SLO modifier = large_increase }
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-18
+		icon = GFX_focus_BRA_the_polaca
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 4
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-16
+			focus = SLO_foc_1-4-17
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		bypass = {
+		}
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = generic.5
 				}
 			}
 		}
