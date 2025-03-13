@@ -42,7 +42,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.3-1
+					id = SLO_event.31
 					hours = 6
 				}
 			}
@@ -53,7 +53,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.3-2
+					id = SLO_event.32
 					hours = 6
 				}
 			}
@@ -64,7 +64,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.3-3
+					id = SLO_event.33
 					hours = 6
 				}
 			}
@@ -81,7 +81,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.2-1
+					id = SLO_event.21
 					hours = 6
 				}
 			}
@@ -92,7 +92,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.2-2
+					id = SLO_event.22
 					hours = 6
 				}
 			}
@@ -103,7 +103,7 @@ country_event = {
 			}
 			SLO = {
 				country_event = {
-					id = SLO_event.2-3
+					id = SLO_event.23
 					hours = 6
 				}
 			}
@@ -111,9 +111,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.2-1
-	title = SLO_event.2-1.t
-	desc = SLO_event.2-1.e
+	id = SLO_event.21
+	title = SLO_event.21.t
+	desc = SLO_event.21.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
@@ -123,9 +123,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.2-2
-	title = SLO_event.2-2.t
-	desc = SLO_event.2-2.e
+	id = SLO_event.22
+	title = SLO_event.22.t
+	desc = SLO_event.22.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
@@ -135,9 +135,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.2-3
-	title = SLO_event.2-3.t
-	desc = SLO_event.2-3.e
+	id = SLO_event.23
+	title = SLO_event.23.t
+	desc = SLO_event.23.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
@@ -147,9 +147,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.3-1
-	title = SLO_event.3-1.t
-	desc = SLO_event.3-1.e
+	id = SLO_event.31
+	title = SLO_event.31.t
+	desc = SLO_event.31.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
@@ -160,9 +160,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.3-2
-	title = SLO_event.3-2.t
-	desc = SLO_event.3-2.e
+	id = SLO_event.32
+	title = SLO_event.32.t
+	desc = SLO_event.32.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
@@ -173,9 +173,9 @@ country_event = {
 	}
 }
 country_event = { 
-	id = SLO_event.3-3
-	title = SLO_event.3-3.t
-	desc = SLO_event.3-3.e
+	id = SLO_event.33
+	title = SLO_event.33.t
+	desc = SLO_event.33.e
 	picture = GFX_report_event_generic_handshake
     is_triggered_only = yes
 
