@@ -5702,7 +5702,7 @@ RED_population_issue_cat = {
 			always = no
 		}
 		available = {
-			num_of_civilian_factories > 40
+			num_of_civilian_factories > 35
 		}
 		days_mission_timeout = 720
 		is_good = no
