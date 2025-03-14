@@ -1724,6 +1724,7 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 		}
 		advisor={
@@ -1731,10 +1732,16 @@ characters={
 			desc = ABY_Hoshino_advisor_desc
 			idea_token = ABY_Hoshino_political_advisor
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_abydos_leader
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 150
 			ai_will_do = {
@@ -1746,10 +1753,16 @@ characters={
 			desc = ABY_Hoshino_advisor_desc
 			idea_token = ABY_Hoshino_high_command
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				BA_category_halo_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -1815,10 +1828,16 @@ characters={
 			desc = ABY_Shiroko_advisor_desc
 			idea_token = ABY_shiroko_political_advisor
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_dog
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 150
 			ai_will_do = {
@@ -1836,6 +1855,7 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 		}
 		advisor={
@@ -1843,10 +1863,16 @@ characters={
 			desc = ABY_Shiroko_advisor_desc
 			idea_token = ABY_Sirocco_4
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				army_armored_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -1876,10 +1902,16 @@ characters={
 			desc = ABY_Serika_advisor_desc
 			idea_token = ABY_serika_political_advisor
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_shehd
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 150
 			ai_will_do = {
@@ -1897,6 +1929,7 @@ characters={
 			logistics_skill=3
 			legacy_id=-1
 			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 		}
 		advisor={
@@ -1904,10 +1937,16 @@ characters={
 			desc = ABY_Serika_advisor_desc
 			idea_token = ABY_cerika
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				army_commando_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -1935,6 +1974,7 @@ characters={
 			logistics_skill=7
 			legacy_id=-1
 			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 		}
 		advisor={
@@ -1942,10 +1982,16 @@ characters={
 			desc = ABY_Nonomi_advisor_desc
 			idea_token = ABY_nonomie_1
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_neptis
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 150
 			ai_will_do = {
@@ -1957,10 +2003,16 @@ characters={
 			desc = ABY_Nonomi_advisor_desc
 			idea_token = ABY_nonomie_high_command
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				army_artillery_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -1988,6 +2040,7 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 		}
 		advisor={
@@ -1995,10 +2048,16 @@ characters={
 			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_ayane_political_advisor
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_deplomacy
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 150
 			ai_will_do = {
@@ -2010,10 +2069,16 @@ characters={
 			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_2
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_smart_ayane
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -2025,10 +2090,16 @@ characters={
 			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_3
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				air_chief_ground_support_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -2040,10 +2111,16 @@ characters={
 			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane_4
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				navy_chief_decisive_battle_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -2055,10 +2132,16 @@ characters={
 			desc = ABY_Ayane_advisor_desc
 			idea_token = ABY_Ayane
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				army_chief_offensive_2
+			}
+			visible = {
+				NOT = {has_country_flag = ABY_flag_arrest_eocordnldnjsghl}
 			}
 			cost = 100
 			ai_will_do = {
@@ -2083,7 +2166,10 @@ characters={
 			slot = political_advisor
 			idea_token = ABY_tlqkf
 			allowed = {
-				original_tag = ABY
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
 			}
 			traits = {
 				ABY_trait_eotlqk

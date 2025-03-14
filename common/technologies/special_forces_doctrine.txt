@@ -1435,7 +1435,10 @@ technologies = {
 		#xor = { special_forces_marines special_forces_paratroopers special_forces_mountaineers }
 
 		force_use_small_tech_layout = yes
-		special_forces_cap = 0.06
+		category_special_forces = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
 		halo_special_forces = {
 			supply_consumption = -0.02
 			soft_attack = 0.05

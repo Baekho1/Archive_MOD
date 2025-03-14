@@ -922,6 +922,9 @@
  RED_Central_Defense_Planning_Committee: "중앙국방기획위원회"
  RED_Central_Defense_Planning_Committee_tt: "§Y£GFX_decision_icon_small 국방기획§! 결정을 완료했습니다."
  RED_the_public: "노동자-농민 대중"
+
+ RED_finance_minister_tt: "경제관료는 한 명만 고용할 수 있습니다:"
+
  RED_revolutionary_committee: "혁명위원회"
  RED_revolutionary_committee_long: "붉은겨울 혁명위원회"
  RED_constitutionary_assembly: "제헌의회"
@@ -1614,7 +1617,7 @@
  RED_for_knowledge_idea: "지식을 위해!"
  RED_redwinter_idea: "붉은겨울 연방학원"
  RED_doomed_army_idea: "난잡한 군대"
- RED_doomed_army_idea_desc: "붉은겨울의 병력은 사무국 휘화로 통솔된 친위대 및 정규군과 통일된 지휘체계없이 학생들에 의해 자발적으로 구성된 민중방위대로 이루어져 있습니다. 그러나 전쟁학의 부재로 인해 이들의 전쟁수행 능력은 거의 불능에 가까우며, 전투에서의 승리 또한 대다수의 경우 수적 우위를 통해 가져오고 있습니다. 그러나 신비가 약해진 이차원에서는 더 이상 이를 지속할 수 없습니다. 군제에의 근본적인 변혁이 시급합니다."
+ RED_doomed_army_idea_desc: "붉은겨울의 병력은 사무국 휘하로 통솔된 친위대 및 정규군과 통일된 지휘체계없이 학생들에 의해 자발적으로 구성된 민중방위대로 이루어져 있습니다. 그러나 전쟁학의 부재로 인해 이들의 전쟁수행 능력은 거의 불능에 가까우며, 전투에서의 승리 또한 대다수의 경우 수적 우위를 통해 가져오고 있습니다. 그러나 신비가 약해진 이차원에서는 더 이상 이를 지속할 수 없습니다. 군제에의 근본적인 변혁이 시급합니다."
  RED_through_the_road_of_snow_idea: "전쟁공학"
  RED_winter_army_dynamic_modifier: "겨울군대"
  RED_controller_of_baltic_idea: "발트해의 지배자"

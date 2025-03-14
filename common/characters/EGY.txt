@@ -3,7 +3,7 @@ characters={
 	#leaders
 
 	EGY_fuad_i = {
-		name="Fuad Muhammad Ali"
+		name=Fuad_Muhammad_Ali
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Fuad_I.dds"
@@ -18,7 +18,7 @@ characters={
 			ideology=centrism
 			expire="1965.1.1"
 			traits = {
-			#	EGY_fuad_i_of_egypt
+				EGY_fuad_i_of_egypt
 			}
 			id=-1
 		}
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	EGY_farouk_i = {
-		name="Farouk Muhammad Ali"
+		name=Farouk_Muhammad_Ali
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_King_Farouk.dds"
@@ -53,7 +53,7 @@ characters={
 		}
 	}
 	EGY_mustafa_al_nahhas = {
-		name="Mustafa El-Nahhas"
+		name=Mustafa_ElNahhas
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Mustafa_el_Nahhas.dds"
@@ -63,14 +63,13 @@ characters={
 			ideology=liberalism
 			expire="1965.1.1"
 			traits = {
-				#liberal_grandee
-				#r56_trait_opposed_to_fascism
+				EGY_trait_big_free
 			}
 			id=-1
 		}
 	}
 	EGY_hassan_al_banna = {
-		name="Hassan Al-Banna"
+		name=Hassan_AlBanna
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Hassan_al_Banna.dds"
@@ -81,30 +80,28 @@ characters={
 			expire="1965.1.1"
 			traits = {
 				indomitable_perseverance
-				#r56_trait_opposed_to_communism
 			}
 			id=-1
 		}
 	}
-	EGY_hosni_al_arabi = {
-		name="Hosni al-Arabi"
-		portraits={
-			civilian={
-				#large="gfx/leaders/r56_generic/r56_portrait_generic_middle_east_4.dds"
-				large="gfx/leaders/EGY/r56_portrait_EGY_Hosni_al-Arabi.dds"
-			}
-		}
-		country_leader ={
-			ideology=marxism
-			expire="1965.1.1"
-			traits = {
-
-			}
-			id=-1
-		}
-	}
+	#EGY_hosni_al_arabi = {
+	#	name=Hosni_alArabi
+	#	portraits={
+	#		civilian={
+	#			#large="gfx/leaders/r56_generic/r56_portrait_generic_middle_east_4.dds"
+	#			large="gfx/leaders/EGY/r56_portrait_EGY_Hosni_al-Arabi.dds"
+	#		}
+	#	}
+	#	country_leader ={
+	#		ideology=marxism
+	#		expire="1965.1.1"
+	#		traits = {
+	#		}
+	#		id=-1
+	#	}
+	#}
 	EGY_stewart_symes = {
-		name="Stewart Symes"
+		name=Stewart_Symes
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Stewart_Symes.dds"
@@ -127,31 +124,11 @@ characters={
 				}
 			}
 			traits = {
-				#imperial_land_owner_tfv
+				imperial_land_owner_tfv
 			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
-			}
-		}
-		field_marshal = {
-			traits = { 
-				politically_connected 
-				infantry_officer 
-				#caring_leader 
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 4
-			logistics_skill = 2
-			legacy_id = 6991
-			visible = {
-				#has_completed_focus = EGY_storm_abdeen_palace
-				has_country_leader = {
-					character = EGY_stewart_symes
-					ruling_only = yes
-				}
 			}
 		}
 	}
@@ -159,7 +136,7 @@ characters={
 	# commanders
 
 	EGY_hussein_refki = { # Aristocrat
-		name="Hussein Refki"
+		name=Hussein_Refki
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Hussein_Refki.dds"
@@ -197,7 +174,7 @@ characters={
 		}
 	}
 	EGY_aziz_ezzat = { # Aristocrat
-		name="Aziz Ezzat"
+		name=Aziz_Ezzat
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Aziz_Ezzat.dds"
@@ -216,6 +193,7 @@ characters={
 			}
 			traits = {
 				smooth_talking_charmer
+				EGY_supjung
 			}
 		}
 		field_marshal={
@@ -233,7 +211,7 @@ characters={
 		}
 	}
 	EGY_hussein_sirri_amer = { # Aristocrat
-		name="Hussein Sirri Amer"
+		name=Hussein_Sirri_Amer
 		portraits={
 			army={
 				large="gfx/leaders/Arabia/portrait_arabia_generic_land_7.dds"
@@ -254,7 +232,7 @@ characters={
 		}
 	}
 	EGY_mohamed_naguib = {
-		name="Mohamed Naguib"
+		name=Mohamed_Naguib
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Muhammad_Naguib.dds"
@@ -281,6 +259,7 @@ characters={
 				#war_hero 
 				politically_connected 
 				armor_officer 
+				EGY_trait_free_officer
 			}
 			skill = 3
 			attack_skill = 3
@@ -291,7 +270,7 @@ characters={
 		}
 	}
 	EGY_hussein_el_shafei = {
-		name="Hussein el-Shafei"
+		name=Hussein_elShafei
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Hussein_el-Shafei.dds"
@@ -318,6 +297,7 @@ characters={
 				cavalry_officer 
 				trait_reckless 
 				media_personality 
+				EGY_trait_free_officer
 			}
 			skill = 3
 			attack_skill = 4
@@ -328,7 +308,7 @@ characters={
 		}
 	}
 	EGY_ahmad_smail_ali = { 
-		name="Ahmad Ismail Ali"
+		name=Ahmad_Ismail_Ali
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Ahmad_Smail_Ali.dds"
@@ -366,7 +346,7 @@ characters={
 		}
 	}
 	EGY_abdul_munim_riad = {
-		name="Abdul Munim Riad"
+		name=Abdul_Munim_Riad
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Abdul_Munim_Riad.dds"
@@ -402,7 +382,7 @@ characters={
 		}
 	}
 	EGY_muhammad_anwar_sadat = {
-		name="Muhammad Anwar Sadat"
+		name=Muhammad_Anwar_Sadat
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Muhammad_Anwar_Sadat.dds"
@@ -410,7 +390,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { career_officer brilliant_strategist }
+			traits = { career_officer brilliant_strategist EGY_trait_free_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -419,7 +399,7 @@ characters={
 		}
 	}
 	EGY_ahmed_ali_al_mwawi = {
-		name="Ahmed Ali al-Mwawi"
+		name=Ahmed_Ali_alMwawi
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Ahmed_Abdullah_Al_Mwawi.dds"
@@ -453,7 +433,7 @@ characters={
 	}
 	
 	EGY_mohamed_ahmed_sadek = {
-		name="Mohamed Ahmed Sadek"
+		name=mohamed_ahmed_sadek
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Mohamed_Ahmed_Sadek.dds"
@@ -471,7 +451,7 @@ characters={
 		}
 	}
 	EGY_abdel_hakim_amer = {
-		name="Abdel Hakim Amer"
+		name=abdel_hakim_amer
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Abdel_Hakim_Amer.dds"
@@ -479,7 +459,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { trait_reckless }
+			traits = { trait_reckless EGY_trait_free_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -489,7 +469,7 @@ characters={
 		}
 	}
 	EGY_gamal_abdel_nasser = {
-		name="Gamal Abdel Nasser"
+		name=gamal_abdel_nasser
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Gamal_Abdel_Nasser.dds"
@@ -501,7 +481,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { career_officer }
+			traits = { career_officer EGY_trait_free_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -511,7 +491,7 @@ characters={
 		}
 	}
 	EGY_mahmoud_hamza_pasha = {
-		name="Mahmoud Hamza Pasha"
+		name=mahmoud_hamza_pasha
 		portraits={
 			army={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Mahmoud_Hamza_Pasha.dds"
@@ -543,7 +523,7 @@ characters={
 		}
 	}
 	EGY_ahmed_bek_badr = { # Same as Mahmoud Hamza Pasha
-		name="Ahmed Bek Badr"
+		name=ahmed_bek_badr
 		portraits={
 			army={
 				large="gfx/leaders/SAU/Portrait_Arabia_Generic_navy_1.dds"
@@ -565,7 +545,7 @@ characters={
 	# political advisors
 
 	EGY_ismail_sidky = {
-		name="Ismail Sidky"
+		name=ismail_sidky
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_ismail_sidky"
@@ -587,7 +567,7 @@ characters={
 		}
 	}
 	EGY_muhammad_mahmoud_pasha = {
-		name="Muhammad Mahmoud Pasha"
+		name=muhammad_mahmoud_pasha
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_muhammad_mahmoud_pasha"
@@ -617,7 +597,7 @@ characters={
 		}
 	}
 	EGY_mohammed_ali_tewfik = {
-		name="Mohammed Ali Tewfik"
+		name=mohammed_ali_tewfik
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_mohammed_ali_tewfik"
@@ -647,7 +627,7 @@ characters={
 		}
 	}
 	EGY_sayyid_qutb = {
-		name="Sayyid Qutb"
+		name=sayyid_qutb
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_sayyid_qutb"
@@ -672,12 +652,12 @@ characters={
 				}
 			}
 			traits = {
-				#fierce_propagandist
+				EGY_trait_gudwpeks
 			}
 		}
 	}
 	EGY_salama_moussa = {
-		name="Salama Moussa"
+		name=salama_moussa
 		portraits={
 			civilian={
 				small="GFX_idea_generic_communist_revolutionary_middle_eastern_2d"
@@ -702,12 +682,12 @@ characters={
 				#}
 			}
 			traits = {
-				communist_revolutionary
+				EGY_trait_socialist
 			}
 		}
 	}
 	EGY_ahmad_maher_pasha = {
-		name="Ahmad Maher Pasha"
+		name=ahmad_maher_pasha
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_ahmad_maher_pasha"
@@ -726,12 +706,12 @@ characters={
 				}
 			}
 			traits = {
-				#anti_fascist_appeaser
+				EGY_trait_sat_party
 			}
 		}
 	}
 	EGY_farida = {
-		name="Farida"
+		name=farida
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_safinaz_zulficar"
@@ -754,12 +734,12 @@ characters={
 				}
 			}
 			traits = {
-				#queen_consort
+				queen_consort
 			}
 		}
 	}
 	EGY_doria_shafik = {
-		name="Doria Shafik"
+		name=doria_shafik
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_doria_shafik"
@@ -782,7 +762,7 @@ characters={
 		}
 	}
 	EGY_ahmed_hussayn = {
-		name="Ahmed Hussayn"
+		name=ahmed_hussayn
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Ahmed_Hussein.dds"
@@ -824,7 +804,7 @@ characters={
 		}
 	}
 	EGY_aly_maher_pasha = {
-		name="Aly Maher Pasha"
+		name=aly_maher_pasha
 		portraits={
 			civilian={
 				large="gfx/leaders/EGY/r56_portrait_EGY_Aly_Maher_Pasha.dds"
@@ -838,12 +818,12 @@ characters={
 				original_tag = EGY
 			}
 			traits = {
-				#POL_Foreign_Trade_Advocate
+				EGY_trait_loyalist
 			}
 		}
 	}
 	EGY_abbud_pasha = {
-		name="Abbud Pasha"
+		name=abbud_pasha
 		portraits={
 			civilian={
 				small="GFX_idea_generic_political_advisor_arab_3"
@@ -861,7 +841,7 @@ characters={
 		}
 	}
 	EGY_hussein_sirri_pasha = { # Perhaps could be used more in the future
-		name="Hussein Sirri Pasha"
+		name=hussein_sirri_pasha
 		portraits={
 			civilian={
 				small="GFX_idea_generic_political_advisor_arab_2"
@@ -879,7 +859,7 @@ characters={
 		}
 	}
 	EGY_talaat_harb = {
-		name="Talaat Harb"
+		name=talaat_harb
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_talaat_harb"
@@ -901,7 +881,7 @@ characters={
 		}
 	}
 	EGY_abd_al_rahman_al_mahdi ={
-		name="Abd al-Rahman al-Mahdi"
+		name=abd_al_rahman_al_mahdi
 		portraits={
 			civilian={
 				small="GFX_idea_SUD_abd_mahdi"
@@ -928,7 +908,7 @@ characters={
 				}
 			}
 			traits = {
-				#EGY_sudanese_nationalist_figure
+				EGY_sudanese_nationalist_figure
 			}
 		}
 		country_leader={
@@ -941,7 +921,7 @@ characters={
 		}
 	}
 	EGY_zakaria_mohieddin = {
-		name="Zakaria Mohieddin"
+		name=zakaria_mohieddin
 		portraits={
 			civilian={
 				small="GFX_idea_EGY_zakaria_mohieddin"
@@ -961,12 +941,21 @@ characters={
 				head_of_intelligence
 			}
 		}
+		corps_commander={
+			traits = { career_officer EGY_trait_free_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 6985
+		}
 	}
 
 	# theorists
 
 	EGY_youssef_ramadan = {
-		name="Youssef Ramadan"
+		name=youssef_ramadan
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_1"
@@ -989,7 +978,7 @@ characters={
 		}
 	}
 	EGY_sameera_moussa = {
-		name="Sameera Moussa"
+		name=sameera_moussa
 		portraits={
 			army={
 				small="GFX_idea_EGY_sameera_moussa"
@@ -1018,7 +1007,7 @@ characters={
 		}
 	}
 	EGY_mehmet_kaplan = {
-		name="Mehmet Kaplan"
+		name=mehmet_kaplan
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_1"
@@ -1047,7 +1036,7 @@ characters={
 	# military advisors
 
 	EGY_abdel_moneim_amin = { 
-		name="Abdel Moneim Amin"
+		name=abdel_moneim_amin
 		portraits={
 			army={
 				small="GFX_idea_arabia_generic_land_5"
@@ -1068,9 +1057,18 @@ characters={
 				factor = 1.000
 			}
 		}
+		corps_commander={
+			traits = { career_officer EGY_trait_free_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 6985
+		}
 	}
 	EGY_ahmed_hassanein = { # Aristocrat, but that doesn't matter
-		name="Ahmed Hassanein"
+		name=ahmed_hassanein
 		portraits={
 			army={
 				small="GFX_idea_arabia_generic_land_6"
@@ -1096,7 +1094,7 @@ characters={
 	# air advisors
 
 	EGY_victor_tait = {
-		name="Victor Tait"
+		name=victor_tait
 		portraits={
 			army={
 				small="GFX_idea_ENG_generic_land_1"
@@ -1121,7 +1119,7 @@ characters={
 		}
 	}
 	EGY_gamal_salem = {
-		name="Gamal Salem"
+		name=gamal_salem
 		portraits={
 			army={
 				small="GFX_idea_generic_air_chief_all_weather_middle_eastern_2d"
@@ -1138,9 +1136,18 @@ characters={
 				air_chief_all_weather_2
 			}
 		}
+		corps_commander={
+			traits = { career_officer EGY_trait_free_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 6985
+		}
 	}
 	EGY_abdel_latif_boghdadi = {
-		name="Abdel Latif Boghdadi"
+		name=abdel_latif_boghdadi
 		portraits={
 			army={
 				small="GFX_idea_generic_air_air_combat_trainer_middle_eastern_2d"
@@ -1157,9 +1164,18 @@ characters={
 				air_air_superiority_2
 			}
 		}
+		corps_commander={
+			traits = { career_officer  EGY_trait_free_officer}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 6985
+		}
 	}
 	EGY_hassan_ibrahim = {
-		name="Hassan Ibrahim"
+		name=Hassan_Ibrahim
 		portraits={
 			army={
 				small="GFX_idea_generic_air_chief_all_weather_middle_eastern_2d"
@@ -1175,6 +1191,15 @@ characters={
 			traits = {
 				air_close_air_support_1
 			}
+		}
+		corps_commander={
+			traits = { career_officer EGY_trait_free_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 6985
 		}
 	}
 }

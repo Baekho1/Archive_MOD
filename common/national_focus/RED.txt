@@ -3139,7 +3139,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		cost = 5
+		cost = 6
 		relative_position_id = RED_economy_focus_0
 		available = {
 			NOT = {
@@ -3166,7 +3166,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_economy_focus_0
-		cost = 5
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -3190,7 +3190,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_economy_focus_0
-		cost = 5
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -3266,13 +3266,13 @@ focus_tree = {
 					}
 					modify_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 				else = {
 					add_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 			}
@@ -3614,13 +3614,13 @@ focus_tree = {
 					}
 					modify_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 				else = {
 					add_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 			}
@@ -3687,13 +3687,13 @@ focus_tree = {
 					}
 					modify_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 				else = {
 					add_timed_idea = {
 						idea = RED_give_pudding_idea
-						days = 180
+						days = 120
 					}
 				}
 			}
@@ -4263,7 +4263,7 @@ focus_tree = {
 		#공안부
 		id = RED_enlarge_secret_police
 		icon = GFX_focus_BEL_national_redoubt_at_antwerp
-		cost = 4
+		cost = 6 
 		relative_position_id = RED_restore_the_security
 		x = -1
 		y = 1
@@ -4511,6 +4511,14 @@ focus_tree = {
 						is_core_of = RE2
 						is_core_of = RE3
 					}
+				}
+				if = {
+					limit = {
+						RED = {
+							is_ai = yes
+						}
+					}
+					add_compliance = 10
 				}
 				add_dynamic_modifier = {
 					modifier = RED_social_reform_modifier
@@ -4899,7 +4907,7 @@ focus_tree = {
 			RE2 = {
 				add_timed_idea = {
 					idea = RED_industrial_intergration
-					days = 360
+					days = 720
 				}
 			}
 			if = {
@@ -4975,7 +4983,7 @@ focus_tree = {
 			RE3 = {
 				add_timed_idea = {
 					idea = RED_industrial_intergration
-					days = 360
+					days = 720
 				}
 			}
 			if = {
@@ -5193,7 +5201,7 @@ focus_tree = {
 		#현지 공산당 수용
 		id = RED_welcome_immigrate
 		icon = GFX_focus_generic_communist
-		cost = 4
+		cost = 6
 		relative_position_id = RED_enticing_locals
 		x = 1
 		y = 1
@@ -5274,7 +5282,7 @@ focus_tree = {
 		#계급의 적
 		id = RED_enemy_of_class
 		icon = GFX_focus_spr_crush_the_revolution
-		cost = 4
+		cost = 6
 		relative_position_id = RED_enticing_locals
 		x = -1
 		y = 1
@@ -6668,21 +6676,23 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_tro_3
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_tro_2
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_tro_1
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_tro_0
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_3
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_tro_0
+				}
 			}
 		}
 		x = -2
@@ -6722,21 +6732,23 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_che_3
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_che_2
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_che_1
-			}
-			is_power_balance_in_range = {
-				id = RED_power_balance
-				range = RED_che_0
+			OR = {
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_3
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_2
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_1
+				}
+				is_power_balance_in_range = {
+					id = RED_power_balance
+					range = RED_che_0
+				}
 			}
 		}
 		completion_reward = {
@@ -11813,16 +11825,6 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_core_of = RED
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
 			random_owned_state = {
 				limit = {
 					is_core_of = RED

@@ -1894,6 +1894,11 @@ unit_leader_event = {
 		name = COU_event.56.a
 	    custom_effect_tooltip = COU_tooltip_sancho_davilla_fernandez
 	}
+	
+	option = { 
+		name = COU_event.56.b
+	    custom_effect_tooltip = COU_tooltip_sancho_davilla_fernandeztwo
+	}
 }
 
 

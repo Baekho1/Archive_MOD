@@ -1045,9 +1045,10 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-                political_power_cost = 0.50
-                stability_factor = -0.25
-                generate_wargoal_tension = 0.40
+                political_power_factor = -0.3
+                stability_factor = -0.15
+				war_support_factor = 0.05
+                generate_wargoal_tension = 0.3
             }
         }
 
@@ -1069,8 +1070,8 @@ ideas = {
 
             targeted_modifier = {
                 tag = SHE
-                attack_bonus_against = -0.35
-                defense_bonus_against = -0.35
+                attack_bonus_against = -0.2
+                defense_bonus_against = -0.2
             }
         }
 		
@@ -1116,7 +1117,24 @@ ideas = {
 				army_morale_factor = 0.05
 				production_speed_buildings_factor = 0.05
             }
-
+			
+			targeted_modifier = {
+                tag = SHE
+                attack_bonus_against = 0.05
+                defense_bonus_against = 0.05
+            }
+            
+			targeted_modifier = {
+                tag = BEL 
+                attack_bonus_against = -0.2
+                defense_bonus_against = -0.2
+            }
+			
+			targeted_modifier = {
+                tag = HOL
+                attack_bonus_against = -0.2
+                defense_bonus_against = -0.2
+            }
         }
 		
 		COU_dutch_collaboraters_no_kaya_debuff = { #현지인 협력자들 디버프
@@ -1135,6 +1153,31 @@ ideas = {
             modifier = {
                 stability_factor = -0.05
                 fascism_drift = 0.02
+            }
+
+        }
+		
+		COU_fake_dead_flower = { #dynamic 표시용 
+		    name = COU_the_dead_flower
+            picture = COU_the_dead_flower 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.15
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				training_time_factor = 0.2
+				conscription_factor = -0.2
+				army_org_factor = -0.15
             }
 
         }
