@@ -85,6 +85,11 @@ spriteTypes = {
     	name = "GFX_trait_front_line_general"
     	texturefile = "gfx/interface/traits/trait_frontline_general.dds"
 	}
+	
+	spriteType = {
+    	name = "GFX_trait_EGY_trait_free_officer"
+    	texturefile = "gfx/interface/traits/personal/trait_SOV_determined.dds"
+	}
 	spriteType = {
 		name = "GFX_trait_alcoholic"
 		textureFile = "gfx/interface/traits/trait_substance_abuser.dds"

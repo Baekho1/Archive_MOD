@@ -1855,6 +1855,22 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			custom_effect_tooltip = ABY_flag_austria_rebuild_tt
+			ABY_4_rebuild_effect = yes
+			ABY_152_rebuild_effect = yes
+			ABY_153_rebuild_effect = yes
+			ABY_1021_rebuild_effect = yes
+			ABY_975_rebuild_effect = yes
+			ABY_848_rebuild_effect = yes
+			ABY_976_rebuild_effect = yes
+			custom_effect_tooltip = ABY_flag_austria_unite_tt
+			ABY_4_unite_effect = yes
+			ABY_152_unite_effect = yes
+			ABY_153_unite_effect = yes
+			ABY_1021_unite_effect = yes
+			ABY_975_unite_effect = yes
+			ABY_848_unite_effect = yes
+			ABY_976_unite_effect = yes
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1885,6 +1901,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_country_flag = ABY_flag_arrest_eocordnldnjsghl
+			add_ideas = {
+				ABY_idea_kivotos_rabel_1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1912,6 +1932,7 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
+			has_completed_focus = ABY_focus_syemmata_railway_gun
 			#중점 선행조건
 		}
 
@@ -1919,6 +1940,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_rabel_1
+				add_idea = ABY_idea_kivotos_rabel_2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1950,6 +1975,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_rabel_2
+				add_idea = ABY_idea_kivotos_rabel_3
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -1984,6 +2013,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_rabel_3
+				add_idea = ABY_idea_kivotos_rabel_4
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2477,6 +2510,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_ideas = {
+				ABY_idea_syemmata
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2511,6 +2547,32 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			launch_nuke = {
+				province = 732
+				use_nuke = no
+			}
+			set_country_flag = ABY_flag_suo_recruit
+			set_cosmetic_tag = ABY_SCHOOL_2_0
+			add_stability = -0.15
+			add_popularity = {
+				ideology = neutrality
+				popularity = -1
+			}
+			BA_ban_neutrality_effect = yes
+			add_country_leader_role = {
+				character = ABY_sou
+				promote_leader = yes
+				country_leader = {
+					ideology = Self_Reliance
+					expire = "1965.1.1.1"
+					traits = { ABY_trait_loss ABY_trait_hate_neutrality_suo }
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				name = ABY_fascism_party_3
+				long_name = ABY_fascism_party_3
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2576,6 +2638,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_rabel_4
+				add_idea = ABY_idea_kivotos_rabel_5
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2593,8 +2659,8 @@ focus_tree = {
 		mutually_exclusive = {
 			   #반대되는 중점
 		}
-		x = 0      #좌표
-		y = 2
+		x = -1      #좌표
+		y = 1
 		relative_position_id = ABY_focus_gyemong_fool_people
 		bypass = {
 			#중점 통과 조건
@@ -2607,6 +2673,15 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SHA
+						is_core_of = HYA
+					}
+				}
+				add_core_of = ABY
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2641,37 +2716,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
-			#중점 완료시 얻는 보상
-		}
-	}
-	
-	focus = {
-		id = ABY_focus_move_highlander  #중점명
-		#icon = GFX_ABY_focus_2
- 		cost = 5.00          #중점 일수(주)
-		search_filters = {
-			#중점의 타입
-		}
-		prerequisite = {
-			focus = ABY_focus_gyemong_fool_people   #이전 중점
-		}
-		mutually_exclusive = {
-			   #반대되는 중점
-		}
-		x = -1      #좌표
-		y = 1
-		relative_position_id = ABY_focus_gyemong_fool_people
-		bypass = {
-			#중점 통과 조건
-		}
-		available = {
-			#중점 선행조건
-		}
-
-		select_effect = {
-			#중점 시작시 얻는 보상
-		}
-		completion_reward = {
+			KAI = {
+				country_event = {
+					id = ABY_new_event.47
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2706,6 +2755,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -1
+			}
+			BA_ban_democratic_effect = yes
+			add_country_leader_trait = ABY_trait_hate_democratic_suo
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2737,6 +2792,12 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -1
+			}
+			BA_ban_communism_effect = yes
+			add_country_leader_trait = ABY_trait_hate_communism_suo
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2771,6 +2832,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			clr_country_flag = ABY_flag_map_descision
+			add_ideas = {
+				ABY_idea_kivotos_nationalism
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2802,6 +2867,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_nationalism
+				add_idea = ABY_idea_kivotos_nationalism_2
+			}
+			set_country_flag = ABY_flag_core_gyemong
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2833,6 +2903,11 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_cosmetic_tag = ABY_SCHOOL_2
+			add_stability = 0.15
+			add_war_support = 0.15
+			set_rule = { can_create_factions = yes }
+			create_faction = ABY_fascism_party_3
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -2938,7 +3013,8 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_political_right   #이전 중점
+			focus = ABY_focus_political_right
+			focus = ABY_focus_press_government   #이전 중점
 		}
 		mutually_exclusive = {
 			   #반대되는 중점
@@ -3093,6 +3169,7 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
+			focus = ABY_focus_political_right
 			focus = ABY_focus_press_government   #이전 중점
 		}
 		mutually_exclusive = {
@@ -3155,8 +3232,10 @@ focus_tree = {
 			#중점의 타입
 		}
 		prerequisite = {
-			focus = ABY_focus_west_make
 			focus = ABY_focus_make_north   #이전 중점
+		}
+		prerequisite = {
+			focus = ABY_focus_west_make   #이전 중점
 		}
 		mutually_exclusive = {
 			   #반대되는 중점
@@ -3277,6 +3356,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_ideas = {
+				ABY_idea_kivotos_militarilism_1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3308,6 +3390,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_militarilism_1
+				add_idea = ABY_idea_kivotos_militarilism_2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3339,6 +3425,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_militarilism_2
+				add_idea = ABY_idea_kivotos_militarilism_3
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3370,6 +3460,9 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			add_ideas = {
+				ABY_idea_kivotos_equipment_1
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3401,6 +3494,10 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ABY_idea_kivotos_equipment_1
+				add_idea = ABY_idea_kivotos_equipment_2
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3438,6 +3535,14 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			remove_ideas = {
+				ABY_idea_kivotos_militarilism_3
+				ABY_idea_kivotos_equipment_2
+			}
+			add_ideas = {
+				ABY_idea_kivotos_militarilism_4
+			}
+			add_war_support = 0.1
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3469,6 +3574,270 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_country_flag = ABY_flag_pro_halo
+			delete_units = {
+			    division_template = "Halo Infantry Division"
+			    disband = yes #will refund equipment and manpower
+			}
+			BA_halo_infantry_ban_effect_only_infantry = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_1
+					add_idea = ABY_idea_army_1_0_0
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_mountaineers_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_marines_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_paratroopers_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_special_forces_cap = 0.15
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_unite_SHA
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add2_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 2 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_unite_HYA
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add2_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 2 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_unite_TRM
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add2_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 2 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = ABY_focus_unite_GEH
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add2_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 2 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_69_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_9_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_74_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_72_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_75_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_972_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_1021_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_975_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_4_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_976_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_153_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_152_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = ABY_flag_848_complete
+				}
+				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+				BA_halo_special_forces_cap_edit_effect = yes
+				random_owned_state = {
+					create_unit = {
+						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ABY
+					}
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -3500,6 +3869,45 @@ focus_tree = {
 			#중점 시작시 얻는 보상
 		}
 		completion_reward = {
+			set_country_flag = ABY_flag_pro_halo_2
+			delete_units = {
+			    division_template = "ABYDOS National Brigade"
+			    disband = yes #will refund equipment and manpower
+			}
+			ABY_halo_militia_ban_effect = yes
+			custom_effect_tooltip = kivotos_halo_special_forces_add4_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 4 }
+			BA_halo_special_forces_cap_edit_effect = yes
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.9 start_equipment_factor = 1"
+					owner = ABY
+				}
+				create_unit = {
+					division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.9 start_equipment_factor = 1"
+					owner = ABY
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = ABY_idea_army_1
+					add_idea = ABY_idea_army_1_0_0
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					ABY_var_mountaineers_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_marines_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_paratroopers_special_forces_contribution_factor = 0.5
+				}
+				add_to_variable = {
+					ABY_var_special_forces_cap = 0.15
+				}
+			}
 			#중점 완료시 얻는 보상
 		}
 	}
@@ -10747,16 +11155,16 @@ focus_tree = {
 			}
 			hidden_effect = {
 				add_to_variable = {
-					ABY_var_mountaineers_special_forces_contribution_factor = 0.25
+					ABY_var_mountaineers_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_marines_special_forces_contribution_factor = 0.25
+					ABY_var_marines_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_paratroopers_special_forces_contribution_factor = 0.25
+					ABY_var_paratroopers_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_special_forces_cap = 0.25
+					ABY_var_special_forces_cap = 0.15
 				}
 			}
 			if = {
@@ -11055,16 +11463,16 @@ focus_tree = {
 			}
 			hidden_effect = {
 				add_to_variable = {
-					ABY_var_mountaineers_special_forces_contribution_factor = 0.25
+					ABY_var_mountaineers_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_marines_special_forces_contribution_factor = 0.25
+					ABY_var_marines_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_paratroopers_special_forces_contribution_factor = 0.25
+					ABY_var_paratroopers_special_forces_contribution_factor = 0.5
 				}
 				add_to_variable = {
-					ABY_var_special_forces_cap = 0.25
+					ABY_var_special_forces_cap = 0.15
 				}
 			}
 			#중점 완료시 얻는 보상
