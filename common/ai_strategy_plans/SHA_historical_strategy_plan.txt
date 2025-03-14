@@ -23,18 +23,22 @@ SHA_historical = {
 		SHA_invest_in_erzberg_steel_mines
 		SHA_expand_stpoltner_steelworks
 
-		SHA_strike_suppression
 		SHA_Kaguya_ousted
-		SHA_Shanhaijing_fascism
+		SHA_strike_suppression
 		SHA_Sack_of_Rumi
-		SHA_Solving_the_Militia_Problem
-		SHA_consolidate_industries
+		SHA_Shanhaijing_fascism
+
 		SHA_Shanhaijing_fact
 		SHA_emergency_measures
+		SHA_consolidate_industries
 
+		SHA_establish_the_SEZ
 		SHA_architechtual_advancements
-		SHA_courting_the_princess_of_industry
-		SHA_Construction_of_Kolnbrein_Dam
+		SHA_central_planning
+		SHA_union_control
+
+		SHA_Equipment_Development_Department
+		SHA_military_production
 		
 		SHA_address_the_army
 		SHA_Following_doorkeeper_footsteps
@@ -50,14 +54,12 @@ SHA_historical = {
 		SHA_industrial_exploitation
 		SHA_Leave_SHA
 		SHA_the_third_kivotos
-
-		SHA_establish_the_SEZ
-		SHA_central_planning
-
-		SHA_union_control
+		
+		SHA_courting_the_princess_of_industry
+		SHA_Construction_of_Kolnbrein_Dam
+		
 		SHA_establish_the_VES
-
-		SHA_teleological_planning
+		SHA_solidarist_representation
 
 	}
 

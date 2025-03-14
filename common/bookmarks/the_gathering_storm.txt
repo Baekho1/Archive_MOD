@@ -84,11 +84,16 @@ bookmarks = {
 
 		HYA={
 			history = HYA_GATHERING_STORM_DESC
-			ideology = neutrality
+			ideology = democratic
 			ideas = {
-				BA_exiles_of_the_future
+				HYA_yuyeonhandongali
+				HYA_mangryangz
+				HYA_urban_legend
 			}	
 			focuses = {
+				HYA_focus_2
+				HYA_focus_victory
+				HYA_focus_97
 			}			
 		}
 
@@ -187,6 +192,16 @@ bookmarks = {
 			minor = yes
 			history = GEK_gathering_storm_desc
 			ideology = neutrality
+			ideas = {
+				GEK_didntknew_without_navy
+				GEK_swedish_hyupryuk
+				GEK_legitimacy
+			}
+			focuses = {
+				GE1_start_focus
+				GEK_GER_government
+				GEK_raise_the_red_flag
+			}
 		}
 
 		ARI = {
@@ -204,12 +219,28 @@ bookmarks = {
 			minor = yes
 			history = NSD_gathering_storm_desc
 			ideology = neutrality
+			ideas = {
+				TCA_anti_trinity_war_idea
+			}
+			focuses = {
+				GE2_start_focus
+			}
 		}
 
 		KPD = {
 			minor = yes
 			history = KPD_GATHERING_STORM_DESC
 			ideology = communism
+			ideas = {
+				TCA_anti_trinity_war_idea
+				KPD_low_popular_support_3
+				KPD_no_rank_army
+			}
+			focuses = {
+				GE2_start_focus
+				KPD_repetition_of_resistance
+				KPD_end_of_trinity
+			}
 		}
 
 		ZZZ = {

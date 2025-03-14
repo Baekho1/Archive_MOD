@@ -582,7 +582,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Shanhaijing_fascism
 		icon = GFX_focus_generic_fascist_troops
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
@@ -719,7 +719,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Eastern_Alchemy_Society_solidarity
 		icon = GFX_goal_SHA_Eastern_Alchemy_Society_solidarity
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
@@ -781,26 +781,16 @@ focus_tree = {
 		mutually_exclusive = { }
 
 		available = {
-			surrender_progress > 0.15
-			has_completed_focus = SHA_Following_doorkeeper_footsteps
+			custom_trigger_tooltip = {
+				tooltip = GAEBALJUNG
+				always = no
+			}
 		}
 		bypass = { }
 
 
 		completion_reward = {
-			custom_effect_tooltip = SHA_military_change
-			add_to_variable = {
-				SHA_militray_army_attack_factor = 0.05
-				tooltip = army_attack_factor_tt
-			}
-			add_to_variable = {
-				SHA_military_army_morale_factor = 0.05
-				tooltip = army_morale_factor_tt
-			}
-			add_to_variable = {
-				SHA_militray_army_org_factor = -0.05
-				tooltip = army_org_factor_tt
-			}
+
 		}
 	}
 
@@ -834,7 +824,7 @@ focus_tree = {
 	focus = {
 		id = SHA_cult_of_personality
 		icon = GFX_focus_SHA_cavalry_charge
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = SHA_Kaguya_ousted
 		cost = 5
@@ -856,7 +846,7 @@ focus_tree = {
 
 	# 
 	focus = {
-		id = SHA_rebirth_fo_shanhaijing
+		id = SHA_Seonin
 		icon = GFX_focus_SHA_cavalry_charge
 		x = 0
 		y = 3
@@ -870,7 +860,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no 
+			is_debug = yes
 		}
 
 		available = { }
@@ -994,7 +984,7 @@ focus_tree = {
 	focus = {
 		id = SHA_new_shanhaijing_conservatism
 		icon = GFX_goal_SHA_new_shanhaijing_conservatism
-		x = -2
+		x = -1
 		y = 1
 		cost = 5
 
@@ -1015,7 +1005,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Cabinet_Secretariat
 		icon = GFX_goal_SHA_Cabinet_Secretariat
-		x = -4
+		x = -3
 		y = 1
 		cost = 5
 
@@ -1058,7 +1048,7 @@ focus_tree = {
 	focus = {
 		id = SHA_organic_national_polity
 		icon = GFX_goal_SHA_Jingle_Bell_Rock
-		x = 0
+		x = 1
 		y = 1
 		cost = 5
 
@@ -1267,40 +1257,12 @@ focus_tree = {
 		}
 	}
 
-	# 질서 회복
-	focus = {
-		id = SHA_Solving_the_Militia_Problem
-		icon = GFX_focus_AUS_legitimistische_jugend
-		x = -2
-		y = 1
-		cost = 3
-
-		prerequisite = {
-			focus = SHA_Kaguya_ousted 
-			focus = SHA_conservative_revolution
-		}
-		mutually_exclusive = {  }
-
-		available = {
-			
-		}
-		bypass = { 
-			NOT = { has_idea = SHA_Austrian_fascist_militia }
-		}
-
-		relative_position_id = SHA_Kaguya_ousted
-
-		completion_reward = {
-			remove_ideas = SHA_Austrian_fascist_militia
-		}
-	}
-
 	# 파업 진압
 	focus = {
 		id = SHA_strike_suppression
 		icon = GFX_focus_SWE_attack_landsorganisationen
-		x = 2
-		y = 1
+		x = 0
+		y = 2
 		cost = 5
 
 		prerequisite = {
@@ -1314,7 +1276,7 @@ focus_tree = {
 			NOT = { has_idea = SHA_faup_idea }
 		}
 
-		relative_position_id = SHA_conservative_revolution
+		relative_position_id = SHA_Kisaki_Suppression
 
 		completion_reward = {
 			remove_ideas = SHA_faup_idea
@@ -1329,13 +1291,12 @@ focus_tree = {
 	focus = {
 		id = SHA_Sack_of_Rumi
 		icon = GFX_goal_SHA_Sack_of_Rumi
-		x = 1
+		x = 0
 		y = 1
 		cost = 2
 
 		prerequisite = {
 			focus = SHA_strike_suppression
-			focus = SHA_Solving_the_Militia_Problem
 		}
 		mutually_exclusive = {  }
 
@@ -1575,6 +1536,41 @@ focus_tree = {
 
 
 		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						AND = {
+							original_tag = HUN
+							NOT = { 
+								HUN = { has_completed_focus = wuw_HUN_renew_the_rome_protocols }
+							}
+						}
+						AND = {
+							original_tag = YUG
+							NOT = { 
+								YUG = { has_completed_focus = YUG_join_axis } 
+							}
+						}
+						AND = {
+							original_tag = BUL
+							NOT = { 
+								BUL = { has_completed_focus = BUL_cooperation_with_italy } 
+							}
+						}
+						original_tag = ROM
+					}
+				}
+				add_opinion_modifier = {
+					modifier = BUL_approached_italy
+					target = ROOT
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					modifier = BUL_strengthened_relations_with_us
+					target = ROOT
+				}
+			}
 		
 		}
 	}
@@ -1595,7 +1591,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { 
 			focus = SHA_recognition_of_Hungarian_sovereignty 
-			focus = SHA_support_italy
+			focus = SHA_spheres_of_influence
 		}
 
 		available = {
@@ -1622,7 +1618,7 @@ focus_tree = {
 		prerequisite = { focus = SHA_Diplomacy_with_hungary }
 		mutually_exclusive = { 
 			focus = SHA_Intervention_in_the_Balkan_situation  
-			focus = SHA_support_italy
+			focus = SHA_spheres_of_influence
 		}
 
 		available = {
@@ -1636,9 +1632,9 @@ focus_tree = {
 		}
 	}
 
-	# 이탈리아랑 외교하기
+	# 
 	focus = {
-		id = SHA_support_italy
+		id = SHA_spheres_of_influence
 		icon = GFX_focus_ITA_cavalry_charge
 		x = -1
 		y = 1
@@ -1654,12 +1650,77 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GAEBALJUNG
+				always = no
+			}
 		}
 		bypass = { }
 
 
 		completion_reward = {
-		
+			
+			ITA = {
+				country_event = {
+					id = shafas.14
+					days = 02 
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = SHA_spheres_of_influence_tt
+		}
+	}
+
+	# 
+	focus = {
+		id = SHA_eastern_offensive
+		icon = GFX_focus_generic_attack_hungary
+		x = 0
+		y = 1
+		relative_position_id = SHA_spheres_of_influence
+		search_filters = {  }
+		cost = 5
+
+		prerequisite = { focus = SHA_spheres_of_influence }
+
+		available = {
+			is_subject = no
+		}
+		bypass = { }
+
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						owns_state = 155
+						owns_state = 43
+						owns_state = 974
+						owns_state = 973
+						owns_state = 154
+						owns_state = 70
+						owns_state = 664
+						owns_state = 71
+						owns_state = 73
+						owns_state = 102
+						owns_state = 109
+						owns_state = 45
+						owns_state = 764
+						owns_state = 853
+					}
+				}
+				custom_effect_tooltip = war_aim_against_the_country_puppetization_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -2587,6 +2648,7 @@ focus_tree = {
 		relative_position_id = SHA_the_third_kivotos
 
 		completion_reward = {
+			add_stability = 1
 		}
 	}
 
@@ -2704,7 +2766,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SHA_establish_the_SEZ
-		cost = 6.5
+		cost = 4
 
 		prerequisite = { focus = SHA_establish_the_SEZ }
 		prerequisite = { focus = SHA_architechtual_advancements }
@@ -2726,7 +2788,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SHA_establish_the_SEZ
-		cost = 5
+		cost = 4
 
 		prerequisite = { focus = SHA_establish_the_SEZ }
 		mutually_exclusive = {  }
@@ -2783,7 +2845,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SHA_establish_the_VES
-		cost = 8
+		cost = 6
 
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_solidarist_representation }
@@ -2811,7 +2873,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SHA_establish_the_VES
-		cost = 8
+		cost = 6
 
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_teleological_planning }
@@ -2882,6 +2944,8 @@ focus_tree = {
 				}
 				remove_ideas = SHA_austria_unemployment_problem
 			}
+			custom_effect_tooltip = tooltip_white_line
+			unlock_decision_tooltip = SHA_Solving_the_austria_Militia
 		}
 	}
 
@@ -3445,10 +3509,21 @@ focus_tree = {
 			add_political_power = 100
 
 			add_tech_bonus = {
-				name = AUS_architechtual_advancements
+				name = SHA_architechtual_advancements
 				bonus = 0.5
 				uses = 2
 				category = construction_tech
+			}
+
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 
 		}
@@ -3707,7 +3782,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -3986,7 +4061,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_Following_doorkeeper_footsteps
 		search_filters = { }
-		cost = 5
+		cost = 4
 
 		prerequisite = { focus = SHA_Following_doorkeeper_footsteps }
 		mutually_exclusive = { }
@@ -4020,7 +4095,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_National_Guard_Expansion
 		search_filters = { }
-		cost = 7
+		cost = 4
 
 		prerequisite = { focus = SHA_National_Guard_Expansion }
 		mutually_exclusive = { }
@@ -4280,7 +4355,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SHA_relief_work
 		search_filters = {  }
-		cost = 5
+		cost = 4
 
 		prerequisite = { focus = SHA_relief_work }
 		mutually_exclusive = { }
@@ -4315,14 +4390,16 @@ focus_tree = {
 
 
 		completion_reward = {
-			975 = { # 부르겐란트
+			976 = { # 슈타이어마르크-케른텐
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = { type = arms_factory level = 2 }
+			}
+			4 = { # 니더외스터라이히
 				add_building_construction = {
 					type = land_facility
 					level = 1
 					instant_build = yes    
-					province = 3700 # 산해경 중앙특구
+					province = 11666 # 산해경 중앙특구
 				}
 			}
 			unlock_military_industrial_organization_tooltip = mio:SHA_tank_equipment_organization
@@ -4540,7 +4617,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = SHA_address_the_army
 		search_filters = { FOCUS_FILTER_AIR_XP }
-		cost = 5
+		cost = 3
 
 		prerequisite = { }
 		mutually_exclusive = {  }
