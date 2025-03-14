@@ -8945,6 +8945,20 @@ country_event = { # 트리니티 의용군단
 		}
     }
 }
+country_event = { # 충성조항
+	id = trinity.22
+	title = trinity.22.t
+	desc = trinity.22.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.22.a
+    }
+}
+
 news_event = {
 	id = trinitynews.1
 	title = trinitynews.1.t
@@ -9060,6 +9074,23 @@ news_event = {
 		trigger = {
 			NOT = { Kivotos_tag = yes }
 		}
+	}
+}
+news_event = {
+	id = trinitynews.3
+	title = trinitynews.3.t
+	desc = trinitynews.3.desc
+	picture = GFX_news_TRM_Animated_Iochi_Mari
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = trinitynews.3.a
+		
 	}
 }
 country_event = {
@@ -9315,7 +9346,9 @@ country_event = { # 충성경쟁
 
 	option = {
 		name = trnstory.14.a
-
+		hidden_effect = {
+			country_event = { id = trnstory.16 days = 45 } # 충성경쟁 - 부작용 
+		}
 	}
 }
 country_event = { # 동행인
@@ -9329,6 +9362,20 @@ country_event = { # 동행인
 
 	option = {
 		name = trnstory.15.a
+
+	}
+}
+country_event = { # 부작용
+	id = trnstory.16
+	title = trnstory.16.t
+	desc = trnstory.16.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnstory.16.a
 
 	}
 }
