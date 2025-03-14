@@ -2124,6 +2124,26 @@ spriteTypes = {
 		name = "GFX_focus_iphone"
 		textureFile = "gfx/interface/goals/COU/iphone.png"
 	}
+	spriteType = {
+		name = "GFX_focus_24hours"
+		textureFile = "gfx/interface/goals/COU/24시간.png"
+	}
+	spriteType = {
+		name = "GFX_focus_lock_the_news"
+		textureFile = "gfx/interface/goals/COU/언론통제.png"
+	}
+	spriteType = {
+		name = "GFX_focus_hai_suouou"
+		textureFile = "gfx/interface/goals/COU/스오우.png"
+	}
+	spriteType = {
+		name = "GFX_focus_hai_shupo"
+		textureFile = "gfx/interface/goals/COU/슈포가키.png"
+	}
+	spriteType = {
+		name = "GFX_focus_brabant"
+		textureFile = "gfx/interface/goals/COU/brabant.png"
+	}
 	
 	
 	####카이저라이히 돚거

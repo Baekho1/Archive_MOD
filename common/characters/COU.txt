@@ -930,9 +930,19 @@ characters={
 	COU_sancho_davilla_fernandez = {
 			portraits = {
 				civilian = {
-				    large = portrait_COU_sancho_davilla_fernandez
+				    large = GFX_portrait_COU_sancho_davilla_fernandez
 				}
 			}
+			corps_commander={
+			#desc = "COU_SANCHO_DAVILLA_FERNANDEZ_DESC"
+			traits={  }
+			visible = { NOT = { always = yes } }
+			skill=9
+			attack_skill=9
+			defense_skill=9
+			planning_skill=9
+			logistics_skill=9
+		}
 	}
 	
 	COU_willy_coppens = {  

@@ -56,9 +56,9 @@ bookmarks = {
 			history = COU_GATHERING_STORM_DESC
 			ideology = democratic
 			ideas = {
-				COU_admin_confusion
 				COU_empty_of_monarchs
 				COU_dutch_collaboraters
+				COU_fake_dead_flower
 			}
 			focuses = {
 				COU_impeachment_of_chief_executive
