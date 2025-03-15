@@ -437,6 +437,7 @@ characters={
 			}
 		}
 	}
+
 	GEH_Himuro_Sena = { # 히무로 세나
 		name=GEH_Himuro_Sena_name
 		portraits={
@@ -470,6 +471,65 @@ characters={
 			ai_will_do = { factor = 80.000 }
 		}
 	}
+	
+	GEH_prefect_team_maritime_police = { # 게헨나 해양경찰
+		name=GEH_prefect_team_maritime_police
+		portraits={
+			army={
+				small="gfx/interface/advisors/GEH/GEH_theorist_idea.tga"
+			}
+		}
+
+		gender = female
+
+		advisor={
+			slot = navy_chief
+			idea_token = GEH_prefect_team_maritime_police
+
+			allowed = {
+				original_tag = GEH
+			}
+
+			traits = {
+				navy_chief_old_guard
+			}
+
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+	
+	GEH_prefect_team_honor_guard = { # 게헨나 의장대
+		name=GEH_prefect_team_honor_guard
+		portraits={
+			army={
+				small="gfx/interface/advisors/GEH/GEH_theorist_idea.tga"
+			}
+		}
+
+		gender = female
+
+		advisor={
+			slot = air_chief
+			idea_token = GEH_prefect_team_honor_guard
+
+			allowed = {
+				original_tag = GEH
+			}
+
+			traits = {
+				air_chief_old_guard
+			}
+
+			ai_will_do = {
+				factor = 10.000
+			}
+		}
+	}
+
+
+
 
 	GEH_dkzkfl={ #아카리
 		name=GEH_dkzkfl
