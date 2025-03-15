@@ -948,7 +948,7 @@ focus_tree = {
 			#conscription = 0.025
 			add_to_variable = {
 				var = KSP_kspd_training_time_factor
-				value = -0.010
+				value = -0.15
 				tooltip = training_time_factor_tt
 			}
 			custom_effect_tooltip = enter_tt
