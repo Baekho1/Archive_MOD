@@ -542,6 +542,19 @@
  EGY_ABYDOS_DEF: "아비도스 아랍 연합왕국"
  EGY_ABYDOS_ADJ: "아비도스"
 
+ ABY_sudetenland_fascism: "주데텐란트 국가대관구"
+ ABY_sudetenland_fascism_DEF: "주데텐란트 국가대관구"
+ ABY_sudetenland_democratic: "주데텐란트 자치주"
+ ABY_sudetenland_democratic_DEF: "주데텐란트 자치주"
+ ABY_sudetenland_neutrality: "주데텐란트 총독부"
+ ABY_sudetenland_neutrality_DEF: "주데텐란트 총독부"
+ ABY_sudetenland_communism: "주데텐란트 평의회 공화국"
+ ABY_sudetenland_communism_DEF: "주데텐란트 평의회 공화국"
+ ABY_sudetenland_fascism_ADJ: "주데텐란트"
+ ABY_sudetenland_democratic_ADJ: "주데텐란트"
+ ABY_sudetenland_neutrality_ADJ: "주데텐란트"
+ ABY_sudetenland_communism_ADJ: "주데텐란트"
+
  ABY_provisional_government_fascism: "아비도스 주데텐 공화국"
  ABY_provisional_government_fascism_DEF: "아비도스 주데텐 공화국"
  ABY_provisional_government_democratic: "체코-아비도스 임시정부"
@@ -630,6 +643,10 @@
  ABY_SCHOOL: "아비도스 고등학교"
  ABY_SCHOOL_DEF: "아비도스 고등학교"
  ABY_SCHOOL_ADJ: "아비도스"
+
+ ABY_SCHOOL_2_0: "남키보토스 연방국"
+ ABY_SCHOOL_2_0_DEF: "남키보토스 연방국"
+ ABY_SCHOOL_2_0_ADJ: "남키보토스 연방국"
 
  ABY_SCHOOL_2: "키보토스 계몽연방"
  ABY_SCHOOL_2_DEF: "키보토스 계몽연방"

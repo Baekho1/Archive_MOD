@@ -1305,6 +1305,32 @@ leader_traits = {
 		production_factory_max_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.1
 	}
+	ABY_trait_loss = {
+		random = no
+		political_power_factor = -0.15
+		stability_factor = 0.1
+	}
+	ABY_trait_zhunlee = {
+		random = no
+		fascism_drift = 1
+		compliance_gain = 0.001
+		stability_factor = 0.15
+		non_core_manpower = -0.25
+		conscription_factor = 0.25
+		resistance_target = -0.15
+	}
+	ABY_trait_hate_neutrality_suo = { 
+		random = no
+		neutrality_drift = -1
+	}
+	ABY_trait_hate_communism_suo = { 
+		random = no
+		communism_drift = -1
+	}
+	ABY_trait_hate_democratic_suo = { 
+		random = no
+		democratic_drift = -1
+	}
 	ABY_idea_5_days = {
 		random = no
 		war_support_factor = 0.2
@@ -1312,6 +1338,81 @@ leader_traits = {
 		industrial_capacity_dockyard = -0.25
 		industrial_capacity_factory = -0.25
 		line_change_production_efficiency_factor = 0.2
+	}
+	EGY_fuad_i_of_egypt = {
+		random = no
+		drift_defence_factor = 0.1
+		army_core_attack_factor = 0.05
+	}
+	queen_consort = {
+		random = no
+		stability_factor = 0.15
+	}
+	EGY_sudanese_nationalist_figure = {
+		random = no
+		non_core_manpower = 0.1
+		compliance_growth = 0.05
+	}
+	EGY_trait_gudwpeks = {
+		random = no
+		fascism_drift = 0.08
+		conscription = 0.01
+		war_support_factor = 0.05
+	}
+	EGY_trait_socialist = {
+		random = no
+		stability_factor = 0.1
+		democratic_drift = 0.05
+		communism_drift = 0.05
+	}
+	EGY_trait_sat_party = {
+		random = no
+		democratic_drift = 0.05
+		drift_defence_factor = 0.1
+	}
+	EGY_trait_loyalist = {
+		random = no
+		neutrality_drift = 0.05
+		drift_defence_factor = 0.1
+	}
+	indomitable_perseverance = {
+		random = no
+		army_morale_factor = 0.08
+	}
+	EGY_trait_big_free = {
+		random = no
+		trade_laws_cost_factor = -0.05
+		economy_cost_factor = -0.05
+	}
+	womens_figurehead = {
+		random = no
+		conscription_factor = 0.15
+		stability_factor = 0.07
+	}
+	EGY_farouk_i_of_egypt = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.05
+	}
+	EGY_young_king = {
+		random = no
+		drift_defence_factor = -0.25
+		political_power_factor = -0.1
+		air_chief_cost_factor = 0.25
+		army_chief_cost_factor = 0.25
+		navy_chief_cost_factor = 0.25
+		high_command_cost_factor = 0.25
+	}
+	imperial_land_owner_tfv = {
+		random = no
+		local_building_slots_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		autonomy_gain = -0.1
+	}
+	EGY_supjung = {
+		random = no
+		drift_defence_factor = -0.1
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.25
 	}
     B_dywhtnrsu = { #미숙한 요조숙녀
 		random = no

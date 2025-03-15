@@ -18,7 +18,7 @@ ideas = {
 			picture = generic_central_management
 			modifier = {
 				production_speed_buildings_factor = 0.15
-				communism_drift = 0.1
+				communism_drift = 0.05
 				custom_modifier_tooltip = RED_industrial_intergration_tt
 			}
 			on_remove = {
@@ -27,7 +27,7 @@ ideas = {
 				}
 				RED = {
 					annex_country = {
-						target = THIS
+						target = PREV
 						transfer_troops = yes
 					}
 				}

@@ -2321,6 +2321,10 @@ EGY_ABYDOS = {
 	color = rgb { 0 102 85 }
 	color_ui = rgb { 0 102 85 }
 }
+ABY_sudetenland = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
 CAN_restore = {
 	color = rgb { 119 48 39 }
 	color_ui = rgb { 155 62 51 }

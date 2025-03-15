@@ -58,9 +58,9 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 55
-	fascism = 0
-	communism = 5
+	democratic = 50
+	fascism = 10
+	communism = 0
 	neutrality = 40
 }
 
@@ -75,7 +75,7 @@ recruit_character = EGY_farouk_i
 recruit_character = EGY_mustafa_al_nahhas
 recruit_character = EGY_hassan_al_banna
 recruit_character = EGY_ahmed_hussayn
-recruit_character = EGY_hosni_al_arabi
+#recruit_character = EGY_hosni_al_arabi
 recruit_character = EGY_hussein_refki
 recruit_character = EGY_hussein_sirri_amer
 recruit_character = EGY_mohamed_naguib

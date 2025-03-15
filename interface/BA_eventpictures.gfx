@@ -1053,7 +1053,17 @@ spriteTypes = {
 		looping = yes
 		play_on_show = yes
 		pause_on_loop = 0.0
-
-		legacy_lazy_load = no
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_TRM_Animated_Iochi_Mari"
+		texturefile = "gfx/event_animate_pictures/news_TRM_Animated_Iochi_Mari.png"
+		noOfFrames = 40
+		loadType = "INGAME"
+		allwaystransparent = no
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
 	}
 }
