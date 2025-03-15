@@ -176,6 +176,7 @@ add_ideas = {
 	extensive_conscription
 	tot_economic_mobilisation
 	ABY_idea_bohemia_and_austria
+	BA_alternative_portrait_idea
 }
 
 add_dynamic_modifier = { modifier = ABY_two_dynamic_modifier }

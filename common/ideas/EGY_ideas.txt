@@ -4,8 +4,8 @@ ideas = {
 	country = {# National Spirits
 		EGY_Binah = { #사막의 괴수
 			modifier = {
-				stability_weekly = -0.005
-				war_support_factor = -0.1
+				stability_factor = -0.25
+				war_support_factor = -0.25
 				ai_join_ally_desire_factor = -1.0
 			}
 			rule = {
@@ -18,9 +18,34 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = -0.10
-				stability_factor = -0.20
-				war_support_factor = -0.20
-				political_advisor_cost_factor = 0.15
+				stability_factor = -0.05
+				political_advisor_cost_factor = 0.25
+				democratic_drift = -0.15
+			}
+		}
+		EGY_idea_strong_democratic_movement = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				democratic_drift = 0.15
+			}
+		}
+		EGY_idea_albanian_kings = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = 0.15
+			}
+		}
+		EGY_idea_no_socialism = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				communism_drift = -1
+				communism_acceptance = -100
 			}
 		}
 		EGY_industrial_modernization_idea = { #산업 현대화 계획

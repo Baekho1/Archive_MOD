@@ -30,6 +30,9 @@ country_event = { #아비도스 대책위원회의 망명
     		name = EGY_communism_2_party
 		}
 		set_country_flag = EGY_flag_ABYDOS_come
+		set_technology = {
+			kivotos_infantry_weapons = 1
+		}
 		ABY = {
 			ABYDO_Hoshino = {
 				set_nationality = EGY
@@ -66,6 +69,90 @@ country_event = { #아비도스 대책위원회의 망명
 				add_core_of = ABY
 			}
 			set_cosmetic_tag = ABY_sudetenland
+		}
+	}
+}
+country_event = { #수단 병합
+	id = EGY_event.2
+	title = EGY_event.2.t	
+	desc = EGY_event.2.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.2.a
+		retire_character = EGY_stewart_symes
+		retire_character = EGY_aziz_ezzat
+		annex_country = { target = SUD transfer_troops = yes }
+		set_country_flag = EGY_flag_sudan_annexed
+		551 = {
+			add_dynamic_modifier = {
+				modifier = EGY_low_sudan_rabel
+			}
+		}
+		883 = {
+			add_dynamic_modifier = {
+				modifier = EGY_low_sudan_rabel
+			}
+		}
+		767 = {
+			add_dynamic_modifier = {
+				modifier = EGY_low_sudan_rabel
+			}
+		}
+		887 = {
+			add_dynamic_modifier = {
+				modifier = EGY_middle_sudan_rabel
+			}
+		}
+		549 = {
+			add_dynamic_modifier = {
+				modifier = EGY_middle_sudan_rabel
+			}
+		}
+		886 = {
+			add_dynamic_modifier = {
+				modifier = EGY_middle_sudan_rabel
+			}
+		}
+		884 = {
+			add_dynamic_modifier = {
+				modifier = EGY_high_sudan_rabel
+			}
+		}
+		885 = {
+			add_dynamic_modifier = {
+				modifier = EGY_high_sudan_rabel
+			}
+		}
+	}
+}
+country_event = { #푸아드 1세 사망
+	id = EGY_event.3
+	title = EGY_event.3.t	
+	desc = EGY_event.3.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		date > 1936.04.28
+		tag = EGY
+	}
+
+	option = { 
+		name = EGY_event.3.a
+		retire_character = EGY_fuad_i
+		set_country_flag = EGY_flag_fuad_died
+		add_country_leader_role = {
+			character = EGY_farouk_i
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = { EGY_farouk_i_of_egypt EGY_young_king }
+			}
 		}
 	}
 }

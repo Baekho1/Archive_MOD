@@ -9,16 +9,15 @@ EGY_Binah_problem = {
 				has_idea = EGY_Binah
 			}
 		}
-		days_mission_timeout = 1
+		days_mission_timeout = 35
 		is_good = no
 		timeout_effect = {
+			add_stability = -0.05
+			add_political_power = -25
 			random_owned_controlled_state = {
 				limit = { 
 					is_core_of = EGY 
 					NOT = {
-						has_state_flag = EGY_Binah_is_here
-					}
-					any_neighbor_state = {
 						has_state_flag = EGY_Binah_is_here
 					}
 				}
@@ -50,7 +49,7 @@ EGY_Binah_problem = {
 					has_state_flag = EGY_Binah_is_here
 					infrastructure > 0
 				}
-				add_manpower = -2500
+				add_manpower = -25000
 				damage_building = {
 					type = infrastructure
 					damage = 1
@@ -74,6 +73,34 @@ EGY_Binah_problem = {
 		}
 	}
 
+	EGY_binah_attack = {
+		priority = 8
+
+		visible = {
+			has_idea = EGY_Binah			
+		}
+
+		available = {
+			has_idea = EGY_Binah
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 1000
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -1000
+			add_to_variable = {
+				EGY_Binah_health = -1
+				tooltip = EGY_binah_attack_tt
+			}
+		}
+	}
+
 	EGY_binah_artillery_bombardment = {
 		priority = 8
 
@@ -84,14 +111,14 @@ EGY_Binah_problem = {
 		available = {
 			has_idea = EGY_Binah
 			has_equipment = {
-				artillery_equipment > 999
+				artillery_equipment > 99
 			}
 		}
 
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = -1000
+				amount = -100
 			}
 			add_to_variable = {
 				EGY_Binah_health = -2
@@ -101,7 +128,7 @@ EGY_Binah_problem = {
 	}
 
 	EGY_binah_cas_bombardment = {
-		priority = 7
+		priority = 8
 
 		visible = {
 			has_idea = EGY_Binah			
@@ -110,18 +137,46 @@ EGY_Binah_problem = {
 		available = {
 			has_idea = EGY_Binah
 			has_equipment = {
-				small_plane_cas_airframe > 499
+				small_plane_cas_airframe > 99
 			}
 		}
 
 		complete_effect = {
 			add_equipment_to_stockpile = {
 				type = small_plane_cas_airframe
-				amount = -500
+				amount = -100
 			}
 			add_to_variable = {
-				EGY_Binah_health = -5
+				EGY_Binah_health = -25
 				tooltip = EGY_binah_cas_bombardment_tt
+			}
+		}
+	}
+
+	EGY_binah_attack_ABYDOS = {
+		priority = 8
+
+		visible = {
+			has_idea = EGY_Binah	
+			has_country_flag = EGY_flag_ABYDOS_come		
+		}
+
+		available = {
+			has_idea = EGY_Binah
+			has_country_flag = EGY_flag_ABYDOS_come	
+		}
+
+		days_remove = 35
+
+		complete_effect = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_to_variable = {
+				EGY_Binah_health = -100
+				tooltip = EGY_binah_attack_ABYDOS_tt
 			}
 		}
 	}
