@@ -1,7 +1,6 @@
 spriteTypes = {
 
-# 뉴스 이벤트 
-
+  # 뉴스 이벤트 
 	spriteType = {
 		name = "GFX_news_event_Shanhaijing_shanhaijingpact"
 		texturefile = "gfx/event_pictures/news_event_Shanhaijing_shanhaijingpact.tga"
@@ -259,10 +258,64 @@ spriteTypes = {
 		name = "GFX_GEI_DEC_riot"
 		texturefile = "gfx/event_pictures/news_event_GEI_DEC_riot.tga"
 	}
-#
+  #
 
 
-# 국가 이벤트 
+  # 국가 이벤트 
+  
+    ##공용 
+	spriteType = {
+		name = "GFX_report_event_generic_city"
+		texturefile = "gfx/event_pictures/report_event_generic_city.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_building"
+		texturefile = "gfx/event_pictures/report_event_generic_building.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_door"
+		texturefile = "gfx/event_pictures/report_event_generic_door.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_flowers"
+		texturefile = "gfx/event_pictures/report_event_generic_flowers.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_pzii"
+		texturefile = "gfx/event_pictures/report_event_generic_pzii.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_railways"
+		texturefile = "gfx/event_pictures/report_event_generic_railways.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_reloading"
+		texturefile = "gfx/event_pictures/report_event_generic_reloading.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_sora"
+		texturefile = "gfx/event_pictures/report_event_generic_sora.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_trains"
+		texturefile = "gfx/event_pictures/report_event_generic_trains.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_venice"
+		texturefile = "gfx/event_pictures/report_event_generic_venice.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_weebs"
+		texturefile = "gfx/event_pictures/report_event_generic_weebs.png"
+	}
+	
+	
+	##
+
+	spriteType = {
+		name = "GFX_report_event_sha_shintani_kai"
+		texturefile = "gfx/event_pictures/report_event_sha_shintani_kai.png"
+	}
 
 	spriteType = {
 		name = "GFX_event_Shanhaijing_Konoe_Mina"
@@ -592,6 +645,7 @@ spriteTypes = {
 		name = "GFX_ABY_event_7"
 		texturefile = "gfx/event_pictures/ABY_event_7.tga"
 	}
+	
 	##총학##
 	spriteType = {
 		name = "GFX_COU_sky1"
@@ -737,6 +791,10 @@ spriteTypes = {
 		name = "GFX_report_event_picture_decart"
 		texturefile = "gfx/event_pictures/COU/report_event_picture_decart.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_picture_anton_phillips"
+		texturefile = "gfx/event_pictures/report_event_picture_anton_phillips.png"
+	}
 	
 	spriteType = {
 		name = "GFX_news_event_COU_srt_banned"
@@ -753,6 +811,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_COU_decart"
 		texturefile = "gfx/event_pictures/news_event_COU_decart.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_COU_iphone"
+		texturefile = "gfx/event_pictures/news_event_COU_iphone.png"
 	}
 	
 	##샬레 
@@ -781,6 +843,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_picture_minori_two"
 		texturefile = "gfx/event_pictures/report_event_picture_minori_two.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_campus_day"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_campus_day.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_campus_night"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_campus_night.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_cherino"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_cherino.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_cherino_trotsky"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_cherino_trotsky.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_cherino_two"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_cherino_two.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_marina"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_marina.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_RED_tomoe"
+		texturefile = "gfx/event_pictures/RED/report_event_RED_tomoe.png"
 	}
 	
 	
@@ -895,6 +985,12 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/HEU/HEU_news_satsuki.dds"
 	}
 
+	spriteType = {
+		name = "GFX_news_event_HEU_news_aru_hina"
+		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_hina.dds"
+	}
+
+
 
 	# 밀레니엄 - 아리스루트
 	spriteType = {
@@ -954,6 +1050,18 @@ spriteTypes = {
 		loadType = "INGAME"
 		allwaystransparent = no
 		animation_rate_fps = 24
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_TRM_Animated_Iochi_Mari"
+		texturefile = "gfx/event_animate_pictures/news_TRM_Animated_Iochi_Mari.png"
+		noOfFrames = 40
+		loadType = "INGAME"
+		allwaystransparent = no
+		animation_rate_fps = 15
 		looping = yes
 		play_on_show = yes
 		pause_on_loop = 0.0

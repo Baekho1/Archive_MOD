@@ -568,6 +568,10 @@ country_event = { #무슨 책을 읽을까?
 				compare = greater_than_or_equals
 			}
 		}
+		set_country_flag = RED_reading_marx_flag
+		add_to_variable = {
+			RED_read_marx = -1
+		}
 	}
 	option = { #카우츠키의 책
 		name = RED_reading.2.b
@@ -782,6 +786,56 @@ country_event = { #무슨 책을 읽을까?
 				value > 1
 			}
 		}
+	}
+}
+country_event = { #자본론
+	id = RED_reading.3
+	title = RED_reading.3.t
+	desc = RED_reading.3.d
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_has_read_das_kapital_flag
+	}
+	option = { #마르크스의 책
+		name = RED_reading.3.a
+		effect_tooltip = {
+			RED_cherino = {
+				add_to_variable = {
+					var = RED_cherino_communism_knowledge
+					value = 1
+					tooltip = RED_cherino_communism_knowledge_tt
+				}
+				add_to_variable = {
+					var = RED_cherino_social_analizing
+					value = 1
+					tooltip = RED_cherino_social_analyzing_tt
+				}
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = RED_cherino_communism_knowledge
+				value = 1
+				tooltip = RED_cherino_communism_knowledge_tt
+			}
+			add_to_variable = {
+				var = RED_cherino_social_analizing
+				value = 1
+				tooltip = RED_cherino_social_analyzing_tt
+			}
+		}
+	}
+}
+country_event = { #자본론
+	id = RED_reading.4
+	title = RED_reading.4.t
+	desc = RED_reading.4.d
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = RED_has_read_das_kapital_flag
+	}
+	option = { #마르크스의 책
+		name = RED_reading.4.a
 	}
 }
 
@@ -1147,6 +1201,11 @@ country_event = { #제1차 AEP 평가
 		hidden_effect = {
 			complete_national_focus  = RED_steel_casting_industry
 			complete_national_focus = RED_new_economy_focus_1
+			load_focus_tree = {
+				tree = RED_focus_tree
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		add_political_power = -80
 		ai_chance = {

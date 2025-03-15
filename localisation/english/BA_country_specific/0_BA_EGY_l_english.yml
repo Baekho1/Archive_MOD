@@ -1,5 +1,68 @@
 ﻿l_english:
 
+Fuad_Muhammad_Ali:0 "푸아드 무하마드 알리" #왕
+Farouk_Muhammad_Ali:0 "파루크 무하마드 알리" #왕
+Mustafa_ElNahhas:0 "무스타파 엘나하스" #와프트당 지도자
+Hassan_AlBanna:0 "하산 알반나" #무슬림 형제단 창립자
+Hosni_alArabi:0 "-제거-"
+Stewart_Symes:0 "스튜어트 사이메스" #수단 총독
+Hussein_Refki:0 "후세인 레프키" #해군장관
+Aziz_Ezzat:0 "아지즈 에자트" #외교관
+Hussein_Sirri_Amer:0 "후세인 시리 아메르" #왕당파 장군
+Mohamed_Naguib:0 "모하메드 나기브" #자유장교단 지도자, 공화파
+Hussein_elShafei:0 "후세인 엘샤페이" #자유장교단
+Ahmad_Ismail_Ali:0 "아흐마드 이스마일 알리" #군인
+Abdul_Munim_Riad:0 "압둘 무님 리아드" #군인
+Muhammad_Anwar_Sadat:0 "무함마드 안와르 사다트" #자유장교단
+Ahmed_Ali_alMwawi:0 "아흐메드 알리 알무와위" #군인
+mohamed_ahmed_sadek:0 "모하메드 아흐메드 사데크" #군인
+abdel_hakim_amer:0 "압델 하킴 아메르" #자유장교단, 공화파
+gamal_abdel_nasser:0 "가말 압델 나세르" #ㅇㅇ
+mahmoud_hamza_pasha:0 "마흐무드 함자 파샤" #제독
+ahmed_bek_badr:0 "아흐메드 베크 바드르" #제독
+ismail_sidky:0 "이스마일 시드키" # 경제개혁, 중앙집권화
+muhammad_mahmoud_pasha:0 "무함마드 마흐무드 파샤" # 보수파 정치인
+mohammed_ali_tewfik:0 "모하메드 알리 투피크" #섭정
+sayyid_qutb:0 "사이드 쿠툽" #무슬림 형제단 지도자
+salama_moussa:0 "살라마 무사" #사회주의,세속주의
+ahmad_maher_pasha:0 "아흐메드 마흐르 파샤" # 와프트당 분파 정치인
+farida:0 "파리다 왕비" #파루크 1세의 왕비
+doria_shafik:0 "도리아 샤픽" #여성인권운동가
+ahmed_hussayn:0 "아흐메드 후세인" #청년 이집트당 지도자
+aly_maher_pasha:0 "알리 마흐르 파샤" # 왕당파 정치인
+abbud_pasha:0 "압부드 파샤" #기업가
+hussein_sirri_pasha:0 "후세인 시리 파샤" #재무장관, 총리
+talaat_harb:0 "탈라트 하르브" #경제학자
+abd_al_rahman_al_mahdi:0 "압드 알라흐만 알마흐디" #수단 마흐디 운동 지도자
+zakaria_mohieddin:0 "자카리아 모히에딘" #자유장교단
+youssef_ramadan:0 "유세프 라마단" #현대 수영선수가 왜나오냐 따로 찾아봐야겠네
+sameera_moussa:0 "사미라 무사" #핵물리학자
+mehmet_kaplan:0 "메흐메드 카플란" #넌 왜 터키 작가가 나오냐
+abdel_moneim_amin:0 "압델 모님 아민" # 자유장교단
+ahmed_hassanein:0 "아흐메드 하산 아인" #왕실 고문, 작가
+victor_tait:0 "빅터 테이트" #영국 공군 장교
+gamal_salem:0 "가말 살렘" #자유장교단
+abdel_latif_boghdadi:0 "압델 라티프 보그다디" #자유장교단
+Hassan_Ibrahim:0 "하산 이브라힘" #자유장교단
+
+EGY_fuad_i_of_egypt:0 "이집트의 국왕, 푸아드 1세"
+EGY_farouk_i_of_egypt:0 "이집트의 국왕, 파루크 1세"
+EGY_young_king:0 "어린 국왕"
+EGY_supjung:0 "섭정"
+imperial_land_owner_tfv:0 "제국의 지주"
+queen_consort:0 "여왕"
+womens_figurehead:0 "여성의 대변자"
+EGY_sudanese_nationalist_figure:0 "수단 민족주의자"
+EGY_trait_big_free:0 "자유주의 거물"
+indomitable_perseverance:0 "불굴의 끈기"
+EGY_trait_gudwpeks:0 "형제단 단장"
+EGY_trait_socialist:0 "세속적 사회주의자"
+EGY_trait_sat_party:0 "사트당 당수"
+EGY_trait_loyalist:0 "국왕 충성파"
+
+EGY_trait_free_officer:0 "자유 장교단"
+EGY_trait_free_officer_desc:0 "이들은 자유 장교단 소속입니다."
+
 EGY_unhappy_parliament:0 "불만이 많은 의회"
 EGY_unhappy_parliament_desc:0 "1923년 헌법은 1년 전 효력이 정지되었지만, 여전히 이집트 의회는 왕과 사이가 좋지 않습니다. 영국 본토가 혼란에 빠지며 이집트에서 영국의 영향력이 약해진 지금, 의회 다수당인 와프드당은 개혁에 대한 의지를 더욱 불태우고 있습니다."
 EGY_Binah_problem:0 "'비나' 문제"

@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 1
+			add = 10
 			tag = SLO
 		}
 	}
@@ -250,7 +250,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 4
+		x = 7
 		y = 4
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -293,7 +293,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 3
+		x = 7
 		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-3
@@ -340,19 +340,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 5
-		y = 5
+		x = 6
+		y = 6
 		prerequisite = {
-			focus = SLO_foc_1-4-3
+			focus = SLO_foc_1-4-4
 		}
 		mutually_exclusive = {	
-			#focus = SLO_foc_
+			focus = SLO_foc_1-4-10
 		}
 		available = {
 			is_in_faction = no
 			OR = {
-				num_of_factories > 15
-				has_army_manpower = { size > 50000 }
+				is_major = yes
+				num_of_factories > 25
 			}
 		}
 		bypass = {
@@ -362,54 +362,65 @@ focus_tree = {
 				can_create_factions = yes
 			}
 			create_faction = SLO_faction_1
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_war_with = SLO
+						}
+						is_in_faction = no
+					}
+				}
+				YUG = {
+					country_event = {
+						id = generic.5
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_war_with = SLO
+						}
+						is_in_faction = no
+					}
+				}
+				ROM = {
+					country_event = {
+						id = generic.5
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-6
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_fra_devalue_the_franc
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-		x = -1
-		y = 5
+		x = 1
+		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-2
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-7
+			#focus = SLO_foc_
 		}
 		available = {
-			controls_state = 70
-			controls_state = 71
 		}
 		bypass = {
 		}
 		completion_reward = {
-			70 = {
-				set_building_level = {
-					type = bunker
-					level = 2
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-						level < 2
-					}
-				}
+			add_timed_idea = {
+				idea = SLO_czk_reform_idea
+				days = 180
 			}
-			71 = {
-				set_building_level = {
-					type = bunker
-					level = 2
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-						level < 2
-					}
-				}
-			}
+			SLO_economy_chaos_down = yes
 		}
 	}
 	focus = {
@@ -417,39 +428,447 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-7
 		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		x = 1
+		x = 0
 		y = 5
 		prerequisite = {
 			focus = SLO_foc_1-4-2
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-6
+			#focus = SLO_foc_
 		}
 		available = {
-			controls_state = 70
-			controls_state = 71
 		}
 		bypass = {
 		}
 		completion_reward = {
-			70 = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-8
+		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-4-2
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-			}	
-			71 = {
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-9
+		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-8
+			focus = SLO_foc_1-4-7
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 10
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
+				}
+			}
+			add_ideas = SLO_fast_industrialization_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-10
+		icon = GFX_focus_generic_polish_deal
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 9
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-4
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-5
+		}
+		available = {
+			is_in_faction = no
+			POL = {
+				has_completed_focus = POL_the_between_the_seas_concept
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = generic.2
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-11
+		icon = GFX_focus_research
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-6
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-9
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SLO_bratislava_university_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-12
+		icon = GFX_focus_generic_university_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-11
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 15
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-13
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-4-2
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-14
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-4
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_war_with = ROM
+					has_war_with = YUG
+					has_war_with = POL
+				}
+			}
+		}
+		bypass = {
+			ROM = {
+				exists = no
+			}
+			YUG = {
+				exists = no
+			}
+			POL = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = free_trade
+					}
+				}
+				add_ideas = free_trade
+			}
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				ROM = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				YUG = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						NOT = {
+							has_war_with = SLO
+						}
+					}
+				}
+				POL = {
+					country_event = {
+						id = SLO_event.1
+						hours = 6
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-15
+		icon = GFX_focus_generic_currency_reforms
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-14
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-16
+		icon = GFX_focus_generic_attack_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 5
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-1-16
+		}
+		available = {
+			is_faction_leader = yes
+			NOT = {
+				is_in_faction_with = HUN
+			}
+			POL = {
+				NOT = {
+					is_in_faction_with = HUN
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				HUN = {
+					exists = no
+				}
+				POL = {
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			HUN = {
+				add_opinion_modifier = { target = SLO modifier = large_decrease }
+			}
+			POL = {
+				country_event = {
+					id = SLO_event.4
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-17
+		icon = GFX_focus_generic_befriend_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-5
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-16
+		}
+		available = {
+			is_faction_leader = yes
+			has_completed_focus = SLO_foc_1-4-14
+		}
+		bypass = {
+		}
+		completion_reward = {
+			HUN = {
+				add_opinion_modifier = { target = SLO modifier = large_increase }
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-18
+		icon = GFX_focus_BRA_the_polaca
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 4
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-16
+			focus = SLO_foc_1-4-17
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		bypass = {
+		}
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = generic.5
 				}
 			}
 		}

@@ -5191,6 +5191,20 @@ news_event = { # 이념전쟁의 끝
     }
 }
 
+news_event = { # 데카르트 시위!
+    id = BA_news.136
+    title = BA_news.136.t
+    desc = BA_news.136.d
+    picture = GFX_news_event_COU_iphone
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.136.a
+    }
+}
+
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112
 #    title = BA_news.112.t

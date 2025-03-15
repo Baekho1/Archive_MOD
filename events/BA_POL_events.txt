@@ -2219,12 +2219,15 @@ country_event = {#붕괴
 	trigger = {
 		tag = POL
 		has_war_with = SOV
-		check_variable = {
-			var = POL_solidarity_var
-			value = 0
-			compare = less_than_or_equals
+		POL = {
+			check_variable = {
+				var = POL_solidarity_var
+				value = 0
+				compare = less_than_or_equals
+			}
 		}
 		is_in_faction = yes
+		is_faction_leader = yes
 	}
 	option = { #ㅈㅈ
 		name = BA_intermarium_solidarity_event.6.a

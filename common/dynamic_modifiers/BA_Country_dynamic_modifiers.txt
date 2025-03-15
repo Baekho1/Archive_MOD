@@ -1,3 +1,12 @@
+ME_pan_arab_cooperation_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_CHL_carabineros_de_chile_fascist
+
+	custom_modifier_tooltip = ME_pan_arab_cooperation_modifier_tt
+	army_core_defence_factor = global.ME_pan_arab_cooperation_modifier_defence_var
+	industrial_capacity_factory = global.ME_pan_arab_cooperation_modifier_capacity_var
+}
 BLM_criminal_state = {
 	enable = { always = yes }
 
@@ -47,6 +56,24 @@ COU_emergency_measures_committee = { #키보토스 비상대책위원회
 	economy_cost_factor = COU_emergency_measures_committee_economy_cost_factor
 	mobilization_laws_cost_factor = COU_emergency_measures_committee_mobilization_laws_cost_factor
 	trade_laws_cost_factor = COU_emergency_measures_committee_trade_laws_cost_factor
+}
+COU_the_dead_flower = { #꺾인 튤립 
+	enable = { always = yes }
+
+	icon = GFX_idea_COU_the_dead_flower
+	
+	remove_trigger = { 
+	}
+	
+	stability_factor = COU_the_dead_flower_sta
+	production_factory_max_efficiency_factor = COU_the_dead_flower_fmef
+	industrial_capacity_factory = COU_the_dead_flower_icf
+	industrial_capacity_dockyard = COU_the_dead_flower_icd
+	##
+	training_time_factor = COU_the_dead_flower_ttf
+	conscription_factor = COU_the_dead_flower_cf
+	##
+	army_org_factor = COU_the_dead_flower_aof
 }
 COU_class_struggle = { #모모카 루트 / 계급 투쟁
 	enable = { always = yes }

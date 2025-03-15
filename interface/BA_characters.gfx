@@ -171,6 +171,12 @@ spriteTypes = {
 		name = "GFX_leaders_kayaface_four"
 		textureFile = "gfx/leaders/COU/kayaface_four.png"
 	}
+	##ANNE FRANK 
+	spriteType = {
+		name = "GFX_portrait_COU_anne_frank"
+		textureFile = "gfx/leaders/COU/portrait_COU_anne_frank.png"
+	}
+	
 	spriteType = {
 		name = "GFX_leaders_HAINE"
 		textureFile = "gfx/leaders/COU/COU_HAINE_portrait_leader.png"
@@ -234,6 +240,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_leader_portrait_COU_jan_baar"
 		textureFile = "gfx/leaders/COU/portrait_COU_jan_baar.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_sancho_davilla_fernandez"
+		textureFile = "gfx/leaders/COU/portrait_COU_sancho_davilla_fernandez.png"
 	}
 	
 	

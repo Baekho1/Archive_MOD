@@ -2635,6 +2635,7 @@ focus_tree = {
 				country_event = { id = HEU.flavor_event.72 days = 200 }
 				country_event = { id = HEU.flavor_event.73 days = 280 }
 				country_event = { id = HEU.flavor_event.74 days = 400 }
+				country_event = { id = HEU.flavor_event.89 days = 600 }
 
 				swap_ruler_traits = {
 					remove = HEU_regent_of_luxembourg
@@ -3207,6 +3208,7 @@ focus_tree = {
 					set_nationality = HEU
 				}
 			}
+			country_event = { id = HEU_event.281 }
 		}
 	}
 
@@ -4908,6 +4910,7 @@ focus_tree = {
 				add_mio_funds = 2500
 				add_mio_funds_gain_factor = 0.1
 			}
+			country_event = { id = HEU.flavor_event.90 }
 		}
 	}
 
@@ -4943,6 +4946,7 @@ focus_tree = {
 				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
 				BA_halo_infantry_cap_edit_effect = yes
 			}
+			country_event = { id = HEU.flavor_event.91 }
 		}
 	}
 	
@@ -4973,6 +4977,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+			
+			hidden_effect = {
+				country_event = { id = HEU.flavor_event.92 }
+			}
 		}
 	}
 	
@@ -5097,6 +5105,246 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = HEU_hidden_hina_focus_1
+		relative_position_id = HEU_the_end_of_perfect_team
+
+		icon = GFX_goal_GEH_shorasaki_hina	
+
+		prerequisite = { 
+			focus = HEU_unified_gehenna
+		}
+
+		allow_branch = {
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		cost = 5.00
+
+		x = 4
+		y = 0
+
+		available = {
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			mio:HEU_grand_ducal_gendarmerie_organization = {
+				add_mio_funds = 500
+			}
+			country_event = { id = HEU.flavor_event.98 }
+		}
+	}
+	
+	focus = {
+		id = HEU_hidden_hina_focus_2
+		relative_position_id = HEU_hidden_hina_focus_1
+
+		icon = GFX_goal_GEH_HID	
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_1
+		}
+
+		available = {
+			has_completed_focus = HEU_national_security_agency
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		cost = 4.00
+
+		x = -1
+		y = 1
+
+		available = { 
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEU_stasi
+				add_idea = HEU_stasi_2
+			}
+			country_event = { id = HEU.flavor_event.99 }
+		}
+	}
+	
+	focus = {
+		id = HEU_hidden_hina_focus_3
+		relative_position_id = HEU_hidden_hina_focus_1
+
+		icon = GFX_goal_GEH_army_flag	
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_2
+		}
+
+		cost = 4.00
+
+		x = -1
+		y = 2
+
+		available = { 
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = kivotos_halo_add3_tt
+			hidden_effect = {
+				set_variable = { BA_halo_infantry_cap_edit_var = 3 }
+				BA_halo_infantry_cap_edit_effect = yes
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+			country_event = { id = HEU.flavor_event.101 }
+		}
+	}
+	
+	focus = {
+		id = HEU_hidden_hina_focus_4
+		relative_position_id = HEU_hidden_hina_focus_1
+
+		icon = GFX_focus_FIN_oy_alkoholiliike	
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_1
+		}
+
+		cost = 3.00
+
+		x = 1
+		y = 1
+
+		available = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+			has_completed_focus = HEU_hidden_hina_focus_3
+		}
+		
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
+		}
+
+		completion_reward = {
+			country_event = { id = HEU.flavor_event.100 }
+		}
+	}
+	
+	focus = {
+		id = HEU_hidden_hina_focus_5
+		relative_position_id = HEU_hidden_hina_focus_1
+
+		icon = GFX_goal_HEU_rikuhachimaism_focus_5_2	
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_4
+		}
+
+		cost = 3.00
+
+		x = 1
+		y = 2
+
+		available = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_2_tt
+			    HEU_aru = {
+					NOT = { has_trait = unconscious }
+				}
+            }
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+			has_completed_focus = HEU_germany_union
+		}
+		
+		cancel = {
+            custom_trigger_tooltip = {
+                tooltip = HEU_aru_health_tt
+			    HEU_aru = {
+					has_trait = unconscious
+				}
+            }
+		}
+
+		completion_reward = {
+			GEH_hina = {
+				add_skill_level = 1
+			}
+			country_event = { id = HEU.flavor_event.102 }
+		}
+	}
+	
+	focus = {
+		id = HEU_hidden_hina_focus_6
+		relative_position_id = HEU_hidden_hina_focus_1
+
+		icon = GFX_goal_PrefectTeam_muster_Ako	
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_5
+		}
+
+		prerequisite = { 
+			focus = HEU_hidden_hina_focus_3
+		}
+
+		cost = 5.00
+
+		x = 0
+		y = 3
+
+		available = {
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+
+		select_effect = {
+			country_event = { id = HEU.flavor_event.103 }
+		}
+
+		completion_reward = {
+			country_event = { id = HEU.flavor_event.104 }
+		}
+	}
+
 	focus = {
 		id = HEU_states_quo_club
 		
@@ -5469,6 +5717,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = HEU_gehenna_academy_president_makoto_idea
+			country_event = { id = HEU.flavor_event.106 }
 		}	
 	}
 	
@@ -5504,6 +5753,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = HEU_gehenna_academy_president_satsuki_idea
+			country_event = { id = HEU.flavor_event.107 }
 		}
 	}
 	
@@ -7249,6 +7499,12 @@ focus_tree = {
 					type = bunker
 					level = 1
 					province = 6583
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 13375
 					instant_build = yes
 				}
 			}

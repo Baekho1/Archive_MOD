@@ -306,7 +306,12 @@ characters={
 		advisor={
 			slot = army_chief
 			idea_token = GEH_hina_idea
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
+			allowed = { OR = { 
+				original_tag = GEH 
+				original_tag = GEM 
+				original_tag = HEU 
+				} 
+			}
 			traits = { army_chief_offensive_2 }
 			cost = 100
 			ai_will_do = { factor = 1.000 }
@@ -319,6 +324,7 @@ characters={
                 OR = { 
                     original_tag = GEH 
                     original_tag = GEM 
+					original_tag = HEU 
                 }
             }
 			traits = { 
@@ -645,6 +651,7 @@ characters={
 				OR = { 
                     original_tag = GEH 
                     original_tag = GEM 
+					original_tag = HEU 
                 }
 			}
 			traits = {
@@ -659,7 +666,11 @@ characters={
 			slot = political_advisor
 			idea_token = GEH_dkzh_idea
 			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM
+					original_tag = HEU 
+				}
 			}
 			available = {
 				if = {

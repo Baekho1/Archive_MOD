@@ -130,7 +130,7 @@ add_ideas = {
 country_event = { id = COU_event.6 days = 30 }
 
 ##데카르트, 무소유 투쟁!
-country_event = { id = COU_event.48 days = 72 }
+#country_event = { id = COU_event.48 days = 72 }
 
 
 set_technology = {
@@ -197,7 +197,9 @@ recruit_character = COU_NIKO
 recruit_character = COU_KURUMI
 recruit_character = COU_OTOGI
 
+recruit_character = COU_ANNE_FRANK
 recruit_character = COU_jan_baar
+recruit_character = COU_sancho_davilla_fernandez
 recruit_character = COU_willem_drees
 recruit_character = COU_julien_lahaut
 recruit_character = COU_paul_de_groot

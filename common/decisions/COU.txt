@@ -541,7 +541,7 @@ COU_decision_the_student_council = {
 			 NOT = { always = yes }
 		 }
 		
-		 days_mission_timeout = 150
+		 days_mission_timeout = 100
 		
 		 is_good = no
 				
@@ -566,6 +566,16 @@ COU_decision_the_student_council = {
 					  1 = {
 						  country_event = { id = COU_event_normal_days.5 }
 					  }
+					  
+				  }
+				  if = {
+				     limit = { has_idea = COU_philips }
+					 random_list = {
+					     ##안네 프랑크 
+					     0.1 = {
+						    COU_ANNE_FRANK = { unit_leader_event = { id = COU_event_normal_days.1000 } }
+					     }
+					 }
 				  }
 			  }
 		      hidden_effect = { activate_mission = COU_the_normal_days_of_cou }

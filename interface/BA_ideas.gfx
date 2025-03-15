@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RED/RE4_Finland_committee.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_SHA_shadow_of_Shintani_Kai"
+		texturefile = "gfx/interface/ideas/SHA/idea_SHA_shadow_of_Shintani_Kai.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_SHA_Shintani_kais_cult_of_personality_ns"
 		texturefile = "gfx/interface/ideas/SHA/SHA_Shintani_kais_cult_of_personality_ns.tga"
 	}
@@ -611,6 +615,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COU_RIN_policy_lead_idea"
 		texturefile = "gfx/interface/ideas/cou/COU_RIN_policy_lead_idea.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_COU_the_dead_flower"
+		texturefile = "gfx/interface/ideas/idea_COU_the_dead_flower.png"
+	}
+	spriteType = {
+		name = "GFX_idea_modifier_COU_flood"
+		texturefile = "gfx/interface/ideas/modifier_COU_flood.png"
 	}
 	#헝가리BA_HUN_otto
 	spriteType = {

@@ -1,0 +1,480 @@
+shared_focus = { #중동 외교
+	id = BA_ME_focus_-1
+	cost = 2
+	x = 11
+	y = 9
+	icon = GFX_focus_generic_influence_middle_east
+	available = {
+		date > 1937.1.1
+		has_country_flag = GAEBALJUNG
+	}
+	completion_reward = {
+		add_political_power = 10
+	}
+}
+shared_focus = { #서방과의 제휴
+	id = BA_ME_focus_0
+	cost = 5
+	x = -5
+	y = 1
+	relative_position_id = BA_ME_focus_-1
+	prerequisite = {
+		focus = BA_ME_focus_-1
+	}
+	available = {
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_5
+		focus = BA_ME_focus_8
+		focus = BA_ME_focus_17
+	}
+	icon = GFX_focus_generic_democratic_europe
+	completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+shared_focus = { #왕실에의 충성
+	id = BA_ME_focus_1
+	cost = 5
+	x = -1
+	y = 1
+	prerequisite = {
+		focus = BA_ME_focus_0
+	}
+	available = {
+		OR = {
+			has_country_flag = ME_dominion_flag
+			is_subject_of = ENG
+		}
+		ENG = {
+			exists = yes
+		}
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_2
+	}
+	relative_position_id = BA_ME_focus_0
+	icon = GFX_focus_eng_the_sun_never_sets
+	completion_reward = {
+		add_country_leader_trait = CAR_governer
+		ENG = {
+			country_event = SYR_event.10
+		}
+	}
+}
+shared_focus = { #무역 협정
+	id = BA_ME_focus_2
+	cost = 5
+	x = 1
+	y = 1
+	mutually_exclusive = {
+		focus = BA_ME_focus_1
+	}
+	prerequisite = {
+		focus = BA_ME_focus_0
+	}
+	relative_position_id = BA_ME_focus_0
+	icon = GFX_focus_generic_british_trade
+	completion_reward = {
+		add_ideas = ME_trade_treaty
+	}
+}
+shared_focus = { #영연방의 일원
+	id = BA_ME_focus_3
+	cost = 5
+	x = -1
+	y = 1
+	prerequisite = {
+		focus = BA_ME_focus_1
+	}
+	available = {
+		ENG = {
+			is_faction_leader = yes
+		}
+	}
+	relative_position_id = BA_ME_focus_1
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties
+	completion_reward = {
+		ENG = {
+			country_event = {
+				id = SYR_event.11
+				days = 1
+			}
+		}
+	}
+}
+shared_focus = { #서방의 투자
+	id = BA_ME_focus_4
+	cost = 5
+	x = 1
+	y = 1
+	prerequisite = {
+		focus = BA_ME_focus_1
+		focus = BA_ME_focus_2
+	}
+	relative_position_id = BA_ME_focus_1
+	icon = GFX_focus_CONGO_congo_investments
+	completion_reward = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
+shared_focus = { #아라비아 정체성
+	id = BA_ME_focus_5
+	cost = 5
+	x = -3
+	y = 1
+	relative_position_id = BA_ME_focus_-1
+	prerequisite = {
+		focus = BA_ME_focus_-1
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_0
+		focus = BA_ME_focus_8
+		focus = BA_ME_focus_17
+	}
+	icon = GFX_focus_PER_islamic_solidarity
+	completion_reward = {
+		add_stability = 0.05
+	}
+}
+shared_focus = { #범아랍주의에 호소
+	id = BA_ME_focus_6
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_5
+	prerequisite = {
+		focus = BA_ME_focus_5
+	}
+	icon = GFX_focus_IRQ_hashemite_arab_federation
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+shared_focus = { #느슨하지만 단일한 대오
+	id = BA_ME_focus_7
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_6
+	prerequisite = {
+		focus = BA_ME_focus_6
+	}
+	available = {
+		
+	}
+	icon = GFX_goal_generic_national_unity
+	completion_reward = {
+		custom_effect_tooltip = BA_ME_focus_7_tt
+		add_to_array = {
+			array = ME_pan_arab_cooperation
+			value = THIS
+		}
+		if = {
+			limit = {
+				has_variable = global.ME_pan_arab_cooperation_modifier_defence_var
+			}
+			add_to_variable = {
+				global.ME_pan_arab_cooperation_modifier_capacity_var = 0.01
+			}
+			add_to_variable = {
+				global.ME_pan_arab_cooperation_modifier_defence_var = 0.01
+			}
+		}
+		else = {
+			set_variable = {
+				global.ME_pan_arab_cooperation_modifier_defence_var = 0.01
+			}
+			set_variable = {
+				global.ME_pan_arab_cooperation_modifier_capacity_var = 0.01
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = ME_pan_arab_cooperation_modifier
+		}
+		every_other_country = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier =  ME_pan_arab_cooperation_modifier
+				}
+			}
+			add_opinion_modifier = {
+				target = THIS
+				modifier = KAI_loan_good
+			}
+		}
+	}
+}
+shared_focus = { #레닌의 유산
+	id = BA_ME_focus_8
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_-1
+	prerequisite = {
+		focus = BA_ME_focus_-1
+	}
+	available = {
+		has_government = communism
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_0
+		focus = BA_ME_focus_5
+		focus = BA_ME_focus_17
+	}
+	icon = GFX_focus_HUN_reinstate_the_lenin_boys
+	completion_reward = {
+	}
+}
+shared_focus = { #혁명전위대
+	id = BA_ME_focus_9
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_8
+	prerequisite = {
+		focus = BA_ME_focus_8
+	}
+	icon = GFX_focus_generic_spur_communist_revolutions
+	completion_reward = {
+	}
+}
+shared_focus = { #노동자 국제주의
+	id = BA_ME_focus_10
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_8
+	prerequisite = {
+		focus = BA_ME_focus_8
+	}
+	icon = GFX_goal_support_communism
+	completion_reward = {
+	}
+}
+shared_focus = { #소련의 원조
+	id = BA_ME_focus_11
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_10
+	prerequisite = {
+		focus = BA_ME_focus_10
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_12
+	}
+	icon = GFX_focus_chi_mission_to_the_soviet_union
+	completion_reward = {
+	}
+}
+shared_focus = { #자력갱생
+	id = BA_ME_focus_12
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_10
+	prerequisite = {
+		focus = BA_ME_focus_10
+		focus = BA_ME_focus_18
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_11
+	}
+	icon = GFX_focus_generic_support_the_left_right
+	completion_reward = {
+	}
+}
+shared_focus = { #반제국주의 연대
+	id = BA_ME_focus_13
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_6
+	prerequisite = {
+		focus = BA_ME_focus_6
+		focus = BA_ME_focus_9
+	}
+	icon = GFX_focus_eng_decolonization
+	completion_reward = {
+	}
+}
+shared_focus = { #중앙지휘체계
+	id = BA_ME_focus_14
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_13
+	prerequisite = {
+		focus = BA_ME_focus_13
+	}
+	icon = GFX_focus_generic_military_mission
+	completion_reward = {
+	}
+}
+shared_focus = { #서아시아 의용대
+	id = BA_ME_focus_15
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_13
+	prerequisite = {
+		focus = BA_ME_focus_13
+	}
+	icon = GFX_goal_generic_political_pressure
+	completion_reward = {
+	}
+}
+shared_focus = { #유격전
+	id = BA_ME_focus_16
+	cost = 5
+	x = 0
+	y = 2
+	relative_position_id = BA_ME_focus_13
+	prerequisite = {
+		focus = BA_ME_focus_13
+	}
+	icon = GFX_focus_prc_infiltration
+	completion_reward = {
+	}
+}
+shared_focus = { #중립 고수
+	id = BA_ME_focus_17
+	cost = 5
+	x = 5
+	y = 1
+	relative_position_id = BA_ME_focus_-1
+	prerequisite = {
+		focus = BA_ME_focus_-1
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_0
+		focus = BA_ME_focus_8
+		focus = BA_ME_focus_5
+	}
+	icon = GFX_goal_generic_neutrality_focus
+	completion_reward = {
+	}
+}
+shared_focus = { #고립주의 채택
+	id = BA_ME_focus_18
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_17
+	prerequisite = {
+		focus = BA_ME_focus_17
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_19
+	}
+	icon = GFX_goal_generic_defence
+	completion_reward = {
+	}
+}
+shared_focus = { #새로운 물결
+	id = BA_ME_focus_19
+	cost = 5
+	x = 1
+	y = 1
+	mutually_exclusive = {
+		focus = BA_ME_focus_18
+	}
+	relative_position_id = BA_ME_focus_17
+	prerequisite = {
+		focus = BA_ME_focus_17
+	}
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	completion_reward = {
+	}
+}
+shared_focus = { #개각
+	id = BA_ME_focus_20
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = BA_ME_focus_19
+	prerequisite = {
+		focus = BA_ME_focus_19
+	}
+	icon = GFX_focus_generic_treaty
+	completion_reward = {
+	}
+}
+shared_focus = { #군사혁명
+	id = BA_ME_focus_21
+	cost = 5
+	x = 1
+	y = 1
+	relative_position_id = BA_ME_focus_19
+	prerequisite = {
+		focus = BA_ME_focus_19
+	}
+	icon = GFX_goal_generic_military_deal
+	completion_reward = {
+	}
+}
+shared_focus = { #친소련 정부
+	id = BA_ME_focus_22
+	cost = 5
+	x = -2
+	y = 1
+	relative_position_id = BA_ME_focus_20
+	prerequisite = {
+		focus = BA_ME_focus_20
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_23
+		focus = BA_ME_focus_24
+	}
+	icon = GFX_focus_generic_soviet_politics
+	completion_reward = {
+	}
+}
+shared_focus = { #친서방 정부
+	id = BA_ME_focus_23
+	cost = 5
+	x = 0
+	y = 1
+	relative_position_id = BA_ME_focus_20
+	prerequisite = {
+		focus = BA_ME_focus_20
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_24
+		focus = BA_ME_focus_22
+	}
+	icon = GFX_focus_ARG_join_the_allies
+	completion_reward = {
+	}
+}
+shared_focus = { #친이탈리아 정부
+	id = BA_ME_focus_24
+	cost = 5
+	x = 2
+	y = 1
+	relative_position_id = BA_ME_focus_20
+	prerequisite = {
+		focus = BA_ME_focus_20
+	}
+	mutually_exclusive = {
+		focus = BA_ME_focus_23
+		focus = BA_ME_focus_22
+	}
+	icon = GFX_focus_befriend_italy
+	completion_reward = {
+	}
+}

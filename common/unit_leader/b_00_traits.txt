@@ -32,6 +32,13 @@ leader_traits = {
             max_commander_army_size = -6
 		}
 	}
+	EGY_trait_free_officer = { 
+		type = { land navy }
+		trait_type = personality_trait
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 	GEM_trait_hot_spring_department = { 
 		type = all
 		trait_type = personality_trait

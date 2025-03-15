@@ -879,6 +879,26 @@ characters={
 	}
 	
 	##협력자들
+	###안네 프랑크
+	####일상 이벤트 뉴스체인용 
+	COU_ANNE_FRANK = {
+		portraits = {
+			civilian = {
+				large = GFX_portrait_COU_anne_frank
+			}
+		}
+		corps_commander={
+			desc = "COU_ANNE_FRANK_DESC"
+			traits={ war_hero }
+			visible = { NOT = { always = yes } }
+			skill=9
+			attack_skill=9
+			defense_skill=9
+			planning_skill=9
+			logistics_skill=9
+		}
+	}
+	
 	COU_jan_baar = {
 			advisor = {
 			  slot = political_advisor
@@ -905,6 +925,24 @@ characters={
 					small = GFX_idea_COU_jan_baar
 				}
 			}
+	}
+	
+	COU_sancho_davilla_fernandez = {
+			portraits = {
+				civilian = {
+				    large = GFX_portrait_COU_sancho_davilla_fernandez
+				}
+			}
+			corps_commander={
+			#desc = "COU_SANCHO_DAVILLA_FERNANDEZ_DESC"
+			traits={  }
+			visible = { NOT = { always = yes } }
+			skill=9
+			attack_skill=9
+			defense_skill=9
+			planning_skill=9
+			logistics_skill=9
+		}
 	}
 	
 	COU_willy_coppens = {  

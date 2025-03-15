@@ -1296,14 +1296,6 @@ ideas = {
 				experience_gain_army = -0.01
 			}
 		}
-		TRN_JTF_political_commissar_ns = {
-			picture = TRM_justice_task_force
-			modifier = {
-				stability_factor = 0.05
-				army_morale_factor = 0.05
-				experience_gain_army = -0.01
-			}
-		}
 		TRM_trinity_volunteer_corps_ns = {
 			picture = SPR_anti_fascist_crusade
 			modifier = {

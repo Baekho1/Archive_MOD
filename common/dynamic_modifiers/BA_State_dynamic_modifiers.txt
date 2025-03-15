@@ -137,6 +137,20 @@ KSP_wakamo_sabotage_state = {
 	industry_repair_factor = 0.30 #수리 속도
 	recruitable_population_factor = -0.25
 }
+COU_the_dead_land = {
+	icon = GFX_idea_modifier_COU_flood
+
+	enable = { always = yes }
+
+	remove_trigger = {	}
+
+	industry_repair_factor = 0.15
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+	local_building_slots_factor = -0.5
+	local_resources = -0.5
+	local_manpower = -0.5
+}
 MIL_special_economic_zone_modifier = {
 	icon = GFX_decision_faction_gre_fascist
 

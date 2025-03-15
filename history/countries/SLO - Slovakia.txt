@@ -36,6 +36,7 @@ set_technology = {
 
 set_oob = "SLO_1936"
 set_air_oob = "SLO_1936_air"
+
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }

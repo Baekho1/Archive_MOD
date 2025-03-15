@@ -1192,6 +1192,32 @@ ideas = {
 			}
 		}
 		
+		HEU_stasi_2 = { #슈타지
+
+			picture = generic_spy_intel
+
+			allowed = {
+				original_tag = HEU
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				civilian_intel_to_others = -30.0
+				army_intel_to_others = -20.0
+				navy_intel_to_others = -20.0
+				airforce_intel_to_others = -20.0
+				intelligence_agency_defense = 0.1
+				agency_upgrade_time = -0.1
+				operative_slot = 2
+			}
+		}
+		
 		HEU_way_to_forgiveness_fall = { #추모공원 실패
 
 			picture = BEL_legacy_of_the_great_war

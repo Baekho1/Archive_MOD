@@ -60,7 +60,6 @@ recruit_character = RED_arnold_peter_moller
 recruit_character = RED_johan_ludwig_mowinckel
 recruit_character = RED_herman_eriksson
 recruit_character = RED_johan_h_andresen
-recruit_character = RED_christmas_moller
 recruit_character = RED_central_labor_union
 #체리노의 성장 시스템
 set_variable = {
@@ -76,7 +75,7 @@ set_variable = {
 #체리노의 독서
 set_variable = {
 	RED_read_marx = 5 
-#『공산당 선언』,『자본론』,『독일 이데올로기』,『경제학 비판 요강』, 『고타 강령 비판』
+#『공산당 선언』,『자본론』,『독일 이데올로기』,『프랑스 내전』, 『고타 강령 비판』
 }
 set_variable = {
 	RED_read_kautsky = 4

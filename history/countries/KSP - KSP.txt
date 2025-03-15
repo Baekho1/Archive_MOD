@@ -194,6 +194,20 @@ recruit_character = KSP_director_of_Security_Bureau
 recruit_character = KSP_director_of_federal_department_of_corrections
 recruit_character = KSP_nakatsukasa_kirino
 recruit_character = KSP_nemugaki_fubuki
+#벨기에 정부인사
+recruit_character = KSP_paul_van_zeeland
+recruit_character = KSP_hubert_pierlot
+recruit_character = KSP_paul_emile_janson
+recruit_character = KSP_paul_henri_spaak
+recruit_character = KSP_emile_vanderveld
+recruit_character = KSP_victor_matthys
+
+KSP_paul_van_zeeland = { set_character_flag = KSP_lock_flag }
+KSP_hubert_pierlot = { set_character_flag = KSP_lock_flag }
+KSP_paul_emile_janson = { set_character_flag = KSP_lock_flag }
+KSP_paul_henri_spaak = { set_character_flag = KSP_lock_flag }
+KSP_emile_vanderveld = { set_character_flag = KSP_lock_flag }
+KSP_victor_matthys = { set_character_flag = KSP_lock_flag }
 
 set_politics = {
 	ruling_party = fascism
