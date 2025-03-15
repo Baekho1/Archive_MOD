@@ -4781,6 +4781,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			any_country = {
+				has_idea = RED_autonomous_state_idea
+			}
 		}
 		ai_will_do = {
 			base = 15
@@ -4831,7 +4834,7 @@ focus_tree = {
 			RE1 = {
 				add_timed_idea = {
 					idea = RED_industrial_intergration
-					days = 720
+					days = 600
 				}
 			}
 			if = {
@@ -4907,7 +4910,7 @@ focus_tree = {
 			RE2 = {
 				add_timed_idea = {
 					idea = RED_industrial_intergration
-					days = 720
+					days = 600
 				}
 			}
 			if = {
@@ -4983,7 +4986,7 @@ focus_tree = {
 			RE3 = {
 				add_timed_idea = {
 					idea = RED_industrial_intergration
-					days = 720
+					days = 360
 				}
 			}
 			if = {
@@ -11676,8 +11679,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = DEN_christmas_moller
 		}
 	}
 	focus = {

@@ -1118,7 +1118,7 @@ characters = {
 					is_hired_as_advisor = no
 				}
 				RED_ernst_wigforss = {
-					is_advisor = no
+					is_hired_as_advisor = no
 				}
 				OR = {
 					any_other_country = {
@@ -1362,36 +1362,6 @@ characters = {
 					}
 					owns_state = 110
 				}
-			}
-		}
-	}
-	RED_christmas_moller = { #재무장 지지자
-		name = DEN_christmas_moller
-		portraits = {
-			civilian = {
-				large = GFX_portrait_DEN_christmas_moller
-				small = GFX_portrait_DEN_christmas_moller_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = DEN_christmas_moller
-			traits = {
-				rearmament_proponent 
-			}
-			visible = {
-				has_completed_focus = RED_rearming_focus_0
-			}
-			available = {
-				OR = {
-					any_other_country = {
-						has_idea = RED_autonomous_state_idea
-						is_ally_with = RED
-						owns_state = 37
-					}
-					owns_state = 37
-				}
-				has_completed_focus = RED_rearming_focus_0
 			}
 		}
 	}

@@ -1914,7 +1914,7 @@
  RED_install_zkt: "[FROM.Controller.getname]에 현지 전공투 설립"
 
  RED_population_issue_cat: "인구 문제"
- RED_population_issue_cat_desc: " 수백만에 이르는 학생들이 대전이로 넘어왔습니다. 도시 행정이 포화되고, 현지인들과의 갈등이 심화되고 있습니다. 또한 시간을 지체한다면 잉여 식량이 바닥 나며 기근을 야기할지도 모른다는 행정가들의 경고가 이어지고 있습니다.\n 중점 §Y$RED_club_focus_2$§!을 통해 §R인구 포화§!를 완화하는 §Y£GFX_decision_icon_small 결정§!들을 해금하세요!"
+ RED_population_issue_cat_desc: " 수백만에 이르는 학생들이 대전이로 넘어왔습니다. 도시 행정이 포화되고, 현지인들과의 갈등이 심화되고 있습니다. 또한 시간을 지체한다면 잉여 식량이 바닥 나며 기근을 야기할지도 모른다는 행정가들의 경고가 이어지고 있습니다.\n 중점 §Y$RED_land_research$§!을 통해 §R인구 포화§!를 완화하는 §Y£GFX_decision_icon_small 결정§!들을 해금하세요!"
  RED_population_issue_solved_flag: "§Y인구 포화 상태§!가 해결되었습니다."
  RED_population_issue_to_south: "남부로의 이주"
  RED_population_issue_to_north: "북부로의 이주"

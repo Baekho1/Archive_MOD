@@ -18,12 +18,18 @@ ideas = {
 			picture = generic_central_management
 			modifier = {
 				production_speed_buildings_factor = 0.15
-				communism_drift = 0.05
+				communism_drift = 0.03
 				custom_modifier_tooltip = RED_industrial_intergration_tt
 			}
 			on_remove = {
 				transfer_navy = {
 					target = RED
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_core_of = RED
 				}
 				RED = {
 					annex_country = {
