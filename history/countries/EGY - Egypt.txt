@@ -2,11 +2,126 @@
 oob = "EGY"
 set_naval_oob = "EGY_naval"
 set_research_slots = 3
-set_stability = 0.45
-set_war_support = 0.15
+set_stability = 0.75
+set_war_support = 0.25
 set_convoys = 10
 
 set_cosmetic_tag = EGY_sultanate
+every_state = {
+    limit = {
+        OR = {
+			is_core_of = EGY
+			is_core_of = SAU
+			is_core_of = YEM
+			is_core_of = OMA
+			is_core_of = SYR
+			is_core_of = IRQ
+			is_core_of = LBA
+			is_core_of = ALG
+			is_core_of = KUR
+			state = 844
+			state = 559
+			state = 269
+			state = 446
+			state = 455
+			state = 454
+			state = 656
+			state = 658
+			state = 765
+			state = 665
+			state = 458
+			state = 290
+			state = 462
+			state = 461
+			state = 783
+			state = 699
+			state = 786
+			state = 557
+			state = 553
+			state = 268
+			state = 413
+			state = 421
+			state = 344
+			state = 835
+			state = 836
+			state = 551
+			state = 883
+			state = 767
+			state = 887
+			state = 549
+			state = 886
+			state = 1014
+			state = 1015
+			state = 708
+			state = 903
+        }
+    }
+    add_to_array = { 
+		array = ROOT.arab_states
+	}
+}
+every_state = {
+    limit = {
+		AND = {
+			OR = {
+				is_on_continent = Africa
+				is_core_of = SUD
+				is_core_of = EGY
+				is_core_of = SAU
+				is_core_of = YEM
+				is_core_of = OMA
+				is_core_of = SYR
+				is_core_of = IRQ
+				is_core_of = LBA
+				is_core_of = ALG
+				is_core_of = KUR
+				state = 844
+				state = 559
+				state = 269
+				state = 446
+				state = 455
+				state = 454
+				state = 656
+				state = 658
+				state = 765
+				state = 665
+				state = 458
+				state = 290
+				state = 462
+				state = 461
+				state = 783
+				state = 699
+				state = 786
+				state = 557
+				state = 553
+				state = 268
+				state = 413
+				state = 421
+				state = 344
+				state = 835
+				state = 836
+				state = 1014
+				state = 1015
+			}
+			NOT = {
+				OR = {
+					state = 707
+					state = 709
+					state = 703
+					state = 704
+					state = 705
+					state = 697
+					state = 178
+					state = 702
+					state = 713
+				}
+			}
+		}
+    }
+    add_to_array = { 
+		array = ROOT.liberate_states
+	}
+}
 
 set_technology = {
 	### Infantry ###
@@ -63,10 +178,10 @@ set_popularities = {
 	communism = 0
 	neutrality = 40
 }
-
-add_ideas = {
-	EGY_Binah
-	EGY_unhappy_parliament
+set_party_name = {
+	ideology = fascism
+	long_name = EGY_fascism_party
+	name = EGY_fascism_party
 }
 
 # Leaders and commanders
@@ -120,44 +235,17 @@ recruit_character = EGY_mehmet_kaplan
 recruit_character = EGY_abdel_moneim_amin
 recruit_character = EGY_ahmed_hassanein
 
-# Just whatever is missing
-generate_character = {
-	token_base = generic_navy_anti_submarine # token will be TAG_token_base
-	advisor = {
-		slot = navy_chief
-		traits = { navy_anti_submarine_2 }
-		cost = 50
-	}
-	portraits = {
-		army = { small = GFX_idea_generic_navy_anti_submarine }
-	}
-}
-generate_character = {
-	token_base = generic_navy_fleet_log # token will be TAG_token_base
-	advisor = {
-		slot = high_command
-		traits = { navy_fleet_logistics_1 }
-		ledger = navy
-		cost = 50
-	}
-	portraits = {
-		army = { small = GFX_idea_generic_navy_fleet_log }
-	}
-}
-generate_character = {
-	token_base = generic_air_warfare_theorist # token will be TAG_token_base
-	advisor = {
-		slot = theorist
-		traits = { air_warfare_theorist }
-		ledger = air
-		cost = 50
-	}
-	portraits = {
-		army = { small = GFX_idea_generic_air_warfare_theorist }
-	}
+add_ideas = {
+	EGY_Binah
+	EGY_unhappy_parliament
+	EGY_idea_strong_democratic_movement
+	EGY_idea_albanian_kings
+	EGY_idea_no_socialism
+	EGY_stewart_symes_advisor
+	EGY_aziz_ezzat_advisor
 }
 
 # Binah Problem
 set_variable = {
-	EGY_Binah_health = 100
+	EGY_Binah_health = 500
 }

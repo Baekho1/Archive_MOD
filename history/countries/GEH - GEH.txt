@@ -205,6 +205,8 @@ recruit_character = GEH_dldhfl
 recruit_character = GEH_dkzh
 recruit_character = GEH_chinatsu
 recruit_character = GEH_theorist_idea
+recruit_character = GEH_prefect_team_maritime_police
+recruit_character = GEH_prefect_team_honor_guard
 
 set_convoys = 140
 
@@ -214,13 +216,16 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	neutrality = 100
 }
+
 add_timed_idea = {
     idea = BA_exiles_of_the_future
     days = 210
 }
+
 add_ideas = {
 	disarmed_nation
 	BA_isolation
@@ -237,6 +242,14 @@ add_intel = {
     navy_intel = 100
     airforce_intel = 100
 }
+
+add_intel = {
+    target = HEU
+    civilian_intel = 15
+    army_intel = 20
+    navy_intel = 0
+    airforce_intel = 0
+} 
 
 if = {
 	limit = {
@@ -326,7 +339,7 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-					name = "마코토급"
+					name = "이스보셋급"
 					type = ship_hull_super_heavy_1
 					name_group = GER_BB_HISTORICAL
 					parent_version = 0

@@ -15,7 +15,7 @@ characters={
 			}
 		}
 		country_leader ={
-			ideology=centrism
+			ideology=despotism
 			expire="1965.1.1"
 			traits = {
 				EGY_fuad_i_of_egypt
@@ -110,7 +110,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = EGY_stewart_symes
+			idea_token = EGY_stewart_symes_advisor
 			allowed = {
 				original_tag = EGY
 			}
@@ -187,13 +187,12 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = aziz_ezzat
+			idea_token = EGY_aziz_ezzat_advisor
 			allowed = {
 				original_tag = EGY
 			}
 			traits = {
 				smooth_talking_charmer
-				EGY_supjung
 			}
 		}
 		field_marshal={
