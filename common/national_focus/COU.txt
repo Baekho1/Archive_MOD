@@ -498,9 +498,24 @@ focus_tree = {
 	}
 	
 	focus = {
+        id = COU_focus_get_masterkey_from_arona
+        icon = GFX_focus_COU_control_arona
+        x = 0
+        y = 5
+        cost = 5
+		available = { has_country_flag = LETSGO_CHONGHAKS }
+		prerequisite = { focus = COU_focus_in_the_darkness }
+		relative_position_id = COU_focus_in_the_darkness
+        completion_reward = {
+		     
+        }
+	}
+	
+	##네덜란드 왕국의 부활 
+	focus = {
         id = COU_focus_let_be_the_queen
         icon = GFX_focus_COU_king
-        x = -1
+        x = -2
         y = 1
         cost = 5
 		available = {  }
@@ -511,29 +526,15 @@ focus_tree = {
         }
 	}
 	
+	##크로노스 통제 
 	focus = {
         id = COU_focus_use_the_news
         icon = GFX_focus_generic_printing_press
-        x = 1
+        x = 2
         y = 1
         cost = 5
 		available = {  }
 		prerequisite = { focus = COU_focus_the_new_gscp }
-		relative_position_id = COU_focus_the_new_gscp
-        completion_reward = {
-		     
-        }
-	}
-	
-	focus = {
-        id = COU_focus_sasang_nugak
-        icon = GFX_focus_COU_sasang_nugak
-        x = 0
-        y = 2
-        cost = 0
-		available = { always = no }
-		prerequisite = { focus = COU_focus_let_be_the_queen }
-		prerequisite = { focus = COU_focus_use_the_news }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
 		     
@@ -544,26 +545,11 @@ focus_tree = {
 	focus = {
         id = COU_focus_checks_the_valkirie
         icon = GFX_COU_balkiri_down
-        x = -1
-        y = 5
+        x = 4
+        y = 1
         cost = 5
 		available = {  }
-		prerequisite = { focus = COU_focus_the_last_fate focus = COU_focus_the_meet }
-		relative_position_id = COU_focus_the_new_gscp
-        completion_reward = {
-		     
-        }
-	}
-	
-	##파시즘 학습
-	focus = {
-        id = COU_focus_learn_about_fascism
-        icon = GFX_COU_what_the_fuck_is_fascism
-        x = 1
-        y = 5
-        cost = 5
-		available = {  }
-		prerequisite = { focus = COU_focus_the_last_fate focus = COU_focus_the_meet }
+		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
 		     
@@ -574,26 +560,47 @@ focus_tree = {
 	focus = {
         id = COU_focus_yaksok_for_srt
         icon = GFX_SRT_focus_memories
-        x = -2
-        y = 6
+        x = -4
+        y = 1
         cost = 5
 		available = {  }
-		prerequisite = { focus = COU_focus_checks_the_valkirie }
+		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
 		     
         }
 	}
 	
-	##린의 처우 
 	focus = {
-        id = COU_focus_exclude_about_rin
-        icon = GFX_COU_AOI_exclude_RIN
-        x = 2
-        y = 6
-        cost = 5
-		available = {  }
-		prerequisite = { focus = COU_focus_learn_about_fascism }
+        id = COU_focus_your_last_party
+        icon = GFX_focus_COU_cheers_for_the_our_future
+        x = 0
+        y = 2
+        cost = 10
+		available = { always = no }
+		prerequisite = { focus = COU_focus_get_masterkey_from_arona }
+		prerequisite = { focus = COU_focus_let_be_the_queen }
+		prerequisite = { focus = COU_focus_use_the_news }
+		prerequisite = { focus = COU_focus_checks_the_valkirie }
+		prerequisite = { focus = COU_focus_yaksok_for_srt }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
+        }
+	}
+	
+	
+	##하위 정치트리
+	###사상누각 
+	focus = {
+        id = COU_focus_sasang_nugak
+        icon = GFX_focus_COU_sasang_nugak
+        x = 0
+        y = 3
+        cost = 0
+		available = { always = no }
+		#prerequisite = { focus = COU_focus_let_be_the_queen }
+		#prerequisite = { focus = COU_focus_use_the_news }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
 		     
@@ -608,7 +615,37 @@ focus_tree = {
         y = 6
         cost = 5
 		available = {  }
-		prerequisite = { focus = COU_focus_checks_the_valkirie focus = COU_focus_learn_about_fascism }
+		prerequisite = { focus = COU_focus_the_last_fate focus = COU_focus_the_meet }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##파시즘 학습
+	focus = {
+        id = COU_focus_learn_about_fascism
+        icon = GFX_COU_what_the_fuck_is_fascism
+        x = -1
+        y = 7
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_COU_open_the_music }
+		relative_position_id = COU_focus_the_new_gscp
+        completion_reward = {
+		     
+        }
+	}
+	
+	##린의 처우 
+	focus = {
+        id = COU_focus_exclude_about_rin
+        icon = GFX_COU_AOI_exclude_RIN
+        x = 1
+        y = 7
+        cost = 5
+		available = {  }
+		prerequisite = { focus = COU_focus_COU_open_the_music }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
 		     
@@ -620,7 +657,7 @@ focus_tree = {
         id = COU_focus_road_to_the_choin
         icon = GFX_COU_road_ot_choin
         x = -6
-        y = 3
+        y = 4
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA }	}
 		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
@@ -636,7 +673,7 @@ focus_tree = {
         id = COU_focus_the_last_fate
         icon = GFX_focus_COU_the_last_fate
         x = -4
-        y = 4
+        y = 5
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_road_to_the_choin }
@@ -650,7 +687,7 @@ focus_tree = {
         id = COU_focus_COU_rework_srt
         icon = GFX_focus_COU_rework_srt
         x = -4
-        y = 5
+        y = 6
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_the_last_fate }
@@ -664,7 +701,7 @@ focus_tree = {
         id = COU_focus_the_aoi_question
         icon = GFX_COU_choice_AOI
         x = -7
-        y = 6
+        y = 7
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_get_some_helps_ok }
@@ -679,7 +716,7 @@ focus_tree = {
         id = COU_focus_COU_dont_make_mistake
         icon = GFX_focus_COU_all_notbad
         x = -5
-        y = 6
+        y = 7
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_fate_of_arona }
@@ -694,7 +731,7 @@ focus_tree = {
         id = COU_focus_the_whispers
         icon = GFX_focus_generic_whispers
         x = -6
-        y = 7
+        y = 8
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_the_aoi_question }
@@ -710,7 +747,7 @@ focus_tree = {
         id = COU_focus_get_some_helps_ok
         icon = GFX_focus_COU_get_some_helps_ok
         x = -8
-        y = 4
+        y = 5
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_road_to_the_choin }
@@ -725,7 +762,7 @@ focus_tree = {
         id = COU_focus_fate_of_arona
         icon = GFX_focus_COU_fate_of_arona
         x = -6
-        y = 5
+        y = 6
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_road_to_the_choin }
@@ -739,7 +776,7 @@ focus_tree = {
         id = COU_focus_the_flemish_question
         icon = GFX_focus_BEL_the_flemish_question
         x = -9
-        y = 5
+        y = 6
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_get_some_helps_ok }
@@ -753,7 +790,7 @@ focus_tree = {
         id = COU_focus_the_dog_of_flanders
         icon = GFX_focus_COU_dog_of_flanders
         x = -11
-        y = 6
+        y = 7
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_the_flemish_question }
@@ -767,7 +804,7 @@ focus_tree = {
         id = COU_focus_COU_get_some_break
         icon = GFX_focus_COU_get_some_break
         x = -9
-        y = 6
+        y = 7
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_the_flemish_question }
@@ -781,7 +818,7 @@ focus_tree = {
         id = COU_focus_COU_shutup
         icon = GFX_focus_shutup
         x = -10
-        y = 7
+        y = 8
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_COU_get_some_break }
@@ -799,7 +836,7 @@ focus_tree = {
         id = COU_focus_the_evolve
         icon = GFX_focus_COU_evolve
         x = -8
-        y = 8
+        y = 9
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA } }
 		prerequisite = { focus = COU_focus_COU_shutup }
@@ -815,7 +852,7 @@ focus_tree = {
         id = COU_focus_lets_get_some_help
         icon = GFX_focus_COU_nothing
         x = 6
-        y = 3
+        y = 4
         cost = 5
 		available = {  }
 		mutually_exclusive = { focus = COU_focus_road_to_the_choin }
@@ -830,7 +867,7 @@ focus_tree = {
         id = COU_focus_the_meet
         icon = GFX_focus_COU_meet
         x = 4
-        y = 4
+        y = 5
         cost = 5
 		available = {  }
 		prerequisite = { focus = COU_focus_lets_get_some_help }
@@ -844,7 +881,7 @@ focus_tree = {
         id = COU_focus_COU_black_front
         icon = GFX_focus_COU_black_front
         x = 8
-        y = 4
+        y = 5
         cost = 5
 		available = {  }
 		prerequisite = { focus = COU_focus_lets_get_some_help }
@@ -4852,7 +4889,7 @@ focus_tree = {
 	focus = { #침수 재건 
 		id = COU_focus_eco_rework_the_dead_lands
 		icon = GFX_focus_hol_the_zuiderzee_works
-		x = 7
+		x = 9
 		y = 0
 		cost = 5
 		available = {
@@ -4943,6 +4980,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = COU_economy_focus_0
+		}
+		prerequisite = {
+			focus = COU_focus_eco_rework_the_dead_lands
 		}
 		available = {
 		}
