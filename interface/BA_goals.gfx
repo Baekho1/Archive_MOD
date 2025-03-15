@@ -80,6 +80,10 @@ spriteTypes = {
 		name = "GFX_focus_TRN_declare_trinity_order_state"
 		texturefile = "gfx/interface/goals/TRN/TRN_declare_trinity_order_state.tga"
 	}
+	SpriteType = {
+		name = "GFX_focus_TRN_cult_of_Mika"
+		texturefile = "gfx/interface/goals/TRN/TRN_cult_of_Mika.tga"
+	}
 
 	SpriteType = {
 		name = "GFX_focus_BLM_gang_thugs_war_focus"
