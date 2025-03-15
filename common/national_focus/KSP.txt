@@ -583,6 +583,52 @@ focus_tree = {
 				limit = { has_idea = KSP_belgium_banbal }
 				remove_ideas = KSP_belgium_banbal
 			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = available_political_advisor
+			if = {
+				limit = { has_character = KSP_paul_van_zeeland }
+				KSP_paul_van_zeeland = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							large = GFX_portrait_BEL_paul_van_zeeland
+						}
+						army={
+							#small="gfx/interface/advisors/KSP/idea_KSP_paul_van_zeeland_lock.dds"
+							small="gfx/interface/advisors/KSP/idea_KSP_paul_van_zeeland.dds"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_paul_van_zeeland
+			}
+			if = {
+				limit = { has_character = KSP_hubert_pierlot }
+				KSP_hubert_pierlot = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							large = GFX_portrait_BEL_hubert_pierlot 
+							small="gfx/interface/advisors/KSP/idea_KSP_hubert_pierlot_small.tga"
+						#	small="gfx/interface/advisors/KSP/idea_KSP_hubert_pierlot_small_lock.tga"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_hubert_pierlot
+			}
+			if = {
+				limit = { has_character = KSP_paul_emile_janson }
+				KSP_paul_emile_janson = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							large = GFX_portrait_BEL_paul_emile_janson 
+							small="gfx/interface/advisors/KSP/idea_KSP_paul_emile_janson_small.tga"
+						#	small="gfx/interface/advisors/KSP/idea_KSP_paul_emile_janson_small_lock.tga"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_paul_emile_janson
+			}
 		}
 	}
 	focus = {
@@ -607,6 +653,36 @@ focus_tree = {
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
+			}
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = available_political_advisor
+			if = {
+				limit = { has_character = KSP_paul_henri_spaak }
+				KSP_paul_henri_spaak = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							large = GFX_portrait_BEL_paul_henri_spaak 
+							small="gfx/interface/advisors/KSP/idea_KSP_paul_henri_spaak_small.tga"
+						#	small="gfx/interface/advisors/KSP/idea_KSP_paul_henri_spaak_small_lock.tga"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_paul_henri_spaak
+			}
+			if = {
+				limit = { has_character = KSP_emile_vanderveld }
+				KSP_emile_vanderveld = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							large = GFX_portrait_BEL_emile_vanderveld 
+							small="gfx/interface/advisors/KSP/idea_KSP_emile_vanderveld_small.tga"
+						#	small="gfx/interface/advisors/KSP/idea_KSP_emile_vanderveld_small_lock.tga"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_emile_vanderveld
 			}
 		}
 	}
@@ -838,6 +914,21 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			add_war_support = 0.10
+			custom_effect_tooltip = enter_tt
+			custom_effect_tooltip = available_political_advisor
+			if = {
+				limit = { has_character = KSP_victor_matthys }
+				KSP_victor_matthys = {
+					clr_character_flag = KSP_lock_flag
+					set_portraits = {
+						civilian={
+							small="gfx/interface/advisors/KSP/idea_KSP_victor_matthys_small.tga"
+						#	small="gfx/interface/advisors/KSP/idea_KSP_victor_matthys_small_lock.tga"
+						}
+					}
+				}
+				show_ideas_tooltip = BEL_victor_matthys
+			}
 		}
 	}
 
@@ -853,9 +944,17 @@ focus_tree = {
 		y = 2
 		relative_position_id = KSP_cooperation_with_the_right
 		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			#conscription = 0.025
+			add_to_variable = {
+				var = KSP_kspd_training_time_factor
+				value = -0.010
+				tooltip = training_time_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_stability = 0.10
 			add_popularity = {
-				ideology = democratic
+				ideology = ROOT
 				popularity = 0.10
 			}
 			KSP_spread_out_officers_modifier_down = yes
@@ -1739,7 +1838,9 @@ focus_tree = {
 			modifier = {
 				add = 50
 				OR = {
-					has_completed_focus = KSP_yunjung_over
+					has_completed_focus = KSP_belgium_heart
+					has_completed_focus = KSP_valkyrie_federation
+					has_completed_focus = KSP_police_nation
 				}
 			}
 		}

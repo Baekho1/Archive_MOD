@@ -780,6 +780,7 @@ KSP_3cha_plan:0 "4개년 계획 - 3단계"
 KSP_3cha_plan_desc:0 ""
 
 #과거의 잔재(재활용할꺼임)
+KSP_lock_flag: "발키리 교정국 수감 중"
 KSP_hyeongiin_leader_meeting:0 "벨기에인 지도자와의 만남"
 KSP_hyeongiin_leader_meeting_desc:0 "오가타 칸나는 이 땅에 원래 있었던 나라, '벨기에'라는 나라의 대표자를 만나보기로 했습니다. 그를 만나 이야기를 나누어 본다면, 벨기에인들과 발키리의 학생들 간의 충돌을 줄일 수 있지 않을까요.
 KSP_two_students:0 "두 학생"
@@ -1018,6 +1019,7 @@ KSP_event.20.a:0 "어리석군."
  KSP_Konoka: "코노카"
  KSP_nakatsukasa_kirino:0 "나카츠카사 키리노"
  KSP_nemugaki_fubuki:0 "네무가키 후부키"
+ KSP_victor_matthys: "빅터 마티스"
 
 #외교
 

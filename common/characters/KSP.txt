@@ -255,6 +255,159 @@ characters={
 		}
 	}
 
+	KSP_paul_van_zeeland = {
+		name = BEL_paul_van_zeeland
+		portraits={
+			civilian={
+				large = GFX_portrait_BEL_paul_van_zeeland
+			}
+			army={
+				small="gfx/interface/advisors/KSP/idea_KSP_paul_van_zeeland_lock.dds"
+				#small="gfx/interface/advisors/KSP/idea_KSP_paul_van_zeeland.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_van_zeeland
+			ledger = civilian
+			allowed = {
+				original_tag = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+			}
+			traits = {
+				KSP_paul_van_zeeland_trait
+			}
+
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KSP_hubert_pierlot = {
+		name=BEL_hubert_pierlot
+		portraits={
+			civilian={
+				large = GFX_portrait_BEL_hubert_pierlot 
+			#	small="gfx/interface/advisors/KSP/idea_KSP_hubert_pierlot_small.tga"
+				small="gfx/interface/advisors/KSP/idea_KSP_hubert_pierlot_small_lock.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_hubert_pierlot
+			allowed  = {
+				original_tag  = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+			}
+			traits  = {
+				JUNO_minister_of_foreign_affairs 
+			}
+		}
+	}
+
+	KSP_paul_emile_janson = {
+		name = BEL_paul_emile_janson
+		portraits={
+			civilian={
+				large = GFX_portrait_BEL_paul_emile_janson 
+			#	small="gfx/interface/advisors/KSP/idea_KSP_paul_emile_janson_small.tga"
+				small="gfx/interface/advisors/KSP/idea_KSP_paul_emile_janson_small_lock.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_emile_janson
+			allowed  = {
+				original_tag  = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+			}
+			traits  = {
+				BEL_paul_emile_janson_trait 
+			}
+		}
+	}
+
+	KSP_paul_henri_spaak = {
+		name = BEL_paul_henri_spaak
+		portraits={
+			civilian={
+				large = GFX_portrait_BEL_paul_henri_spaak 
+			#	small="gfx/interface/advisors/KSP/idea_KSP_paul_henri_spaak_small.tga"
+				small="gfx/interface/advisors/KSP/idea_KSP_paul_henri_spaak_small_lock.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_paul_henri_spaak
+			allowed  = {
+				original_tag  = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+				has_completed_focus = KSP_cooperation_with_the_left
+			}
+			traits  = {
+				BEL_canny_diplomat 
+			}
+		}
+	}
+
+	KSP_emile_vanderveld = {
+		name = BEL_emile_vanderveld
+		portraits={
+			civilian={
+				large = GFX_portrait_BEL_emile_vanderveld 
+			#	small="gfx/interface/advisors/KSP/idea_KSP_emile_vanderveld_small.tga"
+				small="gfx/interface/advisors/KSP/idea_KSP_emile_vanderveld_small_lock.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_emile_vanderveld
+			allowed  = {
+				original_tag  = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+				has_completed_focus = KSP_cooperation_with_the_left
+			}
+			traits  = {
+				KSP_emile_vanderveld_trait
+			}
+		}
+	}
+
+	KSP_victor_matthys = {
+		name = KSP_victor_matthys
+		portraits={
+			civilian={
+			#	small="gfx/interface/advisors/KSP/idea_KSP_victor_matthys_small.tga"
+				small="gfx/interface/advisors/KSP/idea_KSP_victor_matthys_small_lock.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_victor_matthys
+			allowed  = {
+				original_tag  = KSP
+			}
+			available = {
+				NOT = { has_character_flag = KSP_lock_flag }
+				has_completed_focus = KSP_cooperation_with_the_right
+			}
+			traits  = {
+				KSP_victor_matthys_trait
+			}
+		}
+	}
 
 	#KSP_sanghwal_anjunguk = {
 	#	name=KSP_sanghwal_anjunguk
