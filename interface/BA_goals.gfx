@@ -2148,6 +2148,10 @@ spriteTypes = {
 		name = "GFX_focus_COU_cheers_for_the_our_future"
 		textureFile = "gfx/interface/goals/COU/COU_cheers_for_the_our_future.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_the_emergency_law"
+		textureFile = "gfx/interface/goals/COU/COU_the_emergency_law.png"
+	}
 	
 	
 	####카이저라이히 돚거
