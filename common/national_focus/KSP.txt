@@ -293,6 +293,8 @@ focus_tree = {
 			add_political_power = -25
 			add_stability = -0.10
 			remove_ideas = KSP_belgium_banbal
+			custom_effect_tooltip = KSP_belgium_ukje_tt
+			country_event = { id = KSP_event.26 days = 280 } #칸나 쓰러짐
 		}
 	}
 
@@ -563,7 +565,7 @@ focus_tree = {
 	# }
 	focus = {
 		id = KSP_government_ganghwa
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_BEL_belgian_renaissance
 		cost = 5
 		prerequisite = {
 			focus = KSP_with_our_friends
@@ -577,12 +579,19 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			KSP_spread_out_officers_modifier_down = yes
+			if = {
+				limit = { has_idea = KSP_belgium_banbal }
+				remove_ideas = KSP_belgium_banbal
+			}
 		}
 	}
 	focus = {
-		id = KSP_teach_students_work
-		icon = GFX_focus_generic_treaty
+		id = KSP_cooperation_with_the_left
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		cost = 5
+		mutually_exclusive = {
+			focus = KSP_cooperation_with_the_right
+		}
 		prerequisite = {
 			focus = KSP_government_ganghwa
 		}
@@ -597,7 +606,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 2
+				level = 1
 			}
 		}
 	}
@@ -606,7 +615,7 @@ focus_tree = {
 	# 	icon = GFX_goal_demand_sudetenland
 	# 	cost = 5
 	# 	prerequisite = {
-	# 		focus = KSP_teach_students_work
+	# 		focus = KSP_cooperation_with_the_left
 	# 	}
 	# 	allow_branch = {
 
@@ -614,7 +623,7 @@ focus_tree = {
 
 	# 	x = 0
 	# 	y = 1
-	# 	relative_position_id = KSP_teach_students_work
+	# 	relative_position_id = KSP_cooperation_with_the_left
 
 	# 	completion_reward = {
 	# 		remove_ideas = KSP_sanghwal_safety_bulman
@@ -677,12 +686,12 @@ focus_tree = {
 	# 		}
 	# 	}
 	# 	prerequisite = {
-	# 		focus = KSP_teach_students_work
+	# 		focus = KSP_cooperation_with_the_left
 	# 	}
 
 	# 	x = -3
 	# 	y = 1
-	# 	relative_position_id = KSP_teach_students_work
+	# 	relative_position_id = KSP_cooperation_with_the_left
 
 	# 	completion_reward = {
 	# 		add_stability = 0.10
@@ -718,48 +727,20 @@ focus_tree = {
 	# 	}
 	# }
 	focus = {
-		id = KSP_gwanleojae_sulgae
-		icon = GFX_KSP_focus_sanghwal_safety_helping
-		cost = 5
-		prerequisite = {
-			focus = KSP_teach_students_work
-		}
-
-		x = -2
-		y = 2
-		relative_position_id = KSP_teach_students_work
-
-		completion_reward = {
-			add_political_power = -50
-			#add_ideas = KSP_gwanleojae_idea
-			custom_effect_tooltip = KSP_kspd
-			add_to_variable = {
-				var = KSP_kspd_political_power_factor
-				value = 0.10
-				tooltip = political_power_factor_tt
-			}
-			add_to_variable = {
-				var = KSP_kspd_consumer_goods_factor
-				value = -0.08
-				tooltip = consumer_goods_factor_tt
-			}
-		}
-	}
-	focus = {
 		id = KSP_chian_uzi_students
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_focus_generic_communism_anti_fascism
 		cost = 5
 		prerequisite = {
-			focus = KSP_teach_students_work
+			focus = KSP_cooperation_with_the_left
 		}
 
 		x = 0
 		y = 2
-		relative_position_id = KSP_teach_students_work
+		relative_position_id = KSP_cooperation_with_the_left
 
 		completion_reward = {
 			#add_ideas = KSP_call_students_for_chian
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			#conscription = 0.025
 			add_to_variable = {
 				var = KSP_kspd_conscription
@@ -767,6 +748,35 @@ focus_tree = {
 				tooltip = conscription_tt
 			}
 			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_gwanleojae_sulgae
+		icon = GFX_KSP_focus_sanghwal_safety_helping
+		cost = 2
+		prerequisite = {
+			focus = KSP_chian_uzi_students
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = KSP_chian_uzi_students
+
+		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			add_to_variable = {
+				var = KSP_kspd_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_consumer_goods_factor
+				value = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
+			add_political_power = -50
+			#add_ideas = KSP_gwanleojae_idea
 		}
 	}
 	# focus = {
@@ -807,33 +817,12 @@ focus_tree = {
 	# 	}
 	# }
 	focus = {
-		id = KSP_students_have_power
-		icon = none
+		id = KSP_cooperation_with_the_right
+		icon = GFX_focus_BEL_support_the_rexists
 		cost = 5
-		available = {
-			KSP = {
-				KSP_Ogata_Kanna = {
-					is_country_leader = yes
-				}
-			}
+		mutually_exclusive = {
+			focus = KSP_cooperation_with_the_left
 		}
-		prerequisite = {
-			focus = KSP_chian_uzi_students
-		}
-
-		x = 1
-		y = 1
-		relative_position_id = KSP_chian_uzi_students
-
-		completion_reward = {
-			add_stability = -0.05
-			add_war_support = -0.05
-		}
-	}
-	focus = {
-		id = KSP_right_wing_tonghap
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
 		prerequisite = {
 			focus = KSP_government_ganghwa
 		}
@@ -848,66 +837,21 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
-			add_war_support = 0.05
+			add_war_support = 0.10
 		}
 	}
 
-
-	focus = {
-		id = KSP_belgium_gov_helpers
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		prerequisite = {
-			focus = KSP_right_wing_tonghap
-		}
-
-		x = 3
-		y = 1
-		relative_position_id = KSP_right_wing_tonghap
-
-		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.10
-			if = {
-				limit = { has_country_leader_with_trait = KSP_KANNA_SET0_1 }
-				remove_country_leader_trait = KSP_KANNA_SET0_1
-			}
-			if = {
-				limit = { has_country_leader_with_trait = KSP_KANNA_SET0_0 }
-				swap_ruler_traits = {
-					remove = KSP_KANNA_SET0_0
-					add = KSP_KANNA_SET0_1
-				}
-			}
-		}
-	}
-	focus = {
-		id = KSP_belgium_heart
-		icon = GFX_KSP_focus_belgium_restore2
-		cost = 5
-		prerequisite = {
-			focus = KSP_belgium_gov_helpers
-		}
-
-		x = 0
-		y = 2
-		relative_position_id = KSP_belgium_gov_helpers
-
-		completion_reward = {
-			add_ideas = KSP_belgium_heart_idea
-		}
-	}
 	focus = {
 		id = KSP_stabilize_inside
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_anti_comintern_pact
 		cost = 5
 		prerequisite = {
-			focus = KSP_right_wing_tonghap
+			focus = KSP_cooperation_with_the_right
 		}
 
 		x = 0
 		y = 2
-		relative_position_id = KSP_right_wing_tonghap
+		relative_position_id = KSP_cooperation_with_the_right
 		completion_reward = {
 			add_stability = 0.10
 			add_popularity = {
@@ -920,7 +864,7 @@ focus_tree = {
 	focus = {
 		id = KSP_belgian_simin_help
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 5
+		cost = 2
 		prerequisite = {
 			focus = KSP_stabilize_inside
 		}
@@ -930,6 +874,13 @@ focus_tree = {
 		relative_position_id = KSP_stabilize_inside
 
 		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			add_to_variable = {
+				var = KSP_kspd_consumer_goods_factor
+				value = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = enter_tt
 			add_political_power = 50
 			add_timed_idea = {
 				idea = KSP_belgian_simin_money
@@ -1002,7 +953,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		cost = 5
 		prerequisite = {
-			focus = KSP_government_ganghwa
+			focus = KSP_cooperation_with_the_left
+			focus = KSP_cooperation_with_the_right
 		}
 		available = {
 			has_idea = KSP_damaged_country
@@ -1044,6 +996,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 	focus = {
@@ -1051,13 +1004,12 @@ focus_tree = {
 		icon = GFX_focus_DEN_heavy_regulations
 		cost = 5
 		prerequisite = {
+			focus = KSP_chian_uzi_students
 			focus = KSP_rebuild_roads
-		}
-		prerequisite = {
 			focus = KSP_stabilize_inside
 		}
 
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = KSP_rebuild_roads
 
@@ -1157,10 +1109,12 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 5
 		prerequisite = {
+			focus = KSP_chian_uzi_students
 			focus = KSP_rebuild_roads
+			focus = KSP_stabilize_inside
 		}
 
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = KSP_rebuild_roads
 
@@ -1205,6 +1159,22 @@ focus_tree = {
 			remove_ideas = KSP_damaged_country
 			remove_ideas = KSP_gaebaljaegundanguk
 			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_belgium_heart
+		icon = GFX_KSP_focus_belgium_restore2
+		cost = 5
+		prerequisite = {
+			focus = KSP_rebuild_country
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = KSP_rebuild_country
+
+		completion_reward = {
+			add_ideas = KSP_belgium_heart_idea
 		}
 	}
 	# focus = {
@@ -1411,23 +1381,6 @@ focus_tree = {
 	# 		add_war_support = 0.05
 	# 	}
 	# }
-	focus = {
-		id = KSP_yunjung_over
-		icon = GFX_goal_generic_national_unity
-		cost = 5
-		prerequisite = {
-			focus = KSP_rebuild_country
-		}
-
-		x = 0
-		y = 1
-		relative_position_id = KSP_rebuild_country
-
-		completion_reward = {
-			add_stability = -0.10
-			add_ideas = KSP_stabilized_gov
-		}
-	}
 
 	focus = {
 		id = KSP_sanghwal_safety_coup #생활안전국의 학교 장악
@@ -1453,7 +1406,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 10
 			remove_ideas = KSP_duties_of_the_police_academy
-			remove_ideas = KSP_valkyrie_chaos
 			add_timed_idea = {
 				idea = KSP_sanghwal_safety_coup_idea
 				days = 730
@@ -2836,7 +2788,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_belgium_recruit_local_student_modifier
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_weekly_manpower
 				value = 150
@@ -2874,10 +2826,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = KSP_weak_army
-				add_idea = KSP_trained_valkyrie_student
-			}
+			remove_ideas = KSP_weak_army
 		}
 	}
 
@@ -3333,7 +3282,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_millenium_support_modifier
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_research_speed_factor
 				value = 0.05
@@ -3367,7 +3316,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_millenium_old_supercomputer_modifier
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_research_speed_factor
 				value = 0.07
@@ -3432,7 +3381,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_army_attack_factor
 				value = 0.05
@@ -3648,7 +3597,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_shift_work_idea
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_political_power_gain
 				value = 0.05
@@ -3697,7 +3646,7 @@ focus_tree = {
 			# industrial_capacity_factory = 0.08
 			# army_org_factor = 0.04
 
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_army_org_factor
 				value = 0.10
@@ -3747,25 +3696,20 @@ focus_tree = {
 		relative_position_id = KSP_fubuki_plan
 
 		completion_reward = {
-			custom_effect_tooltip = KSP_kspd
-			add_to_variable = {
-				var = KSP_kspd_monthly_population
-				value = 0.25
-				tooltip = monthly_population_tt
-			}
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_stability_weekly
-				value = 0.0025
+				value = 0.001
 				tooltip = stability_weekly_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
-				value = 0.05
+				value = 0.03
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				var = KSP_kspd_war_support_factor
-				value = 0.05
+				value = 0.03
 				tooltip = war_support_factor_tt
 			}
 		}
@@ -3791,7 +3735,7 @@ focus_tree = {
 		relative_position_id = KSP_fubuki_plan
 
 		completion_reward = {
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
 				value = -0.05
@@ -3871,7 +3815,7 @@ focus_tree = {
 			# production_factory_max_efficiency_factor = 0.10
 			# industrial_capacity_factory = 0.20
 			# industrial_capacity_dockyard = 0.25
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_global_building_slots_factor
 				value = 0.10
@@ -3920,7 +3864,7 @@ focus_tree = {
 			# war_support_factor = 0.10
 			# recruitable_population_factor = 0.05
 
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
 				value = -0.05
@@ -3960,7 +3904,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_overtime_pay_modifier
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
 				value = -0.10
@@ -3998,7 +3942,7 @@ focus_tree = {
 			# stability_factor = 0.05
 			# political_power_factor = 0.10
 			# recruitable_population_factor = 0.05
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_stability_factor
 				value = 0.05
@@ -4046,7 +3990,7 @@ focus_tree = {
 			# consumer_goods_factor = -0.075
 			# production_speed_buildings_factor = 0.15
 			# industry_repair_factor = 0.15
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_consumer_goods_factor
 				value = -0.05
@@ -4085,11 +4029,7 @@ focus_tree = {
 		relative_position_id = KSP_kirino_plan
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = KSP_weak_army
-				add_idea = KSP_trained_sanghwal_coup_modifier
-			}
-			
+			remove_ideas = KSP_weak_army
 		}
 	}
 
@@ -4140,7 +4080,7 @@ focus_tree = {
 
 		completion_reward = {
 			#add_ideas = KSP_ministry_of_personal_management_modifier
-			custom_effect_tooltip = KSP_kspd
+			custom_effect_tooltip = KSP_kspd_tt
 			add_to_variable = {
 				var = KSP_kspd_stability_factor
 				value = 0.15
@@ -4180,7 +4120,7 @@ focus_tree = {
 	focus = {
 		id = KSP_independence_claim_1 # 샬레 수사권 완전 박탈
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -4209,7 +4149,7 @@ focus_tree = {
 	focus = {
 		id = KSP_independence_claim_2 # 수사권 독립
 		icon = GFX_goal_generic_demand_territory
-		cost = 10
+		cost = 5
 
 		available = {
 		}
