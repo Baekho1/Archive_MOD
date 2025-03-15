@@ -2020,6 +2020,48 @@ country_event = {
 	}
 }
 
+country_event = { 
+	id = COU_event_normal_days.6
+	title = COU_event_normal_days.6.t
+	desc = COU_event_normal_days.6.desc
+	picture = GFX_report_event_generic_reloading
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.6.a
+		custom_effect_tooltip = COU_tooltip_normal_days_six
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.7
+	title = COU_event_normal_days.7.t
+	desc = COU_event_normal_days.7.desc
+	picture = GFX_report_event_generic_venice
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.7.a
+		custom_effect_tooltip = COU_tooltip_normal_days_seven
+	}
+}
+
+country_event = { 
+	id = COU_event_normal_days.8
+	title = COU_event_normal_days.8.t
+	desc = COU_event_normal_days.8.desc
+	picture = GFX_report_event_generic_trains
+
+	is_triggered_only = yes
+
+	option = {
+		name = COU_event_normal_days.8.a
+		custom_effect_tooltip = COU_tooltip_normal_days_eight
+	}
+}
+
 ##안네 프랑크 이벤트체인 
 unit_leader_event = {
 	id = COU_event_normal_days.1000

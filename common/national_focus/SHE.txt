@@ -798,6 +798,34 @@ focus_tree = {
 			unlock_decision_tooltip = SHE_student_council_absorption_KSP
 		}
 	}
+	
+	#발키리 통합
+
+	focus = {
+		id = SHE_focus_rework_the_lands
+		icon = GFX_focus_brabant
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		available = {
+			controls_state = 7
+			controls_state = 36
+		}
+		prerequisite = { focus = SHE_conghagsaenghoetongjegweoninsu  }
+		completion_reward = {
+			36 = { remove_dynamic_modifier = { modifier = COU_the_dead_land } }
+			7 = { remove_dynamic_modifier = { modifier = COU_the_dead_land } }
+		}
+	}
 
 	#통신선 복구
 

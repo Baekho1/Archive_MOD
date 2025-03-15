@@ -1521,7 +1521,8 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.35
 			}
-			news_event = BA_news.61
+			country_event = KSP_event.115
+			#news_event = { id = BA_news.61 hours = 3 }
 		}
 		
 	}

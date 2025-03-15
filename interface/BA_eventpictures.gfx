@@ -216,6 +216,10 @@ spriteTypes = {
 		name = "GFX_event_BA_news_kanna_banned"
 		texturefile = "gfx/event_pictures/KSP_kanna_banned.tga"
 	}
+	spriteType = { 
+		name = "GFX_report_event_generic_trains"
+		texturefile = "gfx/event_pictures/report_event_generic_trains.png"
+	}
 	spriteType = {
 		name = "GFX_event_BA_kivotos"
 		texturefile = "gfx/event_pictures/Kivotos.tga"
