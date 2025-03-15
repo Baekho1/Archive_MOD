@@ -722,6 +722,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_victory
 		icon = GFX_GEI_DEC_victory
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_uigyeonchungdol
 		x = 5
@@ -778,6 +780,8 @@ focus_tree = {
 		id = GEI_DEC_old_qusetion
 		icon = GFX_GEI_DEC_old_question
 
+		text_icon = The_New_Order_focus_style
+
 		relative_position_id = GEI_DEC_victory
 		x = 0
 		y = 2
@@ -803,6 +807,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_old_answer
 		icon = GFX_GEI_DEC_old_answer
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_old_qusetion
 		x = 0
@@ -829,6 +835,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_outside
 		icon = GFX_GEI_DEC_outside
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_old_answer
 		x = -2
@@ -853,6 +861,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_human_history
 		icon = GFX_GEI_DEC_human_history
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_outside
 		x = 0
@@ -878,6 +888,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_fallen_gods_homeland
 		icon = GFX_GEI_DEC_fallen_gods_homeland
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_human_history
 		x = 0
@@ -903,6 +915,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_stabilization
 		icon = GFX_GEI_DEC_stabilization
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_old_answer
 		x = 2
@@ -941,6 +955,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_auto
 		icon = GFX_GEI_DEC_auto
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_stabilization
 		x = 0
@@ -966,6 +982,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_modernization
 		icon = GFX_GEI_DEC_modernization 
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_auto
 		x = 0
@@ -1001,6 +1019,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_hesade_plan
 		icon = GFX_GEI_DEC_hesade_plan
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_old_answer
 		x = 0
@@ -1036,6 +1056,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_synthetic_dawn
 		icon = GFX_GEI_DEC_syntetic_dawn
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_hesade_plan
 		x = 0
@@ -1063,6 +1085,8 @@ focus_tree = {
 	focus = {
 		id = GEI_DEC_box
 		icon = GFX_GEI_DEC_box
+		
+		text_icon = The_New_Order_focus_style
 
 		relative_position_id = GEI_DEC_synthetic_dawn
 		x = 0
