@@ -171,9 +171,38 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				production_factory_efficiency_gain_factor = 0.2
 				custom_modifier_tooltip = RED_world_revolution_1_tt
+				custom_modifier_tooltip = RED_world_revolution_1_tt_1
 			}
 			cancel = {
-				has_war = no
+				if = {
+					limit = {
+						64 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						219 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						2 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						16 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						126 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						361 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						282 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+					}
+					always = no
+				}
+				else = {
+					has_war = no
+				}
 			}
 			on_remove = {
 				add_ideas = RED_world_revolution
@@ -193,7 +222,35 @@ ideas = {
 				custom_modifier_tooltip = RED_world_revolution_tt
 			}
 			cancel = {
-				has_war = yes
+				if = {
+					limit = {
+						64 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						219 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						2 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						16 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						126 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						361 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						282 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+					}
+					always = yes
+				}
+				else = {
+					has_war = yes
+				}
 			}
 			on_remove = {
 				add_ideas = RED_world_revolution_1
@@ -642,13 +699,13 @@ ideas = {
 			picture = generic_devalue_currency
 			modifier = {
 				civilian_factory_use = 8
-				stability_weekly = -0.01
+				stability_weekly = -0.015
 			}
 		}
 		RED_no_limit_inflation = { #무제한 인플레이션
 			picture = chi_hyper_inflation5
 			modifier = {
-				consumer_goods_expected_value = 0.15
+				consumer_goods_expected_value = 0.1
 				stability_factor = -0.2
 				custom_modifier_tooltip = RED_no_limit_inflation_tt
 			}

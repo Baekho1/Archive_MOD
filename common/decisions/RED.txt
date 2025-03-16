@@ -1948,9 +1948,14 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = SPR
-					value > 30
+				OR = {
+					network_strength = {
+						target = SPR
+						value > 30
+					}
+					SPR = {
+						is_ally_with = RED
+					}
 				}
 			}
 			has_equipment = {
@@ -2024,15 +2029,25 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = GEM
-					value > 30
+				OR = {
+					network_strength = {
+						target = GEM
+						value > 30
+					}
+					GEM = {
+						is_ally_with = RED
+					}
 				}
 			}
 			else = {
-				network_strength = {
-					target = GEH
-					value > 30
+				OR = {
+					network_strength = {
+						target = GEH
+						value > 30
+					}
+					GEH = {
+						is_ally_with = RED
+					}
 				}
 			}
 			has_equipment = {
@@ -2106,15 +2121,25 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = GEM
-					value > 30
+				OR = {
+					network_strength = {
+						target = GEM
+						value > 30
+					}
+					GEM = {
+						is_ally_with = RED
+					}
 				}
 			}
 			else = {
-				network_strength = {
-					target = GEH
-					value > 30
+				OR = {
+					network_strength = {
+						target = GEH
+						value > 30
+					}
+					GEH = {
+						is_ally_with = RED
+					}
 				}
 			}
 			has_equipment = {
@@ -2188,9 +2213,14 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = MIL
-					value > 30
+				OR = {
+					network_strength = {
+						target = MIL
+						value > 30
+					}
+					MIL = {
+						is_ally_with = RED
+					}
 				}
 			}
 			has_equipment = {
@@ -2267,9 +2297,14 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = COU
-					value > 30
+				OR = {
+					network_strength = {
+						target = COU
+						value > 30
+					}
+					COU = {
+						is_ally_with = RED
+					}
 				}
 			}
 			else_if = {
@@ -2278,9 +2313,14 @@ RED_invite_trotskists_dec_cat = {
 						exists = yes
 					}
 				}
-				network_strength = {
-					target = SHE
-					value > 10
+				OR = {
+					network_strength = {
+						target = SHE
+						value > 30
+					}
+					SHE = {
+						is_ally_with = RED
+					}
 				}
 			}
 		}

@@ -308,6 +308,10 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_RED_entice_publicworks"
+		texturefile = "gfx/interface/goals/RED/RED_entice_publicworks.tga"
+	}
+	SpriteType = {
 		name = "GFX_RED_momiji"
 		texturefile = "gfx/interface/goals/RED/RED_momiji.tga"
 	}
