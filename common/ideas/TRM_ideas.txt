@@ -1301,7 +1301,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.001
 				weekly_manpower = -750
-				national_populist_drift = -0.06
+				fascism_drift = -0.06
 				resistance_target = 0.25
 			}
 		}
