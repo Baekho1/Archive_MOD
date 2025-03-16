@@ -570,6 +570,9 @@ focus_tree = {
 		prerequisite = {
 			focus = KSP_with_our_friends
 		}
+		allow_branch = {
+			NOT = { has_country_flag = KSP_justice_flag }
+		}
 
 		x = 0
 		y = 2
@@ -628,6 +631,479 @@ focus_tree = {
 					}
 				}
 				show_ideas_tooltip = BEL_paul_emile_janson
+			}
+		}
+	}
+	focus = {
+		id = KSP_government_ganghwa_NOT
+		icon = GFX_focus_BEL_broken_neutrality
+		cost = 5
+		prerequisite = {
+			focus = KSP_with_our_friends
+		}
+
+		allow_branch = {
+			has_country_flag = KSP_justice_flag
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = KSP_with_our_friends
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_valkyrie_national_reconstruction_committee
+		icon = GFX_focus_GER_factories_for_resources
+		cost = 5
+		prerequisite = {
+			focus = KSP_government_ganghwa_NOT
+		}
+		allow_branch = {
+
+		}
+
+		x = -2
+		y = 1
+		relative_position_id = KSP_government_ganghwa_NOT
+
+		completion_reward = {
+			add_ideas = KSP_gaebaljaegundanguk_NOT
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KSP_expulsion_of_belgian_capitalists
+		icon = GFX_focus_BEL_government_resigns
+		cost = 5
+		prerequisite = {
+			focus = KSP_valkyrie_national_reconstruction_committee
+		}
+		allow_branch = {
+
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = KSP_valkyrie_national_reconstruction_committee
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 34 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 974 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 1024 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_network_project
+		icon = GFX_focus_generic_central_planning
+		cost = 5
+		prerequisite = {
+			focus = KSP_valkyrie_national_reconstruction_committee
+		}
+		allow_branch = {
+
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = KSP_valkyrie_national_reconstruction_committee
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 34 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 974 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 1024 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_complete_recovery
+		icon = GFX_focus_generic_economic_recovery
+		cost = 5
+		prerequisite = {
+			focus = KSP_network_project
+		}
+		prerequisite = {
+			focus = KSP_expulsion_of_belgian_capitalists
+		}
+		allow_branch = {
+
+		}
+
+		x = 0
+		y = 3
+		relative_position_id = KSP_valkyrie_national_reconstruction_committee
+
+		completion_reward = {
+			remove_ideas = KSP_damaged_country
+			remove_ideas = KSP_gaebaljaegundanguk
+		}
+	}
+	focus = {
+		id = KSP_sanctum_tower_recapture
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = KSP_government_ganghwa_NOT
+		}
+		allow_branch = {
+
+		}
+		bypass = {
+			controls_state = 29
+			controls_state = 6
+			controls_state = 35
+			controls_state = 7
+			controls_state = 977
+			controls_state = 36	
+		}
+
+		x = 2
+		y = 1
+		relative_position_id = KSP_government_ganghwa_NOT
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = COU
+						original_tag = SHE
+						controls_state = 35
+						controls_state = 36
+						controls_state = 7
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = KSP_new_student_council
+		icon = GFX_COU_create_military
+		cost = 5
+		prerequisite = {
+			focus = KSP_sanctum_tower_recapture
+		}
+		mutually_exclusive = {
+			focus = KSP_valkyrie_central_school
+		}
+		allow_branch = {
+
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = KSP_sanctum_tower_recapture
+
+		completion_reward = {
+			set_cosmetic_tag = SHE_student_council
+			add_country_leader_trait = SHE_new_dictator
+			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_valkyrie_central_school
+		icon = GFX_KSP_focus_assembly
+		cost = 5
+		prerequisite = {
+			focus = KSP_sanctum_tower_recapture
+		}
+		mutually_exclusive = {
+			focus = KSP_new_student_council
+		}
+		allow_branch = {
+
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = KSP_sanctum_tower_recapture
+
+		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			add_to_variable = {
+				var = KSP_kspd_war_support_factor
+				value = 0.10
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_conscription
+				value = 0.02
+				tooltip = conscription_tt
+			}
+			custom_effect_tooltip = enter_tt
+			set_cosmetic_tag = KSP_center_school
+			KSP_spread_out_officers_modifier_down = yes
+		}
+	}
+	focus = {
+		id = KSP_nation_of_the_new_era
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
+		prerequisite = {
+			focus = KSP_new_student_council
+		}
+		prerequisite = {
+			focus = KSP_valkyrie_central_school
+		}
+		allow_branch = {
+
+		}
+
+		x = 0
+		y = 3
+		relative_position_id = KSP_sanctum_tower_recapture
+
+		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			add_to_variable = {
+				var = KSP_kspd_political_power_gain
+				value = 0.25
+				tooltip = political_power_gain_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_army_attack_factor
+				value = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_army_defence_factor
+				value = 0.05
+				tooltip = army_defence_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = KSP_ragnarok		# 소악마 사냥
+		icon = GFX_goal_TRN_radio_propaganda
+		cost = 10
+
+		available = {
+		}
+
+		relative_position_id = KSP_complete_recovery
+
+		prerequisite = {
+			focus = KSP_complete_recovery
+		}
+
+		prerequisite = {
+			focus = KSP_nation_of_the_new_era
+		}
+
+
+		ai_will_do = {
+			base = 10
+		}
+
+		x = 2
+		y = 2
+
+		completion_reward = {
+			custom_effect_tooltip = KSP_kspd_tt
+			add_to_variable = {
+				var = KSP_kspd_war_support_factor
+				value = 0.10
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_industrial_capacity_factory
+				value = 0.10
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				var = KSP_kspd_industrial_capacity_dockyard
+				value = 0.10
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			custom_effect_tooltip = enter_tt
+			if = {
+				limit = {
+					country_exists = COU
+				}
+				create_wargoal = {
+					target = COU
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SHE
+				}
+				create_wargoal = {
+					target = SHE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GEM
+				}
+				create_wargoal = {
+					target = GEM
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GEH
+				}
+				create_wargoal = {
+					target = GEH
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HEU
+				}
+				create_wargoal = {
+					target = HEU
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = BLM
+				}
+				create_wargoal = {
+					target = BLM
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SHA
+				}
+				create_wargoal = {
+					target = SHA
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HYA
+				}
+				create_wargoal = {
+					target = HYA
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ABY
+				}
+				create_wargoal = {
+					target = ABY
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = RED
+				}
+				create_wargoal = {
+					target = RED
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TRM
+				}
+				create_wargoal = {
+					target = TRM
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ARI
+				}
+				create_wargoal = {
+					target = ARI
+					type = annex_everything
+				}
 			}
 		}
 	}
@@ -1018,35 +1494,6 @@ focus_tree = {
 	# 		}
 	# 	}
 	# }
-	focus = {
-		id = KSP_politics_prepare_1
-		icon = none
-		cost = 5
-		prerequisite = {
-			focus = KSP_belgian_simin_help
-		}
-		prerequisite = {
-			focus = KSP_belgium_heart
-		}
-		allow_branch = {
-			OR = {
-				has_country_flag = KSP_inminjunsun_selected
-				has_country_flag = KSP_simindanche_selected
-			}
-		}
-
-		x = 0
-		y = 2
-		relative_position_id = KSP_belgian_simin_help
-
-		completion_reward = {
-			add_political_power = 50
-			add_timed_idea = {
-				idea = KSP_left_wing_politics_preparation
-				days = 180
-			}
-		}
-	}
 	focus = {
 		id = KSP_country_rebuild_danguk
 		icon = GFX_goal_generic_production2
@@ -2912,6 +3359,9 @@ focus_tree = {
 
 		available = {
 		}
+		bypass = {
+			NOT = { has_idea = KSP_weak_army }
+		}
 
 		prerequisite = {
 			focus = KSP_kanna_internal_organize
@@ -2987,7 +3437,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_ideas = KSP_spread_out_officers_modifier_3
+			add_timed_idea = {
+				idea = KSP_anti_eu_hegemony
+				days = 720
+			}
+			KSP_spread_out_officers_modifier_down = yes
 		}
 	}
 
@@ -4119,6 +4573,9 @@ focus_tree = {
 		available = {
 
 		}
+		bypass = {
+			NOT = { has_idea = KSP_weak_army }
+		}
 		prerequisite = {
 			focus = KSP_kirino_plan
 		}
@@ -4459,362 +4916,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = KSP_schale_correct_plan		# 샬레 교정 계획
-		icon = GFX_goal_fall_gelb
-		cost = 5
-
-		available = {
-		}
-
-		relative_position_id = KSP_massive_correct_plan
-
-		prerequisite = {
-			focus = KSP_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 0
-		y = 1
-
-		completion_reward = {
-			create_wargoal = {
-				target = SHE
-				type = annex_everything
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = SHE }
-		}
-	}
-
-	focus = {
-		id = KSP_heu_correct_plan		# 소악마 사냥
-		icon = GFX_goal_TRN_Problem_Solver_68
-		cost = 5
-
-		available = {
-		}
-
-		relative_position_id = KSP_massive_correct_plan
-
-		prerequisite = {
-			focus = KSP_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 2
-		y = 1
-
-		completion_reward = {
-			create_wargoal = {
-				target = HEU
-				type = annex_everything
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = HEU }
-		}
-	}
-
-	focus = {
-		id = KSP_srt_correct_plan		# SRT 교정 계획
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		cost = 5
-
-		available = {
-		}
-
-		relative_position_id = KSP_massive_correct_plan
-
-		prerequisite = {
-			focus = KSP_massive_correct_plan
-		}
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = -2
-		y = 1
-
-		completion_reward = {
-			create_wargoal = {
-				target = BLM
-				type = annex_everything
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = BLM }
-		}
-	}
-
-	focus = {
-		id = KSP_mil_correct_plan		# 밀레니엄 교정 계획
-		icon = GFX_goal_attack_flance
-		cost = 5
-
-		available = {
-		}
-
-		relative_position_id = KSP_massive_correct_plan
-
-		prerequisite = {
-			focus = KSP_srt_correct_plan
-		}
-
-		prerequisite = {
-			focus = KSP_schale_correct_plan
-		}
-
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = -1
-		y = 2
-
-		completion_reward = {
-			create_wargoal = {
-				target = MIL
-				type = annex_everything
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = MIL }
-		}
-	}
-
-	focus = {
-		id = KSP_geh_correct_plan		# 게헨나 교정 계획
-		icon = GFX_focus_attack_GEH
-		cost = 5
-
-		available = {
-		}
-
-		relative_position_id = KSP_massive_correct_plan
-
-		prerequisite = {
-			focus = KSP_schale_correct_plan
-		}
-
-		prerequisite = {
-			focus = KSP_heu_correct_plan
-		}
-
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 1
-		y = 2
-
-		completion_reward = {
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = GEH
-					}
-					1022 = {
-						is_owned_and_controlled_by = GEH				
-					}
-					51 = {
-						is_owned_and_controlled_by = GEH				
-					}
-				}
-				create_wargoal = {
-					target = GEH
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = GEM
-					}
-					1022 = {
-						is_owned_and_controlled_by = GEM				
-					}
-					51 = {
-						is_owned_and_controlled_by = GEM				
-					}
-				}
-				create_wargoal = {
-					target = GEM
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = HEU
-					}
-					1022 = {
-						is_owned_and_controlled_by = HEU				
-					}
-					51 = {
-						is_owned_and_controlled_by = HEU				
-					}
-				}
-				create_wargoal = {
-					target = HEU
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = GEA
-					}
-					1022 = {
-						is_owned_and_controlled_by = GEA				
-					}
-					51 = {
-						is_owned_and_controlled_by = GEA				
-					}
-				}
-				create_wargoal = {
-					target = GEA
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = GER
-					}
-					1022 = {
-						is_owned_and_controlled_by = GER				
-					}
-					51 = {
-						is_owned_and_controlled_by = GER				
-					}
-				}
-				create_wargoal = {
-					target = GER
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					1025 = {
-						is_owned_and_controlled_by = GEK
-					}
-					1022 = {
-						is_owned_and_controlled_by = GEK				
-					}
-					51 = {
-						is_owned_and_controlled_by = GEK				
-					}
-				}
-				create_wargoal = {
-					target = GEK
-					type = annex_everything
-				}
-			}
-		}
-		bypass = {
-			NOT = { country_exists = GEH }
-			NOT = { country_exists = GEM }
-		}
-	}
-
-	focus = {
-		id = KSP_ragnarok		# 소악마 사냥
-		icon = GFX_goal_TRN_radio_propaganda
-		cost = 20
-
-		available = {
-		}
-
-		relative_position_id = KSP_schale_correct_plan
-
-		prerequisite = {
-			focus = KSP_schale_correct_plan
-		}
-		prerequisite = {
-			focus = KSP_srt_correct_plan
-		}
-		prerequisite = {
-			focus = KSP_mil_correct_plan
-		}
-		prerequisite = {
-			focus = KSP_geh_correct_plan
-		}
-		prerequisite = {
-			focus = KSP_heu_correct_plan
-		}
-
-
-		ai_will_do = {
-			base = 10
-		}
-
-		x = 0
-		y = 2
-
-		completion_reward = {
-			if = {
-				limit = {
-					country_exists = SHA
-				}
-				create_wargoal = {
-					target = SHA
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = HYA
-				}
-				create_wargoal = {
-					target = HYA
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = ABY
-				}
-				create_wargoal = {
-					target = ABY
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = RED
-				}
-				create_wargoal = {
-					target = RED
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					country_exists = TRM
-				}
-				create_wargoal = {
-					target = TRM
-					type = annex_everything
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = KSP_justice
 		icon = GFX_KSP_focus_kanna
 		cost = 5
@@ -4824,10 +4925,16 @@ focus_tree = {
 		}
 	
 		allow_branch = {
-			has_completed_focus = KSP_police_nation
-			has_country_leader = {
-				ruling_only = yes
-				character = KSP_Ogata_Kanna
+			OR = { 
+				AND = {
+					NOT = { has_completed_focus = KSP_government_ganghwa }
+					has_completed_focus = KSP_police_nation
+					has_country_leader = {
+						ruling_only = yes
+						character = KSP_Ogata_Kanna
+					}
+				}
+				has_country_flag = KSP_justice_flag
 			}
 		}
 	
@@ -4841,6 +4948,15 @@ focus_tree = {
 	
 		completion_reward = {
 			remove_ideas = KSP_duties_of_the_police_academy
+			set_country_flag = KSP_justice_flag
+			if = {
+				limit = { has_idea = KSP_belgium_banbal }
+				remove_ideas = KSP_belgium_banbal
+			}
+			effect_tooltip = {
+				unlock_national_focus = KSP_government_ganghwa_NOT
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }

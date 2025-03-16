@@ -900,7 +900,7 @@ country_event = {
 #	총학생회 (이쪽은 캐릭터 새로 정의해야됨)
 #
 country_event = {
-	id = KSP_event.103 #교정국의 불만
+	id = KSP_event.103
 	title = KSP_event.103.t
 	desc = KSP_event.103.d
 	picture = none
@@ -922,7 +922,7 @@ country_event = {
 #	SRT
 #
 country_event = {
-	id = KSP_event.104 #교정국의 불만
+	id = KSP_event.104
 	title = KSP_event.104.t
 	desc = KSP_event.104.d
 	picture = none

@@ -2333,6 +2333,10 @@ SHE_student_council = {
 	color = HSV { 0 0 0.9 }
 	color_ui = rgb { 230 230 230 }
 }
+KSP_center_school = {
+	color = rgb { 133 112 182 }
+	color_ui = rgb { 150 110 180 }
+}
 KSP_belgium_imsi = {
 	color = rgb { 102 102 102 }
 	color_ui = rgb { 102 102 102 }
