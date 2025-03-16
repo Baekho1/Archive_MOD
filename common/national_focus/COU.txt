@@ -503,12 +503,18 @@ focus_tree = {
         icon = GFX_focus_COU_control_arona
         x = 0
         y = 5
-        cost = 5
-		available = { has_country_flag = LETSGO_CHONGHAKS }
-		prerequisite = { focus = COU_focus_in_the_darkness }
+        cost = 0
+		#available = { has_country_flag = LETSGO_CHONGHAKS }
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
+		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		     
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
         }
 	}
 	
@@ -518,12 +524,17 @@ focus_tree = {
         icon = GFX_focus_COU_king
         x = -2
         y = 1
-        cost = 5
-		available = {  }
+        cost = 0
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
 		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
-		     
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
         }
 	}
 	
@@ -533,12 +544,17 @@ focus_tree = {
         icon = GFX_focus_generic_printing_press
         x = 2
         y = 1
-        cost = 5
-		available = {  }
+        cost = 0
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
 		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
-		     
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
         }
 	}
 	
@@ -548,12 +564,17 @@ focus_tree = {
         icon = GFX_COU_balkiri_down
         x = 4
         y = 1
-        cost = 5
-		available = {  }
+        cost = 0
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
 		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
-		     
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
         }
 	}
 	
@@ -563,12 +584,17 @@ focus_tree = {
         icon = GFX_SRT_focus_memories
         x = -4
         y = 1
-        cost = 5
-		available = {  }
+        cost = 0
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
 		prerequisite = { focus = COU_focus_the_new_gscp }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
-		     
+		     custom_effect_tooltip = COU_tooltip_may_be_load_auto
         }
 	}
 	
@@ -577,8 +603,13 @@ focus_tree = {
         icon = GFX_focus_COU_cheers_for_the_our_future
         x = 0
         y = 2
-        cost = 10
-		available = { always = no }
+        cost = 0
+		available = { 
+		    custom_trigger_tooltip = {
+				tooltip = COU_tooltip_may_be_load_auto
+				always = no
+			}
+		}
 		prerequisite = { focus = COU_focus_get_masterkey_from_arona }
 		prerequisite = { focus = COU_focus_let_be_the_queen }
 		prerequisite = { focus = COU_focus_use_the_news }
@@ -5036,6 +5067,50 @@ focus_tree = {
 		}
 	}
 	
+	focus = { 
+		id = COU_focus_collaborate_with_belgium
+		icon = GFX_focus_collaborate_with_belgium
+		x = -3
+		y = 2
+		relative_position_id = COU_economy_focus_0
+		cost = 5
+		prerequisite = {
+			focus = COU_economy_focus_1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		    
+		}
+	}
+	
+	focus = { 
+		id = COU_focus_collaborate_with_netherland
+		icon = GFX_focus_collaboratte_with_netherland
+		x = -1
+		y = 2
+		relative_position_id = COU_economy_focus_0
+		cost = 5
+		prerequisite = {
+			focus = COU_economy_focus_1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		    
+		}
+	}
+	
 	focus = { #현지 기업 자금 조달
 		id = COU_focus_dutch_companies_money
 		icon = GFX_focus_RAJ_institutional_money_laundering
@@ -5133,13 +5208,10 @@ focus_tree = {
 	focus = { #재취업 교육 
 		id = COU_economy_focus_2
 		icon = GFX_focus_PER_national_museum
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = COU_economy_focus_1
 		cost = 5
-		prerequisite = {
-			focus = COU_economy_focus_1
-		}
 		prerequisite = {
 			focus = COU_focus_eco_twentyfourhoursshop
 		}

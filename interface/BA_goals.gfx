@@ -2180,6 +2180,14 @@ spriteTypes = {
 		name = "GFX_focus_COU_after_two_months"
 		textureFile = "gfx/interface/goals/COU/after_two_months.png"
 	}
+	spriteType = {
+		name = "GFX_focus_collaborate_with_belgium"
+		textureFile = "gfx/interface/goals/COU/collaborate_with_belgium.png"
+	}
+	spriteType = {
+		name = "GFX_focus_collaboratte_with_netherland"
+		textureFile = "gfx/interface/goals/COU/collaboratte_with_netherland.png"
+	}
 	
 	
 	####카이저라이히 돚거

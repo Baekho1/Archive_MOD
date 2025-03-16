@@ -5069,6 +5069,19 @@ news_event = { # 린 탄핵
 
     option = { # 범부
         name = BA_news.132.a
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_COU_KAYA_LETSGo"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 28
+					days = 15
+				}
+			}
+		}
 		trigger = { 
 		    OR = { 
 			   tag = COU 
@@ -5085,6 +5098,19 @@ news_event = { # 린 탄핵
 			      tag = COU 
 			      tag = SHE 
 			   }
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+						is_ai = no
+				}
+				scoped_play_song = "BA_COU_KAYA_LETSGo"
+				set_country_flag = {
+					flag = BA_Super_Event_Visible
+					value = 28
+					days = 15
+				}
 			}
 		}
     }
