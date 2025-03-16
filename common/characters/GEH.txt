@@ -268,11 +268,11 @@ characters={
 		name=GEH_hina
 		portraits={
 			civilian = {
-				large= GFX_GEH_Sorasaki_Hina_Portrait
+				large= "gfx/leaders/GEH/GEH_hina_sorasaki.dds"
 				small="gfx/interface/advisors/GEH/GEH_Sorasaki_Hina_idea.tga"
 			}
 			army={
-				large= "gfx/leaders/GEH/GEH_Sorasaki_Hina_Portrait.tga"
+				large= "gfx/leaders/GEH/GEH_hina_sorasaki.dds"
 			}
 		}
 		gender = female
@@ -335,9 +335,102 @@ characters={
 		}
 		country_leader={
 			ideology=despotism
+			desc = "GEH_hina_generic_leader_desc"
 			traits={ b_tjsehqnwkd_start GEH_military_chairman }
 			expire="1965.1.1"
 		}
+	}
+
+	GEH_swimsuit_hina = {
+		name=GEH_hina
+
+		portraits={
+			civilian = {
+				large= "gfx/leaders/GEH/GEH_hina_sorasaki_swimsuit_scientist.dds"
+				small="gfx/interface/advisors/GEH/hina_sorasaki_swimsuit.dds"
+			}
+			navy={
+				large= "gfx/leaders/GEH/GEH_hina_sorasaki_swimsuit.dds"
+			}
+		}
+		
+		advisor={
+			slot = navy_chief
+			idea_token = GEH_swimsuit_hina
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
+			}
+			traits = { navy_chief_commerce_raiding_1 }
+			cost = 50
+			ai_will_do = { factor = 10.000 }
+			visible = {
+				has_country_leader = {
+					character = GEH_hina
+					ruling_only = yes
+				}
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = GEH_swimsuit_hina
+
+			ledger = navy
+			allowed = {
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
+			}
+			traits = {
+				navy_submarine_1
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 0.200
+			}
+			visible = {
+				has_country_leader = {
+					character = GEH_hina
+					ruling_only = yes
+				}
+			}
+		}
+
+		navy_leader={
+			traits={ bold seawolf }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_leader = {
+					character = GEH_hina
+					ruling_only = yes
+				}
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_submarine_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				has_country_leader = {
+					character = GEH_hina
+					ruling_only = yes
+				}
+			}
+		}
+
 	}
 
 	GEH_dldhfl={ # 이오리

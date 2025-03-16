@@ -207,6 +207,7 @@ recruit_character = GEH_chinatsu
 recruit_character = GEH_theorist_idea
 recruit_character = GEH_prefect_team_maritime_police
 recruit_character = GEH_prefect_team_honor_guard
+recruit_character = GEH_swimsuit_hina
 
 set_convoys = 140
 
