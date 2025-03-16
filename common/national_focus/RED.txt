@@ -2009,14 +2009,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		allow_branch = {
-			NOT = {
-				has_completed_focus = RED_industrial_planning
-			}
-			NOT = {
-				has_completed_focus = RED_new_economy_focus_0
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = RED_first_aep_tt
 			swap_ideas = {
@@ -3953,7 +3945,7 @@ focus_tree = {
 		id = RED_new_inteligence_agency
 		icon = GFX_focus_generic_secret_service_agency
 		cost = 2
-		x = 4
+		x = 6
 		y = 1
 		relative_position_id = RED_the_fourth_international
 		prerequisite = {
@@ -3990,7 +3982,7 @@ focus_tree = {
 		id = RED_professioner_undercover
 		icon = GFX_focus_SWI_embrace_rote_drei
 		cost = 2
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = RED_new_inteligence_agency
 		prerequisite = {
@@ -4046,162 +4038,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#스페인 내 반스탈린 대오
-		id = RED_anti_stalin_in_spain
-		icon = GFX_focus_spr_no_pasaran
-		cost = 2
-		x = 0
-		y = 3
-		prerequisite = {
-			focus = RED_communist_instigation
-		}
-		ai_will_do = {
-			base = 330
-		}
-		relative_position_id = RED_new_inteligence_agency
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-			SOV_soviet_civil_war_not_started = yes
-			NOT = { has_global_flag = scw_over } #Allowed Soviets to do this before SCW starts, so that they can make Spanish AI go POUM
-			OR = {
-				NOT = { has_global_flag = SPR_anarchist_uprising_flag }
-				AND = {
-					country_exists = SPC
-					NOT = { has_war_with = SPC }
-					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-				}
-			}
-		}
-		bypass = {
-			SPR = { #Tooltip purposes
-				OR = {
-					has_global_flag = scw_over
-					AND = {
-						has_global_flag = SPR_anarchist_uprising_flag
-						OR = {
-							NOT = { SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution } }
-							NOT = { country_exists = SPC }
-						}
-					}
-				}
-			}
-		}
-		completion_reward = {
-			set_global_flag = SOV_covert_support_for_poum_flag
-			custom_effect_tooltip = SOV_covert_support_for_spanish_poum_tt
-			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = SPC
-				value = 9999
-			}
-		}
-	}
-	focus = {
-		#친위대 해체
-		id = RED_red_army_focus
-		icon = GFX_focus_YUG_pan_slavic_congress
-		prerequisite = {
-			focus = RED_communist_instigation
-		}
-		prerequisite = {
-			focus = RED_the_builder_of_the_winter_army
-		}
-		mutually_exclusive = {
-			focus = RED_international_frontline
-		}
-		x = -1
-		y = 4
-		relative_position_id = RED_new_inteligence_agency
-		cost = 4
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		completion_reward = {
-			RED_marina = {
-				remove_trait = {
-					trait = office_commander
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = prince_of_terror
-					slot = political_advisor
-				}
-			}
-			remove_ideas = RED_office_ss_idea
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			add_timed_idea = {
-				idea = SOV_revolutionary_spirit_idea
-				days = 365
-			}
-			if = {
-				limit = {
-					has_power_balance = {
-						id = RED_power_balance
-					}
-				}
-				custom_effect_tooltip = tro_support_tt
-				add_power_balance_value = {
-					id = RED_power_balance
-					value = 0.05
-				}
-			}
-		}
-	}
-	focus = {
-		#혁명수비대
-		id = RED_international_frontline
-		icon = GFX_focus_SOV_organization_centralization_discipline
-		prerequisite = {
-			focus = RED_communist_instigation
-		}
-		x = 1
-		y = 4
-		relative_position_id = RED_new_inteligence_agency
-		cost = 4
-		available = {
-			NOT = {
-				has_country_flag = RED_there_is_coup_flag
-			}
-		}
-		mutually_exclusive = {
-			focus = RED_red_army_focus
-		}
-		completion_reward = {
-			RED_marina = {
-				remove_trait = {
-					trait = office_commander
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = office_commander_1
-					slot = political_advisor
-				}
-			}
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = RED_office_ss_idea
-				add_idea = RED_revolution_defender
-			}
-			if = {
-				limit = {
-					has_power_balance = {
-						id = RED_power_balance
-					}
-				}
-				custom_effect_tooltip = cherino_support_tt
-				add_power_balance_value = {
-					id = RED_power_balance
-					value = -0.05
-				}
-			}
-		}
-	}
-	focus = {
 		#쁘락치
 		id = RED_fraktiya
 		icon = GFX_focus_NOR_continue_nygaardsvold_government
@@ -4216,7 +4052,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = RED_new_inteligence_agency
-		x = -1
+		x = 1
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = RED_intel_compliance_effects_tt
@@ -4314,18 +4150,6 @@ focus_tree = {
 				}
 				RE3 = {
 					RED_instability_system_down_effect = yes
-				}
-			}
-			RED = {
-				custom_effect_tooltip = RED_kivotos_halo_militia_add3_tt
-				hidden_effect = {
-					add_to_variable = {
-						RED.halo_militia_cap = 3
-					}
-					set_division_template_cap = {
-						division_template = "Redwinter Garde populaire"
-						division_cap = ROOT.halo_militia_cap
-					}
 				}
 			}
 			add_political_power = 30
@@ -5494,20 +5318,50 @@ focus_tree = {
 					retire = yes
 				}
 			}
-			IF = {
-				limit = {
-					has_character = RED_meru
+		}
+	}
+	focus = {
+		#혁명수비대
+		id = RED_international_frontline
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		prerequisite = {
+			focus = RED_end_of_counter_revolution
+		}
+		x = -1
+		y = 1
+		relative_position_id = RED_end_of_counter_revolution
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			RED_marina = {
+				remove_trait = {
+					trait = office_commander
+					slot = political_advisor
 				}
-				RED_meru = {
-					retire = yes
+				add_trait = {
+					trait = office_commander_1
+					slot = political_advisor
 				}
 			}
-			IF = {
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = RED_office_ss_idea
+				add_idea = RED_revolution_defender
+			}
+			if = {
 				limit = {
-					has_character = RED_marina
+					has_power_balance = {
+						id = RED_power_balance
+					}
 				}
-				RED_marina = {
-					retire = yes
+				custom_effect_tooltip = cherino_support_tt
+				add_power_balance_value = {
+					id = RED_power_balance
+					value = -0.05
 				}
 			}
 		}
@@ -6347,7 +6201,7 @@ focus_tree = {
 	focus = {
 		#노동조합 강화
 		id = RED_strengthen_the_trade_unions
-		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = {
 			focus = RED_system_decentralization
 		}
@@ -6390,7 +6244,7 @@ focus_tree = {
 	focus = {
 		#지역당 강화
 		id = RED_strengthen_regional_party
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		prerequisite = {
 			focus = RED_system_decentralization
 		}
@@ -6428,15 +6282,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#겨울 군대의 기상
+		#노농적군의 유산
 		id = RED_the_builder_of_the_winter_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 4
 		relative_position_id = RED_invite_trotskists
-		x = 1
-		y = 3
+		x = 0
+		y = 2
 		prerequisite = {
-			focus = RED_invite_trotskists
+			focus = RED_socialism_over_the_world
 		}
 		ai_will_do = {
 			base = 15
@@ -6445,16 +6299,13 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
+			OR = {
+				has_completed_focus = RED_restore_cossack_units
+				has_completed_focus = RED_cohesion_first
+			}
 		}
 		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				name = RED_the_builder_of_the_red_army
-				ahead_reduction = 1
-				uses = 2
-				category = artillery
-				category = infantry_weapons
-			}
+			remove_ideas = RED_office_ss_idea
 			add_field_marshal_role = {
 				character = RED_lev_trotsky
 				traits = {
@@ -6468,6 +6319,904 @@ focus_tree = {
 				planning_skill = 2
 				logistics_skill = 4
 			}
+			custom_effect_tooltip = RED_the_builder_of_the_winter_army_tt
+			hidden_effect = {
+				random_list = {
+					1 = {
+						complete_national_focus = RED_artillery
+						modifier = {
+							factor = 0
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_rearming_focus_13
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rearming_focus_13
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_artillery
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_superior_war_machines
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_superior_war_machines
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_entice_publicworks
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quality
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity_to_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity_to_quality
+						} 
+						modifier = {
+							factor = 0
+							AND = {
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								if = {
+									limit = {
+										has_dlc = "No Step Back"
+									}
+									has_tech = improved_medium_tank_chassis
+								}
+								else = {
+									has_tech = improved_medium_tank
+								}
+								has_tech = artillery3
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_1
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_1
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_restore_cossack_units
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_2
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_2
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_1
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_5
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_5
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_2
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_the_means_to_wage_war
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_the_means_to_wage_war
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_tank_destroyer
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_tank_destroyer
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_the_means_to_wage_war
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_rehabilitated_military
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rehabilitated_military
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_production_improve
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_production_improve
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_future_production_line
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_military_engineering
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_military_engineering
+						} 
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_baltic_forts
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_baltic_forts
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_defend_the_east_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_defend_the_east_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_improve_the_south_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_improve_the_south_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_3
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_3
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_cohesion_first
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_6
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_6
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_4
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_4
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_7
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_7
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_4
+							}
+						}
+					}
+				}
+				random_list = {
+					1 = {
+						complete_national_focus = RED_artillery
+						modifier = {
+							factor = 0
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_rearming_focus_13
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rearming_focus_13
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_artillery
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_superior_war_machines
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_superior_war_machines
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_entice_publicworks
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quality
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity_to_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity_to_quality
+						} 
+						modifier = {
+							factor = 0
+							AND = {
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								if = {
+									limit = {
+										has_dlc = "No Step Back"
+									}
+									has_tech = improved_medium_tank_chassis
+								}
+								else = {
+									has_tech = improved_medium_tank
+								}
+								has_tech = artillery3
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_1
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_1
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_restore_cossack_units
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_2
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_2
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_1
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_5
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_5
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_2
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_the_means_to_wage_war
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_the_means_to_wage_war
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_tank_destroyer
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_tank_destroyer
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_the_means_to_wage_war
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_rehabilitated_military
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rehabilitated_military
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_production_improve
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_production_improve
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_future_production_line
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_military_engineering
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_military_engineering
+						} 
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_baltic_forts
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_baltic_forts
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_defend_the_east_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_defend_the_east_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_improve_the_south_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_improve_the_south_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_3
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_3
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_cohesion_first
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_6
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_6
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_4
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_4
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_7
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_7
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_4
+							}
+						}
+					}
+				}
+				random_list = {
+					1 = {
+						complete_national_focus = RED_artillery
+						modifier = {
+							factor = 0
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_rearming_focus_13
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rearming_focus_13
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_artillery
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_superior_war_machines
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_superior_war_machines
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_entice_publicworks
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quality
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_superior_war_machines
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_tech = basic_medium_tank_chassis
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_quantity_to_quality
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_quantity_to_quality
+						} 
+						modifier = {
+							factor = 0
+							AND = {
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+								NOT = {
+									has_completed_focus = RED_quality
+								}
+							}
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								if = {
+									limit = {
+										has_dlc = "No Step Back"
+									}
+									has_tech = improved_medium_tank_chassis
+								}
+								else = {
+									has_tech = improved_medium_tank
+								}
+								has_tech = artillery3
+							}
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_1
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_1
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_restore_cossack_units
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_2
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_2
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_1
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_5
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_5
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_2
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_the_means_to_wage_war
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_the_means_to_wage_war
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_tank_destroyer
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_tank_destroyer
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_the_means_to_wage_war
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_rehabilitated_military
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_rehabilitated_military
+						} 
+					}
+					1 = {
+						complete_national_focus = RED_army_production_improve
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_production_improve
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_future_production_line
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_military_engineering
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_military_engineering
+						} 
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_baltic_forts
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_baltic_forts
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_defend_the_east_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_defend_the_east_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_improve_the_south_line
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_improve_the_south_line
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_military_engineering
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_3
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_3
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_cohesion_first
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_6
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_6
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+						modifier = {
+							factor = 0
+							has_war = no
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_4
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_4
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_3
+							}
+						}
+					}
+					1 = {
+						complete_national_focus = RED_army_focus_7
+						modifier = {
+							factor = 0
+							has_completed_focus = RED_army_focus_7
+						} 
+						modifier = {
+							factor = 0
+							NOT = {
+								has_completed_focus = RED_army_focus_4
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		#집산주의 경제
+		id = RED_collectivist_economy
+		icon = GFX_focus_AFG_helmand_river_authority
+		prerequisite = {
+			focus = RED_invite_trotskists
+		}
+		x = 1
+		y = 1
+		relative_position_id = RED_invite_trotskists
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				var = RED_the_politburo_production_speed_buildings_factor
+				value = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
 		}
 	}
 	focus = {
@@ -6475,9 +7224,12 @@ focus_tree = {
 		id = RED_strengthen_heavy_industry
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = {
+			focus = RED_collectivist_economy
+		}
+		prerequisite = {
 			focus = RED_socialism_over_the_world
 		}
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = RED_socialism_over_the_world
 		cost = 4
@@ -6507,8 +7259,49 @@ focus_tree = {
 			custom_effect_tooltip = RED_redwinter_office_tt
 			add_to_variable = {
 				var = RED_the_politburo_production_speed_buildings_factor
-				value = 0.05
+				value = 0.03
 				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+	focus = {
+		#농업 집단화
+		id = RED_agricultural_collectivization
+		icon = GFX_focus_HUN_goulash_communism
+		prerequisite = {
+			focus = RED_collectivist_economy
+		}
+		prerequisite = {
+			focus = RED_socialism_over_the_world
+		}
+		x = 2
+		y = 2
+		relative_position_id = RED_socialism_over_the_world
+		cost = 4
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					has_state_category = rural
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					has_state_category = rural
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = RED_redwinter_office_tt
+			add_to_variable = {
+				var = RED_the_politburo_consumer_goods_factor
+				value = -0.03
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 	}
@@ -8033,7 +8826,60 @@ focus_tree = {
 			}
 		}
 	}
-
+	focus = {
+		#스페인 내 반스탈린 대오
+		id = RED_anti_stalin_in_spain
+		icon = GFX_focus_spr_no_pasaran
+		cost = 2
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = RED_professioner_undercover
+		}
+		ai_will_do = {
+			base = 330
+		}
+		relative_position_id = RED_professioner_undercover
+		available = {
+			NOT = {
+				has_country_flag = RED_there_is_coup_flag
+			}
+			threat > 0.15
+			NOT = { has_global_flag = scw_over } #Allowed Soviets to do this before SCW starts, so that they can make Spanish AI go POUM
+			OR = {
+				NOT = { has_global_flag = SPR_anarchist_uprising_flag }
+				AND = {
+					country_exists = SPC
+					NOT = { has_war_with = SPC }
+					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
+				}
+			}
+		}
+		bypass = {
+			SPR = { #Tooltip purposes
+				OR = {
+					has_global_flag = scw_over
+					AND = {
+						has_global_flag = SPR_anarchist_uprising_flag
+						OR = {
+							NOT = { SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution } }
+							NOT = { country_exists = SPC }
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			set_global_flag = SOV_covert_support_for_poum_flag
+			custom_effect_tooltip = SOV_covert_support_for_spanish_poum_tt
+			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = SPC
+				value = 9999
+			}
+		}
+	}
 
 	focus = {
 		#대외 정책
@@ -8043,7 +8889,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RED_the_fourth_international
 		}
-		x = 10
+		x = 11
 		y = 1
 		relative_position_id = RED_the_fourth_international
 		available = {
@@ -13112,7 +13958,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = RED_restore_cossack_units
-		cost = 4
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -13149,7 +13995,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RED_superior_war_machines
-		cost = 4
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -13176,7 +14022,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = RED_superior_war_machines
-		cost = 4
+		cost = 6
 		mutually_exclusive = {
 			focus = RED_quantity
 		}
@@ -13204,7 +14050,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_superior_war_machines
-		cost = 4
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -13301,7 +14147,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = RED_restore_cossack_units
-		cost = 4
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -13332,7 +14178,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = RED_rehabilitated_military
-		cost = 4
+		cost = 6
 		available = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
@@ -14201,7 +15047,7 @@ focus_tree = {
 	focus = {
 		#현지 설계사
 		id = RED_invest_only_one_mio
-		icon = GFX_focus_NORDIC_com_airforce
+		icon = GFX_focus_PER_the_peoples_airforce
 		cost = 4
 		x = -1
 		y = 1
