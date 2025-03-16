@@ -5420,14 +5420,14 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { NOT = { check_variable = { TRM_internal_factions_slot_one_var = -1 } } }
+				limit = { NOT = { check_variable = { TRM_internal_factions_slot_two_var = -1 } } }
 				set_variable = { TRM_internal_factions_loyalty_target = TRM_internal_factions_slot_two_var }
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
 			}
 
 			if = {
-				limit = { NOT = { check_variable = { TRM_internal_factions_slot_one_var = -1 } } }
+				limit = { NOT = { check_variable = { TRM_internal_factions_slot_three_var = -1 } } }
 				set_variable = { TRM_internal_factions_loyalty_target = TRM_internal_factions_slot_three_var }
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
@@ -6099,14 +6099,14 @@ focus_tree = {
 			}
 
 			if = {
-				limit = { NOT = { check_variable = { TRM_internal_factions_slot_one_var = -1 } } }
+				limit = { NOT = { check_variable = { TRM_internal_factions_slot_two_var = -1 } } }
 				set_variable = { TRM_internal_factions_loyalty_target = TRM_internal_factions_slot_two_var }
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
 			}
 
 			if = {
-				limit = { NOT = { check_variable = { TRM_internal_factions_slot_one_var = -1 } } }
+				limit = { NOT = { check_variable = { TRM_internal_factions_slot_three_var = -1 } } }
 				set_variable = { TRM_internal_factions_loyalty_target = TRM_internal_factions_slot_three_var }
 				set_variable = { TRM_internal_factions_loyalty_var = 5 }
 				TRM_internal_factions_loyalty_add = yes
