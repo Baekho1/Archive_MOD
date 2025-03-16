@@ -31,8 +31,8 @@ focus_tree = {
 	focus = { #시작 중점 완료 불가
 		id = COU_establishment_of_emergency_measures_committee_NOT
 		icon = GFX_goal_generic_improve_relations
-		x = 1
-		y = 0
+		x = 65
+		y = 1
 		cost = 5
 		allow_branch = {
 			NOT = { has_country_flag = MISSINGGSCP }
@@ -480,6 +480,7 @@ focus_tree = {
 			custom_effect_tooltip = COU_tooltip_kaya_started
 			country_event = { id = COU_event.7 hours = 4 }
 		}
+		text_icon = NORDIC_focus_style
 	}
 	
 	##총학생회장
@@ -4839,14 +4840,74 @@ focus_tree = {
 #  ;  :    ;|   |/      |   :    :|:  ,      .-./'--'.     / |  ,   /  ---'    \  \  ;         |   :  \    `----'  |   :    ::  ,      .-./'--'.     /  
 #  |  ,   / '---'        \   \  /   `--`----'      `--'---'   ---`-'            :  \  \        |   | ,'             \   \  /  `--`----'      `--'---'   
 #   ---`-'                `----'                                                 \  ' ;        `----'                `----'                             
-#                                                                                 `--`                                                                  
+#               
+    
+   ##경제 포커스 
+   focus = { #대전이 이후 2달  
+		id = COU_focus_after_two_months
+		icon = GFX_focus_COU_after_two_months
+		x = 7
+		y = 0
+		cost = 1.5
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		   
+		}
+		text_icon = NORDIC_focus_style
+	}         
+
+    focus = { #만남 
+		id = COU_focus_meet_with_the_economists
+		icon =  GFX_focus_COU_meet_the_dutchs
+		x = -1
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = COU_focus_after_two_months }
+		relative_position_id = COU_focus_after_two_months
+		completion_reward = {
+		   
+		}
+	}   	
+	
+	 focus = { #피해 현황 분석  
+		id = COU_focus_look_the_our_economy_fucked
+		icon =  GFX_focus_COU_rework_the_dutch_economy
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = COU_focus_after_two_months }
+		relative_position_id = COU_focus_after_two_months
+		completion_reward = {
+		   
+		}
+	}   	
 
 	#경세제민 [經世濟民] : 세상을 다스리고 백성을 구제함.
 	focus = { #자위더르해 사업 재개 
 		id = COU_economy_focus_0
 		icon = GFX_focus_COU_focus_continue_the_bettter_lands
-		x = 7
-		y = 0
+		x = 8
+		y = 2
 		cost = 5
 		available = {
 			owns_state = 7
@@ -4857,6 +4918,8 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		prerequisite = { focus = COU_focus_meet_with_the_economists }
+		prerequisite = { focus = COU_focus_look_the_our_economy_fucked }
 		completion_reward = {
 		    add_stability = 0.05
 			add_tech_bonus = {
@@ -4889,8 +4952,8 @@ focus_tree = {
 	focus = { #침수 재건 
 		id = COU_focus_eco_rework_the_dead_lands
 		icon = GFX_focus_hol_the_zuiderzee_works
-		x = 9
-		y = 0
+		x = 10
+		y = 2
 		cost = 5
 		available = {
 		   owns_state = 36 
@@ -4900,6 +4963,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		prerequisite = { focus = COU_focus_look_the_our_economy_fucked }
 		completion_reward = {
 		    36 = { remove_dynamic_modifier = { modifier = COU_the_dead_land } }
 			7 = { remove_dynamic_modifier = { modifier = COU_the_dead_land } }
@@ -4920,6 +4984,7 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		prerequisite = { focus = COU_focus_meet_with_the_economists }
 		completion_reward = {
 			#custom_effect_tooltip = COU_establishment_of_federal_industrial_committee_tt
 			#add_to_variable = { COU_emergency_measures_committee_consumer_goods_factor = -0.10 }
@@ -4933,7 +4998,7 @@ focus_tree = {
 	focus = {
 		id = COU_focus_eco_twentyfourhoursshop
 		icon = GFX_focus_24hours
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = COU_economy_focus_0
 		cost = 5
@@ -5068,12 +5133,15 @@ focus_tree = {
 	focus = { #재취업 교육 
 		id = COU_economy_focus_2
 		icon = GFX_focus_PER_national_museum
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = COU_economy_focus_1
 		cost = 5
 		prerequisite = {
 			focus = COU_economy_focus_1
+		}
+		prerequisite = {
+			focus = COU_focus_eco_twentyfourhoursshop
 		}
 		available = {
 		}
@@ -5083,6 +5151,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
+		    add_political_power = 25
 		    remove_ideas = COU_notwork_crisis
 		}
 	}
@@ -5108,11 +5177,11 @@ focus_tree = {
 		id = COU_establishment_of_human_rights_committee
 		icon = GFX_focus_COU_establish_humans
 		x = 8
-		y = 0
-		relative_position_id = COU_economy_focus_0
+		y = -2
 		cost = 5
 		available = {
 		}
+		relative_position_id = COU_economy_focus_0
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -5123,6 +5192,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 	        show_ideas_tooltip = COU_jan_baars
 		}
+		text_icon = NORDIC_focus_style
 		ai_will_do = {
 			base = 100
 		}
@@ -5132,7 +5202,7 @@ focus_tree = {
 		id = COU_focus_eco_deal_with_hailender
 		icon = GFX_focus_hai_shupo
 		x = 13
-		y = 1
+		y = -1
 		relative_position_id = COU_economy_focus_0
 		cost = 5
 		available = {
@@ -5151,7 +5221,7 @@ focus_tree = {
 		id = COU_focus_lock_the_kronous
 		icon = GFX_focus_lock_the_news
 		x = 7
-		y = 1
+		y = -1
 		relative_position_id = COU_economy_focus_0
 		cost = 10
 		available = {
@@ -5175,7 +5245,7 @@ focus_tree = {
 		id = COU_focus_add_state_core_nord_fadcale
 		icon = GFX_focus_chi_reach_out_to_france
 		x = 9
-		y = 1
+		y = -1
 		relative_position_id = COU_economy_focus_0
 		cost = 10
 		available = {
@@ -5237,7 +5307,7 @@ focus_tree = {
 			}
 		}
 		x = 18
-		y = 0
+		y = -2
 		relative_position_id = COU_economy_focus_0
 		cost = 5
 		available = {
@@ -5247,6 +5317,7 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		text_icon = NORDIC_focus_style
 		completion_reward = {
 			country_event = COU_event.11
 			if = {
@@ -5258,8 +5329,8 @@ focus_tree = {
 	
 	focus = { #패잔병 규합 
 		id = COU_focus_add_defeaters
-		icon = GFX_focus_COU_the_united_ntehralnds
-		x = 0
+		icon = GFX_focus_RAJ_a_private_military
+		x = -2
 		y = 1
 		relative_position_id = COU_reduction_of_administrative_committee_authority
 		cost = 10

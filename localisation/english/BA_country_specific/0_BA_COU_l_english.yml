@@ -369,6 +369,12 @@
  COU_world_trade: "세계 무역"
 
 #경제
+ COU_focus_after_two_months:0 "대전이 이후 2달"
+ COU_focus_after_two_months_desc:0 "대전이 이후 2달, 저지대의 경제와 산업 기반은 총학생회의 어정쩡한 대처로 완전히 버려진 신세였습니다. 일컬어 "꺾인 튤립" 이라고 일컬어지는 이 현상은 총학생회의 미래에 어두운 먹구름처럼 끼고 있습니다. 이제는 이를 마주할 시간입니다."
+ COU_focus_look_the_our_economy_fucked:0 "회생 실패 분석"
+ COU_focus_look_the_our_economy_fucked_desc:0 "행정위원회는 네덜란드의 경제가 엄청나게 무역과 수출에 의존하고 있었다는 사실을 몰랐습니다. 과연 그것만 몰랐을까요? 우리가 실패한 이유에는 당연히 마땅한 이유가 있습니다."
+ COU_focus_meet_with_the_economists:0 "갈로핀 위원회와 접촉"
+ COU_focus_meet_with_the_economists_desc:0 "갈로핀 위원회란 네덜란드와 벨기에 정부가 대전이 당시 패퇴하여 망명을 떠나기 직전 세워진 비공식 위원회로서 대전이 전후 각각의 산업을 보전하고자 기업인들과 경제학자들이 모인 위원회입니다. 이들과의 원만한 관계를 유지해야 합니다."
  COU_establishment_of_federal_industrial_committee: "현지 기업들과의 접촉"
  COU_establishment_of_federal_industrial_committee_desc: "현지의 기업들은 대전이 이후 본국들에게 버려진 신세이지만 우리가 그들을 거두어 우리를 위해 일하게 할 수도 있습니다. 마땅히 그래야만 하고요."
  COU_tooltip_unlock_dutch_belgium_cons:0 "§Y잠겨진 설계사§!들이 모두 §G사용 가능§!해질 것입니다."

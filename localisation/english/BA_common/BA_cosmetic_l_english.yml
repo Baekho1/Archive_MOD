@@ -148,6 +148,10 @@
  COU_go_to_left_left_world_2: "세계 공산주의 인터내셔널"  #모모카 좌파 - 유럽 통일 - WC
  COU_go_to_left_left_world_2_DEF: "세계 공산주의 인터내셔널"
  COU_go_to_left_left_world_2_ADJ: "세계 공산주의 인터내셔널"
+ 
+ COU_KAYA_DICTATORSHIP: "키보토스 총학생회"
+ COU_BEL_WALLONIE_NATIONAL_STATE: "왈로니 국민연합"
+ COU_BEL_WALLONIE_NATIONAL_STATE_DEF: "왈로니 국민연합"
 
 #SRT 특수임무부대
  COU_SRT_cosmetic: "신키보토스 총학생회"

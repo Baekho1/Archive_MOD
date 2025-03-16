@@ -2160,6 +2160,22 @@ spriteTypes = {
 		name = "GFX_focus_COU_the_emergency_law"
 		textureFile = "gfx/interface/goals/COU/COU_the_emergency_law.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_rework_the_dutch_economy"
+		textureFile = "gfx/interface/goals/COU/rework_the_dutch_economy.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_after_two_months"
+		textureFile = "gfx/interface/goals/COU/after_two_months.png"
+	}
 	
 	
 	####카이저라이히 돚거

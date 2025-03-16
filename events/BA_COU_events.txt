@@ -1946,6 +1946,15 @@ country_event = {
 		}
 	}
 	
+	option = { 
+		name = COU_event.100000.c
+		COU = { set_cosmetic_tag = COU_KAYA_DICTATORSHIP }
+		KSP = { set_cosmetic_tag = COU_BEL_WALLONIE_NATIONAL_STATE }
+		trigger = {
+		   NOT = { is_ai = yes }
+		}
+	}
+	
 }
 
 
