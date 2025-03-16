@@ -972,6 +972,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 4000
 		}
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_completed_focus = TRN_nagisa_gyehek
+					has_country_flag = TRN_Seia_Sandevistan
+				}
+			}
+		}
 		relative_position_id = TRM_Library_Committee
 		x = 0
 		y = 2
