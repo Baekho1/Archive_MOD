@@ -1300,8 +1300,8 @@ ideas = {
 			picture = SPR_anti_fascist_crusade
 			modifier = {
 				stability_weekly = -0.001
-				weekly_manpower = -750
-				fascism_drift = -0.06
+				weekly_manpower = -75
+				fascism_drift = -0.03
 				resistance_target = 0.25
 			}
 		}

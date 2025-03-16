@@ -6723,7 +6723,7 @@ focus_tree = {
 	focus = {
 		id = TRN_control_tea_party
 		icon = GFX_focus_TRN_control_tea_party
-		x = 5
+		x = 6
 		y = 0
 		cost = 5
 		available = {
@@ -6905,7 +6905,8 @@ focus_tree = {
 				BA_ban_communism_effect = yes
 				BA_ban_neutrality_effect = yes
 				
-				country_event = { id = trinity.22 days = 25 } # 충성조항
+				country_event = { id = trinity.22 days = 15 } # 충성조항
+				country_event = { id = trinity.23 days = 150 } # 내부 및 외부 국경 통제 법령
 			}
 		}
 	}
@@ -6929,6 +6930,9 @@ focus_tree = {
 			# 카이저라이히의 슐라이허 독일의 전당 대회를 참고할 것
 			# 여성에 관한 논쟁?
 			# 종교에 관한것도 넣던가 하면 재밌을듯
+			country_event = { id = trinity.24 }
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 	
@@ -6936,7 +6940,7 @@ focus_tree = {
 		id = TRN_cult_of_Mika
 		icon = GFX_focus_TRN_cult_of_Mika
 		prerequisite = { focus = TRN_The_nature_of_the_united_front }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = TRN_The_nature_of_the_united_front
 		cost = 5
@@ -6961,7 +6965,7 @@ focus_tree = {
 		id = TRN_new_trinity_culture
 		icon = GFX_focus_SWI_establish_pro_helvetia
 		prerequisite = { focus = TRN_The_nature_of_the_united_front }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = TRN_The_nature_of_the_united_front
 		cost = 5
@@ -6983,6 +6987,58 @@ focus_tree = {
 
 		}
 	}
+	
+	focus = { # 독일인 사상가들
+		id = TRN_hiring_german_thinkers
+		text = TRM_invite_dignitary
+		icon = GFX_focus_TRN_germany_thinker
+		prerequisite = { focus = TRN_new_trinity_culture }
+		prerequisite = { focus = TRN_cult_of_Mika }
+		x = -1
+		y = 1
+		relative_position_id = TRN_cult_of_Mika
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+		ai_will_do = {
+
+		}
+		mutually_exclusive = {
+			focus = TRN_alliance_of_faith
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = { # 신앙과 동맹
+		id = TRN_alliance_of_faith
+		icon = GFX_focus_TRN_alliance_of_faith
+		prerequisite = { focus = TRN_new_trinity_culture }
+		prerequisite = { focus = TRN_cult_of_Mika }
+		x = 1
+		y = 1
+		relative_position_id = TRN_cult_of_Mika
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+		ai_will_do = {
+
+		}
+		mutually_exclusive = {
+			focus = TRN_hiring_german_thinkers
+		}
+
+		completion_reward = {
+
+		}
+	}
+
 }
 
 	shared_focus = {

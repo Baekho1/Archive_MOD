@@ -8366,7 +8366,7 @@ country_event = { # 바시스 스콜라 시위
 	option = {
 		name = trinity.2.a
 		ai_chance = {
-			base = 10
+			base = 100
 		}
 		add_popularity = {
 			ideology = fascism
@@ -8375,6 +8375,9 @@ country_event = { # 바시스 스콜라 시위
     }
 	option = {
 		name = trinity.2.b
+		ai_chance = {
+			base = 0
+		}
 		add_stability = -0.05
        
     }
@@ -8727,6 +8730,9 @@ country_event = { # 필리우스 분파의 운명
 
 	option = {
 		name = trinity.17.a
+		ai_chance = {
+			base = 0
+		}
 		add_popularity = { ideology = neutrality popularity = -0.06 }
 		custom_effect_tooltip = TRM_filius_del_tt
 		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
@@ -8735,6 +8741,9 @@ country_event = { # 필리우스 분파의 운명
 
 	option = {
 		name = trinity.17.b
+		ai_chance = {
+			base = 100
+		}
 		add_popularity = { ideology = neutrality popularity = -0.02 }
 		add_stability = 0.02
 		custom_effect_tooltip = TRM_filius_del_tt
@@ -8825,16 +8834,84 @@ country_event = { # 충성조항
 
 	option = {
 		name = trinity.22.a
+		ai_chance = {
+			base = 100
+		}
 		custom_effect_tooltip = tooltip_white_line
-		TRM_bop_very_low_decrease_effect = yes
+		add_political_power = 50
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		TRM_bop_low_decrease_effect = yes
 		
     }
 
 	option = {
 		name = trinity.22.b
+		ai_chance = {
+			base = 0
+		}
 		custom_effect_tooltip = tooltip_white_line
-		TRM_bop_very_low_increase_effect = yes
+		add_stability = 0.05
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		TRM_bop_low_increase_effect = yes
 
+    }
+}
+
+country_event = { # 내부 및 외부 국경 통제 법령
+	id = trinity.23
+	title = trinity.23.t
+	desc = trinity.23.desc
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.23.a
+		ai_chance = {
+			base = 100
+		}
+		TRM_bop_medium_decrease_effect = yes
+		IF = {
+			limit = { has_intelligence_agency = no }
+			create_intelligence_agency = {
+				name = TRN_Justice_Task_Force_intelligence_agency
+				icon = GFX_intelligence_agency_logo_trm
+			}
+			else = { gain_random_agency_upgrade = yes }
+		}
+    }
+
+	option = {
+		name = trinity.23.b
+		ai_chance = {
+			base = 0
+		}
+		TRM_bop_medium_increase_effect = yes
+		IF = {
+			limit = { has_intelligence_agency = no }
+			create_intelligence_agency = {
+				name = AUS_dsn
+				icon = GFX_intelligence_agency_logo_generic_6
+			}
+			else = { gain_random_agency_upgrade = yes }
+		}
+		
+    }
+}
+
+country_event = { # 연합전선의 부상
+	id = trinity.24
+	title = trinity.24.t
+	desc = trinity.24.desc
+	picture = GFX_report_event_gre_megali_conference_signing
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.24.a
+		
     }
 }
 
@@ -8918,8 +8995,14 @@ news_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_global_flag = TRM_flag_seia_cut
-		
+		hidden_effect = {
+			TRM = {
+				add_named_threat = {
+					threat = 5
+					name = TRN_trinity_order_state_threat_name
+				}
+			}
+		}
 	}
 
 	option = {
