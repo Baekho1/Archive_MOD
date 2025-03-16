@@ -89,7 +89,7 @@ KSP_valkyrie_fast_destroyer_desc: "고속정은 빠른 대응이 중요한 우�
 KSP_supply_tactical_baton: "경찰 바톤"
 KSP_supply_tactical_baton_desc: "신세계의 기술과 키보토스 최고의 기술력이 합쳐진 바톤은 범죄자들의 머리를 가격하여 약 3시간 동안 잠들게 할 수 있는 부가효과를 지녀 신입 경찰들 사이에서 '마법봉'이라 불리며 비살상 제압무기로 각광받고 있습니다. "
 KSP_goddess_of_war: "전쟁의 여신"
-KSP_goddess_of_war_desc: "전장에서 구름을 가르며 적진을 헤집어 놓는 항공기의 활약은 정말 대단합니다. 아군에게는 희망을, 적들에게는 공포를 뿌리고 다니는 공군의 존재는 가히 '전쟁의 여신'이라 불릴만합니다. "
+KSP_goddess_of_war_desc: "전장에서 구름을 가르며 적진을 헤집어 놓는 항공기의 활약은 정말 대단합니다. 아군에게는 희망을, 적들에게는 공포를 뿌리고 다니는 공군의 존재는 가히 '전쟁의 여신'이라 불릴만합니다."
 KSP_extract_resource_from_belgium: "벨기에 자원 추출"
 KSP_extract_resource_from_belgium_desc: "우리가 통제하고 있는 벨기에의 땅에는 적지 않은 수의 지하자원이 잠들어있습니다. 우리 세계의 기술력으로 더 깊은 곳까지 채굴한다면 그들의 기술력으로는 보이지 않았던 광맥이 드러날 것입니다. "
 KSP_extract_manpower_from_belgium: "벨기에 인력 추출"
@@ -145,7 +145,7 @@ KSP_belgium_extract_manpower_modifier: "벨기에 인력 차출"
 KSP_belgium_extract_manpower_modifier_desc: "벨기에의 인력을 추출합니다."
 
 KSP_goddess_of_war_modifier: "전쟁의 여신"
-KSP_goddess_of_war_modifier_desc: "전쟁의 여신을 구성합니다."
+KSP_goddess_of_war_modifier_desc: "전장에서 구름을 가르며 적진을 헤집어 놓는 항공기의 활약은 정말 대단합니다. 아군에게는 희망을, 적들에게는 공포를 뿌리고 다니는 공군의 존재는 가히 '전쟁의 여신'이라 불릴만합니다."
 
 KSP_belgian_security_bureau_modifier: "벨기에 안보부"
 KSP_belgian_security_bureau_modifier_desc: "벨기에 안보부를 설립합니다."

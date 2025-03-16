@@ -1017,6 +1017,15 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					country_exists = MIL
+				}
+				create_wargoal = {
+					target = MIL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
 					country_exists = GEM
 				}
 				create_wargoal = {
@@ -1103,6 +1112,15 @@ focus_tree = {
 				create_wargoal = {
 					target = ARI
 					type = annex_everything
+				}
+			}
+			every_country = {
+				limit = { 
+					Kivotos_school_tag = yes
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = KSP_menacing_ambition
 				}
 			}
 		}
@@ -3883,7 +3901,7 @@ focus_tree = {
 
 	focus = {
 		id = KSP_goddess_of_war
-		icon = GFX_idea_HEU_tlsfhldhkdndo
+		icon = GFX_focus_idea_KSP_tlsfhldhkdndo
 		cost = 5
 
 		available = {
@@ -4067,13 +4085,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = KSP_extract_resource_from_belgium
-		}
-
-		prerequisite = {
 			focus = KSP_extract_manpower_from_belgium
-		}
-
-		prerequisite = {
 			focus = KSP_extract_industry_from_belgium
 		}
 

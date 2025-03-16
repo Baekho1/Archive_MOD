@@ -1,4 +1,8 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
+		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
+	}
 	SpriteType = {
 		name = "GFX_focus_GEH_last_focus_effect"
 		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
