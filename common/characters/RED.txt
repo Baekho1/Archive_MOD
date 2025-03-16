@@ -902,6 +902,7 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_SOV_karl_radek"
+				large = "gfx/leaders/RED/RED_karl_radek.tga"
 			}
 		}
 
