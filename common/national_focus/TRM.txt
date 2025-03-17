@@ -3821,7 +3821,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TRM_heu_focus
-		icon = GFX_goal_TRN_Problem_Solver_68
+		icon = GFX_goal_fall_gelb
 		cost = 5.00
 		prerequisite = {
             focus = TRM_alliance_with_Sanhaijing
@@ -6952,8 +6952,10 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			country_event = trinity.25
 			add_popularity = { ideology = fascism popularity = 0.05 }
+			custom_effect_tooltip = tooltip_white_line
+			country_event = trinity.27
+			custom_effect_tooltip = TRN_cult_of_Mika_tt
 			# 그리고 스카우트 같은 조직이 설립 되었다는 사건 하나?
 			# -> 위 사건의 효과 add_political_power = 25
 			hidden_effect = {

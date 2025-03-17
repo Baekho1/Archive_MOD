@@ -1016,10 +1016,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRN_radio_propaganda.tga"  
 	}
 	SpriteType = {
-		name = "GFX_goal_TRN_Problem_Solver_68"
-		texturefile = "gfx/interface/goals/TRN/TRN_Problem_Solver_68.tga"  
-	}
-	SpriteType = {
 		name = "GFX_goal_TRN_HYAKKIYAKO_attack"
 		texturefile = "gfx/interface/goals/TRN/TRN_HYAKKIYAKO_attack.tga"  
 	}
