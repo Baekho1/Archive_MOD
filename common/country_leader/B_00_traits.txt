@@ -1633,6 +1633,41 @@ leader_traits = {
 			}
 		}
 	}
+
+	GEH_paranoia_ako = { # 편집증적 히나주의자
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.05
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+	}
+
+	GEH_artist = { # 예술가
+		random = no
+		sprite = 13
+	}
+
+	GEH_bauhaus = { # 바우하우스
+		random = no
+		production_speed_infrastructure_factor = 0.2
+		consumer_goods_factor = -0.15
+	}
+
+	GEH_degenerate_art = { # 퇴폐미술가
+		random = no
+		research_speed_factor = 0.03
+		Weekly_casualties_war_support = 0.002
+		Weekly_convoys_war_support = 0.002
+		Weekly_bombing_war_support = 0.002
+	}
+
+	GEH_composer = { # 클래식 작곡가
+		random = no
+		stability_factor = 0.05
+	}
+
+
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
 		random = no

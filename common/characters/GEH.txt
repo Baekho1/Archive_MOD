@@ -277,7 +277,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ infantry_officer war_hero trait_cautious offensive_doctrine front_line_general }
+			traits={ infantry_officer war_hero trait_cautious front_line_general urban_assault_specialist }
 			skill=5
 			attack_skill=4
 			defense_skill=5
@@ -443,7 +443,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ career_officer infantry_officer commando trait_cautious }
+			traits={ career_officer infantry_officer commando trait_reckless }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -528,6 +528,138 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+	}
+
+
+	GEH_dkzh={ #아코
+		name=GEH_dkzh
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_Amau_Ako_portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_Amua_Ako_idea.tga"
+			}
+		}
+		gender = female
+		field_marshal = {
+			traits = { trait_cautious media_personality }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill=4
+			logistics_skill=3
+		}
+		advisor={	
+			slot = high_command
+			idea_token = GEH_dkzh_high_command
+			allowed = {
+				OR = { 
+                    original_tag = GEH 
+                    original_tag = GEM 
+					original_tag = HEU 
+                }
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_dkzh_idea
+			allowed = {
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM
+					original_tag = HEU 
+				}
+			}
+			available = {
+				if = {
+					limit = { tag = GEM }
+					has_completed_focus = GEH_top_and_bottom_clothes
+				}
+			}
+			traits = {
+				GEH_paranoia_ako
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ GEH_ako_trait_0 }
+			expire="1965.1.1"
+		}
+	}
+
+	GEH_piet_mondrian = {  # 몬드리안 (바우하우스)
+		name=GEH_piet_mondrian
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_piet_mondrian
+			allowed = { OR = { original_tag = GEH } }
+			available = {
+				AND = {
+					NOT = { has_idea_with_trait = GEH_degenerate_art }
+					NOT = { has_idea_with_trait = GEH_composer }
+				}
+			}
+			traits = { GEH_artist GEH_bauhaus }
+		}
+	}
+
+	GEH_karl_schmidt_rottluff = {  # 카를 슈미트-로틀루프
+		name=GEH_karl_schmidt_rottluff
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_karl_schmidt_rottluff
+			allowed = { OR = { original_tag = GEH } }
+			available = {
+				AND = {
+					NOT = { has_idea_with_trait = GEH_bauhaus }
+					NOT = { has_idea_with_trait = GEH_composer }
+				}
+			}
+			traits = { GEH_artist GEH_degenerate_art }
+		}
+	}
+
+	GEH_richard_strauss= {  # 리하르트 슈트라우스
+		name=GEH_richard_strauss
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_richard_strauss
+			allowed = { OR = { original_tag = GEH } }
+			available = {
+				AND = {
+					NOT = { has_idea_with_trait = GEH_bauhaus }
+					NOT = { has_idea_with_trait = GEH_degenerate_art }
+				}
+			}
+			traits = { GEH_artist GEH_composer }
 		}
 	}
 
@@ -778,72 +910,6 @@ characters={
 			}
 		}
 		gender = female
-	}
-
-	GEH_dkzh={ #아코
-		name=GEH_dkzh
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_Amau_Ako_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_Amua_Ako_idea.tga"
-			}
-		}
-		gender = female
-		field_marshal = {
-			traits = { trait_cautious media_personality }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill=4
-			logistics_skill=3
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_dkzh_high_command
-			allowed = {
-				OR = { 
-                    original_tag = GEH 
-                    original_tag = GEM 
-					original_tag = HEU 
-                }
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_dkzh_idea
-			allowed = {
-				OR = { 
-					original_tag = GEH 
-					original_tag = GEM
-					original_tag = HEU 
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = GEM }
-					has_completed_focus = GEH_top_and_bottom_clothes
-				}
-			}
-			traits = {
-				financial_expert
-                captain_of_industry
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		country_leader={
-			ideology=despotism
-			traits={ GEH_ako_trait_0 }
-			expire="1965.1.1"
-		}
 	}
 	GEH_kinugawa_kasumi={ #카스미
 		name=GEH_kinugawa_kasumi
