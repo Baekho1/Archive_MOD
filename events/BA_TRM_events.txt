@@ -8915,6 +8915,35 @@ country_event = { # 연합전선의 부상
     }
 }
 
+country_event = { # 미소노 미카의 인상
+	id = trinity.25
+	title = trinity.25.t
+	desc = trinity.25.desc
+	picture = GFX_report_event_gre_megali_conference_signing
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.25.a
+		add_country_leader_trait = TRM_trinity_messiah
+		TRM_bop_very_low_decrease_effect = yes
+    }
+
+	option = {
+		name = trinity.25.b
+		add_country_leader_trait = TRM_tough_soldier
+		TRM_bop_very_low_increase_effect = yes
+		
+    }
+
+	option = {
+		name = trinity.25.c
+		add_country_leader_trait = TRM_workers_friend
+		TRM_bop_very_low_increase_effect = yes
+    }
+}
+
 news_event = {
 	id = trinitynews.1
 	title = trinitynews.1.t

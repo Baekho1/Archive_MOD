@@ -6952,12 +6952,13 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			# 미소노 미카의 트레잇을 정할 사건 발생. 트레잇은 아래와 같음
-			# \"독일인의 지도자이자 구원자, 강인한 병사이자 전략가, 독일 민족의 아버지, 노동자의 친구, 청렴하고 검소한 지도자\"
-
+			country_event = trinity.25
 			add_popularity = { ideology = fascism popularity = 0.05 }
-			#add_political_power = 25
 			# 그리고 스카우트 같은 조직이 설립 되었다는 사건 하나?
+			# -> 위 사건의 효과 add_political_power = 25
+			hidden_effect = {
+				
+			}
 		}
 	}
 	

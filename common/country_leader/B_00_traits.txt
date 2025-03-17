@@ -2205,6 +2205,23 @@ leader_traits = {
 		max_command_power = 20
 		mobilization_laws_cost_factor = -0.25
 	}
+	TRM_trinity_messiah = {
+		random = no 
+		power_balance_weekly = -0.01
+		stability_factor = 0.05
+		compliance_gain = 0.01
+	}
+	TRM_tough_soldier = {
+		random = no 
+		power_balance_weekly = 0.01
+		army_morale_factor = 0.06
+		weekly_casualties_war_support = 0.003
+	}
+	TRM_workers_friend = {
+		random = no
+		fascism_drift = 0.04
+		party_popularity_stability_factor = 0.2
+	}
 	TRM_histroy_loser = {
 		sprite = 13
 		random = no
