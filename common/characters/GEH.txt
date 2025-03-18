@@ -437,11 +437,13 @@ characters={
 		name=GEH_dldhfl
 		portraits={
 			army={
-				large= "gfx/leaders/GEH/GEH_dldhfl.dds"
+				large= "gfx/leaders/GEH/GEH_irori_shiromi.dds"
 				small="gfx/interface/advisors/GEH/dldhfl.dds"
 			}
 		}
+
 		gender = female
+
 		corps_commander={
 			traits={ career_officer infantry_officer commando trait_reckless }
 			skill=4
@@ -451,6 +453,7 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 		}
+
 		advisor={
 			slot = political_advisor
 			idea_token = GEH_dldhfl_idea
@@ -463,6 +466,7 @@ characters={
 			}
 			traits = { princess_of_terror }
 		}
+
 		advisor={
 			slot = high_command
 			idea_token = GEH_dldhfl_high_command
@@ -472,6 +476,7 @@ characters={
 			cost = 100
 			ai_will_do = { factor = 1.000 }
 		}
+
 		advisor={
 			slot = army_chief
 			idea_token = GEH_dldhfl_chief
@@ -486,7 +491,7 @@ characters={
 		name=GEH_chinatsu
 		portraits={
 			army={
-				large= "gfx/leaders/GEH/GEH_Hinomiya_chinatsu_portrait.tga"
+				large= "gfx/leaders/GEH/GEH_chinatsu_hinomiya.dds"
 				small="gfx/interface/advisors/GEH/GEH_Hinomiya_chinatsu_idea.tga"
 			}
 		}
@@ -531,16 +536,21 @@ characters={
 		}
 	}
 
-
 	GEH_dkzh={ #아코
 		name=GEH_dkzh
+
 		portraits={
 			army={
-				large="gfx/leaders/GEH/GEH_Amau_Ako_portrait.tga"
+				large="gfx/leaders/GEH/GEH_ako_amau.dds"
 				small="gfx/interface/advisors/GEH/GEH_Amua_Ako_idea.tga"
 			}
+			scientist={
+				large="gfx/leaders/GEH/GEH_ako_amau_scientist.dds"
+			}
 		}
+
 		gender = female
+
 		field_marshal = {
 			traits = { trait_cautious media_personality }
 			skill = 3
@@ -549,6 +559,7 @@ characters={
 			planning_skill=4
 			logistics_skill=3
 		}
+
 		advisor={	
 			slot = high_command
 			idea_token = GEH_dkzh_high_command
@@ -560,13 +571,14 @@ characters={
                 }
 			}
 			traits = {
-				army_logistics_2
+				air_tactical_bombing_2
 			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
+
 		advisor={
 			slot = political_advisor
 			idea_token = GEH_dkzh_idea
@@ -590,11 +602,48 @@ characters={
 				factor = 1.000
 			}
 		}
+
 		country_leader={
 			ideology=despotism
 			traits={ GEH_ako_trait_0 }
 			expire="1965.1.1"
 		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_bright }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	GEH_prefect_team_spy ={ #선도부 정보부
+		name=GEH_prefect_team_spy
+
+		portraits={
+			army={
+				small="gfx/interface/advisors/GEH/GEH_theorist_idea.tga"
+			}
+		}
+
+		gender = female
+
+		advisor={
+			slot = political_advisor
+			idea_token = GEH_prefect_team_spy
+			allowed = {
+				original_tag = GEH 
+			}
+
+			traits = {
+				head_of_intelligence
+			}
+
+			ai_will_do = {
+				factor = 12.000
+			}
+		}
+
 	}
 
 	GEH_piet_mondrian = {  # 몬드리안 (바우하우스)
