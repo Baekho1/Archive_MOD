@@ -2252,11 +2252,6 @@ leader_traits = {
 		army_morale_factor = 0.06
 		weekly_casualties_war_support = 0.003
 	}
-	TRM_workers_friend = {
-		random = no
-		fascism_drift = 0.04
-		party_popularity_stability_factor = 0.2
-	}
 	TRM_histroy_loser = {
 		sprite = 13
 		random = no

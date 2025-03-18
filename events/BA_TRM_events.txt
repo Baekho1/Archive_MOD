@@ -8410,6 +8410,7 @@ country_event = { # 미소노 미카 법
 
 	option = {
 		name = trinity.4.a
+		TRM_remove_inner_faction = yes
 		add_popularity = {
 			ideology = democratic
 			popularity = -0.20
@@ -8418,8 +8419,6 @@ country_event = { # 미소노 미카 법
 			ideology = fascism
 			popularity = 0.20
 		}
-		custom_effect_tooltip = TRN_tooltip_delete_powers
-		set_country_flag = TRN_delete_power_flag
     }
 }
 country_event = { # 마지막 자유 발언
@@ -8776,6 +8775,9 @@ country_event = { # 파테르 분파 내부의 불충
 
 	option = {
 		name = trinity.19.a
+		custom_effect_tooltip = TRM_pater_union_tt
+		set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
+		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
     }
 }
 unit_leader_event = { # 기사단국 선포
@@ -8911,7 +8913,8 @@ country_event = { # 연합전선의 부상
 
 	option = {
 		name = trinity.24.a
-		
+		add_stability = 0.05
+		add_war_support = 0.05	
     }
 }
 
@@ -8927,7 +8930,7 @@ country_event = { # 파테르 국민연합의 본질
 	option = {
 		name = trinity.25.a
 		ai_chance = { base = 5 }
-		TRM_bop_medium_decrease_effect = yes
+		TRM_bop_medium_increase_effect = yes
 		hidden_effect = {
 			country_event = { id = trinity.26 days = 03 }
 		}
@@ -8935,14 +8938,14 @@ country_event = { # 파테르 국민연합의 본질
 
 	option = {
 		name = trinity.25.b
-		TRM_bop_medium_increase_effect = yes
+		TRM_bop_medium_decrease_effect = yes
 		hidden_effect = {
 			country_event = { id = trinity.26 days = 03 }
 		}
     }
 }
 
-country_event = { # 파테르 국민연합의 본질
+country_event = { # 대회의 끝
 	id = trinity.26
 	title = trinity.26.t
 	desc = trinity.26.desc
@@ -8953,13 +8956,11 @@ country_event = { # 파테르 국민연합의 본질
 
 	option = {
 		name = trinity.26.a
-		ai_chance = { base = 5 }
-		TRM_bop_medium_decrease_effect = yes
-    }
-
-	option = {
-		name = trinity.26.b
-		TRM_bop_medium_increase_effect = yes
+		add_political_power = 25
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
     }
 }
 
@@ -8974,8 +8975,8 @@ country_event = { # 미소노 미카의 인상
 
 	option = {
 		name = trinity.27.a
-		ai_chance = {
-			base = 5
+		ai_chance = { 
+			base = 10
 		}
 		add_country_leader_trait = TRM_trinity_messiah
 		TRM_bop_very_low_decrease_effect = yes
@@ -8983,21 +8984,68 @@ country_event = { # 미소노 미카의 인상
 
 	option = {
 		name = trinity.27.b
-		ai_chance = {
-			base = 3
+		ai_chance = { 
+			base = 0
 		}
 		add_country_leader_trait = TRM_tough_soldier
 		TRM_bop_very_low_increase_effect = yes
 		
     }
+}
+
+country_event = { # 트리니티 교육과정
+	id = trinity.28
+	title = trinity.28.t
+	desc = trinity.28.desc
+	picture = GFX_report_event_gre_megali_conference_signing
+	
+	is_triggered_only = yes
+    fire_only_once = no
 
 	option = {
-		name = trinity.27.c
-		ai_chance = {
-			base = 2
+		name = trinity.28.a
+		ai_chance = { 
+			base = 0
 		}
-		add_country_leader_trait = TRM_workers_friend
 		TRM_bop_very_low_increase_effect = yes
+
+    }
+
+	option = {
+		name = trinity.28.b
+		ai_chance = { 
+			base = 10 
+		}
+		TRM_bop_very_low_decrease_effect = yes
+		
+    }
+}
+
+country_event = { # 종교 갈등
+	id = trinity.29
+	title = trinity.29.t
+	desc = trinity.29.desc
+	picture = GFX_report_event_gre_megali_conference_signing
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.29.a
+		ai_chance = { 
+			base = 0
+		}
+		TRM_bop_very_low_decrease_effect = yes
+
+    }
+
+	option = {
+		name = trinity.29.b
+		ai_chance = { 
+			base = 10 
+		}
+		TRM_bop_very_low_increase_effect = yes
+		
     }
 }
 
