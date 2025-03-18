@@ -921,8 +921,6 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = KSP_new_student_council
-		}
-		prerequisite = {
 			focus = KSP_valkyrie_central_school
 		}
 		allow_branch = {
