@@ -866,7 +866,7 @@
  SHA_Intervention_in_the_Balkan_situation_desc: ""
  SHA_spheres_of_influence: "세력권 분할"
  SHA_spheres_of_influence_desc: ""
- SHA_spheres_of_influence_tt: "우리와 §Y[ITA.GetNameWithFlag]§!(은)는 §Y발칸§!에서 각자의 세력권을 구축할 것입니다.\n\n우리의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[SLO.GetNameWithFlag]\n[HUN.GetNameWithFlag]\n[YUG.GetNameWithFlag]§! (북부) \n\n그들의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[ALB.GetNameWithFlag]\n[BUL.GetNameWithFlag]\n[GRE.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§! (남부)"
+ SHA_spheres_of_influence_tt: "우리와 §Y[ITA.GetNameWithFlag]§!(은)는 §Y발칸§!에서 각자의 세력권을 구축할 것입니다.\n\n우리의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[SLO.GetNameWithFlag]\n[HUN.GetNameWithFlag]\n[ROM.GetNameWithFlag]\n[YUG.GetNameWithFlag]§! (북부) \n\n그들의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[ALB.GetNameWithFlag]\n[BUL.GetNameWithFlag]\n[GRE.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§! (남부)"
  SHA_eastern_offensive: "발칸 세력권 확보"
  SHA_eastern_offensive_desc: ""
 
