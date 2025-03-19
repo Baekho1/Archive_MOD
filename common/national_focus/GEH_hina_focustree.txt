@@ -13,6 +13,7 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1200 }
     #shared_focus = GEH_ready_for_war
+
 	shared_focus = GEH_unified_gehenna
     shared_focus = BA_new_world_technology
 	shared_focus = Eden_formation_of_alliance_treaty_organization
@@ -41,6 +42,7 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+
 	focus = {
 		id = GEH_zero_congress_focus
 		icon = GFX_goal_Perfect_team_zero_congress
@@ -2348,29 +2350,30 @@ focus_tree = {
 			}
 		}
 	}
+
     focus = {
 		id = GEH_HID_benriya
-		icon = GFX_goal_GEH_take_Benriya
+		icon = GFX_focus_attack_HEU
 		cost = 5
 		x = 0
 		y = 1
 
-		#ai_will_do = { base = 1000 }
         relative_position_id = GEH_Cooperation_with_HID
         prerequisite = { focus = GEH_Cooperation_with_HID }
         available = { 
-            has_global_flag = dldhfl_flag
+            NOT = {
+				is_in_faction_with = HEU
+			}
             GEH ={
 				any_neighbor_country = {
 					tag = HEU
 				}
             }
-            
         }
+
 		allow_branch = {
 		}
-		available = {
-		}
+
 		ai_will_do = {
 			base = 600
 			modifier = {
@@ -2389,6 +2392,7 @@ focus_tree = {
             }
 		}
 	}
+
     focus = {
 		id = GEH_HID_trinity
 		icon = GFX_focus_SWI_embrace_rote_drei
@@ -5116,4 +5120,479 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	### 선도부 문화/산업 중점 트리 ###
+	
+	focus = {
+		id = GEH_luxembourg_problem
+		icon = GFX_goal_HEU_question_of_succession_law
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available = {
+		}
+
+		allow_branch = {
+			is_debug = yes
+		}
+
+		x = 30
+		y = 10
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = GEH_internet_network_recovery
+		icon = GFX_focus_AFG_telegraph
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available = {
+		}
+
+		allow_branch = {
+			is_debug = yes
+		}
+
+		x = -4
+		y = 0
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GEH_centre_of_culture
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			IF = {
+				limit = { NOT = { has_tech = radio } }
+				set_technology = { radio = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_Perfect_team_zero_congress
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = -2
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GEH_centre_of_culture_idea
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_a
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_PER_national_bank
+		
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_b
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = -1
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_bauhaus_idea
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_b
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_RAJ_enrollment_of_dali_children
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_a
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 1
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_degenerate_art_idea
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_c
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_COU_open_the_music
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_b
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_a
+		}
+
+		available = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 3
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_composer_idea
+			}
+		}
+	}
+
+
+	focus = {
+		id = GEH_centre_of_culture_end
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_PER_shiraz_university
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture_a
+			focus = GEH_centre_of_culture_b
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 5.00
+
+		x = 0
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_completed_focus = GEH_centre_of_culture_a }
+						NOT = { has_completed_focus = GEH_centre_of_culture_b }
+						NOT = { has_completed_focus = GEH_centre_of_culture_c }
+					}
+				}
+				custom_effect_tooltip = GEH_centre_of_culture_end_tt
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_a
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_bauhaus_idea
+					add_idea = GEH_centre_of_culture_bauhaus_end_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_b
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_degenerate_art_idea
+					add_idea = GEH_centre_of_culture_degenerate_art_end_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_c
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_composer_idea
+					add_idea = GEH_centre_of_culture_composer_end_idea
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_68_rev
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_HEU_aru_rikuhachima_2
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		mutually_exclusive = {
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		available = {
+			HEU = {
+				has_dynamic_modifier = {
+					modifier = HEU_rikuhachimaism_idea
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 2
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = HEU_rikuhachimaism_other_country_idea
+		}
+	}
+
+	focus = {
+		id = GEH_gradual_gehenna_culture
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_HEU_gehenna
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		mutually_exclusive = {
+			focus = GEH_68_rev
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 4
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GEH_civil_rights_act
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_generic_court
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 6
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
 }
