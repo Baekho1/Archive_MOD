@@ -8826,12 +8826,6 @@ country_event = { # 충성조항
     fire_only_once = no
 
 	immediate = {
-		set_power_balance = {
-			id = TRM_power_balance
-			left_side = TRM_tirinty_socialism
-			right_side = TRM_tirinty_nazism
-			set_default = yes
-		}
 	}
 
 	option = {
@@ -8842,8 +8836,13 @@ country_event = { # 충성조항
 		custom_effect_tooltip = tooltip_white_line
 		add_political_power = 50
 		add_popularity = { ideology = fascism popularity = 0.05 }
-		TRM_bop_low_decrease_effect = yes
-		
+		custom_effect_tooltip = tooltip_white_line
+		set_power_balance = {
+			id = TRM_power_balance
+			left_side = TRM_tirinty_socialism
+			right_side = TRM_tirinty_nazism
+			set_value = -0.15
+		}
     }
 
 	option = {
@@ -8854,7 +8853,13 @@ country_event = { # 충성조항
 		custom_effect_tooltip = tooltip_white_line
 		add_stability = 0.05
 		add_popularity = { ideology = fascism popularity = 0.05 }
-		TRM_bop_low_increase_effect = yes
+		custom_effect_tooltip = tooltip_white_line
+		set_power_balance = {
+			id = TRM_power_balance
+			left_side = TRM_tirinty_socialism
+			right_side = TRM_tirinty_nazism
+			set_value = 0.15
+		}
 
     }
 }
