@@ -6,10 +6,10 @@ add_namespace = TRN_collapse_event
 add_namespace = TRMDIP
 add_namespace = TRM_ironsword_event
 
-add_namespace = trnstory
-add_namespace = trinity
-add_namespace = trnhonor
-add_namespace = trinitynews
+add_namespace = trnstory # 플레이버 이벤트
+add_namespace = trinity 
+add_namespace = trnhonor # 명예
+add_namespace = trinitynews # 뉴스 이벤트
 country_event = {
 	id = TRM_event.1
 	title = TRM_event.1.t
@@ -8736,6 +8736,12 @@ country_event = { # 필리우스 분파의 운명
 		custom_effect_tooltip = TRM_filius_del_tt
 		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+		
+		custom_effect_tooltip = tooltip_white_line
+		remove_advisor_role = {
+			character = TRN_skrltk
+			slot = political_advisor
+		}
     }
 
 	option = {
@@ -8748,6 +8754,12 @@ country_event = { # 필리우스 분파의 운명
 		custom_effect_tooltip = TRM_filius_del_tt
 		set_variable = { TRM_internal_factions_remove_var = 2 } #지울 세력 코드
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+		
+		custom_effect_tooltip = tooltip_white_line
+		remove_advisor_role = {
+			character = TRN_skrltk
+			slot = political_advisor
+		}
     }
 }
 country_event = { # 대법관 임명
@@ -8911,7 +8923,7 @@ country_event = { # 연합전선의 부상
 	id = trinity.24
 	title = trinity.24.t
 	desc = trinity.24.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_report_event_SWE_summer_government
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8927,7 +8939,7 @@ country_event = { # 파테르 국민연합의 본질
 	id = trinity.25
 	title = trinity.25.t
 	desc = trinity.25.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_report_event_SWE_summer_government
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8954,7 +8966,7 @@ country_event = { # 대회의 끝
 	id = trinity.26
 	title = trinity.26.t
 	desc = trinity.26.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_report_event_SWE_summer_government
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -8973,7 +8985,7 @@ country_event = { # 미소노 미카의 인상
 	id = trinity.27
 	title = trinity.27.t
 	desc = trinity.27.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_event_Mika_memories
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -9002,7 +9014,7 @@ country_event = { # 트리니티 교육과정
 	id = trinity.28
 	title = trinity.28.t
 	desc = trinity.28.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_report_event_SWE_summer_government
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -9030,7 +9042,7 @@ country_event = { # 종교 갈등
 	id = trinity.29
 	title = trinity.29.t
 	desc = trinity.29.desc
-	picture = GFX_report_event_gre_megali_conference_signing
+	picture = GFX_report_event_SWE_summer_government
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -9038,19 +9050,19 @@ country_event = { # 종교 갈등
 	option = {
 		name = trinity.29.a
 		ai_chance = { 
-			base = 0
+			base = 10
 		}
-		TRM_bop_very_low_decrease_effect = yes
-
+		TRM_bop_low_decrease_effect = yes
+		# 미니게임 하나 오픈
     }
 
 	option = {
 		name = trinity.29.b
 		ai_chance = { 
-			base = 10 
+			base = 5 
 		}
-		TRM_bop_very_low_increase_effect = yes
-		
+		TRM_bop_very_low_decrease_effect = yes
+		# 미니게임 하나 오픈
     }
 }
 
