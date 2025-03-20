@@ -436,15 +436,24 @@ ideas = {
 				can_create_factions = no
 				can_join_factions = no
 			}
+			modifier = {
+				surrender_limit = -0.1
+			}
 		}
 		POL_aid_idea = { #동맹국들의 지원
 			picture = generic_manpower_bonus
 			modifier = {
 				army_core_defence_factor = 0.1
 			}
+			cancel = {
+				is_in_faction = no
+			}
 		}
 		POL_solidarity_idea = {
 			picture = chi_war_of_resistance3
+			cancel = {
+				is_in_faction = no
+			}
 		}
 		POL_capital_of_the_revolution = { #권위 있는 중앙 정부
 			picture = POL_ideology_drift_defence

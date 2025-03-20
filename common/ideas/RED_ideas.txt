@@ -2865,9 +2865,9 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.5
-					reliability_factor = -0.25
+				kivotos_infantry_equipment = {
+					build_cost_ic = -0.3
+					reliability_factor = -0.15
 				}
 			}
 		}
@@ -2881,9 +2881,9 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.5
-					reliability_factor = -0.25
+				kivotos_infantry_equipment = {
+					build_cost_ic = -0.3
+					reliability_factor = -0.15
 				}
 			}
 		}
@@ -2899,9 +2899,9 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.5
-					reliability_factor = -0.25
+				kivotos_infantry_equipment = {
+					build_cost_ic = -0.3
+					reliability_factor = -0.15
 				}
 			}
 		}

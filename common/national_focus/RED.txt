@@ -907,7 +907,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			num_of_controlled_factories > 75
+			num_of_civilian_factories > 50
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -6251,6 +6251,12 @@ focus_tree = {
 				RED_the_politburo_production_factory_max_efficiency_factor = 0.05
 			}
 			RED_corruption_solve = yes
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = RED_advance_publicwork_tt
+			add_to_variable = {
+				RED_labor_party_dynamic_modifier_production_speed_buildings_factor = 0.03
+				tooltip = production_speed_buildings_factor_tt
+			}
 			if = {
 				limit = {
 					has_power_balance = {
@@ -6330,6 +6336,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = RED_office_ss_idea
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			custom_effect_tooltip = RED_winterarmy_advance_tt
+			add_to_variable = {
+				RED_winter_army_army_infantry_attack_factor = 0.03
+				tooltip = army_infantry_attack_factor_tt
+			}
+			add_to_variable = {
+				RED_winter_army_army_infantry_defence_factor = 0.03
+				tooltip = army_infantry_defence_factor_tt
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_field_marshal_role = {
 				character = RED_lev_trotsky
 				traits = {

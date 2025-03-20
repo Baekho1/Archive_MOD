@@ -263,8 +263,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -424,8 +424,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -488,8 +488,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -569,8 +569,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -668,8 +668,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -733,8 +733,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED
@@ -787,8 +787,8 @@ RED_invite_trotskists_dec_cat = {
 			}
 			has_completed_focus = RED_social_rebuild
 		}
-		cost = 60
-		days_remove = 90
+		cost = 15
+		days_remove = 30
 		highlight_states = {
 			highlight_states_trigger = {
 				is_owned_by = RED

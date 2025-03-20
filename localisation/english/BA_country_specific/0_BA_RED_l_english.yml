@@ -1774,7 +1774,7 @@
  RED_attack_kivotos: "[FROM.getname]에로 혁명 전파"
  RED_in_exile_committee_flag: "망명위원회에서 활동 중"
  RED_invite_trotskists_dec_cat: "제4인터내셔널"
- RED_invite_trotskists_dec_cat_desc: "제4인터내셔널에대한설명을적어주세요"
+ RED_invite_trotskists_dec_cat_desc: "제4인터내셔널은 1936년 러시아 혁명가 레온 트로츠키가 주도하여 창립한 국제 공산주의 조직입니다. 이들은 스탈린주의에 반대하며, 트로츠키주의를 기반으로 한 세계 사회주의 혁명을 목표로 하고 있으며, 붉은겨울을 주 활동 무대로 삼고 있습니다."
  RED_exile_committee_yev: "$SOV_yevgeny_preobrazhensky$ 고용"
  RED_exile_committee_krl: "$SOV_karl_radek$ 고용"
  RED_exile_committee_alk: "$SOV_aleksandr_shlyapnikov$ 고용"

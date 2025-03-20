@@ -25,7 +25,7 @@ country_event = { #승리의 날
 		add_stability = 0.05
 		hidden_effect = {
 			news_event = {
-				id  = BA_news.134
+				id  = BA_news.135
 				days = 1
 			}
 		}
@@ -166,7 +166,7 @@ country_event = { #혁명 재판 - 3, 군대
 			limit = {
 				is_core_of = SOV
 			}
-			add_resistance = 0.03
+			add_resistance = 3
 		}
 		hidden_effect = {
 			country_event = {
