@@ -46,11 +46,6 @@ ideologies = {
 				color = { 5 187 250 }
 			}
 
-			Libertic_Integralism = {
-				can_be_randomly_selected = no
-				color = { 75 25 125 }
-			}
-
 			police_democratic = {
 				can_be_randomly_selected = no
 				color = { 189 153 161 }
@@ -88,6 +83,11 @@ ideologies = {
 				
 			
 		#BA_MOD_FIX/
+
+			monarchist_socialism_democratic = {
+				can_be_randomly_selected = no
+				color = { 118 29 144 }
+			}
 		}
 
 		dynamic_faction_names = {

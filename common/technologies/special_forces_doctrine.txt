@@ -1439,6 +1439,11 @@ technologies = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
+		on_research_complete = {
+			custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+			BA_halo_special_forces_cap_edit_effect = yes
+		}
 		halo_special_forces = {
 			supply_consumption = -0.02
 			soft_attack = 0.05
@@ -1518,6 +1523,11 @@ technologies = {
 				defence = 0.10
 			}
 		}
+		on_research_complete = {
+			custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+			BA_halo_special_forces_cap_edit_effect = yes
+		}
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -1575,6 +1585,11 @@ technologies = {
 				movement = 0.25
 			}
 		}
+		on_research_complete = {
+			custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+			BA_halo_special_forces_cap_edit_effect = yes
+		}
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -1618,6 +1633,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		special_forces_cap = 0.06
+		on_research_complete = {
+			custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
+			BA_halo_special_forces_cap_edit_effect = yes
+		}
 		
 		category_halo_special_forces = {
 			initiative = 0.01
@@ -1817,8 +1837,8 @@ technologies = {
 			soft_attack = 0.05
 		}
 		on_research_complete = {
-			custom_effect_tooltip = kivotos_halo_special_forces_add3_tt
-			set_variable = { BA_halo_special_forces_cap_edit_var = 3 }
+			custom_effect_tooltip = kivotos_halo_special_forces_add6_tt
+			set_variable = { BA_halo_special_forces_cap_edit_var = 6 }
 			BA_halo_special_forces_cap_edit_effect = yes
 		}
 		special_forces_cap = 0.06

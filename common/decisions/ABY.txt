@@ -9533,7 +9533,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 				character = ABYDO_Hoshino_2
 				promote_leader = yes
 				country_leader = {
-					ideology = Libertic_Integralism
+					ideology = Cohabitism
 					expire = "1965.1.1.1"
 					traits = { ABY_trait_great_leader_2 }
 				}
@@ -9581,7 +9581,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -9636,7 +9636,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -9698,7 +9698,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -9779,7 +9779,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -9844,7 +9844,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -9950,7 +9950,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10022,7 +10022,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10090,7 +10090,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10161,7 +10161,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10260,7 +10260,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10336,7 +10336,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }
@@ -10425,7 +10425,7 @@ ABY_descision_category_ennead_puppet = { # 엔네아드 괴뢰
 						desc = "" 
 						picture = "gfx/leaders/ABY/ABY_portrait_federation_council.tga"
 						expire = "1965.1.1"
-						ideology = Libertic_Integralism
+						ideology = Cohabitism
 						traits = { ABY_trait_council }
 					}
 					ABY = { puppet = PREV }

@@ -1700,6 +1700,37 @@ characters={
 			}
 		}
 	}
+	ABYDO_Hoshino_2={
+		name=ABYDOS_Hoshino
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/KakaoTalk_20240505_122120974.dds"
+			}
+			army={
+				large="gfx/leaders/ABY/ABY_Takanashi_Hoshino_Portrait.tga"
+				small="gfx/interface/advisors/ABY/ABY_Takanashi_Hoshino_idea.dds"
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=Self_Reliance
+			traits={ ABY_trait_new_leader }
+			expire="1965.1.1.1"
+		}
+	}
+	ABYDO_Yume={
+		name=ABYDOS_Yume
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/yume.dds"
+			}
+			army={
+				large="gfx/leaders/ABY/ABY_Takanashi_Hoshino_Portrait.tga"
+				small="gfx/interface/advisors/ABY/ABY_Takanashi_Hoshino_idea.dds"
+			}
+		}
+		gender = female
+	}
 
 	ABYDO_Hoshino={
 		name=ABYDOS_Hoshino
@@ -1774,37 +1805,6 @@ characters={
 			traits={  }
 			expire="1965.1.1.1"
 		}
-	}
-	ABYDO_Hoshino_2={
-		name=ABYDOS_Hoshino
-		portraits={
-			civilian={
-				large="gfx/leaders/ABY/KakaoTalk_20240505_122120974.dds"
-			}
-			army={
-				large="gfx/leaders/ABY/ABY_Takanashi_Hoshino_Portrait.tga"
-				small="gfx/interface/advisors/ABY/ABY_Takanashi_Hoshino_idea.dds"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=Self_Reliance
-			traits={ ABY_trait_new_leader }
-			expire="1965.1.1.1"
-		}
-	}
-	ABYDO_Yume={
-		name=ABYDOS_Yume
-		portraits={
-			civilian={
-				large="gfx/leaders/ABY/yume.dds"
-			}
-			army={
-				large="gfx/leaders/ABY/ABY_Takanashi_Hoshino_Portrait.tga"
-				small="gfx/interface/advisors/ABY/ABY_Takanashi_Hoshino_idea.dds"
-			}
-		}
-		gender = female
 	}
 	ABYDO_Shiroko={
 		name=ABYDOS_Shiroko
@@ -1920,7 +1920,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				reckless scavenger infantry_officer
+				reckless scavenger infantry_officer adaptable
 			}
 			skill=4
 			attack_skill=4
@@ -1965,7 +1965,7 @@ characters={
 		gender = female
 		corps_commander={
 			traits = {
-				logistics_wizard politically_connected
+				logistics_wizard politically_connected adaptable
 			}
 			skill=4
 			attack_skill=4
@@ -2031,7 +2031,7 @@ characters={
 		gender = female
 		field_marshal={
 			traits = {
-				brilliant_strategist skilled_staffer cautious thorough_planner
+				brilliant_strategist skilled_staffer cautious thorough_planner adaptable
 			}
 			skill=4
 			attack_skill=3

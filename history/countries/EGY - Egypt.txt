@@ -183,6 +183,12 @@ set_party_name = {
 	long_name = EGY_fascism_party
 	name = EGY_fascism_party
 }
+recruit_character = EGY_Hoshino
+recruit_character = EGY_Shiroko
+recruit_character = EGY_nonomi
+recruit_character = EGY_serika
+recruit_character = EGY_Ayane
+recruit_character = EGY_ennead
 
 # Leaders and commanders
 recruit_character = EGY_fuad_i
