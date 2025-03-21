@@ -2344,6 +2344,14 @@ news_event = { #프랑스 쿠데타!
 			}
 		}
 		name = BA_news.66.b
+		if = {
+			limit = {
+				tag = SYR
+			}
+			effect_tooltip = {
+				unlock_national_focus = SYR_focus_0
+			}
+		}
 	}
 }
 
@@ -5264,6 +5272,21 @@ news_event = { # 네덜란드 왕국의 재건
 		    }
 		}
     }
+}
+
+news_event = { # 비에노 조약
+    id = BA_news.138
+    title = BA_news.138.t
+    desc = BA_news.138.d
+    picture = GFX_news_event_generic_sign_treaty1
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.138.a
+    }
+	
 }
 
 #news_event = { # 미국 트리니티 에덴 점령

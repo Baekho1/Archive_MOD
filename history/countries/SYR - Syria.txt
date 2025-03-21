@@ -74,7 +74,15 @@ set_cosmetic_tag = SYR_mandate
 		project = sp:sp_air_radar
 	}
 }
-
+1935.1.1 = {
+	complete_national_focus = SYR_focus_dom_0
+	every_owned_state = {
+		set_demilitarized_zone = yes
+	}
+	553 = {
+		set_demilitarized_zone = yes
+	}
+}
 
 set_politics = {
 	ruling_party = democratic
@@ -110,4 +118,8 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+add_ideas = {
+	SYR_general_strike
 }

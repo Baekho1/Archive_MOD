@@ -13,17 +13,37 @@ focus_tree = {
 		y = 1000
 	}
 	default = no
-	focus = { #독립!
-		id = SYR_focus_0
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 0
+	focus = { #시리아 총파업
+		id = SYR_focus_dom_0
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cost = 4
 		x = 0
 		y = 0
+		completion_reward = {
+			add_ideas = SYR_general_strike
+		}
+	}
+	focus = { #프랑스와의 회담
+		id = SYR_focus_0
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 2
+		x = -3
+		y = 1
+		relative_position_id = SYR_focus_dom_0
+		prerequisite = {
+			focus = SYR_focus_dom_0
+		}
 		available = {
-			always = no
+			FRA = {
+				FRA_military_conference = {
+					is_country_leader = yes
+				}
+			}
 		}
 		completion_reward = {
-			add_political_power = 10
+			FRA = {
+				country_event = SYR_event.13
+			}
 		}
 	}
 	focus = { #정당 간 합의

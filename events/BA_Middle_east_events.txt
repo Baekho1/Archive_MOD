@@ -5,45 +5,26 @@ country_event ={ #프랑스로부터의 승리
 	title = SYR_event.1.t
 	desc = SYR_event.1.d
 	fire_only_once = yes
-	trigger = {
-		tag = SYR
-		date < 1936.2.1
-	}
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_troops_at_rivier_in_iraq
 	option = {
 		name = SYR_event.1.a
 		add_war_support = 0.1
 		add_stability = 0.1
 		every_owned_state = {
-			if = {
-				limit = {
-					arms_factory > 0
-				}
-				damage_building = {
-					type = arms_factory
-					damage = 0.5
-				}
-			}
-			if = {
-				limit = {
-					industrial_complex > 0
-				}
-				damage_building = {
-					type = industrial_complex
-					damage = 0.5
-				}
-			}
-			if = {
-				limit = {
-					infrastructure > 0
-				}
-				damage_building = {
-					type = infrastructure
-					damage = 0.5
-				}
+			set_demilitarized_zone = no
+		}
+		LEB = {
+			every_owned_state = {
+				set_demilitarized_zone = no
 			}
 		}
+		remove_ideas = SYR_general_strike
 		hidden_effect = {
-			complete_national_focus = SYR_focus_0
+			news_event = {
+				id = BA_news.138
+				days = 1
+			}
 		}
 	}
 }
@@ -293,7 +274,7 @@ country_event ={ #공산당 집권
 			popularity = 0.1
 		}
 	}
-} #.10부터 .15까지 안 씀
+}
 country_event ={ #왕실에 충성을 맹세한 ㅇㅇ
 	id = SYR_event.10
 	title = SYR_event.10.t
@@ -333,34 +314,24 @@ country_event ={ #ㅗ
 		add_political_power = -5
 	}
 }
-country_event ={ #터키 분할 계획
+country_event ={ #시리아와의 협상
 	id = SYR_event.13
 	title = SYR_event.13.t
 	desc = SYR_event.13.d
 	is_triggered_only = yes
-	option = { #ㅇㅋ
-		name = SYR_event.10.a
-		add_state_claim = 354
-		add_state_claim = 797
-		add_state_claim = 341
+	fire_only_once = yes
+	picture = GFX_report_event_generic_sign_treaty1
+	option = { #ㅈㅈ
+		name = SYR_event.13.a
 		SYR = {
+			drop_cosmetic_tag = yes
 			country_event = {
-				id = SYR_event.11
-				days = 3
+				id = SYR_event.1
+				days = 1
 			}
 		}
-		ai_chance = {
-			base = 100
-		}
-		set_country_flag = SYR_eat_tur
-	}
-	option = { #ㄴ
-		name = SYR_event.10.b
-		SYR = {
-			country_event = {
-				id = SYR_event.12
-				days = 3
-			}
+		LEB = {
+			drop_cosmetic_tag = yes
 		}
 	}
 }

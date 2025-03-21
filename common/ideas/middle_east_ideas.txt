@@ -19,6 +19,13 @@ ideas = {
 		}
 
 		#시리아
+		SYR_general_strike = { #시리아 총파업
+			picture = ICE_general_strike
+			modifier = {
+				global_building_slots = -1
+				production_speed_buildings_factor = -0.25
+			}
+		}
 		SYR_ruined_politic_0 = { #정치적 불안정
 			name = SYR_ruined_politic
 			picture = SPR_political_violence
