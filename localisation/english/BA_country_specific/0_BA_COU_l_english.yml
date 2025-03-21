@@ -811,6 +811,11 @@
  COU_council_democracy: "중앙 노동자 평의회"
  COU_alfred_haighton: "알프러트 헤이턴"
 
+ ##하이랜더 자리 
+ HTA_highlander_council:0 "하이랜더 위원회"
+ HTA_nozomi:0 "타치바나 노조미"
+ HTA_hikari:0 "타치바나 히카리"
+ 
  #총학생회 traits
  COU_dictator:0 "키보토스 총학생회장"
  COU_vacancy:0 "비어있는 학생회장"
