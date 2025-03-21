@@ -254,6 +254,12 @@
 
  GEH_neutrality_party:0 "선도부"
  GEH_neutrality_party_long:0 "선도부"
+ GEH_fascism_party:0 "선도부 급진파"
+ GEH_fascism_party_long:0 "선도부 급진파"
+ GEH_democratic_party:0 "선도부 기획부"
+ GEH_democratic_party_long:0 "선도부 기획부"
+ GEH_communism_party:0 "도이칠란트 공산당"
+ GEH_communism_party_long:0 "도이칠란트 공산당"
 
  KaiserCorporationGeneralMeeting:0 "카이저 노동자 협동조합 운영위원회"
  GeneralMeeting:0 "협동조합 운영위원회"
