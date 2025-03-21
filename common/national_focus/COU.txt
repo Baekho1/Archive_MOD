@@ -5282,7 +5282,20 @@ focus_tree = {
 		prerequisite = { focus = COU_establishment_of_human_rights_committee }
 		prerequisite = { focus = COU_reduction_of_administrative_committee_authority }
 		completion_reward = {
-		    
+			if = { limit = { has_idea = BA_railway_gauge_issue }
+				modify_timed_idea = {
+					idea = BA_railway_gauge_issue
+					days = -180
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = BA_nationalized_highlander }}
+				custom_effect_tooltip = BA_highlander_invest_big_tt
+				add_to_variable = {
+					BA_highlander_invest = 4
+				}
+			}
+			add_state_core = 977
 		}
 		ai_will_do = {
 			base = 100
@@ -5305,8 +5318,8 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-		    
-			
+		     add_stability = 0.1
+		     add_state_core = 6
 		}
 		ai_will_do = {
 			base = 100

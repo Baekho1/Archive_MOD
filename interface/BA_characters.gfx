@@ -246,6 +246,18 @@ spriteTypes = {
 		textureFile = "gfx/leaders/COU/portrait_COU_sancho_davilla_fernandez.png"
 	}
 	
+	spriteType = {
+		name = "GFX_portrait_highlander_council"
+		textureFile = "gfx/leaders/ABY/highlander_council.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_nozomi_portrait"
+		textureFile = "gfx/leaders/ABY/nozomi_portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_hikari_portrait"
+		textureFile = "gfx/leaders/ABY/hikari_portrait.tga"
+	}
 	
 	spriteType = {
 		name = "GFX_Rin"

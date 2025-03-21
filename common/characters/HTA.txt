@@ -1,0 +1,74 @@
+characters={
+	HTA_highlander_council={
+		portraits={
+			civilian={
+				large="GFX_portrait_highlander_council"
+			}
+		}
+		gender = female
+		country_leader={
+    		#desc=COU_XXX_desc
+			ideology=fascism_ideology
+			traits={  }
+			expire="19675.1.1.1"
+		}
+		country_leader={
+    		#desc=COU_XXX_desc
+			ideology=liberalism
+			traits={  }
+			expire="19675.1.1.1"
+		}
+		country_leader={
+    		#desc=COU_XXX_desc
+			ideology=marxism
+			traits={  }
+			expire="19675.1.1.1"
+		}
+		country_leader={
+    		#desc=COU_XXX_desc
+			ideology=despotism
+			traits={  }
+			expire="19675.1.1.1"
+		}
+	}
+	
+	HTA_hikari={
+		portraits={
+			civilian={
+				large="GFX_portrait_hikari_portrait" 
+			}
+		}
+		gender = female
+		corps_command={
+			traits = {
+			    politically_connected
+				infantry_officer
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	
+	HTA_nozomi={
+		portraits={
+			civilian={
+				large="GFX_portrait_nozomi_portrait" 
+			}
+		}
+		gender = female
+		corps_command={
+			traits = {
+			    politically_connected
+				infantry_officer
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+}

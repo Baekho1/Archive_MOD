@@ -1660,11 +1660,6 @@ country_event = {
 		    news_event = { id = BA_news.132 hours = 3 }
 			COU = { set_cosmetic_tag = COU_KAYA_DICTATORSHIP }
 		    BA_ban_democratic_effect = yes
-		    set_party_name = { 
-               ideology = fascism
-               long_name = COU_democratic_party_long
-               name = COU_democratic_party
-            }
 			add_popularity = { 
 		       ideology = democratic
 		       popularity = -0.1
@@ -1702,7 +1697,9 @@ country_event = {
 		add_stability = 0.1
 		add_war_support = 0.1
 		set_country_flag = RIN_ARREST
-		country_event = { id = COU_event.47 days = 7 }
+		country_event = COU_event.68
+		country_event = { id = COU_event.59 days = 5 }
+		#country_event = { id = COU_event.57 days = 10 }
 	}
 }
 
@@ -1722,6 +1719,7 @@ country_event = {
 		name = COU_event.47.a
 		set_country_flag = LETSGO_CHONGHAKS
 	    custom_effect_tooltip = COU_tooltip_arona_fuck
+		country_event = { id = COU_event.60 days = 10 }
 	}
 }
 
@@ -1923,6 +1921,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+	    #hidden_effect = { country_event = { id = COU_event.58 days = 7 } }
 	}
 
 	option = { 
@@ -1931,6 +1930,260 @@ country_event = {
 		clr_country_flag = SRT_BANNED
 	    custom_effect_tooltip = COU_tooltip_one_more_chance
 		complete_national_focus = COU_focus_yaksok_for_srt
+		swap_ideas = {
+		    remove_idea = COU_notgood_kaya_power
+			add_idea = COU_notgood_kaya_power2
+		}
+	}
+}
+
+country_event = { 
+	id = COU_event.58
+	title = COU_event.58.t
+	desc = COU_event.58.desc
+	picture = GFX_report_event_generic_door
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.58.a
+		custom_effect_tooltip = COU_tooltip_queen_never_cry
+		add_stability = -0.1
+		add_political_power = 100
+		swap_ideas = {
+		    remove_idea = COU_notgood_kaya_power2
+			add_idea = COU_notgood_kaya_power3
+		}
+		news_event = { id = BA_news.137 hours = 6 }
+		#HOL = { country_event = { id = BA_news.137 days = 1 } }
+	}
+}
+
+##끝..?
+country_event = {
+	id = COU_event.59
+	title = COU_event.59.t
+	desc = COU_event.59.desc
+	picture = GFX_COU_event_meetingroom
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.59.a
+		custom_effect_tooltip = COU_tooltip_maybe_its_bad
+		country_event = { id = COU_event.47 days = 2 }
+	}
+}
+
+country_event = {
+	id = COU_event.60
+	title = COU_event.60.t
+	desc = COU_event.60.desc
+	picture = GFX_COU_event_gsc_meetingroom
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.60.a
+		custom_effect_tooltip = COU_tooltip_maybe_its_really_bad
+		country_event = { id = COU_event.61 days = 7 }
+	}
+}
+
+country_event = {
+	id = COU_event.61
+	title = COU_event.61.t
+	desc = COU_event.61.desc
+	picture = GFX_report_event_picture_kaya_3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.61.a
+		custom_effect_tooltip = COU_tooltip_kaya_started_the_movement
+		add_ideas = COU_notgood_kaya_power
+		hidden_effect = {
+		     country_event = { id = COU_event.57 days = 7 }
+			 country_event = { id = COU_event.58 days = 14 } 
+			 country_event = { id = COU_event.62 days = 21 } 
+			 country_event = { id = COU_event.63 days = 28 } 
+			 country_event = { id = COU_event.64 days = 35 } 
+		}
+	}
+}
+
+country_event = {
+	id = COU_event.62
+	title = COU_event.62.t
+	desc = COU_event.62.desc
+	picture = GFX_report_event_she_arona_good
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.62.a
+		custom_effect_tooltip = COU_tooltip_kaya_gets_sangtum_tower
+		complete_national_focus = COU_focus_get_masterkey_from_arona
+		swap_ideas = {
+		    remove_idea = COU_notgood_kaya_power3
+			add_idea = COU_notgood_kaya_power4
+		}
+	}
+}
+
+country_event = {
+	id = COU_event.63
+	title = COU_event.63.t
+	desc = COU_event.63.desc
+	picture = GFX_report_event_picture_rabbit_uprised
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = { 
+		name = COU_event.63.a
+		custom_effect_tooltip = COU_tooltip_kaya_kronos_dead
+		complete_national_focus = COU_focus_use_the_news
+		swap_ideas = {
+		    remove_idea = COU_notgood_kaya_power4
+			add_idea = COU_notgood_kaya_power5
+		}
+	}
+}
+
+country_event = {
+	id = COU_event.64
+	title = COU_event.64.t
+	desc = COU_event.64.desc
+	picture = GFX_report_event_picture_pen_and_papeer
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = {
+		    KSP = { country_event = { id = COU_event.65 } }
+		}
+	}
+
+	option = { 
+		name = COU_event.64.a
+		custom_effect_tooltip = COU_tooltip_kaya_valkirie_declarewar
+		complete_national_focus = COU_focus_checks_the_valkirie
+		remove_ideas = COU_notgood_kaya_power5
+	}
+}
+
+country_event = {
+	id = COU_event.65
+	title = COU_event.65.t
+	desc = COU_event.65.desc
+	picture = GFX_report_event_picture_pen_and_papeer
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.65.a
+		COU = { country_event = { id = COU_event.66 hours = 8 } }
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_completed_focus = KSP_kanna_gov_rule
+				factor = -10
+			}
+		}
+	}
+	
+	option = { 
+		name = COU_event.65.b
+		COU = { annex_country = { target = KSP transfer_troops = yes } }
+		COU = { country_event = { id = COU_event.67 hours = 8 } }
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_completed_focus = KSP_sanghwal_safety_coup
+				factor = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = COU_event.66
+	title = COU_event.66.t
+	desc = COU_event.66.desc
+	picture = GFX_report_event_picture_kaya_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.66.a
+		declare_war_on = {
+			target = KSP
+			type = annex_everything
+			generator = { 34 }
+	    }
+	}
+}
+
+country_event = {
+	id = COU_event.67
+	title = COU_event.67.t
+	desc = COU_event.67.desc
+	picture = GFX_report_event_picture_kaya_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.67.a
+		add_stability = 0.02
+	}
+}
+
+##행정명령 6873호
+country_event = {
+	id = COU_event.68
+	title = COU_event.68.t
+	desc = COU_event.68.desc
+	picture = GFX_report_event_picture_kaya_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.68.a
+		custom_effect_tooltip = COU_tooltip_kaya_cant_do_nothing
+		add_political_power = -25
+		swap_ideas = {
+		    remove_idea = COU_ditchland_law
+			add_idea = COU_ditchland_law2
+		}
 	}
 }
 

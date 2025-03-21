@@ -582,6 +582,29 @@ ideas = {
 				compliance_gain = 0.01
             }
         }
+		
+		COU_ditchland_law2 = { #디츨란드법
+		    name = COU_ditchland_law2
+            picture = BEL_burgundian_heritage_ns 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                has_government = fascism
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.1
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				industrial_capacity_factory = 0.05
+				compliance_gain = 0.01
+            }
+        }
     
 
 		COU_autonomous_legislation_idea = { #주권법
@@ -1178,6 +1201,112 @@ ideas = {
 				training_time_factor = 0.2
 				conscription_factor = -0.2
 				army_org_factor = -0.15
+            }
+
+        }
+		
+		##불완전한 권력 
+		COU_notgood_kaya_power = { 
+		    name = COU_notgood_kaya_power
+            picture = ast_abandon_the_westminster_system_fascism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.15
+				political_power_factor = -0.15
+				drift_defence_factor = -0.25
+            }
+
+        }
+		
+		COU_notgood_kaya_power2 = { 
+		    name = COU_notgood_kaya_power
+            picture = ast_abandon_the_westminster_system_fascism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.12
+				political_power_factor = -0.12
+				drift_defence_factor = -0.22
+            }
+
+        }
+		
+		COU_notgood_kaya_power3 = { 
+		    name = COU_notgood_kaya_power
+            picture = ast_abandon_the_westminster_system_fascism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.1
+				political_power_factor = -0.1
+				drift_defence_factor = -0.2
+            }
+
+        }
+		
+		COU_notgood_kaya_power4 = { 
+		    name = COU_notgood_kaya_power
+            picture = ast_abandon_the_westminster_system_fascism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.07
+				political_power_factor = -0.07
+				drift_defence_factor = -0.17
+            }
+
+        }
+		
+		COU_notgood_kaya_power5 = { 
+		    name = COU_notgood_kaya_power
+            picture = ast_abandon_the_westminster_system_fascism 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                always = yes
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+				political_power_factor = -0.05
+				drift_defence_factor = -0.15
             }
 
         }

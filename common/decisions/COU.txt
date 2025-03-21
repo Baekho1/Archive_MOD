@@ -659,6 +659,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -698,6 +699,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -737,6 +739,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -778,6 +781,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -817,6 +821,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
