@@ -39,7 +39,7 @@ characters={
 			}
 		}
 		gender = female
-		corps_command={
+		corps_commander={
 			traits = {
 			    politically_connected
 				infantry_officer
@@ -59,7 +59,7 @@ characters={
 			}
 		}
 		gender = female
-		corps_command={
+		corps_commander = {
 			traits = {
 			    politically_connected
 				infantry_officer
