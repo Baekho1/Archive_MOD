@@ -1,0 +1,56 @@
+defined_text = {
+	name = SLO_in_a_rom
+	text = {
+		trigger = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		localization_key = "SLO_in_a_rom_yes"
+	}
+	text = {
+		localization_key = "SLO_in_a_rom_no"
+	}
+}
+defined_text = {
+	name = SLO_in_a_yug
+	text = {
+		trigger = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		localization_key = "SLO_in_a_yug_yes"
+	}
+	text = {
+		localization_key = "SLO_in_a_yug_no"
+	}
+}
+defined_text = {
+	name = SLO_in_a_pol
+	text = {
+		trigger = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		localization_key = "SLO_in_a_pol_yes"
+	}
+	text = {
+		localization_key = "SLO_in_a_pol_no"
+	}
+}
+defined_text = {
+	name = SLO_in_a_hun
+	text = {
+		trigger = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		localization_key = "SLO_in_a_hun_yes"
+	}
+	text = {
+		localization_key = "SLO_in_a_hun_no"
+	}
+}

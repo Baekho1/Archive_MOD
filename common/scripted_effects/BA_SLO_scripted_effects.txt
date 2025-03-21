@@ -27,3 +27,85 @@ SLO_economy_chaos_down = {
 		add_stability = 0.10
 	}
 }
+SLO_influence_check = {
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_ROM_influence
+				value = 100
+				compare = greater_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_ROM_influence = 100 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_YUG_influence
+				value = 100
+				compare = greater_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_YUG_influence = 100 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_POL_influence
+				value = 100
+				compare = greater_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_POL_influence = 100 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_HUN_influence
+				value = 100
+				compare = greater_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_HUN_influence = 100 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_ROM_influence
+				value = 0
+				compare = less_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_ROM_influence = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_YUG_influence
+				value = 0
+				compare = less_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_YUG_influence = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_POL_influence
+				value = 0
+				compare = less_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_POL_influence = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { 
+				var = var:global.SLO_HUN_influence
+				value = 0
+				compare = less_than_or_equals 
+			}
+		}
+		set_variable = { var:global.SLO_HUN_influence = 0 }
+	}
+}

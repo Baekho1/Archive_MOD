@@ -740,11 +740,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 6
+		x = 7
 		y = 8
-		prerequisite = {
-			focus = SLO_foc_1-4-5
-		}
 		prerequisite = {
 			focus = SLO_foc_1-4-14
 		}
@@ -753,10 +750,28 @@ focus_tree = {
 		}
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = SLO_tt_3
+				OR = {
+					ROM = {
+						has_idea = SLO_slo_trade_idea
+					}
+					YUG = {
+						has_idea = SLO_slo_trade_idea
+					}
+					POL = {
+						has_idea = SLO_slo_trade_idea
+					}
+					HUN = {
+						has_idea = SLO_slo_trade_idea
+					}
+				}
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
+			unlock_decision_category_tooltip = SLO_decisions_1
 		}
 	}
 	focus = {
@@ -774,7 +789,7 @@ focus_tree = {
 			focus = SLO_foc_1-4-5
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-1-16
+			focus = SLO_foc_1-4-17
 		}
 		available = {
 			is_faction_leader = yes
@@ -813,8 +828,8 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-17
-		icon = GFX_focus_generic_befriend_hungary
-		cost = 10
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -828,17 +843,18 @@ focus_tree = {
 		}
 		available = {
 			is_faction_leader = yes
-			has_completed_focus = SLO_foc_1-4-14
+			NOT = {
+				has_war_with = HUN
+			}
 		}
 		bypass = {
+			HUN = {
+				exists = no
+			}
 		}
 		completion_reward = {
 			HUN = {
 				add_opinion_modifier = { target = SLO modifier = large_increase }
-				country_event = {
-					id = SLO_event.1
-					hours = 6
-				}
 			}
 		}
 	}
@@ -851,7 +867,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 4
+		x = 5
 		y = 8
 		prerequisite = {
 			focus = SLO_foc_1-4-16
@@ -862,8 +878,26 @@ focus_tree = {
 		}
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = SLO_tt_2
+				if = {
+					limit = {
+						has_completed_focus = SLO_foc_1-4-16
+					}
+					has_global_flag = POL_cut_of_HUN
+				}
+			}
+			POL = {
+				NOT = {
+					has_war_with = SLO
+				}
+				is_in_faction = no
+			}
 		}
 		bypass = {
+			POL = {
+				exists = no
+			}
 		}
 		completion_reward = {
 			POL = {
@@ -871,6 +905,97 @@ focus_tree = {
 					id = generic.5
 				}
 			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-19
+		icon = GFX_focus_generic_befriend_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-17
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-20
+		}
+		available = {
+			is_faction_leader = yes
+			HUN = {
+				NOT = {
+					has_war_with = SLO
+				}
+				is_in_faction = no
+			}
+		}
+		bypass = {
+			HUN = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			HUN = {
+				country_event = {
+					id = generic.5
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-20
+		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-15
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-18
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-19
+		}
+		available = {
+			is_faction_leader = yes
+			if = {
+				limit = {
+					country_exists = ROM
+				}
+				is_in_faction_with = ROM
+			}
+			if = {
+				limit = {
+					country_exists = YUG
+				}
+				is_in_faction_with = YUG
+			}
+			if = {
+				limit = {
+					country_exists = POL
+				}
+				is_in_faction_with = POL
+			}
+		}
+		bypass = {
+			OR = {
+				HUN = {
+					exists = no
+				}
+				has_war_with = HUN
+			}
+		}
+		completion_reward = {
 		}
 	}
 	### 파시, 파시즘, 파시스트 루트 ###
