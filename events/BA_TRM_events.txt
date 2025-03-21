@@ -8818,7 +8818,7 @@ country_event = { # 트리니티 의용군단
 		name = trinity.21.a
 		add_stability = -0.05
 		add_popularity = { ideology = communism popularity = 0.04 }
-		add_ideas = TRM_trinity_volunteer_corps_ns
+		add_ideas = TRN_trinity_volunteer_corps_ns
 		every_state = {
 			limit = { 
 				has_resistance = yes 
@@ -9025,7 +9025,7 @@ country_event = { # 트리니티 교육과정
 			base = 0
 		}
 		TRM_bop_very_low_increase_effect = yes
-
+		add_ideas = TRN_new_culture_militarism_ns
     }
 
 	option = {
@@ -9034,6 +9034,7 @@ country_event = { # 트리니티 교육과정
 			base = 10 
 		}
 		TRM_bop_very_low_decrease_effect = yes
+		add_ideas = TRN_new_culture_culture_technology_ns
 		
     }
 }
@@ -9053,6 +9054,8 @@ country_event = { # 종교 갈등
 			base = 10
 		}
 		TRM_bop_low_decrease_effect = yes
+		add_stability = -0.1
+		add_political_power = 120
 		# 미니게임 하나 오픈
     }
 
@@ -9062,7 +9065,66 @@ country_event = { # 종교 갈등
 			base = 5 
 		}
 		TRM_bop_very_low_decrease_effect = yes
+		add_stability = -0.05
 		# 미니게임 하나 오픈
+    }
+}
+
+country_event = { # 여성 인권에 대한 논의
+	id = trinity.30
+	title = trinity.30.t
+	desc = trinity.30.desc
+	picture = GFX_report_event_SWE_summer_government
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.30.a
+		ai_chance = { 
+			base = 10
+		}
+		TRM_bop_very_low_decrease_effect = yes
+		add_stability = -0.05
+		add_timed_idea = {
+			idea = TRN_womens_rights_movement_ns
+			days = 70
+		}
+    }
+
+	option = {
+		name = trinity.30.b
+		ai_chance = { 
+			base = 2
+		}
+		TRM_bop_very_low_increase_effect = yes
+		add_stability = 0.02
+    }
+}
+
+country_event = { # 여성 인권에 대한 논의
+	id = trinity.31
+	title = trinity.31.t
+	desc = trinity.31.desc
+	picture = GFX_report_event_SWE_summer_government
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.31.a
+		ai_chance = { 
+			base = 10
+		}
+		TRM_bop_very_low_decrease_effect = yes
+    }
+
+	option = {
+		name = trinity.31.b
+		ai_chance = { 
+			base = 2
+		}
+		TRM_bop_very_low_increase_effect = yes
     }
 }
 

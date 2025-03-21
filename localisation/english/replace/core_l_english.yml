@@ -1,5 +1,9 @@
 ﻿l_english:
  FE_MULTI_PLAYER:0 "여럿이서 하기 (§R비추천§!)"
+ FE_HISTORICAL:0 "역사적 AI 중점 §H(활성화 추천)§!"
+ 
+ MENU_YOUTUBE:0 "블루 아카이브 모드 공식 유튜브"
+ MENU_DISCORD:0 "블루 아카이브 모드 공식 디스코드"
 
  EFFECT_COUNTRY_EVENT:0 "'$EVENT|Y$' 사건 발생.\n"
 

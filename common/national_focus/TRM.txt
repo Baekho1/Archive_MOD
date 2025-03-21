@@ -6971,16 +6971,18 @@ focus_tree = {
 
 		}
 		select_effect = {
-			country_event = { id = trinity.28 days = 08 }
-			country_event = { id = trinity.29 days = 16 }
-			# 위에 나온 종교 문제에 대한 해결 - 해결
+			country_event = { id = trinity.28 days = 08 } # 트리니티 교육과정
+			country_event = { id = trinity.29 days = 16 } # 문화투쟁
+			country_event = { id = trinity.30 days = 24 } # 여성 인권
 			# 교육 과정에 대한 논의 - 해결
+			# 위에 나온 종교 문제에 대한 해결 - 해결
+			# 여성의 사회적 입지? - 해결
+
 			# 기존의 독일 대학교에 대한 처우?
-			# 여성의 사회적 입지?
 			# 몰라 ㅋㅋ 일단 뭐든지 넣던가 해야지
 		}
 		completion_reward = {
-
+			custom_effect_tooltip = TRN_new_trinity_culture_tt
 		}
 	}
 	
@@ -7006,7 +7008,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TRN_new_culture_militarism_ns }
+				swap_ideas = {
+					add_idea = 	TRN_new_culture_militarism_german_thinkers_ns
+					remove_idea = TRN_new_culture_militarism_ns
+				}
+			}
+			if = {
+				limit = { has_idea = TRN_new_culture_culture_technology_ns }
+				swap_ideas = {
+					add_idea = TRN_new_culture_culture_technology_german_thinkers_ns
+					remove_idea = TRN_new_culture_culture_technology_ns
+				}
+			}
+			# 중점 완료시 인물들이 들어오게 하는건 아직 미구현
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TRN_Carl_Schmitt_idea
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TRM_hans_zehrer_idea
 
+			custom_effect_tooltip = tooltip_white_line
+			TRM_bop_medium_increase_effect = yes
 		}
 	}
 	
@@ -7031,7 +7055,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = { has_idea = TRN_new_culture_militarism_ns }
+				swap_ideas = {
+					add_idea = TRN_new_culture_militarism_aliance_of_faith_ns
+					remove_idea = TRN_new_culture_militarism_ns
+				}
+			}
+			if = {
+				limit = { has_idea = TRN_new_culture_culture_technology_ns }
+				swap_ideas = {
+					add_idea = TRN_new_culture_culture_technology_aliance_of_faith_ns
+					remove_idea = TRN_new_culture_culture_technology_ns
+				}
+			}
+			add_trait = {
+				character = TRN_dnxkwmal_tkznfkzh
+				trait = TRM_defender_of_faith
+			}
+			custom_effect_tooltip = tooltip_white_line
+			TRM_bop_medium_decrease_effect = yes
 		}
 	}
 
