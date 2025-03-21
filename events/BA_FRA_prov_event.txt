@@ -363,6 +363,11 @@ country_event = {
 						popularity = 1.0
 					}
 					every_core_state = {
+						limit = {
+							NOT = {
+								is_on_continent = europe
+							}
+						}
 						remove_core_of = PREV
 					}
 					retire_country_leader = yes
@@ -488,6 +493,11 @@ country_event = {
 						popularity = 1.0
 					}
 					every_core_state = {
+						limit = {
+							NOT = {
+								is_on_continent = europe
+							}
+						}
 						remove_core_of = PREV
 					}
 					retire_country_leader = yes
