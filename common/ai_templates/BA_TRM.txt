@@ -1,8 +1,6 @@
 TRM_line_infantry = {
 
-	available_for = {
-		TRM
-	}
+	available_for = { TRM }
 
 	upgrade_prio = {
 		factor = 10
@@ -10,7 +8,7 @@ TRM_line_infantry = {
 	
 	role = infantry
 
-	infantry_default = {
+	TRM_infantry_default = {
 		upgrade_prio = {
 			base = 1
 		}
@@ -32,7 +30,7 @@ TRM_line_infantry = {
 		}
 	}
 
-	infantry_upgraded = {
+	TRM_infantry_upgraded = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
