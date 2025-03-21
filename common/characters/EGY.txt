@@ -486,7 +486,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
 		}
 	}
 	EGY_mahmoud_hamza_pasha = {
@@ -947,7 +947,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
 		}
 	}
 
@@ -1063,7 +1063,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
 		}
 	}
 	EGY_ahmed_hassanein = { # Aristocrat, but that doesn't matter
@@ -1142,7 +1142,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
 		}
 	}
 	EGY_abdel_latif_boghdadi = {
@@ -1170,7 +1170,7 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
 		}
 	}
 	EGY_hassan_ibrahim = {
@@ -1198,7 +1198,254 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 6985
+			legacy_id = -1
+		}
+	}
+
+	EGY_Hoshino={
+		name=ABYDOS_Hoshino
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/KakaoTalk_20240505_122120974.dds"
+			}
+			army={
+				large="gfx/leaders/ABY/KakaoTalk_20240505_122120974.dds"
+				small="gfx/interface/advisors/ABY/ABY_Takanashi_Hoshino_idea.dds"
+			}
+		}
+		gender = female
+		field_marshal={
+			traits = {
+				front_line_general infantry_officer expert_delegator unyielding_defender adaptable
+			}
+			skill=5
+			attack_skill=5
+			defense_skill=6
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+			visible = {
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+		}
+	}
+	EGY_Shiroko={
+		name=ABYDOS_Shiroko
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/sirocoride.dds"
+			}
+			army={
+				large="gfx/leaders/ABY/sirocoride.dds"
+				small= "gfx/interface/advisors/ABY/ABY_Sunaokami_Shiroko_idea.tga"
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			desc = ABY_Shiroko_advisor_desc
+			idea_token = ABY_shiroko_political_advisor
+			allowed = {
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
+			}
+			traits = {
+				EGY_trait_anubis
+			}
+			visible = {
+				has_country_flag = EGY_ABYDOS_kingdom
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = {
+				reckless adaptable harsh_leader aggressive_assaulter
+			}
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=6
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+		}
+	}
+	EGY_serika={
+		name=ABYDOS_serika
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/serikan.dds"
+			}
+			army={
+				large= "gfx/leaders/ABY/serikan.dds"
+				small="gfx/interface/advisors/ABY/ABY_Kuromi_Serika_idea.tga"
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			desc = ABY_Serika_advisor_desc
+			idea_token = ABY_serika_political_advisor
+			allowed = {
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
+			}
+			traits = {
+				EGY_trait_bastep
+			}
+			visible = {
+				has_country_flag = EGY_ABYDOS_kingdom
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = {
+				reckless scavenger infantry_officer adaptable
+			}
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+		}
+	}
+	EGY_nonomi={
+		name=ABYDOS_nonomi
+		portraits={
+			army={
+				large= "gfx/leaders/ABY/ABY_Izayoi_Nonomi_Portarit.tga"
+				small="gfx/interface/advisors/ABY/ABY_Izayoi_Nonomi_idea.tga"
+			}
+		}
+		gender = female
+		corps_commander={
+			traits = {
+				logistics_wizard politically_connected adaptable
+			}
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=7
+			legacy_id=-1
+			visible = {
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = ABY_Nonomi_advisor_desc
+			idea_token = ABY_nonomie_1
+			allowed = {
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
+			}
+			traits = {
+				EGY_trait_nephthys
+			}
+			visible = {
+				has_country_flag = EGY_ABYDOS_kingdom
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EGY_Ayane={
+		name=ABYDOS_Ayane
+		portraits={
+			army={
+				large= "gfx/leaders/ABY/ABY_Okusora_Ayane_Portrait.tga"
+				small="gfx/interface/advisors/ABY/ABY_Okusora_Ayane_idea.tga"
+			}
+		}
+		gender = female
+		field_marshal={
+			traits = {
+				brilliant_strategist skilled_staffer cautious thorough_planner adaptable
+			}
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=7
+			logistics_skill=4
+			legacy_id=-1
+			visible = {
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+		}
+		advisor={
+			slot = theorist
+			desc = ABY_Ayane_advisor_desc
+			idea_token = ABY_Ayane_2
+			allowed = {
+				OR = {
+					original_tag = ABY
+					original_tag = EGY
+				}
+			}
+			traits = {
+				EGY_trait_tot
+			}
+			visible = {
+				has_country_flag = EGY_ABYDOS_kingdom
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EGY_ennead={
+		name=EGY_ennead
+		portraits={
+			civilian={
+				large="gfx/leaders/ABY/xd.tga"
+			}
+			army={
+				large= "gfx/leaders/ABY/xd.tga"
+				small="gfx/interface/advisors/ABY/ABY_not_made_idea.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EGY_ennead
+			can_be_fired = no
+			available = {
+			}
+			allowed  = {
+				original_tag  = ABY
+			}
+			traits  = {
+				EGY_trait_ennead
+				EGY_trait_outer
+			}
+			visible = {
+				NOT = {has_country_flag = EGY_ABYDOS_kingdom}
+				has_country_flag = EGY_flag_ABYDOS_come
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 	}
 }

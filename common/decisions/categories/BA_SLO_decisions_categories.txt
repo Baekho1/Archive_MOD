@@ -1,0 +1,31 @@
+SLO_decisions_1 = { #브라티슬라바 경제 협력 기구
+	priority = 10
+	icon = GFX_decision_category_generic_industry
+	allowed = {
+		original_tag = SLO
+	}
+	visible = {
+		has_completed_focus = SLO_foc_1-4-15
+	}
+	available = {
+	}
+	visible_when_empty = yes
+}
+SLO_decisions_2 = { #브라티슬라바 경제 협력 기구
+	priority = 10
+	icon = GFX_decision_category_generic_industry
+	allowed = {
+		OR = {
+			original_tag = ROM
+			original_tag = YUG
+			original_tag = POL
+			original_tag = HUN
+		}
+	}
+	visible = {
+		has_idea = SLO_slo_trade_idea
+	}
+	available = {
+	}
+	visible_when_empty = yes
+}	

@@ -16,59 +16,52 @@ country_event = { #아비도스 대책위원회의 망명
 
 	option = { 
 		name = EGY_event.1.a
-		add_political_power = -50
-		set_province_name = {
-			id = 1151
-			name = ABY_name_abydos
-		}
-		456 = {
-			add_manpower = 382
-		}
-		set_party_name = {
-			ideology = communism
-    		long_name = EGY_communism_2_party
-    		name = EGY_communism_2_party
+		country_event = {
+			id = EGY_event.4
 		}
 		set_country_flag = EGY_flag_ABYDOS_come
 		set_technology = {
 			kivotos_infantry_weapons = 1
 		}
-		ABY = {
-			ABYDO_Hoshino = {
-				set_nationality = EGY
-			}
-			ABYDO_Shiroko = {
-				set_nationality = EGY
-			}
-			ABYDO_nonomi = {
-				set_nationality = EGY
-			}
-			ABYDO_ayane = {
-				set_nationality = EGY
-			}
-			ABYDO_Serika = {
-				set_nationality = EGY
-			}
-			ABYDO_tlqkf = {
-				set_nationality = EGY
-			}
-			every_character = {
-				retire = yes
-			}
-			every_state = {
-				remove_core_of = ABY
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 74
-						state = 69
-						state = 972
-					}
+		effect_tooltip = {
+			ABY = {
+				ABYDO_Hoshino = {
+					set_nationality = EGY
 				}
-				add_core_of = ABY
+				ABYDO_Shiroko = {
+					set_nationality = EGY
+				}
+				ABYDO_nonomi = {
+					set_nationality = EGY
+				}
+				ABYDO_ayane = {
+					set_nationality = EGY
+				}
+				ABYDO_Serika = {
+					set_nationality = EGY
+				}
 			}
-			set_cosmetic_tag = ABY_sudetenland
+		}
+		hidden_effect = {
+			ABY = {
+				every_character = {
+					retire = yes
+				}
+				every_state = {
+					remove_core_of = ABY
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 74
+							state = 69
+							state = 972
+						}
+					}
+					add_core_of = ABY
+				}
+				set_cosmetic_tag = ABY_sudetenland
+			}
 		}
 	}
 }
@@ -91,41 +84,49 @@ country_event = { #수단 병합
 			add_dynamic_modifier = {
 				modifier = EGY_low_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		883 = {
 			add_dynamic_modifier = {
 				modifier = EGY_low_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		767 = {
 			add_dynamic_modifier = {
 				modifier = EGY_low_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		887 = {
 			add_dynamic_modifier = {
 				modifier = EGY_middle_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		549 = {
 			add_dynamic_modifier = {
 				modifier = EGY_middle_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		886 = {
 			add_dynamic_modifier = {
 				modifier = EGY_middle_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		884 = {
 			add_dynamic_modifier = {
 				modifier = EGY_high_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 		885 = {
 			add_dynamic_modifier = {
 				modifier = EGY_high_sudan_rabel
 			}
+			set_state_flag = EGY_sudan_rabel
 		}
 	}
 }
@@ -153,6 +154,58 @@ country_event = { #푸아드 1세 사망
 				expire = "1965.1.1.1"
 				traits = { EGY_farouk_i_of_egypt EGY_young_king }
 			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.4
+	title = EGY_event.4.t	
+	desc = EGY_event.4.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.4.a
+		country_event = {
+			id = EGY_event.5
+		}
+		set_province_name = {
+			id = 1151
+			name = ABY_name_abydos
+		}
+		456 = {
+			add_manpower = 382
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.5
+	title = EGY_event.5.t	
+	desc = EGY_event.5.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.5.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		set_party_name = {
+			ideology = communism
+    		long_name = EGY_communism_2_party
+    		name = EGY_communism_2_party
+		}
+		remove_ideas = {
+			EGY_idea_no_socialism
+		}
+		add_to_variable = {
+			EGY_Binah_health = -100
+			tooltip = EGY_binah_attack_ABYDOS_tt
 		}
 	}
 }

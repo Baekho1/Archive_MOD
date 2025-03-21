@@ -304,7 +304,6 @@ characters={
 			}
 			traits  = {
 				prince_of_terror
-				fascist_demagogue
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -432,19 +431,19 @@ characters={
 				small="gfx/interface/advisors/SLO/SLO_Spot_14.tga"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_ludovit_rajter
-			allowed = {
-				original_tag = SLO
-			}
-			traits  = {
-				great_musician
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
+#		advisor={
+#			slot = political_advisor
+#			idea_token = SLO_ludovit_rajter
+#			allowed = {
+#				original_tag = SLO
+#			}
+#			traits  = {
+#				great_musician
+#			}
+#			ai_will_do  = {
+#				factor  = 1.000
+#			}
+#		}
 	}
 	SLO_jan_reznak={ #얀 레즈나크 / 공군
 		name="SLO_jan_reznak"
@@ -711,8 +710,7 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				propaganda_expert
-				national_socialist_sympathizer
+				fascist_demagogue
 			}
 			ai_will_do  = {
 				factor  = 1.000

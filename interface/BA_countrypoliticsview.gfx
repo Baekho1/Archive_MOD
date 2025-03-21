@@ -147,19 +147,15 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_Self_Reliance"
-		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
+		texturefile = "gfx/interface/ideologies/Self_Reliance_2.tga"
 	}
 	spriteType = {
 		name = "GFX_ideology_Cohabitism"
 		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
 	}
 	spriteType = {
-		name = "GFX_ideology_Libertic_Integralism"
-		texturefile = "gfx/interface/ideologies/Self_Reliance.tga"
-	}
-	spriteType = {
 		name = "GFX_ideology_culturlic_Integralism"
-		texturefile = "gfx/interface/ideologies/culturlic_Integralism.tga"
+		texturefile = "gfx/interface/ideologies/war_communism.dds"
 	}
 	spriteType = {
 		name = "GFX_ideology_corporate_state_nephtys"
@@ -215,6 +211,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_monarchist_socialism"
+		texturefile = "gfx/interface/ideologies/monarchist_socialism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_monarchist_socialism_democratic"
 		texturefile = "gfx/interface/ideologies/monarchist_socialism.dds"
 	}
 	spriteType = {
