@@ -67,7 +67,6 @@ recruit_character = BEL_jules_iserentant
 recruit_character = BEL_victor_van_strydonck_de_burkel
 recruit_character = BEL_paul-henri_spaak
 recruit_character = BEL_gaston_eyskens
-recruit_character = BEL_paul_van_zeeland
 
 # 스토리 아카이브 사용 시 정의
 set_variable = {

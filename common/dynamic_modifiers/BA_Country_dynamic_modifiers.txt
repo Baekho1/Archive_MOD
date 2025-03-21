@@ -930,7 +930,7 @@ RED_labor_party_dynamic_modifier = { #용역부
 
 	industrial_capacity_factory = RED_labor_party_dynamic_modifier_industrial_capacity_factory
 	industrial_capacity_dockyard = 0.03
-	production_speed_buildings_factor = 0.03
+	production_speed_buildings_factor = RED_labor_party_dynamic_modifier_production_speed_buildings_factor
 	production_speed_coastal_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_coastal_bunker_factor
 	production_speed_bunker_factor = RED_labor_party_dynamic_modifier_production_speed_bunker_factor
 	production_factory_max_efficiency_factor = RED_labor_party_dynamic_modifier_production_factory_max_efficiency_factor
@@ -1551,6 +1551,7 @@ ARI_anarchism_society = { #아나키즘 사회
 POL_trump_eat = { #공동군사기금 
 	enable = {
 		has_war_with = SOV
+		is_in_faction = yes
 	}
 	military_factory_donations = POL.POL_solidarity_trump_var
 	icon = GFX_idea_GER_economy_of_conquest

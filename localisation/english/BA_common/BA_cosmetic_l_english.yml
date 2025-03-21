@@ -148,6 +148,10 @@
  COU_go_to_left_left_world_2: "세계 공산주의 인터내셔널"  #모모카 좌파 - 유럽 통일 - WC
  COU_go_to_left_left_world_2_DEF: "세계 공산주의 인터내셔널"
  COU_go_to_left_left_world_2_ADJ: "세계 공산주의 인터내셔널"
+ 
+ COU_KAYA_DICTATORSHIP: "키보토스 총학생회"
+ COU_BEL_WALLONIE_NATIONAL_STATE: "왈로니 국민연합"
+ COU_BEL_WALLONIE_NATIONAL_STATE_DEF: "왈로니 국민연합"
 
 #SRT 특수임무부대
  COU_SRT_cosmetic: "신키보토스 총학생회"
@@ -524,6 +528,10 @@
  SHE_student_council: "키보토스 총학생회"
  SHE_student_council_DEF: "키보토스 총학생회"
  SHE_student_council_ADJ: "키보토스 총학생회"
+
+ KSP_center_school_fascism: "발키리 중앙학원"
+ KSP_center_school_fascism_DEF: "발키리 중앙학원"
+ KSP_center_school_fascism_ADJ: "발키리"
 
  EGY_arab_united_republic_fascism: "아랍 연합 공화국"
  EGY_arab_united_republic_fascism_DEF: "아랍 연합 공화국"
@@ -995,16 +1003,16 @@
 
  ABY_greater_abydos_fascism: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
  ABY_greater_abydos_fascism_DEF: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_greater_abydos_democratic: "아비도스 고등연방학교"
- ABY_greater_abydos_democratic_DEF: "아비도스 고등연방학교"
- ABY_greater_abydos_neutrality: "네프티스 그룹 기업체"
- ABY_greater_abydos_neutrality_DEF: "네프티스 그룹 기업체"
- ABY_greater_abydos_communism: "아비도스 인민연방"
- ABY_greater_abydos_communism_DEF: "아비도스 인민연방"
+ ABY_greater_abydos_democratic: "아비도스 합중 공화국"
+ ABY_greater_abydos_democratic_DEF: "아비도스 합중 공화국"
+ ABY_greater_abydos_neutrality: "대아비도스"
+ ABY_greater_abydos_neutrality_DEF: "대아비도스"
+ ABY_greater_abydos_communism: "주권국 연맹"
+ ABY_greater_abydos_communism_DEF: "주권국 연맹"
  ABY_greater_abydos_fascism_ADJ: "성스러운 대아비도스의 유메와호시노 입헌공화왕정연합제3제국연방"
- ABY_greater_abydos_democratic_ADJ: "아비도스 고등학교"
- ABY_greater_abydos_neutrality_ADJ: "네프티스"
- ABY_greater_abydos_communism_ADJ: "인민연방"
+ ABY_greater_abydos_democratic_ADJ: "합중 공화국"
+ ABY_greater_abydos_neutrality_ADJ: "아비도스"
+ ABY_greater_abydos_communism_ADJ: "주권연맹"
 
  ABY_united_europe_fascism: "범유럽국"
  ABY_united_europe_fascism_DEF: "범유럽국"

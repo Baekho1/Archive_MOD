@@ -116,14 +116,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/bop/bop_KSP_security_shine_side.tga"
 	}
 	SpriteType = {
-		name = "GFX_TRM_bop_GER" 
-		texturefile = "gfx/interface/bop/TRM_bop_GER.tga"
-	}
-	SpriteType = {
-		name = "GFX_TRM_bop_SIS" 
-		texturefile = "gfx/interface/bop/TRM_bop_SIS.tga"
-	}
-	SpriteType = {
 		name = "GFX_RED_bop_cherino" 
 		texturefile = "gfx/interface/bop/bop_RED_cherino_side.tga"
 	}
@@ -166,5 +158,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_bop_HEU_aru_hard_boiled_side" 
 		texturefile = "gfx/interface/bop/bop_HEU_aru_hard_boiled_side.dds"
+	}
+	SpriteType = {
+		name = "GFX_bop_TRM_Trinity_Socialism" 
+		texturefile = "gfx/interface/bop/bop_TRM_Trinity_Socialism.dds"
+	}
+	SpriteType = {
+		name = "GFX_bop_TRM_Trinity_Nazism" 
+		texturefile = "gfx/interface/bop/bop_TRM_Trinity_Nazism.dds"
 	}
 }	

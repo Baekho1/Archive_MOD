@@ -1393,6 +1393,56 @@ leader_traits = {
 		random = no
 		opinion_gain_monthly_same_ideology_factor = 0.05
 	}
+	EGY_trait_outer = {
+		random = no
+		political_power_factor = -0.25
+	}
+	EGY_trait_ennead = {
+		random = no
+		communism_drift = 0.05
+		stability_factor = 0.15
+		resistance_target = -0.1
+		compliance_gain = 0.1
+	}
+	EGY_trait_horus = {
+		random = no
+		political_power_factor = 0.25
+		war_support_factor = 0.15
+		research_speed_factor = 0.1
+	}
+	EGY_trait_anubis = {
+		random = no
+		offensive_war_stability_factor = 0.2
+		justify_war_goal_time = -0.5
+		army_attack_factor = 0.1
+	}
+	EGY_trait_nephthys = {
+		random = no
+		army_core_defence_factor = 0.2
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.1
+	}
+	EGY_trait_bastep = {
+		random = no
+		compliance_gain = 0.1
+		conscription = 0.01
+		conscription_factor = 0.15
+	}
+	EGY_trait_tot = {
+		random = no
+		land_doctrine_cost_factor = -0.1
+		naval_doctrine_cost_factor = -0.1
+		air_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.05
+		experience_gain_navy = 0.05
+		experience_gain_air = 0.05
+	}
+	EGY_trait_hoshino_queen = {
+		random = no
+		communism_drift = 0.15
+		stability_factor = 0.15
+		drift_defence_factor = 0.5
+	}
 	EGY_young_king = {
 		random = no
 		drift_defence_factor = -0.25
@@ -1633,6 +1683,41 @@ leader_traits = {
 			}
 		}
 	}
+
+	GEH_paranoia_ako = { # 편집증적 히나주의자
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.05
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+	}
+
+	GEH_artist = { # 예술가
+		random = no
+		sprite = 13
+	}
+
+	GEH_bauhaus = { # 바우하우스
+		random = no
+		production_speed_infrastructure_factor = 0.2
+		consumer_goods_factor = -0.15
+	}
+
+	GEH_degenerate_art = { # 퇴폐미술가
+		random = no
+		research_speed_factor = 0.03
+		Weekly_casualties_war_support = 0.002
+		Weekly_convoys_war_support = 0.002
+		Weekly_bombing_war_support = 0.002
+	}
+
+	GEH_composer = { # 클래식 작곡가
+		random = no
+		stability_factor = 0.05
+	}
+
+
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
 		random = no
@@ -2204,6 +2289,18 @@ leader_traits = {
 		random = no
 		max_command_power = 20
 		mobilization_laws_cost_factor = -0.25
+	}
+	TRM_trinity_messiah = {
+		random = no 
+		power_balance_weekly = -0.01
+		stability_factor = 0.05
+		compliance_gain = 0.01
+	}
+	TRM_tough_soldier = {
+		random = no 
+		power_balance_weekly = 0.01
+		army_morale_factor = 0.06
+		weekly_casualties_war_support = 0.003
 	}
 	TRM_histroy_loser = {
 		sprite = 13
@@ -3329,11 +3426,37 @@ leader_traits = {
 		war_support_factor = 0.10
 	}
 	COU_HAINE_SET1 = { #체육실장
-	random = no
-	sprite = 5
-	experience_gain_army = 0.1
-	land_doctrine_cost_factor = -0.1
-}
+		random = no
+		sprite = 5
+		experience_gain_army = 0.1
+		land_doctrine_cost_factor = -0.1
+	}
+	KSP_victor_matthys_trait = { #노동사회주의 인터내셔널 벨기에 대표
+		random = no
+		sprite = 13
+		war_support_factor = 0.10
+		war_support_weekly_factor = 0.10
+		fascism_drift = 0.01
+	}
+	KSP_emile_vanderveld_trait = { #노동사회주의 인터내셔널 벨기에 대표
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.15
+		communism_drift = 0.01
+	}
+	KSP_paul_van_zeeland_trait = { #전 벨기에 총리
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		stability_factor = 0.10
+	}
+	BEL_paul_emile_janson_trait = { #벨기에 자유주의 거물
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		resistance_target = -0.05
+	}
 	KSP_KANNA_ORIGIN_1 = { #발키리의 희망
 		random = no
 		political_power_factor = 0.10

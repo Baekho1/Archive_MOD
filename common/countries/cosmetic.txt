@@ -2333,6 +2333,10 @@ SHE_student_council = {
 	color = HSV { 0 0 0.9 }
 	color_ui = rgb { 230 230 230 }
 }
+KSP_center_school = {
+	color = rgb { 133 112 182 }
+	color_ui = rgb { 150 110 180 }
+}
 KSP_belgium_imsi = {
 	color = rgb { 102 102 102 }
 	color_ui = rgb { 102 102 102 }
@@ -2963,4 +2967,12 @@ HEU_west_germanic_union = {
 HEU_germanic_union = {
 	color = rgb { 116 100 59 }
 	color_ui = rgb { 116 100 59 }
+}
+COU_KAYA_DICTATORSHIP = {
+	color = rgb { 60 60 85 }
+	color_ui = rgb { 230 31 89 }
+}
+COU_BEL_WALLONIE_NATIONAL_STATE = {
+	color = rgb { 199 187 0 }
+	color_ui = rgb { 209 140 10 }
 }

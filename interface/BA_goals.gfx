@@ -1,4 +1,8 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
+		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
+	}
 	SpriteType = {
 		name = "GFX_focus_GEH_last_focus_effect"
 		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
@@ -79,6 +83,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_TRN_declare_trinity_order_state"
 		texturefile = "gfx/interface/goals/TRN/TRN_declare_trinity_order_state.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_cult_of_Mika"
+		texturefile = "gfx/interface/goals/TRN/TRN_cult_of_Mika.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_germany_thinker"
+		texturefile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_alliance_of_faith"
+		texturefile = "gfx/interface/goals/TRN/TRN_alliance_of_faith.tga"
 	}
 
 	SpriteType = {
@@ -303,6 +319,10 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv1.dds"			
 	}
 
+	SpriteType = {
+		name = "GFX_RED_entice_publicworks"
+		texturefile = "gfx/interface/goals/RED/RED_entice_publicworks.tga"
+	}
 	SpriteType = {
 		name = "GFX_RED_momiji"
 		texturefile = "gfx/interface/goals/RED/RED_momiji.tga"
@@ -994,10 +1014,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_TRN_radio_propaganda"
 		texturefile = "gfx/interface/goals/TRN/TRN_radio_propaganda.tga"  
-	}
-	SpriteType = {
-		name = "GFX_goal_TRN_Problem_Solver_68"
-		texturefile = "gfx/interface/goals/TRN/TRN_Problem_Solver_68.tga"  
 	}
 	SpriteType = {
 		name = "GFX_goal_TRN_HYAKKIYAKO_attack"
@@ -2147,6 +2163,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_focus_COU_cheers_for_the_our_future"
 		textureFile = "gfx/interface/goals/COU/COU_cheers_for_the_our_future.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_the_emergency_law"
+		textureFile = "gfx/interface/goals/COU/COU_the_emergency_law.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_rework_the_dutch_economy"
+		textureFile = "gfx/interface/goals/COU/rework_the_dutch_economy.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_after_two_months"
+		textureFile = "gfx/interface/goals/COU/after_two_months.png"
+	}
+	spriteType = {
+		name = "GFX_focus_collaborate_with_belgium"
+		textureFile = "gfx/interface/goals/COU/collaborate_with_belgium.png"
+	}
+	spriteType = {
+		name = "GFX_focus_collaboratte_with_netherland"
+		textureFile = "gfx/interface/goals/COU/collaboratte_with_netherland.png"
 	}
 	
 	

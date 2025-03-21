@@ -566,6 +566,15 @@ COU_decision_the_student_council = {
 					  1 = {
 						  country_event = { id = COU_event_normal_days.5 }
 					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.6 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.7 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.8 }
+					  }
 					  
 				  }
 				  if = {

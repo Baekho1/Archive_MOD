@@ -416,10 +416,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/trn/KTG_Mitteleuropan_Industrial_Support.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_TRM_justice_task_force_2"
-		texturefile = "gfx/interface/ideas/trn/triumphant_will.tga"
-	}
-	spriteType = {
 		name = "GFX_idea_TRM_anti_gehenna_idea"
 		texturefile = "gfx/interface/ideas/trn/anti_gehenna_emotion.tga"
 	}
@@ -757,6 +753,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GEH_Manmajun_Bupae"
 		textureFile = "gfx/interface/ideas/geh/GEH_buphae.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_prefect_team_armband"
+		textureFile = "gfx/interface/ideas/geh/GEH_prefect_team_armband.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"

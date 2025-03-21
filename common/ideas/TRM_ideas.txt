@@ -434,6 +434,7 @@ ideas = {
 				}
 			}
 			TRM_justice_task_force_2 = { # 친위대
+			picture = TRM_justice_task_force
 			allowed = { always = no }
             allowed_civil_war = { has_government = fascism }
 			modifier = {
@@ -443,7 +444,7 @@ ideas = {
 			}
 			TRM_justice_task_force_3 = { # 친위대
 				name = TRM_justice_task_force_2
-				picture = TRM_justice_task_force_2
+				picture = TRM_justice_task_force
 			    allowed = { always = no }
                 allowed_civil_war = { has_government = fascism }
 				modifier = {
@@ -1300,8 +1301,8 @@ ideas = {
 			picture = SPR_anti_fascist_crusade
 			modifier = {
 				stability_weekly = -0.001
-				weekly_manpower = -750
-				national_populist_drift = -0.06
+				weekly_manpower = -75
+				fascism_drift = -0.03
 				resistance_target = 0.25
 			}
 		}
