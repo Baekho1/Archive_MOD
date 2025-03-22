@@ -997,4 +997,19 @@ spriteTypes = {
 		name = "GFX_idea_KAP_halo_and_sword"
 		textureFile = "gfx/interface/ideas/KAP/KAP_halo_and_sword.tga"
 	}
+
+	spriteType = {
+		name = "GFX_idea_GEI_DEC_riot"
+		textureFile = "gfx/interface/ideas/gei/GEI_DEC_idea_riot.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GEI_DEC_riot_riot"
+		textureFile = "gfx/interface/ideas/gei/GEI_DEC_idea_riot_riot.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_DEC_no_name_gods"
+		textureFile = "gfx/interface/ideas/gei/GEI_DEC_idea_no_name_gods.png"
+	}
 }

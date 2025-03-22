@@ -141,7 +141,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = GEI_lack_of_mystery
-			add_ideas = GEI_DEC_no_name_gods
+			add_ideas = GEI_idea_DEC_no_name_gods
 		}
 	}
 
@@ -278,19 +278,8 @@ focus_tree = {
 						tag = GEI
 					}
 				}
-
-				add_timed_idea = {
-				idea = GEI_DEC_riot_ideas
-				days = 365
+			country_event = {id = GEI_DEC_event.8}
 			}
-				add_opinion_modifier = {
-					target = GEI
-					modifier = GEI_DEC_hostile_ai
-				}
-			}
-
-			add_stability = -0.10
-			add_war_support = -0.10
 
 			news_event = { id = BA_news.127 hours = 6 }
 			add_manpower = 200000
@@ -391,7 +380,7 @@ focus_tree = {
 					
 		}
 		completion_reward = {
-			
+			country_event = {id = GEI_DEC_event.9}
 		}
 	}
 
@@ -427,10 +416,7 @@ focus_tree = {
 					}
 				}
 
-				add_timed_idea = {
-				idea = GEI_DEC_riot_riot_ideas
-				days = 365
-			}
+				country_event = {id = GEI_DEC_event.10}
 				add_opinion_modifier = {
 					target = GEI
 					modifier = GEI_DEC_hostile_ai

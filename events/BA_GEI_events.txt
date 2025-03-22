@@ -2,19 +2,20 @@ add_namespace = GEI_event
 add_namespace = GEI_DEC_event 
 
 country_event = {
-	id = GEI_event.1
-	title = GEI_event.1.t
-	desc = GEI_event.1.desc
-	picture = GFX_report_event_ast_parliament_house
-	
+    id = GEI_event.1
+    title = GEI_event.1.t
+    desc = GEI_event.1.desc
+    picture = GFX_report_event_ast_parliament_house
+
     is_triggered_only = yes
-	
-	option = { 
-		name = GEI_event.1.a
-		set_country_flag = GEI_Beatrice
-		complete_national_focus = GEI_beateulicheuiseungli
-		custom_effect_tooltip = GEI_Beatrice_tt
-	}
+
+    option = { 
+        name = GEI_event.1.a
+        set_country_flag = GEI_Beatrice
+        complete_national_focus = GEI_beateulicheuiseungli
+        custom_effect_tooltip = GEI_Beatrice_tt
+    }
+
 }
 country_event = {
 	id = GEI_event.2
@@ -2144,15 +2145,15 @@ country_event = {
 
 # 기계의 여명
 country_event = {
-	id = GEI_DEC_event.8
-	title = GEI_DEC_event.8.t
-	desc = GEI_DEC_event.8.desc
+	id = GEI_DEC_event.9
+	title = GEI_DEC_event.9.t
+	desc = GEI_DEC_event.9.desc
 	picture = GFX_report_event_w_t_f
 	
     is_triggered_only = yes
 	
 	option = { 
-		name = GEI_DEC_event.8.a
+		name = GEI_DEC_event.9.a
 	}
 }
 
@@ -2167,6 +2168,42 @@ country_event = {
 	
 	option = { 
 		name = GEI_DEC_event.7.a
+	}
+}
+
+# 유령신호 이벤트
+country_event = {
+	id = GEI_DEC_event.8
+	title = GEI_DEC_event.8.t
+	desc = GEI_DEC_event.8.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.8.a
+		add_timed_idea = {
+				idea = GEI_DEC_riot_ideas
+				days = 365
+			}
+	}
+}
+
+# 기계폭동 이벤트
+country_event = {
+	id = GEI_DEC_event.10
+	title = GEI_DEC_event.10.t
+	desc = GEI_DEC_event.10.desc
+	picture = GFX_report_event_w_t_f
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEI_DEC_event.10.a
+		add_timed_idea = {
+				idea = GEI_DEC_riot_riot_ideas
+				days = 365
+			}
 	}
 }
 
