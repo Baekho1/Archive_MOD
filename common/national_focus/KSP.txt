@@ -853,6 +853,15 @@ focus_tree = {
 						controls_state = 7
 					}
 				}
+				custom_effect_tooltip = war_aim_against_the_country_annex_tt
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = annex_everything
+						}
+					}
+				}
 			}
 		}
 	}
