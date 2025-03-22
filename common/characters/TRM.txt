@@ -424,7 +424,7 @@ characters={
 				}
 			}
 			traits = {
-                old_figurehead
+                TRM_Abbess
 			}
 			cost = 100
             ai_will_do = { factor = 0 }

@@ -74,6 +74,7 @@ characters={
 			    politically_connected
 				infantry_officer
 			}
+			visible = { NOT = { has_country_flag = RIN_ARREST } }
 			skill=3
 			attack_skill=2
 			defense_skill=3

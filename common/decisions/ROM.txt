@@ -3929,7 +3929,6 @@ ROM_dividing_yugo = {
 
 
 ROM_king = {
-    
 	# 주의 돌리기
 	ROM_divert_attention = {
 		
@@ -3939,9 +3938,6 @@ ROM_king = {
 			has_completed_focus = ROM_modify_the_constitution
 		}
 	}
-
-
-
 }
 
 

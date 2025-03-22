@@ -6,7 +6,12 @@ add_timed_idea = {
 }
 add_ideas = {
 	SLO_economy_chaos_idea1
-	SLO_newborn_army_idea1
+}
+add_dynamic_modifier = {
+	modifier = SLO_army_modifier
+}
+add_dynamic_modifier = {
+	modifier = SLO_air_modifier
 }
 
 set_technology = {
@@ -199,3 +204,15 @@ if = {
 	}
 
 }
+
+set_variable = { SLO_army_army_core_attack_factor = 0.05 }
+set_variable = { SLO_army_army_core_defence_factor = 0.10 }
+set_variable = { SLO_army_army_org_factor = -0.10 }
+set_variable = { SLO_army_max_planning_factor = -0.20 }
+set_variable = { SLO_army_planning_speed = -0.20 }
+set_variable = { SLO_army_conscription_factor = -0.15 }
+set_variable = { SLO_air_air_ace_generation_chance_factor = -0.10 }
+set_variable = { SLO_air_experience_gain_air_factor = -0.25 }
+set_variable = { SLO_air_air_doctrine_cost_factor = 0.50 }
+set_variable = { SLO_air_air_accidents_factor = 0.10 }
+set_variable = { SLO_navy_experience_gain_naval_factor = 0.05 }

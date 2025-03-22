@@ -9,6 +9,45 @@ country_event = {
 
 	option = {
 		name = SLO_event.1.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				is_in_faction_with = SLO
+				add = 100
+			}
+			modifier = {
+				SLO = {
+					num_of_factories > 30
+				}
+				add = 3
+			}
+			modifier = {
+				SLO = {
+					has_opinion = {
+						target = ROOT
+						value > 50
+					}
+				}
+				add = 2
+			}
+			modifier = {
+				has_opinion = {
+					target = SLO
+					value > 50
+				}
+				add = 2
+			}
+			modifier = {
+				SLO = {
+					is_major = yes
+				}
+				add = 5
+			}
+			modifier = {
+				has_government = democratic
+				add = 3
+			}
+		}
 		add_ideas = SLO_slo_trade_idea
 		if = {
 			limit = {
@@ -83,6 +122,9 @@ country_event = {
 	}
 	option = {
 		name = SLO_event.1.b
+		ai_chance = {
+			base = 5
+		}
 		SLO = {
 			add_opinion_modifier = { target = ROOT modifier = small_decrease }
 		}
@@ -190,7 +232,6 @@ country_event = {
 	option = {
 		name = SLO_event.3.a
 		add_political_power = 30
-		add_ideas = SLO_trade_idea1
 	}
 }
 country_event = { 
@@ -203,7 +244,6 @@ country_event = {
 	option = {
 		name = SLO_event.3.a
 		add_political_power = 30
-		add_ideas = SLO_trade_idea2
 	}
 }
 country_event = { 
@@ -216,7 +256,6 @@ country_event = {
 	option = {
 		name = SLO_event.3.a
 		add_political_power = 30
-		add_ideas = SLO_trade_idea3
 	}
 }
 country_event = { 
@@ -229,7 +268,6 @@ country_event = {
 	option = {
 		name = SLO_event.3.a
 		add_political_power = 30
-		add_ideas = SLO_trade_idea4
 	}
 }
 country_event = { 
@@ -255,6 +293,7 @@ country_event = {
 				hours = 5
 			}
 		}
+		set_global_flag = POL_cut_of_HUN
 	}
 	option = {
 		name = SLO_event.4.b
@@ -305,5 +344,276 @@ country_event = {
 		add_opinion_modifier = { target = POL modifier = large_decrease }
 		send_embargo = POL
 		send_embargo = SLO
+	}
+}
+country_event = { 
+	id = SLO_event.5
+	title = SLO_event.5.t
+	desc = SLO_event.5.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.5.a
+		custom_effect_tooltip = SLO_tt_4
+	}
+}
+country_event = { 
+	id = SLO_event.6
+	title = SLO_event.6.t
+	desc = SLO_event.6.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.6.a
+		custom_effect_tooltip = SLO_tt_5
+	}
+}
+country_event = { 
+	id = SLO_event.7
+	title = SLO_event.7.t
+	desc = SLO_event.7.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.7.a
+		custom_effect_tooltip = SLO_tt_6
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = SLO_slo_worker_idea
+				days = 360
+			}
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.8
+	title = SLO_event.8.t
+	desc = SLO_event.8.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.8.a
+		effect_tooltip = {
+			add_ideas = SLO_slo_economic_dependence_idea
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.9
+	title = SLO_event.9.t
+	desc = SLO_event.9.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.9.a
+		ai_chance = {
+			base = 10
+		}
+		SLO = {
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_colony
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+	}
+	option = {
+		name = SLO_event.9.b
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -200
+		add_stability = -0.10
+		remove_ideas = SLO_slo_economic_dependence_idea
+		add_timed_idea = {
+			idea = SLO_slo_economic_chaos_idea
+			days = 720
+		}
+		if = {
+			limit = {
+				tag = ROM
+			}
+			SLO = {
+				country_event = {
+					id = SLO_event.91
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = YUG
+			}
+			SLO = {
+				country_event = {
+					id = SLO_event.92
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = POL
+			}
+			SLO = {
+				country_event = {
+					id = SLO_event.93
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = HUN
+			}
+			SLO = {
+				country_event = {
+					id = SLO_event.94
+					hours = 6
+				}
+			}
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.91
+	title = SLO_event.91.t
+	desc = SLO_event.91.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.91.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.92
+	title = SLO_event.92.t
+	desc = SLO_event.92.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.91.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = YUG
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.93
+	title = SLO_event.93.t
+	desc = SLO_event.93.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.91.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POL
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.94
+	title = SLO_event.94.t
+	desc = SLO_event.94.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.91.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HUN
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.100
+	title = SLO_event.100.t
+	desc = SLO_event.100.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.100.a
+		add_war_support = 0.05
+		add_political_power = -50
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.101
+	title = SLO_event.101.t
+	desc = SLO_event.101.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.100.a
+		add_war_support = 0.05
+		add_political_power = -50
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = YUG
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.102
+	title = SLO_event.102.t
+	desc = SLO_event.102.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.100.a
+		add_war_support = 0.05
+		add_political_power = -50
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POL
+			expire = 180
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.103
+	title = SLO_event.103.t
+	desc = SLO_event.103.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.100.a
+		add_war_support = 0.05
+		add_political_power = -50
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HUN
+			expire = 180
+		}
 	}
 }

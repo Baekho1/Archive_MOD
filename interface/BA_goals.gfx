@@ -1,4 +1,8 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_idea_KSP_tlsfhldhkdndo"
+		texturefile = "gfx/interface/ideas/HEU/신뢰와우애.tga"
+	}
 	SpriteType = {
 		name = "GFX_focus_GEH_last_focus_effect"
 		texturefile = "gfx/interface/goals/GEH/focus_GEH_last_focus_effect.tga"
@@ -79,6 +83,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_TRN_declare_trinity_order_state"
 		texturefile = "gfx/interface/goals/TRN/TRN_declare_trinity_order_state.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_cult_of_Mika"
+		texturefile = "gfx/interface/goals/TRN/TRN_cult_of_Mika.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_germany_thinker"
+		texturefile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_alliance_of_faith"
+		texturefile = "gfx/interface/goals/TRN/TRN_alliance_of_faith.tga"
 	}
 
 	SpriteType = {
@@ -303,6 +319,10 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/KAP/focus_KAP_kv1.dds"			
 	}
 
+	SpriteType = {
+		name = "GFX_RED_entice_publicworks"
+		texturefile = "gfx/interface/goals/RED/RED_entice_publicworks.tga"
+	}
 	SpriteType = {
 		name = "GFX_RED_momiji"
 		texturefile = "gfx/interface/goals/RED/RED_momiji.tga"
@@ -994,10 +1014,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_TRN_radio_propaganda"
 		texturefile = "gfx/interface/goals/TRN/TRN_radio_propaganda.tga"  
-	}
-	SpriteType = {
-		name = "GFX_goal_TRN_Problem_Solver_68"
-		texturefile = "gfx/interface/goals/TRN/TRN_Problem_Solver_68.tga"  
 	}
 	SpriteType = {
 		name = "GFX_goal_TRN_HYAKKIYAKO_attack"
@@ -2148,6 +2164,34 @@ spriteTypes = {
 		name = "GFX_focus_COU_cheers_for_the_our_future"
 		textureFile = "gfx/interface/goals/COU/COU_cheers_for_the_our_future.png"
 	}
+	spriteType = {
+		name = "GFX_focus_COU_the_emergency_law"
+		textureFile = "gfx/interface/goals/COU/COU_the_emergency_law.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_meet_the_dutchs"
+		textureFile = "gfx/interface/goals/COU/meet_the_dutchs.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_rework_the_dutch_economy"
+		textureFile = "gfx/interface/goals/COU/rework_the_dutch_economy.png"
+	}
+	spriteType = {
+		name = "GFX_focus_COU_after_two_months"
+		textureFile = "gfx/interface/goals/COU/after_two_months.png"
+	}
+	spriteType = {
+		name = "GFX_focus_collaborate_with_belgium"
+		textureFile = "gfx/interface/goals/COU/collaborate_with_belgium.png"
+	}
+	spriteType = {
+		name = "GFX_focus_collaboratte_with_netherland"
+		textureFile = "gfx/interface/goals/COU/collaboratte_with_netherland.png"
+	}
 	
 	
 	####카이저라이히 돚거
@@ -2741,96 +2785,96 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_GEI_DEC_victory"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_old_question"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_old_answer"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_outside"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_human_history"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_fallen_gods_homeland"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_stabilization"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_auto"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_modernization"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_syntetic_dawn"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_box"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_hesade_plan"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_automatic_factory"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_effection"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_god_knows"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_last_question"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_ghost_signal"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_no_name_gods"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.tga"
 	}
 
 	spriteType = {
 		name = "GFX_GEI_DEC_my_war"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.png"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"
 	}
 }

@@ -1224,6 +1224,14 @@ COU = {
 	color = HSV { 0 0 0.9 }
 	color_ui = rgb { 230 230 230 }
 }
+HTA = {
+	color = rgb { 66 152 207 }
+	color_ui = rgb { 66 152 207 }
+}
+KRN = {
+	color = rgb { 125 156 205 }
+	color_ui = rgb { 125 156 205 }
+}
 MAI ={
 	color = rgb { 158 50 50  }
 	color_ui = rgb {170  10  10}

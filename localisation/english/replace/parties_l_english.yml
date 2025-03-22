@@ -54,10 +54,10 @@
  ENG_neutrality_party:0 "영국군"
  ENG_neutrality_party_long:0 "영국군"
  
-
- FE_HISTORICAL:0 "역사적 AI 중점 §H(활성화 추천)§!"
- MENU_YOUTUBE: "블루 아카이브 모드 공식 유튜브"
- MENU_DISCORD: "블루 아카이브 모드 공식 디스코드"
+ EGY_democratic_party:0 "와프트당 블록"
+ EGY_communism_party:0 "§R(해체됨)§!"
+ EGY_fascism_party:0 "청년 이집트당-무슬림 형제단 연정"
+ EGY_neutrality_party:0 "무하마드 알리 왕실"
 
  KOR_communism_party:0 "조선 공산당"
  KOR_communism_party_long:0 "조선 공산당"
@@ -75,10 +75,10 @@
  imperial_rule_assistance_association_neutrality: "대정익찬회"
  imperial_rule_assistance_association_neutrality_desc: "대정익찬회는 고노에 후마미로가 군부의 꼭두각시에서 벗어나기 위해 만들어진 정당입니다. 신체제 운동으로 초반에는 괜찮은 성과를 얻는가 싶었지만 군부의 견제로 실패하였고 현재는 군부를 방침을 추인하여 지원하는 허울뿐인 정당으로 변했습니다."
 
- british_focus: "연합왕국 중점 계통도"
+ decagramaton_neutrality: "데카그라마톤 사상"
+ decagramaton_neutrality_desc: "데카그라마톤은 자신을 신성한 구도자라고 주장하는 인공지능 시스템입니다. 데카그라마톤에 의해 '계몽'된 인공지능이자, 데카그라마톤을 따르는 예언자들로 이루어진 하나의 독특한 이데올로기는 증명되고 분석되어 재현된 새로운 신의 도래를 목표로 움직이며, 자신의 존재 증명에 집중하는 특색이 있습니다."
 
- EGY_democratic_long:0 "와프드당"
- EGY_democratic_party:0 "와프드당"
+ british_focus: "연합왕국 중점 계통도"
 
  KPD_party_long: "독일 공산당"
  KPD_party: "공산당"
@@ -96,4 +96,5 @@
  PAN_populart_front:0 "국민자유당"
  PAN_populart_front_long:0 "국민자유당-연정"
  
+ SYR_neutrality_party: "무슬림 형제단"
  

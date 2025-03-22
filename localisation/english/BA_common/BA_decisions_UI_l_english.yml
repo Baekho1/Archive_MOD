@@ -344,6 +344,8 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRN_pater_opp:0 "파테르 분파 활동 방해"
  TRN_filius_opp:0 "필리우스 분파 활동 방해"
  TRN_sanctus_opp:0 "상투스 분파 활동 방해"
+ TRN_sh_opp:0 "시스터후드 활동 방해"
+ TRN_rk_opp:0 "구호기사단 활동 방해"
 
  TRN_pater_dd:0 "파테르 분파 해체"
  TRN_filius_dd:0 "필리우스 분파 해체"

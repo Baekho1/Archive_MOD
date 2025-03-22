@@ -68,7 +68,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = 0.05			
-				production_factory_efficiency_gain_factor = 0.05	
+				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_industrial_complex_factor = 0.07
 				production_speed_infrastructure_factor = 0.07
@@ -111,60 +111,60 @@ ideas = {
 				has_war_with = SLO
 			}
 		}
+		SLO_slo_worker_idea = {
+			picture = ARG_public_works_investment
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industry_repair_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+			cancel = {
+				has_war_with = SLO
+			}
+		}
+		SLO_slo_economic_dependence_idea = {
+			picture = ARG_political_corruption_modifier
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = SLO
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.25
+				custom_modifier_tooltip = SLO_tt_7
+			}
+			cancel = {
+				OR = {
+					has_war_with = SLO
+					NOT = {
+						has_idea = SLO_slo_trade_idea
+					}
+					check_variable = { 
+						var = var:gloval.SLO_ROM_influence
+						value = 70
+						compare = less_than 
+					}
+				}
+			}
+		}
+		SLO_slo_economic_chaos_idea = {
+			picture = generic_economic_crisis
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.30
+				consumer_goods_factor = 0.50
+				production_speed_buildings_factor = -0.30
+				industrial_capacity_factory = -0.30
+			}
+		}
 	}
 	hidden_ideas = {
-		SLO_trade_idea1 = {
-			picture = can_wartime_prices_and_trade_board
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			targeted_modifier = {
-				tag = ROM
-				extra_trade_to_target_factor = 0.25
-				trade_cost_for_target_factor = -0.25
-			}
-			cancel = {
-				has_war_with = ROM
-			}
-		}
-		SLO_trade_idea2 = {
-			picture = can_wartime_prices_and_trade_board
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			targeted_modifier = {
-				tag = YUG
-				extra_trade_to_target_factor = 0.25
-				trade_cost_for_target_factor = -0.25
-			}
-			cancel = {
-				has_war_with = YUG
-			}
-		}
-		SLO_trade_idea3 = {
-			picture = can_wartime_prices_and_trade_board
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			targeted_modifier = {
-				tag = POL
-				extra_trade_to_target_factor = 0.25
-				trade_cost_for_target_factor = -0.25
-			}
-			cancel = {
-				has_war_with = POL
-			}
-		}
-		SLO_trade_idea4 = {
-			picture = can_wartime_prices_and_trade_board
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			targeted_modifier = {
-				tag = HUN
-				extra_trade_to_target_factor = 0.25
-				trade_cost_for_target_factor = -0.25
-			}
-			cancel = {
-				has_war_with = HUN
-			}
-		}
 	}
 	industrial_concern = {
 		SLO_elektra = {

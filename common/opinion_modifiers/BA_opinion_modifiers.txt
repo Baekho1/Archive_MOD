@@ -263,4 +263,8 @@ opinion_modifiers = {
 	SHA_menacing_ambition = {
 		value = -100
 	}
+	
+	KSP_menacing_ambition = {
+		value = -100
+	}
 }

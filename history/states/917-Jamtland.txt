@@ -24,14 +24,6 @@ state = {
 		}
 		buildings = {
 			infrastructure = 2
-			11148 = {
-				landmark_RED_spa = {					
-					level = 1
-					allowed = {
-						has_dlc = "Gotterdammerung"
-					}
-				}
-			}
 		}
 	}
 

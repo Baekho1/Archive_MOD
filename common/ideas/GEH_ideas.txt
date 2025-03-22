@@ -289,7 +289,7 @@ ideas = {
 		}
         
 		GEH_popular_support_1 = { # 선도부의 정통성
-			picture = chi_warlord_integration
+			picture = GEH_prefect_team_armband
 			allowed = { always = no }
 			allowed_civil_war = { always = yes 	} 
 			
@@ -298,7 +298,7 @@ ideas = {
 				war_support_factor = -0.3
 				political_power_factor = -0.1
 				compliance_gain = -0.02
-				research_speed_factor = -0.2
+				#research_speed_factor = -0.2
 			}
 
 			targeted_modifier = {
@@ -308,7 +308,7 @@ ideas = {
 			}
 		}
 		GEH_popular_support_2 = { # 선도부의 정통성
-			picture = chi_warlord_integration2
+			picture = GEH_prefect_team_armband
 			allowed = { always = no }
 			allowed_civil_war = { always = yes 	} 
 			
@@ -317,7 +317,7 @@ ideas = {
 				war_support_factor = -0.20
 				compliance_gain = -0.01
 				political_power_factor = -0.05
-				research_speed_factor = -0.15
+				#research_speed_factor = -0.15
 			}
 
 			targeted_modifier = {
@@ -327,7 +327,7 @@ ideas = {
 			}
 		}
 		GEH_popular_support_3 = { # 선도부의 정통성
-			picture = chi_warlord_integration3
+			picture = GEH_prefect_team_armband
 			allowed = { always = no }
 			allowed_civil_war = { always = yes 	} 
 			
@@ -336,7 +336,7 @@ ideas = {
 				war_support_factor = -0.15
 				compliance_gain = -0.01
 				political_power_factor = -0.05
-				research_speed_factor = -0.1
+				#research_speed_factor = -0.1
 			}
 
 			targeted_modifier = {
@@ -346,13 +346,13 @@ ideas = {
 			}
 		}
         GEH_popular_support_4 = { # 선도부의 정통성
-			picture = chi_warlord_integration4
+			picture = GEH_prefect_team_armband
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
 				compliance_gain = -0.01
-				research_speed_factor = -0.05
+				#research_speed_factor = -0.05
 			}
 
 			targeted_modifier = {
@@ -363,7 +363,7 @@ ideas = {
 		}
 
 		GEH_popular_support_5 = { # 선도부의 정통성
-			picture = chi_warlord_integration5
+			picture = GEH_prefect_team_armband
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -374,6 +374,140 @@ ideas = {
 			targeted_modifier = {
 				tag = GEM
 				attack_bonus_against = 0.05
+			}
+		}
+
+		GEH_luxembourg_rules = { # 룩셈부르크 규정
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				compliance_gain = 0.01
+			}
+		}
+
+		GEH_centre_of_culture_idea = { # 문화의 중심
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GEH_centre_of_culture_bauhaus_idea = { # 문화의 중심 (바우하우스)
+			name = GEH_centre_of_culture_idea
+
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		GEH_centre_of_culture_bauhaus_end_idea = { # 문화의 중심 (바우하우스 강화)
+			name = GEH_centre_of_culture_idea
+
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		GEH_centre_of_culture_degenerate_art_idea = { # 문화의 중심 (퇴폐미술)
+			name = GEH_centre_of_culture_idea
+
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GEH_centre_of_culture_degenerate_art_end_idea = { # 문화의 중심 (퇴폐미술 강화)
+			name = GEH_centre_of_culture_idea
+			
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		GEH_centre_of_culture_composer_idea = { # 문화의 중심 (클래식)
+			name = GEH_centre_of_culture_idea
+
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		GEH_centre_of_culture_composer_end_idea = { # 문화의 중심 (클래식 강화)
+			name = GEH_centre_of_culture_idea
+			
+			picture = HEU_grand_duchy_of_luxembourg
+
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.15
 			}
 		}
 

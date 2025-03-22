@@ -566,6 +566,15 @@ COU_decision_the_student_council = {
 					  1 = {
 						  country_event = { id = COU_event_normal_days.5 }
 					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.6 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.7 }
+					  }
+					  1 = {
+						  country_event = { id = COU_event_normal_days.8 }
+					  }
 					  
 				  }
 				  if = {
@@ -650,6 +659,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -689,6 +699,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -728,6 +739,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -769,6 +781,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -808,6 +821,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
+			 add_to_variable = { global.aru_schedule_point = -1 }
 		}
 
 		remove_effect = {

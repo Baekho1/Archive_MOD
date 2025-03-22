@@ -72,6 +72,14 @@ guiTypes = {
 			spriteType = "GFX_frontend_banner_dlc018"
 		}
 		
+		iconType = {
+			name = "glowup"
+			position = { x = -50 y = -21 }
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+			#hide = yes
+		}
+		
 		buttonType = {
 			name = "owned_tick"
 			spriteType = "GFX_BPT_area_defense_setting_tick"
@@ -96,7 +104,7 @@ guiTypes = {
 	containerWindowType = {
 		name  ="mainmenu_dlc_ownership"
 		position = { x=5 y =0 }
-		size = { width = 370 height = 528}
+		size = { width = 370 height = 582}
 		Orientation = lower_left
 		origo = lower_left
 		
@@ -111,22 +119,22 @@ guiTypes = {
 		}
 		
 	}
-	
+
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
-		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
-		show_position = { x=0 y =-1 }
+		name ="mainmenu_panel_upperleft"
+		position = { x = 0 y = -400 }			## 바닐라는 0, -200
+		show_position = { x = 0 y = 0 }			## 바닐라는 0, -1
 		animation_type = decelerated
 		animation_time = 1000
 		size = { width = 256 height = 768}
-		
-		iconType =
-		{
-			name ="frontend_game_logo"
+
+		iconType = {
+			name = "frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= 20 y = 20 }
+			position = { x = 20 y = 45 }		## 바닐라는 20, 20
 		}
+
 		buttontype = {
 			name ="BA_frontend_game_logo"
 			quadTextureSprite = "GFX_frontend_logo_BA_2"
@@ -137,7 +145,6 @@ guiTypes = {
 			pdx_tooltip_delayed = BA_what_update_tt_delayed
 			web_link = "https://www.youtube.com/watch?v=QdBZY2fkU-0"
 		}
-		
 		#iconType = {
 		#	name ="BA_logo_PB"
 		#	spriteType = "GFX_frontend_logo_PB"
@@ -146,13 +153,13 @@ guiTypes = {
 		#	pdx_tooltip_delayed = BA_pb_update_tt_delayed
 		#}
 		
-		iconType = {
-			name ="BA_logo_SR"
-			spriteType = "GFX_frontend_logo_SR"
-			position = { x= 0 y = 365 }
-			pdx_tooltip = "BA_sr_update_tt"
-			pdx_tooltip_delayed = BA_sr_update_tt_delayed
-		}
+		#iconType = {
+		#	name ="BA_logo_SR"
+		#	spriteType = "GFX_frontend_logo_SR"
+		#	position = { x= 0 y = 365 }
+		#	pdx_tooltip = "BA_sr_update_tt"
+		#	pdx_tooltip_delayed = BA_sr_update_tt_delayed
+		#}
 
 		#iconType = {
 		#	name ="BA_logo_SR"
@@ -161,7 +168,6 @@ guiTypes = {
 		#	pdx_tooltip = "BA_ger_update_tt"
 		#	pdx_tooltip_delayed = BA_ger_update_tt_delayed
 		#}
-		
 	}
 
 	#containerWindowType = {

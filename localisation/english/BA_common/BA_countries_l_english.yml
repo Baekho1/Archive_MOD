@@ -75,6 +75,12 @@
  COU:0 "키보토스 총학생회"
  COU_DEF:0 "키보토스 총학생회"
  COU_ADJ:0 "총학생회"
+ HTA:0 "하이랜더 철도학원"
+ HTA_DEF:0 "하이랜더 철도학원"
+ HTA_ADJ:0 "하이랜더"
+ KRN:0 "크로노스 스쿨"
+ KRN_DEF:0 "크로노스 스쿨"
+ KRN_ADJ:0 "크로노스"
 
  TRM_fascism:0 "트리니티 종합학원"
  TRM_fascism_DEF:0 "트리니티 종합학원"

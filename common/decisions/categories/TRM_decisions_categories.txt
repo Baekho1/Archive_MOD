@@ -32,16 +32,12 @@ TRN_internal_factions_categories = {
 		tag = TRM
 		NOT = {
 			has_country_flag = ARI_puppet_state 
-            has_completed_focus = TRM_newfocus_27
-            has_completed_focus = TRN_neutrality_of_powers
 			has_country_flag = TRN_delete_power_flag
 		}
 	}
 	visible = {
 		NOT = {
 			has_country_flag = ARI_puppet_state 
-			has_completed_focus = TRM_newfocus_27
-			has_completed_focus = TRN_neutrality_of_powers
 			has_country_flag = TRN_delete_power_flag
 		}
 	}
@@ -125,19 +121,6 @@ TRM_kivotos_core_states_categories = {
 		}
 	}
 	priority = 50
-}
-TRM_balance_of_power_category = {
-	
-	allowed = {
-		original_tag = TRM
-	}
-	
-	priority = 90
-	
-	visible = {
-		
-	}
-
 }
 TRM_Iron_Sword_Operations_Categorie = {
 	icon = GFX_decision_generic_intelligence_operation

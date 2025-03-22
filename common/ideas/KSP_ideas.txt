@@ -633,6 +633,22 @@ ideas = {
 				conscription_factor = 0.10
 			}
 		}
+		KSP_gaebaljaegundanguk_NOT =  {
+			picture = generic_build_infrastructure
+
+			allowed ={
+				tag = KSP
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				industry_repair_factor = 0.15
+			}
+		}
 		KSP_gaebaljaegundanguk =  {
 			picture = generic_build_infrastructure
 
@@ -814,6 +830,24 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.15
 				conscription_factor = -0.30
+			}
+		}
+		KSP_anti_eu_hegemony = {
+			picture = RAJ_private_military_complex
+			
+			allowed = {
+				tag = KSP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.15
 			}
 		}
 		KSP_stabilized_gov = {

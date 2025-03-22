@@ -900,7 +900,7 @@ country_event = {
 #	총학생회 (이쪽은 캐릭터 새로 정의해야됨)
 #
 country_event = {
-	id = KSP_event.103 #교정국의 불만
+	id = KSP_event.103
 	title = KSP_event.103.t
 	desc = KSP_event.103.d
 	picture = none
@@ -922,7 +922,7 @@ country_event = {
 #	SRT
 #
 country_event = {
-	id = KSP_event.104 #교정국의 불만
+	id = KSP_event.104
 	title = KSP_event.104.t
 	desc = KSP_event.104.d
 	picture = none
@@ -1155,5 +1155,40 @@ country_event = {
 	
 	option = {
 		name = KSP_event.114.a 
+	}
+}
+
+##키리노 쿠데타 이벤트 
+country_event = {
+	id = KSP_event.115
+	title = KSP_event.115.t
+	desc = KSP_event.115.d
+	picture = GFX_report_event_picture_kirino
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KSP_event.115.a 
+		country_event = { id = KSP_event.116 days = 2 }
+		news_event = BA_news.61
+	}
+}
+
+##코노카 
+country_event = {
+	id = KSP_event.116
+	title = KSP_event.116.t
+	desc = KSP_event.116.d
+	picture = GFX_report_event_generic_door
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KSP_event.116.a 
+		custom_effect_tooltip = KSP_tooltip_konoka
+		add_political_power = -5
+		add_stability = -0.01
 	}
 }

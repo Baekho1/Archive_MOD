@@ -13431,5 +13431,342 @@ focus = { #키보토스인 우선
             add_stability = 0.10
         }
     }
+
+	focus = { #임시정부 총사령부
+		id = ABY_army_focus_0
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		x = 65
+		y = 6
+		completion_reward = { }
+	}
+	focus = { #지휘체계 병합
+		id = ABY_army_focus_1
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		x = -6
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #방위산업청
+		id = ABY_army_focus_2
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_1
+		prerequisite = {
+			focus = ABY_army_focus_1
+		}
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #직업장교
+		id = ABY_army_focus_3
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_1
+		prerequisite = {
+			focus = ABY_army_focus_1
+		}
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #동원령
+		id = ABY_army_focus_4
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_1
+		prerequisite = {
+			focus = ABY_army_focus_2
+		}
+		prerequisite = {
+			focus = ABY_army_focus_3
+		}
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+	focus = { #상비군
+		id = ABY_army_focus_5
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_1
+		prerequisite = {
+			focus = ABY_army_focus_2
+		}
+		prerequisite = {
+			focus = ABY_army_focus_3
+		}
+		x = 2
+		y = 2
+		completion_reward = { }
+	}
+	focus = { #주데텐란트 산악병
+		id = ABY_army_focus_6
+		icon = GFX_focus_HUN_expand_the_army
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		mutually_exclusive = {
+			focus = ABY_halo_focus_0
+		}
+		x = -4
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #헤일로 특수부대
+		id = ABY_halo_focus_0
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		mutually_exclusive = {
+			focus = ABY_army_focus_6
+		}
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #학생 규합
+		id = ABY_halo_focus_1
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #정규 훈련
+		id = ABY_halo_focus_2
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_halo_focus_0
+		prerequisite = {
+			focus = ABY_halo_focus_0
+			focus = ABY_halo_focus_1
+		}
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #헤일로 기동
+		id = ABY_halo_focus_3
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_halo_focus_0
+		prerequisite = {
+			focus = ABY_halo_focus_1
+		}
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #산개 대형
+		id = ABY_halo_focus_4
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_halo_focus_0
+		prerequisite = {
+			focus = ABY_halo_focus_2
+		}
+		prerequisite = {
+			focus = ABY_halo_focus_3
+		}
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+	focus = { #질적 우위
+		id = ABY_halo_focus_5
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_halo_focus_4
+		prerequisite = {
+			focus = ABY_halo_focus_4
+		}
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = ABY_halo_focus_6
+		}
+		completion_reward = { }
+	}
+	focus = { #학도개병제
+		id = ABY_halo_focus_6
+		icon = GFX_focus_HUN_carrying_on_arpads_legacy
+		cost = 5
+		relative_position_id = ABY_halo_focus_4
+		prerequisite = {
+			focus = ABY_halo_focus_4
+		}
+		x = 1
+		y = 1
+		mutually_exclusive = {
+			focus = ABY_halo_focus_5
+		}
+		completion_reward = { }
+	}
+	focus = { #공군 사관학교
+		id = ABY_air_focus_0
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		x = 2
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #조종사 훈련
+		id = ABY_air_focus_2
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_air_focus_0
+		prerequisite = {
+			focus = ABY_air_focus_0
+		}
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #항공기 개발
+		id = ABY_air_focus_1
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_air_focus_0
+		prerequisite = {
+			focus = ABY_air_focus_2
+		}
+		x = -2
+		y = 2
+		completion_reward = { }
+	}
+	focus = { #독립 군종
+		id = ABY_air_focus_3
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_air_focus_2
+		prerequisite = {
+			focus = ABY_air_focus_2
+		}
+		mutually_exclusive = {
+			focus = ABY_air_focus_4
+		}
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #제병합동
+		id = ABY_air_focus_4
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_air_focus_2
+		prerequisite = {
+			focus = ABY_air_focus_2
+		}
+		mutually_exclusive = {
+			focus = ABY_air_focus_3
+		}
+		x = 3
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #공수부대 창설
+		id = ABY_air_focus_5
+		icon = GFX_focus_HUN_demand_carpathian_ruthenia
+		cost = 5
+		relative_position_id = ABY_air_focus_0
+		prerequisite = {
+			focus = ABY_air_focus_0
+		}
+		mutually_exclusive = {
+			focus = ABY_navy_focus_1
+		}
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #조선소 확장
+		id = ABY_navy_focus_0
+		icon = GFX_focus_HUN_integrate_the_volksbund
+		cost = 5
+		relative_position_id = ABY_army_focus_0
+		prerequisite = {
+			focus = ABY_army_focus_0
+		}
+		x = 6
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #해병대 창설
+		id = ABY_navy_focus_1
+		icon = GFX_focus_HUN_integrate_the_volksbund
+		cost = 5
+		relative_position_id = ABY_navy_focus_0
+		prerequisite = {
+			focus = ABY_navy_focus_0
+		}
+		mutually_exclusive = {
+			focus = ABY_air_focus_5
+		}
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #바다의 늑대
+		id = ABY_navy_focus_2
+		icon = GFX_focus_HUN_integrate_the_volksbund
+		cost = 5
+		relative_position_id = ABY_navy_focus_0
+		prerequisite = {
+			focus = ABY_navy_focus_0
+		}
+		mutually_exclusive = {
+			focus = ABY_navy_focus_4
+		}
+		x = 0
+		y = 2
+		completion_reward = { }
+	}
+	focus = { #대형함 주력
+		id = ABY_navy_focus_3
+		icon = GFX_focus_HUN_integrate_the_volksbund
+		cost = 5
+		relative_position_id = ABY_navy_focus_0
+		prerequisite = {
+			focus = ABY_navy_focus_0
+		}
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = { #거함거포
+		id = ABY_navy_focus_4
+		icon = GFX_focus_HUN_integrate_the_volksbund
+		cost = 5
+		relative_position_id = ABY_navy_focus_0
+		prerequisite = {
+			focus = ABY_navy_focus_3
+		}
+		mutually_exclusive = {
+			focus = ABY_navy_focus_2
+		}
+		x = 2
+		y = 2
+		completion_reward = { }
+	}
 }
  

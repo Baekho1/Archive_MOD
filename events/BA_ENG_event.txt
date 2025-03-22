@@ -130,22 +130,9 @@ country_event = {
 	option = {
 		name = ENG_british_warning_event.23.a
 		EGY = {
-			transfer_state = 551
-			transfer_state = 883
-			transfer_state = 767
-			transfer_state = 887
-			transfer_state = 549
-			transfer_state = 886
-			transfer_state = 884
-			transfer_state = 885
-			add_state_core = 551
-			add_state_core = 883
-			add_state_core = 767
-			add_state_core = 887
-			add_state_core = 549
-			add_state_core = 886
-			add_state_core = 884
-			add_state_core = 885
+			country_event = {
+				id = EGY_event.2
+			}
 		}
 		hidden_effect = {
 			country_event = {
@@ -253,15 +240,21 @@ country_event = {
 		}
 		PAL = {
 			add_ideas = PAL_jews_hoods
+			drop_cosmetic_tag = yes
+		}
+		JOR = {
+			drop_cosmetic_tag = yes
 		}
 
 		release = UAE
 		release = QAT
 		release = JOR
+		release = PAL
 		release = ZAM
 		release = MLW
 		release = ZIM
 		release = BOT
+		end_puppet = PAL
 	}
 }
 

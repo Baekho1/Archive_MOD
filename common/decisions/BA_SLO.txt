@@ -1,0 +1,1391 @@
+SLO_decisions_1 = {
+	SLO_decisions_1_1 = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			ROM = {
+				is_in_faction_with = SLO
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+				}
+			}
+		}
+		visible = {
+			ROM = {
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+					has_country_flag = SLO_democracy_colony
+				}
+			}
+		}
+		cost = 25
+		complete_effect = {
+			ROM = {
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	SLO_decisions_1_2 = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			YUG = {
+				is_in_faction_with = SLO
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+				}
+			}
+		}
+		visible = {
+			YUG = {
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+					has_country_flag = SLO_democracy_colony
+				}
+			}
+		}
+		cost = 25
+		complete_effect = {
+			YUG = {
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	SLO_decisions_1_3 = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			POL = {
+				is_in_faction_with = SLO
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+				}
+			}
+		}
+		visible = {
+			POL = {
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+					has_country_flag = SLO_democracy_colony
+				}
+			}
+		}
+		cost = 25
+		complete_effect = {
+			POL = {
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	SLO_decisions_1_4 = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			HUN = {
+				is_in_faction_with = SLO
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+				}
+			}
+		}
+		visible = {
+			HUN = {
+				NOT = {
+					has_idea = SLO_slo_trade_idea
+					has_country_flag = SLO_democracy_colony
+				}
+			}
+		}
+		cost = 25
+		complete_effect = {
+			HUN = {
+				country_event = {
+					id = SLO_event.1
+					hours = 6
+				}
+			}
+		}
+	}
+	SLO_decisions_1_5 = {
+		icon = GFX_decision_generic_construction
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}					
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			ROM = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.5
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+	}
+	SLO_decisions_1_6 = {
+		icon = GFX_decision_generic_construction
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}					
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			YUG = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.5
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_YUG_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+	}
+	SLO_decisions_1_7 = {
+		icon = GFX_decision_generic_construction
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			POL = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}					
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			POL = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.5
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_POL_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+	}
+	SLO_decisions_1_8 = {
+		icon = GFX_decision_generic_construction
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}					
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			HUN = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.5
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_HUN_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+	}
+	SLO_decisions_1_9 = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		complete_effect = {
+			ROM = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = 3
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.6
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}	
+		remove_effect = {
+			ROM = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = -3
+				}
+			}
+		}
+	}
+	SLO_decisions_1_10 = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		complete_effect = {
+			YUG = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = 3
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.6
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_YUG_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}	
+		remove_effect = {
+			YUG = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = -3
+				}
+			}
+		}
+	}
+	SLO_decisions_1_11 = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		complete_effect = {
+			POL = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = 3
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.6
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_POL_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}	
+		remove_effect = {
+			POL = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = -3
+				}
+			}
+		}
+	}
+	SLO_decisions_1_12 = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 180
+		complete_effect = {
+			HUN = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = 3
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.6
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_HUN_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}	
+		remove_effect = {
+			HUN = {
+				add_offsite_building = { 
+					type = industrial_complex
+					level = -3
+				}
+			}
+		}
+	}
+	SLO_decisions_1_13 = {
+		icon = GFX_decision_generic_military
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 360
+		complete_effect = {
+			ROM = {
+				add_timed_idea = {
+					idea = SLO_slo_worker_idea
+					days = 360
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.7
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			conscription_factor = -0.05
+			production_speed_buildings_factor = -0.05
+			industry_repair_factor = -0.05
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+	}
+	SLO_decisions_1_14 = {
+		icon = GFX_decision_generic_military
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 360
+		complete_effect = {
+			YUG = {
+				add_timed_idea = {
+					idea = SLO_slo_worker_idea
+					days = 360
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.7
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_YUG_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			conscription_factor = -0.05
+			production_speed_buildings_factor = -0.05
+			industry_repair_factor = -0.05
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+	}
+	SLO_decisions_1_15 = {
+		icon = GFX_decision_generic_military
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 360
+		complete_effect = {
+			POL = {
+				add_timed_idea = {
+					idea = SLO_slo_worker_idea
+					days = 360
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.7
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_POL_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			conscription_factor = -0.05
+			production_speed_buildings_factor = -0.05
+			industry_repair_factor = -0.05
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+	}
+	SLO_decisions_1_16 = {
+		icon = GFX_decision_generic_military
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		visible = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+		}
+		days_remove = 360
+		complete_effect = {
+			HUN = {
+				add_timed_idea = {
+					idea = SLO_slo_worker_idea
+					days = 360
+				}
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.7
+						hours = 1
+					}
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_HUN_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+		modifier = {
+			conscription_factor = -0.05
+			production_speed_buildings_factor = -0.05
+			industry_repair_factor = -0.05
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+	}
+	SLO_decisions_1_17 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_ROM_influence
+				value = 75
+				compare = greater_than_or_equals
+				tooltip = SLO_tt_more75
+			}
+		}
+		visible = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					has_idea = SLO_slo_economic_dependence_idea
+				}
+			}
+			check_variable = { 
+				var = var:global.SLO_ROM_influence
+				value = 50
+				compare = greater_than_or_equals 
+			}
+		}
+		cost = 100
+		complete_effect = {
+			ROM = {
+				add_ideas = SLO_slo_economic_dependence_idea
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.8
+						hours = 1
+					}
+				}
+			}
+		}
+	}
+	SLO_decisions_1_18 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_YUG_influence
+				value = 75
+				compare = greater_than_or_equals 
+				tooltip = SLO_tt_more75
+			}
+		}
+		visible = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					has_idea = SLO_slo_economic_dependence_idea
+				}
+			}
+			check_variable = { 
+				var = var:global.SLO_YUG_influence
+				value = 50
+				compare = greater_than_or_equals 
+			}
+		}
+		cost = 100
+		complete_effect = {
+			YUG = {
+				add_ideas = SLO_slo_economic_dependence_idea
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.8
+						hours = 1
+					}
+				}
+			}
+		}
+	}
+	SLO_decisions_1_19 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_POL_influence
+				value = 75
+				compare = greater_than_or_equals 
+				tooltip = SLO_tt_more75
+			}
+		}
+		visible = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					has_idea = SLO_slo_economic_dependence_idea
+				}
+			}
+			check_variable = { 
+				var = var:global.SLO_POL_influence
+				value = 50
+				compare = greater_than_or_equals 
+			}
+		}
+		cost = 100
+		complete_effect = {
+			POL = {
+				add_ideas = SLO_slo_economic_dependence_idea
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.8
+						hours = 1
+					}
+				}
+			}
+		}
+	}
+	SLO_decisions_1_20 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_HUN_influence
+				value = 75
+				compare = greater_than_or_equals 
+				tooltip = SLO_tt_more75
+			}
+		}
+		visible = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+				NOT = {
+					has_idea = SLO_slo_economic_dependence_idea
+				}
+			}
+			check_variable = { 
+				var = var:global.SLO_HUN_influence
+				value = 50
+				compare = greater_than_or_equals 
+			}
+		}
+		cost = 100
+		complete_effect = {
+			HUN = {
+				add_ideas = SLO_slo_economic_dependence_idea
+				hidden_effect = {
+					country_event = {
+						id = SLO_event.8
+						hours = 1
+					}
+				}
+			}
+		}
+	}
+	SLO_decisions_1_21 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_ROM_influence
+				value = 100
+				compare = greater_than_or_equals
+				tooltip = SLO_tt_more100
+			}
+		}
+		visible = {
+			ROM = {
+				has_idea = SLO_slo_trade_idea
+				has_idea = SLO_slo_economic_dependence_idea
+			}
+		}
+		cost = 200
+		complete_effect = {
+			ROM = {
+				remove_ideas = SLO_slo_trade_idea
+				country_event = {
+					id = SLO_event.9
+					hours = 1
+				}
+				set_country_flag = SLO_democracy_colony
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				set_autonomy = {
+					target = ROM
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+	}
+	SLO_decisions_1_22 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_YUG_influence
+				value = 100
+				compare = greater_than_or_equals
+				tooltip = SLO_tt_more100
+			}
+		}
+		visible = {
+			YUG = {
+				has_idea = SLO_slo_trade_idea
+				has_idea = SLO_slo_economic_dependence_idea
+			}
+		}
+		cost = 200
+		complete_effect = {
+			YUG = {
+				remove_ideas = SLO_slo_trade_idea
+				country_event = {
+					id = SLO_event.9
+					hours = 1
+				}
+				set_country_flag = SLO_democracy_colony
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				set_autonomy = {
+					target = YUG
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+	}
+	SLO_decisions_1_23 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_POL_influence
+				value = 100
+				compare = greater_than_or_equals
+				tooltip = SLO_tt_more100
+			}
+		}
+		visible = {
+			POL = {
+				has_idea = SLO_slo_trade_idea
+				has_idea = SLO_slo_economic_dependence_idea
+			}
+		}
+		cost = 200
+		complete_effect = {
+			POL = {
+				remove_ideas = SLO_slo_trade_idea
+				country_event = {
+					id = SLO_event.9
+					hours = 1
+				}
+				set_country_flag = SLO_democracy_colony
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				set_autonomy = {
+					target = POL
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+	}
+	SLO_decisions_1_24 = {
+		icon = GFX_decision_generic_confiscation
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+			}
+			check_variable = { 
+				var = var:global.SLO_HUN_influence
+				value = 100
+				compare = greater_than_or_equals
+				tooltip = SLO_tt_more100
+			}
+		}
+		visible = {
+			HUN = {
+				has_idea = SLO_slo_trade_idea
+				has_idea = SLO_slo_economic_dependence_idea
+			}
+		}
+		cost = 200
+		complete_effect = {
+			HUN = {
+				remove_ideas = SLO_slo_trade_idea
+				country_event = {
+					id = SLO_event.9
+					hours = 1
+				}
+				set_country_flag = SLO_democracy_colony
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				set_autonomy = {
+					target = HUN
+					autonomous_state = autonomy_colony
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+	}
+	SLO_decisions_1_99 = {
+		icon = GFX_decision_revolt
+		available = {
+			NOT = {
+				ROM = {
+					has_idea = SLO_slo_trade_idea
+				}
+				YUG = {
+					has_idea = SLO_slo_trade_idea
+				}
+				POL = {
+					has_idea = SLO_slo_trade_idea
+				}
+				HUN = {
+					has_idea = SLO_slo_trade_idea
+				}
+			}
+		}
+		activation = {
+			has_completed_focus = SLO_foc_1-4-15
+		}
+		days_mission_timeout = 180
+		fire_only_once = no
+		is_good = yes
+		timeout_effect = {
+			subtract_from_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+			}
+			subtract_from_variable = {
+				var = var:global.SLO_YUG_influence
+				value = 5
+			}
+			subtract_from_variable = {
+				var = var:global.SLO_POL_influence
+				value = 5
+			}
+			subtract_from_variable = {
+				var = var:global.SLO_HUN_influence
+				value = 5
+			}
+			custom_effect_tooltip = SLO_tt_allremove_2
+			SLO_influence_check = yes
+		} 
+	}
+}
+SLO_decisions_2 = {
+	SLO_decisions_2_1 = {
+		icon = GFX_decision_generic_nationalism
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			has_idea = SLO_slo_trade_idea
+		}
+		days_remove = 180
+		cost = 100
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		remove_effect = {
+			if = {
+				limit = { tag = ROM }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = YUG }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = POL }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = HUN }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+		}
+	}
+	SLO_decisions_2_2 = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			has_idea = SLO_slo_trade_idea
+		}
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { tag = ROM }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = YUG }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = POL }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = HUN }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.10
+			communism_drift = 0.01
+		}
+	}
+	SLO_decisions_2_3 = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			has_idea = SLO_slo_trade_idea
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			command_power > 49
+		}
+		custom_cost_text = decision_cost_pp_50_cp_50
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { tag = ROM }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = YUG }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = POL }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+			if = {
+				limit = { tag = HUN }
+				subtract_from_variable = {
+					var = var:global.SLO_ROM_influence
+					value = 5
+					tooltip = SLO_tt_2remove_5
+				}
+				SLO_influence_check = yes
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.10
+			communism_drift = 0.01
+		}
+	}
+	SLO_decisions_2_4 = {
+		icon = GFX_decision_generic_break_treaty
+		ai_will_do = {
+			base = 0
+		}
+		available = {
+			has_idea = SLO_slo_trade_idea
+			NOT = {
+				is_in_faction_with = SLO
+				has_idea = SLO_slo_economic_dependence_idea
+			}
+		}
+		cost = 200
+		complete_effect = {
+			add_stability = -0.10
+			remove_ideas = SLO_slo_trade_idea
+			if = {
+				limit = { tag = ROM }
+				SLO = {
+					country_event = {
+						id = SLO_event.100
+					}
+				}
+			}
+			if = {
+				limit = { tag = YUG }
+				SLO = {
+					country_event = {
+						id = SLO_event.101
+					}
+				}
+			}
+			if = {
+				limit = { tag = POL }
+				SLO = {
+					country_event = {
+						id = SLO_event.102
+					}
+				}
+			}
+			if = {
+				limit = { tag = HUN }
+				SLO = {
+					country_event = {
+						id = SLO_event.103
+					}
+				}
+			}
+		}
+	}
+}
+debug_decisions = {
+	SLO_get_a_5_ROM = {
+		priority = 80
+		allowed = {
+			always = yes
+		}
+		visible = {
+			is_ai = no
+			is_debug = yes
+            tag = SLO
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_idea = SLO_slo_trade_idea
+						}
+					}
+				}
+				ROM = {
+					add_ideas = SLO_slo_trade_idea
+				}
+			}
+			add_to_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+				tooltip = SLO_tt_add_5
+			}
+			SLO_influence_check = yes
+		}
+    }
+	SLO_remove_a_5_ROM = {
+		priority = 80
+		allowed = {
+			always = yes
+		}
+		visible = {
+			is_ai = no
+			is_debug = yes
+            tag = SLO
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							has_idea = SLO_slo_trade_idea
+						}
+					}
+				}
+				ROM = {
+					add_ideas = SLO_slo_trade_idea
+				}
+			}
+			subtract_from_variable = {
+				var = var:global.SLO_ROM_influence
+				value = 5
+				tooltip = SLO_tt_remove_5
+			}
+			SLO_influence_check = yes
+		}
+    }
+}

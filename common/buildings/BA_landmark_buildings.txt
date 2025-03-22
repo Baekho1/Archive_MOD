@@ -87,33 +87,4 @@ buildings = {
 			}
 		}
 	}
-
-	landmark_RED_spa = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
-		show_on_map = 1
-		base_cost = 20000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 26
-		value = 5
-		
-		is_buildable = yes
-		need_detection = yes
-		disable_grow_animation = yes
-		detecting_intel_type = civilian 
-		province_damage_modifiers = { flooded }
-		spawn_point = landmark_spawn
-		repair_speed_factor = @landmark_repair_speed_factor
-		only_display_if_exists = yes
-		special_icon = GFX_big_ben_icon_small
-		level_cap = {
-			province_max = 1
-		}
-		always_shown = yes
-		show_modifier = yes
-		state_modifiers = {
-			state_production_speed_buildings_factor = 0.15
-			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1
-		}
-	}
 }
