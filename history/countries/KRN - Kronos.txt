@@ -45,9 +45,9 @@ set_popularities = {
 	democratic = 100
 }
 
-recruit_character = COU_XXX
-recruit_character = COU_null
-recruit_character = COU_RIN
+#recruit_character = COU_XXX
+#recruit_character = COU_null
+#recruit_character = COU_RIN
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
