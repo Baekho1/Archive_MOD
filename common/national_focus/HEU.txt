@@ -3031,6 +3031,18 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = HEU_news.6 hours = 3 }
 				country_event = { id = HEU_event.257 days = 30 }
+
+				set_portraits = {
+					character = HEU_aru
+					army = { 
+						large ="gfx/leaders/HEU/HEU_aru_rikuhachima_GSC_president.dds" 
+						small ="gfx/interface/advisors/HEU/HEU_aru_rikuhachima_GSC_president.dds" 
+					}
+					civilian = { 
+						large ="gfx/leaders/HEU/HEU_aru_rikuhachima_GSC_president.dds" 
+						small ="gfx/interface/advisors/HEU/HEU_aru_rikuhachima_GSC_president.dds" 
+					}
+				}
 			}
 
 			set_cosmetic_tag = HEU_GSC
@@ -4538,6 +4550,17 @@ focus_tree = {
 			}
 			HEU_zkdyzh = {
 				add_skill_level = 1
+			}
+			
+			if = {
+				limit = {
+					GEH_hina = {
+						has_character_flag = HEU_hina_benriya_68
+					}
+				}
+				GEH_hina = {
+					add_skill_level = 1
+				}
 			}
 		}
 	}
