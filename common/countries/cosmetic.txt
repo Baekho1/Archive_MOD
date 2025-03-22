@@ -1909,89 +1909,9 @@ ABY_czech_republic = {
 	color = rgb { 54 167 156 }
 	color_ui = rgb { 54 167 156 }
 }
-ABY_czech_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_czechoslovakia_republic = {
+ABY_czechoslovakia = {
 	color = rgb { 54 167 156 }
 	color_ui = rgb { 54 167 156 }
-}
-ABY_czechoslovakia_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_czechoslovakia_soviet_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_EURKivotos = {
-	color = rgb { 5 58 125 }
-	color_ui = rgb { 5 58 125 }
-}
-ABY_prague_union = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_1 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_2 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_3 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_4 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_5 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_6 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_revolution_puppet_7 = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_union_school = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_PRE_UNION = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_soviet_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_zavaziya_socialism_republic = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 125 13 24 }
-}
-ABY_UNION = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_military_government = {
-	color = rgb { 120 120 150 }
-	color_ui = rgb { 120 120 150 }
-}
-ABY_SCHOOL = {
-	color = rgb { 50 0 75 }
-	color_ui = rgb { 50 0 75 }
 }
 ABY_SCHOOL_2 = {
 	color = rgb { 75 0 100 }
@@ -2121,138 +2041,10 @@ ABY_SCHOOL_2_Z = {
 	color = rgb { 50 0 75 }
 	color_ui = rgb { 50 0 75 }
 }
-ABY_COLOR = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_2 = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_ABY = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_HYA = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_SHA = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_TRM = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_GEH = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_MIL = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_RED = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_COU = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
-ABY_COLOR_defense_KSP = {
-	color = rgb { 100 50 100 }
-	color_ui = rgb { 100 50 100 }
-}
 HUN_visegrad_puppet = {
 	color = rgb { 60 175 150 }
 	color_ui = rgb { 60 175 150 }
 }
-ABY_visegrad = {
-	color = rgb { 60 175 150 }
-	color_ui = rgb { 60 175 150 }
-}
-ABY_united_confederation_of_danube = {
-	color = rgb { 150  150  125 }
-	color_ui = rgb { 150  150  125 }
-}
-ABY_danube_federation = {
-	color = rgb { 150  150  125 }
-	color_ui = rgb { 150  150  125 }
-}
-ABY_united_confederation_of_eastern_europe = {
-	color = rgb { 75  50  150 }
-	color_ui = rgb { 75  50  150 }
-}
- KOM_ABY_puppet = {
-	color = rgb { 50  0  75 }
-	color_ui = rgb { 50  0  75 }
-} #  "우랄 동방방위사령부"
- FRM_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "엘자스-로렌 연방공화국"
- HUN_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "헝가리 연방"
- COR_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "사르데냐-코르시카 연방"
- TTS_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "양시칠리아 입헌공화국"
- GAL_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "폴란드 공화국"
- NEN_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "백해 관할지구"
- SCO_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "북해 관할지구"
- CRI_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "흑해 관할지구"
- FIN_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "발틱 관할지구"
- POL_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "동부 관할지구"
- DAG_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "카스피 관할지구"
- UDM_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "우랄 관할지구"
- TAT_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "볼가 관할지구"
- DON_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "체르노젬 관할지구"
- CHU_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "모스크바 관할지구"
- IRQ_ABY_puppet = {
-	color = rgb { 75  0  100 }
-	color_ui = rgb { 75  0  100 }
-} # "아라비아 관할지구"
  DDR_liberate = {
 	color = rgb { 100  100  100 }
 	color_ui = rgb { 100  100  100 }
@@ -2313,7 +2105,7 @@ EGY_NOT_ENG = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
 }
-EGY_arab_united_republic_democratic = {
+EGY_arab_united_republic = {
 	color = rgb { 85 102 0 }
 	color_ui = rgb { 85 102 0 }
 }
@@ -2324,6 +2116,30 @@ EGY_ABYDOS = {
 ABY_sudetenland = {
 	color = rgb { 60 60 60 }
 	color_ui = rgb { 60 60 60 }
+}
+ABY_ohung = {
+	color = rgb { 250 150 150 }
+	color_ui = rgb { 250 150 150 }
+}
+ABY_greater_abydos = {
+	color = rgb { 200 150 50 }
+	color_ui = rgb { 200 150 50 }
+}
+ABY_republic = {
+	color = rgb { 50 150 150 }
+	color_ui = rgb { 50 150 150 }
+}
+ABY_austria = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+ABY_abydos_union = {
+	color = rgb { 200 50 50 }
+	color_ui = rgb { 200 50 50 }
+}
+ABY_south_kivotos = {
+	color = rgb { 150 100 200 }
+	color_ui = rgb { 150 100 200 }
 }
 CAN_restore = {
 	color = rgb { 119 48 39 }
@@ -2684,62 +2500,6 @@ ARI_arian_prussian_federation = {
 	color = rgb { 45 45 75 }
 	color_ui = rgb { 45 45 75 }
 }
-ABY_TRM_country = {
-	color = rgb { 60 60 60 }
-	color_ui = rgb { 60 60 60 }
-}
-ABY_holy_kingdom_1 = {
-	color = rgb { 150 150 255 }
-	color_ui = rgb { 150 150 255 }
-}
-ABY_holy_kingdom_2 = {
-	color = rgb { 255 150 150 }
-	color_ui = rgb { 255 150 150 }
-}
-ABY_holy_empire_1 = {
-	color = rgb { 100 100 255 }
-	color_ui = rgb { 100 100 255 }
-}
-ABY_holy_empire_2 = {
-	color = rgb { 255 100 100 }
-	color_ui = rgb { 255 100 100 }
-}
-ABY_empire_1 = {
-	color = rgb { 153 0 0 }
-	color_ui = rgb { 153 0 0 }
-}
-ABY_empire_2 = {
-	color = rgb { 153 0 0 }
-	color_ui = rgb { 153 0 0 }
-}
-ABY_ohung = {
-	color = rgb { 194 198 215 }
-	color_ui = rgb { 255 255 255 }
-}
-ABY_laita_ABY = {
-	color = rgb { 194 198 215 }
-	color_ui = rgb { 255 255 255 }
-}
-ABY_german_empire = {
-	color = rgb { 116 100 59 }
-	color_ui = rgb { 116 100 59 }
-}
-ABY_duchy_of_austria = {
-	color = rgb { 116 100 59 }
-	color_ui = rgb { 116 100 59 }
-}
-ABY_holy_roman_empire = {
-	color = rgb { 116 100 59 }
-	color_ui = rgb { 116 100 59 }
-}
-ABY_frank_kingdom = {
-	color = rgb { 50 50 100 }
-	color_ui = rgb { 50 50 100 }
-}
-ABY_abydos_union = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
 COU_go_to_left_center = {
     color = rgb { 200 0 0 }
     color_ui = rgb { 150 5 5 }
@@ -2804,22 +2564,6 @@ COUSRT_TRM = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 128 128 128 }
 }
-ABY_greater_abydos_communism = {
-	color = rgb { 153 0 25 }
-	color_ui = rgb { 153 0 25 }
-}
-ABY_greater_abydos_democratic = {
-	color = rgb { 150 0 50 }
-	color_ui = rgb { 150 0 50 }
-}
-ABY_greater_abydos_neutrality = {
-	color = rgb { 255 217 102 }
-	color_ui = rgb { 255 217 102 }
-}
-ABY_czech_osterreich = {
-	color = HSV { 0 0 0.4 }
-	color_ui = rgb { 138 155 116 }
-}
 SHL_com = {
 	color = rgb {200 0 0}
 	color_ui = rgb {200 0 0}
@@ -2827,10 +2571,6 @@ SHL_com = {
 GEK_red = {
 	color = rgb {200 0 0}
 	color_ui = rgb {200 0 0}
-}
-ABY_miteleuropa_federation = {
-    color = rgb { 0 0 100 }
-    color_ui = rgb { 5 5 150 }
 }
 KAI_british_corporation = {
     color = rgb { 152 79 98 }
@@ -2847,10 +2587,6 @@ BA_new_england = {
 FORM_INT = {
 	color = rgb { 214 102 139 }
 	color_ui = rgb { 255 120 138 }
-}
-ABY_united_europe = {
-	color = rgb { 0 51 153 }
-	color_ui = rgb { 0 51 153 }
 }
 SYR_levant = {
 	color = rgb { 175 50 75 }
@@ -2883,38 +2619,6 @@ ABY_neptis_nation_5 = {
 ABY_neptis_nation_6 = {
 	color = rgb { 255 217 102 }
 	color_ui = rgb { 255 217 102 }
-}
-ABY_highlander_nation_1 = {
-	color = rgb { 69 157 208 }
-	color_ui = rgb { 69 157 208 }
-}
-ABY_highlander_nation_2 = {
-	color = rgb { 69 157 208 }
-	color_ui = rgb { 69 157 208 }
-}
-ABY_revolution = {
-	color = rgb { 194 140 86 }
-	color_ui = rgb { 194 140 86 }
-}
-ABY_reichskomindante_GEO = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-ABY_reichskomindante_SOV = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-ABY_reichskomindante_BLR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-ABY_reichskomindante_POL = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
-}
-ABY_reichskomindante_UKR = {
-	color = rgb { 115 115 115 }
-	color_ui = rgb { 122 145 93 }
 }
 PAN_EUROPEA_STATE = {
 	color = rgb { 0 0 70 }
