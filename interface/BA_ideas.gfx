@@ -759,6 +759,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/geh/GEH_prefect_team_armband.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_GEH_prefect_team_swim_tube"
+		textureFile = "gfx/interface/ideas/geh/GEH_prefect_team_swim_tube.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_BA_a_divided_academy"
 		textureFile = "gfx/interface/ideas/geh/BA_a_divided_academy.tga"
 	}
