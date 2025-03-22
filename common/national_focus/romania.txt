@@ -1779,7 +1779,6 @@ focus_tree = {
 	            ideology = neutrality
                 popularity = -0.1
             }
-			unlock
 			unlock_decision_category_tooltip = ROM_king
 		}		
 	}
