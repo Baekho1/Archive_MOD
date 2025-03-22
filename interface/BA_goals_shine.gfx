@@ -19744,10 +19744,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_victory_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19760,7 +19760,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19776,10 +19776,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_old_qusetion_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19792,7 +19792,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_question.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19808,10 +19808,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_old_answer_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19824,7 +19824,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_old_answer.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19843,7 +19843,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19856,7 +19856,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_outside.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19872,10 +19872,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_human_history_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19888,7 +19888,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_human_history.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19904,10 +19904,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_fallen_gods_homeland_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19920,7 +19920,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_fallen_gods_homeland.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19936,10 +19936,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_stabilization_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19952,7 +19952,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_stabilization.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -19968,10 +19968,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_auto_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -19984,7 +19984,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_auto.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20000,10 +20000,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_modernization_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20016,7 +20016,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_modernization.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20032,10 +20032,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_syntetic_dawn_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20048,7 +20048,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_syntetic_dawn.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20064,10 +20064,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_box_shine"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20080,7 +20080,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20096,10 +20096,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_hesade_plan"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20112,7 +20112,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20128,10 +20128,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_effection"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20144,7 +20144,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20160,10 +20160,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_automatic_factory"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20176,7 +20176,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20192,10 +20192,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_god_knows"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20208,7 +20208,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20224,10 +20224,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_last_question"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20240,7 +20240,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20256,10 +20256,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_ghost_signal"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20272,7 +20272,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20288,10 +20288,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_no_name_gods"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20304,7 +20304,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -20320,10 +20320,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEI_DEC_my_war"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.png"  
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20336,7 +20336,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.png"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
