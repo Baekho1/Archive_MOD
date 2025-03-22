@@ -20259,7 +20259,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -20272,7 +20272,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"
+			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			

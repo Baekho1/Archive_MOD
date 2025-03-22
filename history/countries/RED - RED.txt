@@ -384,7 +384,6 @@ set_variable = { RED_labor_party_dynamic_modifier_iresearch_speed_factor = 0}
 #사무국
 set_variable = { RED_the_politburo_offensive_war_stability_factor = 0 }
 set_variable = { RED_the_politburo_defensive_war_stability_factor = 0 }
-set_variable = { RED_the_politburo_good_consumer_goods_factor = 0 }
 set_variable = { RED_the_politburo_production_speed_buildings_factor = 0 }
 set_variable = { RED_the_politburo_global_building_slots_factor = 0 }
 set_variable = { RED_the_politburo_max_command_power = 0 }

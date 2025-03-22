@@ -190,8 +190,8 @@ EGY_descision_category_sudan = {
 			}
 		}
 		available = {
-			every_controlled_state = {
-				NOT = {has_state_flag = EGY_sudan_rabel}
+			any_controlled_state = {
+				NOT = { has_state_flag = EGY_sudan_rabel }
 			}
 		}
 		days_mission_timeout = 120

@@ -766,9 +766,9 @@ focus_tree = {
 				character = GEI_DEC_decagramaton
 				promote_leader = yes
 				country_leader = {
-					ideology = neutrality
+					ideology = decagramaton_neutrality
 					expire = "1965.1.1.1"
-				traits = { GEI_the_presence_of_heteromorphs GEI_self_righteous_ruler }
+					traits = { GEI_the_presence_of_heteromorphs GEI_self_righteous_ruler }
 				}
 			}
 
@@ -799,8 +799,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = {id = GEI_DEC_event.2}
-			set_cosmatic_tag = GEI_DEC
-				}
+			set_cosmetic_tag = GEI_DEC
+		}
 	}
     
 	#오래된 대답

@@ -424,9 +424,11 @@ characters={
 				specialization_naval = 2
 			}
 			visible = {
-				has_country_leader = {
-					character = GEH_hina
-					ruling_only = yes
+				owner = {
+					has_country_leader = {
+						character = GEH_hina
+						ruling_only = yes
+					}
 				}
 			}
 		}

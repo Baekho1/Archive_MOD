@@ -1140,6 +1140,43 @@ focus_tree = {
 		}
 	}
 
+
+	########################
+	##########파시##########
+	#######################
+
+
+	focus = {
+		id = ROM_institute_fascism
+		icon = GFX_goal_support_fascism
+		prerequisite = {focus = ROM_modify_the_constitution }
+		mutually_exclusive = { focus = ROM_institute_comintern }
+		mutually_exclusive = { focus = ROM_institute_democracy }
+		x = 17
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+
 	##########################
 	### BALKANS DOMINANCE ####
 	####¤#####################
@@ -1742,7 +1779,8 @@ focus_tree = {
 	            ideology = neutrality
                 popularity = -0.1
             }
-			unlock_decision_tooltip = { decision = ROM_king }
+			unlock
+			unlock_decision_category_tooltip = ROM_king
 		}		
 	}
 
@@ -2637,43 +2675,6 @@ focus_tree = {
 
 
 
-
-
-	########################
-	##########파시##########
-	#######################
-
-
-	focus = {
-		id = ROM_institute_fascism
-		icon = GFX_goal_support_fascism
-		prerequisite = {focus = ROM_modify_the_constitution }
-		mutually_exclusive = { focus = ROM_institute_comintern }
-		mutually_exclusive = { focus = ROM_institute_democracy }
-		x = 17
-		y = 1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
-		}
-	}
 
 
 	# 외교 전략
