@@ -266,12 +266,17 @@ country_event ={ #공산당 집권
 	is_triggered_only = yes
 	option = { #소셜리즘 만세
 		name = SYR_event.9.a
-		set_politics = {
-			ruling_party = communism
-		}
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		start_civil_war = {
+			ideology = democratic
+			states = {677 680 799}
+			size = 0.5
 		}
 	}
 }
@@ -451,13 +456,11 @@ country_event ={ #정당 간 합의
 	picture = GFX_report_event_generic_handshake
 	option = { #굿
 		name = SYR_event.16.a
-		swap_ideas = {
-			remove_idea = SYR_ruined_politic_0
-			add_idea = SYR_ruined_politic
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
 		}
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 1000
-		}
+		add_stability = -0.1
+		add_war_support = -0.1
 	}
 }
