@@ -1,0 +1,40 @@
+peace_ai_desires = {
+	
+	HEU_take_gsc_core = {
+		peace_action_type = take_states
+		enable = {
+			FROM.FROM.FROM = {
+				OR = {
+					is_core_of = KSP
+					is_core_of = COU
+					is_core_of = SHE
+				}
+			}
+			ROOT = { 
+				original_tag = HEU
+				has_completed_focus = HEU_rikuhachima_governemnt
+			}
+		}
+        ai_desire = 1000
+	}
+
+	HEU_take_germany_core = {
+		peace_action_type = take_states
+		enable = {
+			FROM.FROM.FROM = {
+				OR = {
+					is_core_of = GEM
+					is_core_of = GEH
+					is_core_of = TRM
+				}
+			}
+			ROOT = { 
+				original_tag = HEU
+				has_completed_focus = HEU_representative_of_the_germanic
+			}
+		}
+        ai_desire = 1000
+	}
+}
+
+
