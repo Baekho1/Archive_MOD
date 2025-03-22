@@ -20095,7 +20095,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_hesade_plan"
+		name = "GFX_GEI_DEC_hesade_plan_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_hesade_plan.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20127,7 +20127,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_effection"
+		name = "GFX_GEI_DEC_effection_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_effection.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20159,7 +20159,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_automatic_factory"
+		name = "GFX_GEI_DEC_automatic_factory_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_automatic_factory.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20191,7 +20191,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_god_knows"
+		name = "GFX_GEI_DEC_god_knows_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_god_knows.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20223,7 +20223,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_last_question"
+		name = "GFX_GEI_DEC_last_question_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_last_question.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20255,8 +20255,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_ghost_signal"
-		texturefile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"  
+		name = "GFX_GEI_ghost_signal_shine"
+		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GEI/focus_GEI_ghost_signal.tga"
@@ -20287,7 +20287,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_no_name_gods"
+		name = "GFX_GEI_DEC_no_name_gods_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_no_name_gods.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -20319,7 +20319,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GEI_DEC_my_war"
+		name = "GFX_GEI_DEC_my_war_shine"
 		texturefile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"  
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
