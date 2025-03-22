@@ -46,9 +46,9 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #정당 간 합의
+	focus = { #실용적인 적대 종료
 		id = SYR_focus_1
-		icon = GFX_focus_ARG_strengthening_the_concordancia
+		icon = GFX_focus_ARG_join_the_allies
 		cost = 5
 		relative_position_id = SYR_focus_0
 		x = -1
@@ -56,11 +56,35 @@ focus_tree = {
 		prerequisite = {
 			focus = SYR_focus_0
 		}
+		mutually_exclusive = {
+			focus = SYR_focus_4
+		}
 		completion_reward = {
-			add_stability = 0.1
 			country_event = {
 				id = SYR_event.16
 				days = 3
+			}
+		}
+	}
+	focus = { #반제국주의 연대
+		id = SYR_focus_4
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 2
+		relative_position_id = SYR_focus_0
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_0
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_1
+		}
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = SYR_event.2
+					days = 3
+				}
 			}
 		}
 	}
@@ -69,7 +93,7 @@ focus_tree = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 5
 		relative_position_id = SYR_focus_0
-		x = 1
+		x = 3
 		y = 1
 		prerequisite = {
 			focus = SYR_focus_0
@@ -86,7 +110,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		prerequisite = {
-			focus = SYR_focus_2
+			focus = SYR_focus_0
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -106,34 +130,15 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #반제국주의 연대
-		id = SYR_focus_4
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		cost = 2
-		relative_position_id = SYR_focus_0
-		x = -0
-		y = 3
-		prerequisite = {
-			focus = SYR_focus_6
-		}
-		completion_reward = {
-			SOV = {
-				country_event = {
-					id = SYR_event.2
-					days = 3
-				}
-			}
-		}
-	}
 	focus = { #상공업 지원
 		id = SYR_focus_5
 		icon = GFX_focus_mex_privatisation
 		cost = 2
-		relative_position_id = SYR_focus_0
-		x = 2
-		y = 3
+		relative_position_id = SYR_focus_2
+		x = 1
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_3
+			focus = SYR_focus_2
 		}
 		completion_reward = {
 			add_popularity = {
@@ -152,38 +157,15 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #자유로운 토론
-		id = SYR_focus_7
-		icon = GFX_focus_ARG_defense_and_democracy
-		cost = 2
-		relative_position_id = SYR_focus_0
-		x = -2
-		y = 2
-		prerequisite = {
-			focus = SYR_focus_1
-		}
-		completion_reward = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.03
-			}
-			add_political_power = 10
-			add_stability = 0.05
-			add_war_support = -0.05
-		}
-	}
 	focus = { #지역방위계획
 		id = SYR_focus_6
-		icon = GFX_focus_ETH_freedom_at_gunpoint
+		icon = GFX_focus_AFG_quami
 		cost = 2
 		relative_position_id = SYR_focus_0
-		x = 0
-		y = 2
+		x = -3
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_1
-		}
-		prerequisite = {
-			focus = SYR_focus_2
+			focus = SYR_focus_0
 		}
 		completion_reward = {
 			division_template = {
@@ -215,60 +197,52 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #집회의 자유
-		id = SYR_focus_8
-		icon = GFX_focus_generic_support_the_left_right
+	focus = { #노동자 무장
+		id = SYR_focus_7
+		icon = GFX_focus_GER_support_the_proletarian_uprising
 		cost = 2
-		relative_position_id = SYR_focus_0
-		x = -2
-		y = 3
+		relative_position_id = SYR_focus_6
+		x = -1
+		y = 1
 		prerequisite = {
+			focus = SYR_focus_6
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_8	
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #장교 통제
+		id = SYR_focus_8
+		icon = GFX_focus_generic_military_mission
+		cost = 2
+		relative_position_id = SYR_focus_6
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_6
+		}
+		mutually_exclusive = {
 			focus = SYR_focus_7
 		}
 		completion_reward = {
-			random_list = {
-				1 = {
-					add_popularity = {
-						ideology = fascism
-						popularity = 0.1
-					}
-				}
-				1 = {
-					add_popularity = {
-						ideology = democratic
-						popularity = 0.1
-					}
-				}
-				1 = {
-					add_popularity = {
-						ideology = communism
-						popularity = 0.1
-					}
-				}
-				1 = {
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.1
-					}
-				}
-			}
 		}
 	}
-	focus = { #시리아 민족평의회 구성
+	focus = { #개헌
 		id = SYR_focus_9
-		icon = GFX_focus_SWI_dissolve_the_federal_council
+		icon = GFX_focus_AFG_revive_the_1923_constitution
 		cost = 5
 		relative_position_id = SYR_focus_0
 		x = 0
-		y = 4
+		y = 3
 		prerequisite = {
-			focus = SYR_focus_8
-		}
-		prerequisite = {
+			focus = SYR_focus_1
 			focus = SYR_focus_4
 		}
-		prerequisite = {
-			focus = SYR_focus_5
+		mutually_exclusive = {
+			focus = SYR_focus_10
+			focus = SYR_focus_12
 		}
 		completion_reward = {
 			country_event = {
@@ -277,17 +251,18 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #노동자-농민 평의회 소집
+	focus = { #파업 지속
 		id = SYR_focus_10
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		cost = 5
-		relative_position_id = SYR_focus_0
-		x = -8
-		y = 5
-		available = {
-			always = no
-		}
+		relative_position_id = SYR_focus_7
+		x = -2
+		y = 1
 		prerequisite = {
+			focus = SYR_focus_7
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_12
 			focus = SYR_focus_9
 		}
 		completion_reward = {
@@ -296,6 +271,22 @@ focus_tree = {
 				days = 3
 			}
 		}
+	}
+	focus = { #상황 통제
+		id = SYR_focus_12
+		icon = GFX_focus_generic_fascist_troops
+		cost = 5
+		relative_position_id = SYR_focus_8
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_8
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_10
+			focus = SYR_focus_9
+		}
+		completion_reward = { }
 	}
 	focus = { #헌법 제정
 		id = SYR_focus_11
@@ -308,22 +299,6 @@ focus_tree = {
 			always = no
 			has_country_flag = GAEBALJUNG
 		}
-		prerequisite = {
-			focus = SYR_focus_9
-		}
-		completion_reward = { }
-	}
-	focus = { #장교단 포섭
-		id = SYR_focus_12
-		icon = GFX_focus_generic_fascist_troops
-		cost = 5
-		relative_position_id = SYR_focus_0
-		available = {
-			always = no
-			has_country_flag = GAEBALJUNG
-		}
-		x = 4
-		y = 5
 		prerequisite = {
 			focus = SYR_focus_9
 		}
@@ -345,15 +320,59 @@ focus_tree = {
 		}
 		completion_reward = { }
 	}
+	focus = { #혁명 전야
+		id = SYR_focus_com_0
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		cost = 5
+		relative_position_id = SYR_focus_10
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_10
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #전위당의 지도
+		id = SYR_focus_com_3
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5
+		relative_position_id = SYR_focus_com_0
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_com_0
+		}
+		completion_reward = {
+			add_ideas = SYR_bolshevik_party
+		}
+	}
+	focus = { #관료 조직화
+		id = SYR_focus_com_6
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		relative_position_id = SYR_focus_com_3
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_com_3
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SYR_bolshevik_party
+				add_idea = SYR_bolshevik_party_1
+			}
+		}
+	}
 	focus = { #이슬람 율법학자 억제
 		id = SYR_focus_com_1
 		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_3
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = SYR_focus_10
+			focus = SYR_focus_com_3
 		}
 		completion_reward = {
 			add_popularity = {
@@ -364,50 +383,15 @@ focus_tree = {
 			add_political_power = 30
 		}
 	}
-	focus = { #부르주아 탄압
-		id = SYR_focus_com_2
-		icon = GFX_focus_spr_class_war
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_10
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = SYR_kill_capitalists
-				years = 1
-				days = 30
-			}
-		}
-	}
-	focus = { #전위당의 지도
-		id = SYR_focus_com_3
-		icon = GFX_focus_generic_soviet_politics
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 0
-		y = 2
-		prerequisite = {
-			focus = SYR_focus_com_1
-		}
-		prerequisite = {
-			focus = SYR_focus_com_2
-		}
-		completion_reward = {
-			add_ideas = SYR_bolshevik_party
-		}
-	}
 	focus = { #유연한 종교 정책
 		id = SYR_focus_com_4
 		icon = GFX_focus_SOV_patriarch_of_all_russia
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -4
-		y = 3
+		relative_position_id = SYR_focus_com_1
+		x = -1
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_com_3
+			focus = SYR_focus_com_1
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -420,40 +404,23 @@ focus_tree = {
 		id = SYR_focus_com_5
 		icon = GFX_goal_generic_soviet_construction
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_0
 		x = -2
-		y = 3
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_com_3
+			focus = SYR_focus_com_0
 		}
 		completion_reward = {
 			unlock_decision_category_tooltip = SYR_red_industrialization
-		}
-	}
-	focus = { #관료 조직화
-		id = SYR_focus_com_6
-		icon = GFX_focus_generic_treaty
-		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -3
-		y = 4
-		prerequisite = {
-			focus = SYR_focus_com_5
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SYR_bolshevik_party
-				add_idea = SYR_bolshevik_party_1
-			}
 		}
 	}
 	focus = { #토지 개혁
 		id = SYR_focus_com_7
 		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -1
-		y = 4
+		relative_position_id = SYR_focus_com_5
+		x = 1
+		y = 1
 		available = {
 			has_country_flag = SYR_train_corp_flag
 			has_country_flag = SYR_elec_corp_flag
@@ -474,19 +441,37 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #부르주아 탄압
+		id = SYR_focus_com_2
+		icon = GFX_focus_spr_class_war
+		cost = 5
+		relative_position_id = SYR_focus_com_5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_com_5
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SYR_kill_capitalists
+				years = 1
+				days = 30
+			}
+		}
+	}
 	focus = { #지식계층 양성
 		id = SYR_focus_com_8
 		icon = GFX_focus_ARG_universidad_de_buenos_aires
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -2
-		y = 5
+		relative_position_id = SYR_focus_com_5
+		x = 0
+		y = 2
 		available = {
 			has_country_flag = SYR_add_school_flag
 			has_country_flag = SYR_outside_school_flag
 		}
 		prerequisite = {
-			focus = SYR_focus_com_6
+			focus = SYR_focus_com_2
 		}
 		prerequisite = {
 			focus = SYR_focus_com_7
@@ -499,11 +484,11 @@ focus_tree = {
 		id = SYR_focus_com_9
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_0
 		x = 0
-		y = 3
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_com_3
+			focus = SYR_focus_com_0
 		}
 		completion_reward = {
 			division_template = {
@@ -568,9 +553,9 @@ focus_tree = {
 		id = SYR_focus_com_10
 		icon = GFX_focus_NOR_moscows_education_centers
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_9
 		x = 0
-		y = 5
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_9
 		}
@@ -585,11 +570,11 @@ focus_tree = {
 		id = SYR_focus_com_11
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_0
 		x = 2
-		y = 3
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_com_3
+			focus = SYR_focus_com_0
 		}
 		completion_reward = {
 			add_ideas = SYR_socialism_economy
@@ -599,9 +584,9 @@ focus_tree = {
 		id = SYR_focus_com_12
 		icon = GFX_focus_generic_full_employment
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 1
-		y = 4
+		relative_position_id = SYR_focus_com_11
+		x = -1
+		y = 1
 		mutually_exclusive = {
 			focus = SYR_focus_com_13
 		}
@@ -619,9 +604,9 @@ focus_tree = {
 		id = SYR_focus_com_13
 		icon = GFX_focus_DEN_heavy_regulations
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 3
-		y = 4
+		relative_position_id = SYR_focus_com_11
+		x = 1
+		y = 1
 		mutually_exclusive = {
 			focus = SYR_focus_com_12
 		}
@@ -639,9 +624,9 @@ focus_tree = {
 		id = SYR_focus_com_14
 		icon = GFX_focus_generic_communist_industry
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 2
-		y = 5
+		relative_position_id = SYR_focus_com_11
+		x = 0
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_12
 			focus = SYR_focus_com_13
@@ -660,9 +645,12 @@ focus_tree = {
 		id = SYR_focus_com_15
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_10
 		x = 0
-		y = 6
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_com_6
+		}
 		prerequisite = {
 			focus = SYR_focus_com_8
 		}
@@ -683,9 +671,9 @@ focus_tree = {
 		id = SYR_focus_com_16
 		icon = GFX_focus_generic_join_comintern
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_15
 		x = 1
-		y = 7
+		y = 1
 		mutually_exclusive = {
 			focus = SYR_focus_com_22
 		}
@@ -704,9 +692,9 @@ focus_tree = {
 		id = SYR_focus_com_17
 		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 2
-		y = 8
+		relative_position_id = SYR_focus_com_16
+		x = 1
+		y = 1
 		prerequisite = {
 			focus = SYR_focus_com_16
 		}
@@ -741,9 +729,9 @@ focus_tree = {
 		id = SYR_focus_com_18
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 0
-		y = 8
+		relative_position_id = SYR_focus_com_16
+		x = -1
+		y = 1
 		prerequisite = {
 			focus = SYR_focus_com_16
 		}
@@ -758,9 +746,9 @@ focus_tree = {
 		id = SYR_focus_com_19
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 3
-		y = 9
+		relative_position_id = SYR_focus_com_16
+		x = 2
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_17
 		}
@@ -777,9 +765,9 @@ focus_tree = {
 		id = SYR_focus_com_20
 		icon = GFX_focus_research
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 1
-		y = 9
+		relative_position_id = SYR_focus_com_16
+		x = 0
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_17
 		}
@@ -828,9 +816,9 @@ focus_tree = {
 		id = SYR_focus_com_21
 		icon = GFX_goal_generic_soviet_construction
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = 2
-		y = 10
+		relative_position_id = SYR_focus_com_16
+		x = 1
+		y = 3
 		prerequisite = {
 			focus = SYR_focus_com_17
 		}
@@ -863,9 +851,9 @@ focus_tree = {
 		id = SYR_focus_com_22
 		icon = GFX_focus_focus_fra_revolution_utmost
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_15
 		x = -1
-		y = 7
+		y = 1
 		mutually_exclusive = {
 			focus = SYR_focus_com_16
 		}
@@ -880,9 +868,9 @@ focus_tree = {
 		id = SYR_focus_com_23
 		icon = GFX_focus_generic_industry_1
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -4
-		y = 8
+		relative_position_id = SYR_focus_com_22
+		x = -3
+		y = 1
 		prerequisite = {
 			focus = SYR_focus_com_22
 		}
@@ -913,9 +901,9 @@ focus_tree = {
 		id = SYR_focus_com_24
 		icon = GFX_goal_generic_propaganda
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -2
-		y = 8
+		relative_position_id = SYR_focus_com_22
+		x = -1
+		y = 1
 		prerequisite = {
 			focus = SYR_focus_com_22
 		}
@@ -930,9 +918,9 @@ focus_tree = {
 		id = SYR_focus_com_25
 		icon = GFX_focus_SOV_merge_plants
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -3
-		y = 9
+		relative_position_id = SYR_focus_com_22
+		x = -2
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_23
 		}
@@ -966,9 +954,9 @@ focus_tree = {
 		id = SYR_focus_com_26
 		icon = GFX_focus_SOV_mobilization_plan
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -1
-		y = 9
+		relative_position_id = SYR_focus_com_22
+		x = 0
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_22
 		}
@@ -985,9 +973,9 @@ focus_tree = {
 		id = SYR_focus_com_27
 		icon = GFX_focus_ARG_the_buenos_aires_conference
 		cost = 5
-		relative_position_id = SYR_focus_10
-		x = -5
-		y = 9
+		relative_position_id = SYR_focus_com_22
+		x = -4
+		y = 2
 		prerequisite = {
 			focus = SYR_focus_com_23
 		}
@@ -999,9 +987,9 @@ focus_tree = {
 		id = SYR_focus_com_28
 		icon = GFX_focus_spr_crush_the_revolution
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_15
 		x = 0
-		y = 10
+		y = 4
 		prerequisite = {
 			focus = SYR_focus_com_26
 			focus = SYR_focus_com_18
@@ -1017,9 +1005,9 @@ focus_tree = {
 		id = SYR_focus_com_29
 		icon = GFX_goal_generic_attack_allies
 		cost = 5
-		relative_position_id = SYR_focus_10
+		relative_position_id = SYR_focus_com_15
 		x = 0
-		y = 11
+		y = 5
 		prerequisite = {
 			focus = SYR_focus_com_28
 		}

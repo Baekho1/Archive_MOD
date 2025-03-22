@@ -5278,7 +5278,7 @@ news_event = { # 비에노 조약
     id = BA_news.138
     title = BA_news.138.t
     desc = BA_news.138.d
-    picture = GFX_news_event_generic_sign_treaty1
+    picture = GFX_news_event_saf_soldiers
 
     major = yes
     is_triggered_only = yes

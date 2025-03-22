@@ -158,7 +158,7 @@ country_event = { #네덜란드 망명정부
 	hidden = no
 	option = {
 		name = IMP_event.3.a
-		add_political_power = 50
+		add_war_support = 0.05
 		transfer_state = 309
 	}
 }
