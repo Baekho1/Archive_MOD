@@ -267,15 +267,14 @@ country_event ={ #토지 개혁
 		add_ideas = SYR_land_reform_1
 	}
 }
-country_event ={ #민족평의회 선거
+country_event ={ #자유 선거
 	id = SYR_event.8
 	title = SYR_event.8.t
 	desc = SYR_event.8.d
 	picture = GFX_report_event_fascist_gathering
 	is_triggered_only = yes
-	option = { #시리아-레바논 공산당!
+	option = { #국민 블록!
 		name = SYR_event.8.a
-		complete_national_focus = SYR_focus_10
 	}
 }
 country_event ={ #공산당 집권
@@ -369,6 +368,7 @@ country_event ={ #무함마드 알리 베이 알아비드의 사임
 	option = { #ㅇㅋ
 		name = SYR_event.14.a
 		retire_country_leader = yes
+		activate_mission = SYR_dark_forest
 	}
 }
 country_event ={ #궐기

@@ -5969,6 +5969,13 @@ RED_population_issue_cat = {
 		modifier = {
 			consumer_goods_expected_value = 0.1
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_completed_focus = RED_dipose_cherino
+				add = 10
+			}
+		}
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = RED_population_issue_no_food

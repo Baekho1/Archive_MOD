@@ -6,5 +6,9 @@ SYR_red_industrialization = { #붉은 근대화
 	}
 }
 SYR_greater_syria = { #대시리아 강역
+	icon = GFX_decision_category_border_war
 	priority = 150
+}
+SYR_generic_decision_category = { #시리아의 상황
+	priority = 200
 }

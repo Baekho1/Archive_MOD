@@ -94,7 +94,7 @@ focus_tree = {
 	focus = { #표현의 자유
 		id = SYR_focus_10
 		icon = GFX_goal_generic_propaganda
-		cost = 5
+		cost = 2
 		relative_position_id = SYR_focus_0
 		x = 0
 		y = 2
@@ -291,17 +291,20 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.05
+				popularity = 0.1
 			}
 		}
 	}
 	focus = { #개헌
 		id = SYR_focus_9
 		icon = GFX_focus_AFG_revive_the_1923_constitution
-		cost = 5
+		cost = 2
 		relative_position_id = SYR_focus_0
-		x = 0
+		x = 1
 		y = 3
+		available = {
+			democratic > 0.5
+		}
 		prerequisite = {
 			focus = SYR_focus_10
 		}
@@ -314,6 +317,244 @@ focus_tree = {
 				id = SYR_event.8
 				days = 3
 			}
+		}
+	}
+	focus = { #계층별 협조
+		id = SYR_focus_dem_0
+		icon = GFX_goal_generic_national_unity
+		cost = 2
+		relative_position_id = SYR_focus_9
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_9
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #상인 우대
+		id = SYR_focus_dem_1
+		icon = GFX_focus_fra_devalue_the_franc
+		cost = 2
+		relative_position_id = SYR_focus_dem_0
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_0
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #금융업
+		id = SYR_focus_dem_2
+		icon = GFX_focus_AFG_afghan_bank
+		cost = 2
+		relative_position_id = SYR_focus_dem_0
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_dem_1
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_dem_4
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #지주와 제휴
+		id = SYR_focus_dem_3
+		icon = GFX_focus_PER_university_of_isfahan
+		cost = 2
+		relative_position_id = SYR_focus_dem_0
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_0
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #지주보호법
+		id = SYR_focus_dem_4
+		icon = GFX_focus_AUS_lawmaking_leniency
+		cost = 2
+		relative_position_id = SYR_focus_dem_3
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_3
+		}
+		mutually_exclusive = {
+			focus = SYR_focus_dem_2
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #시리아 공화주의
+		id = SYR_focus_dem_5
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 2
+		relative_position_id = SYR_focus_9
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_9
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #자유주의 지식인 후원
+		id = SYR_focus_dem_6
+		icon = GFX_focus_generic_university_2
+		cost = 2
+		relative_position_id = SYR_focus_dem_5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_5
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #여성권리 확대
+		id = SYR_focus_dem_7
+		icon = GFX_focus_AUS_womens_education_initiative
+		cost = 2
+		relative_position_id = SYR_focus_dem_6
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_6
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #노동 헌장
+		id = SYR_focus_dem_9
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		cost = 2
+		relative_position_id = SYR_focus_dem_6
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SYR_focus_dem_6
+		}
+		prerequisite = {
+			focus = SYR_focus_dem_10
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #근대 국가
+		id = SYR_focus_dem_10
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 2
+		relative_position_id = SYR_focus_dem_2
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_2
+			focus = SYR_focus_dem_4
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #능동적 중립
+		id = SYR_focus_dem_11
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 2
+		relative_position_id = SYR_focus_dem_10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_10
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #국제 협력
+		id = SYR_focus_dem_12
+		icon = GFX_focus_generic_blue_flags
+		cost = 2
+		relative_position_id = SYR_focus_dem_11
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_11
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #지중해 무역 협정
+		id = SYR_focus_dem_13
+		icon = GFX_focus_befriend_italy
+		cost = 2
+		relative_position_id = SYR_focus_dem_12
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_12
+			focus = SYR_focus_fas_13
+		}
+		prerequisite = {
+			focus = SYR_focus_dem_8
+			focus = SYR_focus_fas_13
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #흑해를 통한 교류
+		id = SYR_focus_dem_14
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 2
+		relative_position_id = SYR_focus_dem_12
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_12
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #중동 외교
+		id = SYR_focus_dem_15
+		icon = GFX_focus_generic_influence_middle_east
+		cost = 2
+		relative_position_id = SYR_focus_dem_11
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_11
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #레바논과의 통합 논의
+		id = SYR_focus_dem_16
+		icon = GFX_focus_generic_treaty
+		cost = 2
+		relative_position_id = SYR_focus_dem_15
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_dem_15
+		}
+		completion_reward = {
+		}
+	}
+	focus = { #근동 민주주의의 횃불
+		id = SYR_focus_dem_17
+		icon = GFX_focus_generic_democratic_europe
+		cost = 2
+		relative_position_id = SYR_focus_dem_15
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_dem_13
+			focus = SYR_focus_dem_14
+			focus = SYR_focus_dem_16
+		}
+		completion_reward = {
 		}
 	}
 	focus = { #장교단 포섭
@@ -468,56 +709,18 @@ focus_tree = {
 			add_ideas = SYR_nation_community
 		}
 	}
-	focus = { #국방국가
-		id = SYR_focus_fas_4
-		icon = GFX_focus_BEL_national_redoubt_at_antwerp
-		cost = 5
-		relative_position_id = SYR_focus_fas_2
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_fas_2
-		}
-		prerequisite = {
-			focus = SYR_focus_fas_3
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SYR_nation_community
-				add_idea = SYR_nation_community_1
-			}
-		}
-	}
-	focus = { #전시 산업
-		id = SYR_focus_fas_5
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
-		relative_position_id = SYR_focus_fas_2
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_fas_0
-			focus = SYR_focus_fas_1
-		}
-		completion_reward = {
-			capital_scope = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-		}
-	}
 	focus = { #반서방 선전
 		id = SYR_focus_fas_6
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		cost = 2
-		relative_position_id = SYR_focus_fas_4
-		x = -3
+		relative_position_id = SYR_focus_fas_3
+		x = 1
 		y = 1
 		prerequisite = {
-			focus = SYR_focus_fas_4
+			focus = SYR_focus_fas_3
+		}
+		prerequisite = {
+			focus = SYR_focus_fas_2
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -545,6 +748,64 @@ focus_tree = {
 			}
 		}
 	}
+	focus = { #국방국가
+		id = SYR_focus_fas_4
+		icon = GFX_focus_BEL_national_redoubt_at_antwerp
+		cost = 5
+		relative_position_id = SYR_focus_fas_6
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_fas_6
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SYR_nation_community
+				add_idea = SYR_nation_community_1
+			}
+		}
+	}
+	focus = { #전시 산업
+		id = SYR_focus_fas_5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		relative_position_id = SYR_focus_fas_2
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_fas_0
+			focus = SYR_focus_fas_1
+			focus = SYR_focus_dem_1
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	focus = { #기업가 지원
+		id = SYR_focus_dem_8
+		icon = GFX_focus_RAJ_institutional_money_laundering
+		cost = 2
+		relative_position_id = SYR_focus_fas_5
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_fas_5
+		}
+		prerequisite = {
+			focus = SYR_focus_dem_1
+		}
+		prerequisite = {
+			focus = SYR_focus_dem_10
+		}
+		completion_reward = {
+		}
+	}
 	focus = { #해외 파시즘 제휴
 		id = SYR_focus_fas_7
 		icon = GFX_focus_generic_spread_fascism
@@ -555,9 +816,40 @@ focus_tree = {
 		prerequisite = {
 			focus = SYR_focus_fas_4
 		}
+		available = {
+			any_country = {
+				custom_trigger_tooltip = {
+					tooltip = SYR_focus_fas_7_tt
+					has_government = fascism
+					is_major = yes
+					is_faction_leader = yes
+					OR = {Kivotos_tag = no tag = TRM}
+				}
+			}
+		}
 		completion_reward = {
-			ITA = {
-				country_event = generic.2
+			if = {
+				limit = {
+					ITA = {
+						has_government = fascism
+						is_major = yes
+						is_faction_leader = yes	
+					}
+				}
+				ITA = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				random_other_country = {
+					limit = {
+						has_government = fascism
+						is_major = yes
+						is_faction_leader = yes	
+						OR = {Kivotos_tag = no tag = TRM}
+					}
+					country_event = generic.2
+				}
 			}
 		}
 	}
@@ -586,13 +878,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = SYR_focus_fas_6
+			focus = SYR_focus_fas_8
 		}
 		bypass = {
 			owns_state = 183
 		}
 		completion_reward = {
 			add_political_power = -120
+			add_state_claim = 183
 			random_other_country = {
 				limit = {
 					owns_state = 183
@@ -600,37 +893,6 @@ focus_tree = {
 				country_event = {
 					id = SYR_event.17
 					days = 1
-				}
-			}
-		}
-	}
-	focus = { #터키 분할
-		id = SYR_focus_fas_10
-		icon = GFX_focus_generic_attack_turkey
-		cost = 5
-		relative_position_id = SYR_focus_fas_11
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_fas_11
-		}
-		prerequisite = {
-			focus = SYR_focus_fas_7
-		}
-		completion_reward = {
-			352 = {
-				add_claim_by = SYR
-			}
-			350 = {
-				add_claim_by = SYR
-			}
-			344 = {
-				add_claim_by = SYR
-			}
-			TUR = {
-				country_event = {
-					id = SYR_event.18
-					days = 2
 				}
 			}
 		}
@@ -686,6 +948,37 @@ focus_tree = {
 			unlock_decision_tooltip = SYR_get_core
 		}
 	}
+	focus = { #터키 분할
+		id = SYR_focus_fas_10
+		icon = GFX_focus_generic_attack_turkey
+		cost = 5
+		relative_position_id = SYR_focus_fas_11
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SYR_focus_fas_11
+		}
+		prerequisite = {
+			focus = SYR_focus_fas_7
+		}
+		completion_reward = {
+			352 = {
+				add_claim_by = SYR
+			}
+			350 = {
+				add_claim_by = SYR
+			}
+			344 = {
+				add_claim_by = SYR
+			}
+			TUR = {
+				country_event = {
+					id = SYR_event.18
+					days = 2
+				}
+			}
+		}
+	}
 	focus = { #이라크 쿠데타 지원
 		id = SYR_focus_fas_12
 		icon = GFX_focus_IRQ_arab_dominance
@@ -695,6 +988,11 @@ focus_tree = {
 		y = 2
 		prerequisite = {
 			focus = SYR_focus_fas_8
+		}
+		bypass = {
+			IRQ = {
+				has_government = fascism
+			}
 		}
 		completion_reward = {
 			add_state_claim = 676
@@ -712,7 +1010,7 @@ focus_tree = {
 		cost = 5
 		relative_position_id = SYR_focus_fas_5
 		x = 0
-		y = 2
+		y = 3
 		prerequisite = {
 			focus = SYR_focus_fas_7
 		}
@@ -743,9 +1041,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		prerequisite = {
-			focus = SYR_focus_fas_7
-		}
-		prerequisite = {
 			focus = SYR_focus_fas_10
 		}
 		prerequisite = {
@@ -762,38 +1057,6 @@ focus_tree = {
 				add_idea = SYR_nation_community_3
 			}
 		}
-	}
-	focus = { #헌법 제정
-		id = SYR_focus_11
-		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 5
-		relative_position_id = SYR_focus_0
-		x = 4
-		y = 5
-		available = {
-			always = no
-			has_country_flag = GAEBALJUNG
-		}
-		prerequisite = {
-			focus = SYR_focus_9
-		}
-		completion_reward = { }
-	}
-	focus = { #왕당파 봉기
-		id = SYR_focus_13
-		icon = GFX_focus_generic_fascist_troops
-		cost = 5
-		relative_position_id = SYR_focus_0
-		available = {
-			always = no
-			has_country_flag = GAEBALJUNG
-		}
-		x = 4
-		y = 6
-		prerequisite = {
-			focus = SYR_focus_9
-		}
-		completion_reward = { }
 	}
 	focus = { #혁명 전야
 		id = SYR_focus_com_0
@@ -821,7 +1084,7 @@ focus_tree = {
 	}
 	focus = { #레바논 압박
 		id = SYR_revolution_to_lebanon
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_attack_lebanon
 		cost = 2
 		relative_position_id = SYR_focus_com_0
 		x = 4
@@ -883,7 +1146,7 @@ focus_tree = {
 	}
 	focus = { #부르주아 탄압
 		id = SYR_focus_com_2
-		icon = GFX_focus_spr_class_war
+		icon = GFX_focus_BEL_government_resigns
 		cost = 5
 		relative_position_id = SYR_focus_com_3
 		x = -1
@@ -1205,21 +1468,6 @@ focus_tree = {
             }
 		}
 	}
-	focus = { #중동 사회주의의 보루
-		id = SYR_focus_com_17
-		icon = GFX_focus_SOV_international_union_of_soviet_republics
-		cost = 2
-		relative_position_id = SYR_focus_com_16
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_com_16
-		}
-		completion_reward = {
-			add_war_support = 0.05
-			set_cosmetic_tag = SYR_ssr
-		}
-	}
 	focus = { #마르크스-레닌주의를 향한 길
 		id = SYR_focus_com_18
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
@@ -1235,6 +1483,23 @@ focus_tree = {
 				remove_idea = SYR_bolshevik_party_2
 				add_idea = SYR_bolshevik_party_3
 			}
+			add_war_support = 0.05
+			set_cosmetic_tag = SYR_ssr
+		}
+	}
+	focus = { #중동 사회주의의 보루
+		id = SYR_focus_com_17
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		cost = 5
+		relative_position_id = SYR_focus_com_18
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_com_18
+			focus = SYR_focus_com_26
+		}
+		completion_reward = {
+			add_country_leader_trait = BA_enlightened_leninist
 		}
 	}
 	focus = { #시리아-소련 무역 협정
@@ -1242,13 +1507,10 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
 		relative_position_id = SYR_focus_com_16
-		x = 2
-		y = 2
+		x = 1
+		y = 3
 		prerequisite = {
-			focus = SYR_focus_com_17
-		}
-		prerequisite = {
-			focus = SYR_focus_com_18
+			focus = SYR_focus_com_21
 		}
 		completion_reward = {
 			SOU = {
@@ -1264,10 +1526,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		prerequisite = {
-			focus = SYR_focus_com_17
-		}
-		prerequisite = {
-			focus = SYR_focus_com_18
+			focus = SYR_focus_com_21
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1313,12 +1572,9 @@ focus_tree = {
 		cost = 5
 		relative_position_id = SYR_focus_com_16
 		x = 1
-		y = 3
+		y = 1
 		prerequisite = {
-			focus = SYR_focus_com_17
-		}
-		prerequisite = {
-			focus = SYR_focus_com_18
+			focus = SYR_focus_com_16
 		}
 		completion_reward = {
 			SOV = {
@@ -1359,29 +1615,6 @@ focus_tree = {
 			set_cosmetic_tag = SYR_levant
 		}
 	}
-	focus = { #자주적인 산업화
-		id = SYR_focus_com_23
-		icon = GFX_focus_generic_industry_1
-		cost = 5
-		relative_position_id = SYR_focus_com_22
-		x = -3
-		y = 1
-		prerequisite = {
-			focus = SYR_focus_com_22
-		}
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_core_of = SYR
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-		}
-	}
 	focus = { #집산주의 선전
 		id = SYR_focus_com_24
 		icon = GFX_goal_generic_propaganda
@@ -1399,78 +1632,15 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #5개년 계획
-		id = SYR_focus_com_25
-		icon = GFX_focus_SOV_merge_plants
-		cost = 5
-		relative_position_id = SYR_focus_com_22
-		x = -4
-		y = 2
-		prerequisite = {
-			focus = SYR_focus_com_23
-		}
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_core_of = SYR
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-				}
-			}
-		}
-	}
-	focus = { #주체적인 군사개혁
-		id = SYR_focus_com_26
-		icon = GFX_focus_SOV_mobilization_plan
-		cost = 5
-		relative_position_id = SYR_focus_com_22
-		x = 0
-		y = 2
-		prerequisite = {
-			focus = SYR_focus_com_22
-		}
-		completion_reward = {
-			army_experience = 50
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.25
-				category = land_doctrine
-				uses = 2
-			}
-		}
-	}
-	focus = { #내수 경제 활성화
-		id = SYR_focus_com_27
-		icon = GFX_focus_ARG_the_buenos_aires_conference
-		cost = 5
-		relative_position_id = SYR_focus_com_22
-		x = -2
-		y = 2
-		prerequisite = {
-			focus = SYR_focus_com_23
-		}
-		prerequisite = {
-			focus = SYR_focus_com_24
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SYR_bolshevik_party_2-1
-				add_idea = SYR_bolshevik_party_2-2
-			}
-		}
-	}
 	focus = { #해방전선 실현
 		id = SYR_focus_com_28
 		icon = GFX_focus_spr_crush_the_revolution
 		cost = 5
-		relative_position_id = SYR_focus_com_15
-		x = 0
-		y = 4
+		relative_position_id = SYR_focus_com_22
+		x = -1
+		y = 3
 		prerequisite = {
-			focus = SYR_focus_com_26
-			focus = SYR_focus_com_18
+			focus = SYR_focus_com_24
 		}
 		available = {
 			454 = {
@@ -1514,6 +1684,42 @@ focus_tree = {
 			}
 			add_state_core = 454
 			add_state_core = 455
+		}
+	}
+	focus = { #주체적인 군사개혁
+		id = SYR_focus_com_26
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 5
+		relative_position_id = SYR_focus_com_22
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_com_22
+		}
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				category = land_doctrine
+				uses = 2
+			}
+		}
+	}
+	focus = { #내수 경제 활성화
+		id = SYR_focus_com_27
+		icon = GFX_focus_ARG_the_buenos_aires_conference
+		cost = 5
+		relative_position_id = SYR_focus_com_22
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = SYR_focus_com_24
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SYR_bolshevik_party_2-1
+				add_idea = SYR_bolshevik_party_2-2
+			}
 		}
 	}
 	focus = { #근동의 건설자들
@@ -2811,13 +3017,9 @@ focus_tree = {
 			553 = {
 				BA_increase_state_category_by_one_level = yes
 				add_manpower = 200000
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
 			}
 			add_victory_points = {
-				province = 797
+				province = 792
 				value = 5
 			}
 		}
@@ -2860,10 +3062,10 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			553 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 				}
 			}
 		}
@@ -2881,10 +3083,10 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SYR_assimilate_leb
-				years = 3
+				years = 1
 			}
 			553 = {
-				add_core_of = SYR
+				add_compliance = 40
 			}
 		}
 	}
