@@ -325,6 +325,11 @@ RED_local_industralisation = {
 	local_building_slots = 1
 	state_production_speed_buildings_factor = 0.06
 }
+RED_local_industralisation_1 = {
+	icon = GFX_modifiers_ETH_state_development
+	local_building_slots = 2
+	state_production_speed_buildings_factor = 0.08
+}
 RED_social_reform_modifier = {
 	icon = GFX_modifiers_GER_socialist_movement
 	compliance_growth = 0.05

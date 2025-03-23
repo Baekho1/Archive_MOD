@@ -4853,7 +4853,7 @@ focus_tree = {
 	# }
 
 	focus = {
-		id = KSP_police_nation		#생활안전국의 학교 장악
+		id = KSP_police_nation		#경찰 국가
 		icon = GFX_KSP_focus_police_nation
 		cost = 5
 
@@ -4941,6 +4941,15 @@ focus_tree = {
 	
 		prerequisite = {
 			focus = KSP_police_nation
+		}
+
+		available = {
+			is_subject = no
+			has_country_leader = {
+				character = KSP_Ogata_Kanna
+				ruling_only = yes
+			}
+			NOT = { has_completed_focus = KSP_government_ganghwa }
 		}
 	
 		allow_branch = {

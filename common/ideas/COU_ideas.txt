@@ -605,6 +605,28 @@ ideas = {
 				compliance_gain = 0.01
             }
         }
+		
+		COU_ditchland_law3 = { #디츨란드법
+		    name = COU_ditchland_law3
+            picture = BEL_burgundian_heritage_ns 
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war ={   
+                has_government = fascism
+            }
+            
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.2
+				stability_factor = -0.2
+				war_support_factor = 0.1
+				consumer_goods_expected_value = 0.2
+				industrial_capacity_factory = -0.2
+            }
+        }
     
 
 		COU_autonomous_legislation_idea = { #주권법

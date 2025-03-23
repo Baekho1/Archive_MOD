@@ -1905,6 +1905,15 @@ spriteTypes = {
 		name = "GFX_focus_SHA_cavalry_charge"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_cavalry_charge.png"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_appointment_of_BTP"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_appointment_of_BTP.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_remove_POC"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_remove_POC.tga"  
+	}
+
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
 		texturefile = "gfx/interface/goals/ROM/ROM_invite_german_advisors.tga"  

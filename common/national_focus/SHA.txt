@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Austrian_oppression_continues
 		icon = GFX_focus_GER_anschluss
-		x = 30
+		x = 60
 		y = 0
 		cost = 10
 
@@ -280,7 +280,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Austrian_appeasement_policy
 		icon = GFX_focus_generic_befriend_austria
-		x = 20
+		x = -20
 		y = 0
 		cost = 2
 		relative_position_id = SHA_Austrian_oppression_continues
@@ -342,7 +342,7 @@ focus_tree = {
 	focus = {
 		id = SHA_gathering_of_radicals
 		icon = GFX_focus_generic_advanced_military_studies
-		x = 5
+		x = -5
 		y = 1
 		cost = 5
 		relative_position_id = SHA_Austrian_appeasement_policy
@@ -1318,7 +1318,7 @@ focus_tree = {
 	focus = {
 		id = SHA_local_harmony
 		icon = GFX_focus_AUS_diplomatic_effort
-		x = -7
+		x = 7
 		y = 1
 		cost = 5
 
@@ -1365,6 +1365,116 @@ focus_tree = {
 		}
 	}
 
+	# 오스트리아 정치인 석방
+	focus = {
+		id = SHA_austrian_politician_released
+		icon = GFX_focus_AUS_release_imprisoned_leaders
+		x = -2
+		y = 1
+		cost = 2
+
+		prerequisite = { focus = SHA_local_harmony }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_local_harmony
+
+		completion_reward = {
+
+		}
+	}
+
+	# 현룡문 정책 선회
+	focus = {
+		id = SHA_government_policy_shift
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = -0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_local_harmony }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_local_harmony
+
+		completion_reward = {
+
+		}
+	}
+
+	# 현무상회와 협력
+	focus = {
+		id = SHA_appointment_of_BTP
+		icon = GFX_focus_SHA_appointment_of_BTP
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_government_policy_shift }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_government_policy_shift
+
+		completion_reward = {
+
+		}
+	}
+
+	# 반동 제거
+	focus = {
+		id = SHA_remove_conservatives
+		icon = GFX_focus_SHA_remove_POC
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_government_policy_shift }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_government_policy_shift
+
+		completion_reward = {
+
+		}
+	}
+
+	# 고립 정책 번복
+	focus = {
+		id = SHA_isolation_policy_overturned
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_government_policy_shift }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_government_policy_shift
+
+		completion_reward = {
+
+		}
+	}
+
 
 	##############
 	####외교 중점####
@@ -1374,7 +1484,7 @@ focus_tree = {
 	focus = {
 		id = SHA_Shanhaijing_fact
 		icon = GFX_goal_SHA_Southern_Kivotos
-		x = 24
+		x = 44
 		y = 0
 		relative_position_id = SHA_Austrian_appeasement_policy
 		search_filters = {  }
@@ -2702,7 +2812,7 @@ focus_tree = {
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		x = -20
 		y = 0
-		relative_position_id = SHA_Austrian_oppression_continues
+		relative_position_id = SHA_Austrian_appeasement_policy
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		cost = 3
 
@@ -2717,6 +2827,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			country_event = { id = shafas.5 }
+			hidden_effect = {
+				country_event = { id = shafla.1 days = 15 }
+			}
 		}
 	}
 
@@ -2946,6 +3059,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = SHA_Solving_the_austria_Militia
+			hidden_effect = {
+
+			}
 		}
 	}
 
@@ -3900,7 +4016,7 @@ focus_tree = {
 		icon = GFX_goal_SHA_Army_Training
 		x = -21
 		y = 6
-		relative_position_id = SHA_Austrian_oppression_continues
+		relative_position_id = SHA_Austrian_appeasement_policy
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		cost = 3
 

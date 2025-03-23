@@ -20,10 +20,14 @@ country_event ={ #프랑스로부터의 승리
 			}
 		}
 		remove_ideas = SYR_general_strike
+		news_event = {
+			id = BA_news.138
+			days = 1
+		}
 		hidden_effect = {
-			news_event = {
-				id = BA_news.138
-				days = 1
+			country_event = {
+				id = SYR_event.14
+				days = 10
 			}
 		}
 	}
@@ -179,6 +183,10 @@ country_event ={ #원조 수락
 				ideology = communism
 				popularity = 0.1
 			}
+			add_timed_idea = {
+				idea = SYR_aid_from_sov
+				years = 1
+			}
 		}
 		if = {
 			limit = {
@@ -189,6 +197,10 @@ country_event ={ #원조 수락
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
+			}
+			add_timed_idea = {
+				idea = SYR_aid_from_ita
+				years = 1
 			}
 		}
 		if = {
@@ -201,6 +213,10 @@ country_event ={ #원조 수락
 				ideology = democratic
 				popularity = 0.1
 			}
+			add_timed_idea = {
+				idea = SYR_aid_from_usa
+				years = 1
+			}
 		}
 		if = {
 			limit = {
@@ -210,6 +226,10 @@ country_event ={ #원조 수락
 			}
 			799 = {
 				transfer_state_to = TUR
+			}
+			add_timed_idea = {
+				idea = SYR_aid_from_tur
+				years = 1
 			}
 		}
 		random_owned_state = {
@@ -247,15 +267,14 @@ country_event ={ #토지 개혁
 		add_ideas = SYR_land_reform_1
 	}
 }
-country_event ={ #민족평의회 선거
+country_event ={ #자유 선거
 	id = SYR_event.8
 	title = SYR_event.8.t
 	desc = SYR_event.8.d
 	picture = GFX_report_event_fascist_gathering
 	is_triggered_only = yes
-	option = { #시리아-레바논 공산당!
+	option = { #국민 블록!
 		name = SYR_event.8.a
-		complete_national_focus = SYR_focus_10
 	}
 }
 country_event ={ #공산당 집권
@@ -266,12 +285,17 @@ country_event ={ #공산당 집권
 	is_triggered_only = yes
 	option = { #소셜리즘 만세
 		name = SYR_event.9.a
-		set_politics = {
-			ruling_party = communism
-		}
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		start_civil_war = {
+			ideology = democratic
+			states = {677 680 799}
+			size = 0.5
 		}
 	}
 }
@@ -335,115 +359,34 @@ country_event ={ #시리아와의 협상
 		}
 	}
 }
-country_event ={ #이란 분할
+country_event ={ #무함마드 알리 베이 알아비드의 사임
 	id = SYR_event.14
 	title = SYR_event.14.t
 	desc = SYR_event.14.d
-	trigger = {
-		has_country_flag = SYR_eat_per
-		PER = {
-			exists = no
-		}
-		any_country = {
-			is_ally_with = SOV
-			owns_state = 266
-		}
-	}
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = SYR_eat_per
-		}
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
+	fire_only_once = yes
+	is_triggered_only = yes
 	option = { #ㅇㅋ
 		name = SYR_event.14.a
-		every_state = {
-			limit = {
-				is_core_of = PER
-			}
-			transfer_state_to = SYR
-		}
-		every_state = {
-			limit = {
-				is_core_of = PER
-				is_claimed_by = SOV
-			}
-			transfer_state_to = SOV
-		}
+		retire_country_leader = yes
+		activate_mission = SYR_dark_forest
 	}
 }
-country_event ={ #터키 분할
+country_event ={ #궐기
 	id = SYR_event.15
 	title = SYR_event.15.t
 	desc = SYR_event.15.d
-	trigger = {
-		has_country_flag = SYR_eat_tur
-		TUR = {
-			exists = no
-		}
-		any_country = {
-			is_ally_with = SOV
-			owns_state = 49
-		}
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = SYR_eat_tur
-		}
-	}
+	fire_only_once = yes
+	is_triggered_only = yes
 	option = { #ㅇㅋ
-		name = SYR_event.14.a
-		release = TUR
-		every_state = {
-			limit = {OR={
-				is_core_of = KUR
-				is_core_of = SYR
-				}
-				NOT = {
-					is_core_of = IRQ
-					is_core_of = PER
-				}
-			}
-			transfer_state_to = SYR
-		}
-		799 = {
-			transfer_state_to = SYR
-		}
-		SOV = {
-			release = TUR
-		}
-		every_state = {
-			limit = {
-				is_core_of = TUR
-				is_claimed_by = SOV
-			}
-			transfer_state_to = SOV
-		}
-		every_state = {
-			limit = {
-				is_core_of = TUR
-				is_claimed_by = SOV
-			}
-			transfer_state_to = SOV
-		}
-		TUR = {
-			set_variable = { collaboration_formed_by = ROOT }
-		}
-		SOV = {
-			set_autonomy = {
-				target = TUR
-				autonomy_state = autonomy_collaboration_government
-			}
+		name = SYR_event.15.a
+		remove_ideas = SYR_incorporated_officers
+		set_politics = {
+			ruling_party = fascism
 		}
 	}
 }
 
-country_event ={ #정당 간 합의
+country_event ={ #서방과의 우호
 	id = SYR_event.16
 	title = SYR_event.16.t
 	desc = SYR_event.16.d
@@ -451,13 +394,131 @@ country_event ={ #정당 간 합의
 	picture = GFX_report_event_generic_handshake
 	option = { #굿
 		name = SYR_event.16.a
-		swap_ideas = {
-			remove_idea = SYR_ruined_politic_0
-			add_idea = SYR_ruined_politic
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
 		}
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 1000
+		add_stability = -0.1
+		add_war_support = -0.1
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					tag = ENG
+					tag = USA
+				}
+			}
+			add_opinion_modifier = {
+				target = SYR
+				modifier = friendship_with_western
+			}
+		}
+	}
+}
+country_event ={ #키프로스 매입
+	id = SYR_event.17
+	title = SYR_event.17.t
+	desc = SYR_event.17.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_handshake
+	option = { #굿
+		name = SYR_event.17.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				ROOT = {
+					has_government = fascism
+				}
+				add = 2
+			}
+			modifier = {
+				ROOT = {
+					is_ally_with = FROM
+				}
+				add = 2
+			}
+		}
+		FROM = {
+			transfer_state = 183
+		}
+		add_political_power = 20
+	}
+	option = {
+		name = SYR_event.17.b
+	}
+}
+country_event ={ #터키에의 최후통첩
+	id = SYR_event.18
+	title = SYR_event.18.t
+	desc = SYR_event.18.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_handshake
+	option = { #ㅇㅋ..
+		name = SYR_event.18.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				FROM = {
+					is_ally_with = ITA
+				}
+				add = 1
+			}
+		}
+		FROM = {
+			transfer_state = 344
+			transfer_state = 350
+			transfer_state = 352
+			transfer_state = 799
+		}
+		add_war_support = -0.05
+	}
+	option = {
+		name = SYR_event.18.b
+		FROM = {
+			create_wargoal = {
+				target = TUR
+				type = take_claimed_state
+			}
+		}
+	}
+}
+country_event ={ #이라크 쿠데타
+	id = SYR_event.19
+	title = SYR_event.19.t
+	desc = SYR_event.19.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_handshake
+	option = { #ㅇㅋ..
+		name = SYR_event.19.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				FROM = {
+					is_ally_with = ITA
+				}
+				add = 1
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		complete_national_focus = IRQ_strengthen_the_golden_square
+		FROM = {
+			transfer_state = 676
+			set_autonomy = {
+				target = IRQ
+				autonomy_state = autonomy_puppet
+			}
+		}
+		add_war_support = -0.05
+	}
+	option = {
+		name = SYR_event.19.b
+		FROM = {
+			create_wargoal = {
+				target = IRQ
+				type = topple_government
+			}
 		}
 	}
 }
