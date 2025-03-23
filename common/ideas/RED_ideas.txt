@@ -623,7 +623,7 @@ ideas = {
 			}
 		}
 		RED_red_horse_idea_all = { #붉은말 운동
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_speed_fight
@@ -632,7 +632,7 @@ ideas = {
 			}
 		}
 		RED_red_horse_idea_cr_sp = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_speed_fight
@@ -640,7 +640,7 @@ ideas = {
 			}
 		}
 		RED_red_horse_idea_pr_cr = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_more_production
@@ -648,7 +648,7 @@ ideas = {
 			}
 		}
 		RED_red_horse_idea_sp_pr = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_speed_fight
@@ -656,28 +656,28 @@ ideas = {
 			}
 		}
 		RED_red_horse_idea_cr = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_creating_n_inovation
 			}
 		}
 		RED_red_horse_idea_pr = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_more_production
 			}
 		}
 		RED_red_horse_idea_sp = {
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 			name = 	RED_red_horse_idea
 			traits = {
 				RED_speed_fight
 			}
 		}
 		RED_red_horse_idea = { #붉 말 운동
-			picture = FIN_socialist_welfare
+			picture = ETH_national_studs
 		}
 		RED_property_ceiling = { #재산상한제
 			picture = GER_economy_of_conquest

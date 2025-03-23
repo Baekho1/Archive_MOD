@@ -20,6 +20,9 @@
  SYR_train_corp_flag:0 "§Y철도 공사§!를 설립했습니다."
  SYR_elec_corp_flag:0 "§Y전력 공사§!를 설립했습니다."
 
+ SYR_greater_syria: "대시리아 강역"
+ SYR_get_core: "[FROM.getname] 핵심화"
+
  #국민정신
   #팔레스타인
  PAL_jews_hoods:0 "유대인 정착촌"
@@ -47,6 +50,9 @@
 
  SYR_general_strike: "시리아 총파업"
  SYR_basic_press: "기초적인 언론"
+ SYR_incorporated_officers: "포섭된 장교단"
+ SYR_nation_community: "민족 공동체"
+ SYR_aid: "산업 원조"
 
  #인물
  SYR_Khalid_Bakdash:0 "칼리드 바크다쉬"
@@ -96,9 +102,27 @@
  SYR_event.13.t: "시리아 총파업"
  SYR_event.13.d: " 지난 10여 년 간 진행되었던 시리아-레바논에서의 식민지배는 더 이상 지속될 수 없음이 자명해지고 있습니다. 시리아 총파업으로 거리는 진작에 마비되었고, 시리아 주둔군은 꽤나 큰 피해를 입고 있는 상황입니다. 설상가상으로 시리아 총파업은 주변 아랍 국가들의 동맹파업과 연대집회로 이어지고 있으며, 팔레스타인, 레바논, 요르단 등에서 유의미한 정치적 운동을 형성하고 있습니다.\n\n 원수 각하께서는 이와 같은 대치가 프랑스의 국익에 도움이 되지 않는다는 사실을 잘 알고 계십니다. 프랑스를 위해서라면 그는 말끔히 정장을 차려입은 채, 시리아와 열린 대화를 할 준비가 되있으십니다."
  SYR_event.13.a: "2보의 전진을 위한 1보의 후퇴다."
+ SYR_event.14.t: "[SYR_mehemed_ali_abed.getname]의 사임"
+ SYR_event.14.d: "약 4년동안 대통령직을 수행했던 [SYR_mehemed_ali_abed.getname]는 대프랑스 외교에서 너무 유화적이라는 비판을 가끔 받았지만, 그가 우리의 친애하는 독립운동가 중 한 명임은 분명합니다. 그는 독립 이후 신정권의 창출을 돕기 위해서 대통령직에서 사임할 것을 발표했으며, 자유 의회는 시리아 총파업을 기획하고 지시한 [SYR_hashim_al_atassi.getname]를 신임하였기 때문에, 그가 뒤이어 대통령직을 수행하기로 결정되었습니다."
+ SYR_event.14.a: "새로운 대통령을 환영하자."
+ SYR_event.15.t: "궐기"
+ SYR_event.15.d: "나약한 의회민주주의는 더 이상 우리가 고려할 사항이 아닙니다. 용맹하고 깨어있는 장교단은 사회민족당과 손잡고 수도를 급습했습니다. 일부 저항이 있었으나 모두 무력화되었고, 끝내 정권은 탈취되었습니다. 다만, 농촌에서 우리의 이러한 행동을 묵인할지는 여전히 미지수입니다!"
+ SYR_event.15.a: "궐기 만세!"
  SYR_event.16.t:0 "서방과의 우호"
  SYR_event.16.d:0 "비록 독립하긴 했으나 우리는 여전히 공산주의와 파시즘의 위협에 맞서 민주주의를 수호해야 하는 비탈길 위에 서있습니다. 서방과의 공조는 민족 감정에 앞서 민주정체의 수호를 위한 것입니다!"
  SYR_event.16.a:0 "사람들이 이걸 이해해줄까?"
+ SYR_event.17.t: "키프로스 매입 요청"
+ SYR_event.17.d: "[FROM.getname](으)로부터 키프로스를 매입하고자 요청이 왔습니다."
+ SYR_event.17.a: "좋은 거래다."
+ SYR_event.17.b: "무례하군."
+ SYR_event.18.t: "[FROM.getname]의 최후통첩"
+ SYR_event.18.d: "[FROM.GetAdjective] 정부는 동남부 영토를 요구하며 최후통첩을 보냈습니다. 이는 대부분 쿠르드족의 영토이지만 확실한 주권침탈입니다!"
+ SYR_event.18.a: "평화보다 값진 건 없다."
+ SYR_event.18.b: "무례하군!"
+ SYR_event.19.t: "쿠데타!"
+ SYR_event.19.d: "[SYR.gentame]의 사주를 받은 것으로 추정되는 파시스트 장교단이 쿠데타를 일으켰습니다."
+ SYR_event.19.a: "신이라크 만세!"
+ SYR_event.19.b: "저지해라!"
  
 
  #시리아 중점
@@ -125,9 +149,25 @@
  SYR_focus_12:0 "장교단 포섭"
  SYR_focus_13:0 "왕당파 봉기"
 
+ SYR_focus_fas_0: "시가 행진"
+ SYR_focus_fas_1: "총궐기"
+ SYR_focus_fas_2: "일당독재 실시"
+ SYR_focus_fas_3: "민족주의 이데올로기"
+ SYR_focus_fas_4: "국방국가"
+ SYR_focus_fas_5: "전시 산업"
+ SYR_focus_fas_6: "반서방 선전"
+ SYR_focus_fas_7: "해외 파시즘 제휴"
+ SYR_focus_fas_8: "중동 패권"
+ SYR_focus_fas_9: "키프로스 매입"
+ SYR_focus_fas_10: "터키 분할"
+ SYR_focus_fas_11: "대시리아 통합 전쟁"
+ SYR_focus_fas_12: "이라크 쿠데타 지원"
+ SYR_focus_fas_13: "세계 파시즘 산업 협력"
+ SYR_focus_fas_14: "단일하고 통합된 시리아!"
+
  SYR_revolution_to_lebanon: "[LEB.getadjective] 압박"
  SYR_focus_com_0:0 "혁명 전야"
- SYR_focus_com_1:0 "이슬람 율법학자 억제"
+ SYR_focus_com_1:0 "당 병합"
  SYR_focus_com_2:0 "부르주아 탄압"
  SYR_focus_com_3:0 "전위당의 지도"
  SYR_focus_com_4:0 "유연한 종교 정책"
@@ -151,11 +191,10 @@
  SYR_focus_com_22:0 "레반트 혁명론"
  SYR_focus_com_23:0 "자주적인 산업화"
  SYR_focus_com_24:0 "집산주의 선전"
- SYR_focus_com_25:0 "대규모 국가사업"
+ SYR_focus_com_25:0 "5개년 계획"
  SYR_focus_com_26:0 "주체적인 군사개혁"
  SYR_focus_com_27:0 "내수 경제 활성화"
  SYR_focus_com_28:0 "해방전선 실현"
- SYR_focus_com_29:0 "트란스요르단 공세"
 
   #산업 중점 
  SYR_focus_ind_0:0 "근동의 건설자들"
@@ -177,7 +216,7 @@
  SYR_focus_ind_15:0 "무역 활성화"
  SYR_focus_ind_16:0 "지역 개발"
  SYR_focus_ind_17:0 "도시 계획"
- SYR_focus_ind_18:0 "관광 유치"
+ SYR_focus_ind_18:0 "중공업의 맹아"
  SYR_focus_ind_18.5:0 "서부 고속도로"
  SYR_focus_ind_19:0 "사막 계획"
  SYR_focus_ind_20:0 "쿠르드족 자치"
@@ -211,6 +250,7 @@
  SYR_focus_ind_48:0 "소화기 작업장 현대화"
  SYR_focus_ind_49:0 "자주적인 국방산업"
  SYR_focus_ind_49_tt:0 "§Y군수공장§!이 있는 모든 주에 §G1§!개의 §Y군수공장§!을 추가합니다.\n\n"
+ SYR_focus_ind_50: "쿠르드 산업 병합"
 
  #레바논 중점
  SYR_focus_leb_1:0 "기독교 포용"

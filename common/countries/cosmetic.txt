@@ -2596,6 +2596,10 @@ SYR_ssr = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
 }
+SYR_greater = {
+	color = rgb { 70  70  105 }
+	color_ui = rgb { 70  70  105 }
+}
 ABY_neptis_nation_1 = {
 	color = rgb { 255 217 102 }
 	color_ui = rgb { 255 217 102 }

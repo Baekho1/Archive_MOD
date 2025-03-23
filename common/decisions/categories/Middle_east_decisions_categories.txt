@@ -5,3 +5,6 @@ SYR_red_industrialization = { #붉은 근대화
 		original_tag = SYR
 	}
 }
+SYR_greater_syria = { #대시리아 강역
+	priority = 150
+}
