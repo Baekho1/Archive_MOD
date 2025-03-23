@@ -1954,6 +1954,7 @@ country_event = {
 		custom_effect_tooltip = COU_tooltip_queen_never_cry
 		add_stability = -0.1
 		add_political_power = 100
+		complete_national_focus = COU_focus_let_be_the_queen
 		swap_ideas = {
 		    remove_idea = COU_notgood_kaya_power2
 			add_idea = COU_notgood_kaya_power3
@@ -2086,6 +2087,7 @@ country_event = {
 	immediate = {
 	    hidden_effect = {
 		    KSP = { country_event = { id = COU_event.65 } }
+			country_event = { id = COU_event.69 days = 7 }
 		}
 	}
 
@@ -2183,6 +2185,40 @@ country_event = {
 		swap_ideas = {
 		    remove_idea = COU_ditchland_law
 			add_idea = COU_ditchland_law2
+		}
+	}
+}
+
+country_event = {
+	id = COU_event.69
+	title = COU_event.69.t
+	desc = COU_event.69.desc
+	picture = GFX_report_event_picture_kaya_3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = COU_event.69.a
+		custom_effect_tooltip = COU_tooltip_wait_we_fucked
+		add_political_power = -75
+		swap_ideas = {
+		    remove_idea = COU_ditchland_law2
+			add_idea = COU_ditchland_law3
+		}
+		swap_ruler_traits = {
+			remove = COU_KAYA_TRAIT
+			add = COU_the_fail
+		}
+		set_country_leader_description = {
+			desc = KAYA_FUCKED_DESC
+		}
+		COU_KAYA = {
+			set_portraits = {
+				civilian = {
+					large=GFX_leaders_kayaface_four
+				}
+			}
 		}
 	}
 }

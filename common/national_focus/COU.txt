@@ -494,7 +494,10 @@ focus_tree = {
 		prerequisite = { focus = COU_focus_in_the_darkness }
 		relative_position_id = COU_focus_in_the_darkness
         completion_reward = {
-		     
+		    swap_ruler_traits = {
+			    remove = COU_dictator_rin
+			    add = COU_dictator
+		    }
         }
 	}
 	
