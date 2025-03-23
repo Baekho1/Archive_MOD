@@ -17,7 +17,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_focus_HYA_focus_victory"
-		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_victory.tga"
+		texturefile = "gfx/interface/goals/HYA/focus_HYA_focus_victory.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_GE2_start_focus"
@@ -594,7 +594,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_focus_FRA_vote_box" 
-		texturefile = "gfx/interface/goals/FRA/vote_box.tga"
+		texturefile = "gfx/interface/goals/FRA/vote_box.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_FRA_bosu_win"
@@ -2785,7 +2785,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_GEI_DEC_victory"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.tga"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_victory.png"
 	}
 
 	spriteType = {
@@ -2835,7 +2835,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_GEI_DEC_box"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.tga"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_box.png"
 	}
 
 	spriteType = {
@@ -2865,7 +2865,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_GEI_ghost_signal"
-		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.tga"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghost_signal.png"
 	}
 
 	spriteType = {
@@ -2876,5 +2876,45 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_GEI_DEC_my_war"
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_my_war.tga"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_fail"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_fail.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_zero_one"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_zero_one.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_ghostghost"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghostghost.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_ain"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ain.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_sof"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_sof.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_orn"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_orn.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_duty"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_duty.png"
+	}
+
+	spriteType = {
+		name = "GFX_GEI_DEC_influenced"
+		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_influenced.png"
 	}
 }
