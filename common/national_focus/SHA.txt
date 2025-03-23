@@ -617,7 +617,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SHA_Shanhaijing_fascism
-		cost = 8
+		cost = 5
 
 		prerequisite = { focus = SHA_Shanhaijing_fascism }
 		mutually_exclusive = { }
@@ -4163,7 +4163,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_militray_army_attack_factor = 0.05
+				SHA_militray_army_attack_factor = 0.1
 				tooltip = army_attack_factor_tt
 			}
 		}
@@ -4326,7 +4326,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_militray_army_org_factor = 0.05
+				SHA_militray_army_org_factor = 0.1
 				tooltip = army_org_factor_tt
 			}
 		}
