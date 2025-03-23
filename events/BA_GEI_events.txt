@@ -16,6 +16,11 @@ country_event = {
         custom_effect_tooltip = GEI_Beatrice_tt
     }
 
+	 option = { 
+        name = GEI_event.1.b
+        set_country_flag = GEI_DEC
+        complete_national_focus = GEI_DEC_victory
+    }
 }
 country_event = {
 	id = GEI_event.2
