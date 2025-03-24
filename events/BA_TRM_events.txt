@@ -6,7 +6,7 @@ add_namespace = TRN_collapse_event
 add_namespace = TRMDIP
 add_namespace = TRM_ironsword_event
 
-add_namespace = trnstory # 플레이버 이벤트
+add_namespace = trnfla # 플레이버 이벤트
 add_namespace = trinity 
 add_namespace = trnhonor # 명예
 add_namespace = trinitynews # 뉴스 이벤트
@@ -127,7 +127,7 @@ country_event = {
 			add_idea = TRM_troll_mika_2
 			remove_idea = TRM_troll_mika
 		}
-		country_event = { id = trnstory.4 }
+		country_event = { id = trnfla.4 }
 	}
 }
 country_event = {
@@ -1828,7 +1828,7 @@ unit_leader_event = {
 		name = TRM_event.72.a
 		if = {
 			limit = { has_tech = sp_armored_lc_weapon_fire_control_tech }
-			country_event = { id = trnstory.0 days = 07 }
+			country_event = { id = trnfla.0 days = 07 }
 		}
 		else = {
 	        hidden_effect = {
@@ -9269,28 +9269,28 @@ news_event = {
 	}
 }
 country_event = {
-	id = trnstory.0
-	title = trnstory.0.t
-	desc = trnstory.0.desc
+	id = trnfla.0
+	title = trnfla.0.t
+	desc = trnfla.0.desc
 	picture = GFX_report_event_american_hunger_march
 
 	is_triggered_only = yes
 	
 	option = { 
-		name = trnstory.0.a
-		country_event = { id = trnstory.1 }
+		name = trnfla.0.a
+		country_event = { id = trnfla.1 }
 	}
 }
 country_event = {
-	id = trnstory.1
-	title = trnstory.1.t
-	desc = trnstory.1.desc
+	id = trnfla.1
+	title = trnfla.1.t
+	desc = trnfla.1.desc
 	picture = GFX_report_event_american_hunger_march
 
 	is_triggered_only = yes
 	
 	option = { 
-		name = trnstory.1.a
+		name = trnfla.1.a
 		add_country_leader_trait = TRN_seiausesandevistan
 		set_country_flag = TRN_Seia_Sandevistan
         load_focus_tree = {
@@ -9306,51 +9306,51 @@ country_event = {
 	}
 }
 country_event = { # "타협점을 찾아서" - 1
-	id = trnstory.2
-	title = trnstory.2.t
-	desc = trnstory.2.desc
+	id = trnfla.2
+	title = trnfla.2.t
+	desc = trnfla.2.desc
 	picture = GFX_event_none_picture
 
 	is_triggered_only = yes
 	
 	option = { 
-		name = trnstory.2.a
+		name = trnfla.2.a
 		hidden_effect = {
-			country_event = { id = trnstory.3 }
+			country_event = { id = trnfla.3 }
 		}
 		TRN_country_collapse_down = yes
 	}
 }
 country_event = { # "타협점을 찾아서" - 2
-	id = trnstory.3
-	title = trnstory.3.t
-	desc = trnstory.3.desc
+	id = trnfla.3
+	title = trnfla.3.t
+	desc = trnfla.3.desc
 	picture = GFX_event_none_picture
 
 	is_triggered_only = yes
 	
 	option = { 
-		name = trnstory.3.a
+		name = trnfla.3.a
 		add_stability = -0.05
 	}
 }
 country_event = { # 보충수업부 편입하는 스토리 이벤트
-	id = trnstory.4
+	id = trnfla.4
 	title = TRM_work_clup
-	desc = trnstory.4.desc
-	picture = GFX_trnstory_4
+	desc = trnfla.4.desc
+	picture = GFX_trnfla_4
 
 	is_triggered_only = yes
 	
 	option = { 
-		name = trnstory.4.a
+		name = trnfla.4.a
 		add_ideas = TRM_work_clup
 	}
 }
 country_event = { # 트리니티의 개쩌는 사업 아이템!
-	id = trnstory.5
-	title = trnstory.5.t
-	desc = trnstory.5.desc
+	id = trnfla.5
+	title = trnfla.5.t
+	desc = trnfla.5.desc
 	picture = GFX_report_event_journalists_speech
 	
 	is_triggered_only = no
@@ -9367,107 +9367,107 @@ country_event = { # 트리니티의 개쩌는 사업 아이템!
     }
 
 	option = {
-		name = trnstory.5.a
+		name = trnfla.5.a
 	}
 }
 country_event = { # 슈테틴 항구 사건
-	id = trnstory.6
-	title = trnstory.6.t
-	desc = trnstory.6.desc
+	id = trnfla.6
+	title = trnfla.6.t
+	desc = trnfla.6.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.6.a
+		name = trnfla.6.a
 		hidden_effect = {
 			country_event = {
-				id = trnstory.7 days = 180
+				id = trnfla.7 days = 180
 			}
 		}
 	}
 }
 country_event = { # 쾨니히스베르크 - 어여쁜 마을에서의 산보
-	id = trnstory.7
-	title = trnstory.7.t
-	desc = trnstory.7.desc
+	id = trnfla.7
+	title = trnfla.7.t
+	desc = trnfla.7.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.7.a
+		name = trnfla.7.a
 		hidden_effect = {
 			country_event = { 
-				id =  trnstory.8
+				id =  trnfla.8
 				days = 25
 			}
 		}
 	}
 }
 country_event = { # 쾨니히스베르크 - 예나 지금이나 가문 싸움
-	id = trnstory.8
-	title = trnstory.8.t
-	desc = trnstory.8.desc
+	id = trnfla.8
+	title = trnfla.8.t
+	desc = trnfla.8.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.8.a
+		name = trnfla.8.a
 		hidden_effect = {
 			country_event = { 
-				id = trnstory.9
+				id = trnfla.9
 				days = 180
 			}
 		}
 	}
 }
 country_event = { # 바시스 스콜라 - 가장 우리다운 우리
-	id = trnstory.9
-	title = trnstory.9.t
-	desc = trnstory.9.desc
+	id = trnfla.9
+	title = trnfla.9.t
+	desc = trnfla.9.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.9.a
+		name = trnfla.9.a
 		hidden_effect = {
 			country_event = {
-				id = trnstory.10
+				id = trnfla.10
 				days = 02
 			}
 		}
 	}
 }
 country_event = { # 바시스 스콜라 - 피, 죽음, 구원
-	id = trnstory.10
-	title = trnstory.10.t
-	desc = trnstory.10.desc
+	id = trnfla.10
+	title = trnfla.10.t
+	desc = trnfla.10.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.10.a
+		name = trnfla.10.a
 		hidden_effect = {
 			country_event = {
-				id = trnstory.11
+				id = trnfla.11
 				days = 365
 			}
 		}
 	}
 }
 country_event = { # 인생의 굴레
-	id = trnstory.11
-	title = trnstory.11.t
-	desc = trnstory.11.desc
+	id = trnfla.11
+	title = trnfla.11.t
+	desc = trnfla.11.desc
 	picture = GFX_report_event_japanese_soldiers_01
 	
 	is_triggered_only = yes
@@ -9478,79 +9478,93 @@ country_event = { # 인생의 굴레
 	}
 
 	option = {
-		name = trnstory.11.a
+		name = trnfla.11.a
 		
 	}
 }
 country_event = { # 음모론 - 세이아는 살아계시다!
-	id = trnstory.12
-	title = trnstory.12.t
-	desc = trnstory.12.desc
+	id = trnfla.12
+	title = trnfla.12.t
+	desc = trnfla.12.desc
 	picture = GFX_event_Seia_standing
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.12.a
+		name = trnfla.12.a
 		add_stability = -0.005
 	}
 }
 country_event = { # 나치즘
-	id = trnstory.13
-	title = trnstory.13.t
-	desc = trnstory.13.desc
+	id = trnfla.13
+	title = trnfla.13.t
+	desc = trnfla.13.desc
 	picture = GFX_report_event_fascists_posing
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.13.a
+		name = trnfla.13.a
 
 	}
 }
 country_event = { # 충성경쟁
-	id = trnstory.14
-	title = trnstory.14.t
-	desc = trnstory.14.desc
+	id = trnfla.14
+	title = trnfla.14.t
+	desc = trnfla.14.desc
 	picture = GFX_report_event_canada_ronnie
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.14.a
+		name = trnfla.14.a
 		hidden_effect = {
-			country_event = { id = trnstory.16 days = 45 } # 충성경쟁 - 부작용 
+			country_event = { id = trnfla.16 days = 45 } # 충성경쟁 - 부작용 
 		}
 	}
 }
 country_event = { # 동행인
-	id = trnstory.15
-	title = trnstory.15.t
-	desc = trnstory.15.desc
+	id = trnfla.15
+	title = trnfla.15.t
+	desc = trnfla.15.desc
 	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.15.a
+		name = trnfla.15.a
 
 	}
 }
 country_event = { # 부작용
-	id = trnstory.16
-	title = trnstory.16.t
-	desc = trnstory.16.desc
+	id = trnfla.16
+	title = trnfla.16.t
+	desc = trnfla.16.desc
 	picture = GFX_event_teaparty
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
-		name = trnstory.16.a
+		name = trnfla.16.a
 
+	}
+}
+unit_leader_event = { # 침울한 하늘 아래에서
+	id = trnfla.17
+	title = trnfla.17.t
+	desc = trnfla.17.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.17.a 
+		
 	}
 }

@@ -89,12 +89,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TRN/TRN_cult_of_Mika.tga"
 	}
 	SpriteType = {
-		name = "GFX_focus_TRN_germany_thinker"
-		texturefile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"
+		name = "GFX_focus_TRN_invite_of_carl_schmitt"
+		texturefile = "gfx/interface/goals/TRN/TRN_invite_of_carl_schmitt.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_TRN_alliance_of_faith"
 		texturefile = "gfx/interface/goals/TRN/TRN_alliance_of_faith.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_fate_of_small_club"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_fate_of_small_club.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_TRN_improving_academy_industry"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_improving_academy_industry.tga"
 	}
 
 	SpriteType = {

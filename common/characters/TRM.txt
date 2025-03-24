@@ -1183,6 +1183,7 @@ characters={
 		portraits={
 			army={
 				small= GFX_Z_TRN_Carl_Schmitt_idea
+				large = GFX_Z_TRN_Carl_Schmitt_portrait
 			}
 		}
 		advisor = {
@@ -1195,9 +1196,13 @@ characters={
 				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
 					NOT = { has_character_flag = TRM_forced_dismissal_flag }
 				}
-			 	has_completed_focus = TMR_support_with_germany
 			}
-			visible = { has_completed_focus = TMR_support_with_germany }
+			visible = { 
+				OR = { 
+					has_completed_focus = TMR_support_with_germany 
+					has_completed_focus = TRN_hiring_german_thinkers
+				}
+			}
     		traits = { TRN_constitutional_theory }
 			cost = 75
 			ai_will_do = { base = 4000 }
@@ -1208,6 +1213,7 @@ characters={
 		portraits = {
 			army = {
 				small = GFX_Z_TRM_hans_zehrer_idea
+				large = GFX_Z_TRM_hans_zehrer_idea
 			}
 		}
 		advisor = {
@@ -1220,9 +1226,51 @@ characters={
 				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
 					NOT = { has_character_flag = TRM_forced_dismissal_flag }
 				}
-			 	has_completed_focus = TMR_support_with_germany
+				OR = { 
+					has_completed_focus = TMR_support_with_germany 
+					has_completed_focus = TRN_hiring_german_thinkers
+				}
 			}
-			visible = { has_completed_focus = TMR_support_with_germany }
+			visible = { 
+				OR = { 
+					has_completed_focus = TMR_support_with_germany 
+					has_completed_focus = TRN_hiring_german_thinkers
+				}
+			}
+    		traits = { KR_schleicher_mouthpiece }
+			cost = 75
+			ai_will_do = { base = 4000 }
+		}
+	}
+	TRM_alfred_rosenberg = {
+		name = TRM_alfred_rosenberg
+		portraits = {
+			army = {
+				small = GFX_Z_TRM_alfred_rosenberg_idea
+				large = GFX_Z_TRM_alfred_rosenberg_idea
+			}
+		}
+		advisor = {
+    		slot = political_advisor
+    		idea_token = TRM_hans_zehrer_idea
+			allowed = {
+				original_tag = TRM
+			}
+			available = {
+				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
+					NOT = { has_character_flag = TRM_forced_dismissal_flag }
+				}
+				OR = { 
+					has_completed_focus = TMR_support_with_germany 
+					has_completed_focus = TRN_hiring_german_thinkers
+				}
+			}
+			visible = { 
+				OR = { 
+					has_completed_focus = TMR_support_with_germany 
+					has_completed_focus = TRN_hiring_german_thinkers
+				}
+			}
     		traits = { KR_schleicher_mouthpiece }
 			cost = 75
 			ai_will_do = { base = 4000 }
@@ -1248,7 +1296,7 @@ characters={
 			 	has_completed_focus = TRN_gunsu_sangsan_bub
 			}
 			visible = { has_completed_focus = TRN_gunsu_sangsan_bub }
-    		traits = { TRN_fritz_todt_economist }
+    		traits = { GER_reich_minister_of_armaments_todt }
 			cost = 75
 			ai_will_do = { base = 4000 }
 		}

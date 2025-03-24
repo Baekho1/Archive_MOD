@@ -799,11 +799,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_TRN_germany_thinker_shine"
-		texturefile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"			
+		name = "GFX_focus_TRN_invite_of_carl_schmitt_shine"
+		texturefile = "gfx/interface/goals/TRN/TRN_invite_of_carl_schmitt.tga"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/TRN_invite_of_carl_schmitt.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = -90.0		
 			animationlooping = no			
@@ -816,7 +816,7 @@ spriteTypes = {
 		}
 	
 		animation = {
-			animationmaskfile = "gfx/interface/goals/TRN/TRN_germany_thinker.tga"			
+			animationmaskfile = "gfx/interface/goals/TRN/TRN_invite_of_carl_schmitt.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			
@@ -849,6 +849,70 @@ spriteTypes = {
 	
 		animation = {
 			animationmaskfile = "gfx/interface/goals/TRN/TRN_alliance_of_faith.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_TRN_fate_of_small_club_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_fate_of_small_club.tga"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_fate_of_small_club.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_fate_of_small_club.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = 90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_TRN_improving_academy_industry_shine"
+		texturefile = "gfx/interface/goals/TRN/focus_TRN_improving_academy_industry.tga"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_improving_academy_industry.tga"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
+			animationrotation = -90.0		
+			animationlooping = no			
+			animationtime = 0.75				
+			animationdelay = 0			
+			animationblendmode = "add"       
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TRN/focus_TRN_improving_academy_industry.tga"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	
 			animationrotation = 90.0		
 			animationlooping = no			

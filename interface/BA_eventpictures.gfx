@@ -578,8 +578,8 @@ spriteTypes = {
        texturefile = "gfx/event_pictures/TRM/report_walter_ppk.png"
     }
     spriteType = {
-       name = "GFX_trnstory_4"
-       texturefile = "gfx/event_pictures/trnstory_4.tga"
+       name = "GFX_trnfla_4"
+       texturefile = "gfx/event_pictures/trnfla_4.tga"
     }
     spriteType = {
       name = "GFX_event_BA_generic_event_13"
@@ -599,7 +599,7 @@ spriteTypes = {
     }
     spriteType = {
        name = "GFX_event_Seia_standing"
-       texturefile = "gfx/event_pictures/TRM/trnstory_12.tga"
+       texturefile = "gfx/event_pictures/TRM/trnfla_12.tga"
     }
     spriteType = {
        name = "GFX_event_Himuro_Sena"
