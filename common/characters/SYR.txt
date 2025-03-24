@@ -38,6 +38,42 @@ characters = {
 		}
 
 	}
+	SYR_Khalid_Bakdash = {
+
+		name = SYR_Khalid_Bakdash
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Middle_east/Khalid_Bakdash.tga"
+			}
+		}
+
+		country_leader = {
+			ideology = leninism
+			traits = {  }
+			expire = "1960.1.1.1"
+			id = -1
+		}
+
+	}
+	SYR_Antun_Saadeh = {
+
+		name = SYR_Antun_Saadeh
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Middle_east/Antun_Saadeh.tga"
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {  }
+			expire = "1960.1.1.1"
+			id = -1
+		}
+
+	}
 
 	
 

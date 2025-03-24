@@ -1,4 +1,46 @@
 ideas = {
+	hidden_ideas = {
+		SYR_aid_from_ita = {
+			name = SYR_aid
+			modifier = {
+				industrial_factory_donations = 1
+				fascism_drift = 0.03
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		SYR_aid_from_usa = {
+			name = SYR_aid
+			modifier = {
+				industrial_factory_donations = 1
+				democratic_drift  = 0.03
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		SYR_aid_from_tur = {
+			name = SYR_aid
+			modifier = {
+				industrial_factory_donations = 1
+				neutrality_drift = 0.03
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		SYR_aid_from_sov = {
+			name = SYR_aid
+			modifier = {
+				industrial_factory_donations = 1
+				communism_drift = 0.03
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+	}
 	country = {
 		#중동
 		ME_trade_treaty = {
@@ -19,11 +61,88 @@ ideas = {
 		}
 
 		#시리아
+		SYR_nation_community_3 = { #민족 공동체
+			name = SYR_nation_community
+			picture = generic_fascist_workers
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				war_stability_factor = 0.1
+				recruitable_population_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				compliance_growth = 0.25
+				resistance_growth = -0.05
+				army_attack_against_minor_factor = 0.05
+				army_speed_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		SYR_nation_community_2 = { #민족 공동체
+			name = SYR_nation_community
+			picture = generic_fascist_workers
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				war_stability_factor = 0.05
+				recruitable_population_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				compliance_growth = 0.1
+				army_attack_against_minor_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		SYR_nation_community_1 = { #민족 공동체
+			name = SYR_nation_community
+			picture = generic_fascist_workers
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				war_stability_factor = 0.05
+				recruitable_population_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				compliance_growth = 0.1
+			}
+		}
+		SYR_nation_community = { #민족 공동체
+			name = SYR_nation_community
+			picture = generic_fascist_workers
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				compliance_growth = 0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		SYR_incorporated_officers = { #포섭된 장교단
+			picture = general_staff
+			modifier = {
+				fascism_drift = 0.1
+				stability_factor = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		SYR_basic_press = { #기초적인 언론
+			picture = ARG_eliminate_american_imperialism
+			modifier = {
+				political_power_gain = 0.2
+				drift_defence_factor = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
 		SYR_general_strike = { #시리아 총파업
 			picture = ICE_general_strike
 			modifier = {
 				global_building_slots = -1
 				production_speed_buildings_factor = -0.25
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		SYR_ruined_politic_0 = { #정치적 불안정
@@ -111,6 +230,9 @@ ideas = {
 			cancel = {
                 num_of_factories > 20
             }
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_key_industry = { #시리아 기간 산업
 			name = SYR_key_industry
@@ -120,6 +242,9 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_infrastructure_factor = 0.05
 				monthly_population = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		SYR_key_industry_1 = { #시리아 기간 산업
@@ -131,6 +256,9 @@ ideas = {
 				production_speed_infrastructure_factor = 0.06
 				monthly_population = 0.05
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_key_industry_2 = { #시리아 기간 산업
 			name = SYR_key_industry
@@ -141,6 +269,9 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				monthly_population = 0.05
 				local_building_slots_factor = 0.15
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		SYR_key_industry_3 = { #시리아 기간 산업
@@ -157,6 +288,9 @@ ideas = {
 				consumer_goods_factor = -0.05
 				industrial_factory_donations = 1
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_independent_economy = { #시리아 자립 경제
 			name = SYR_independent_economy
@@ -172,6 +306,9 @@ ideas = {
 				consumer_goods_factor = -0.1
 				industrial_factory_donations = 1
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_independent_economy_1 = { #시리아 자립 경제
 			picture = ARG_public_works_investment
@@ -186,6 +323,9 @@ ideas = {
 				consumer_goods_factor = -0.15
 				industrial_factory_donations = 1
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_trade = { #무역 거점
 			name = SYR_trade
@@ -193,6 +333,9 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				industrial_factory_donations = 1
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		SYR_trade_1 = { #무역 거점
@@ -202,6 +345,9 @@ ideas = {
 				consumer_goods_factor = -0.1
 				industrial_factory_donations = 2
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		SYR_trade_2 = { #무역 거점
 			name = SYR_trade
@@ -209,6 +355,9 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.15
 				industrial_factory_donations = 3
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		SYR_kill_capitalists = { #자본가 탄압
@@ -224,7 +373,7 @@ ideas = {
 			picture = socialist_science_focus
 			modifier = {
 				drift_defence_factor = 0.125
-				political_power_factor = 0.15
+				political_power_factor = 0.05
 				political_advisor_cost_factor = -0.15
 			}
 		}
@@ -233,7 +382,7 @@ ideas = {
 			picture = socialist_science_focus
 			modifier = {
 				drift_defence_factor = 0.125
-				political_power_factor = 0.20
+				political_power_factor = 0.08
 				political_advisor_cost_factor = -0.15
 				trade_laws_cost_factor = -0.2
 				mobilization_laws_cost_factor = -0.2
@@ -245,14 +394,53 @@ ideas = {
 			picture = socialist_science_focus
 			modifier = {
 				drift_defence_factor = 0.125
-				political_power_factor = 0.20
+				political_power_factor = 0.08
 				political_advisor_cost_factor = -0.15
 				trade_laws_cost_factor = -0.2
 				mobilization_laws_cost_factor = -0.2
 				economy_cost_factor = -0.2
-				defensive_war_stability_factor = 0.4
+				defensive_war_stability_factor = 0.1
 				army_core_defence_factor = 0.05
 				weekly_casualties_war_support = 0.001
+			}
+		}
+		SYR_bolshevik_party_2-1 = { #전위당
+			name = SYR_bolshevik_party
+			picture = socialist_science_focus
+			modifier = {
+				drift_defence_factor = 0.125
+				political_power_factor = 0.08
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				defensive_war_stability_factor = 0.1
+				army_core_defence_factor = 0.05
+				weekly_casualties_war_support = 0.001
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		SYR_bolshevik_party_2-2 = { #전위당
+			name = SYR_bolshevik_party
+			picture = socialist_science_focus
+			modifier = {
+				drift_defence_factor = 0.125
+				political_power_factor = 0.08
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				defensive_war_stability_factor = 0.1
+				army_core_defence_factor = 0.05
+				weekly_casualties_war_support = 0.001
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.15
 			}
 		}
 		SYR_bolshevik_party_3 = { #전위당
@@ -260,17 +448,16 @@ ideas = {
 			picture = socialist_science_focus
 			modifier = {
 				drift_defence_factor = 0.125
-				political_power_factor = 0.20
+				political_power_factor = 0.1
 				political_advisor_cost_factor = -0.15
 				trade_laws_cost_factor = -0.2
 				mobilization_laws_cost_factor = -0.2
 				economy_cost_factor = -0.2
-				defensive_war_stability_factor = 0.4
+				defensive_war_stability_factor = 0.1
 				army_core_defence_factor = 0.05
 				weekly_casualties_war_support = 0.001
 				mobilization_speed = 0.15
-				recruitable_population_factor = 0.15
-				autonomy_gain = -0.1
+				recruitable_population_factor = 0.05
 				training_time_army_factor = -0.1
 			}
 		}
@@ -315,14 +502,14 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.1
 				industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.2
+				consumer_goods_factor = -0.1
 			}
 		}
 		SYR_socialism_economy_1 = { #자주 경영
 			picture = ARG_construction_guilds
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.175
-				industrial_capacity_factory = 0.175
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.15
 			}
 		}
 		SYR_socialism_economy_2 = { #민주 집중제
@@ -330,7 +517,7 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 				industrial_capacity_factory = 0.05
-				consumer_goods_factor = -0.35
+				consumer_goods_factor = -0.25
 			}
 		}
 		SYR_sov_trade = { #시리아-소련 무역협정
@@ -338,22 +525,6 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				trade_cost_for_target_factor = -0.5
-			}
-		}
-		SYR_self_industry = { #자주적인 산업
-			picture = man_five_year_plan_industry
-			modifier = {
-				production_lack_of_resource_penalty_factor = -0.3
-				production_factory_start_efficiency_factor = 0.15
-				local_resources_factor = 0.2
-			}
-		}
-		SYR_collectivism_propaganda = { #집산주의 선전
-			picture = SOV_stakhanovite_movement
-			modifier = {
-				production_speed_buildings_factor = 0.3
-				industrial_capacity_factory = 0.3
-				industrial_capacity_dockyard = 0.3
 			}
 		}
 		SYR_assimilate_leb = { #레바논 동화

@@ -1,4 +1,10 @@
 opinion_modifiers = {
+	hostile_with_western = { #서방과의 적대
+		value = -50
+	}
+	friendship_with_western = { #서방과의 우호
+		value = 20
+	}
 	BA_another_demension = {
 		value = -50
 	}

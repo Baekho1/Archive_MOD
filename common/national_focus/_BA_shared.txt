@@ -100,7 +100,7 @@
 		}
 	}
 	offset = {
-		x = -24
+		x = -20
 		y = 12
 		trigger = {
 			OR = {

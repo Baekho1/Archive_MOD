@@ -241,9 +241,14 @@ country_event = {
 		PAL = {
 			add_ideas = PAL_jews_hoods
 			drop_cosmetic_tag = yes
+			
 		}
 		JOR = {
 			drop_cosmetic_tag = yes
+		}
+		ENG = {
+			end_puppet = PAL
+			release = PAL
 		}
 
 		release = UAE
@@ -254,7 +259,6 @@ country_event = {
 		release = MLW
 		release = ZIM
 		release = BOT
-		end_puppet = PAL
 	}
 }
 

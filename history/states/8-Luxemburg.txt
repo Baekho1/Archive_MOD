@@ -6,6 +6,7 @@ state=
 	state_category = large_city
 	
 	manpower = 304748
+	
 	resources={
 		steel=5 # was: 8
 	}
@@ -26,12 +27,12 @@ state=
 				}	
 			}
 		}
-		victory_points = { 6583 5 }
-		#add_core_of = LUX
+		victory_points = { 13375 1 } #클레르프
+		victory_points = { 6583 5 } #룩셈부르크
 	}
 
 	provinces= 	{  
 		6583 13375
 	}
-	local_supplies=0.0 
+	local_supplies=5.0 
 }

@@ -1,4 +1,5 @@
 add_namespace = shafas
+add_namespace = shafla
 add_namespace = shanews
 
 # 경극부 쿠데타
@@ -678,5 +679,20 @@ news_event = {
 			NOT = { Kivotos_tag = yes }
 		}
 		effect_tooltip = { add_threat = 3 }
+	}
+}
+
+# 
+country_event = {
+	id = shafla.1
+	title = shafla.1.t
+	desc = shafla.1.desc
+	picture = GFX_report_event_akeshiro_rumi_memorial
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafla.1.a
+
 	}
 }

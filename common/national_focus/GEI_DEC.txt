@@ -13,13 +13,13 @@ focus_tree = {
     # 실패
     focus = {
 		id = GEI_DEC_fail
-		icon = GFX_GEI_DEC_old_answer
+		icon = GFX_GEI_DEC_fail
 
 		x = 10
 		y = 2
 
 		cost = 0
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -40,7 +40,7 @@ focus_tree = {
 
     focus = {
 		id = GEI_DEC_Duty
-		icon = GFX_GEI_DEC_Duty 
+		icon = GFX_GEI_DEC_duty
 
 		x = 0
 		y = 2
@@ -48,7 +48,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_fail}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -73,7 +73,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_Duty}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -98,7 +98,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_automatic_factory}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -129,7 +129,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_otomaton}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -141,7 +141,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = GEI_lack_of_mystery
-			add_ideas = GEI_DEC_no_name_gods
+			add_ideas = GEI_idea_DEC_no_name_gods
 		}
 	}
 
@@ -155,7 +155,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_automatic_factory}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -202,7 +202,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_effection}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -260,7 +260,7 @@ focus_tree = {
 		cost = 1
         prerequisite = { focus = GEI_DEC_no_name_gods}
 		prerequisite = { focus = GEI_DEC_base_camp}
-		
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -278,19 +278,8 @@ focus_tree = {
 						tag = GEI
 					}
 				}
-
-				add_timed_idea = {
-				idea = GEI_DEC_riot_ideas
-				days = 365
+			country_event = {id = GEI_DEC_event.8}
 			}
-				add_opinion_modifier = {
-					target = GEI
-					modifier = GEI_DEC_hostile_ai
-				}
-			}
-
-			add_stability = -0.10
-			add_war_support = -0.10
 
 			news_event = { id = BA_news.127 hours = 6 }
 			add_manpower = 200000
@@ -308,8 +297,8 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_Duty}
-		 prerequisite = { focus = GEI_DEC_ghost_signal}
-		
+		prerequisite = { focus = GEI_DEC_ghost_signal}
+		text_icon = The_New_Order_focus_style
 
 		available = {
 			
@@ -335,6 +324,7 @@ focus_tree = {
 
 		cost = 10
         prerequisite = { focus = GEI_DEC_metal}
+		text_icon = The_New_Order_focus_style
 
 		
 
@@ -380,6 +370,7 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_god_knows}
+		text_icon = The_New_Order_focus_style
 		
 
 		available = {
@@ -395,6 +386,7 @@ focus_tree = {
 		}
 	}
 
+
 	focus = {
 		id = GEI_DEC_my_war
 		icon = GFX_GEI_DEC_my_war
@@ -406,6 +398,7 @@ focus_tree = {
 		cost = 1
         prerequisite = { focus = GEI_DEC_last_question}
 		prerequisite = { focus = GEI_DEC_ghost_signal}
+		text_icon = The_New_Order_focus_style
 		
 
 		available = {
@@ -427,15 +420,274 @@ focus_tree = {
 					}
 				}
 
-				add_timed_idea = {
-				idea = GEI_DEC_riot_riot_ideas
-				days = 365
-			}
+				country_event = {id = GEI_DEC_event.10}
 				add_opinion_modifier = {
 					target = GEI
 					modifier = GEI_DEC_hostile_ai
 				}
 			}
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_influenced
+		icon = GFX_GEI_DEC_influenced
+
+		x = 3
+		y = 1
+        relative_position_id = GEI_DEC_my_war
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_my_war}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_zero_one
+		icon = GFX_GEI_DEC_zero_one
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_influenced
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_influenced}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_ghost
+		icon = GFX_GEI_DEC_ghostghost
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_zero_one
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_zero_one}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_ain
+		icon = GFX_GEI_DEC_ain
+
+		x = -2
+		y = 1
+        relative_position_id = GEI_DEC_ghost
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_ghost}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_radio disturbance
+		icon = GFX_GEI_DEC_radio disturbance
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_ain
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_ain}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_sof
+		icon = GFX_GEI_DEC_sof
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_ghost
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_ghost}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_army_student
+		icon = GFX_GEI_DEC_army_student
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_sof
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_sof}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_orn
+		icon = GFX_GEI_DEC_orn
+
+		x = 2
+		y = 1
+        relative_position_id = GEI_DEC_ghost
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_ghost}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_metrix
+		icon = GFX_GEI_DEC_metrix
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_orn
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_orn}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_march_dawn
+		icon = GFX_GEI_DEC_march_dawn
+
+		x = -2
+		y = 2
+        relative_position_id = GEI_DEC_metrix
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_metrix}
+		prerequisite = { focus = GEI_DEC_army_student}
+		prerequisite = { focus = GEI_DEC_radio}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
 			
 		}
 	}

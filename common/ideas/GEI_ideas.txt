@@ -1512,9 +1512,9 @@ ideas = {
 
 		# 이름 없는 신들의 기술
 
-		GEI_DEC_no_name_gods = {
+		GEI_idea_DEC_no_name_gods = {
 
-			picture = GFX_idea_GEI_erosion_army
+			picture = DEC_no_name_gods
 
 			allowed = {
 			}
@@ -1576,7 +1576,7 @@ ideas = {
 		}
 
 		GEI_DEC_riot_ideas = { # 로봇시위
-            picture = GFX_idea_generic_secret_police
+            picture = GEI_DEC_riot_riot
 
 			allowed = {
 				always = no
@@ -1595,7 +1595,7 @@ ideas = {
         }
 
 		GEI_DEC_riot_riot_ideas = { # 로봇폭동
-            picture = GFX_idea_generic_secret_police
+            picture = GEI_DEC_riot
 
 			allowed = {
 				always = no

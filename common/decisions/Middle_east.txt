@@ -1,3 +1,70 @@
+SYR_generic_decision_category = { #시리아의 상황
+	SYR_dark_forest = { #어두운 숲
+		icon = GFX_decision_SWI_consolidate_council_power
+		days_mission_timeout = 180
+		available = {
+			OR = {
+				has_completed_focus = SYR_focus_com_0
+				has_completed_focus = SYR_focus_fas_0
+				has_completed_focus = SYR_focus_fas_1
+				has_completed_focus = SYR_focus_9
+			}
+		}
+		timeout_effect = {
+			# 무슬림 형제단
+		}
+		is_good = no
+		activation = {
+			always = no
+		}
+		complete_effect = {
+			add_stability = 0.05
+		}
+	}
+}
+SYR_greater_syria = { #대시리아 강역
+	SYR_get_core = { #핵심화
+		icon = GFX_decision_CHL_mapuche_reorganize_the_bolivian_government
+		state_target = yes
+		on_map_mode = map_only
+		target_array = owned_controlled_states
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_owned_by = SYR
+					is_claimed_by = SYR
+					NOT = {
+						is_core_of = SYR
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 9999
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = SYR
+		}
+		cost = 30
+		available = {
+			FROM = {
+				compliance > 60
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = SYR_focus_fas_11
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+			FROM = {
+				add_core_of = SYR
+			}
+		}
+	}
+}
 SYR_red_industrialization = { #붉은 근대화
 	SYR_change_city = { #도시 개조 사업
 		icon = GFX_decision_generic_operation

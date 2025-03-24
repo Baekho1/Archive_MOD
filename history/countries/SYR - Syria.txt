@@ -99,27 +99,10 @@ set_popularities = {
 
 recruit_character = SYR_mehemed_ali_abed
 recruit_character = SYR_hashim_al_atassi
-
-create_country_leader = {
-	name = "Antun Saadeh"
-	desc = ""
-	picture = GFX_portrait_Antun_Saadeh
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = SYR_Khalid_Bakdash
-	desc = ""
-	picture = "gfx/leaders/Middle_east/Khalid_Bakdash.tga"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+recruit_character = SYR_Khalid_Bakdash
+recruit_character = SYR_Antun_Saadeh
 
 add_ideas = {
 	SYR_general_strike
 }
+set_stability = 0.4
