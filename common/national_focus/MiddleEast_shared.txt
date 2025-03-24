@@ -131,7 +131,7 @@ shared_focus = { #서방의 투자
 		}
 	}
 }
-shared_focus = { #아라비아 정체성
+shared_focus = { #아랍 정체성
 	id = BA_ME_focus_5
 	cost = 5
 	x = -3
