@@ -9,6 +9,11 @@ add_namespace = debug_hina
 add_namespace = GEH_hidden
 #히나 정신상태 이벤트
 add_namespace = GEH_BTBOTS
+#플레이버 이벤트
+add_namespace = GEH.flavor_event
+#기본 중점 이벤트
+add_namespace = GEH.event
+
 country_event = { # 선도부 소집
 	id = NextPhase.0
 	title = NextPhase.0.t
@@ -905,6 +910,192 @@ country_event = { #
 	}
 }
 
+### 플레이버 이벤트 ###
+
+country_event = { # 인터넷 개통
+	id = GEH.flavor_event.1
+	title = GEH.flavor_event.1.t
+	desc = GEH.flavor_event.1.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.1.a 
+	}
+}
+
+country_event = { # 아무튼 그 너구리의 탓이에요!
+	id = GEH.flavor_event.2
+	title = GEH.flavor_event.2.t
+	desc = GEH.flavor_event.2.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.2.a 
+		country_event = { id = GEH.flavor_event.3 days = 14 }
+	}
+}
+
+country_event = { # 아무튼 역대전이는 가능해요!
+	id = GEH.flavor_event.3
+	title = GEH.flavor_event.3.t
+	desc = GEH.flavor_event.3.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.3.a 
+
+		hidden_effect = {
+			country_event = { id = GEH.flavor_event.4 days = 21 }
+		}
+	}
+}
+
+country_event = { # 아무튼 죽을 죄를 지었어요!
+	id = GEH.flavor_event.4
+	title = GEH.flavor_event.4.t
+	desc = GEH.flavor_event.4.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.4.a 
+	}
+}
+
+country_event = { # 민주주의 투쟁
+	id = GEH.flavor_event.5
+	title = GEH.flavor_event.5.t
+	desc = GEH.flavor_event.5.desc
+	picture = GFX_event_GEH_hina_eventpicture
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.5.a 
+		
+	}
+}
+
+country_event = { # 바우하우스
+	id = GEH.flavor_event.6
+	title = GEH.flavor_event.6.t
+	desc = GEH.flavor_event.6.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.6.a 
+		
+	}
+}
+
+country_event = { # 퇴폐 미술전
+	id = GEH.flavor_event.7
+	title = GEH.flavor_event.7.t
+	desc = GEH.flavor_event.7.desc
+	picture = GFX_report_event_RED_campus_night
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.7.a 
+		
+	}
+}
+
+country_event = { # 음악의 아름다움
+	id = GEH.flavor_event.8
+	title = GEH.flavor_event.8.t
+	desc = GEH.flavor_event.8.desc
+	picture = GFX_report_event_generic_door
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.8.a 
+		
+	}
+}
+
+country_event = { # 민권법 제정
+	id = GEH.flavor_event.9
+	title = GEH.flavor_event.9.t
+	desc = GEH.flavor_event.9.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.9.a 
+		
+	}
+}
+
+country_event = { # 선도부는 뭐 하는 거야?!
+	id = GEH.flavor_event.10
+	title = GEH.flavor_event.10.t
+	desc = GEH.flavor_event.10.desc
+	picture = GFX_report_event_generic_city
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.10.a 
+		
+	}
+}
+
+
+country_event = { #
+	id = GEH.event.1
+	title = GEH.event.1.t
+
+	desc = {
+		text = GEH.event.1.desc.a
+		trigger = { 
+			AND = {
+				country_exists = GEM
+				NOT = { has_war_with = GEH }
+			}
+		}
+	}
+
+	desc = {
+		text = GEH.event.1.desc.b
+		trigger = { 
+			OR = {
+				NOT = { country_exists = GEM }
+				has_war_with = GEM
+			}
+		}
+	}
+
+	picture = GFX_report_event_generic_flowers
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.1.a 
+		custom_effect_tooltip = GEH_hina_ako_root_start_tt
+
+		hidden_effect = {
+			set_power_balance = {
+				id = GEH_ako_love_balance
+    	        left_side = GEH_hina_hate_ako_side
+    	        right_side = GEH_hina_love_ako_side
+				set_default = yes # whether or not to reset the power balance to the initial value, default = no
+			}
+		}
+	}
+}
 
 
 
