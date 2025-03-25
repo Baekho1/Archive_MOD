@@ -5136,14 +5136,18 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
+			
 		}
 
 		x = 30
 		y = 10
 
 		completion_reward = {
-			add_stability = 0.02
+			remove_ideas = GEH_luxembourg_rules
+
+			add_dynamic_modifier = {
+				modifier = GEH_prefect_team_culture
+			}
 		}
 	}
 	
@@ -5163,7 +5167,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			is_debug = yes
+			
 		}
 
 		x = -4
@@ -5180,6 +5184,8 @@ focus_tree = {
 				limit = { NOT = { has_tech = radio } }
 				set_technology = { radio = 1 }
 			}
+
+			country_event = { id = GEH.flavor_event.1 }
 		}
 	}
 
@@ -5208,7 +5214,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 4.00
+		cost = 3.00
 
 		x = -2
 		y = 1
@@ -5273,6 +5279,7 @@ focus_tree = {
 				remove_idea = GEH_centre_of_culture_idea
 				add_idea = GEH_centre_of_culture_bauhaus_idea
 			}
+			country_event = { id = GEH.flavor_event.6 }
 		}
 	}
 
@@ -5323,6 +5330,7 @@ focus_tree = {
 				remove_idea = GEH_centre_of_culture_idea
 				add_idea = GEH_centre_of_culture_degenerate_art_idea
 			}
+			country_event = { id = GEH.flavor_event.7 }
 		}
 	}
 
@@ -5373,6 +5381,7 @@ focus_tree = {
 				remove_idea = GEH_centre_of_culture_idea
 				add_idea = GEH_centre_of_culture_composer_idea
 			}
+			country_event = { id = GEH.flavor_event.8 }
 		}
 	}
 
@@ -5400,7 +5409,7 @@ focus_tree = {
 
 		search_filters = {  }
 
-		cost = 5.00
+		cost = 4.00
 
 		x = 0
 		y = 2
@@ -5459,7 +5468,7 @@ focus_tree = {
 		
 		relative_position_id = GEH_luxembourg_problem
 
-		icon = GFX_goal_HEU_aru_rikuhachima_2
+		icon = GFX_goal_Prefect_Team_muster
 
 		prerequisite = { 
 			focus = GEH_luxembourg_problem
@@ -5474,11 +5483,6 @@ focus_tree = {
 		}
 
 		available = {
-			HEU = {
-				has_dynamic_modifier = {
-					modifier = HEU_rikuhachimaism_idea
-				}
-			}
 		}
 
 		ai_will_do = {
@@ -5501,7 +5505,261 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_ideas = HEU_rikuhachimaism_other_country_idea
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industrial_concern_cost_factor = 0.05
+				tooltip = industrial_concern_cost_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+
+		}
+	}
+
+	focus = {
+		id = GEH_68_rev_for_prefect_team
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_SWI_neutrality_on_the_move
+
+		prerequisite = { 
+			focus = GEH_68_rev
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 3
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			mio:GEH_maintenance_department_organization = {
+				add_mio_size = 2
+			}
+
+			add_tech_bonus = {
+				name = mystic_engineering_bonus
+				bonus = 1.0
+				uses = 2
+				category = mystic_engineering
+			}
+
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_cultural_exchange_education
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_NOR_approach_kretsen
+
+		prerequisite = { 
+			focus = GEH_68_rev
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		prerequisite = { 
+			focus = GEH_civil_rights_act
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 5
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industry_repair_factor = 0.03
+				tooltip = industry_repair_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_industrial_concern_cost_factor = -0.05
+				tooltip = industrial_concern_cost_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_political_correctness
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_ARG_defense_and_democracy
+
+		prerequisite = { 
+			focus = GEH_cultural_exchange_education
+		}
+
+		available = {
+
+		}
+
+		mutually_exclusive = {
+			focus = GEH_local_autonomy
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 4
+		y = 3
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_start_efficiency_factor = 0.03
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			
+			division_template = { #선도부 자경단
+				name = "Prefect Team's Vigilante Crew" 
+				division_names_group = KIV_SEC_01
+				#template_counter = 68
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 0
+
+				regiments = { 
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = { 
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+			set_division_template_cap = {
+				division_template = "Prefect Team's Vigilante Crew"
+				division_cap = halo_militia_cap
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Prefect Team's Vigilante Crew\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_local_autonomy
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_DEN_civilian_preparations
+
+		prerequisite = { 
+			focus = GEH_cultural_exchange_education
+		}
+
+		available = {
+
+		}
+
+		mutually_exclusive = {
+			focus = GEH_political_correctness
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 6
+		y = 3
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.02
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}	
+			}
 		}
 	}
 
@@ -5548,7 +5806,65 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
 
+	focus = {
+		id = GEH_gradual_gehenna_culture_for_prefect_team
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_GEH_flag
+
+		prerequisite = { 
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 7
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.02
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.03
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 		}
 	}
 
@@ -5591,7 +5907,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industry_repair_factor = 0.05
+				tooltip = industry_repair_factor_tt
+			}
 
+			country_event = { id = GEH.flavor_event.9 }
 		}
 	}
 

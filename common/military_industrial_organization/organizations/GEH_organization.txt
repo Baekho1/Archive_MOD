@@ -1,3 +1,19 @@
+GEH_tank_department_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_GEH_prefect_team_armband
+	
+	allowed = {	
+		original_tag = GEH
+	}
+	
+	initial_trait = {
+		equipment_bonus = {
+			reliability = 0.03
+			fuel_consumption = -0.05
+			armor_value = -0.05
+		}
+	}
+}
 
 GEH_swim_tube_organization = {
 	name = GEH_swim_tube_organization
