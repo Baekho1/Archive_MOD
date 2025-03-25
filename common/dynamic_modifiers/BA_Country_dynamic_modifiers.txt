@@ -721,6 +721,30 @@ GEH_Chinatsu_idea = { # 게헨나 의료부
     political_power_factor = GEH_CH_political_power_factor # 정치력
 }
 
+GEH_prefect_team_culture = { #게헨나 선도부-도이치계 관계
+	enable = { always = yes }
+
+	icon = GFX_idea_GEH_prefect_team_culture
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = GEH_prefect_team_culture_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = GEH_prefect_team_culture_production_factory_max_efficiency_factor
+	consumer_goods_factor = GEH_prefect_team_culture_consumer_goods_factor
+	production_speed_industrial_complex_factor = GEH_prefect_team_culture_production_speed_industrial_complex_factor
+	industrial_concern_cost_factor = GEH_prefect_team_culture_industrial_concern_cost_factor
+
+	#OPTIONAL IMPROVEMENTS
+	production_speed_arms_factory_factor = GEH_prefect_team_culture_production_speed_arms_factory_factor
+	line_change_production_efficiency_factor = GEH_prefect_team_culture_line_change_production_efficiency_factor
+	production_factory_start_efficiency_factor = GEH_prefect_team_culture_production_factory_start_efficiency_factor
+	industrial_capacity_factory = GEH_prefect_team_culture_industrial_capacity_factory
+	industrial_capacity_dockyard = GEH_prefect_team_culture_industrial_capacity_dockyard
+	global_building_slots_factor = GEH_prefect_team_culture_global_building_slots_factor
+
+	#INITIAL
+	industry_repair_factor = GEH_prefect_team_culture_industry_repair_factor
+}
+
 ##총학##
 
 COU_RIN_policy_lead_idea = { #린 루트 - 행정관의 주도 [행정관의 정책]
