@@ -2458,7 +2458,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_1935_revolution_success
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_support_fascism # Better icon for revolution success
 		cost = 7
 
 		x = 25
@@ -2475,7 +2475,7 @@ focus_tree = {
 	# --- Military Appeasement Branch ---
 	focus = {
 		id = EGY_appease_military
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_army_doctrines # Better icon for appeasing military
 		cost = 7
 
 		relative_position_id = EGY_1935_revolution_success
@@ -2492,7 +2492,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_expand_local_garrisons
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_build_tank # Better icon for expanding garrisons
 		cost = 7
 
 		relative_position_id = EGY_appease_military
@@ -2509,7 +2509,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_push_military_reform_bill
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_military_deal # Better icon for military reform bill
 		cost = 7
 
 		relative_position_id = EGY_appease_military
@@ -2526,7 +2526,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_support_sharia_enforcement
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_support_fascism # Better icon for Sharia enforcement
 		cost = 7
 
 		relative_position_id = EGY_appease_military
@@ -2543,7 +2543,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_confiscate_corrupt_lands
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_forceful_treaty # Better icon for confiscating land
 		cost = 7
 
 		relative_position_id = EGY_appease_military
@@ -2560,7 +2560,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_transfer_policing_duties
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_intelligence_exchange # Better icon for transfer policing duties
 		cost = 7
 
 		relative_position_id = EGY_expand_local_garrisons
@@ -2577,7 +2577,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_expand_border_guard_support
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_defence # Border guard support
 		cost = 7
 
 		relative_position_id = EGY_expand_local_garrisons
@@ -2594,7 +2594,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_modernize_arms_industry
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_construct_mil_factory # Modernize arms industry
 		cost = 7
 
 		relative_position_id = EGY_push_military_reform_bill
@@ -2611,7 +2611,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_reward_religious_guard
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_small_arms # Better icon for rewarding religious guard
 		cost = 7
 
 		relative_position_id = EGY_support_sharia_enforcement
@@ -2628,7 +2628,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_redistribute_land_military
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for redistributing land to military
 		cost = 7
 
 		relative_position_id = EGY_confiscate_corrupt_lands
@@ -2645,7 +2645,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_establish_military_hospitals
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_scientific_exchange # Better icon for military hospitals
 		cost = 7
 
 		relative_position_id = EGY_confiscate_corrupt_lands
@@ -2662,7 +2662,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_suspend_parliament
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Suspend parliament
 		cost = 7
 
 		relative_position_id = EGY_modernize_arms_industry # Centered below the 6 prerequisites
@@ -2688,7 +2688,7 @@ focus_tree = {
 	# --- Wafd Party Branch ---
 	focus = {
 		id = EGY_consolidate_wafd_party
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for consolidating a political party
 		cost = 7
 
 		relative_position_id = EGY_1935_revolution_success
@@ -2705,11 +2705,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_form_blue_shirts
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for forming Blue Shirts
 		cost = 7
 
 		relative_position_id = EGY_consolidate_wafd_party
-		x = -2
+		x = -1
 		y = 1
 
 		prerequisite = { focus = EGY_consolidate_wafd_party }
@@ -2722,11 +2722,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_sudanese_suffrage
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_improve_relations # Better icon for Sudanese suffrage
 		cost = 7
 
 		relative_position_id = EGY_consolidate_wafd_party
-		x = 0
+		x = 1
 		y = 1
 
 		prerequisite = { focus = EGY_consolidate_wafd_party }
@@ -2739,7 +2739,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_allow_local_elections
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_propaganda # Better icon for allowing local elections
 		cost = 7
 
 		relative_position_id = EGY_form_blue_shirts
@@ -2756,7 +2756,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_activate_party_politics
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_parliament # Activate party politics
 		cost = 7
 
 		relative_position_id = EGY_form_blue_shirts
@@ -2773,7 +2773,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_strengthen_blue_shirts
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_army_artillery # Better icon for strengthening Blue Shirts
 		cost = 7
 
 		relative_position_id = EGY_sudanese_suffrage
@@ -2790,7 +2790,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_mansoura_agreement
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_improve_relations # Better icon for Mansoura Agreement
 		cost = 7
 
 		relative_position_id = EGY_activate_party_politics # Centered below the 3 prerequisites
@@ -2813,11 +2813,11 @@ focus_tree = {
 	# --- Muslim Brotherhood Branch ---
 	focus = {
 		id = EGY_egypt_first
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_neutrality_focus # Better icon for Egypt First
 		cost = 7
 
 		relative_position_id = EGY_1935_revolution_success
-		x = 14 # To the right of EGY_appease_military
+		x = 12 # To the right of EGY_appease_military
 		y = 1 # Same level
 
 		prerequisite = { focus = EGY_1935_revolution_success }
@@ -2830,11 +2830,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_strengthen_muslim_brotherhood
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_propaganda # Better icon for strengthening Muslim Brotherhood
 		cost = 7
 
 		relative_position_id = EGY_egypt_first
-		x = -2
+		x = -1
 		y = 1
 
 		prerequisite = { focus = EGY_egypt_first }
@@ -2847,11 +2847,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_rally_green_shirts
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_small_arms # Better icon for Rally Green Shirts
 		cost = 7
 
 		relative_position_id = EGY_egypt_first
-		x = 0
+		x = 1
 		y = 1
 
 		prerequisite = { focus = EGY_egypt_first }
@@ -2864,7 +2864,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_abolish_aristocracy
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_forceful_treaty # Better icon for abolishing aristocracy
 		cost = 7
 
 		relative_position_id = EGY_strengthen_muslim_brotherhood
@@ -2881,7 +2881,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_spread_islamic_faith
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_support_fascism # Better icon for spreading Islamic faith
 		cost = 7
 
 		relative_position_id = EGY_strengthen_muslim_brotherhood
@@ -2898,7 +2898,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_religious_nationalism
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_support_fascism # Better icon for religious nationalism
 		cost = 7
 
 		relative_position_id = EGY_rally_green_shirts
@@ -2915,7 +2915,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_march_on_cairo
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_forceful_treaty # Better icon for March on Cairo
 		cost = 7
 
 		relative_position_id = EGY_spread_islamic_faith # Centered below the 3 prerequisites
@@ -2938,7 +2938,7 @@ focus_tree = {
 	# --- Central Political Branch ---
 	focus = {
 		id = EGY_restore_1930_constitution
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for restoring constitution
 		cost = 7
 
 		# Positioned below the mutually exclusive trio
@@ -2960,7 +2960,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_join_rome_pact
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_alliance # Join Rome Pact
 		cost = 7
 
 		relative_position_id = EGY_march_on_cairo
@@ -2977,7 +2977,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_propose_colonial_trade
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_trade # Propose colonial trade
 		cost = 7
 
 		relative_position_id = EGY_march_on_cairo
@@ -2994,7 +2994,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_propose_ethiopian_condominium
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_improve_relations # Better icon for proposing Ethiopian condominium
 		cost = 7
 
 		relative_position_id = EGY_join_rome_pact
@@ -3011,7 +3011,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_suez_mediation
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_position_armies # Better icon for Suez mediation
 		cost = 7
 
 		relative_position_id = EGY_propose_colonial_trade
@@ -3029,7 +3029,7 @@ focus_tree = {
 	# --- Farouk Monarchy Branch ---
 	focus = {
 		id = EGY_army_loyal_to_king
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_army_doctrines # Better icon for army loyal to king
 		cost = 7
 
 		relative_position_id = EGY_restore_1930_constitution
@@ -3047,7 +3047,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_strengthen_monarchy
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for strengthening monarchy
 		cost = 7
 
 		relative_position_id = EGY_army_loyal_to_king
@@ -3064,7 +3064,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_puppet_parliament
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Puppet parliament
 		cost = 7
 
 		relative_position_id = EGY_strengthen_monarchy
@@ -3081,7 +3081,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_mobilize_fellaheen
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_more_territorial_claims # Better icon for mobilizing Fellaheen
 		cost = 7
 
 		relative_position_id = EGY_puppet_parliament
@@ -3098,7 +3098,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_egyptian_iron_guard
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_army_artillery # Better icon for Egyptian Iron Guard
 		cost = 7
 
 		relative_position_id = EGY_puppet_parliament
@@ -3115,7 +3115,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_demand_suez
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_position_armies # Better icon for demanding Suez
 		cost = 7
 
 		relative_position_id = EGY_puppet_parliament
@@ -3132,7 +3132,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_secure_sudanese_throne
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for securing Sudanese throne
 		cost = 7
 
 		relative_position_id = EGY_egyptian_iron_guard
@@ -3149,7 +3149,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_claim_albanian_throne
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_more_territorial_claims # Better icon for claiming Albanian throne
 		cost = 7
 
 		relative_position_id = EGY_secure_sudanese_throne
@@ -3167,7 +3167,7 @@ focus_tree = {
 	# --- Cairo Pact Branch ---
 	focus = {
 		id = EGY_cairo_pact
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_military_sphere # Better icon for Cairo Pact
 		cost = 7
 
 		relative_position_id = EGY_strengthen_monarchy
@@ -3184,7 +3184,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_invite_arabia
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_improve_relations # Better icon for inviting Arabia
 		cost = 7
 
 		relative_position_id = EGY_cairo_pact
@@ -3201,7 +3201,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_invite_saadabad
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_alliance # Better icon for inviting Saadabad members
 		cost = 7
 
 		relative_position_id = EGY_cairo_pact
@@ -3218,7 +3218,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_invite_turkey
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_alliance # Better icon for inviting Turkey
 		cost = 7
 
 		relative_position_id = EGY_invite_arabia # Below the middle of invite_arabia and invite_saadabad
@@ -3236,7 +3236,7 @@ focus_tree = {
 	# --- Farouk Expansion Branch ---
 	focus = {
 		id = EGY_chosen_horus
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for Chosen Horus
 		cost = 7
 
 		relative_position_id = EGY_invite_turkey
@@ -3251,7 +3251,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_new_master_of_throne
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for New Master of Throne
 		cost = 7
 
 		relative_position_id = EGY_chosen_horus
@@ -3268,7 +3268,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_leader_of_the_people
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Leader of the People
 		cost = 7
 
 		relative_position_id = EGY_new_master_of_throne
@@ -3285,7 +3285,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_accept_kivotos_immigrants
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for accepting immigrants
 		cost = 7
 
 		relative_position_id = EGY_new_master_of_throne
@@ -3302,7 +3302,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_second_cleopatra
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for Second Cleopatra
 		cost = 7
 
 		relative_position_id = EGY_new_master_of_throne
@@ -3319,7 +3319,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_inherit_abydos_dynasty
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for inheriting dynasty
 		cost = 7
 
 		relative_position_id = EGY_new_master_of_throne
@@ -3336,7 +3336,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_queen_of_workers_peasants
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Queen of Workers and Peasants
 		cost = 7
 
 		relative_position_id = EGY_leader_of_the_people
@@ -3353,7 +3353,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_mobilize_kivotos
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_more_territorial_claims # Better icon for mobilizing Kivotos
 		cost = 7
 
 		relative_position_id = EGY_accept_kivotos_immigrants
@@ -3370,7 +3370,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_new_egyptian_dynasty
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_political_pressure # Better icon for new dynasty
 		cost = 7
 
 		relative_position_id = EGY_second_cleopatra
@@ -3387,7 +3387,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_manifested_horus
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Better icon for Manifested Horus
 		cost = 7
 
 		relative_position_id = EGY_inherit_abydos_dynasty
@@ -3404,7 +3404,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_coronation_emperor
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_focus_fra_third_empire # Better icon for Coronation Emperor
 		cost = 7
 
 		relative_position_id = EGY_mobilize_kivotos # Centered below the 4 prerequisites
@@ -3427,7 +3427,7 @@ focus_tree = {
 	# --- Fascist/Expansionist Branch ---
 	focus = {
 		id = EGY_revive_egyptian_empire
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_position_armies # Better icon for Revive Egyptian Empire
 		cost = 7
 
 		relative_position_id = EGY_propose_ethiopian_condominium # Below the middle path
@@ -3444,7 +3444,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_ethiopian_governorate
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_POL_consolidate_sanation_government # Ethiopian Governorate
 		cost = 7
 
 		relative_position_id = EGY_revive_egyptian_empire
@@ -3462,7 +3462,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_claim_ethiopian_throne
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility # Claim Ethiopian Throne
 		cost = 7
 
 		relative_position_id = EGY_revive_egyptian_empire
@@ -3480,7 +3480,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_march_on_levant
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # March on Levant
 		cost = 7
 
 		relative_position_id = EGY_revive_egyptian_empire
@@ -3497,7 +3497,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_liberate_libya
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_ETH_peacekeeping_forces # Liberate Libya
 		cost = 7
 
 		relative_position_id = EGY_claim_ethiopian_throne # Below the middle of the 3 prerequisites
@@ -3514,7 +3514,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_claim_hejaz
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility # Claim Hejaz
 		cost = 7
 
 		relative_position_id = EGY_claim_ethiopian_throne # Below the middle of the 3 prerequisites
@@ -3531,7 +3531,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_claim_peloponnese
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility # Claim Peloponnese
 		cost = 7
 
 		relative_position_id = EGY_liberate_libya
@@ -3548,7 +3548,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_dominate_turkey
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # Dominate Turkey
 		cost = 7
 
 		relative_position_id = EGY_claim_hejaz
@@ -3565,7 +3565,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_establish_governorates
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_NOR_continue_nygaardsvold_government # Establish Governorates
 		cost = 7
 
 		relative_position_id = EGY_claim_peloponnese # Centered below
@@ -3583,7 +3583,7 @@ focus_tree = {
 	# --- Pan-Arabism/Democracy Branch ---
 	focus = {
 		id = EGY_revolution_for_freedom
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_ETH_freedom_at_gunpoint # Revolution for Freedom
 		cost = 7
 
 		relative_position_id = EGY_restore_1930_constitution
@@ -3601,7 +3601,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_exile_king
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility # Exile King
 		cost = 7
 
 		relative_position_id = EGY_revolution_for_freedom
@@ -3618,7 +3618,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_unite_arab_speakers
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_propaganda # Better icon for Unite Arab Speakers
 		cost = 7
 
 		relative_position_id = EGY_exile_king
@@ -3635,7 +3635,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_discuss_arab_unification
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility # Discuss Arab Unification
 		cost = 7
 
 		relative_position_id = EGY_unite_arab_speakers
@@ -3652,7 +3652,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_retake_suez
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_BEL_dam_the_consequences # Retake Suez
 		cost = 7
 
 		relative_position_id = EGY_unite_arab_speakers
@@ -3669,7 +3669,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_reconcile_with_kurds
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility # Reconcile with Kurds
 		cost = 7
 
 		relative_position_id = EGY_unite_arab_speakers
@@ -3686,7 +3686,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_liberate_maghreb
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_ETH_peacekeeping_forces # Liberate Maghreb
 		cost = 7
 
 		relative_position_id = EGY_retake_suez # Centered below the 3 prerequisites
@@ -3703,7 +3703,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_liberate_horn_of_africa
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_generic_africa_liberation # Liberate Horn of Africa
 		cost = 7
 
 		relative_position_id = EGY_liberate_maghreb
@@ -3721,11 +3721,11 @@ focus_tree = {
 	# --- Constitutional Monarchy/Democracy Branch ---
 	focus = {
 		id = EGY_constitutional_monarchy
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_CHL_the_scouts_monarchist_youth_organization # Constitutional Monarchy
 		cost = 7
 
 		relative_position_id = EGY_mansoura_agreement # Below Mansoura Agreement
-		x = -2
+		x = -1
 		y = 1
 
 		prerequisite = { focus = EGY_mansoura_agreement }
@@ -3738,11 +3738,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_egyptian_democracy
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility # Egyptian Democracy
 		cost = 7
 
 		relative_position_id = EGY_mansoura_agreement # Below Mansoura Agreement
-		x = 0
+		x = 1
 		y = 1
 
 		prerequisite = { focus = EGY_mansoura_agreement }
@@ -3755,7 +3755,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_reformist_monarch_farouk_i
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility # Reformist Monarch Farouk I
 		cost = 7
 
 		relative_position_id = EGY_constitutional_monarchy
@@ -3772,7 +3772,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_suez_negotiation
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility # Suez Negotiation
 		cost = 7
 
 		relative_position_id = EGY_egyptian_democracy
@@ -3789,11 +3789,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_accept_socialist_demands
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility # Accept Socialist Demands
 		cost = 7
 
 		relative_position_id = EGY_reformist_monarch_farouk_i
-		x = -2 # Left side below
+		x = -5 # Left side below
 		y = 1
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
@@ -3806,11 +3806,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_accept_monarchist_demands
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_GER_monarchy_compromise # Accept Monarchist Demands
 		cost = 7
 
 		relative_position_id = EGY_reformist_monarch_farouk_i
-		x = 0 # Middle below
+		x = -3 # Middle below
 		y = 1
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
@@ -3823,11 +3823,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_end_colonial_rule
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility # End Colonial Rule
 		cost = 7
 
 		relative_position_id = EGY_suez_negotiation
-		x = 0 # Middle below
+		x = -1 # Middle below
 		y = 1
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
@@ -3840,11 +3840,11 @@ focus_tree = {
 
 	focus = {
 		id = EGY_suppress_blue_shirts
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_generic_blue_flags # Suppress Blue Shirts
 		cost = 7
 
 		relative_position_id = EGY_accept_monarchist_demands # Centered below socialist/monarchist demands
-		x = 0
+		x = -1
 		y = 1
 
 		prerequisite = { focus = EGY_accept_socialist_demands focus = EGY_accept_monarchist_demands }
@@ -3857,7 +3857,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_demand_libyan_liberation
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_demand_territory # Demand Libyan Liberation
 		cost = 7
 
 		relative_position_id = EGY_end_colonial_rule
@@ -3874,7 +3874,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_recognize_ethiopian_sovereignty
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_BRA_ethical_internationalism # Recognize Ethiopian Sovereignty
 		cost = 7
 
 		relative_position_id = EGY_end_colonial_rule
@@ -3892,7 +3892,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_minorities_first
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_generic_improve_the_administration # Minorities First
 		cost = 7
 
 		relative_position_id = EGY_end_colonial_rule
@@ -3910,7 +3910,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_political_stabilization
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_PER_establish_airforce # Political Stabilization
 		cost = 7
 
 		relative_position_id = EGY_suppress_blue_shirts
@@ -3927,7 +3927,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_attack_french_colonial_empire
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # Attack French Colonial Empire
 		cost = 7
 
 		relative_position_id = EGY_demand_libyan_liberation
@@ -3944,7 +3944,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_invite_liberia
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_generic_develop_libya # Invite Liberia
 		cost = 7
 
 		relative_position_id = EGY_recognize_ethiopian_sovereignty # Below middle
@@ -3961,7 +3961,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_liberate_west_africa
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_IRQ_liberate_north_africa # Liberate West Africa
 		cost = 7
 
 		relative_position_id = EGY_attack_french_colonial_empire
@@ -3978,7 +3978,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_support_south_african_independence
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_GER_support_the_proletarian_uprising # Support South African Independence
 		cost = 7
 
 		relative_position_id = EGY_invite_liberia
@@ -3995,7 +3995,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_invite_african_nations
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_focus_ETH_african_union # Invite African Nations
 		cost = 7
 
 		relative_position_id = EGY_liberate_west_africa # Centered below
@@ -4013,8 +4013,13 @@ focus_tree = {
 	# --- Rightmost Expansion Branch ---
 	focus = {
 		id = EGY_dominate_arabia
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # Dominate Arabia
 		cost = 7
+
+		prerequisite = {
+			focus = EGY_propose_ethiopian_condominium
+			focus = EGY_suez_mediation
+		}
 
 		relative_position_id = EGY_revive_egyptian_empire
 		x = 4 # Right of March on Levant
@@ -4028,12 +4033,17 @@ focus_tree = {
 
 	focus = {
 		id = EGY_advance_into_persia
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # Advance into Persia
 		cost = 7
 
 		relative_position_id = EGY_revive_egyptian_empire
 		x = 6 # Right of Dominate Arabia
 		y = 0 # Same level
+
+		prerequisite = {
+			focus = EGY_propose_ethiopian_condominium
+			focus = EGY_suez_mediation
+		}
 
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -4043,7 +4053,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_glory_of_egypt
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_national_unity # Glory of Egypt
 		cost = 7
 
 		relative_position_id = EGY_dominate_arabia # Centered below
@@ -4060,7 +4070,7 @@ focus_tree = {
 
 	focus = {
 		id = EGY_hunt_old_lion
-		icon = GFX_goal_unknown # Placeholder Icon
+		icon = GFX_goal_generic_major_war # Hunt Old Lion (Assuming war with UK)
 		cost = 7
 
 		relative_position_id = EGY_glory_of_egypt
