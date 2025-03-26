@@ -1475,6 +1475,28 @@ focus_tree = {
 		}
 	}
 
+	# 제령
+	focus = {
+		id = SHA_command_new_contitution
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_isolation_policy_overturned }
+		mutually_exclusive = {  }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_isolation_policy_overturned
+
+		completion_reward = {
+
+		}
+	}
+
 
 	##############
 	####외교 중점####
