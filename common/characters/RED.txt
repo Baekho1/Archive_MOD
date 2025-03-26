@@ -535,6 +535,26 @@ characters = {
 			traits = {
 				army_artillery_1
 			}
+			on_add = {
+				if = {
+					limit = {
+						RED_momiji = {
+							has_trait = RED_momiji_trait_good
+						}
+					}
+					add_research_slot = 1
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						RED_momiji = {
+							has_trait = RED_momiji_trait_good
+						}
+					}
+					add_research_slot = -1
+				}
+			}
 		}
 
 		corps_commander = {

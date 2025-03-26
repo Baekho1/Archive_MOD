@@ -330,6 +330,11 @@ RED_local_industralisation_1 = {
 	local_building_slots = 2
 	state_production_speed_buildings_factor = 0.08
 }
+SYR_landowner_law = { #지주보호법
+	icon = GFX_modifiers_ITA_established_mafia
+	local_building_slots = 1
+	state_production_speed_buildings_factor = 0.1
+}
 RED_social_reform_modifier = {
 	icon = GFX_modifiers_GER_socialist_movement
 	compliance_growth = 0.05

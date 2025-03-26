@@ -1,24 +1,391 @@
 SYR_generic_decision_category = { #시리아의 상황
-	SYR_dark_forest = { #어두운 숲
+	SYR_class_conflict = { #계급 갈등
 		icon = GFX_decision_SWI_consolidate_council_power
-		days_mission_timeout = 180
+		days_mission_timeout = 120
 		available = {
 			OR = {
-				has_completed_focus = SYR_focus_com_0
-				has_completed_focus = SYR_focus_fas_0
-				has_completed_focus = SYR_focus_fas_1
-				has_completed_focus = SYR_focus_9
+				has_civil_war = yes
+				has_completed_focus = SYR_focus_dem_10
 			}
 		}
 		timeout_effect = {
-			# 무슬림 형제단
+			SYR_unity_down = yes
+			activate_mission = SYR_class_conflict
+			custom_effect_tooltip = SYR_class_conflict_tt
+			if = {
+				limit = {
+					has_country_flag = SYR_landowner_in_gov
+				}
+				add_days_mission_timeout = {
+					mission = SYR_class_conflict
+					days = -10
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SYR_capitalist_in_gov
+				}
+				add_days_mission_timeout = {
+					mission = SYR_class_conflict
+					days = -10
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SYR_intellect_in_gov
+				}
+				add_days_mission_timeout = {
+					mission = SYR_class_conflict
+					days = -10
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SYR_worker_in_gov
+				}
+				add_days_mission_timeout = {
+					mission = SYR_class_conflict
+					days = -10
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SYR_women_in_gov
+				}
+				add_days_mission_timeout = {
+					mission = SYR_class_conflict
+					days = -10
+				}
+			}
 		}
 		is_good = no
 		activation = {
 			always = no
 		}
 		complete_effect = {
-			add_stability = 0.05
+		}
+	}
+	SYR_exercise_of_control = { #지배력 행사
+		icon = GFX_decision_CHL_grant_full_rights_to_the_mapuche
+		days_re_enable = 20
+		days_remove = 120
+		cost = 20
+		available = {
+			has_country_flag = SYR_landowner_in_gov
+		}
+		visible = {
+			has_completed_focus = SYR_focus_dem_3
+		}
+		modifier = {
+			political_power_factor = 0.05
+			stability_weekly = 0.005
+		}
+	}
+	SYR_contribute_to_economy = { #경제에 공헌
+		icon = GFX_decision_gre_investment_decisions
+		days_re_enable = 20
+		days_remove = 120
+		cost = 20
+		visible = {
+			has_completed_focus = SYR_focus_dem_1
+		}
+		available = {
+			has_country_flag = SYR_capitalist_in_gov
+		}
+		modifier = {
+			consumer_goods_factor = -0.1
+		}
+	}
+	SYR_promote_modernization = { #근대화 촉진
+		icon = GFX_decision_generic_research
+		days_re_enable = 20
+		days_remove = 120
+		cost = 20
+		visible = {
+			has_completed_focus = SYR_focus_dem_6
+		}
+		available = {
+			has_country_flag = SYR_intellect_in_gov
+		}
+		modifier = {
+			research_speed_factor = 0.1
+		}
+	}
+	SYR_social_involving = { #여성의 사회참여
+		icon = GFX_decision_generic_merge_plant_materiel
+		days_re_enable = 20
+		days_remove = 120
+		cost = 20
+		available = {
+			has_country_flag = SYR_women_in_gov
+		}
+		visible = {
+			has_completed_focus = SYR_focus_dem_7
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			recruitable_population_factor = 0.05
+		}
+	}
+	SYR_industrial_force = { #산업 역군
+		icon = GFX_decision_generic_wreckers
+		days_re_enable = 20
+		days_remove = 120
+		cost = 20
+		available = {
+			has_country_flag = SYR_worker_in_gov
+		}
+		visible = {
+			has_completed_focus = SYR_focus_dem_9
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+		}
+	}
+	SYR_oust_landowner = { #지주 축출
+		icon = GFX_decision_generic_break_treaty
+		cost = 30
+		fire_only_once = yes
+		available = {
+			NOT = {
+				has_completed_focus = SYR_focus_dem_4
+			}
+		}
+		days_remove = 30
+		visible = {
+			has_country_flag = SYR_landowner_in_gov
+		}
+		remove_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+	SYR_oust_capitalist = { #자본가 축출
+		icon = GFX_decision_generic_break_treaty
+		cost = 30
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = SYR_landowner_in_gov
+		}
+		remove_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	SYR_oust_intellect = { #지식인 축출
+		icon = GFX_decision_generic_break_treaty
+		cost = 30
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = SYR_intellect_in_gov
+		}
+		remove_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+		}
+	}
+	SYR_recruit_women = { #정부에 여성 영입
+		icon = GFX_decision_hol_exchange_intelligence_data
+		cost = 30
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_completed_focus = SYR_focus_dem_7
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = SYR_landowner_in_gov
+				}
+				custom_effect_tooltip = SYR_landowner_angry_tt
+				SYR_unity_down = yes
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			set_country_flag = SYR_women_in_gov
+			custom_effect_tooltip = SYR_recruit_women_tt
+		}
+	}
+	SYR_recruit_worker = { #정부에 노동자 영입
+		icon = GFX_decision_hol_exchange_intelligence_data
+		cost = 30
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_completed_focus = SYR_focus_dem_9
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = SYR_capitalist_in_gov
+				}
+				custom_effect_tooltip = SYR_capitalist_angry_tt
+				SYR_unity_down = yes
+			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			set_country_flag = SYR_worker_in_gov
+			custom_effect_tooltip = SYR_recruit_worker_tt
+		}
+	}
+	SYR_intervent_conflict = { #갈등 개입
+		icon = GFX_decision_generic_confiscation
+		visible = {
+			NOT = {
+				has_completed_focus = SYR_focus_dem_10
+			}
+		}
+		cost = 5
+		days_remove = 10
+		days_re_enable = 120
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = SYR_class_conflict
+				days = 60
+			}
+		}
+	}
+	SYR_yield_to_landowner = { #지주에게 양보
+		icon = GFX_decision_oppression
+		visible = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_landowner_in_gov
+		}
+		available = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_landowner_in_gov
+		}
+		cost = 5
+		days_remove = 120
+		days_re_enable = 180
+		complete_effect = {
+			custom_effect_tooltip = SYR_landowner_happy_tt
+			SYR_unity_up = yes
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.3
+		}
+	}
+	SYR_yield_to_capitalist = { #자본가에게 양보
+		icon = GFX_decision_generic_consumer_goods
+		visible = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_capitalist_in_gov
+		}
+		available = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_capitalist_in_gov
+		}
+		cost = 5
+		days_remove = 120
+		days_re_enable = 180
+		complete_effect = {
+			custom_effect_tooltip = SYR_capitalist_happy_tt
+			SYR_unity_up = yes
+		}
+		modifier = {
+			consumer_goods_expected_value = 0.2
+		}
+	}
+	SYR_yield_to_intellect = { #지식인에게 양보
+		icon = GFX_decision_generic_speech
+		visible = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_intellect_in_gov
+		}
+		available = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_intellect_in_gov
+		}
+		cost = 5
+		days_remove = 120
+		days_re_enable = 80
+		complete_effect = {
+			custom_effect_tooltip = SYR_intellect_happy_tt
+			SYR_unity_up = yes
+		}
+		modifier = {
+			stability_factor = -0.15
+		}
+	}
+	SYR_yield_to_women = { #여성에게
+		icon = GFX_decision_eng_propaganda_campaigns
+		visible = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_women_in_gov
+		}
+		available = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_women_in_gov
+		}
+		cost = 5
+		days_remove = 120
+		days_re_enable = 80
+		complete_effect = {
+			custom_effect_tooltip = SYR_women_happy_tt
+			SYR_unity_up = yes
+		}
+		modifier = {
+			political_power_cost = 0.25
+		}
+	}
+	SYR_yield_to_worker = { #노동자에게
+		icon = GFX_decision_generic_welfare
+		visible = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_worker_in_gov
+		}
+		available = {
+			NOT = {
+				has_idea = SYR_class_unity_1
+			}
+			has_country_flag = SYR_worker_in_gov
+		}
+		cost = 5
+		days_remove = 120
+		days_re_enable = 80
+		complete_effect = {
+			custom_effect_tooltip = SYR_worker_happy_tt
+			SYR_unity_up = yes
+		}
+		modifier = {
+			industrial_capacity_factory = -0.5
 		}
 	}
 }

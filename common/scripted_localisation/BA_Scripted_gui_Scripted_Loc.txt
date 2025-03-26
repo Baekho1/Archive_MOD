@@ -1833,3 +1833,112 @@ defined_text = {
         localization_key = GEH_DNVP_focus_3_1
     }
 }
+defined_text = {
+    name = SYR_landowner_class
+    text = {
+        trigger = {
+            SYR = {
+                has_country_flag = SYR_landowner_in_gov
+            }
+        }
+        localization_key = SYR_landowner_class_valid
+    }
+    text = {
+        trigger = {
+            SYR = {
+                NOT = {
+                    has_country_flag = SYR_landowner_in_gov
+                }
+            }
+        }
+        localization_key = SYR_landowner_class_invalid
+    }
+}
+
+defined_text = {
+    name = SYR_capitalist_class
+    text = {
+        trigger = {
+            SYR = {
+                has_country_flag = SYR_capitalist_in_gov
+            }
+        }
+        localization_key = SYR_capitalist_class_valid
+    }
+    text = {
+        trigger = {
+            SYR = {
+                NOT = {
+                    has_country_flag = SYR_capitalist_in_gov
+                }
+            }
+        }
+        localization_key = SYR_capitalist_class_invalid
+    }
+}
+
+defined_text = {
+    name = SYR_intellect_class
+    text = {
+        trigger = {
+            SYR = {
+                has_country_flag = SYR_intellect_in_gov
+            }
+        }
+        localization_key = SYR_intellect_class_valid
+    }
+    text = {
+        trigger = {
+            SYR = {
+                NOT = {
+                    has_country_flag = SYR_intellect_in_gov
+                }
+            }
+        }
+        localization_key = SYR_intellect_class_invalid
+    }
+}
+
+defined_text = {
+    name = SYR_worker_class
+    text = {
+        trigger = {
+            SYR = {
+                has_country_flag = SYR_worker_in_gov
+            }
+        }
+        localization_key = SYR_worker_class_valid
+    }
+    text = {
+        trigger = {
+            SYR = {
+                NOT = {
+                    has_country_flag = SYR_worker_in_gov
+                }
+            }
+        }
+        localization_key = SYR_worker_class_invalid
+    }
+}
+
+defined_text = {
+    name = SYR_women_class
+    text = {
+        trigger = {
+            SYR = {
+                has_country_flag = SYR_women_in_gov
+            }
+        }
+        localization_key = SYR_women_class_valid
+    }
+    text = {
+        trigger = {
+            SYR = {
+                NOT = {
+                    has_country_flag = SYR_women_in_gov
+                }
+            }
+        }
+        localization_key = SYR_women_class_invalid
+    }
+}

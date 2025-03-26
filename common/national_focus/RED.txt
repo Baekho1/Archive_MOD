@@ -404,6 +404,10 @@ focus_tree = {
 					keep_completed = yes
 				}
 				mark_focus_tree_layout_dirty = yes
+				country_event = {
+					id = RED_generic.19
+					days = 2
+				}
 			}
 			if = {
 				limit = {
@@ -3235,14 +3239,38 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			RED_momiji = {
-				remove_trait = {
-					trait = RED_momiji_trait
-					slot = political_advisor
+			hidden_effect = {
+				if = {
+					limit = {
+						RED_momiji = {
+							is_political_advisor = yes
+						}
+					}
+					add_research_slot = 1
 				}
-				add_trait = {
-					trait = RED_momiji_trait_good
-					slot = political_advisor
+			}
+			effect_tooltip = {
+				RED_momiji = {
+					remove_trait = {
+						trait = RED_momiji_trait
+						slot = political_advisor
+					}
+					add_trait = {
+						trait = RED_momiji_trait_good_for_vision
+						slot = political_advisor
+					}
+				}
+			}
+			hidden_effect = {
+				RED_momiji = {
+					remove_trait = {
+						trait = RED_momiji_trait
+						slot = political_advisor
+					}
+					add_trait = {
+						trait = RED_momiji_trait_good
+						slot = political_advisor
+					}
 				}
 			}
 			if = {

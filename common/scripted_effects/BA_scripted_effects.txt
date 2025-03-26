@@ -2840,3 +2840,91 @@ ABY_halo_militia_ban_effect = { #실행된 범위의 헤일로 민병을 0으로
 		}
 	}
 }
+SYR_unity_up = { #결속 업 결속 업
+	if = {
+		limit = {
+			has_idea = SYR_class_unity_2
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_2
+			add_idea = SYR_class_unity_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_3
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_3
+			add_idea = SYR_class_unity_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_4
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_4
+			add_idea = SYR_class_unity_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_5
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_5
+			add_idea = SYR_class_unity_4
+		}
+	}
+	else = {
+		add_stability = 0.05
+	}
+}
+SYR_unity_down = { #결속 업 결속 업
+	if = {
+		limit = {
+			has_idea = SYR_class_unity_2
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_2
+			add_idea = SYR_class_unity_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_3
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_3
+			add_idea = SYR_class_unity_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_4
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_4
+			add_idea = SYR_class_unity_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_1
+		}
+		swap_ideas = {
+			remove_idea = SYR_class_unity_1
+			add_idea = SYR_class_unity_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SYR_class_unity_5
+		}
+		country_event = {
+			id = SYR_event.20
+			days = 1
+		}
+	}
+}

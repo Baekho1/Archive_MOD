@@ -36,7 +36,13 @@ spriteTypes = {
 		texturefile = "gfx/texticons/benriya_right_texticon.dds"
 		legacy_lazy_load = no
 	}
+	#긴급 시리아 침입
 	
+	spriteType = {
+		name = "GFX_syria_women_texticon"
+		texturefile = "gfx/texticons/syria_women_texticon.dds"
+		legacy_lazy_load = no
+	}
 	spriteType = {
 		name = "GFX_benriya_kivotos_texticon"
 		texturefile = "gfx/texticons/benriya_kivotos_texticon.dds"

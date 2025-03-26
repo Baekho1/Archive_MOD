@@ -1232,6 +1232,9 @@
  FORM_INT_DEF: "인터마리움 연방"
  FORM_INT_ADJ: "인터마리움"
 
+ SYR_republic_lebanon: "시리아-레바논 공화국"
+ SYR_republic: "시리아 공화국"
+
  SYR_levant: "레반트 연방"
  SYR_levant_ADJ: "레반트 연방"
  SYR_levant_DEF: "레반트 연방"

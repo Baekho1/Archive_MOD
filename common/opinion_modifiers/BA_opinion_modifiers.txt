@@ -2,6 +2,9 @@ opinion_modifiers = {
 	hostile_with_western = { #서방과의 적대
 		value = -50
 	}
+	friendship_om = { #우호
+		value = 10
+	}
 	friendship_with_western = { #서방과의 우호
 		value = 20
 	}

@@ -61,6 +61,164 @@ ideas = {
 		}
 
 		#시리아
+		SYR_international_cooperation_3 = { #국제 협력 - 모두
+			name = SYR_international_cooperation
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				fascism_acceptance = 10
+				communism_acceptance = 10
+				communism_drift = 0.03
+				fascism_drift = 0.03
+				resource_trade_cost_bonus_per_factory = 1
+			}
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+		SYR_international_cooperation_2 = { #국제 협력 - 흑해
+			name = SYR_international_cooperation
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				fascism_acceptance = 10
+				communism_acceptance = 10
+				communism_drift = 0.03
+			}
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+		SYR_international_cooperation_1 = { #국제 협력 - 지중해
+			name = SYR_international_cooperation
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				fascism_acceptance = 10
+				communism_acceptance = 10
+				fascism_drift = 0.03
+				resource_trade_cost_bonus_per_factory = 1
+			}
+		}
+		SYR_international_cooperation = { #국제 협력
+			name = SYR_international_cooperation
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				fascism_acceptance = 10
+				communism_acceptance = 10
+			}
+		}
+		SYR_commerce_1 = { #시리아 상공업
+			name = SYR_commerce
+			picture = PER_fund_state_intelligence_idea
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SYR_commerce = { #시리아 상공업
+			name = SYR_commerce
+			picture = PER_fund_state_intelligence_idea
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SYR_replublicanism_3 = { #시리아 공화주의
+			name = SYR_replublicanism
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				war_support_factor = 0.05
+				democratic_acceptance = 10
+				democratic_drift = 0.05
+				political_power_factor = 0.05
+				drift_defence_factor = -0.05
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		SYR_replublicanism_2 = { #시리아 공화주의
+			name = SYR_replublicanism
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				war_support_factor = 0.05
+				democratic_acceptance = 10
+				democratic_drift = 0.05
+				political_power_factor = 0.05
+				drift_defence_factor = -0.05
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SYR_replublicanism_1 = { #시리아 공화주의
+			name = SYR_replublicanism
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				war_support_factor = 0.05
+				democratic_acceptance = 10
+				democratic_drift = 0.05
+				political_power_factor = 0.05
+				drift_defence_factor = -0.05
+			}
+		}
+		SYR_replublicanism = { #시리아 공화주의
+			name = SYR_replublicanism
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				war_support_factor = 0.05
+				democratic_acceptance = 10
+				democratic_drift = 0.05
+			}
+		}
+		SYR_class_unity_5 = { #계급 협조 : 일촉즉발
+			picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_gain = -0.25
+				consumer_goods_factor = 0.25
+				research_speed_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+		SYR_class_unity_4 = { #계급 협조 : 적대적 공생
+		picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+		SYR_class_unity_3 = { #계급 협조 : 긴장
+		picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		SYR_class_unity_2 = { #계급 협조 : 우호
+		picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.15
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		SYR_class_unity_1 = { #계급 협조 : 상호부조
+		picture = PER_unification_initiative_idea
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = -0.25
+				research_speed_factor = 0.15
+				stability_factor = 0.15
+			}
+		}
+
 		SYR_nation_community_3 = { #민족 공동체
 			name = SYR_nation_community
 			picture = generic_fascist_workers

@@ -275,6 +275,10 @@ country_event ={ #자유 선거
 	is_triggered_only = yes
 	option = { #국민 블록!
 		name = SYR_event.8.a
+		add_ideas = SYR_class_unity_3
+		activate_mission = SYR_class_conflict
+		set_country_flag = SYR_landowner_in_gov
+		set_country_flag = SYR_capitalist_in_gov
 	}
 }
 country_event ={ #공산당 집권
@@ -368,7 +372,6 @@ country_event ={ #무함마드 알리 베이 알아비드의 사임
 	option = { #ㅇㅋ
 		name = SYR_event.14.a
 		retire_country_leader = yes
-		activate_mission = SYR_dark_forest
 	}
 }
 country_event ={ #궐기
@@ -518,6 +521,124 @@ country_event ={ #이라크 쿠데타
 			create_wargoal = {
 				target = IRQ
 				type = topple_government
+			}
+		}
+	}
+}
+country_event ={ #내전!
+	id = SYR_event.20
+	title = SYR_event.20.t
+	desc = SYR_event.20.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_troops_at_rivier_in_iraq
+	option = { #쉣~ 
+		name = SYR_event.20.a
+		trigger = {
+			NOT = {
+				has_completed_focus = SYR_focus_dem_9
+			}
+		}
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.7
+			states = {677 680 799}
+		}
+	}
+	option = { #공산 ㄱㄱ
+		name = SYR_event.20.b
+		custom_effect_tooltip = SYR_event.20_tt_1
+		trigger = {
+			has_completed_focus = SYR_focus_dem_9
+		}
+		complete_national_focus = SYR_focus_com_0
+	}
+}
+country_event ={ #무역해줘
+	id = SYR_event.21
+	title = SYR_event.21.t
+	desc = SYR_event.21.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_sign_treaty1
+	option = { #ㅇㅋ
+		name = SYR_event.21.a
+		ai_chance = {
+			base = 5
+		}
+		if = {
+			limit = {
+				tag = SOV
+			}
+			effect_tooltip = {
+				SYR = {
+					swap_ideas = {
+						remove_idea = SYR_international_cooperation
+						add_idea = SYR_international_cooperation_2
+					}
+				}
+			}
+		}
+		else = {
+			effect_tooltip = {
+				SYR = {
+					swap_ideas = {
+						remove_idea = SYR_international_cooperation
+						add_idea = SYR_international_cooperation_1
+					}
+				}
+			}
+		}
+		add_political_power = 20
+		SYR = {
+			country_event = {
+				id = RED_event.8
+				days = 2
+			}
+		}
+	}
+	option = { #ㅗ
+		name = SYR_event.21.b
+		SYR = {
+			country_event = {
+				id = RED_event.9
+				days = 2
+			}
+		}
+	}
+}
+country_event ={ #레바논아 통합하자
+	id = SYR_event.22
+	title = SYR_event.22.t
+	desc = SYR_event.22.d
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_sign_treaty1
+	option = { #ㅇㅋ
+		name = SYR_event.22.a
+		ai_chance = {
+			base = 200
+		}
+		every_character = {
+			set_nationality = SYR
+		}
+		SYR = {
+			annex_country = {
+				target = LEB
+				transfer_troops = yes
+			}
+		}
+		SYR = {
+			country_event = {
+				id = RED_event.8
+				days = 2
+			}
+			set_cosmetic_tag = SYR_republic_lebanon
+		}
+	}
+	option = { #ㅗ
+		name = SYR_event.22.b
+		SYR = {
+			country_event = {
+				id = RED_event.9
+				days = 2
 			}
 		}
 	}
