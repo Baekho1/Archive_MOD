@@ -9102,7 +9102,7 @@ country_event = { # 여성 인권에 대한 논의
     }
 }
 
-country_event = { # 여성 인권에 대한 논의
+country_event = { # 
 	id = trinity.31
 	title = trinity.31.t
 	desc = trinity.31.desc
@@ -9121,6 +9121,33 @@ country_event = { # 여성 인권에 대한 논의
 
 	option = {
 		name = trinity.31.b
+		ai_chance = { 
+			base = 2
+		}
+		TRM_bop_very_low_increase_effect = yes
+    }
+}
+
+country_event = { # '생존권' 개념
+	id = trinity.32
+	title = trinity.32.t
+	desc = trinity.32.desc
+	picture = GFX_report_event_SWE_summer_government
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.32.a
+		ai_chance = { 
+			base = 10
+		}
+		add_popularity = { ideology = fascism popularity = 0.03 }
+		TRM_bop_very_low_decrease_effect = yes
+    }
+
+	option = {
+		name = trinity.32.b
 		ai_chance = { 
 			base = 2
 		}

@@ -372,7 +372,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -5
+			x = 5
 			trigger = {
 				has_completed_focus = SHA_gathering_of_radicals
 			}
