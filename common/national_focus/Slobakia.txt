@@ -530,7 +530,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 9
+		x = 10
 		y = 6
 		prerequisite = {
 			focus = SLO_foc_1-4-4
@@ -813,6 +813,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = SLO_threat_2
+			}
 			HUN = {
 				add_opinion_modifier = { target = SLO modifier = large_decrease }
 			}
@@ -853,6 +857,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_stability = -0.05
 			HUN = {
 				add_opinion_modifier = { target = SLO modifier = large_increase }
 			}
@@ -939,6 +944,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_stability = -0.05
 			HUN = {
 				country_event = {
 					id = generic.5
@@ -951,7 +957,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-20
 		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -996,7 +1002,484 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_war_support = 0.10
+			HUN = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SLO_anti_hungary
+				}
+			}
+			send_embargo = HUN
+			custom_effect_tooltip = SLO_tt_8
+			every_other_country = { 
+				limit = {
+					is_in_faction_with = SLO 
+				}
+				country_event = SLO_event.110
+			}
 		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-21
+		icon = GFX_focus_generic_attack_hungary
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-20
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-22
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+				HUN = {
+					exists = no
+				}
+				has_war_with = HUN
+			}
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = SLO_threat_1
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = HUN
+				generator = { 73 664 }
+				expire = 60
+			}
+		}
+		will_lead_to_war_with = HUN
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-22
+		icon = GFX_focus_generic_befriend_slovakia
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 5
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-20
+			focus = SLO_foc_1-4-19
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-21
+		}
+		available = {
+			HUN = {
+				controls_state = 73
+				controls_state = 664
+			}
+		}
+		bypass = {
+			OR = {
+				HUN = {
+					exists = no
+				}
+				has_war_with = HUN
+			}
+		}
+		completion_reward = {
+			HUN = {
+				country_event = {
+					id = SLO_event.120
+					hours = 3
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						is_ai = yes
+					}
+				}
+				custom_effect_tooltip = SLO_tt_9
+			}
+		}
+		will_lead_to_war_with = HUN
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-23
+		icon = GFX_focus_generic_aluminum
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-19
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			NOT = {
+				has_war_with = HUN
+			}
+		}
+		bypass = {
+			HUN = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			add_ideas = SLO_aluminum_withhun_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-24
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 10
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-10
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_in_faction_with = POL
+			controls_state = 70
+		}
+		bypass = {
+		}
+		completion_reward = {
+			if = {
+				limit = { POL = { controls_state = 10 } }		
+				build_railway = {
+					level = 2
+					start_state = 70
+					target_state = 10
+				}
+			}
+			if = {
+				limit = { POL = { controls_state = 88 } }		
+				build_railway = {
+					level = 2
+					start_state = 70
+					target_state = 88
+				}
+			}
+			if = {
+				limit = { POL = { controls_state = 87 } }		
+				build_railway = {
+					level = 2
+					start_state = 70
+					target_state = 87
+				}
+			}
+			if = {
+				limit = { POL = { controls_state = 91 } }		
+				build_railway = {
+					level = 2
+					start_state = 70
+					target_state = 91
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-25
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-24
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_in_faction_with = POL
+		}
+		bypass = {
+		}
+		completion_reward = {
+			POL = {
+				add_opinion_modifier = { target = SLO modifier = large_increase }
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-26
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 9
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-24
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			is_in_faction_with = POL
+		}
+		bypass = {
+			has_war_with = SOV
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+			send_embargo = SOV
+			SOV = {
+				add_opinion_modifier = { target = SOV modifier = large_decrease }	
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-27
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-25
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			OR = {
+				threat > 0.25
+				has_war_support > 0.50
+			}
+		}
+		bypass = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+				add_ideas = war_economy
+			}
+			else = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-28
+		icon = GFX_focus_attack_soviet
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 10
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-26
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-27
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			has_war_with = SOV
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = SLO_warwithsoviet_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-29
+		icon = GFX_goal_generic_attack_allies
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 9
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-28
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-30
+		}
+		available = {
+			SOV = {
+				surrender_progress > 0.01
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_warwithsoviet_idea
+				add_idea = SLO_warwithsoviet1_idea
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-30
+		icon = GFX_goal_generic_defence
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-28
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-29
+		}
+		available = {
+			surrender_progress > 0.33
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_war_support = -0.30
+			add_timed_idea = {
+				idea = SLO_warwithsoviet2_idea
+				days = 200
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-31
+		icon = GFX_SOV_memories_of_1905_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 10
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-28
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-29
+			focus = SLO_foc_1-4-30
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			NOT = {
+				has_war_with = SOV
+				is_puppet_of = SOV
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_political_power = 200
+			add_country_leader_trait = SLO_war_hero_dem
+		}
+		available_if_capitulated = yes
 	}
 	### 파시, 파시즘, 파시스트 루트 ###
 	focus = {

@@ -21,6 +21,10 @@
  SLO_slo_worker_idea:0 "슬로바키아 노동자"
  SLO_slo_economic_dependence_idea:0 "슬로바키아에게 경제적으로 종속당함"
  SLO_slo_economic_chaos_idea:0 "경제 대혼란"
+ SLO_aluminum_withhun_idea:0 "헝가리와의 알루미늄 무역"
+ SLO_warwithsoviet_idea:0 "생존을 위한 전쟁"
+ SLO_warwithsoviet1_idea:0 "생존을 위한 전쟁"
+ SLO_warwithsoviet2_idea:0 "최후의 저항"
 
  ##국가중점##
  SLO_foc_1:0 "의회 소집"
@@ -48,6 +52,17 @@
  SLO_foc_1-4-18:0 "폴란드와의 동맹"
  SLO_foc_1-4-19:0 "옛 적과의 동침"
  SLO_foc_1-4-20:0 "반헝가리 전선"
+ SLO_foc_1-4-21:0 "헝가리와의 전쟁"
+ SLO_foc_1-4-22:0 "남슬로바키아 요구"
+ SLO_foc_1-4-23:0 "헝가리와의 알루미늄 무역"
+ SLO_foc_1-4-24:0 "폴란드와 철도 연결"
+ SLO_foc_1-4-25:0 "폴란드에 투자"
+ SLO_foc_1-4-26:0 "반공주의 고취"
+ SLO_foc_1-4-27:0 "전쟁 준비"
+ SLO_foc_1-4-28:0 "생존을 위한 전쟁"
+ SLO_foc_1-4-29:0 "공세 개시"
+ SLO_foc_1-4-30:0 "최후의 저항"
+ SLO_foc_1-4-31:0 "아름다운 승리"
  SLO_foc_2:0 "우익과 가톨릭의 연합"
 
  ##이벤트##
@@ -118,6 +133,20 @@
  SLO_event.102.e:0 "작성 예정"
  SLO_event.103.t:0 "[HUN.GetAdjective]의 일방적 조약 파기!"
  SLO_event.103.e:0 "작성 예정"
+ SLO_event.110.t:0 "반헝가리 전선"
+ SLO_event.110.e:0 "작성 예정"
+ SLO_event.110.a:0 "세력이 그렇다면, 그럴 수 밖에."
+ SLO_event.110.b:0 "그럴 수 없다."
+ SLO_event.120.t:0 "슬로바키아의 펠비데크-카르파터여 지방 요구"
+ SLO_event.120.e:0 "작성 예정"
+ SLO_event.120.a:0 "동의한다."
+ SLO_event.120.b:0 "절대 안돼!"
+ SLO_event.121.t:0 "[HUN.GetAdjective]의 요구 수락"
+ SLO_event.121.e:0 "작성 예정"
+ SLO_event.121.a:0 "슬로바키아에게 위대한 날이다!"
+ SLO_event.122.t:0 "[HUN.GetAdjective]의 거부"
+ SLO_event.122.e:0 "작성 예정"
+ SLO_event.122.a:0 "병력을 준비하라!"
 
  ##디시전##
  SLO_decisions_1:0 "브라티슬라바 경제 협력 기구"
@@ -162,7 +191,8 @@
  SLO_tt_5:0 "§Y민간공장 3개§!가 180일간 우리 국가에 추가될 것입니다.\n§R하지만, 슬로바키아는 우리 국가에 더 많은 영향력을 행사할 것입니다.§!"
  SLO_tt_6:0 "§Y슬로바키아 노동자들§!이 360일간 우리 국가에서 노동을 할 것입니다.\n§R하지만, 슬로바키아는 우리 국가에 더 많은 영향력을 행사할 것입니다.§!"
  SLO_tt_7:0 "§Y슬로바키아의 영향력§!이 §Y70% 미만§!으로 내려가면 제거됩니다."
- SLO_tt_8:0 "§Y"
+ SLO_tt_8:0 "\n§Y세력 회원국§!에게 §Y반헝가리 전선§! 조인 및 §Y헝가리 금수조치§! 요청"
+ SLO_tt_9:0 "§Y[HUN.GetNameWithFlag]§!은 다음 경우에 해당할 때 요청을 수락할 확률이 높을 것입니다.\n - §Y[SLO.GetNameWithFlag]§!이/가 §Y[HUN.GetNameWithFlag]§!보다 병력이 많을 때\n - §Y[SLO.GetNameWithFlag]§!이/가 주요국일 때\n - §Y[SLO.GetNameWithFlag]§!이/가 §Y[ROM.GetNameWithFlag], [YUG.GetNameWithFlag], [POL.GetNameWithFlag]§!과 세력에 속해 있을 때\n - §R[HUN.GetNameWithFlag]이/가 주요국이거나 세력에 속해 있을 경우, 수락할 확률이 낮아질 것입니다.§!"
  SLO_tt_add_5:0 "§Y해당 국가§!에 대한 영향력: §G+5%§!."
  SLO_tt_remove_5:0 "§Y해당 국가§!에 대한 영향력: §R-5%§!."
  SLO_tt_2remove_5:0 "§Y슬로바키아§!의 영향력: §G-5%§!."
@@ -171,6 +201,7 @@
  SLO_tt_more100:0 "§Y해당 국가§!에 대한 영향력: §G100%§! 이상."
 
  ##그밖##
+ SLO_anti_hungary:0 "반헝가리 전선 조인"
  construction_effort_tt_NOT:0 "§Y민간공장§!을 위한 건설 슬롯이 충분함"
  SLO_faction_1:0 "중부 유럽 연맹"
  SLO_in_a_rom_yes:0 "\n[ROM.GetNameWithFlag] (§Y슬로바키아§!의 영향력: §C[?var:global.SLO_ROM_influence]%§!)"
@@ -181,6 +212,8 @@
  SLO_in_a_yug_no:0 ""
  SLO_in_a_pol_no:0 ""
  SLO_in_a_hun_no:0 ""
+ SLO_threat_1:0 "헝가리와의 전쟁"
+ SLO_threat_2:0 "헝가리 압박"
 
  decision_cost_pp_50_cp_50:0 "£pol_power  §Y50§! £command_power  §Y50§!"
  decision_cost_pp_50_cp_50_blocked:0 "£pol_power  §R50§! £command_power  §R50§!"
@@ -217,6 +250,7 @@
  great_musician:0 "뛰어난 음악가"
  SLO_ice_guy:0 "시베리아의 생존자"
  SLO_low_support:0 "부족한 국민 지지"
+ SLO_war_hero_dem:0 "전쟁 영웅"
 
  SLO_skoda_armor_organization:0 "슈코다 기갑"
  SLO_ckd_organization:0 "CKD"

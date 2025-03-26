@@ -617,3 +617,169 @@ country_event = {
 		}
 	}
 }
+country_event = { 
+	id = SLO_event.110
+	title = SLO_event.110.t
+	desc = SLO_event.110.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SLO_event.110.a
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.10
+		HUN = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = SLO_anti_hungary
+			}
+		}
+		send_embargo = HUN
+	}
+	option = {
+		name = SLO_event.110.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.120
+	title = SLO_event.120.t
+	desc = SLO_event.120.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.120.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 5
+				SLO = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				add = 1
+				SLO = {
+					strength_ratio = {
+						tag = HUN
+						ratio > 1
+					}
+				}
+			}
+			modifier = {
+				add = 2
+				SLO = {
+					strength_ratio = {
+						tag = HUN
+						ratio > 1.5
+					}
+				}
+			}
+			modifier = {
+				add = 2
+				SLO = {
+					strength_ratio = {
+						tag = HUN
+						ratio > 2
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				SLO = {
+					strength_ratio = {
+						tag = HUN
+						ratio > 3
+					}
+				}
+			}
+			modifier = {
+				add = 2
+				SLO = {
+					is_in_faction_with = ROM
+				}
+			}
+			modifier = {
+				add = 2
+				SLO = {
+					is_in_faction_with = POL
+				}
+			}
+			modifier = {
+				add = 2
+				SLO = {
+					is_in_faction_with = YUG
+				}
+			}
+		}
+		add_war_support = -0.05
+		SLO = {
+			country_event = {
+				id = SLO_event.121
+				hours = 3
+			}
+		}
+	}
+	option = {
+		name = SLO_event.120.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 10
+				HUN = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				add = 10
+				HUN = {
+					is_in_faction = yes
+				}
+			}
+		}
+		SLO = {
+			country_event = {
+				id = SLO_event.122
+				hours = 3
+			}
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.121
+	title = SLO_event.121.t
+	desc = SLO_event.121.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.121.a
+		add_stability = 0.05
+		transfer_state = 664
+		transfer_state = 73
+	}
+}
+country_event = { 
+	id = SLO_event.122
+	title = SLO_event.122.t
+	desc = SLO_event.122.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.122.a
+		add_war_support = 0.05
+		create_wargoal = {
+			type = take_core_state
+			target = HUN
+			generator = { 73 664 }
+			expire = 60
+		}
+	}
+}
