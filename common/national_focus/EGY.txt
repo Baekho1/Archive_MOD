@@ -16,2303 +16,6 @@ focus_tree = {
 		y = 0
 	}
 
-################
-### Politics ###
-################
-
-	focus = {
-		# 1935 혁명의 성공
-		id = EGY_1935_revolution
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 19
-		y = 8
-
-		mutually_exclusive = {
-			focus = EGY_union_jack
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_black_monday_recovery"
-			add_political_power = 10
-			add_tech_bonus = {
-				name = EGY_black_monday_recovery
-				bonus = 1
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 와프트당 규합
-		id = EGY_wafd_unification
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -3
-		y = 1
-
-		prerequisite = {
-			focus = EGY_1935_revolution
-		}
-
-		mutually_exclusive = {
-			focus = EGY_1930_constitution
-			focus = EGY_egyptian_nationalism
-		}
-
-		relative_position_id = EGY_1935_revolution
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_wafd_unification_complete"
-			add_political_power = 10
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.2
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 푸른 셔츠단 결성
-		id = EGY_blue_shirts
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_wafd_unification
-		}
-
-
-		relative_position_id = EGY_wafd_unification
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_blue_shirts_complete"
-			add_political_power = 10
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.2
-			}
-			add_manpower = 30000
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 수단 투표권 인정
-		id = EGY_sudan_suffrage
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_wafd_unification
-		}
-
-
-		relative_position_id = EGY_wafd_unification
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_sudan_suffrage_complete"
-			add_political_power = 5
-			add_stability = 0.05
-			if = {
-				limit = {
-					is_puppet = no
-				}
-				add_manpower = 30000
-			}
-			if = {
-				limit = {
-					controls_state = 631
-				}
-
-				631 = {
-					add_resource = {
-						type = chromium
-						amount = 3
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 지방선거 허용
-		id = EGY_local_elections
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_blue_shirts
-		}
-
-		prerequisite = {
-			focus = EGY_sudan_suffrage
-		}
-
-		relative_position_id = EGY_blue_shirts
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_local_elections_complete"
-			add_political_power = 5
-			add_stability = 0.05
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 의회 정지
-		id = EGY_parliament_suspended
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_local_elections
-		}
-
-		prerequisite = {
-			focus = EGY_political_parties
-			focus = EGY_green_shirts_crush
-		}
-
-
-		relative_position_id = EGY_local_elections
-
-		mutually_exclusive = {
-			focus = EGY_montreux_convention
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_parliament_suspended_complete"
-			add_political_power = 15
-			add_stability = -0.1
-			set_country_flag = parliament_suspended
-			if = {
-				limit = {					
-					has_government = fascism
-				}
-				add_war_support = 0.2
-			}
-			else = {
-				add_war_support = 0.1
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 왕궁 장악
-		id = EGY_palace_seizure
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_parliament_suspended
-		}
-
-		relative_position_id = EGY_parliament_suspended
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_palace_seizure_complete"
-			add_political_power = 10
-			add_stability = -0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 카이로 계엄령 선포
-		id = EGY_cairo_martial_law
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_parliament_suspended
-		}
-
-		relative_position_id = EGY_parliament_suspended
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_cairo_martial_law_complete"
-			add_political_power = 10
-			add_stability = 0.05
-			add_war_support = 0.05
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_manpower = 30000				
-				
-
-				capital_scope = {					
-					create_unit = {						
-						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
-						owner = EGY
-						count = 3
-					}
-				}
-			}
-			else = {
-				add_manpower = 30000
-				capital_scope = {					
-					create_unit = {						
-						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
-						owner = EGY
-						count = 2
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 수단군 회유
-		id = EGY_sudanese_army
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_parliament_suspended
-		}
-
-		relative_position_id = EGY_parliament_suspended
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_sudanese_army_complete"
-			add_political_power = 10
-			if = {
-				limit = {
-					controls_state = 631 # 수단 주 ID (임시)
-				}
-				add_manpower = 30000
-				capital_scope = {					
-					create_unit = {						
-						division = "division_template = \"Al-Mushati Infantry\" start_experience_factor = 0.3"
-						owner = EGY
-						count = 4
-					}
-				}
-			}
-			else = {
-				add_manpower = 30000
-			}
-			add_equipment_bonus = {
-				name = EGY_sudanese_army
-				bonus = { 
-					infantry_equipment = {
-						acclimatization_hot_climate_gain_factor = 0.1
-						defense = 0.1
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 국왕 추방
-		id = EGY_king_exiled
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_palace_seizure
-		}
-
-		prerequisite = {
-			focus = EGY_cairo_martial_law
-		}
-
-		prerequisite = {
-			focus = EGY_sudanese_army
-		}
-
-
-		relative_position_id = EGY_cairo_martial_law
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_king_exiled_complete"
-			add_political_power = 20
-			add_stability = 0.1
-			set_country_flag = king_exiled
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_war_support = 0.1
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 새 왕좌의 주인
-		id = EGY_new_king
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -9
-		y = 1
-
-		prerequisite = {
-			focus = EGY_king_exiled
-		}
-
-
-		relative_position_id = EGY_king_exiled
-
-		mutually_exclusive = {
-			focus = EGY_national_state
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_new_king_complete"
-			add_political_power = 15
-			add_stability = 0.1
-			# create_country_leader = {
-			# 	name = "Placeholder Royalist Leader" # 왕정복고 지도자 이름 (임시)
-			# 	desc = "Placeholder Royalist Leader Desc" # 왕정복고 지도자 설명 (임시)
-			# 	picture = GFX_leader_egypt_placeholder_royalist # 왕정복고 지도자 이미지 (임시)
-			# 	ideology = paternal_autocrat
-			# 	traits = { charismatic_leader military_theorist }
-			# }
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.3
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 키보토스인 이민 수용
-		id = EGY_accept_kibotos
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -4
-		y = 1
-
-		prerequisite = {
-			focus = EGY_new_king
-		}
-
-
-		relative_position_id = EGY_new_king
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_accept_kibotos_complete"
-			add_political_power = 10
-			add_stability = 0.05
-			set_country_flag = kibotos_refugees_accepted
-			#add_ideas = EGY_kibotos_immigration
-			set_technology = {
-				kivotos_infantry_weapons = 1
-			}
-			set_country_flag = kivotos_research_on
-
-
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 키보토스인 동원
-		id = EGY_kibotos_conscription
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 2
-
-		prerequisite = {
-			focus = EGY_accept_kibotos
-		}
-
-		relative_position_id = EGY_accept_kibotos
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_kibotos_conscription_complete"
-			add_political_power = 10
-			add_manpower = 20000 #동원 가능 인력 추가 (수치 조정 가능)
-			army_experience = 10 # 육군 경험치 추가 (수치 조정 가능)			
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 신비 연구 가속화
-		id = EGY_mystical_research_boost
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 2
-
-		prerequisite = {
-			focus = EGY_kibotos_conscription
-		}
-
-		relative_position_id = EGY_kibotos_conscription
-
-		available = {
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = EGY_mystic_engineering_boost
-				category = mystic_engineering
-				bonus = 1.0
-				uses = 2
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 봉기 종용
-		id = EGY_rebellion_encouraged
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_new_king
-		}
-
-
-		relative_position_id = EGY_new_king
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_rebellion_encouraged_complete"
-			add_political_power = 10
-			# 국가에 대한 첩보 활동 강화, 특정 국가와의 관계 악화 등
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 충성파 부대 소집
-		id = EGY_imperial_claims
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_rebellion_encouraged
-		}
-
-
-		relative_position_id = EGY_rebellion_encouraged
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_imperial_claims_complete"
-			add_political_power = 10
-			add_ideas = service_by_requirement
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 민심 휘어잡기
-		id = EGY_civilian_support
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_rebellion_encouraged
-		}
-
-
-		relative_position_id = EGY_rebellion_encouraged
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_civilian_support_complete"
-			add_political_power = 10
-			add_stability = 0.1 # 안정도 증가
-			add_war_support = 0.1 # 전쟁 지지도 증가
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 황제 즉위
-		id = EGY_emperor_crowned
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_new_king
-		}
-
-
-		relative_position_id = EGY_new_king
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_emperor_crowned_complete"
-			add_political_power = 15
-			# 요건 누군가 하고픈 사람이 하라지 ~_~
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 왕조 정통성 주장
-		id = EGY_imperial_authenticity
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_emperor_crowned
-		}
-
-
-		relative_position_id = EGY_emperor_crowned
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_imperial_authenticity_complete"
-			add_political_power = 10
-			add_stability = 0.1 # 안정도 증가
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 아비도스 케메트 제국
-		id = EGY_abidos_kemet_empire
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_civilian_support
-		}
-
-		prerequisite = {
-			focus = EGY_imperial_authenticity
-		}
-
-		relative_position_id = EGY_civilian_support
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_abidos_kemet_empire_complete"
-			add_political_power = 15
-			# 대충 호시노가 여왕된다는 내용
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 부왕국 설치
-		id = EGY_vassal_kingdoms
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_emperor_crowned
-		}
-
-
-		relative_position_id = EGY_emperor_crowned
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_vassal_kingdoms_complete"
-			add_political_power = 10
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 제국 영유권 주장
-		id = EGY_imperial_land_claims
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 4
-		y = 1
-
-		prerequisite = {
-			focus = EGY_new_king
-		}
-
-
-		relative_position_id = EGY_new_king
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 제국 통합
-		id = EGY_imperial_unification
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 2
-
-		prerequisite = {
-			focus = EGY_imperial_land_claims
-		}
-
-		relative_position_id = EGY_imperial_land_claims
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 제 2왕조의 영광
-		id = EGY_second_dynasty_glory
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 2
-
-		prerequisite = {
-			focus = EGY_imperial_unification
-		}
-
-		relative_position_id = EGY_imperial_unification
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 아프리카 지배
-		id = EGY_african_domination
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_abidos_kemet_empire
-		}
-
-		prerequisite = {
-			focus = EGY_kibotos_conscription
-		}
-
-		prerequisite = {
-			focus = EGY_imperial_unification
-		}
-
-		relative_position_id = EGY_abidos_kemet_empire
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 중동 지배
-		id = EGY_middle_east_domination
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_abidos_kemet_empire
-		}
-
-		prerequisite = {
-			focus = EGY_kibotos_conscription
-		}
-
-		prerequisite = {
-			focus = EGY_imperial_unification
-		}
-
-		relative_position_id = EGY_abidos_kemet_empire
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 키보토스
-		id = EGY_kivotos_domination
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_african_domination
-		}
-
-		prerequisite = {
-			focus = EGY_middle_east_domination
-		}
-
-		relative_position_id = EGY_african_domination
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이집트 국민국가
-		id = EGY_national_state
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_king_exiled
-		}
-
-		mutually_exclusive = {
-			focus = EGY_new_king
-		}
-
-
-		relative_position_id = EGY_king_exiled
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 미국과의 협력
-		id = EGY_american_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = -2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_italy_cooperation
-			focus = EGY_soviet_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_american_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = air_doctrine
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_american_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이탈리아와 함께
-		id = EGY_italy_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_american_cooperation
-			focus = EGY_soviet_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_italy_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = ITA modifier = EGY_italy_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_italian_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = naval_doctrine
-				}
-				
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_italian_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
-				
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 코민테른과 동맹
-		id = EGY_soviet_cooperation
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_national_state
-		}
-		
-		relative_position_id = EGY_national_state
-
-		mutually_exclusive = {
-			focus = EGY_american_cooperation
-			focus = EGY_italy_cooperation
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_american_cooperation_complete"
-			add_political_power = 10
-			#add_opinion_modifier = { target = USA modifier = EGY_american_cooperation }
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = EGY_american_military_doctrine
-					bonus = 0.5
-					uses = 2
-					category = land_doctrine
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = EGY_american_military_equipment
-					bonus = 0.5
-					uses = 2
-					category = infantry_weapons
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 정당정치 활성화
-		id = EGY_political_parties
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_blue_shirts
-		}
-
-		prerequisite = {
-			focus = EGY_sudan_suffrage
-		}
-
-		relative_position_id = EGY_blue_shirts
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 녹색 셔츠단 분쇄
-		id = EGY_green_shirts_crush
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_blue_shirts
-		}
-
-		prerequisite = {
-			focus = EGY_sudan_suffrage
-		}
-
-		relative_position_id = EGY_sudan_suffrage
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 푸른 셔츠단 강화
-		id = EGY_blue_shirts_strengthen
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 2
-		y = 1
-
-		prerequisite = {
-			focus = EGY_blue_shirts
-		}
-
-		prerequisite = {
-			focus = EGY_sudan_suffrage
-		}
-
-		relative_position_id = EGY_sudan_suffrage
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 만수라 협정
-		id = EGY_montreux_convention
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 0
-		y = 1
-
-		prerequisite = {
-			focus = EGY_blue_shirts_strengthen
-		}
-
-		prerequisite = {
-			focus = EGY_political_parties
-			focus = EGY_green_shirts_crush
-		}
-
-		relative_position_id = EGY_blue_shirts_strengthen
-
-		mutually_exclusive = {
-			focus = EGY_parliament_suspended
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이집트 제일주의
-		id = EGY_egyptian_nationalism
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 6
-		y = 1
-
-		prerequisite = {
-			focus = EGY_1935_revolution
-		}
-
-		mutually_exclusive = {
-			focus = EGY_1930_constitution
-			focus = EGY_wafd_unification
-		}
-
-		relative_position_id = EGY_1935_revolution
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 1930년 헌법 복원
-		id = EGY_1930_constitution
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 11
-		y = 1
-
-		prerequisite = {
-			focus = EGY_1935_revolution
-		}
-
-		mutually_exclusive = {
-			focus = EGY_wafd_unification
-			focus = EGY_egyptian_nationalism
-		}
-
-		relative_position_id = EGY_1935_revolution
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 유니온 잭에 충성
-		id = EGY_union_jack
-		icon = GFX_focus_generic_treaty
-		cost = 5
-
-		x = 40
-		y = 8
-
-		mutually_exclusive = {
-			focus = EGY_1935_revolution
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_black_monday_recovery"
-			add_political_power = 10
-			add_tech_bonus = {
-				name = EGY_black_monday_recovery
-				bonus = 1
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 자치권 확보
-		id = EGY_autonomy_secured
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   # 440/120 ≈ 4
-		y = 1   # 140/120 ≈ 1
-		prerequisite = { focus = EGY_union_jack }
-		relative_position_id = EGY_union_jack
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 수단 지배권 요구
-		id = EGY_demand_sudan_control
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   # 280/120 ≈ 2
-		y = 1   # 140/120 ≈ 1
-		prerequisite = { focus = EGY_union_jack }
-		relative_position_id = EGY_union_jack
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 레반트 대리통치 제안
-		id = EGY_levant_protectorate_proposal
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   # 360/120=3
-		y = 1   # 240/120=2
-		prerequisite = {
-			focus = EGY_autonomy_secured
-			focus = EGY_demand_sudan_control
-		}
-		relative_position_id = EGY_autonomy_secured
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 동아프리카 요구
-		id = EGY_east_africa_demand
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1    # 440/120 ≈3.7→4
-		y = 1    # 340/120≈2.83→3
-		prerequisite = { focus = EGY_levant_protectorate_proposal }
-		relative_position_id = EGY_levant_protectorate_proposal
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 키프로스 요구
-		id = EGY_cyprus_demand
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   # 280/120≈2.33→2
-		y = 1   # 340/120≈2.83→3
-		prerequisite = { focus = EGY_levant_protectorate_proposal }
-		relative_position_id = EGY_levant_protectorate_proposal
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 의회 무력화
-		id = EGY_parliament_neutralized
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #360/120=3
-		y = 1   #440/120=3.66→4
-		prerequisite = {
-			focus = EGY_cyprus_demand
-			focus = EGY_east_africa_demand
-		}
-		relative_position_id = EGY_cyprus_demand
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 수단 폭동 탄압
-		id = EGY_crush_sudan_revolt
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 3   #600/120=5
-		y = 1   #340/120=2.83→3
-		prerequisite = { focus = EGY_levant_protectorate_proposal }
-		relative_position_id = EGY_levant_protectorate_proposal
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 수단 지배
-		id = EGY_sudan_domination
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #600/120=5
-		y = 1   #440/120=3.66→4
-		prerequisite = { focus = EGY_crush_sudan_revolt }
-		relative_position_id = EGY_crush_sudan_revolt
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 군대 동원
-		id = EGY_army_mobilization
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #280/120=2.33→2
-		y = 1   #540/120=4.5→5
-		prerequisite = { focus = EGY_parliament_neutralized }
-		relative_position_id = EGY_parliament_neutralized
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 제국에 지원 요청
-		id = EGY_ask_empire_support
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #440/120=3.7→4
-		y = 1   #540/120=4.5→5
-		prerequisite = { focus = EGY_parliament_neutralized }
-		relative_position_id = EGY_parliament_neutralized
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 수에즈 요구
-		id = EGY_suez_demand
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #120/120=1
-		y = 1   #640/120=5.33→5
-		prerequisite = { focus = EGY_army_mobilization }
-		relative_position_id = EGY_army_mobilization
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 와프트당 해산
-		id = EGY_dissolve_wafd
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #280/120=2.33→2
-		y = 1   #640/120=5.33→5
-		prerequisite = {
-			focus = EGY_army_mobilization
-			focus = EGY_ask_empire_support
-		}
-		relative_position_id = EGY_army_mobilization
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 총독과 연합
-		id = EGY_alliance_with_governor
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #440/120=3.7→4
-		y = 1   #640/120=5.33→5
-		prerequisite = {
-			focus = EGY_army_mobilization
-			focus = EGY_ask_empire_support
-		}
-		relative_position_id = EGY_ask_empire_support
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 식민내각 초청
-		id = EGY_invite_colonial_cabinet
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #600/120=5
-		y = 1   #640/120=5.33→5
-		prerequisite = {
-			focus = EGY_ask_empire_support
-		}
-		relative_position_id = EGY_ask_empire_support
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 이집트 왕국의 기상
-		id = EGY_egypt_kingdom_spirit
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #360/120=3
-		y = 1   #740/120=6.16→6
-		prerequisite = {
-			focus = EGY_dissolve_wafd
-			focus = EGY_alliance_with_governor
-			focus = EGY_invite_colonial_cabinet
-			focus = EGY_suez_demand
-		}
-		relative_position_id = EGY_alliance_with_governor
-		completion_reward = { add_political_power = 15 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 왕권 강화
-		id = EGY_strengthen_royal_power
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-200/120=-1.66→-2
-		y = 1    #240/120=2
-		prerequisite = {
-			focus = EGY_1930_constitution
-		}
-		relative_position_id = EGY_1930_constitution
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 의회 꼭두각시화
-		id = EGY_parliament_puppet
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-200/120=-1.66≈-2
-		y = 1    #340/120=2.83→3
-		prerequisite = { focus = EGY_strengthen_royal_power }
-		relative_position_id = EGY_strengthen_royal_power
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 알바니아 왕위 주장
-		id = EGY_claim_albanian_throne
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 4   #40/120≈0.33→0
-		y = 1   #240/120=2
-		prerequisite = { focus = EGY_strengthen_royal_power }
-		relative_position_id = EGY_strengthen_royal_power
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 알바니아 통합
-		id = EGY_albania_unification
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #120/120=1
-		y = 1   #340/120=2.83→3
-		prerequisite = { focus = EGY_claim_albanian_throne }
-		relative_position_id = EGY_claim_albanian_throne
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 알바니아 병합
-		id = EGY_albania_annexation
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 2   #-40/120=-0.33→0 (반올림)
-		y = 1   #340/120≈2.83→3
-		prerequisite = { focus = EGY_claim_albanian_throne }
-		relative_position_id = EGY_claim_albanian_throne
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 이집트 철위대
-		id = EGY_iron_guard_of_egypt
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-200/120=-1.66→-2
-		y = 1    #439.66/120≈3.66→4
-		prerequisite = { focus = EGY_parliament_puppet }
-		relative_position_id = EGY_parliament_puppet
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 펠라 동원
-		id = EGY_fella_mobilization
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -2   #-360/120=-3
-		y = 1    #439.66/120≈3.66→4
-		prerequisite = { focus = EGY_parliament_puppet }
-		relative_position_id = EGY_parliament_puppet
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 왕당파 규합
-		id = EGY_unite_royalists
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 2    #-40/120=-0.33→0
-		y = 1    #439.66/120≈3.66→4
-		prerequisite = { focus = EGY_parliament_puppet }
-		relative_position_id = EGY_parliament_puppet
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 수단 왕위 확보
-		id = EGY_secure_sudan_throne
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0  #-200/120=-1.66→-2
-		y = 1   #540/120=4.5→5
-		prerequisite = {
-			focus = EGY_iron_guard_of_egypt
-			focus = EGY_unite_royalists
-			focus = EGY_fella_mobilization
-		}
-		relative_position_id = EGY_iron_guard_of_egypt
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 중동외교
-		id = EGY_middle_east_diplomacy
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0    #-200/120=-1.66→-2
-		y = 1     #640/120≈5.33→5
-		prerequisite = { focus = EGY_secure_sudan_throne }
-		relative_position_id = EGY_secure_sudan_throne
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 그리스 영유권 주장
-		id = EGY_claim_greek_territory
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 2   #-40/120≈-0.33→0
-		y = 1   #640/120=5.33→5
-		prerequisite = { focus = EGY_secure_sudan_throne }
-		relative_position_id = EGY_secure_sudan_throne
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 카이로 협약
-		id = EGY_cairo_convention
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-200/120=-1.66→-2
-		y = 1    #740/120=6.16→6
-		prerequisite = {
-			focus = EGY_middle_east_diplomacy
-			focus = EGY_claim_greek_territory
-		}
-		relative_position_id = EGY_middle_east_diplomacy
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 사다바드 회원국 초대
-		id = EGY_invite_sadabad_members
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-120/120=-1
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_cairo_convention }
-		relative_position_id = EGY_cairo_convention
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 아라비아 초대
-		id = EGY_invite_arabia
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-280/120≈-2.33→-2
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_cairo_convention }
-		relative_position_id = EGY_cairo_convention
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 터키 초대
-		id = EGY_invite_turkey
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-200/120=-1.66→-2
-		y = 2   #940/120=7.83→8
-		prerequisite = {
-			focus = EGY_cairo_convention
-		}
-		relative_position_id = EGY_cairo_convention
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 이집트 형제단 강화
-		id = EGY_strengthen_egypt_brotherhood
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-680/120≈-5.66→-6
-		y = 1    #240/120=2
-		prerequisite = { focus = EGY_egyptian_nationalism }
-		relative_position_id = EGY_egyptian_nationalism
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 녹색 셔츠단 결집
-		id = EGY_green_shirt_unity
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-520/120=-4.33→-4
-		y = 1    #240/120=2
-		prerequisite = { focus = EGY_egyptian_nationalism }
-		relative_position_id = EGY_egyptian_nationalism
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 이슬람 신앙 전파
-		id = EGY_spread_islamic_faith
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-600/120=-5
-		y = 1    #340/120≈2.83→3 (원래 339.66≈2.83)
-		prerequisite = {
-			focus = EGY_green_shirt_unity
-			focus = EGY_strengthen_egypt_brotherhood
-		}
-		relative_position_id = EGY_green_shirt_unity
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 귀족층 타파
-		id = EGY_abolish_aristocracy
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-760/120=-6.33→-6
-		y = 1    #340/120≈2.83→3
-		prerequisite = { focus = EGY_strengthen_egypt_brotherhood }
-		relative_position_id = EGY_strengthen_egypt_brotherhood
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	
-	focus = {
-		# 종교 민족주의
-		id = EGY_religious_nationalism
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-440/120=-3.66→-4
-		y = 1   #340/120≈2.83→3
-		prerequisite = {
-			focus = EGY_green_shirt_unity
-		}
-		relative_position_id = EGY_green_shirt_unity
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	
-	focus = {
-		# 카이로 진군
-		id = EGY_march_on_cairo
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -2  #-600/120=-5
-		y = 1   #439.66/120≈3.66→4
-		prerequisite = { 
-			focus = EGY_religious_nationalism
-			focus = EGY_spread_islamic_faith
-			focus = EGY_abolish_aristocracy
-		}
-		relative_position_id = EGY_religious_nationalism
-		completion_reward = { add_political_power = 5 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	# focus = {
-	# 	# 이집트 제일주의
-	# 	id = EGY_egypt_first
-	# 	icon = GFX_goal_generic_intelligence_exchange
-	# 	cost = 5
-	# 	x = 5    #-600/120=-5
-	# 	y = 1    #140/120=1.16→1
-	# 	prerequisite = { focus = EGY_1935_revolution }
-	# 	relative_position_id = EGY_1935_revolution
-	# 	completion_reward = { add_political_power = 5 }
-	# 	search_filters = { FOCUS_FILTER_POLITICAL }
-	# }
-	
-	focus = {
-		# 에티오피아 지배권 요구
-		id = EGY_demand_ethiopia_control
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-520/120=-4.33→-4
-		y = 1    #540/120=4.5→5
-		prerequisite = {
-			focus = EGY_march_on_cairo
-		}
-		relative_position_id = EGY_march_on_cairo
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 로마 협약 가입
-		id = EGY_join_rome_agreement
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-680/120=-5.66→-6
-		y = 1    #540/120=4.5→5
-		prerequisite = { focus = EGY_march_on_cairo }
-		relative_position_id = EGY_march_on_cairo
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 터키 지배
-		id = EGY_dominate_turkey
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -5   #-920/120=-7.66→-8
-		y = 1    #540/120=4.5→5
-		prerequisite = { focus = EGY_march_on_cairo }
-		relative_position_id = EGY_march_on_cairo
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 그리스 반도 요구
-		id = EGY_demand_greek_peninsula
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1  #-1000/120≈-8.33→-8
-		y = 1   #640/120≈5.33→5
-		prerequisite = { focus = EGY_dominate_turkey }
-		relative_position_id = EGY_dominate_turkey
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 총독부 설치
-		id = EGY_establish_governorate
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-840/120=-7
-		y = 1    #640/120=5.33→5
-		prerequisite = {
-			focus = EGY_dominate_turkey
-		}
-		relative_position_id = EGY_dominate_turkey
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이집트의 영광
-		id = EGY_glory_of_egypt
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1   #-920/120=-7.66→-8
-		y = 1    #740/120=6.16→6
-		prerequisite = {
-			focus = EGY_establish_governorate
-		}
-		prerequisite = {
-			focus = EGY_demand_greek_peninsula
-		}
-		relative_position_id = EGY_establish_governorate
-		completion_reward = { add_political_power = 15 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 평화 강요
-		id = EGY_enforce_peace
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-520/120≈-4.33→-4
-		y = 1    #640/120≈5.33→5
-		prerequisite = { focus = EGY_join_rome_agreement }
-		relative_position_id = EGY_join_rome_agreement
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 이집트 제국의 부활
-		id = EGY_egyptian_empire_reborn
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 1   #-600/120=-5
-		y = 1    #740/120=6.16→6
-		prerequisite = { focus = EGY_enforce_peace }
-		prerequisite = { focus = EGY_propose_ethiopian_condominium }
-		relative_position_id = EGY_enforce_peace
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 에티오피아 제위 주장
-		id = EGY_claim_ethiopian_throne
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-600/120=-5
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_egyptian_empire_reborn }
-		relative_position_id = EGY_egyptian_empire_reborn
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	focus = {
-		# 에티오피아 총독부
-		id = EGY_ethiopia_governorate
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -2   #-760/120=-6.33→-6
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_egyptian_empire_reborn }
-		relative_position_id = EGY_egyptian_empire_reborn
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 레반트로 진군
-		id = EGY_march_on_levant
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 2   #-440/120=-3.66→-4
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_egyptian_empire_reborn }
-		relative_position_id = EGY_egyptian_empire_reborn
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		# 인도양을 향해
-		id = EGY_towards_indian_ocean
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = -1  #-680/120=-5.66→-6
-		y = 1   #940/120=7.83→8
-		prerequisite = {
-			focus = EGY_claim_ethiopian_throne
-			focus = EGY_ethiopia_governorate
-		}
-		relative_position_id = EGY_claim_ethiopian_throne
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-		
-	focus = {
-		# 에티오피아 공동통치 제안
-		id = EGY_propose_ethiopian_condominium
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0  #-680/120=-5.66→-6
-		y = 1   #640/120≈5.33→5
-		prerequisite = { focus = EGY_demand_ethiopia_control }
-		relative_position_id = EGY_demand_ethiopia_control
-		completion_reward = { add_political_power = 10 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-				
-	focus = {
-		# 늙은 사자 사냥
-		id = EGY_hunt_old_lion
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
-		x = 0   #-920/120=-7.66→-8
-		y = 1    #840/120=7
-		prerequisite = { focus = EGY_glory_of_egypt }
-		relative_position_id = EGY_glory_of_egypt
-		completion_reward = { add_political_power = 15 }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	
-	# 잠시 막아두기
-	# focus = {
-	# 	# 아프리카 해방
-	# 	id = EGY_africa_liberation
-	# 	icon = GFX_goal_generic_intelligence_exchange
-	# 	cost = 5
-	# 	x = 1   #-1080/120=-9
-	# 	y = 1    #840.4/120≈7
-	# 	prerequisite = {
-	# 		focus = EGY_glory_of_egypt
-	# 		focus = EGY_hunt_old_lion
-	# 	}
-	# 	relative_position_id = EGY_glory_of_egypt
-	# 	completion_reward = { add_political_power = 15 }
-	# 	search_filters = { FOCUS_FILTER_POLITICAL }
-	# }
-	
-	# focus = {
-	# 	# 혼란 종식
-	# 	id = EGY_end_chaos
-	# 	icon = GFX_goal_generic_intelligence_exchange
-	# 	cost = 5
-	# 	x = -1  #-1320/120= -11
-	# 	y = 1    #940/120=7.83→8
-	# 	prerequisite = { focus = EGY_africa_liberation }
-	# 	relative_position_id = EGY_africa_liberation
-	# 	completion_reward = { add_political_power = 20 }
-	# 	search_filters = { FOCUS_FILTER_POLITICAL }
-	# }
-
-#################### 
-### Politics End ###
-####################
-
-	focus = {# Black Monday Recovery
-		id = EGY_black_monday_recovery
-		icon = GFX_focus_generic_treaty
-		cost = 6
-
-		x = 4
-		y = 0
-
-		available = {
-			#  has_idea = EGY_black_monday
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_black_monday_recovery"
-			add_political_power = 10
-			add_tech_bonus = {
-				name = EGY_black_monday_recovery
-				bonus = 1
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {# Secure Cotton Fields
-		id = EGY_secure_cotton_fields
-		icon = GFX_focus_generic_farmland
-		cost = 4
-
-		relative_position_id = EGY_black_monday_recovery
-		x = -1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_black_monday_recovery
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_secure_cotton_fields"
-			add_stability = 0.05
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {# Cotton Subsidies
-		id = EGY_cotton_subsidies
-		icon = GFX_focus_generic_farmland
-		cost = 4
-
-		relative_position_id = EGY_black_monday_recovery
-		x = -2
-		y = 2
-
-		prerequisite = {
-			focus = EGY_secure_cotton_fields
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_cotton_subsidies"
-			#456 = { prioritize_state = yes } #Aswan
-			add_one_random_infrastructure = yes
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {# Secure Holdings
-		id = EGY_secure_holdings
-		icon = GFX_focus_generic_modernize_industry
-		cost = 4
-
-		relative_position_id = EGY_black_monday_recovery
-		x = 1
-		y = 1
-
-		prerequisite = {
-			focus = EGY_black_monday_recovery
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_secure_holdings"
-			add_offsite_building = {
-				type = arms_factory
-				level = 3
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 3
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {# Protect Industry
-		id = EGY_protect_industry
-		icon = GFX_focus_DEN_no_regulations
-		cost = 4
-
-		relative_position_id = EGY_black_monday_recovery
-		x = 0
-		y = 2
-
-		prerequisite = {
-			focus = EGY_secure_cotton_fields
-		}
-		prerequisite = {
-			focus = EGY_secure_holdings
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_protect_industry"
-			#447 = { prioritize_state = yes } #Alexandria
-			add_offsite_building = {
-				type = arms_factory
-				level = 3
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 3
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {# Re-open Stock Exchange
-		id = EGY_reopen_stock_exchange
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 4
-
-		relative_position_id = EGY_black_monday_recovery
-		x = 2
-		y = 2
-
-		prerequisite = {
-			focus = EGY_secure_holdings
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus EGY_reopen_stock_exchange"
-			add_political_power = 50
-			add_offsite_building = {
-				type = arms_factory
-				level = 4
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 4
-			}
-			add_offsite_building = {
-				type = synthetic_refinery
-				level = 2
-			}
-			custom_effect_tooltip = tooltip_white_line
-			# if = {
-			# 	limit = { has_idea = EGY_black_monday }
-			# 	modify_timed_idea = {
-			# 		idea = EGY_black_monday
-			# 		days = -60
-			# 	}
-			# }
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	# focus = {# Black Monday is Over
-	# 	id = EGY_black_monday_over
-	# 	#icon = GFX_goal_champagne_diplomacy
-	# 	cost = 4
-
-	# 	relative_position_id = EGY_black_monday_recovery
-	# 	x = 0
-	# 	y = 3
-
-	# 	prerequisite = {
-	# 		focus = EGY_cotton_subsidies
-	# 	}
-	# 	prerequisite = {
-	# 		focus = EGY_reopen_stock_exchange
-	# 	}
-	# 	prerequisite = {
-	# 		focus = EGY_protect_industry
-	# 	}
-
-	# 	bypass = {
-	# 		# NOT = { has_idea = EGY_black_monday }
-	# 	}
-
-	# 	completion_reward = {
-	# 		log = "[GetDateText]: [Root.GetName]: Focus EGY_black_monday_over"
-	# 		# remove_ideas = EGY_black_monday
-	# 	}
-	# }
-
 ###############
 ### Economy ###
 ###############
@@ -4747,6 +2450,1628 @@ focus_tree = {
 				category = air_doctrine
 			}
 		}
-		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+	#################################
+	### 1935 Revolution Aftermath ###
+	#################################
+
+	focus = {
+		id = EGY_1935_revolution_success
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		x = 25
+		y = 8
+
+		# No prerequisite, starting point
+
+		ai_will_do = { factor = 1 } # Adjust AI factor as needed
+		completion_reward = {
+			# Add effects for completing "1935년 혁명의 성공"
+		}
+	}
+
+	# --- Military Appeasement Branch ---
+	focus = {
+		id = EGY_appease_military
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_1935_revolution_success
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_1935_revolution_success }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군부 회유"
+		}
+	}
+
+	focus = {
+		id = EGY_expand_local_garrisons
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_appease_military
+		x = -4
+		y = 1
+
+		prerequisite = { focus = EGY_appease_military }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "지방 주둔지 확대"
+		}
+	}
+
+	focus = {
+		id = EGY_push_military_reform_bill
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_appease_military
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_appease_military }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군사 개혁 법안 추진"
+		}
+	}
+
+	focus = {
+		id = EGY_support_sharia_enforcement
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_appease_military
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_appease_military }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "샤리아 집행 지원"
+		}
+	}
+
+	focus = {
+		id = EGY_confiscate_corrupt_lands
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_appease_military
+		x = 4
+		y = 1
+
+		prerequisite = { focus = EGY_appease_military }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "부패귀족 토지 몰수"
+		}
+	}
+
+	focus = {
+		id = EGY_transfer_policing_duties
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_expand_local_garrisons
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_expand_local_garrisons }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "치안 업무 이양"
+		}
+	}
+
+	focus = {
+		id = EGY_expand_border_guard_support
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_expand_local_garrisons
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_expand_local_garrisons }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "국경수비대 지원 확대"
+		}
+	}
+
+	focus = {
+		id = EGY_modernize_arms_industry
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_push_military_reform_bill
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_push_military_reform_bill }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군수 산업 현대화"
+		}
+	}
+
+	focus = {
+		id = EGY_reward_religious_guard
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_support_sharia_enforcement
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_support_sharia_enforcement }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "종교 방위군 특별보상"
+		}
+	}
+
+	focus = {
+		id = EGY_redistribute_land_military
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_confiscate_corrupt_lands
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_confiscate_corrupt_lands }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군부 토지 재분배"
+		}
+	}
+
+	focus = {
+		id = EGY_establish_military_hospitals
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_confiscate_corrupt_lands
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_confiscate_corrupt_lands }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군사 병원 설립"
+		}
+	}
+
+	focus = {
+		id = EGY_suspend_parliament
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_modernize_arms_industry # Centered below the 6 prerequisites
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = EGY_transfer_policing_duties
+			focus = EGY_expand_border_guard_support
+			focus = EGY_modernize_arms_industry
+			focus = EGY_reward_religious_guard
+			focus = EGY_redistribute_land_military
+			focus = EGY_establish_military_hospitals
+		}
+		mutually_exclusive = { focus = EGY_mansoura_agreement focus = EGY_march_on_cairo }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "의회 정지"
+		}
+	}
+
+	# --- Wafd Party Branch ---
+	focus = {
+		id = EGY_consolidate_wafd_party
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_1935_revolution_success
+		x = -13
+		y = 1
+
+		prerequisite = { focus = EGY_1935_revolution_success }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "와프트당 규합"
+		}
+	}
+
+	focus = {
+		id = EGY_form_blue_shirts
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_consolidate_wafd_party
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_consolidate_wafd_party }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "푸른 셔츠단 결성"
+		}
+	}
+
+	focus = {
+		id = EGY_sudanese_suffrage
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_consolidate_wafd_party
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_consolidate_wafd_party }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수단 투표권 인정"
+		}
+	}
+
+	focus = {
+		id = EGY_allow_local_elections
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_form_blue_shirts
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "지방선거 허용"
+		}
+	}
+
+	focus = {
+		id = EGY_activate_party_politics
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_form_blue_shirts
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "정당정치 활성화"
+		}
+	}
+
+	focus = {
+		id = EGY_strengthen_blue_shirts
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_sudanese_suffrage
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "푸른 셔츠단 강화"
+		}
+	}
+
+	focus = {
+		id = EGY_mansoura_agreement
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_activate_party_politics # Centered below the 3 prerequisites
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = EGY_allow_local_elections
+			focus = EGY_activate_party_politics
+			focus = EGY_strengthen_blue_shirts
+		}
+		mutually_exclusive = { focus = EGY_suspend_parliament focus = EGY_march_on_cairo }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "만수라 협정"
+		}
+	}
+
+	# --- Muslim Brotherhood Branch ---
+	focus = {
+		id = EGY_egypt_first
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_1935_revolution_success
+		x = 14 # To the right of EGY_appease_military
+		y = 1 # Same level
+
+		prerequisite = { focus = EGY_1935_revolution_success }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트 제일주의"
+		}
+	}
+
+	focus = {
+		id = EGY_strengthen_muslim_brotherhood
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_egypt_first
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_egypt_first }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트 형제단 강화"
+		}
+	}
+
+	focus = {
+		id = EGY_rally_green_shirts
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_egypt_first
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_egypt_first }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "녹색 셔츠단 결집"
+		}
+	}
+
+	focus = {
+		id = EGY_abolish_aristocracy
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_strengthen_muslim_brotherhood
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "귀족층 타파"
+		}
+	}
+
+	focus = {
+		id = EGY_spread_islamic_faith
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_strengthen_muslim_brotherhood
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이슬람 신앙 전파"
+		}
+	}
+
+	focus = {
+		id = EGY_religious_nationalism
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_rally_green_shirts
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "종교 민족주의"
+		}
+	}
+
+	focus = {
+		id = EGY_march_on_cairo
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_spread_islamic_faith # Centered below the 3 prerequisites
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = EGY_abolish_aristocracy
+			focus = EGY_spread_islamic_faith
+			focus = EGY_religious_nationalism
+		}
+		mutually_exclusive = { focus = EGY_suspend_parliament focus = EGY_mansoura_agreement }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "카이로 진군"
+		}
+	}
+
+	# --- Central Political Branch ---
+	focus = {
+		id = EGY_restore_1930_constitution
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		# Positioned below the mutually exclusive trio
+		relative_position_id = EGY_suspend_parliament # Or EGY_mansoura_agreement / EGY_march_on_cairo
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = EGY_suspend_parliament
+			focus = EGY_mansoura_agreement
+			focus = EGY_march_on_cairo
+		}
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "1930년 헌법 복원"
+		}
+	}
+
+	focus = {
+		id = EGY_join_rome_pact
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_march_on_cairo
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_march_on_cairo }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "로마 협약 가입"
+		}
+	}
+
+	focus = {
+		id = EGY_propose_colonial_trade
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_march_on_cairo
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_march_on_cairo }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "식민지 거래 제안"
+		}
+	}
+
+	focus = {
+		id = EGY_propose_ethiopian_condominium
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_join_rome_pact
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_join_rome_pact focus = EGY_propose_colonial_trade }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "에티오피아 공동통치 제안"
+		}
+	}
+
+	focus = {
+		id = EGY_suez_mediation
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_propose_colonial_trade
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_join_rome_pact focus = EGY_propose_colonial_trade }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수에즈 중재"
+		}
+	}
+
+	# --- Farouk Monarchy Branch ---
+	focus = {
+		id = EGY_army_loyal_to_king
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_restore_1930_constitution
+		x = 5 # Right side
+		y = 1
+
+		prerequisite = { focus = EGY_restore_1930_constitution }
+		mutually_exclusive = { focus = EGY_revolution_for_freedom }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "국왕에 충성하는 군대"
+		}
+	}
+
+	focus = {
+		id = EGY_strengthen_monarchy
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_army_loyal_to_king
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_army_loyal_to_king }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "왕권 강화"
+		}
+	}
+
+	focus = {
+		id = EGY_puppet_parliament
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_strengthen_monarchy
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_strengthen_monarchy }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "의회 꼭두각시화"
+		}
+	}
+
+	focus = {
+		id = EGY_mobilize_fellaheen
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_puppet_parliament
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_puppet_parliament }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "펠라 동원"
+		}
+	}
+
+	focus = {
+		id = EGY_egyptian_iron_guard
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_puppet_parliament
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_puppet_parliament }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트 철위대"
+		}
+	}
+
+	focus = {
+		id = EGY_demand_suez
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_puppet_parliament
+		x = 2
+		y = 1
+
+		prerequisite = { focus = EGY_puppet_parliament }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수에즈 요구"
+		}
+	}
+
+	focus = {
+		id = EGY_secure_sudanese_throne
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_egyptian_iron_guard
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_mobilize_fellaheen focus = EGY_egyptian_iron_guard focus = EGY_demand_suez }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수단 왕위 확보"
+		}
+	}
+
+	focus = {
+		id = EGY_claim_albanian_throne
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_secure_sudanese_throne
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_secure_sudanese_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "알바니아 왕위 주장"
+		}
+	}
+
+	# --- Cairo Pact Branch ---
+	focus = {
+		id = EGY_cairo_pact
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_strengthen_monarchy
+		x = -5 # Left of Puppet Parliament
+		y = 1
+
+		prerequisite = { focus = EGY_strengthen_monarchy }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "카이로 협약"
+		}
+	}
+
+	focus = {
+		id = EGY_invite_arabia
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_cairo_pact
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_cairo_pact }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아라비아 초대"
+		}
+	}
+
+	focus = {
+		id = EGY_invite_saadabad
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_cairo_pact
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_cairo_pact }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "사다바드 회원국 초대"
+		}
+	}
+
+	focus = {
+		id = EGY_invite_turkey
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_invite_arabia # Below the middle of invite_arabia and invite_saadabad
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_invite_arabia focus = EGY_invite_saadabad }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "터키 초대"
+		}
+	}
+
+	# --- Farouk Expansion Branch ---
+	focus = {
+		id = EGY_chosen_horus
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_invite_turkey
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "선택받은 호루스"
+		}
+	}
+
+	focus = {
+		id = EGY_new_master_of_throne
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_chosen_horus
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_chosen_horus }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "새 왕좌의 주인"
+		}
+	}
+
+	focus = {
+		id = EGY_leader_of_the_people
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_new_master_of_throne
+		x = -3
+		y = 1
+
+		prerequisite = { focus = EGY_new_master_of_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "인민의 영도자"
+		}
+	}
+
+	focus = {
+		id = EGY_accept_kivotos_immigrants
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_new_master_of_throne
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_new_master_of_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "키보토스인 이민 수용"
+		}
+	}
+
+	focus = {
+		id = EGY_second_cleopatra
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_new_master_of_throne
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_new_master_of_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "제2의 클레오파트라"
+		}
+	}
+
+	focus = {
+		id = EGY_inherit_abydos_dynasty
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_new_master_of_throne
+		x = 3
+		y = 1
+
+		prerequisite = { focus = EGY_new_master_of_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아비도스 왕조 계승"
+		}
+	}
+
+	focus = {
+		id = EGY_queen_of_workers_peasants
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_leader_of_the_people
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_leader_of_the_people focus = EGY_accept_kivotos_immigrants }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "노동자 농민의 여왕"
+		}
+	}
+
+	focus = {
+		id = EGY_mobilize_kivotos
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_accept_kivotos_immigrants
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_leader_of_the_people focus = EGY_accept_kivotos_immigrants }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "키보토스인 동원"
+		}
+	}
+
+	focus = {
+		id = EGY_new_egyptian_dynasty
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_second_cleopatra
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_second_cleopatra focus = EGY_inherit_abydos_dynasty }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "새로운 이집트 왕조"
+		}
+	}
+
+	focus = {
+		id = EGY_manifested_horus
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_inherit_abydos_dynasty
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_second_cleopatra focus = EGY_inherit_abydos_dynasty }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "현현한 호루스"
+		}
+	}
+
+	focus = {
+		id = EGY_coronation_emperor
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_mobilize_kivotos # Centered below the 4 prerequisites
+		x = 1 # Adjust x to center
+		y = 1
+
+		prerequisite = {
+			focus = EGY_queen_of_workers_peasants
+			focus = EGY_mobilize_kivotos
+			focus = EGY_new_egyptian_dynasty
+			focus = EGY_manifested_horus
+		}
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "황제 즉위"
+		}
+	}
+
+	# --- Fascist/Expansionist Branch ---
+	focus = {
+		id = EGY_revive_egyptian_empire
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_propose_ethiopian_condominium # Below the middle path
+		x = 1 # Right of EGY_propose_ethiopian_condominium
+		y = 1
+
+		prerequisite = { focus = EGY_propose_ethiopian_condominium focus = EGY_suez_mediation }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트 제국의 부활"
+		}
+	}
+
+	focus = {
+		id = EGY_ethiopian_governorate
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revive_egyptian_empire
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_revive_egyptian_empire }
+		mutually_exclusive = { focus = EGY_claim_ethiopian_throne }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "에티오피아 총독부"
+		}
+	}
+
+	focus = {
+		id = EGY_claim_ethiopian_throne
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revive_egyptian_empire
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_revive_egyptian_empire }
+		mutually_exclusive = { focus = EGY_ethiopian_governorate }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "에티오피아 제위 주장"
+		}
+	}
+
+	focus = {
+		id = EGY_march_on_levant
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revive_egyptian_empire
+		x = 2
+		y = 1
+
+		prerequisite = { focus = EGY_revive_egyptian_empire }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "레반트로 진군"
+		}
+	}
+
+	focus = {
+		id = EGY_liberate_libya
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_claim_ethiopian_throne # Below the middle of the 3 prerequisites
+		x = -1
+		y = 1
+
+		prerequisite = { focus = EGY_ethiopian_governorate focus = EGY_claim_ethiopian_throne focus = EGY_march_on_levant }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "리비아 해방"
+		}
+	}
+
+	focus = {
+		id = EGY_claim_hejaz
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_claim_ethiopian_throne # Below the middle of the 3 prerequisites
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_ethiopian_governorate focus = EGY_claim_ethiopian_throne focus = EGY_march_on_levant }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "헤자즈 주장"
+		}
+	}
+
+	focus = {
+		id = EGY_claim_peloponnese
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_liberate_libya
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_liberate_libya }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "펠로폰네소스 주장"
+		}
+	}
+
+	focus = {
+		id = EGY_dominate_turkey
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_claim_hejaz
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_claim_hejaz }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "튀르키예 지배"
+		}
+	}
+
+	focus = {
+		id = EGY_establish_governorates
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_claim_peloponnese # Centered below
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_claim_peloponnese focus = EGY_dominate_turkey }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "총독부 설치"
+		}
+	}
+
+	# --- Pan-Arabism/Democracy Branch ---
+	focus = {
+		id = EGY_revolution_for_freedom
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_restore_1930_constitution
+		x = -5 # Left side
+		y = 1
+
+		prerequisite = { focus = EGY_restore_1930_constitution }
+		mutually_exclusive = { focus = EGY_army_loyal_to_king }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "자유를 위한 혁명"
+		}
+	}
+
+	focus = {
+		id = EGY_exile_king
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revolution_for_freedom
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_revolution_for_freedom }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "국왕 추방"
+		}
+	}
+
+	focus = {
+		id = EGY_unite_arab_speakers
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_exile_king
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_exile_king }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아랍어권 단결"
+		}
+	}
+
+	focus = {
+		id = EGY_discuss_arab_unification
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_unite_arab_speakers
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_unite_arab_speakers }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아랍 통일 논의"
+		}
+	}
+
+	focus = {
+		id = EGY_retake_suez
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_unite_arab_speakers
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_unite_arab_speakers }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수에즈 탈환"
+		}
+	}
+
+	focus = {
+		id = EGY_reconcile_with_kurds
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_unite_arab_speakers
+		x = 2
+		y = 1
+
+		prerequisite = { focus = EGY_unite_arab_speakers }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "쿠르드인과 화해"
+		}
+	}
+
+	focus = {
+		id = EGY_liberate_maghreb
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_retake_suez # Centered below the 3 prerequisites
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_discuss_arab_unification focus = EGY_retake_suez focus = EGY_reconcile_with_kurds }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "마그레브 해방"
+		}
+	}
+
+	focus = {
+		id = EGY_liberate_horn_of_africa
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_liberate_maghreb
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_liberate_maghreb }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아프리카의 뿔 해방"
+		}
+	}
+
+	# --- Constitutional Monarchy/Democracy Branch ---
+	focus = {
+		id = EGY_constitutional_monarchy
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_mansoura_agreement # Below Mansoura Agreement
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_mansoura_agreement }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "입헌군주제"
+		}
+	}
+
+	focus = {
+		id = EGY_egyptian_democracy
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_mansoura_agreement # Below Mansoura Agreement
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_mansoura_agreement }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트 민주주의"
+		}
+	}
+
+	focus = {
+		id = EGY_reformist_monarch_farouk_i
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_constitutional_monarchy
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_constitutional_monarchy focus = EGY_egyptian_democracy }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "개혁군주 피루크 1세"
+		}
+	}
+
+	focus = {
+		id = EGY_suez_negotiation
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_egyptian_democracy
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_constitutional_monarchy focus = EGY_egyptian_democracy }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "수에즈 협상"
+		}
+	}
+
+	focus = {
+		id = EGY_accept_socialist_demands
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_reformist_monarch_farouk_i
+		x = -2 # Left side below
+		y = 1
+
+		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "사회주의자 요구 수용"
+		}
+	}
+
+	focus = {
+		id = EGY_accept_monarchist_demands
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_reformist_monarch_farouk_i
+		x = 0 # Middle below
+		y = 1
+
+		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "군주주의자 요구 수용"
+		}
+	}
+
+	focus = {
+		id = EGY_end_colonial_rule
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_suez_negotiation
+		x = 0 # Middle below
+		y = 1
+
+		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "식민통치 종식"
+		}
+	}
+
+	focus = {
+		id = EGY_suppress_blue_shirts
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_accept_monarchist_demands # Centered below socialist/monarchist demands
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_accept_socialist_demands focus = EGY_accept_monarchist_demands }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "푸른셔츠단 제압"
+		}
+	}
+
+	focus = {
+		id = EGY_demand_libyan_liberation
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_end_colonial_rule
+		x = -2
+		y = 1
+
+		prerequisite = { focus = EGY_end_colonial_rule }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "리비아 해방 요구"
+		}
+	}
+
+	focus = {
+		id = EGY_recognize_ethiopian_sovereignty
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_end_colonial_rule
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_end_colonial_rule }
+		mutually_exclusive = { focus = EGY_minorities_first }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "에티오피아 영유권 인정"
+		}
+	}
+
+	focus = {
+		id = EGY_minorities_first
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_end_colonial_rule
+		x = 2
+		y = 1
+
+		prerequisite = { focus = EGY_end_colonial_rule }
+		mutually_exclusive = { focus = EGY_recognize_ethiopian_sovereignty }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "소수민족 우선"
+		}
+	}
+
+	focus = {
+		id = EGY_political_stabilization
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_suppress_blue_shirts
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_suppress_blue_shirts }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "정치적 안정화"
+		}
+	}
+
+	focus = {
+		id = EGY_attack_french_colonial_empire
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_demand_libyan_liberation
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_demand_libyan_liberation focus = EGY_recognize_ethiopian_sovereignty focus = EGY_minorities_first }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "프랑스 식민제국 공격"
+		}
+	}
+
+	focus = {
+		id = EGY_invite_liberia
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_recognize_ethiopian_sovereignty # Below middle
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_demand_libyan_liberation focus = EGY_recognize_ethiopian_sovereignty focus = EGY_minorities_first }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "라이베리아 초대"
+		}
+	}
+
+	focus = {
+		id = EGY_liberate_west_africa
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_attack_french_colonial_empire
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_attack_french_colonial_empire }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "서아프리카 해방"
+		}
+	}
+
+	focus = {
+		id = EGY_support_south_african_independence
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_invite_liberia
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_invite_liberia }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "남아프리카 독립 지원"
+		}
+	}
+
+	focus = {
+		id = EGY_invite_african_nations
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_liberate_west_africa # Centered below
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_liberate_west_africa focus = EGY_support_south_african_independence }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아프리카 독립국 초대"
+		}
+	}
+
+	# --- Rightmost Expansion Branch ---
+	focus = {
+		id = EGY_dominate_arabia
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revive_egyptian_empire
+		x = 4 # Right of March on Levant
+		y = 0 # Same level
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "아라비아 지배"
+		}
+	}
+
+	focus = {
+		id = EGY_advance_into_persia
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_revive_egyptian_empire
+		x = 6 # Right of Dominate Arabia
+		y = 0 # Same level
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "페르시아 진출"
+		}
+	}
+
+	focus = {
+		id = EGY_glory_of_egypt
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_dominate_arabia # Centered below
+		x = 1
+		y = 1
+
+		prerequisite = { focus = EGY_dominate_arabia focus = EGY_advance_into_persia }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "이집트의 영광"
+		}
+	}
+
+	focus = {
+		id = EGY_hunt_old_lion
+		icon = GFX_goal_unknown # Placeholder Icon
+		cost = 7
+
+		relative_position_id = EGY_glory_of_egypt
+		x = 0
+		y = 1
+
+		prerequisite = { focus = EGY_glory_of_egypt }
+
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# Add effects for completing "늙은 사자 사냥"
+		}
 	}
 }
