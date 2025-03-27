@@ -2002,13 +2002,6 @@ focus_tree = {
 		cost = 2
 		x = 18
 		y = 0
-		available = {
-			OR = {
-				has_completed_focus = SYR_focus_com_0
-				has_completed_focus = SYR_focus_12
-				has_completed_focus = SYR_focus_9
-			}
-		}
 		completion_reward = {
 			add_tech_bonus = {
 				category = construction_tech
@@ -2031,7 +2024,7 @@ focus_tree = {
 			focus = SYR_focus_ind_0
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 20
 		}
 	}
 	focus = { #기술자 양성
@@ -2153,6 +2146,13 @@ focus_tree = {
 		relative_position_id = SYR_focus_ind_0
 		x = 0
 		y = 3
+		available = {
+			OR = {
+				has_completed_focus = SYR_focus_com_0
+				has_completed_focus = SYR_focus_12
+				has_completed_focus = SYR_focus_9
+			}
+		}
 		prerequisite = {
 			focus = SYR_focus_ind_2
 			focus = SYR_focus_ind_3
