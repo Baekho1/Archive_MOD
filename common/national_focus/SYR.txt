@@ -473,6 +473,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SYR_replublicanism
+			unlock_decision_tooltip = SYR_intervent_conflict
 		}
 	}
 	focus = { #자유주의 지식인 후원
@@ -528,9 +529,6 @@ focus_tree = {
 		y = 3
 		prerequisite = {
 			focus = SYR_focus_dem_7
-		}
-		prerequisite = {
-			focus = SYR_focus_dem_10
 		}
 		completion_reward = {
 			if = {
@@ -595,6 +593,9 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = SYR_focus_dem_10
+		}
+		prerequisite = {
+			focus = SYR_focus_dem_7
 		}
 		completion_reward = {
 			add_war_support = 0.05

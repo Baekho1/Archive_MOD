@@ -31,7 +31,7 @@
  SYR_capitalist_class_invalid: ""
  SYR_intellect_class_valid: "\n   - £GFX_benriya_right_texticon §Y지식인§!"
  SYR_intellect_class_invalid: ""
- SYR_women_class_valid: "\n   - GFX_syria_women_texticon §Y여성§!"
+ SYR_women_class_valid: "\n   - £GFX_syria_women_texticon §Y여성§!"
  SYR_women_class_invalid: ""
  SYR_worker_class_valid: "\n   - £GFX_benriya_left_texticon §Y노동자§!"
  SYR_worker_class_invalid: ""

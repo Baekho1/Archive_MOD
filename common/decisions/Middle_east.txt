@@ -166,6 +166,7 @@ SYR_generic_decision_category = { #시리아의 상황
 				ideology = neutrality
 				popularity = 0.1
 			}
+			clr_country_flag = SYR_landowner_in_gov
 		}
 	}
 	SYR_oust_capitalist = { #자본가 축출
@@ -186,6 +187,7 @@ SYR_generic_decision_category = { #시리아의 상황
 				ideology = fascism
 				popularity = 0.1
 			}
+			clr_country_flag = SYR_capitalist_in_gov
 		}
 	}
 	SYR_oust_intellect = { #지식인 축출
@@ -202,6 +204,7 @@ SYR_generic_decision_category = { #시리아의 상황
 				ideology = democratic
 				popularity = -0.2
 			}
+			clr_country_flag = SYR_intellect_in_gov
 		}
 	}
 	SYR_recruit_women = { #정부에 여성 영입
@@ -252,6 +255,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			NOT = {
 				has_completed_focus = SYR_focus_dem_10
 			}
+			has_completed_focus = SYR_focus_dem_5
 		}
 		cost = 5
 		days_remove = 10
