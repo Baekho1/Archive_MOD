@@ -9112,6 +9112,7 @@ country_event = { #
     fire_only_once = no
 
 	option = {
+		# 문화투쟁 결정에 선택지 하나 추가
 		name = trinity.31.a
 		ai_chance = { 
 			base = 10
@@ -9120,12 +9121,14 @@ country_event = { #
     }
 
 	option = {
+		# 문화투쟁 결정에 선택지 하나 추가
 		name = trinity.31.b
 		ai_chance = { 
 			base = 2
 		}
 		TRM_bop_very_low_increase_effect = yes
     }
+	
 }
 
 country_event = { # '생존권' 개념
@@ -9380,18 +9383,8 @@ country_event = { # 트리니티의 개쩌는 사업 아이템!
 	desc = trnfla.5.desc
 	picture = GFX_report_event_journalists_speech
 	
-	is_triggered_only = no
-    fire_only_once = yes
-    trigger = {
-        tag = TRM
-		OR = {
-			AND = {
-        		has_completed_focus = TRM_naechi
-        		has_completed_focus = TRM_oetzi
-			}
-			has_completed_focus = TRN_uber_alles
-		}
-    }
+	is_triggered_only = yes
+    fire_only_once = no
 
 	option = {
 		name = trnfla.5.a
@@ -9592,6 +9585,20 @@ unit_leader_event = { # 침울한 하늘 아래에서
 
 	option = {
 		name = trnfla.17.a 
+		
+	}
+}
+country_event = { # 침울한 하늘 아래에서
+	id = trnfla.18
+	title = trnfla.18.t
+	desc = trnfla.18.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trnfla.18.a 
 		
 	}
 }

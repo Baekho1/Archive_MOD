@@ -44,38 +44,6 @@ TRN_internal_factions_categories = {
 	priority = 100
 	visible_when_empty = no
 }
-TRM_library_committee_decisions = {
-	allowed = {
-		tag = TRM
-		NOT = {
-			has_country_flag = ARI_puppet_state
-		}
-
-	}
-	visible = {
-		OR = {
-			has_completed_focus = TRM_newfocus_0
-			has_country_flag = DEBUG_FALG
-		}
-	}
-	priority = 1
-}
-TRM_after_school_sweets_club = {
-	icon = GFX_after_school_sweets_club
-	allowed = {
-		tag = TRM
-		NOT = {
-			has_country_flag = ARI_puppet_state
-		}
-	}
-	visible = {
-		OR = {
-			has_completed_focus = TRM_newfocus_0
-			has_country_flag = DEBUG_FALG
-		}
-	}
-	priority = 1
-}
 TRN_Seia_problem_decisions = {
 	allowed = {
 		tag = TRM
@@ -158,6 +126,17 @@ TRM_diplomacy_balkan_decision_category = {
 TRM_story_archive = {
 	priority = 0
 	icon = GFX_decision_category_generic
+	allowed = {
+		original_tag = TRM
+	}
+}
+
+TRN_economic_decisions_category = {
+	icon = generic_industry
+	picture = GFX_decision_cat_picture_soviet_comecon
+	
+	priority = 80
+
 	allowed = {
 		original_tag = TRM
 	}

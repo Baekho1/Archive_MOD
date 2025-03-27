@@ -6954,187 +6954,6 @@ political_actions = {
 		}
 	}
 }
-TRM_library_committee_decisions = {
-	no_remove_library_committee_club = {
-		icon = GFX_decision_Trinity_Emblem
-		allowed = {
-		}
-		available = {
-			always = no
-		}
-
-		visible = {
-		}
-        ai_will_do = {
-			base = 0 
-		}
-		
-		fire_only_once = no
-		
-		complete_effect = {
-		}
-		remove_effect = {
-        }
-	}
-	writing_book = {
-		icon = GFX_decisions_ui_icon
-		allowed = {
-		}
-		available = {
-			NOT = {
-				has_country_flag = writing_book_2_flag
-			}
-		}
-
-		visible = {
-		}
-		cost = 30
-		days_re_enable = 200
-		ai_will_do = {
-			base = 0 
-		}
-		days_remove = 100
-		
-		fire_only_once = no
-		
-		modifier = {
-
-		}
-		complete_effect = {
-			add_ideas = TRM_library_committee
-			set_country_flag = writing_book_flag
-		}
-		remove_effect = {
-			remove_ideas = TRM_library_committee
-			clr_country_flag = writing_book_flag
-        }
-	}
-	writing_book_2 = {
-		icon = GFX_decisions_ui_icon
-		allowed = {
-		}
-		available = {
-			NOT = {
-				has_country_flag = writing_book_flag
-			}
-		}
-
-		visible = {
-		}
-		cost = 30
-		days_re_enable = 200
-		ai_will_do = {
-			factor = 0
-		}
-		days_remove = 100
-		
-		fire_only_once = no
-
-		modifier = {
-		}
-		complete_effect = {
-			add_ideas = TRM_library_committee
-			set_country_flag = writing_book_2_flag
-		}
-		remove_effect = {
-			remove_ideas = TRM_library_committee
-			clr_country_flag = writing_book_2_flag
-        }
-	}
-}
-TRM_after_school_sweets_club = {
-	no_remove_sweets_club = {
-        icon = GFX_decision_Trinity_Emblem
-		allowed = {
-		}
-		available = {
-			always = no
-		}
-		visible = {
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		complete_effect = {
-		}
-		
-
-		remove_effect = {
-        }
-	}
-	make_cake = {
-        icon = GFX_decision_Natsu_halo
-		allowed = {
-		}
-		available = {
-			NOT = {
-			has_country_flag = make_cake
-			has_country_flag = make_icecream
-			}
-			has_political_power > 40
-		}
-
-		visible = {
-		}
-		cost = 40
-		days_remove = 5
-		ai_will_do = {
-			factor = 0
-		}
-		
-		fire_only_once = no
-		days_re_enable = 15
-
-
-		modifier = {
-		}
-		complete_effect = {
-			set_country_flag = make_cake
-		}
-		
-
-		remove_effect = {
-			country_event = { id = TRM_event.56 }
-			clr_country_flag = make_cake
-        }
-	}
-	make_icecream = {
-        icon = GFX_decision_Natsu_halo
-		allowed = {
-		}
-		available = {
-			NOT = {
-			has_country_flag = make_cake
-			has_country_flag = make_icecream
-			}
-			has_political_power > 40
-		}
-
-		visible = {
-		}
-		cost = 40
-		days_remove = 5
-		ai_will_do = {
-			factor = 0
-		}
-		
-		fire_only_once = no
-		days_re_enable = 15
-
-		modifier = {
-		}
-		complete_effect = {
-			set_country_flag = make_icecream
-		}
-		
-
-		remove_effect = {
-			country_event = { id = TRM_event.57 }
-			clr_country_flag = make_icecream
-        }
-	}
-
-}
 debug_decisions = {
     TRM_auto_event_TRM_Event_16 = {
 		priority = 80
@@ -7227,9 +7046,92 @@ debug_decisions = {
             tag = TRM
 		}
 		complete_effect = {
-            complete_national_focus = TRM_Endsige
+			activate_targeted_decision = { target = 65 decision = TRN_Infrastructure_Development } # 작센
+			activate_targeted_decision = { target = 60 decision = TRN_Infrastructure_Development } # 튀링겐
+
+			activate_targeted_decision = { target = 64 decision = TRN_Opelwerk_Brandenburg } # 브란덴부르크
 		}
     }
+}
+TRN_economic_decisions_category = {
+	TRN_Infrastructure_Development = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_political_power < 250
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	TRN_Opelwerk_Brandenburg = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no } #activated by effect
+
+		available = {
+			FROM = { is_owned_and_controlled_by = ROOT }
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		state_target = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_political_power < 250
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 }
 
 
