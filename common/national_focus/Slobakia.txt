@@ -1032,18 +1032,19 @@ focus_tree = {
 		y = 10
 		prerequisite = {
 			focus = SLO_foc_1-4-20
+			focus = SLO_foc_1-4-30
 		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-4-22
 		}
 		available = {
+			NOT = {
+				is_in_faction_with = HUN
+			}
 		}
 		bypass = {
-			OR = {
-				HUN = {
-					exists = no
-				}
-				has_war_with = HUN
+			HUN = {
+				exists = no
 			}
 		}
 		completion_reward = {
@@ -1074,6 +1075,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SLO_foc_1-4-20
 			focus = SLO_foc_1-4-19
+			focus = SLO_foc_1-4-30
 		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-4-21
@@ -1208,7 +1210,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 11
+		x = 12
 		y = 8
 		prerequisite = {
 			focus = SLO_foc_1-4-24
@@ -1262,8 +1264,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 9
-		y = 9
+		x = 10
+		y = 8
 		prerequisite = {
 			focus = SLO_foc_1-4-24
 		}
@@ -1400,9 +1402,10 @@ focus_tree = {
 			focus = SLO_foc_1-4-28
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-30
+			#focus = SLO_foc_
 		}
 		available = {
+			has_war_with = SOV
 			SOV = {
 				surrender_progress > 0.01
 			}
@@ -1420,29 +1423,40 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-30
-		icon = GFX_goal_generic_defence
+		icon = GFX_SOV_experts_in_camouflage_ccp_2d_sov_compatibility
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		x = 11
-		y = 11
+		x = 9
+		y = 9
 		prerequisite = {
-			focus = SLO_foc_1-4-28
+			focus = SLO_foc_1-4-26
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1-4-29
+			#focus = SLO_foc_
 		}
 		available = {
-			surrender_progress > 0.33
 		}
 		bypass = {
 		}
 		completion_reward = {
-			add_war_support = -0.30
-			add_timed_idea = {
-				idea = SLO_warwithsoviet2_idea
-				days = 200
+			custom_effect_tooltip = SLO_tt_10
+			effect_tooltip = {
+				#SLO_southslovakia_state
+				every_state = {
+					limit = {
+						OR = {
+							state = 664
+							state = 73
+						}
+					}
+					add_dynamic_modifier = { 
+						modifier = SLO_southslovakia_state 
+						scope = SLO
+						days = 180
+					}
+				}
 			}
 		}
 	}
@@ -1450,7 +1464,7 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-31
-		icon = GFX_SOV_memories_of_1905_ccp_2d_sov_compatibility
+		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1459,10 +1473,6 @@ focus_tree = {
 		y = 12
 		prerequisite = {
 			focus = SLO_foc_1-4-28
-		}
-		prerequisite = {
-			focus = SLO_foc_1-4-29
-			focus = SLO_foc_1-4-30
 		}
 		mutually_exclusive = {	
 			#focus = SLO_foc_

@@ -680,3 +680,11 @@ SHA_Hyakkiyako_governor = {
 	#compliance_growth = 0.03
 	resistance_growth = -0.15
 }
+SLO_southslovakia_state = { # 주 모디파이어
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_nationalism
+
+	army_attack_factor = 0.1
+	breakthrough_factor = 0.1
+}

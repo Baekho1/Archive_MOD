@@ -783,3 +783,38 @@ country_event = {
 		}
 	}
 }
+country_event = { 
+	id = SLO_event.130
+	title = SLO_event.130.t
+	desc = SLO_event.130.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SLO
+		has_war_with = HUN
+		has_completed_focus = SLO_foc_1-4-30
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = SLO_event.130.a
+		every_state = {
+			limit = {
+				OR = {
+					state = 664
+					state = 73
+				}
+			}
+			add_dynamic_modifier = { 
+				modifier = SLO_southslovakia_state 
+				scope = SLO
+				days = 180
+			}
+		}
+	}
+}

@@ -223,32 +223,6 @@ ideas = {
 				}
 			}
 		}
-		SLO_warwithsoviet2_idea = {
-			picture = YUG_federal_defense_council
-			allowed = {	always = no	}
-			allowed_civil_war = { always = yes }
-			modifier = {
-				war_support_factor = 0.30
-				weekly_manpower = 5000
-				minimum_training_level = -0.05
-				army_morale_factor = 0.15
-				weekly_casualties_war_support = 0.005
-			}
-			targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.30
-			}
-			cancel = {
-				OR = {
-					NOT = {
-						has_war_with = SOV
-					}
-					has_capitulated = yes
-				}
-
-			}
-		}
 	}
 	hidden_ideas = {
 	}
