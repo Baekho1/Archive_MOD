@@ -320,12 +320,27 @@
  SHA_austrian_politician_released: "오스트리아 정치인 석방"
  SHA_austrian_politician_released_desc: ""
  SHA_government_policy_shift: "현룡문 정책 선회"
-
- SHA_appointment_of_BTP: "현무상회 인사 등용"
-
  SHA_isolation_policy_overturned: "고립 정책 번복"
 
- SHA_remove_conservatives: "반동 제거"
+ SHA_appointment_of_BTP: "현무상회 인사 등용"
+ SHA_post_authoritarianism: "권위주의 탈피"
+ SHA_spread_democracy: "민주주의 전파"
+ SHA_Kivotos_democracy: "키보토스 특색 민주정"
+
+
+ SHA_command_new_contitution: "새로운 법전"
+ SHA_Lab_expansion: "연구소 확장"
+ SHA_protecting_the_new_system: "신 체제 수호"
+
+ SHA_strengthening_kisaki_authority: "키사키 권위 강화"
+ SHA_hyper_presidentialism: "신대통령제"
+
+
+ SHA_remove_conservatives: "경극부 영향력 제거"
+
+ SHA_communist_branch: "공산주의 쿠데타"
+
+
 
  # 승전 공용
  SHA_Special_Military_Operation_for_Abydos: "아비도스 격퇴"

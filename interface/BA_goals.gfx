@@ -1921,6 +1921,10 @@ spriteTypes = {
 		name = "GFX_focus_SHA_remove_POC"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_remove_POC.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_strengthening_kisaki_authority"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_strengthening_kisaki_authority.tga"  
+	}
 
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"
