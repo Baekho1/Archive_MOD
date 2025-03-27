@@ -1087,23 +1087,6 @@ Manma_hika_banzai = { # 반자이 돌격
     }
 }
 
-Cheap_coffe = { # 싸구려 커피
-    possible = {
-        has_any_custom_difficulty_setting = no
-        game_rules_allow_achievements = yes
-        difficulty > 1
-        custom_trigger_tooltip = {
-            tooltip = TRIGGER_IS_IRONMAN
-            is_ironman = yes
-        }
-        original_tag = TRM
-    }
-    happened = {
-        has_country_flag = TRM_event.49.a
-        has_decision = writing_book_2            
-    }
-}
-
 Einstein_is_alive = {
     possible = {
         has_any_custom_difficulty_setting = no

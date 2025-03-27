@@ -1526,24 +1526,6 @@
  
  TRM_sh_popularity_15_tt: "§Y시스터후드§! 영향력: §Y+15§!"
  TRM_sh_loyalty_15_tt: "§Y시스터후드§! 충성도: §Y+15§!"
-
- #도서부#
- TRM_library_committee_decisions: "도서부"
- TRM_library_committee_decisions_desc: "\n\n£GFX_decisions_TRN_library_committee\n\n\n\n\n트리니티의 자랑 중 하나이자 키보토스 최대규모를 자랑하는\n\n중앙 도서관을 포함한 도서관들을 관리하는 동아리입니다."
- no_remove_library_committee_club: "부원"
- no_remove_library_committee_club_desc: "§Y코제키 우이, 엔도우 시미코.§!"
- writing_book_2: "고서 해독"
- writing_book: "고서 복원"
- writing_book_flag: "§Y고서 복원§!을 진행중."
- writing_book_2_flag: "§Y고서 해독§!을 진행중"
-
- #방과후 디저트부#
- TRM_after_school_sweets_club: "방과후 디저트부"
- TRM_after_school_sweets_club_desc: "\n\n£GFX_afterschool_sweets_club\n\n\n\n\n쉬는 날 단 것을 찾아다니는 동아리, 맛있는 케이크를 맛볼수 있는 곳입니다.\n\n항상 맛있는 디저트로 손님을 반기는 이곳은 그야말로 최고의 방과 후 동아리일 것입니다."
- no_remove_sweets_club: "부원"
- no_remove_sweets_club_desc: "§Y이바라기 요시미, 쿠리무라 아이리, 쿄야마 카즈사, 유토리 나츠. §!"
- make_cake: "케이크 만들기!"
- make_icecream: "차가운 아이스크림"
  
 #철검 작전
  TRM_Iron_Sword_Operations_Categorie: "철검 작전"
