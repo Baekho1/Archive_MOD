@@ -362,7 +362,13 @@ focus_tree = {
 					level = 1
 				}
 			}
-			unlock_decision_tooltip = SYR_contribute_to_economy
+			add_ideas = SYR_commerce
+			if = {
+				limit = {
+					has_country_flag = SYR_capitalist_in_gov
+				}
+				unlock_decision_tooltip = SYR_contribute_to_economy
+			}
 		}
 	}
 	focus = { #현대적 금융업
@@ -423,7 +429,12 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			add_political_power = 60
-			unlock_decision_tooltip = SYR_exercise_of_control
+			if = {
+				limit = {
+					has_country_flag = SYR_landowner_in_gov
+				}
+				unlock_decision_tooltip = SYR_exercise_of_control
+			}
 		}
 	}
 	focus = { #지주보호법

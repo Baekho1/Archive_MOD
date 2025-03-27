@@ -44,6 +44,16 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_syria_intellect_texticon"
+		texturefile = "gfx/texticons/syria_intellect_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_syria_capitalist_texticon"
+		texturefile = "gfx/texticons/syria_capitalist_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_benriya_kivotos_texticon"
 		texturefile = "gfx/texticons/benriya_kivotos_texticon.dds"
 		legacy_lazy_load = no

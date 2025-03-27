@@ -1,7 +1,7 @@
 SYR_generic_decision_category = { #시리아의 상황
 	SYR_class_conflict = { #계급 갈등
 		icon = GFX_decision_SWI_consolidate_council_power
-		days_mission_timeout = 120
+		days_mission_timeout = 90
 		available = {
 			OR = {
 				has_civil_war = yes
@@ -67,9 +67,9 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_exercise_of_control = { #지배력 행사
 		icon = GFX_decision_CHL_grant_full_rights_to_the_mapuche
-		days_re_enable = 20
+		days_re_enable = 50
 		days_remove = 120
-		cost = 20
+		cost = 30
 		available = {
 			has_country_flag = SYR_landowner_in_gov
 		}
@@ -83,9 +83,9 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_contribute_to_economy = { #경제에 공헌
 		icon = GFX_decision_gre_investment_decisions
-		days_re_enable = 20
+		days_re_enable = 50
 		days_remove = 120
-		cost = 20
+		cost = 30
 		visible = {
 			has_completed_focus = SYR_focus_dem_1
 		}
@@ -98,9 +98,9 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_promote_modernization = { #근대화 촉진
 		icon = GFX_decision_generic_research
-		days_re_enable = 20
+		days_re_enable = 50
 		days_remove = 120
-		cost = 20
+		cost = 30
 		visible = {
 			has_completed_focus = SYR_focus_dem_6
 		}
@@ -113,9 +113,9 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_social_involving = { #여성의 사회참여
 		icon = GFX_decision_generic_merge_plant_materiel
-		days_re_enable = 20
+		days_re_enable = 50
 		days_remove = 120
-		cost = 20
+		cost = 30
 		available = {
 			has_country_flag = SYR_women_in_gov
 		}
@@ -129,9 +129,9 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_industrial_force = { #산업 역군
 		icon = GFX_decision_generic_wreckers
-		days_re_enable = 20
+		days_re_enable = 50
 		days_remove = 120
-		cost = 20
+		cost = 30
 		available = {
 			has_country_flag = SYR_worker_in_gov
 		}
@@ -145,7 +145,7 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_oust_landowner = { #지주 축출
 		icon = GFX_decision_generic_break_treaty
-		cost = 30
+		cost = 45
 		fire_only_once = yes
 		available = {
 			NOT = {
@@ -171,11 +171,11 @@ SYR_generic_decision_category = { #시리아의 상황
 	}
 	SYR_oust_capitalist = { #자본가 축출
 		icon = GFX_decision_generic_break_treaty
-		cost = 30
+		cost = 45
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
-			has_country_flag = SYR_landowner_in_gov
+			has_country_flag = SYR_capitalist_in_gov
 		}
 		remove_effect = {
 			add_stability = -0.05
@@ -257,9 +257,9 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_completed_focus = SYR_focus_dem_5
 		}
-		cost = 5
+		cost = 25
 		days_remove = 10
-		days_re_enable = 120
+		days_re_enable = 150
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SYR_class_conflict
@@ -281,7 +281,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_country_flag = SYR_landowner_in_gov
 		}
-		cost = 5
+		cost = 40
 		days_remove = 120
 		days_re_enable = 180
 		complete_effect = {
@@ -306,7 +306,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_country_flag = SYR_capitalist_in_gov
 		}
-		cost = 5
+		cost = 40
 		days_remove = 120
 		days_re_enable = 180
 		complete_effect = {
@@ -331,7 +331,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_country_flag = SYR_intellect_in_gov
 		}
-		cost = 5
+		cost = 40
 		days_remove = 120
 		days_re_enable = 80
 		complete_effect = {
@@ -356,7 +356,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_country_flag = SYR_women_in_gov
 		}
-		cost = 5
+		cost = 45
 		days_remove = 120
 		days_re_enable = 80
 		complete_effect = {
@@ -381,7 +381,7 @@ SYR_generic_decision_category = { #시리아의 상황
 			}
 			has_country_flag = SYR_worker_in_gov
 		}
-		cost = 5
+		cost = 45
 		days_remove = 120
 		days_re_enable = 80
 		complete_effect = {
