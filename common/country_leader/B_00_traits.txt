@@ -3151,7 +3151,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		political_power_factor = -0.05
+		political_power_factor = -0.01
 	}
 	SHA_herald_of_third_kivotos = { # 세 번째 키보토스 전령
 		random = no

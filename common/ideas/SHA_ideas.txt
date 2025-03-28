@@ -1332,6 +1332,56 @@ ideas = {
 			}
 		}
 
+		# 자본주의로 전환
+		SHA_transition_to_capitalism = {
+			allowed = { tag = SHA }
+			picture = ITA_devaluated_lira
+
+			on_remove = {
+				add_timed_idea = {
+					idea = SHA_transition_to_capitalism_2
+					days = 180
+				}
+				country_event = shafla.2
+			}
+			modifier = {
+				stability_factor = -0.1
+				democratic_drift = 0.01
+				industrial_capacity_factory = 0.01
+				production_lack_of_resource_penalty_factor = -0.01
+			}
+		}
+		SHA_transition_to_capitalism_2 = {
+			name = SHA_transition_to_capitalism
+			#picture = GER_wirtschaftswunder
+			picture = ITA_devaluated_lira
+			allowed = { tag = SHA }
+
+			on_remove = {
+				add_ideas = SHA_transition_to_capitalism_3
+				country_event = shafla.2
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				democratic_drift = 0.03
+				industrial_capacity_factory = 0.03
+				production_lack_of_resource_penalty_factor = -0.03
+			}
+		}
+		SHA_transition_to_capitalism_3 = {
+			#name = SHA_transition_to_capitalism
+			picture = GER_wirtschaftswunder
+			#picture = ITA_devaluated_lira
+			allowed = { tag = SHA }
+
+			modifier = {
+				democratic_drift = 0.05
+				industrial_capacity_factory = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+
 
 
 

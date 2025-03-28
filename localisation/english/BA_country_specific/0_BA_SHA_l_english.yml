@@ -309,40 +309,42 @@
  SHA_strike_suppression_desc: "대전이 직후 산해경은 더욱 강력한 고립주의 정책을 채택했으며, 이는 상인연합회의 불만을 불러일으키기에 충분했습니다. 결국 그들은 12월에 현룡문의 정책에 반대하며 개혁과 개방을 요구하는 총파업에 돌입했습니다. 그러나 이러한 행동이 오히려 산해경의 상황을 더 악화시킬 뿐이라는 사실을 이들에게 명확히 깨닫게 하고, 필요하다면 무력으로 이를 진압해야 할 것입니다."
  SHA_Sack_of_Rumi: "루미 억제"
  SHA_Sack_of_Rumi_desc: "아케시로 루미는 12월 총파업의 주동자 중 한 명으로 지목됩니다. 루미를 억제함과 동시에 현무상회에 강력한 제재를 가함으로써 산해경의 전통을 수호하고, 나아가 보수적인 가치를 더욱 공고히 할 것입니다."
- SHA_emergency_measures: "급속 재무장"
- SHA_emergency_measures_desc: ""
- SHA_invade_of_Hyakkiyako: "학원 영토 수복"
- SHA_invade_of_Hyakkiyako_desc: ""
 
  # 현지 화합 (공산, 민주)
  SHA_local_harmony: "현지 화합"
  SHA_local_harmony_desc: ""
- SHA_austrian_politician_released: "오스트리아 정치인 석방"
- SHA_austrian_politician_released_desc: ""
- SHA_government_policy_shift: "현룡문 정책 선회"
- SHA_isolation_policy_overturned: "고립 정책 번복"
 
  SHA_appointment_of_BTP: "현무상회 인사 등용"
- SHA_post_authoritarianism: "권위주의 탈피"
- SHA_spread_democracy: "민주주의 전파"
- SHA_Kivotos_democracy: "키보토스 특색 민주정"
+ SHA_appointment_of_BTP_desc: "세계는 빠르게 변화하고 있으며, 상업을 담당하는 현무상회는 그 변화의 중심을 지나가는 길목에 서 있습니다. 이들은 적어도 '보수적인' 현룡문보다는 보다 진취적인 개혁안을 제시할 가능성이 높으며, 만약 현무상회의 인물들을 대거 등용한다면, 우리의 방향 역시 더욱 발전적인 길로 나아갈 수 있을지도 모릅니다."
+ SHA_release_austrian_politician: "오스트리아 정치인 석방"
+ SHA_release_austrian_politician_desc: "산해경의 새로운 정책 시행으로 인해 오스트리아 출신 정치인들의 대부분이 사면되었습니다. 이들 중 상당수는 새로운 질서에 순응하며, 다시 정치에 입문하기를 희망하고 있습니다."
+ SHA_university_of_vienna: "빈 대학교"
+ SHA_university_of_vienna_desc: ""
+ SHA_formation_of_labor_union: "노동조합 결성"
+ SHA_formation_of_labor_union_desc: ""
+ SHA_womens_education_initiative: "여성 교육"
+ SHA_womens_education_initiative_desc: "기존의 산해경은 여성들에게도 평등한 교육의 기회가 쥐어진지 오랜 시간이 흘렀지만 오스트리아는 그렇지 않습니다. 이들은 여성들에게 차별적인 대우를 해왔으며 이는 여성 교육 부족이라는 것으로 증명 되었습니다."
+ SHA_fight_against_extremism: "극단주의에 대항"
+ SHA_fight_against_extremism_desc: "극단주의는 언제나 사회에 해악을 끼쳐왔습니다. 그들은 늘 과격한 방법만을 추구하며, 이러한 방식은 결코 용인될 수 없습니다. 따라서 우리는 이들의 위협에 맞서 적극적으로 대응해야 합니다."
+ SHA_strengthening_parliamentarism: "의회주의 강화"
+ SHA_strengthening_parliamentarism_desc: "현룡문과 문주 중심의 체제는 언뜻 보기에는 완벽해 보이지만, 문주의 권한이 지나치게 강력하여 별다른 문제가 발생하지 않는 한 장기 집권이 사실상 보장된다는 구조적 한계를 지니고 있습니다. 따라서, 현룡문의 권한을 강화하여 문주의 권력을 견제할 수 있는 장치를 마련해야 합니다."
+ SHA_a_new_constitution: "산해경 헌법 제정"
+ SHA_a_new_constitution_flag: "§Y$SHA_strengthening_parliamentarism$§! 중점 완료"
+ SHA_str_par_focus_days_tt: "현재 일수: [?SHA_a_new_constitution_flag:days|Y0]"
+ SHA_defensive_democracy: "방어적 민주주의"
+ SHA_defensive_democracy_desc: "산해경의 민주화는 수백 년 역사 속에서 가장 위대한 업적 중 하나로 꼽힐 것입니다. 이러한 민주주의는 결코 쉽게 잃어버리거나 훼손될 수 없으며, 우리는 자유의 적에게 자유를 허용할 수 없듯이, 민주주의가 스스로의 제도 속에서 자멸하는 상황을 막기 위해 행동해야 합니다."
+ SHA_transplanting_capitalist_system: "시장 개방"
+ SHA_transplanting_capitalist_system_desc: "산해경의 경제는 현룡문의 경제 전문가들이 주도하는 계획 경제로 운영되었으며, 시장 개방은 극도로 제한되어 왔습니다. 그럼에도 불구하고, 현무상회가 상업을 번성시킨 것은 주목할 만한 성과이며, 이를 통해 산해경의 학생들은 자유 시장의 장점을 직접 경험하게 되었습니다. 이제, 이러한 변화를 전국적으로 확대하여 사람들에게 더 많은 자유를 보장해야 합니다."
+ SHA_transplanting_capitalist_system_tt: "$SHA_establish_the_SEZ$ 이후 중점 분기가 잠깁니다."
+ SHA_transplanting_capitalist_system_2_tt: "만약 §Y중점을 완료§! 했다면, §R중점 효과를 잃게§! 됩니다."
 
-
- SHA_command_new_contitution: "새로운 법전"
- SHA_Lab_expansion: "연구소 확장"
- SHA_protecting_the_new_system: "신 체제 수호"
-
- SHA_strengthening_kisaki_authority: "키사키 권위 강화"
- SHA_hyper_presidentialism: "신대통령제"
-
-
- SHA_remove_conservatives: "경극부 영향력 제거"
-
- SHA_communist_branch: "공산주의 쿠데타"
+ SHA_communist_branch: "붉은 산해경을 향해"
 
 
 
  # 승전 공용
+ SHA_strengthening_identity_of_southern_kivotos: "남키보토스 정체성 강화"
+ SHA_strengthening_identity_of_southern_kivotos_desc: ""
  SHA_Special_Military_Operation_for_Abydos: "아비도스 격퇴"
  SHA_Special_Military_Operation_for_Abydos_desc: ""
  SHA_Establishment_of_the_Governor_General: "백귀야행 총독부"
@@ -378,6 +380,10 @@
  SHA_spheres_of_influence_tt: "우리와 §Y[ITA.GetNameWithFlag]§!(은)는 §Y발칸§!에서 각자의 세력권을 구축할 것입니다.\n\n우리의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[SLO.GetNameWithFlag]\n[HUN.GetNameWithFlag]\n[ROM.GetNameWithFlag]\n[YUG.GetNameWithFlag]§! (북부) \n\n그들의 §Y세력권§!에는 다음이 포함됩니다:\n§Y[ALB.GetNameWithFlag]\n[BUL.GetNameWithFlag]\n[GRE.GetNameWithFlag]§!\n§Y[YUG.GetNameWithFlag]§! (남부)"
  SHA_eastern_offensive: "발칸 세력권 확보"
  SHA_eastern_offensive_desc: ""
+ SHA_emergency_measures: "급속 재무장"
+ SHA_emergency_measures_desc: ""
+ SHA_invade_of_Hyakkiyako: "학원 영토 수복"
+ SHA_invade_of_Hyakkiyako_desc: ""
 
  # 국민정신
  SHA_Austrian_fascist_militia: "오스트리아인 민병대"
@@ -420,6 +426,8 @@
  SHA_domestic_air_production: "항공기 생산 집중"
  SHA_shadow_of_Shintani_Kai: "신타니 카이의 그림자"
  SHA_shadow_of_Shintani_Kai_desc: "신타니 카이를 복권시켰다는 것이 확실시 되자 산해경은 그녀가 존재한다는 사실 하나만으로 공포에 떨며 현 정부를 불신하고 있습니다."
+ SHA_transition_to_capitalism: "전환기 침체"
+ SHA_transition_to_capitalism_3: "산해경 자본주의"
 
  SHA_industrial_region: "경제특구"
  SHA_industrial_region_2: "$SHA_industrial_region$"
@@ -509,6 +517,10 @@
  shafla.1.t: "많이 먹고 힘내야지!"
  shafla.1.desc: "구제 사업을 펼친다는 현룡문 조령의 명 아래, 가장 분주하게 움직인 것은 현무상회였다. 대전이 당시, 그녀들은 상회를 지키기 위해 직접 전장에 나서기도 했지만, 이번에는 전혀 다른 싸움을 치르고 있었다. 바로, 배고픈 이들을 위해 음식을 만드는 일이었다.\n\n점심시간이 되자 사람들이 현무상회 앞으로 몰려들었다. 산해경 곳곳에 분점이 있었지만, 가장 유명한 곳은 단연 [4.GetCapitalVictoryPointName]의 본점이었다. 이는 아케시로 루미의 뛰어난 요리 실력이 입소문을 타고 널리 알려졌기 때문이었다.\n\n사람들 사이로 한 아이가 조심스럽게 다가왔다.\n\"저기요... 음식 하나만 주세요... 배고파서... 정말 조금만이라도...\"\n\n루미는 아이를 내려다보며 따뜻하게 웃었다.\n\"그래, 꼬맹이. 많이 배고팠구나? 하하, 알았어. 조금만 기다려. 최고의 요리를 대접해 줄 테니까!\"\n\n그녀는 주방으로 들어가 손놀림을 빠르게 움직였고, 잠시 후 특제 볶음밥을 정성껏 만들어 아이 앞에 내놓았다. 아이는 환한 미소를 지으며 허겁지겁 음식을 먹었고, 루미는 그 모습을 조용히 지켜보았다. 그렇게, 시간은 천천히 흘러가고 있었다."
  shafla.1.a: "밥은 중요하다고?"
+
+ shafla.2.t: "전환기 침체"
+ shafla.2.desc: "기존의 중앙정부가 주도하던 계획 경제 체제에서 시장을 개방하고, 자본주의적 요소를 도입하였습니다. 이러한 개혁은 기존의 경제 정책보다 효과적인 성과를 내고 있었지만, 너무 빠른 경제 체제 전환은 이행 과정에서 침체를 초래할 위험이 컸습니다.\n\n자본주의 체제 도입이라는 과감한 도전은 실패로 보일 정도로 위기에 처했지만, 오늘 발표된 전문가들의 분석 결과는 희망적인 전망을 보여주었습니다. 경제 상황은 점차 나아지고 있으며, 사람들은 다시 소비를 시작하고 있습니다. 자본주의 경제 체제의 장점이 드러나기 시작했고, 이제는 전문가들의 개입을 점진적으로 줄여나가면서 산해경의 경제 개혁을 마무리할 때가 된 것 같습니다."
+ shafla.2.a: "좋은 소식이야!"
 
  # 뉴스 이벤트
  shanews.01.t: "산해경에서 발생한 쿠데타!"

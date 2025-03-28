@@ -183,23 +183,23 @@ characters={
 				factor = 1.000
 			}
 		}
-		advisor={
-			slot = navy_chief
-			idea_token = SHA_SAYA_2
+		advisor = {
+			slot = high_command
+			cost = 100
+			idea_token = SHA_SAYA_high_command
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-			}
-			cost = 150
-	    	traits = {
-				navy_chief_reform_1
+			available = { }
+			traits = {
+				army_logistics_1
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}	
+	# 슌
 	SHA_SHUN={
 		name = SHA_SHUN
 		gender = female
@@ -233,9 +233,9 @@ characters={
 			traits = {
 				BA_category_halo_2
 			}
-			cost = 200
+			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 13.000
 			}
 		}
 	}	
@@ -371,7 +371,7 @@ characters={
 		}
 		advisor={	
 			slot = political_advisor
-			idea_token = SHA_ROUMI_1
+			idea_token = SHA_ROUMI_political_advisor
 			allowed = {
 				original_tag = SHA
 			}
@@ -384,11 +384,14 @@ characters={
 			}
 		}
 		advisor = {
-			slot = army_chief
+			slot = high_command
 			cost = 100
-			idea_token = SHA_ROUMI_2
+			idea_token = SHA_ROUMI_high_command
 			traits = {
-				army_chief_morale_2
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 3
 			}
 		}
 	}	

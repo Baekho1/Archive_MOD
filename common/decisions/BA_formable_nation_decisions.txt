@@ -383,7 +383,7 @@ BA_from_southern_kivotos = {
 			OR = {
 				AND = {
 					original_tag = SHA
-					has_completed_focus = SHA_the_third_kivotos
+					has_completed_focus = SHA_strengthening_identity_of_southern_kivotos
 				}
 				original_tag = HYA
 			}

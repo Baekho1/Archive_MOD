@@ -682,7 +682,7 @@ news_event = {
 	}
 }
 
-# 
+# 많이 먹고 힘내야지!
 country_event = {
 	id = shafla.1
 	title = shafla.1.t
@@ -693,6 +693,21 @@ country_event = {
 
 	option = {
 		name = shafla.1.a
+
+	}
+}
+
+# 이행침체 끝나면 나오는 이벤트
+country_event = {
+	id = shafla.2
+	title = shafla.2.t
+	desc = shafla.2.desc
+	picture = GFX_report_event_second_vienna_award_pact
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafla.2.a
 
 	}
 }
