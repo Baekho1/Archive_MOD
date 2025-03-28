@@ -465,6 +465,9 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id=6987
+			visible = {
+				has_country_flag = EGY_flag_nasser
+			}
 		}
 	}
 	EGY_gamal_abdel_nasser = {
@@ -487,6 +490,9 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
+			visible = {
+				has_country_flag = EGY_flag_nasser
+			}
 		}
 	}
 	EGY_mahmoud_hamza_pasha = {
@@ -948,6 +954,9 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
+			visible = {
+				has_country_flag = EGY_flag_nasser
+			}
 		}
 	}
 

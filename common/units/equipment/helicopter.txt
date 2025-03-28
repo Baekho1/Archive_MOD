@@ -18,13 +18,7 @@ equipments = {
 		#Misc Abilities
 		maximum_speed = 10
 		reliability = 0.7
-        
-		#Offensive Abilities
-		soft_attack = 30
-		hard_attack = 8
-		ap_attack = 8
-		air_attack = 30
-		
+
 		#Defensive Abilities
 		defense 		= 6
 		breakthrough 	= 8

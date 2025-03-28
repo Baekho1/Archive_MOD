@@ -10,7 +10,6 @@
 
 BA_sp_air_helicopter = {
 	specialization = specialization_air 	
-	icon = GFX_sp_air_helicopter
 
 	project_tags = {
 		sp_tag_aircraft
@@ -22,6 +21,8 @@ BA_sp_air_helicopter = {
 		OR = {
 			original_tag = KSP
 			original_tag = COU
+			original_tag = ABY
+			original_tag = KAI
 		}
 	}
 

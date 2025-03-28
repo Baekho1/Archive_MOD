@@ -10804,17 +10804,6 @@ country_event = {
 	option = {
 		name = ABY_new_event.229.a
 		ai_chance = { factor = 100 }
-		add_to_faction = ABY
-		ABY = {
-			country_event = ABY_new_event.230
-		}
-	}
-	option = {
-		name = ABY_new_event.229.b
-		ai_chance = { factor = 0 }
-		ABY = {
-			country_event = ABY_new_event.231
-		}
 	}
 }
 

@@ -209,3 +209,18 @@ country_event = { #아비도스 대책위원회의 망명
 		}
 	}
 }
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.6
+	title = EGY_event.6.t	
+	desc = EGY_event.6.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.5.6
+		set_country_flag = EGY_flag_nasser
+		custom_effect_tooltip = EGY_commander_tt
+	}
+}

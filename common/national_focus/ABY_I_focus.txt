@@ -6360,7 +6360,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# set_technology = { kivotos_helicopter_tech = 1 }
+			complete_special_project = {
+				project = sp:BA_sp_air_helicopter
+			}
+			complete_special_project = {
+				project = sp:sp_air_helicopter
+			}
 		}
 	}
 	focus = {
