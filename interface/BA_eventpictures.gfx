@@ -825,6 +825,10 @@ spriteTypes = {
 		name = "GFX_news_event_COU_iphone"
 		texturefile = "gfx/event_pictures/news_event_COU_iphone.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_ENG_riverpool_falls"
+		texturefile = "gfx/event_pictures/ENG_riverpool_falls.png"
+	}
 	
 	##샬레 
 	spriteType = {
