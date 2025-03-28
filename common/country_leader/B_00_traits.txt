@@ -3550,6 +3550,10 @@ leader_traits = {
         political_power_factor = 0.1
 		communism_drift = 0.01
 	}
+	RED_cherino_small_trait = { #사무국장
+        stability_factor = -0.05
+        war_support_factor = 0.10
+	}
 	RED_bright_polar_star = { #붉게 빛나는 혁명의 북극성
 		random = no
 		political_power_factor = 0.1

@@ -542,7 +542,9 @@ characters = {
 							has_trait = RED_momiji_trait_good
 						}
 					}
-					add_research_slot = 1
+					RED = {
+						add_research_slot = 1
+					}
 				}
 			}
 			on_remove = {
@@ -552,7 +554,9 @@ characters = {
 							has_trait = RED_momiji_trait_good
 						}
 					}
-					add_research_slot = -1
+					RED = {
+						add_research_slot = -1
+					}
 				}
 			}
 		}

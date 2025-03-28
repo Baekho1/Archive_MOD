@@ -7,6 +7,13 @@ ideas = {
 		}
 	}
     country = {
+		RED_cherino_idea = { #렌카와 체리노
+			name = RED_cherino
+			picture = RED_cherino_small
+			traits = {
+				RED_cherino_small_trait
+			}
+		}
 		RED_NKVD = { #NKVD 장악
 			picture = nkvd_2
 			modifier = {

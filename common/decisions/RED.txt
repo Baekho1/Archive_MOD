@@ -6991,20 +6991,6 @@ RED_soviet_aid_to_poum_decision_category = {
 }
 
 RED_bop_category = {
-	RED_cherino_read_book = {
-		#독서
-		icon = GFX_decision_generic_operation
-		visible = {
-			RED_cherino = {
-				has_trait = RED_cherino_learner
-			}
-			NOT = {
-				has_global_flag = flag_trotsky_dead
-			}
-		}
-		days_remove = 15
-		cost = 5
-	}
 	RED_cherino_become_cleaner = {
 		#미화부장
 		icon = GFX_decision_eng_trade_unions_demand
@@ -7013,6 +6999,7 @@ RED_bop_category = {
 				NOT = {
 					has_trait = RED_cherino_cleaner
 				}
+				is_country_leader = yes
 			}
 		}
 		ai_will_do = {
@@ -7037,6 +7024,7 @@ RED_bop_category = {
 				NOT = {
 					has_trait = RED_cherino_meal
 				}
+				is_country_leader = yes
 			}
 		}
 		ai_will_do = {
@@ -7061,6 +7049,7 @@ RED_bop_category = {
 				NOT = {
 					has_trait = RED_cherino_prefect
 				}
+				is_country_leader = yes
 			}
 		}
 		ai_will_do = {
@@ -7085,6 +7074,7 @@ RED_bop_category = {
 				NOT = {
 					has_trait = RED_cherino_gym
 				}
+				is_country_leader = yes
 			}
 		}
 		ai_will_do = {
@@ -7107,6 +7097,7 @@ RED_bop_category = {
 		visible = {
 			RED_cherino = {
 				has_trait = RED_cherino_cleaner
+				is_country_leader = yes
 			}
 		}
 		complete_effect = {
@@ -7126,6 +7117,7 @@ RED_bop_category = {
 		visible = {
 			RED_cherino = {
 				has_trait = RED_cherino_meal
+				is_country_leader = yes
 			}
 		}
 		complete_effect = {
@@ -7145,6 +7137,7 @@ RED_bop_category = {
 		visible = {
 			RED_cherino = {
 				has_trait = RED_cherino_prefect
+				is_country_leader = yes
 			}
 		}
 		complete_effect = {
@@ -7164,6 +7157,7 @@ RED_bop_category = {
 		visible = {
 			RED_cherino = {
 				has_trait = RED_cherino_gym
+				is_country_leader = yes
 			}
 		}
 		complete_effect = {
