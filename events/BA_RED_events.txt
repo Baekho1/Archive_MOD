@@ -500,8 +500,7 @@ country_event = { #사무국 처우
 	picture = GFX_report_event_RED_cherino
 	option = { #적당한 직위에 올려두자
 		name = RED_tro_event.8.a
-		custom_effect_tooltip = RED_tro_event.8_tt
-		#정치고문으로만들기
+
 	}
 	option = { #사무국 팔다리 잘라버리자
 		name = RED_tro_event.8.b
@@ -571,7 +570,6 @@ country_event = { #『공산당 선언』
 				tooltip = RED_cherino_ideal_values_tt
 			}
 		}
-		unlock_decision_tooltip = RED_cherino_read_book
 	}
 }
 country_event = { #무슨 책을 읽을까?

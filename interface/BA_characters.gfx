@@ -567,6 +567,10 @@ spriteTypes = {
 		name = "GFX_portrait_RE4_council"
 		textureFile = "gfx/leaders/RED/RE4_Build_Portrait_Template.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_RED_cherino_small"
+		textureFile = "gfx/interface/advisors/RED/cpflsh.dds"
+	}
 
 # 트리니티 초상화
 	spriteType = {
