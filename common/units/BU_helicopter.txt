@@ -33,17 +33,23 @@ sub_units = {
 		}
 		
 		manpower = 500
-		max_organisation = 10
+		max_organisation = 25
 		max_strength = 2
-		default_morale = 0.3
-		training_time = 220
-		weight = 1.5
+		default_morale = 0.35
+		training_time = 180
+		weight = 0.2
+		supply_consumption = 0.075
+		can_be_parachuted = no
+		recon = 1
 
 		breakthrough = 0.2
-
-		supply_consumption = 0.30
-
-		can_be_parachuted = yes
+		
+		own_equipment_fuel_consumption_mult = 0.05 
+		
+		essential = {
+			support_equipment
+			helicopter_equipment
+		}
 		
 		forest = {
 			defence = -0.05
@@ -65,17 +71,18 @@ sub_units = {
 			movement = 0.1
 		}
 		plains = {
-			attack = 0.2
-			defence = 0.2
+			attack = 0.3
+			defence = 0.3
+			movement = 0.15
 		}
 		urban = {
 			attack = 0.1
 			movement = 0.05
 		}
 		desert = {
-			attack = 0.10
-			defence = 0.05
-			movement = 0.1
+			attack = 0.3
+			defence = 0.3
+			movement = 0.15
 		}
 		river = {
 			attack = 0.2
@@ -88,8 +95,9 @@ sub_units = {
 			movement = 0.1
 		}
 		jungle = {
-			attack = -0.05
-			defence = -0.05
+			attack = -0.1
+			defence = -0.1
+			movement = -0.1
 		}
 	}
 

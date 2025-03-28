@@ -12,7 +12,7 @@ state={
 		add_core_of = RHI
 		add_core_of = PRE
 		victory_points = {
-			587 5 
+			587 20
 		}
 		buildings = {
 			infrastructure = 3

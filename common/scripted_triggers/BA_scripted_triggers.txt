@@ -185,6 +185,7 @@ tag_has_country_intro = {
 		original_tag = SRT
 		original_tag = RED
 		original_tag = COU
+		original_tag = KAI
 
 	### Non - Kivotos ###
 		original_tag = FRA
@@ -211,7 +212,8 @@ tag_has_path_guide = {
 		original_tag = SHA
 		original_tag = SRT
 		original_tag = COU
-		tag = RED #모두가 오리지널을 외칠 때, 형은 혼자 tag를 외쳐! 😎
+		original_tag = KAI 
+		original_tag = RED 
 
 
 	### Non - Kivotos ###

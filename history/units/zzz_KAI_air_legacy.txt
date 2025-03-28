@@ -1,0 +1,49 @@
+﻿
+air_wings = {
+	126 = {
+		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
+		supersonic_fighter_equipment_1 = {
+			owner = "KAI" 
+			amount = 100
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+		supersonic_fighter_equipment_1 = {
+			owner = "KAI" 
+			amount = 100
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+		supersonic_fighter_equipment_1 = {
+			owner = "KAI" 
+			amount = 50
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+	}
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_supermarine_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_0
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_de_havilland_organization
+	}
+}

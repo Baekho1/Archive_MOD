@@ -472,6 +472,7 @@ focus_tree = {
 		#prerequisite = { focus = COU_normalization_of_administration }
 		x = 80
 		y = 0
+		available = { has_country_flag = GAEBALJUNG }
 		mutually_exclusive = { focus = COU_establishment_of_emergency_measures_committee }
 		cost = 2
 		bypass = { has_government = fascism }

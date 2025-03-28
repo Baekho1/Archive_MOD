@@ -84,7 +84,7 @@ characters={
 		name=KAI_general
 		portraits={
 			civilian={
-				large = "gfx/leaders/KAI/kai.dds"
+				large = "gfx/leaders/KAI/general.png"
 				small = "gfx/interface/advisors/KAI/KAI_general.tga"
 			}
 		}
@@ -92,6 +92,22 @@ characters={
 			slot = theorist
 			idea_token = KAI_general
 			traits = { military_theorist }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAI_general2
+			traits = { army_regrouping_2 }
+		}
+		
+		corps_commander = {
+			skill = 4
+			traits = {
+				thorough_planner politically_connected logistics_wizard expert_delegator
+			}
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
 		}
 	}
 	KAI_SOF_mob_1={ #SOF 보병지휘관

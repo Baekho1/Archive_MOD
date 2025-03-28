@@ -1,0 +1,51 @@
+﻿
+air_wings = {
+	126 = {
+		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
+		small_plane_airframe_5 = {
+			owner = "KAI" 
+			amount = 100
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+		small_plane_airframe_5 = {
+			owner = "KAI" 
+			amount = 100
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+		small_plane_airframe_5 = {
+			owner = "KAI" 
+			amount = 50
+			creator = "KBT"
+			version_name = "Kivotos-J.011"
+		}
+	}
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "KAI" 
+			version_name = "Gloster Gladiator"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_supermarine_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_1
+			creator = "KAI" 
+			version_name = "Bristol Blenheim"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_de_havilland_organization
+	}
+}
