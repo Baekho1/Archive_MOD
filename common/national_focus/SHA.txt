@@ -1535,7 +1535,7 @@ focus_tree = {
 	focus = {
 		id = SHA_guided_democracy
 		icon = GFX_focus_SHA_strengthening_kisaki_authority
-		x = 1
+		x = -1
 		y = 1
 		cost = 0
 
