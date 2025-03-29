@@ -688,3 +688,14 @@ SLO_southslovakia_state = { # 주 모디파이어
 	army_attack_factor = 0.1
 	breakthrough_factor = 0.1
 }
+SLO_czech_liberation_committee_state = { # 주 모디파이어
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_nationalism
+
+	army_attack_factor = 0.10
+	starting_compliance = 0.40
+	resistance_target = -0.25
+	resistance_growth = -0.25
+	compliance_growth = 0.25
+}
