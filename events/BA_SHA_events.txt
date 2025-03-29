@@ -1,4 +1,5 @@
 add_namespace = shafas
+add_namespace = shadem
 add_namespace = shafla
 add_namespace = shanews
 
@@ -392,6 +393,38 @@ country_event = {
 	option = {
 		name = shafas.14.b
 
+	}
+}
+
+# 첫 선거
+country_event = {
+	id = shadem.1
+	title = shadem.1.t
+	desc = { 
+		text = shadem.1.desc
+		trigger = { 
+			NOT = { has_completed_focus = SHA_progressivism_through_science }
+		}
+	}
+	desc = { 
+		text = shadem.1.desca
+		trigger = { has_completed_focus = SHA_progressivism_through_science }
+	}
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+	option = {
+		name = shadem.1.a
+	}
+
+	option = {
+		name = shadem.1.b
+	}
+
+	option = {
+		name = shadem.1.d
+		trigger = { has_completed_focus = SHA_progressivism_through_science }
 	}
 }
 

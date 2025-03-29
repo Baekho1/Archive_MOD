@@ -24,6 +24,10 @@ focus_tree = {
 	}
 	default = no
 
+	initial_show_position = {
+	    focus = SHA_Austrian_appeasement_policy
+	}
+
 #	shortcut = {
 #		name = SHA_economic_path_shortcut
 #		target = SHA_teleological_planning 
@@ -737,9 +741,6 @@ focus_tree = {
 				SHA_Shanhaijinfascism_research_speed_factor = 0.1
 				tooltip = research_speed_factor_tt
 			}
-			custom_effect_tooltip = tooltip_white_line
-			add_research_slot = 1
-			custom_effect_tooltip = tooltip_white_line
 			swap_ruler_traits = { remove = SHA_T4a add = SHA_T4a_2 }
 			SHA_EAS_idea_remove = yes
 		}
@@ -764,7 +765,7 @@ focus_tree = {
 		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
 
 		completion_reward = {
-			add_research_slot = 1
+			add_research_slot = 2
 		}
 	}
 
@@ -1328,7 +1329,8 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GAEBALJUNG
-				always = no
+				is_debug = yes
+				is_ai = no
 			}
 		}
 		bypass = { }
@@ -1415,7 +1417,6 @@ focus_tree = {
 	}
 
 	# 자본주의 체계 도입
-
 	focus = {
 		id = SHA_transplanting_capitalist_system
 		icon = GFX_focus_ARG_capitalize_the_beef_industry
@@ -1481,6 +1482,111 @@ focus_tree = {
 		}
 	}
 
+	# 민주주의 교육
+	focus = {
+		id = SHA_democracy_education
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_defensive_democracy
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_defensive_democracy
+
+		completion_reward = {
+
+		}
+	}
+
+	# 선거 실시
+	focus = {
+		id = SHA_hold_elections
+		icon = GFX_focus_AFG_pashtunistan_referendum
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_transplanting_capitalist_system }
+		prerequisite = { focus = SHA_democracy_education }
+		prerequisite = { focus = SHA_a_new_constitution }
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_transplanting_capitalist_system
+
+		completion_reward = {
+			custom_effect_tooltip = AFG_hold_elections_tt
+			country_event = { id = shadem.1 hours = 04 }
+		}
+	}
+
+	# 교도민주주의
+	focus = {
+		id = SHA_guided_democracy
+		icon = GFX_focus_SHA_strengthening_kisaki_authority
+		x = 1
+		y = 1
+		cost = 0
+
+		prerequisite = { focus = SHA_hold_elections }
+		mutually_exclusive = { 
+			focus = SHA_a_responsible_government
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_hold_elections
+
+		completion_reward = {
+
+		}
+	}
+
+	# 책임지는 정부
+	focus = {
+		id = SHA_a_responsible_government
+		icon = GFX_focus_SHA_vote_to_Rumi
+		x = 1
+		y = 1
+		cost = 0
+
+		prerequisite = { focus = SHA_hold_elections }
+		mutually_exclusive = {
+			focus = SHA_guided_democracy
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_hold_elections
+
+		completion_reward = {
+
+		}
+	}
+
 	
 
 	# 공산주의 쿠데타
@@ -1535,8 +1641,8 @@ focus_tree = {
 	focus = {
 		id = SHA_a_new_constitution
 		icon = GFX_focus_AUS_lawmaking_leniency
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		cost = 5
 
 		prerequisite = { focus = SHA_strengthening_parliamentarism }
@@ -1592,7 +1698,7 @@ focus_tree = {
 	# 극단주의에 대항
 	focus = {
 		id = SHA_fight_against_extremism
-		icon = GFX_focus_generic_communism_anti_fascism
+		icon = GFX_focus_SHA_remove_POC
 		x = -4
 		y = 0
 		cost = 5
@@ -1687,6 +1793,31 @@ focus_tree = {
 		}
 	}
 
+	# 과학을 통한 진보
+	focus = {
+		id = SHA_progressivism_through_science
+		icon = GFX_focus_SHA_yakushi_saya
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_formation_of_labor_union
+			focus = SHA_womens_education_initiative
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_formation_of_labor_union
+
+		completion_reward = {
+
+		}
+	}
+
 
 	##############
 	####외교 중점####
@@ -1695,9 +1826,21 @@ focus_tree = {
 	# 산해경 중앙특구 협정 창설
 	focus = {
 		id = SHA_Shanhaijing_fact
-		icon = GFX_goal_SHA_Southern_Kivotos
+		icon = GFX_focus_SHA_Shanhaijing_pact
 		x = 15
 		y = 0
+		offset = {
+			x = -25
+			trigger = { has_completed_focus = SHA_Austrian_appeasement_policy }
+		}
+		offset = {
+			x = -8
+			trigger = { has_completed_focus = SHA_gathering_of_radicals }
+		}
+		offset = {
+			x = -8
+			trigger = { has_completed_focus = SHA_local_harmony }
+		}
 		relative_position_id = SHA_Austrian_oppression_continues
 		search_filters = {  }
 		cost = 2
@@ -1828,6 +1971,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
+		allow_branch = {
+			has_completed_focus = SHA_gathering_of_radicals
+		}
 		bypass = { }
 
 
@@ -1853,6 +1999,9 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+		}
+		allow_branch = {
+			has_completed_focus = SHA_gathering_of_radicals
 		}
 		bypass = { }
 
