@@ -1,5 +1,6 @@
 add_namespace = KAI_event
 add_namespace = KAI_political_event
+add_namespace = KAI_storyevent
 
 country_event = { # 카이저 공산주의
 	id = KAI_political_event.1
@@ -702,5 +703,26 @@ country_event = { # var 체크해서 100 넘으면 미국이 전쟁 목표를 �
                 type = puppet_wargoal_focus
             }
         }
+	}
+}
+
+
+##카이저 스토리 이벤트 
+unit_leader_event = {
+	id = KAI_storyevent.1
+	title = KAI_storyevent.1.t
+	desc = KAI_storyevent.1.desc
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = { ENG_jackie_smyth = { retire = yes } }
+	}
+	
+	option = { 
+		name = KAI_storyevent.1.a
+	    custom_effect_tooltip = KAI_tooltip_he_dead
+		ENG = { add_manpower = -1 }
 	}
 }
