@@ -2005,8 +2005,8 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-41
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility 
-		cost = 5
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility 
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -2043,16 +2043,180 @@ focus_tree = {
 					province = 9569
 					instant_build = yes
 				}
-				build_railway = {
-					level = 5
-					start_province = 11542
-					target_province = 6418
+				hidden_effect = {
+					build_railway = {
+						level = 1
+						start_province = 11542
+						target_province = 6418
+					}
+					build_railway = {
+						level = 1
+						start_province = 11542
+						target_province = 9569
+					}
 				}
-				build_railway = {
-					level = 5
-					start_province = 11542
-					target_province = 9569
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-42
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-39
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 75
+			controls_state = 74
+			controls_state = 72
+		}
+		bypass = {
+		}
+		completion_reward = {
+			75 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			72 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-43
+		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-40
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 71
+			controls_state = 73
+			controls_state = 664
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+			71 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+			73 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = town
+			}
+			664 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+			add_victory_points = {
+				province = 6573
+				value = 5
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-44
+		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-43
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 70
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+			70 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 9692
+					}
+				}
+				set_state_category = megalopolis
+			}
+			add_victory_points = {
+				province = 9692
+				value = 10
 			}
 		}
 	}
