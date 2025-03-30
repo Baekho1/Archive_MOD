@@ -2922,7 +2922,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_GEI_DEC_ghostghost"
+		name = "GFX_GEI_DEC_ghostghostghost"
 		textureFile = "gfx/interface/goals/GEI/focus_GEI_DEC_ghostghost.png"
 	}
 

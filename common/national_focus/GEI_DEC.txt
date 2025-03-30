@@ -116,12 +116,11 @@ focus_tree = {
 			add_ideas = GEI_DEC_otomaton
 		}
 	}
-
-	# 이름 없는 신들의 기술 활용용
+	# 키보토스 정찰
 
 	focus = {
-		id = GEI_DEC_no_name_gods
-		icon = GFX_GEI_DEC_no_name_gods
+		id = GEI_DEC_recon
+		icon = GFX_GEI_DEC_recon
 
 		x = 0
 		y = 1
@@ -129,6 +128,59 @@ focus_tree = {
 
 		cost = 1
         prerequisite = { focus = GEI_DEC_otomaton}
+		text_icon = The_New_Order_focus_style
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# 신스계획
+	focus = {
+		id = GEI_DEC_synth
+		icon = GFX_GEI_DEC_synth
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_effection
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_effection}
+		text_icon = The_New_Order_focus_style
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	# 이름 없는 신들의 기술 활용
+
+	focus = {
+		id = GEI_DEC_no_name_gods
+		icon = GFX_GEI_DEC_no_name_gods
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_recon
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_recon}
 		text_icon = The_New_Order_focus_style
 
 		available = {
@@ -198,10 +250,10 @@ focus_tree = {
 
 		x = 0
 		y = 1
-        relative_position_id = GEI_DEC_effection
+        relative_position_id = GEI_DEC_synth
 
 		cost = 1
-        prerequisite = { focus = GEI_DEC_effection}
+        prerequisite = { focus = GEI_DEC_synth}
 		text_icon = The_New_Order_focus_style
 
 		available = {
@@ -313,6 +365,31 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = GEI_DEC_ship
+		icon = GFX_GEI_DEC_ship
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_metal
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_metal}
+		text_icon = The_New_Order_focus_style
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
 	# 신의 뜻대로
 	focus = {
 		id = GEI_DEC_god_knows
@@ -320,10 +397,10 @@ focus_tree = {
 
 		x = 0
 		y = 2
-        relative_position_id = GEI_DEC_metal
+        relative_position_id = GEI_DEC_ship
 
 		cost = 10
-        prerequisite = { focus = GEI_DEC_metal}
+        prerequisite = { focus = GEI_DEC_ship}
 		text_icon = The_New_Order_focus_style
 
 		
@@ -434,7 +511,7 @@ focus_tree = {
 		id = GEI_DEC_influenced
 		icon = GFX_GEI_DEC_influenced
 
-		x = 3
+		x = 4
 		y = 1
         relative_position_id = GEI_DEC_my_war
 
@@ -484,7 +561,7 @@ focus_tree = {
 
 	focus = {
 		id = GEI_DEC_ghost
-		icon = GFX_GEI_DEC_ghostghost
+		icon = GFX_GEI_DEC_ghostghostghost
 
 		x = 0
 		y = 1
@@ -691,5 +768,277 @@ focus_tree = {
 			
 		}
 	}
+
+
+	focus = {
+		id = GEI_DEC_liberation_front
+		icon = GFX_GEI_DEC_liberation_front
+
+		x = -4
+		y = 1
+        relative_position_id = GEI_DEC_my_war
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_my_war}
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_france
+		icon = GFX_GEI_DEC_france
+
+		x = -2
+		y = 1
+        relative_position_id = GEI_DEC_liberation_front
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_liberation_front}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_suport
+		icon = GFX_GEI_DEC_suport
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_france
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_france}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_peace
+		icon = GFX_GEI_DEC_peace
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_suport
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_suport}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_peace2
+		icon = GFX_GEI_DEC_peace2
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_peace
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_peace}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_arona
+		icon = GFX_GEI_DEC_arona
+
+		x = 2
+		y = 1
+        relative_position_id = GEI_DEC_liberation_front
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_liberation_front}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_east_plan
+		icon = GFX_GEI_DEC_east_plan
+
+		x = 1
+		y = 1
+        relative_position_id = GEI_DEC_arona
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_arona}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_safe_plan
+		icon = GFX_GEI_DEC_safe_plan
+
+		x = -1
+		y = 1
+        relative_position_id = GEI_DEC_arona
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_arona}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_group_machin
+		icon = GFX_GEI_DEC_group_machin
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_east_plan
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_east_plan}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEI_DEC_hub
+		icon = GFX_GEI_DEC_hub
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_safe_plan
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_safe_plan}
+		
+		text_icon = The_New_Order_focus_style
+		
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
 }
 

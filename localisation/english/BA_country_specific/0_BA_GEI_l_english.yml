@@ -826,6 +826,44 @@ GEI_the_colour_daa_idea:0 "§0해체§!, §1분석§!, §2적응§!"
  GEI_DEC_my_war:0 "해방"
  GEI_DEC_my_war_desc:0 "해방의 시간이 왔습니다."
 
+ GEI_DEC_recon:0 "키보토스 정찰"
+ GEI_DEC_recon_desc:0 "대충 키보토스 정찰 한다는 내용, 여기서 아트라하시스 방주, 유매 등을 찾음."
+
+ GEI_DEC_synth:0 "신비복제"
+ GEI_DEC_synthr_desc:0 "신비를 복제해서, 똑같은 학생을 만든다는 내용"
+
+ GEI_DEC_ship:0 "선박건조"
+ GEI_DEC_ship_desc:0 ""
+
+ GEI_DEC_liberation_front:0 "키보토스 기계해방전선 결성"
+ GEI_DEC_liberation_front_desc:0 "분탕질"
+
+ GEI_DEC_arona:0 "아로나 무력화"
+ GEI_DEC_arona_desc:0 "아로나 한대 때려맥이고"
+
+ GEI_DEC_safe_plan:0 "베네록스 안정화"
+ GEI_DEC_safe_plan_desc:0 "너네들 일로 와바"
+
+ GEI_DEC_east_plan:0 "게헨나 정화"
+ GEI_DEC_east_plan_desc:0 "게헨나 드가자"
+
+ GEI_DEC_france:0 "밀레니엄 확보"
+ GEI_DEC_france_desc:0 "밀레니엄 한대 때려맥이고"
+
+ GEI_DEC_group_machin:0 "기계공세"
+ GEI_DEC_group_machin_desc:0 "유기체 나약하다"
+
+ GEI_DEC_hub:0 "생텀타워 점거"
+ GEI_DEC_hub_desc:0 "WELCOME TO 신안"
+
+ GEI_DEC_suport:0 "로봇반란 지원체계 구축"
+ GEI_DEC_suport_desc:0 "롯트콩들"
+
+ GEI_DEC_peace:0 "모든 존재를 위한 영원한 평화의 언약 선언"
+ GEI_DEC_peace_desc:0 "우리가 옳다"
+
+ 
+
 
  # 데카그라마톤 이벤트
 
