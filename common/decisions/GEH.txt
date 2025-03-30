@@ -73,6 +73,10 @@ GEH_war_defence_category = {
 			surrender_progress < 1
 		}
 
+		visible = {
+			has_completed_focus = GEH_war_focus_9
+		}
+
 		days_remove = 120
 
 		cost = 0
@@ -686,3 +690,162 @@ GEH_trinity_integration = {
 	}
 }
 
+GEH_ako_love_balance_category = {
+
+	GEH_walk_with_ako = {
+		icon = GFX_decision_SWI_dismiss_council
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		days_remove = 3
+
+		remove_effect = {
+			GEH_ako_love_low_increase_effect = yes
+		}
+	}
+
+	GEH_give_ako_present = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		cost = 5
+
+		days_remove = 7
+
+		remove_effect = {
+			GEH_ako_love_medium_increase_effect = yes
+		}
+	}
+
+	GEH_visit_planning_department = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 400
+		}
+
+		cost = 10
+
+		days_remove = 14
+
+		remove_effect = {
+			GEH_ako_love_high_increase_effect = yes
+		}
+	}
+
+	GEH_pressure_on_planning_department = {
+		icon = GFX_decision_Prefect_team
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 10
+
+		days_remove = 14
+
+		remove_effect = {
+			GEH_ako_love_high_decrease_effect = yes
+		}
+	}
+
+	GEH_ako_denial = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 5
+
+		days_remove = 3
+
+		remove_effect = {
+			GEH_ako_love_low_decrease_effect = yes
+		}
+	}
+
+	GEH_ako_berate = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = GEH
+		}
+
+		fire_only_once = no
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 5
+
+		days_remove = 7
+
+		remove_effect = {
+			GEH_ako_love_medium_decrease_effect = yes
+		}
+	}
+
+}
