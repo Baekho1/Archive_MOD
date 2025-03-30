@@ -496,7 +496,13 @@ focus_tree = {
 		cost = 2
 		available = {
 			is_subject = no
-			has_war_with = GEM
+			OR = {
+				has_war_with = GEM
+				AND = {
+					has_war_with = HEU
+					NOT = { country_exists = GEM }
+				}
+			}
 		}
         prerequisite = { focus = GEH_attack_plan_ONE_FOUR_TWO }
         prerequisite = { focus = GEH_Pandemonium_Society_Building_Control }

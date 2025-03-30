@@ -5204,7 +5204,7 @@ focus_tree = {
 			focus = ABY_focus_wjsekdeoghl   #이전 중점
 		}
 		mutually_exclusive = {
-			focus = ABY_focus_reject_ultimatum   #반대되는 중점
+			focus = ABY_focus_establish_sekhmet   #반대되는 중점
 		}
 		x = 1      #좌표
 		y = 1
@@ -12604,7 +12604,7 @@ focus_tree = {
 	}
 
 	focus = { #최후통첩 거부 
-        id = ABY_focus_reject_ultimatum
+        id = ABY_focus_establish_sekhmet
         icon = GFX_goal_generic_forceful_treaty
         prerequisite = {
             focus = ABY_focus_wjsekdeoghl
@@ -12633,12 +12633,12 @@ focus_tree = {
         id = ABY_focus_contact_with_hyakkaryoran
         icon = GFX_goal_generic_improve_relations
         prerequisite = {
-            focus = ABY_focus_reject_ultimatum
+            focus = ABY_focus_establish_sekhmet
         }
         x = -1
         y = 1
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         completion_reward = {
 
@@ -12649,12 +12649,12 @@ focus_tree = {
         id = ABY_focus_deal_with_genbushokai
         icon = GFX_goal_generic_intelligence_exchange
         prerequisite = {
-            focus = ABY_focus_reject_ultimatum
+            focus = ABY_focus_establish_sekhmet
         }
         x = 1
         y = 1
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         completion_reward = {
             
@@ -12673,7 +12673,7 @@ focus_tree = {
         x = 0
         y = 2
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         available = {
             has_completed_focus = ABY_focus_succeed_legitimacy
@@ -12699,7 +12699,7 @@ focus_tree = {
         x = 2
         y = 3
         cost = 10
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         available = {
             has_completed_focus = ABY_focus_succeed_legitimacy
@@ -12722,7 +12722,7 @@ focus_tree = {
         x = 3
         y = 2
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         completion_reward = {
             
@@ -12741,7 +12741,7 @@ focus_tree = {
         x = 5
         y = 2
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         completion_reward = {
             
@@ -12753,12 +12753,14 @@ focus_tree = {
         icon = GFX_focus_generic_befriend_czechoslovakia
         prerequisite = {
             focus = ABY_focus_succeed_legitimacy
+        }
+		prerequisite = {
             focus = ABY_focus_expand_guerilla
         }
         x = 4
         y = 3
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         completion_reward = {
             
@@ -12774,7 +12776,7 @@ focus_tree = {
         }
         x = 0
         y = 3
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
         cost = 2
 
         completion_reward = {
@@ -12796,6 +12798,12 @@ focus_tree = {
         relative_position_id = ABY_focus_threats_outside
         cost = 5
 
+		available = {
+            TRM = {
+                has_government = fascism
+            }
+        }
+
         completion_reward = {
 
         }
@@ -12815,11 +12823,11 @@ focus_tree = {
         relative_position_id = ABY_focus_threats_outside
         cost = 5
 
-        available = {
-            TRM = {
-                has_government = fascism
-            }
-        }
+		available = {
+			ITA = {
+					has_government = fascism
+			}		
+		}
 
         completion_reward = {
 
@@ -13049,7 +13057,7 @@ focus_tree = {
         id = ABY_focus_bloodthirst_of_lion
         icon = GFX_focus_SWE_the_lion_of_the_north
         prerequisite = {
-            focus = ABY_focus_reject_ultimatum
+            focus = ABY_focus_establish_sekhmet
         }
         mutually_exclusive = {
             focus = ABY_focus_end_of_vengeance
@@ -13057,7 +13065,7 @@ focus_tree = {
         x = -4
         y = 1
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         available = {
             has_completed_focus = ABY_focus_though_war_is_over
@@ -13151,7 +13159,7 @@ focus_tree = {
         id = ABY_focus_end_of_vengeance
         icon = GFX_goal_generic_territory_or_war
         prerequisite = {
-            focus = ABY_focus_reject_ultimatum
+            focus = ABY_focus_establish_sekhmet
         }
         mutually_exclusive = {
             focus = ABY_focus_bloodthirst_of_lion
@@ -13159,7 +13167,7 @@ focus_tree = {
         x = -8
         y = 1
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         available = {
             has_completed_focus = ABY_focus_though_war_is_over
@@ -13180,7 +13188,7 @@ focus_tree = {
         x = -8
         y = 2
         cost = 5
-        relative_position_id = ABY_focus_reject_ultimatum
+        relative_position_id = ABY_focus_establish_sekhmet
 
         available = {
             has_completed_focus = ABY_focus_end_of_vengeance
@@ -13317,7 +13325,7 @@ focus = { #키보토스인 우선
 
     focus = { #새 키보토스 학생회
         id = ABY_focus_new_kivotos_council
-        icon = GFX_focus_GER_fund_the_film_department
+        icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility
         prerequisite = { 
             focus = ABY_focus_serika_dictatorship
         }

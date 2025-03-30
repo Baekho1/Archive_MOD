@@ -37,6 +37,16 @@
  TRM_sisters_one_and_all_NAME: "형제, 자매가 하나 되어"
  TRM_sisters_one_and_all_DESC: "트리니티로 $TRN_the_situation_of_the_trinity$ 중점을 완료한 뒤, 기존의 분파들을 복원하세요"
 
+ #흥신소 68
+ HEU_hardboiled_GSC_president_NAME: "하드보일드 총학생회장"
+ HEU_hardboiled_GSC_president_DESC: "흥신소 68로 $HEU_GSC_president_rikuhachima$ 중점을 완료하여 키보토스의 총학생회장이 되세요"
+ HEU_love_for_hina_chan_NAME: "설정오류도 하드보일드..."
+ HEU_love_for_hina_chan_DESC: "흥신소 68로 소라사키 히나를 흥신소의 신입부원으로 합류시키세요"
+ HEU_aru_daisuki_everyone_NAME: "무자비한 아루 애호단"
+ HEU_aru_daisuki_everyone_DESC: "흥신소 68로 리쿠하치마 아루와 흥신소 사원과의 결혼식을 치르세요"
+ HEU_coffee_and_aru_story_NAME: "커피, 특별한 조미료 포함"
+ HEU_coffee_and_aru_story_DESC: "흥신소 68로 $HEU_germany_union$ 중점을 완료하세요"
+
  # 도과 관련 플래그
  FRA_collapse: "프랑스 붕괴."
  MIL_start_SVO: "특별군사작전 개시"
