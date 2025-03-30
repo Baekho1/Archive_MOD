@@ -964,6 +964,9 @@ country_event = { #
 				small = GFX_GEH_Ako_Dress_advisor
 			}
 		}
+		set_country_leader_description = {
+			desc = GEH_hina_empress_leader_desc
+		}
 	}
 }
 country_event = { #
@@ -987,6 +990,10 @@ country_event = { # 인터넷 개통
 	title = GEH.flavor_event.1.t
 	desc = GEH.flavor_event.1.desc
 	picture = GFX_report_event_generic_city
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -1058,6 +1065,10 @@ country_event = { # 바우하우스
 	title = GEH.flavor_event.6.t
 	desc = GEH.flavor_event.6.desc
 	picture = GFX_event_mega_cities_GEH_2
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -1072,6 +1083,10 @@ country_event = { # 퇴폐 미술전
 	title = GEH.flavor_event.7.t
 	desc = GEH.flavor_event.7.desc
 	picture = GFX_report_event_RED_campus_night
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -1086,6 +1101,10 @@ country_event = { # 음악의 아름다움
 	title = GEH.flavor_event.8.t
 	desc = GEH.flavor_event.8.desc
 	picture = GFX_report_event_generic_door
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
