@@ -1,4 +1,5 @@
 add_namespace = shafas
+add_namespace = shadem
 add_namespace = shafla
 add_namespace = shanews
 
@@ -395,6 +396,38 @@ country_event = {
 	}
 }
 
+# 첫 선거
+country_event = {
+	id = shadem.1
+	title = shadem.1.t
+	desc = { 
+		text = shadem.1.desc
+		trigger = { 
+			NOT = { has_completed_focus = SHA_progressivism_through_science }
+		}
+	}
+	desc = { 
+		text = shadem.1.desca
+		trigger = { has_completed_focus = SHA_progressivism_through_science }
+	}
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+	option = {
+		name = shadem.1.a
+	}
+
+	option = {
+		name = shadem.1.b
+	}
+
+	option = {
+		name = shadem.1.d
+		trigger = { has_completed_focus = SHA_progressivism_through_science }
+	}
+}
+
 
 # 뉴스
 news_event = {
@@ -682,7 +715,7 @@ news_event = {
 	}
 }
 
-# 
+# 많이 먹고 힘내야지!
 country_event = {
 	id = shafla.1
 	title = shafla.1.t
@@ -693,6 +726,21 @@ country_event = {
 
 	option = {
 		name = shafla.1.a
+
+	}
+}
+
+# 이행침체 끝나면 나오는 이벤트
+country_event = {
+	id = shafla.2
+	title = shafla.2.t
+	desc = shafla.2.desc
+	picture = GFX_report_event_second_vienna_award_pact
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafla.2.a
 
 	}
 }

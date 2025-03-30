@@ -398,6 +398,7 @@ country_event = { # 1차 총회 - 1
 
 	option = { 
 		name = hina_assembly.8.a
+		custom_effect_tooltip = hina_assembly_a_1_tt
 		add_to_variable = { GEH_hina_a_var = 1 }
 
 		custom_effect_tooltip = hina_assembly_9_tta
@@ -407,12 +408,14 @@ country_event = { # 1차 총회 - 1
 	
 	option = { 
 		name = hina_assembly.8.b
+		custom_effect_tooltip = hina_assembly_h_1_tt
 		set_country_flag = GEH_event_hina_route_flag1
 		add_stability = 0.05
 	}
 	
 	option = { 
 		name = hina_assembly.8.c
+		custom_effect_tooltip = hina_assembly_c_1_tt
 		add_to_variable = { GEH_hina_c_var = 1 }
 
 		custom_effect_tooltip = hina_assembly_9_ttc
@@ -429,6 +432,13 @@ country_event = { # 1차 총회 - 2
 	
 	option = { 
 		name = hina_assembly.9.a
+		if = {
+			limit = { check_variable = { GEH_hina_a_var > 0 } }
+			custom_effect_tooltip = hina_assembly_a_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		add_to_variable = { GEH_hina_a_var = 1 }
 
 		add_political_power = 25
@@ -437,11 +447,25 @@ country_event = { # 1차 총회 - 2
 	
 	option = {
 		name = hina_assembly.9.b
+		if = {
+			limit = { has_country_flag = GEH_event_hina_route_flag1 }
+			custom_effect_tooltip = hina_assembly_h_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		set_country_flag = GEH_event_hina_route_flag2
 	}
 	
 	option = {
 		name = hina_assembly.9.c
+		if = {
+			limit = { check_variable = { GEH_hina_c_var > 0 } }
+			custom_effect_tooltip = hina_assembly_c_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		set_country_flag = hina_assembly_9_flag
 		add_to_variable = { GEH_hina_c_var = 1 }
 
@@ -469,6 +493,10 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.a
+		if = {
+			limit = { has_country_flag = GEH_event_hina_route_flag2 }
+			custom_effect_tooltip = hina_assembly_h_2_tt
+		}
 		set_country_flag = GEH_event_hina_route_flag3
 
 		add_stability = 0.05
@@ -482,6 +510,10 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.b
+		if = {
+			limit = { has_country_flag = GEH_event_hina_route_flag2 }
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		add_stability = -0.15
 		add_war_support = -0.05
 	}
@@ -491,6 +523,10 @@ country_event = { # 1차 총회 - 3
 			NOT = { has_country_flag = hina_assembly_9_flag }
 		}
 		name = hina_assembly.10.c
+		if = {
+			limit = { has_country_flag = GEH_event_hina_route_flag2 }
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 
 		add_stability = -0.20
 		set_country_flag = GEH_establishment_of_german_autonomous_government_flag_flag
@@ -510,18 +546,39 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.a
+		if = {
+			limit = { check_variable = { GEH_hina_a_var > 1 } }
+			custom_effect_tooltip = hina_assembly_a_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		add_to_variable = { GEH_hina_a_var = 1 }
 		set_country_flag = hina_assembly_11_a_flag
 	}
 	
 	option = { 
 		name = hina_assembly.11.b
+		if = {
+			limit = { has_country_flag = GEH_event_hina_route_flag3 }
+			custom_effect_tooltip = hina_assembly_h_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		set_country_flag = GEH_event_hina_route_flag4
 		set_country_flag = hina_assembly_11_b_flag
 	}
 	
 	option = { 
 		name = hina_assembly.11.c
+		if = {
+			limit = { check_variable = { GEH_hina_c_var > 1 } }
+			custom_effect_tooltip = hina_assembly_c_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		add_to_variable = { GEH_hina_c_var = 1 }
 		set_country_flag = hina_assembly_11_c_flag
 	}
@@ -536,10 +593,22 @@ country_event = { # 1차 총회 - 5
 	
 	option = { 
 		name = hina_assembly.12.a
+		custom_effect_tooltip = hina_assembly_n_tt
 	}
 	
 	option = { 
 		name = hina_assembly.12.b
+		if = {
+			limit = { check_variable = { GEH_hina_a_var > 2 } }
+			custom_effect_tooltip = hina_assembly_a_2_tt
+		}
+		else_if = {
+			limit = { check_variable = { GEH_hina_c_var > 2 } }
+			custom_effect_tooltip = hina_assembly_c_2_tt
+		}
+		else = {
+			custom_effect_tooltip = hina_assembly_n_tt
+		}
 		add_to_variable = { GEH_hina_a_var = 1 }
 		add_to_variable = { GEH_hina_c_var = 1 }
 	}
@@ -552,6 +621,7 @@ country_event = { # 1차 총회 - 5
 			has_country_flag = GEH_event_hina_route_flag3
 			has_country_flag = GEH_event_hina_route_flag4
 		}
+		custom_effect_tooltip = hina_assembly_h_2_tt
 		clr_country_flag = GEH_event_hina_route_flag1
 		clr_country_flag = GEH_event_hina_route_flag2
 		clr_country_flag = GEH_event_hina_route_flag3
@@ -894,6 +964,9 @@ country_event = { #
 				small = GFX_GEH_Ako_Dress_advisor
 			}
 		}
+		set_country_leader_description = {
+			desc = GEH_hina_empress_leader_desc
+		}
 	}
 }
 country_event = { #
@@ -917,6 +990,10 @@ country_event = { # 인터넷 개통
 	title = GEH.flavor_event.1.t
 	desc = GEH.flavor_event.1.desc
 	picture = GFX_report_event_generic_city
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -988,6 +1065,10 @@ country_event = { # 바우하우스
 	title = GEH.flavor_event.6.t
 	desc = GEH.flavor_event.6.desc
 	picture = GFX_event_mega_cities_GEH_2
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -1002,6 +1083,10 @@ country_event = { # 퇴폐 미술전
 	title = GEH.flavor_event.7.t
 	desc = GEH.flavor_event.7.desc
 	picture = GFX_report_event_RED_campus_night
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	
@@ -1016,6 +1101,10 @@ country_event = { # 음악의 아름다움
 	title = GEH.flavor_event.8.t
 	desc = GEH.flavor_event.8.desc
 	picture = GFX_report_event_generic_door
+
+	trigger = {
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+	}
 	
     is_triggered_only = yes
 	

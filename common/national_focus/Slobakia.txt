@@ -245,12 +245,12 @@ focus_tree = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-3
-		icon = GFX_focus_generic_befriend_czechoslovakia
+		icon = GFX_focus_PER_embrace_opulence
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-		x = 7
+		x = 11
 		y = 4
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -1163,6 +1163,7 @@ focus_tree = {
 		available = {
 			is_in_faction_with = POL
 			controls_state = 70
+			controls_state = 71
 		}
 		bypass = {
 		}
@@ -1491,6 +1492,734 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-32
+		icon = GFX_focus_generic_befriend_czechoslovakia
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-4-3
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = SLO_threat_1
+			}
+			add_state_claim = 69
+			add_state_claim = 972
+			add_state_claim = 9
+			add_state_claim = 75
+			add_state_claim = 74
+			add_state_claim = 72
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-33
+		icon = GFX_focus_POL_beck_ribbentrop
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 14
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-32
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_tt_11
+			hidden_effect = {
+				division_template = {
+					name = "Česká divize"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 70 }
+					create_unit = {
+						division = "name = \"1. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"3. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"4. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"5. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"6. Česká divize\" division_template = \"Česká divize\" start_experience_factor = 0.3"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-34
+		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 14
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-33
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_tt_12
+			hidden_effect = {
+				division_template = {
+					name = "Czech Elite Division"
+					priority = 2
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						artillery = { x = 2 y = 1 }
+						artillery = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 70 }
+					create_unit = {
+						division = "name = \"1. Czech Elite Division\" division_template = \"Czech Elite Division\" start_experience_factor = 0.9"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Czech Elite Division\" division_template = \"Czech Elite Division\" start_experience_factor = 0.9"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"3. Czech Elite Division\" division_template = \"Czech Elite Division\" start_experience_factor = 0.9"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"4. Czech Elite Division\" division_template = \"Czech Elite Division\" start_experience_factor = 0.9"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-35
+		icon = GFX_goal_generic_special_forces 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 6
+		prerequisite = {
+			focus = SLO_foc_1-4-32
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			threat > 0.1
+		}
+		bypass = {
+		}
+		completion_reward = {
+			army_experience = 25
+			if = {
+				limit = {
+					has_tech = mystery_correspondence
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = mystic_engineering
+				}
+			}
+			else = {
+				set_technology = {
+					mystery_correspondence = 1
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-36
+		icon = GFX_goal_generic_occupy_states_ongoing_war 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-35
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 75
+			owns_state = 74
+			owns_state = 72
+		}
+		completion_reward = {
+			#SLO_czech_liberation_committee_state
+			every_state = {
+				limit = {
+					OR = {
+						state = 69
+						state = 972
+						state = 9
+						state = 75
+						state = 74
+						state = 72
+					}
+				}
+				add_dynamic_modifier = { 
+					modifier = SLO_czech_liberation_committee_state 
+					scope = SLO
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-37
+		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-34
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-36
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 75
+			owns_state = 74
+			owns_state = 72
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 69
+						owns_state = 972
+						owns_state = 9
+						owns_state = 75
+						owns_state = 74
+						owns_state = 72
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_claimed_state
+						generator = { 69 972 9 75 74 72 }
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-38
+		icon = GFX_focus_CZE_czechoslovak_legion_export 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-37
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			has_war = no
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 75
+			owns_state = 74
+			owns_state = 72
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_cosmetic_tag = SLO_czechoslovakia_tag
+			add_state_core = 69
+			add_state_core = 972
+			add_state_core = 9
+			add_state_core = 75
+			add_state_core = 74
+			add_state_core = 72
+			add_victory_points = {
+				province = 3585
+				value = -12
+			}
+			add_victory_points = {
+				province = 11432
+				value = -9
+			}
+			add_victory_points = {
+				province = 3418
+				value = -2
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 69
+						state = 972
+						state = 9
+						state = 75
+						state = 74
+						state = 72
+					}
+				}
+				remove_dynamic_modifier = { 
+					modifier = SLO_czech_liberation_committee_state 
+					scope = SLO
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-39
+		icon = GFX_focus_generic_befriend_czechoslovakia 
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-38
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4-40
+		}
+		available = {
+			controls_state = 69
+			controls_state = 972
+			controls_state = 9
+			controls_state = 75
+			controls_state = 74
+			controls_state = 72
+			controls_state = 70
+			controls_state = 71
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					9 75 74 72 69 972
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_capital = { state = 9 }
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-40
+		icon = GFX_focus_generic_befriend_slovakia 
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-38
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_1-4-39
+		}
+		available = {
+			controls_state = 69
+			controls_state = 972
+			controls_state = 9
+			controls_state = 75
+			controls_state = 74
+			controls_state = 72
+			controls_state = 70
+			controls_state = 71
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					70 71 73 664
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 11542
+				value = -10
+			}
+			add_victory_points = {
+				province = 9569
+				value = -15
+			}
+			add_victory_points = {
+				province = 6418
+				value = -10
+			}
+			add_victory_points = {
+				province = 3569
+				value = -15
+			}
+			add_victory_points = {
+				province = 9692
+				value = 15
+			}
+			add_victory_points = {
+				province = 541
+				value = 2
+			}
+			add_victory_points = {
+				province = 3537
+				value = 2
+			}
+			add_victory_points = {
+				province = 11539
+				value = 5
+			}
+			add_victory_points = {
+				province = 3581
+				value = 5
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-41
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 12
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-39
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 9
+		}
+		bypass = {
+		}
+		completion_reward = {
+			9 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				} 
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 6418
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 9569
+					instant_build = yes
+				}
+				hidden_effect = {
+					build_railway = {
+						level = 1
+						start_province = 11542
+						target_province = 6418
+					}
+					build_railway = {
+						level = 1
+						start_province = 11542
+						target_province = 9569
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-42
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-39
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 75
+			controls_state = 74
+			controls_state = 72
+		}
+		bypass = {
+		}
+		completion_reward = {
+			75 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			72 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-43
+		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-40
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 71
+			controls_state = 73
+			controls_state = 664
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+			71 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+			73 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = town
+			}
+			664 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+			add_victory_points = {
+				province = 6573
+				value = 5
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-44
+		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-43
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 70
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+			70 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 9692
+					}
+				}
+				set_state_category = megalopolis
+			}
+			add_victory_points = {
+				province = 9692
+				value = 10
+			}
+		}
+	}
 	### 파시, 파시즘, 파시스트 루트 ###
 	focus = {
 		#relative_position_id = SLO_foc_
@@ -1501,7 +2230,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 30
+		x = 50
 		y = 0
 		prerequisite = {
 			#focus = SLO_foc_

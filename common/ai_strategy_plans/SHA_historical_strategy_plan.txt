@@ -47,9 +47,12 @@ SHA_historical = {
 		
 		SHA_National_Guard_Expansion
 		SHA_heroism_education
+		
+		SHA_establish_the_VES
+		SHA_solidarist_representation
 
 		# 승전 중점
-		SHA_ascension
+		SHA_strengthening_identity_of_southern_kivotos
 		SHA_Establishment_of_the_Governor_General
 		SHA_industrial_exploitation
 		SHA_Leave_SHA
@@ -57,9 +60,6 @@ SHA_historical = {
 		
 		SHA_courting_the_princess_of_industry
 		SHA_Construction_of_Kolnbrein_Dam
-		
-		SHA_establish_the_VES
-		SHA_solidarist_representation
 
 	}
 

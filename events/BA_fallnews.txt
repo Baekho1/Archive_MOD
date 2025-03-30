@@ -338,6 +338,10 @@ news_event = { #리버풀 함락(카이저 코퍼레이션)
 	}	
 	immediate = {
 		set_global_flag = BA_fall_132_kai
+		hidden_effect = { 
+		     ENG = { ENG_jackie_smyth = { set_nationality = KAI } }
+			 KAI = { ENG_jackie_smyth = { unit_leader_event = { id = KAI_storyevent.1 } } }
+		}
 	}
 	option = {
 		name = news.280.b

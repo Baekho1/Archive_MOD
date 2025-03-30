@@ -24,6 +24,10 @@ focus_tree = {
 	}
 	default = no
 
+	initial_show_position = {
+	    focus = SHA_Austrian_appeasement_policy
+	}
+
 #	shortcut = {
 #		name = SHA_economic_path_shortcut
 #		target = SHA_teleological_planning 
@@ -737,9 +741,6 @@ focus_tree = {
 				SHA_Shanhaijinfascism_research_speed_factor = 0.1
 				tooltip = research_speed_factor_tt
 			}
-			custom_effect_tooltip = tooltip_white_line
-			add_research_slot = 1
-			custom_effect_tooltip = tooltip_white_line
 			swap_ruler_traits = { remove = SHA_T4a add = SHA_T4a_2 }
 			SHA_EAS_idea_remove = yes
 		}
@@ -764,7 +765,7 @@ focus_tree = {
 		relative_position_id = SHA_Eastern_Alchemy_Society_solidarity
 
 		completion_reward = {
-			add_research_slot = 1
+			add_research_slot = 2
 		}
 	}
 
@@ -1328,7 +1329,8 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GAEBALJUNG
-				always = no
+				is_debug = yes
+				is_ai = no
 			}
 		}
 		bypass = { }
@@ -1368,34 +1370,12 @@ focus_tree = {
 		}
 	}
 
-	# 오스트리아 정치인 석방
+	# 현무상회와 협력
 	focus = {
-		id = SHA_austrian_politician_released
-		icon = GFX_focus_AUS_release_imprisoned_leaders
-		x = 0
+		id = SHA_appointment_of_BTP
+		icon = GFX_focus_SHA_appointment_of_BTP
+		x = 3
 		y = 1
-		cost = 2
-
-		prerequisite = { focus = SHA_local_harmony }
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_local_harmony
-
-		completion_reward = {
-
-		}
-	}
-
-	# 현룡문 정책 선회
-	focus = {
-		id = SHA_government_policy_shift
-		icon = GFX_focus_hol_abandon_the_gold_standard
-		x = 4
-		y = 2
 		cost = 5
 
 		prerequisite = { focus = SHA_local_harmony }
@@ -1412,181 +1392,18 @@ focus_tree = {
 		}
 	}
 
-	# 고립 정책 번복
+	# 방어적 민주주의
 	focus = {
-		id = SHA_isolation_policy_overturned
-		icon = GFX_focus_AUS_disregard_the_treaties
-		x = 0
+		id = SHA_defensive_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 1
 		y = 1
-		cost = 5
-
-		prerequisite = { 
-			focus = SHA_government_policy_shift 
-		}
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_government_policy_shift
-
-		completion_reward = {
-
-		}
-	}
-
-	# 새로운 법전
-	focus = {
-		id = SHA_command_new_contitution
-		icon = GFX_focus_generic_treaty
-		x = 0
-		y = 2
 		cost = 5
 
 		prerequisite = { 
 			focus = SHA_appointment_of_BTP
-			focus = SHA_strengthening_kisaki_authority
 		}
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_government_policy_shift
-
-		completion_reward = {
-
-		}
-	}
-
-	# 연구소 확장
-	focus = {
-		id = SHA_Lab_expansion
-		icon = GFX_focus_research
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { 
-			focus = SHA_command_new_contitution
-		}
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_command_new_contitution
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	# 신 체제 수호 
-	focus = {
-		id = SHA_protecting_the_new_system
-		icon = GFX_focus_generic_combined_arms
-		x = 0
-		y = 1
-		cost = 10
-
-		prerequisite = { 
-			focus = SHA_Lab_expansion
-		}
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_Lab_expansion
-
-		select_effect = {
-			add_timed_idea = {
-				idea = AFG_defending_the_nation_idea
-				days = 730
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
-			effect_tooltip = {
-				add_timed_idea = {
-					idea = AFG_defending_the_nation_idea
-					days = 180
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	# 반동 제거
-	focus = {
-		id = SHA_remove_conservatives
-		icon = GFX_focus_SHA_remove_POC
-		x = -4
-		y = 1
-		cost = 5
-
-		prerequisite = { 
-			focus = SHA_government_policy_shift 
-			focus = SHA_communist_branch
-		}
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_government_policy_shift
-
-		completion_reward = {
-			remove_ideas = SHA_Peking_Opera
-		}
-	}
-
-	# 현무상회와 협력
-	focus = {
-		id = SHA_appointment_of_BTP
-		icon = GFX_focus_SHA_appointment_of_BTP
-		x = -2
-		y = 1
-		cost = 5
-
-		prerequisite = { focus = SHA_government_policy_shift }
-		mutually_exclusive = {  }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_government_policy_shift
-
-		completion_reward = {
-
-		}
-	}
-
-	# 탈 권위주의
-	focus = {
-		id = SHA_post_authoritarianism
-		icon = GFX_focus_POL_complete_april_constitution
-		x = 0
-		y = 2
-		cost = 5
-
-		prerequisite = { focus = SHA_appointment_of_BTP }
-		mutually_exclusive = {  }
+		mutually_exclusive = { }
 
 		available = { 
 		}
@@ -1599,87 +1416,171 @@ focus_tree = {
 		}
 	}
 
-	# 민주주의 전파
+	# 자본주의 체계 도입
 	focus = {
-		id = SHA_spread_democracy
-		icon = GFX_focus_ARG_defense_and_democracy
-		x = 0
+		id = SHA_transplanting_capitalist_system
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		x = 1
 		y = 1
 		cost = 5
 
-		prerequisite = { focus = SHA_post_authoritarianism }
-		mutually_exclusive = {  }
+		prerequisite = { 
+			focus = SHA_defensive_democracy
+		}
+		mutually_exclusive = { }
 
 		available = { 
 		}
 		bypass = { }
 
-		relative_position_id = SHA_post_authoritarianism
+		relative_position_id = SHA_defensive_democracy
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SHA_transition_to_capitalism
+				days = 180
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = SHA_transplanting_capitalist_system_tt
+			custom_effect_tooltip = SHA_transplanting_capitalist_system_2_tt
+			if = {
+				limit = { has_idea = SHA_supreme_economic_council }
+				remove_ideas = SHA_supreme_economic_council
+				else_if = {
+					limit = { has_idea = SHA_supreme_economic_council_2 }
+					remove_ideas = SHA_supreme_economic_council_2
+				}
+				else_if = {
+					limit = { has_idea = SHA_supreme_economic_council_3 }
+					remove_ideas = SHA_supreme_economic_council_3
+				}
+			}
+			if = {
+				limit = { has_idea = SHA_ASFTU }
+				remove_ideas = SHA_ASFTU
+				add_stability = 0.05
+				else_if = {
+					limit = { has_idea = SHA_ASFTU_2 }
+					remove_ideas = SHA_ASFTU_2
+				}
+				else_if = {
+					limit = { has_idea = SHA_ASFTU_3 }
+					remove_ideas = SHA_ASFTU_3
+				}
+			}
+		}
+	}
+
+	# 민주주의 교육
+	focus = {
+		id = SHA_democracy_education
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_defensive_democracy
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_defensive_democracy
 
 		completion_reward = {
 
 		}
 	}
 
-	# 키사키 권위 강화 
+	# 선거 실시
 	focus = {
-		id = SHA_strengthening_kisaki_authority
+		id = SHA_hold_elections
+		icon = GFX_focus_AFG_pashtunistan_referendum
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = SHA_transplanting_capitalist_system }
+		prerequisite = { focus = SHA_democracy_education }
+		prerequisite = { focus = SHA_a_new_constitution }
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_transplanting_capitalist_system
+
+		completion_reward = {
+			custom_effect_tooltip = AFG_hold_elections_tt
+			country_event = { id = shadem.1 hours = 04 }
+		}
+	}
+
+	# 교도민주주의
+	focus = {
+		id = SHA_guided_democracy
 		icon = GFX_focus_SHA_strengthening_kisaki_authority
-		x = 2
+		x = -1
 		y = 1
-		cost = 5
+		cost = 0
 
-		prerequisite = { focus = SHA_government_policy_shift }
+		prerequisite = { focus = SHA_hold_elections }
+		mutually_exclusive = { 
+			focus = SHA_a_responsible_government
+		}
 
-		available = { 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
 		}
 		bypass = { }
 
-		relative_position_id = SHA_government_policy_shift
+		relative_position_id = SHA_hold_elections
 
 		completion_reward = {
 
 		}
 	}
 
-	# 신대통령제
+	# 책임지는 정부
 	focus = {
-		id = SHA_hyper_presidentialism
-		icon = GFX_focus_AFG_retire_the_uncles
-		x = 0
-		y = 4
-		cost = 10
-
-		prerequisite = { focus = SHA_strengthening_kisaki_authority }
-		prerequisite = { focus = SHA_protecting_the_new_system }
-
-		available = { 
-		}
-		bypass = { }
-
-		relative_position_id = SHA_strengthening_kisaki_authority
-
-		completion_reward = {
-
-		}
-	}
-
-	# 의회민주주의
-	focus = {
-		id = SHA_Kivotos_democracy
-		icon = GFX_focus_generic_democratic_europe
-		x = 0
+		id = SHA_a_responsible_government
+		icon = GFX_focus_SHA_vote_to_Rumi
+		x = 1
 		y = 1
-		cost = 10
+		cost = 0
 
-		prerequisite = { focus = SHA_spread_democracy }
-		prerequisite = { focus = SHA_protecting_the_new_system }
+		prerequisite = { focus = SHA_hold_elections }
+		mutually_exclusive = {
+			focus = SHA_guided_democracy
+		}
 
-		available = { 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlock_focuses
+				always = no
+			}
 		}
 		bypass = { }
 
-		relative_position_id = SHA_spread_democracy
+		relative_position_id = SHA_hold_elections
 
 		completion_reward = {
 
@@ -1688,16 +1589,16 @@ focus_tree = {
 
 	
 
-	# 현룡문 정책 선회
+	# 공산주의 쿠데타
 	focus = {
 		id = SHA_communist_branch
 		icon = GFX_focus_generic_join_comintern
 		x = -3
-		y = 2
+		y = 1
 		cost = 5
 
 		prerequisite = { focus = SHA_local_harmony }
-		mutually_exclusive = { focus = SHA_government_policy_shift }
+		mutually_exclusive = { focus = SHA_appointment_of_BTP }
 
 		available = { 
 			custom_trigger_tooltip = {
@@ -1714,6 +1615,209 @@ focus_tree = {
 		}
 	}
 
+	# 의회주의 강화
+	focus = {
+		id = SHA_strengthening_parliamentarism
+		icon = GFX_focus_generic_industrialists
+		x = 3
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_appointment_of_BTP }
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_appointment_of_BTP
+
+		completion_reward = {
+			set_country_flag = SHA_a_new_constitution_flag
+		}
+	}
+
+	# 새로운 법전
+	focus = {
+		id = SHA_a_new_constitution
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = SHA_strengthening_parliamentarism }
+		mutually_exclusive = { }
+
+		available = { 
+			has_country_flag = {
+				flag = SHA_a_new_constitution_flag
+				days > 175
+			}
+			custom_trigger_tooltip = {
+				tooltip = SHA_str_par_focus_days_tt
+				has_country_flag = {
+					flag = SHA_a_new_constitution_flag
+					days > 175
+				}
+			}
+		}
+		bypass = { }
+
+		relative_position_id = SHA_strengthening_parliamentarism
+
+		completion_reward = {
+
+		}
+	}
+
+	# 오스트리아 정치인 석방
+	focus = {
+		id = SHA_release_austrian_politician
+		icon = GFX_focus_AUS_release_imprisoned_leaders
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_appointment_of_BTP 
+			focus = SHA_communist_branch
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_appointment_of_BTP
+
+		completion_reward = {
+
+		}
+	}
+
+	# 극단주의에 대항
+	focus = {
+		id = SHA_fight_against_extremism
+		icon = GFX_focus_SHA_remove_POC
+		x = -4
+		y = 0
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_appointment_of_BTP 
+			focus = SHA_communist_branch
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_release_austrian_politician
+
+		completion_reward = {
+
+		}
+	}
+
+	# 빈 대학교
+	focus = {
+		id = SHA_university_of_vienna
+		icon = GFX_focus_research
+		x = -2
+		y = 0
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_appointment_of_BTP 
+			focus = SHA_communist_branch
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_release_austrian_politician
+
+		completion_reward = {
+
+		}
+	}
+
+	# 노동조합 결성
+	focus = {
+		id = SHA_formation_of_labor_union
+		icon = GFX_focus_FIN_finnish_federation_of_trade_unions
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_university_of_vienna
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_university_of_vienna
+
+		completion_reward = {
+
+		}
+	}
+
+	# 여성 교육
+	focus = {
+		id = SHA_womens_education_initiative
+		icon = GFX_focus_AUS_womens_education_initiative
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_university_of_vienna
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_university_of_vienna
+
+		completion_reward = {
+
+		}
+	}
+
+	# 과학을 통한 진보
+	focus = {
+		id = SHA_progressivism_through_science
+		icon = GFX_focus_SHA_yakushi_saya
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { 
+			focus = SHA_formation_of_labor_union
+			focus = SHA_womens_education_initiative
+		}
+		mutually_exclusive = { }
+
+		available = { 
+		}
+		bypass = { }
+
+		relative_position_id = SHA_formation_of_labor_union
+
+		completion_reward = {
+
+		}
+	}
+
 
 	##############
 	####외교 중점####
@@ -1722,9 +1826,21 @@ focus_tree = {
 	# 산해경 중앙특구 협정 창설
 	focus = {
 		id = SHA_Shanhaijing_fact
-		icon = GFX_goal_SHA_Southern_Kivotos
+		icon = GFX_focus_SHA_Shanhaijing_pact
 		x = 15
 		y = 0
+		offset = {
+			x = -25
+			trigger = { has_completed_focus = SHA_Austrian_appeasement_policy }
+		}
+		offset = {
+			x = -8
+			trigger = { has_completed_focus = SHA_gathering_of_radicals }
+		}
+		offset = {
+			x = -8
+			trigger = { has_completed_focus = SHA_local_harmony }
+		}
 		relative_position_id = SHA_Austrian_oppression_continues
 		search_filters = {  }
 		cost = 2
@@ -1855,6 +1971,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
+		allow_branch = {
+			has_completed_focus = SHA_gathering_of_radicals
+		}
 		bypass = { }
 
 
@@ -1880,6 +1999,9 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+		}
+		allow_branch = {
+			has_completed_focus = SHA_gathering_of_radicals
 		}
 		bypass = { }
 
@@ -2163,6 +2285,39 @@ focus_tree = {
 			custom_effect_tooltip = HYA_war_with_southern_kivotos_decision_def_tt
 		}
 	}
+
+	# 남 키보토스 정체성 강화
+	focus = {
+		id = SHA_strengthening_identity_of_southern_kivotos
+		icon = GFX_goal_SHA_Southern_Kivotos
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+		mutually_exclusive = { focus = SHA_2nd_conservative_revolution focus = SHA_ascension }
+
+		available = {
+			OR = {
+				NOT = { country_exists = HYA  }
+				owns_state = 972
+			}
+			NOT = { has_global_flag = GFLAG_BAKSANWAR_END }
+		}
+		bypass = {
+
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+		
+		will_lead_to_war_with = HYA
+		
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			unlock_decision_tooltip = southern_kivoto_decision
+		}
+	}
 	#########################
 	#### 급진파 결집 - 산해경 승전 루트####
 	#########################
@@ -2176,7 +2331,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
-		mutually_exclusive = { focus = SHA_ascension }
+		mutually_exclusive = { focus = SHA_ascension focus = SHA_strengthening_identity_of_southern_kivotos }
 
 		available = {
 			OR = {
@@ -2441,7 +2596,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
-		mutually_exclusive = { focus = SHA_2nd_conservative_revolution }
+		mutually_exclusive = { focus = SHA_2nd_conservative_revolution focus = SHA_strengthening_identity_of_southern_kivotos}
 
 		available = {
 			OR = {
@@ -2458,7 +2613,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.15
-			add_war_support = 0.1
+			add_war_support = 0.15
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = SHA_Shanhaijing_fascism_tt
 			add_to_variable = {
@@ -2694,8 +2849,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 
-		prerequisite = { focus = SHA_ascension focus = SHA_2nd_conservative_revolution }
-		prerequisite = { focus = SHA_invade_of_Hyakkiyako }
+		prerequisite = { focus = SHA_ascension focus = SHA_2nd_conservative_revolution focus = SHA_strengthening_identity_of_southern_kivotos }
 		mutually_exclusive = { }
 
 		available = { 
@@ -3012,6 +3166,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SHA_2nd_conservative_revolution 
 			focus = SHA_ascension 
+			focus = SHA_strengthening_identity_of_southern_kivotos
 		}
 		mutually_exclusive = { }
 
@@ -3124,7 +3279,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_architechtual_advancements }
 		mutually_exclusive = {  }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system} 
+		}
 		bypass = { }
 
 
@@ -3145,7 +3302,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_establish_the_SEZ }
 		mutually_exclusive = {  }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system} 
+		}
 		bypass = { }
 
 
@@ -3173,6 +3332,7 @@ focus_tree = {
 				tooltip = SHA_economic_health_5_tt
 				SHA_aup_anger < 6
 			}
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system}
 		}
 		bypass = { }
 
@@ -3202,7 +3362,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_solidarist_representation }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system} 
+		}
 		bypass = { }
 
 
@@ -3230,7 +3392,9 @@ focus_tree = {
 		prerequisite = { focus = SHA_establish_the_VES }
 		mutually_exclusive = { focus = SHA_teleological_planning }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system} 
+		}
 		bypass = { }
 
 
@@ -3257,7 +3421,9 @@ focus_tree = {
 
 		prerequisite = { focus = SHA_establish_the_VES }
 
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = SHA_transplanting_capitalist_system} 
+		}
 		bypass = { }
 
 

@@ -8564,7 +8564,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_idea = MIL_help_SPR
+					has_idea = MIL_help_SPA
 				}
 				declare_war_on = {
 					target = SPD
@@ -8595,6 +8595,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_total_interference_tt
 			hidden_effect = {
+				set_global_flag = MIL_start_SVO
 				news_event = {
 					id = BA_news.110
 					days = 3
