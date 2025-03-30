@@ -276,4 +276,8 @@ opinion_modifiers = {
 	KSP_menacing_ambition = {
 		value = -100
 	}
+
+	SLO_anti_hungary = {
+		value = -50
+	}
 }

@@ -3,11 +3,14 @@ state={
 	name="STATE_71"
 	manpower = 1197800
 	
-	state_category = rural
+	state_category = town
 	
 	history={
 		victory_points = {
-			3581 3
+			3581 5
+		}
+		victory_points = {
+			581 1
 		}
 		owner = SLO
 		buildings = {
