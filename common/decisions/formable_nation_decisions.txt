@@ -213,6 +213,7 @@ form_arabia_category = {
 				451 = { add_core_of = ROOT }
 				663 = { add_core_of = ROOT }
 				273 = { add_core_of = ROOT }
+				1035 = { add_core_of = ROOT }
 			}
 			# France
 			custom_effect_tooltip = form_arabia_france_coring_states_tt
@@ -5451,6 +5452,7 @@ form_roman_empire_category = {
  				448 = { add_core_of = ROOT }
  				661 = { add_core_of = ROOT }
  				273 = { add_core_of = ROOT }
+				1035 = { add_core_of = ROOT }
  				662 = { add_core_of = ROOT }
  				449 = { add_core_of = ROOT }
  				450 = { add_core_of = ROOT }
@@ -9302,6 +9304,7 @@ form_andalusia_category = {
 				514 = { add_core_of = ROOT }
 				#Libya
 				273 = { add_core_of = ROOT }
+				1035 = { add_core_of = ROOT }
 				448 = { add_core_of = ROOT }
 				449 = { add_core_of = ROOT }
 				450 = { add_core_of = ROOT }

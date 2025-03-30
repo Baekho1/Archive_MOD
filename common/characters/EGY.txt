@@ -928,7 +928,11 @@ characters={
 	EGY_zakaria_mohieddin = {
 		name=zakaria_mohieddin
 		portraits={
+			army={
+				large="gfx/leaders/EGY/EGY_Zakaria_Mohieddin.dds"
+			}
 			civilian={
+				large="gfx/leaders/EGY/EGY_Zakaria_Mohieddin.dds"
 				small="GFX_idea_EGY_zakaria_mohieddin"
 			}
 		}
@@ -1047,6 +1051,7 @@ characters={
 		name=abdel_moneim_amin
 		portraits={
 			army={
+				large="gfx/leaders/EGY/EGY_abdel_moneim_amin.dds"
 				small="GFX_idea_arabia_generic_land_5"
 			}
 		}
@@ -1130,6 +1135,7 @@ characters={
 		name=gamal_salem
 		portraits={
 			army={
+				large="gfx/leaders/EGY/EGY_gamal_salem.dds"
 				small="GFX_idea_generic_air_chief_all_weather_middle_eastern_2d"
 			}
 		}
@@ -1158,6 +1164,7 @@ characters={
 		name=abdel_latif_boghdadi
 		portraits={
 			army={
+				large="gfx/leaders/EGY/EGY_abdel_latif_boghdadi.dds"
 				small="GFX_idea_generic_air_air_combat_trainer_middle_eastern_2d"
 			}
 		}
@@ -1186,6 +1193,7 @@ characters={
 		name=Hassan_Ibrahim
 		portraits={
 			army={
+				large="gfx/leaders/EGY/EGY_Hassan_Ibrahim.dds"
 				small="GFX_idea_generic_air_chief_all_weather_middle_eastern_2d"
 			}
 		}
