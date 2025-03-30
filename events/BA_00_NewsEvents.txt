@@ -5289,6 +5289,23 @@ news_event = { # 비에노 조약
 	
 }
 
+news_event = { # 키보토스 기계해방전선의 결성
+    id = BA_news.139
+    title = BA_news.139.t
+    desc = BA_news.139.d
+    picture = GFX_news_event_GEI_army
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = BA_news.139.a
+    }
+	
+}
+
+
+
 #news_event = { # 미국 트리니티 에덴 점령
 #    id = BA_news.112
 #    title = BA_news.112.t

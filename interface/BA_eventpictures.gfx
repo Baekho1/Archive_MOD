@@ -262,6 +262,13 @@ spriteTypes = {
 		name = "GFX_GEI_DEC_riot"
 		texturefile = "gfx/event_pictures/news_event_GEI_DEC_riot.tga"
 	}
+
+	spriteType = { 
+		name = "GFX_news_event_GEI_army"
+		texturefile = "gfx/event_pictures/news_event_GEI_army.png"
+	}
+
+
   #
 
 
