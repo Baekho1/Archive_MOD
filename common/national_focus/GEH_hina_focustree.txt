@@ -27,7 +27,7 @@ focus_tree = {
         }
 		available = {
 		}
-		x = 30
+		x = 45
 		y = 0
 		completion_reward = {
 			add_stability = 0.02
@@ -5139,8 +5139,8 @@ focus_tree = {
 			
 		}
 
-		x = 30
-		y = 10
+		x = 25
+		y = 0
 
 		completion_reward = {
 			remove_ideas = GEH_luxembourg_rules

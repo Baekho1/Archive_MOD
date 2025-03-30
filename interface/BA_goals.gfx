@@ -1925,6 +1925,18 @@ spriteTypes = {
 		name = "GFX_focus_SHA_strengthening_kisaki_authority"
 		texturefile = "gfx/interface/goals/SHA/focus_SHA_strengthening_kisaki_authority.tga"  
 	}
+	SpriteType = {
+		name = "GFX_focus_SHA_vote_to_Rumi"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_vote_to_Rumi.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_yakushi_saya"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_yakushi_saya.tga"  
+	}
+	SpriteType = {
+		name = "GFX_focus_SHA_Shanhaijing_pact"
+		texturefile = "gfx/interface/goals/SHA/focus_SHA_Shanhaijing_pact.tga"  
+	}
 
 	SpriteType = { 	
 		name = "GFX_goal_ROM_invite_german_advisorsr"

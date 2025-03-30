@@ -301,6 +301,7 @@ KSP_annex_cou_decesion_desc: "발키리에 총학생회를 편입시킵니다. �
  TRM_three_popularity_status:0 "[?TRM_three_popularity|0]"
 
 #tt
+ TRN_restoration_of_the_pater_faction_tooltip:0 "§Y파테르 분파§! 파벌 존재"
  TRN_restoration_of_the_sanctus_faction_tooltip:0 "§Y상투스 분파§! 파벌 존재"
  TRN_restoration_of_the_sanctus_faction_tooltip2:0 "§Y빈 파벌 슬롯§! 존재"
  TRN_strengthening_the_filians_faction_tooltip:0 "§Y필리우스 분파§! 파벌 존재"
