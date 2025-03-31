@@ -117,25 +117,25 @@ ideas = {
 			picture = HUN_treaty_of_triannon
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
-			research_bonus = {
-				armor = -1
-				air_equipment = -1
-				naval_equipment = -1
-				infantry_weapons = -0.5
-				artillery = -0.5
-				motorized_equipment = -0.5
-			}
 			modifier = {
-				stability_weekly = -0.003
-				stability_factor = -0.10
-				war_support_factor = -0.10
-				production_speed_arms_factory_factor = -0.50
-				conscription_factor = -0.90
-				production_cost_max_ship_hull_heavy = 6600
-				production_cost_max_ship_hull_carrier = 6600
-				production_cost_max_ship_hull_cruiser = 2500
-				production_cost_max_ship_hull_light = 1000
-				production_cost_max_ship_hull_submarine = 250
+				production_speed_arms_factory_factor = -0.75
+				industrial_capacity_factory = -0.5
+				production_speed_facility_factor = -1
+				custom_modifier_tooltip = AUS_treaty_of_saint_germain_en_laye_tt
+				custom_modifier_tooltip = generic_skip_one_line_tt
+				custom_modifier_tooltip = generic_skip_one_line_tt
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				#custom_modifier_tooltip = AUS_treaty_of_saint_germain_en_laye_tt_2
+			}
+
+			rule = { can_send_volunteers = no }
+
+			on_add = { 
+				country_lock_all_division_template = yes 
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+				set_rule = { can_send_volunteers = yes }
 			}
 		}
 		##산해경##
@@ -917,6 +917,7 @@ ideas = {
 				production_speed_rail_way_factor = 0.1
 				production_speed_bunker_factor = 0.1
 				conscription_factor = 0.2
+				conscription = 0.03
 				industrial_capacity_factory = 0.2
 			}
 		}
@@ -1170,7 +1171,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.2
 				production_factory_max_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
 				conscription = -0.005
 			}
 			research_bonus = {
@@ -1184,7 +1185,6 @@ ideas = {
 				political_power_gain = 0.1
 				production_factory_max_efficiency_factor = 0.15
 				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.05
 				conscription = -0.0075
 			}
 			research_bonus = {
@@ -1199,7 +1199,6 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.2
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				production_factory_efficiency_gain_factor = -0.05
 				production_factory_start_efficiency_factor = 0.1
 				conscription = -0.0075
 			}
@@ -1270,6 +1269,7 @@ ideas = {
 				political_power_factor = 0.07
 				command_power_gain_mult = 0.1
 				war_support_weekly = 0.002
+				stability_weekly = 0.002
 				fascism_drift = 0.1
 			}
 		}
@@ -1379,6 +1379,48 @@ ideas = {
 				democratic_drift = 0.05
 				industrial_capacity_factory = 0.05
 				production_lack_of_resource_penalty_factor = -0.05
+                production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		# 방어적 민주주의 - 방어적 민주주의 중점 완료시
+		SHA_Shanhaijing_Democracy_ns = {
+			picture = SHA_Shanhaijing_Democracy_ns
+			name = SHA_Shanhaijing_Democracy_ns_Name
+			
+			modifier = {
+				democratic_drift = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				drift_defence_factor = 0.1
+			}
+		}
+
+		# 방어적 민주주의 - 의회주의 강화 완료시
+		SHA_Shanhaijing_Democracy_2_ns = {
+			picture = SHA_Shanhaijing_Democracy_ns
+			name = SHA_Shanhaijing_Democracy_ns_Name
+			
+			modifier = {
+				democratic_drift = 0.01
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.35
+			}
+		}
+
+		# 방어적 민주주의 - 의회주의 강화 + 방어적 민주주의
+		SHA_Shanhaijing_Democracy_3_ns = {
+			picture = SHA_Shanhaijing_Democracy_ns
+			name = SHA_Shanhaijing_Democracy_ns_Name
+			
+			modifier = {
+				democratic_drift = 0.02 # 0.01 - > 0.02
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.35
+				
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				drift_defence_factor = 0.1
 			}
 		}
 

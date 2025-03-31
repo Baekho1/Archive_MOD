@@ -40,11 +40,6 @@ country_event = {
 			long_name = SHA_Peking_Opera_Club_long
 			name = SHA_Peking_Opera_Club
 		}
-		set_party_name = {
-			ideology = fascism
-			long_name = SHA_party_name4
-			name = SHA_party_name4
-		}
 	}
 }
 
@@ -249,6 +244,7 @@ unit_leader_event = {
 				cost = 75
 				traits = { army_chief_offensive_2 }
 			}
+			activate = yes
 		}
 	}
 
@@ -263,6 +259,7 @@ unit_leader_event = {
 				cost = 75
 				traits = { army_chief_defensive_2 }
 			}
+			activate = yes
 		}
 	}
 
@@ -277,6 +274,7 @@ unit_leader_event = {
 				cost = 75
 				traits = { army_chief_maneuver_2 }
 			}
+			activate = yes
 		}
 	}
 
@@ -291,6 +289,7 @@ unit_leader_event = {
 				cost = 75
 				traits = { army_chief_organizational_2 }
 			}
+			activate = yes
 		}
 	}
 }
@@ -425,6 +424,20 @@ country_event = {
 	option = {
 		name = shadem.1.d
 		trigger = { has_completed_focus = SHA_progressivism_through_science }
+	}
+}
+
+# 브나로드 (민중 속으로)
+country_event = {
+	id = shadem.2
+	title = shadem.2.t
+	desc = shadem.2.desc
+	picture = GFX_report_event_AUS_political_rally
+
+    is_triggered_only = yes
+
+	option = {
+		name = shadem.2.a
 	}
 }
 

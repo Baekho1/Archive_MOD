@@ -121,7 +121,11 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
+				modifier = {
+					factor = 100
+					has_completed_focus = SHA_Shintani_Kai_Follow
+				}
 			}
 		}
 		advisor = {
@@ -236,6 +240,20 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 13.000
+			}
+		}
+		advisor={	
+			slot = political_advisor
+			idea_token = SHA_SHUN_political_advisor
+			allowed = {
+				original_tag = SHA
+			}
+			traits = {
+				old_figurehead
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0
 			}
 		}
 	}	

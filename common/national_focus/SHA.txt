@@ -348,7 +348,7 @@ focus_tree = {
 		icon = GFX_focus_generic_advanced_military_studies
 		x = -5
 		y = 1
-		cost = 5
+		cost = 2
 		relative_position_id = SHA_Austrian_appeasement_policy
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -419,6 +419,7 @@ focus_tree = {
 		relative_position_id = SHA_gathering_of_radicals
 
 		completion_reward = {
+			add_political_power = 150
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SHA_KAI_political_advisor
 			add_corps_commander_role = {
@@ -457,7 +458,7 @@ focus_tree = {
 		icon = GFX_goal_SHA_kaguya_focus
 		x = -2
 		y = 2
-		cost = 5
+		cost = 3
 		relative_position_id = SHA_gathering_of_radicals
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
@@ -501,7 +502,7 @@ focus_tree = {
 		icon = GFX_goal_SHA_podium_room_cooperation
 		x = 2
 		y = 2
-		cost = 5
+		cost = 3
 		relative_position_id = SHA_gathering_of_radicals
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
@@ -562,7 +563,7 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = SHA_Shintani_Kai_Follow
-			fascism > 0.40
+			fascism > 0.399
 		}
 		bypass = { }
 
@@ -1321,7 +1322,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_diplomatic_effort
 		x = 7
 		y = 1
-		cost = 5
+		cost = 2
 
 		prerequisite = { focus = SHA_Austrian_appeasement_policy }
 		mutually_exclusive = { focus = SHA_gathering_of_radicals }
@@ -1357,6 +1358,7 @@ focus_tree = {
 		relative_position_id = SHA_Austrian_appeasement_policy
 
 		completion_reward = {
+			add_stability = 0.05
 				if = {
 					limit = {
 						has_game_rule = {
@@ -1398,7 +1400,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_defense_and_democracy
 		x = 1
 		y = 1
-		cost = 5
+		cost = 8
 
 		prerequisite = { 
 			focus = SHA_appointment_of_BTP
@@ -1412,7 +1414,16 @@ focus_tree = {
 		relative_position_id = SHA_appointment_of_BTP
 
 		completion_reward = {
-
+			if = {
+				limit = { has_idea = SHA_Shanhaijing_Democracy_2_ns }
+				swap_ideas = {
+					add_idea = SHA_Shanhaijing_Democracy_3_ns
+					remove_idea = SHA_Shanhaijing_Democracy_2_ns
+				}
+			}
+			else = {
+				add_ideas = SHA_Shanhaijing_Democracy_ns
+			}
 		}
 	}
 
@@ -1422,7 +1433,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_capitalize_the_beef_industry
 		x = 1
 		y = 1
-		cost = 5
+		cost = 8
 
 		prerequisite = { 
 			focus = SHA_defensive_democracy
@@ -1621,7 +1632,7 @@ focus_tree = {
 		icon = GFX_focus_generic_industrialists
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = SHA_appointment_of_BTP }
 		mutually_exclusive = { }
@@ -1634,6 +1645,16 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = SHA_a_new_constitution_flag
+			if = {
+				limit = { has_idea = SHA_Shanhaijing_Democracy_ns }
+				swap_ideas = {
+					add_idea = SHA_Shanhaijing_Democracy_3_ns
+					remove_idea = SHA_Shanhaijing_Democracy_ns
+				}
+			}
+			else = {
+				add_ideas = SHA_Shanhaijing_Democracy_2_ns
+			}
 		}
 	}
 
@@ -1726,7 +1747,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = -2
 		y = 0
-		cost = 5
+		cost = 8
 
 		prerequisite = { 
 			focus = SHA_appointment_of_BTP 
@@ -1741,7 +1762,7 @@ focus_tree = {
 		relative_position_id = SHA_release_austrian_politician
 
 		completion_reward = {
-
+			add_research_slot = 1
 		}
 	}
 
@@ -1847,7 +1868,9 @@ focus_tree = {
 
 		mutually_exclusive = {  }
 
-		available = { }
+		available = {
+			date > 1937.1.1
+		}
 		bypass = { }
 
 
@@ -1971,9 +1994,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		allow_branch = {
-			has_completed_focus = SHA_gathering_of_radicals
-		}
 		bypass = { }
 
 
@@ -1999,9 +2019,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-		}
-		allow_branch = {
-			has_completed_focus = SHA_gathering_of_radicals
 		}
 		bypass = { }
 
@@ -2326,7 +2343,7 @@ focus_tree = {
 	focus = {
 		id = SHA_2nd_conservative_revolution
 		icon = GFX_goal_SHA_conservative_revolution_2nd
-		x = 4
+		x = -4
 		y = 1
 		cost = 10
 
@@ -2591,7 +2608,7 @@ focus_tree = {
 	focus = {
 		id = SHA_ascension
 		icon = GFX_goal_SHA_ascend
-		x = 8
+		x = 4
 		y = 1
 		cost = 10
 
@@ -3189,6 +3206,41 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 슬로바키아 제압
+	focus = {
+		id = SHA_Special_Military_Operation_for_Slovakia
+		icon = GFX_focus_generic_attack_slovakia
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = SHA_2nd_conservative_revolution 
+			focus = SHA_ascension 
+			focus = SHA_strengthening_identity_of_southern_kivotos
+		}
+		mutually_exclusive = { }
+
+		available = {
+			is_neighbor_of = SLO
+		}
+		bypass = {
+			NOT = { country_exists = SLO }
+		}
+
+		relative_position_id = SHA_invade_of_Hyakkiyako
+		
+		
+		will_lead_to_war_with = SLO
+
+		completion_reward = {
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+	}
 	
 	#########################
 	#### 급진파 결집 - 산해경 승전 루트####
@@ -3261,8 +3313,17 @@ focus_tree = {
 					modifier = SHA_industrial_region
 				}
 			}
-			set_temp_variable = { SHA_anger_change = -1 }
-			SHA_change_aup_anger = yes
+			if = {
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
+			}
 		}
 	}
 
@@ -3374,8 +3435,15 @@ focus_tree = {
 				remove_idea = SHA_supreme_economic_council_2
 			}
 			if = {
-				limit = { has_idea = SHA_austria_unemployment_problem }
-				remove_ideas = SHA_austria_unemployment_problem
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
 			}
 		}
 	}
@@ -3404,8 +3472,15 @@ focus_tree = {
 				remove_idea = SHA_ASFTU_2
 			}
 			if = {
-				limit = { has_idea = SHA_austria_unemployment_problem }
-				remove_ideas = SHA_austria_unemployment_problem
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
 			}
 		}
 	}
@@ -3508,8 +3583,17 @@ focus_tree = {
 
 		completion_reward = {
 
-			set_temp_variable = { SHA_anger_change = -1 }
-			SHA_change_aup_anger = yes
+			if = {
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
+			}
 
 			976 = {
 				add_resource = {
@@ -3562,9 +3646,18 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			set_temp_variable = { SHA_anger_change = -1 }
-			SHA_change_aup_anger = yes
+
+			if = {
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
+			}
 
 			152 = {
 				add_resource = {
@@ -4403,9 +4496,17 @@ focus_tree = {
 				localization_key = building_state_modifier|dam
 				INDENT = "    "
 			}
-			
-			set_temp_variable = { SHA_anger_change = -1 }
-			SHA_change_aup_anger = yes
+			if = {
+				limit = {
+					check_variable = { SHA_aup_anger > 3 }
+				}
+				set_temp_variable = { SHA_anger_change = -1 }
+				SHA_change_aup_anger = yes
+				
+				else = {
+					remove_ideas = SHA_austria_unemployment_problem
+				}
+			}
 		}
 	}
 
@@ -4628,11 +4729,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SHA_military_change
 			add_to_variable = {
-				SHA_military_breakthrough_factor = 0.1
+				SHA_military_breakthrough_factor = 0.05
 				tooltip = breakthrough_factor_tt
 			}
 			add_to_variable = {
-				SHA_military_army_morale_factor = 0.1
+				SHA_military_army_morale_factor = 0.05
 				tooltip = army_morale_factor_tt
 			}
 			add_to_variable = {
