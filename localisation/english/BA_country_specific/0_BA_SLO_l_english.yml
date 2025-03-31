@@ -17,6 +17,7 @@
  SLO_fast_industrialization_idea:0 "급속 산업화"
  SLO_czk_reform_idea:0 "코루나 개혁"
  SLO_bratislava_university_idea:0 "브라티슬라바 공과대학"
+ SLO_bratislava_university2_idea:0 "브라티슬라바 대학가"
  SLO_slo_trade_idea:0 "슬로바키아와의 무역 협정"
  SLO_slo_worker_idea:0 "슬로바키아 노동자"
  SLO_slo_economic_dependence_idea:0 "슬로바키아에게 경제적으로 종속당함"
@@ -24,6 +25,8 @@
  SLO_aluminum_withhun_idea:0 "헝가리와의 알루미늄 무역"
  SLO_warwithsoviet_idea:0 "생존을 위한 전쟁"
  SLO_warwithsoviet1_idea:0 "생존을 위한 전쟁"
+ SLO_with_skoda_idea:0 "슈코다와의 협력"
+ SLO_with_skoda2_idea:0 "슈코다와의 협력"
 
  ##국가중점##
  SLO_foc_1:0 "의회 소집"
@@ -74,7 +77,15 @@
  SLO_foc_1-4-41:0 "프라하 거점"
  SLO_foc_1-4-42:0 "모라비아 공업단지" 
  SLO_foc_1-4-43:0 "농촌 지역 개발"
- SLO_foc_1-4-44:0 "일류도시 브라티슬라바"
+ SLO_foc_1-4-44:0 " 일류도시 브라티슬라바"
+ SLO_foc_1-4-45:0 "주데텐란트 공업단지"
+ SLO_foc_1-4-46:0 "갈리치아에 자치권을"
+ SLO_foc_1-4-47:0 "중공업 단지"
+ SLO_foc_1-4-48:0 "슈코다와의 협력"
+ SLO_foc_1-4-49:0 "해외 수출"
+ SLO_foc_1-4-50:0 "수도권에 대학 유치"
+ SLO_foc_1-4-51:0 "경공업 확충"
+ SLO_foc_1-4-52:0 "브라티슬라바의 기적"
  SLO_foc_2:0 "우익과 가톨릭의 연합"
 
  ##이벤트##
@@ -265,6 +276,8 @@
  SLO_sergey_voytsekhovsky:0 "세르게이 보이체호프스키"
  SLO_alexander_mach:0 "알렉산더 마흐"
  SLO_andrej_hlinka:0 "안드레이 흘린카"
+ SLO_anton_pulanich:0 "안톤 풀라니치"
+ SLO_navy_c:0 "해군위원회"
 
  great_musician:0 "뛰어난 음악가"
  SLO_ice_guy:0 "시베리아의 생존자"
@@ -272,6 +285,8 @@
  SLO_war_hero_dem:0 "전쟁 영웅"
  SLO_southslovakia_state:0 "남부 슬로바키아 수복 작전"
  SLO_czech_liberation_committee_state:0 "체코해방위원회"
+ SLO_west_autonomous_state:0 "서갈리치아 자치주"
+ SLO_east_autonomous_state:0 "동갈리치아 자치주"
 
  SLO_skoda_armor_organization:0 "슈코다 기갑"
  SLO_ckd_organization:0 "CKD"

@@ -95,7 +95,7 @@ characters={
 			}
 			cost = 200
 		}
-		field_marshal={
+		corps_commander={
 			traits = {
 				brilliant_strategist
 				infantry_officer
@@ -165,7 +165,7 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				army_infantry_2
+				army_CombinedArms_2
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -348,19 +348,6 @@ characters={
 				small="gfx/interface/advisors/SLO/SLO_Spot_11.tga"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SLO_vavro_srobar
-			allowed = {
-				original_tag = SLO
-			}
-			traits  = {
-				liberal_journalist
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 		country_leader={
 			ideology=conservatism
 			expire="1965.1.1"
@@ -538,20 +525,6 @@ characters={
 				small="gfx/interface/advisors/SLO/SLO_Spot_18.tga"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SLO_jozef_gabcik
-			allowed = {
-				original_tag = SLO
-			}
-			traits  = {
-				army_commando_1
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-			cost = 50
-		}
 		corps_commander={
 			traits = {
 				commando
@@ -665,20 +638,6 @@ characters={
 				small=GFX_portrait_CZE_sergej_vojcechovsky_small
 			}
 		}
-		advisor={
-			slot = theorist
-			idea_token = SLO_sergey_voytsekhovsky
-			allowed = {
-				original_tag = SLO
-			}
-			traits  = {
-				SLO_ice_guy
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-			cost = 100
-		}
 		field_marshal={
 			traits = {
 				winter_specialist
@@ -728,6 +687,72 @@ characters={
 				large="gfx/leaders/SLO/SLO_pot_23.tga"
 				small="gfx/interface/advisors/SLO/SLO_Spot_23.tga"
 			}
+		}
+	}
+	SLO_anton_pulanich={ #안톤 풀라니치 / 육군
+		name="SLO_anton_pulanich"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_24.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_24.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_24.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_24.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SLO_anton_pulanich
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				army_infantry_1
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 50
+		}
+		corps_commander={
+			traits = {
+				old_guard
+				war_hero
+				infantry_officer
+			}
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SLO_navy_c={ #해군위원회
+		name="SLO_navy_c"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_25.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_25.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_25.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_25.tga"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SLO_navy_c
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				navy_chief_reform_1
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 50
 		}
 	}
 }

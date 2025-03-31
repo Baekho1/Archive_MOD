@@ -699,3 +699,21 @@ SLO_czech_liberation_committee_state = { # 주 모디파이어
 	resistance_growth = -0.25
 	compliance_growth = 0.25
 }
+SLO_west_autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.75
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
+SLO_east_autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.75
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}

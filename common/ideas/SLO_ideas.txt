@@ -93,6 +93,17 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		SLO_bratislava_university2_idea = {
+			picture = generic_research_bonus
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				democratic_drift = 0.03
+				production_factory_efficiency_gain_factor = 0.06
+				production_factory_max_efficiency_factor = 0.06
+				research_speed_factor = 0.10
+			}
+		}
 		SLO_slo_trade_idea = {
 			picture = can_wartime_prices_and_trade_board
 			allowed = {	always = no	}
@@ -221,6 +232,27 @@ ideas = {
 				NOT = {
 					has_war_with = SOV
 				}
+			}
+		}
+		SLO_with_skoda_idea = {
+			picture = CZE_skoda_works
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+				industrial_factory_donations = 3
+			}
+		}
+		SLO_with_skoda2_idea = {
+			picture = CZE_skoda_works
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				min_export = 0.10
+				production_speed_industrial_complex_factor = 0.20
+				industrial_factory_donations = 5
+				military_industrial_organization_funds_gain = 0.10
 			}
 		}
 	}

@@ -134,6 +134,7 @@ focus_tree = {
 			focus = SLO_foc_1-4
 		}
 		available = {
+			has_country_flag = GAEBALJUNG
 		}
 		bypass = {
 		}
@@ -568,14 +569,13 @@ focus_tree = {
 		y = 7
 		prerequisite = {
 			focus = SLO_foc_1-4-6
-		}
-		prerequisite = {
 			focus = SLO_foc_1-4-9
 		}
 		mutually_exclusive = {	
 			#focus = SLO_foc_
 		}
 		available = {
+			controls_state = 70
 		}
 		bypass = {
 		}
@@ -1932,7 +1932,7 @@ focus_tree = {
 			focus = SLO_foc_1-4-38
 		}
 		mutually_exclusive = {	
-			#focus = SLO_foc_1-4-39
+			focus = SLO_foc_1-4-39
 		}
 		available = {
 			controls_state = 69
@@ -2134,9 +2134,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_stability = 0.05
 			71 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2145,7 +2143,6 @@ focus_tree = {
 				set_state_category = large_town
 			}
 			73 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2154,7 +2151,6 @@ focus_tree = {
 				set_state_category = town
 			}
 			664 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2193,15 +2189,9 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			70 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
+				set_building_level = {
 					type = infrastructure
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -2218,6 +2208,335 @@ focus_tree = {
 				province = 9692
 				value = 10
 			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-45
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 14
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-39
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 9
+		}
+		bypass = {
+		}
+		completion_reward = {
+			69 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+			972 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = large_town
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-46
+		icon = GFX_focus_generic_polish_deal 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 17
+		y = 12
+		prerequisite = {
+			focus = SLO_foc_1-4-43
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			has_war = no
+			controls_state = 1026
+			controls_state = 88
+			controls_state = 91
+			controls_state = 89
+		}	
+		bypass = {
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1026
+						state = 88
+					}
+				}
+				add_core_of = SLO
+				add_dynamic_modifier = { 
+					modifier = SLO_west_autonomous_state 
+					scope = SLO
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 91
+						state = 89
+					}
+				}
+				add_core_of = SLO
+				add_dynamic_modifier = { 
+					modifier = SLO_east_autonomous_state 
+					scope = SLO
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-47
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -1
+		y = 8
+		prerequisite = {
+			focus = SLO_foc_1-4-9
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-11
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-48
+		icon = GFX_focus_generic_currency_reforms
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-47
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = SLO_with_skoda_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-49
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-48
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_with_skoda_idea
+				add_idea = SLO_with_skoda2_idea
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-50
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 10
+		prerequisite = {
+			focus = SLO_foc_1-4-12
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			controls_state = 70
+			num_of_factories > 20
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = SLO_bratislava_university_idea
+				add_idea = SLO_bratislava_university2_idea
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-51
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 9
+		prerequisite = {
+			focus = SLO_foc_1-4-47
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-52
+		icon = GFX_focus_RAJ_special_economic_zones
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-49
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-51
+		}
+		prerequisite = {
+			focus = SLO_foc_1-4-50
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 40
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			SLO_economy_chaos_down = yes
 		}
 	}
 	### 파시, 파시즘, 파시스트 루트 ###
@@ -2239,12 +2558,9 @@ focus_tree = {
 			focus = SLO_foc_1
 		}
 		available = {
-			SLO_jozef_tiso = {
-				is_hired_as_advisor = yes
-			}
+			has_country_flag = GAEBALJUNG
 		}
 		bypass = {
-
 		}
 		completion_reward = {
 			add_popularity = {
