@@ -491,6 +491,58 @@ country_event = { #카야와 SRT
 		}
 	}
 }
+
+country_event = { #미개발 안내 
+	id = COU_start_event.100
+	title = COU_start_event.100.t
+	desc = COU_start_event.100.desc
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = COU_start_event.100.a
+		country_event = COU_start_event.101
+	}
+}
+
+country_event = { #미개발 안내 
+	id = COU_start_event.101
+	title = COU_start_event.101.t
+	desc = COU_start_event.101.desc
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = COU_start_event.101.a
+		custom_effect_tooltip = COU_play_trm
+		TRM = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.b
+		custom_effect_tooltip = COU_play_MIL
+		MIL = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.c
+		custom_effect_tooltip = COU_play_RED
+		RED = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.d
+		add_stability = 0.01
+		custom_effect_tooltip = COU_play_COU
+	}
+}
+
+
+###
 country_event = { #총학생회장 실종
 	id = COU_event.1
 	title = COU_event.1.t
