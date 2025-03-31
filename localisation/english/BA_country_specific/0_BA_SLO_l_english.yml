@@ -240,13 +240,13 @@
  
 
  ##캐릭터##
- SLO_jozef_tiso:0 "요제프 티소"
+ #SLO_jozef_tiso:0 "요제프 티소" >바닐라 로컬 존재
  SLO_slobak_council:0 "슬로바키아 임시의회"
  SLO_karol_smidke:0 "카롤 슈미트케"
- SLO_rudolf_viest:0 "루돌프 비에스트"
+ #SLO_rudolf_viest:0 "루돌프 비에스트" >바닐라 로컬 존재
  SLO_jan_golian:0 "얀 골리안"
  SLO_augustin_malar:0 "아우구스틴 말라르"
- SLO_ferdinand_catlos:0 "페르디난트 차틀로시"
+ #SLO_ferdinand_catlos:0 "페르디난트 차틀로시" >바닐라 로컬 존재
  SLO_stefan_hassik:0 "슈테판 하시크"
  SLO_mikulas_ferjencik:0 "미쿨라시 페르옌치크"
  SLO_vojtech_tuka:0 "보이테흐 투카"

@@ -14,6 +14,23 @@
  LAO_neutrality_party_new:0 "총독부"
  LAO_fascism_party_new:0 "복국동맹회"
 
+ MEX_democratic_party:0 "PNR - 혁신파"
+ MEX_democratic_party_long:0 "PNR - 멕시코 혁명당 - 혁신파"
+ MEX_christian_democracy_party:0 "PAN"
+ MEX_christian_democracy_party_long:0 "PAN - 국민행동당"
+ MEX_communism_party:0 "PCM"
+ MEX_communism_party_long:0 "PCM - 멕시코 공산당"
+ MEX_fascism_party:0 "UNS"
+ MEX_fascism_party_long:0 "UNS - 국민공동통치연합"
+ MEX_neutrality_party:0 "PNR - 카르데나스"
+ MEX_neutrality_party_long:0 "PNR - 멕시코 혁명당 - 카르데나스파"
+
+ SLO_communism_party:0 "슬로바키아 공산당"
+ SLO_democratic_party:0 "슬로바키아 국민당"
+ SLO_fascism_party:0 "슬로바키아 인민당"
+ SLO_fascism_party_long:0 "흘린카의 슬로바키아 인민당"
+ SLO_neutrality_party:0 "거국내각"
+
  YUG_communism_party_long:1 "유고슬라비아 공산주의자 동맹"
 
  HND_new_neutrality_party:0 "농민연합"

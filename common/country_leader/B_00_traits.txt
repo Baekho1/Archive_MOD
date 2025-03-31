@@ -1380,7 +1380,7 @@ leader_traits = {
 		neutrality_drift = 0.05
 		drift_defence_factor = 0.1
 	}
-	indomitable_perseverance = {
+	EGY_indomitable_perseverance = {
 		random = no
 		army_morale_factor = 0.08
 	}

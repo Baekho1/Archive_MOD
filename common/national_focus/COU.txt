@@ -651,7 +651,7 @@ focus_tree = {
         y = 4
         cost = 5
 		available = { has_country_leader = { character = COU_KAYA }	}
-		mutually_exclusive = { focus = COU_focus_lets_get_some_help }
+		#mutually_exclusive = { focus = COU_focus_lets_get_some_help }
 		prerequisite = { focus = COU_focus_sasang_nugak }
 		relative_position_id = COU_focus_the_new_gscp
         completion_reward = {
