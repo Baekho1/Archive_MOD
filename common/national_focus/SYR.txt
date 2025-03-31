@@ -29,6 +29,9 @@ focus_tree = {
 		cost = 2
 		x = -3
 		y = 1
+		ai_will_do = {
+			base = 100
+		}
 		relative_position_id = SYR_focus_dom_0
 		prerequisite = {
 			focus = SYR_focus_dom_0
