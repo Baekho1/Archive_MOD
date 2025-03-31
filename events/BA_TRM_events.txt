@@ -8560,17 +8560,9 @@ country_event = { # 사망 선언
 
 	option = {
 		name = trinity.10.a
-		effect_tooltip = {
-			country_event = { id = trinity.11 days = 03 } # 미카 호스트 취임
-		}
+		country_event = { id = trinity.33 days = 01 }
 		hidden_effect = {
 			TRN_tpdldk = { set_character_flag = TRN_fake_death_flag }
-			TRN_alzk = {
-				unit_leader_event = {
-					id = trinity.11
-					days = 03
-				}
-			}
 			country_event = { id = trinity.12 days = 10 } # 토마스 서머 수사
 		}
 		add_country_leader_role = {
@@ -9158,6 +9150,37 @@ country_event = { # '생존권' 개념
     }
 }
 
+country_event = { # '호스트 선출제'
+	id = trinity.33
+	title = trinity.33.t
+	desc = trinity.33.desc
+	picture = GFX_event_teaparty
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = {
+		name = trinity.33.a
+		ai_chance = { 
+			base = 100
+		}
+		effect_tooltip = { country_event = { id = trinity.11 days = 02 } }
+		hidden_effect = {
+			TRN_alzk = {
+				unit_leader_event = { id = trinity.11 days = 02 }
+			}
+		}
+    }
+
+	option = {
+		name = trinity.33.b
+		ai_chance = { 
+			base = 0
+		}
+		custom_effect_tooltip = TRN_sorry_Nagisa_branch_is_NOT_work
+    }
+}
+
 news_event = {
 	id = trinitynews.1
 	title = trinitynews.1.t
@@ -9220,9 +9243,6 @@ news_event = {
 					TAG = ABY
 					TAG = HYA
 					TAG = SHA
-					TAG = BAC
-					TAG = SUH
-					TAG = INK
 				}
 			}
 		}
