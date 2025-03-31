@@ -621,15 +621,13 @@ SHA_invade_of_Hyakkiyako_cat = {
 		}
 
 		custom_cost_trigger = {
-			command_power > 14
+			command_power > 24
 		}
 
-		custom_cost_text = decision_cost_CP_15 
+		custom_cost_text = decision_cost_CP_25 
 		
 		complete_effect = {
-			hidden_effect = {
-				add_command_power = -14
-			}
+			hidden_effect = { add_command_power = -24 }
 			SHA_invade_HYA_idea_down = yes
 		}
 	}
