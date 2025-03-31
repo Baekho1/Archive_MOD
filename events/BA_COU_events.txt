@@ -491,6 +491,89 @@ country_event = { #카야와 SRT
 		}
 	}
 }
+
+country_event = { #미개발 안내 
+	id = COU_start_event.100
+	title = COU_start_event.100.t
+	desc = COU_start_event.100.desc
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			set_country_flag = COU_start_event_fk_flag
+		}
+	}
+
+	option = {
+		name = COU_start_event.100.a
+		trigger = {
+			all_country = {
+				OR = {
+					tag = ROOT
+					NOT = { has_country_flag = COU_start_event_fk_flag }
+				}
+			}
+		}
+		country_event = COU_start_event.101
+	}
+
+	option = {
+		name = COU_start_event.100.b
+		trigger = {
+			NOT = {
+				all_country = {
+					OR = {
+						tag = ROOT
+						NOT = { has_country_flag = COU_start_event_fk_flag }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #미개발 안내 
+	id = COU_start_event.101
+	title = COU_start_event.101.t
+	desc = COU_start_event.101.desc
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = COU_start_event.101.a
+		custom_effect_tooltip = COU_play_trm
+		TRM = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.b
+		custom_effect_tooltip = COU_play_MIL
+		MIL = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.c
+		custom_effect_tooltip = COU_play_RED
+		RED = { change_tag_from = COU }
+	}
+	
+	option = {
+		name = COU_start_event.101.d
+		add_stability = 0.01
+		custom_effect_tooltip = COU_play_COU
+	}
+}
+
+
+###
 country_event = { #총학생회장 실종
 	id = COU_event.1
 	title = COU_event.1.t

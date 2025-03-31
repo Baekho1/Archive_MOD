@@ -29,15 +29,10 @@ focus_tree = {
 		y = 1
 
 		prerequisite = {
-			focus = EGY_cotton_subsidies
-			focus = EGY_protect_industry
-			focus = EGY_reopen_stock_exchange
 		}
 
 		available = {
 		}
-
-		relative_position_id = EGY_protect_industry
 
 		ai_will_do = { factor = 80 }
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1033,8 +1028,6 @@ focus_tree = {
 		id = EGY_army_reforms
 		icon = GFX_focus_FIN_foreign_anti_air
 		cost = 6
-
-		relative_position_id = EGY_black_monday_recovery
 
 		x = 25
 		y = 0

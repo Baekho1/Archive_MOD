@@ -143,32 +143,6 @@ focus_tree = {
 		}
 	}
 
-	# 신스계획
-	focus = {
-		id = GEI_DEC_synth
-		icon = GFX_GEI_DEC_synth
-
-		x = 0
-		y = 1
-        relative_position_id = GEI_DEC_effection
-
-		cost = 1
-        prerequisite = { focus = GEI_DEC_effection}
-		text_icon = The_New_Order_focus_style
-
-		available = {
-			
-		}
-		search_filters = {
-			
-						FOCUS_FILTER_ANNEXATION
-					
-		}
-		completion_reward = {
-			
-		}
-	}
-
 	# 이름 없는 신들의 기술 활용
 
 	focus = {
@@ -240,6 +214,32 @@ focus_tree = {
 					mech_cost_upgrade = 5
 				}
 			}
+			
+		}
+	}
+
+	# 신스계획
+	focus = {
+		id = GEI_DEC_synth
+		icon = GFX_GEI_DEC_synth
+
+		x = 0
+		y = 1
+        relative_position_id = GEI_DEC_effection
+
+		cost = 1
+        prerequisite = { focus = GEI_DEC_effection}
+		text_icon = The_New_Order_focus_style
+
+		available = {
+			
+		}
+		search_filters = {
+			
+						FOCUS_FILTER_ANNEXATION
+					
+		}
+		completion_reward = {
 			
 		}
 	}
@@ -612,8 +612,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GEI_DEC_radio disturbance
-		icon = GFX_GEI_DEC_radio disturbance
+		id = GEI_DEC_radio_disturbance
+		icon = GFX_GEI_DEC_radio_disturbance
 
 		x = 0
 		y = 1
@@ -750,9 +750,9 @@ focus_tree = {
         relative_position_id = GEI_DEC_metrix
 
 		cost = 1
-        prerequisite = { focus = GEI_DEC_metrix}
-		prerequisite = { focus = GEI_DEC_army_student}
-		prerequisite = { focus = GEI_DEC_radio}
+        prerequisite = { focus = GEI_DEC_metrix }
+		prerequisite = { focus = GEI_DEC_army_student }
+		prerequisite = { focus = GEI_DEC_radio_disturbance }
 		text_icon = The_New_Order_focus_style
 		
 

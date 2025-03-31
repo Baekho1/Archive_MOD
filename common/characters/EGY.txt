@@ -79,7 +79,7 @@ characters={
 			ideology=fascism_ideology	
 			expire="1965.1.1"
 			traits = {
-				indomitable_perseverance
+				EGY_indomitable_perseverance
 			}
 			id=-1
 		}

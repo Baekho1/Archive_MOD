@@ -73,3 +73,15 @@ GEH_trinity_integration = {
         has_completed_focus = GEH_trinity_focus_5
     }
 }
+GEH_ako_love_balance_category = {
+
+    allowed = {
+        tag = GEH
+    }
+
+    visible = {
+        has_power_balance = {
+            id = GEH_ako_love_balance
+        }
+    }
+}

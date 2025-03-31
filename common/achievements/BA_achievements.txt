@@ -262,3 +262,64 @@ TRM_sisters_one_and_all = {
 		}
     }
 }
+
+HEU_hardboiled_GSC_president = {
+	possible = {
+		tag = HEU
+	}
+ 
+    happened = {
+        has_completed_focus = HEU_GSC_president_rikuhachima
+    }
+}
+
+HEU_love_for_hina_chan = {
+	possible = {
+		tag = HEU
+	}
+ 
+    happened = {
+		custom_trigger_tooltip = {
+			tooltip = HEU_hina_benriya_68
+			GEH_hina = {
+				has_character_flag = HEU_hina_benriya_68
+			}
+		}
+    }
+}
+
+HEU_aru_daisuki_everyone = {
+	possible = {
+		tag = HEU
+	}
+ 
+    happened = {
+		custom_trigger_tooltip = {
+			tooltip = HEU_aru_daisuki_everyone_tt
+			OR = {
+				HEU_zkdyzh = {
+					has_character_flag = HEU_aru_bride
+				}
+				HEU_ancmzl = {
+					has_character_flag = HEU_aru_bride
+				}
+				HEU_gkfnzk = {
+					has_character_flag = HEU_aru_bride
+				}
+				GEH_hina = {
+					has_character_flag = HEU_aru_bride
+				}
+			}
+		}
+    }
+}
+
+HEU_coffee_and_aru_story = {
+	possible = {
+		tag = HEU
+	}
+ 
+    happened = {
+        has_completed_focus = HEU_germany_union
+    }
+}

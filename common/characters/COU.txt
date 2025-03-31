@@ -229,7 +229,7 @@ characters={
 		}
 		gender = female
 		country_leader={
-			desc=COU_KAYA_desc
+			desc=COU_MOMOKA_DESC
 			ideology=marxism
 			expire="1965.1.1.1"
 		}
