@@ -3656,6 +3656,7 @@ leader_traits = {
 		research_speed_factor = 0.05
 	}
 	RED_momiji_trait_good_for_vision = { #문헌정보학자 이펙트 표기 용
+		name = RED_momiji_trait_good
 		sprite = 13
 		random = no
 		research_speed_factor = 0.05
