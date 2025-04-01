@@ -1058,8 +1058,6 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = SYR_focus_fas_5
-		}
-		prerequisite = {
 			focus = SYR_focus_dem_1
 		}
 		completion_reward = {
