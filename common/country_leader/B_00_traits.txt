@@ -1398,6 +1398,14 @@ leader_traits = {
 		random = no
 		opinion_gain_monthly_same_ideology_factor = 0.05
 	}
+	EGY_farouk_i_of_egypt_2 = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.05
+		stability_factor = 0.2
+		democratic_drift = 0.05
+		neutrality_drift = 0.05
+		war_support_factor = 0.1
+	}
 	EGY_trait_outer = {
 		random = no
 		political_power_factor = -0.25

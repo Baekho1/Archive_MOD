@@ -1,4 +1,5 @@
 add_namespace = EGY_event
+add_namespace = EGY_south_africa
 
 
 country_event = { #아비도스 대책위원회의 망명
@@ -146,15 +147,7 @@ country_event = { #푸아드 1세 사망
 		name = EGY_event.3.a
 		retire_character = EGY_fuad_i
 		set_country_flag = EGY_flag_fuad_died
-		add_country_leader_role = {
-			character = EGY_farouk_i
-			promote_leader = yes
-			country_leader = {
-				ideology = despotism
-				expire = "1965.1.1.1"
-				traits = { EGY_farouk_i_of_egypt EGY_young_king }
-			}
-		}
+		promote_character = EGY_farouk_i
 	}
 }
 country_event = { #아비도스 대책위원회의 망명
@@ -219,8 +212,3957 @@ country_event = { #아비도스 대책위원회의 망명
 	is_triggered_only = yes
 
 	option = { 
-		name = EGY_event.5.6
+		name = EGY_event.6.a
 		set_country_flag = EGY_flag_nasser
 		custom_effect_tooltip = EGY_commander_tt
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.7
+	title = EGY_event.7.t	
+	desc = EGY_event.7.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.7.a
+        ai_chance = { factor = 100 }
+		EGY = {
+			country_event = {
+				id = EGY_event.8
+			}
+		}
+	}
+
+	option = { 
+		name = EGY_event.7.b
+        ai_chance = { factor = 0 }
+		EGY = {
+			country_event = {
+				id = EGY_event.9
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.8
+	title = EGY_event.8.t	
+	desc = EGY_event.8.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.8.a
+        ai_chance = { factor = 100 }
+		EGY = {
+			add_to_faction = FROM
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.9
+	title = EGY_event.9.t	
+	desc = EGY_event.9.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.9.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.10
+	title = EGY_event.10.t	
+	desc = EGY_event.10.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.10.a
+        ai_chance = { factor = 100 }
+		446 = {
+			transfer_state_to = EGY
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 2
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 3
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 4
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 5
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 6
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 7
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 8
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 9
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 10
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 11
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 12
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 13
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				EGY = {
+					check_variable = {
+						EGY_suez_money_var > 14
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.11
+	title = EGY_event.11.t	
+	desc = EGY_event.11.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.11.a
+        ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 2
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 3
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 4
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 5
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 6
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 7
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 8
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 9
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 10
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 11
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 12
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 13
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					EGY_suez_money_var > 14
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+}country_event = {
+	id = EGY_south_africa.60
+	title = EGY_south_africa.60.t	# Freedom for ANG
+	desc = EGY_south_africa.60.d	#
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.60.a
+		ai_chance = {
+			base = 100
+		}
+			ANG = { 
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 540 
+							controls_state = 891 
+							controls_state = 892 
+						} 
+					}
+					transfer_state = 540
+					transfer_state = 891
+					transfer_state = 892
+				}
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			}
+			EGY = { puppet = ANG }
+			set_country_flag = EGY_released_ANG
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.60.b
+		ai_chance = {
+			base = 0
+		}
+		ANG = { 
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 540 
+						controls_state = 891 
+						controls_state = 892 
+					} 
+				}
+				transfer_state = 540
+				transfer_state = 891
+				transfer_state = 892
+			}
+			add_ideas = {
+				EGY_idea_strong_egypt
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+						ideology = democratic
+						popularity = 0.5
+				}
+			}
+		}
+		set_country_flag = EGY_released_ANG
+		EGY = { add_to_faction = ANG }
+	}		
+}
+	
+country_event = {
+	id = EGY_south_africa.61
+	title = EGY_south_africa.61.t	# Freedom for MZB
+	desc = EGY_south_africa.61.d	#
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.61.a
+		ai_chance = {
+			base = 100
+		}
+			MZB = { 
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 544 							
+							controls_state = 896 							
+							controls_state = 897 							
+						} 
+					}
+					transfer_state = 544
+					transfer_state = 896
+					transfer_state = 897
+				}
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			}
+			EGY = { puppet = MZB }
+			set_country_flag = EGY_released_MZB
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.61.b
+		ai_chance = {
+			base = 0
+		}
+			MZB = { 
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 544
+							controls_state = 896 							
+							controls_state = 897 
+						} 
+					}
+					transfer_state = 544
+					transfer_state = 896
+					transfer_state = 897
+				}
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				hidden_effect = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.5
+					}
+				}
+			}
+
+		set_country_flag = EGY_released_MZB
+		EGY = { add_to_faction = MZB }		
+	}	
+}
+
+country_event = {
+	id = EGY_south_africa.62
+	title = EGY_south_africa.62.t	# Freedom for COG
+	desc = EGY_south_africa.62.d	#
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.61.a
+		ai_chance = {
+			base = 100
+		}
+			COG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 295 
+							controls_state = 538 
+							controls_state = 718 
+							controls_state = 888 
+							controls_state = 889 
+							controls_state = 890 
+							controls_state = 796 
+							controls_state = 772 
+							} 
+
+						}
+							transfer_state = 295
+							transfer_state = 538
+							transfer_state = 718
+							transfer_state = 888
+							transfer_state = 889
+							transfer_state = 890
+							transfer_state = 796 
+							transfer_state = 772 
+					}
+				}
+			EGY = { puppet = COG }
+			set_country_flag = EGY_released_COG
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.61.b
+		ai_chance = {
+			base = 0
+		}
+			COG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 295 
+							controls_state = 538 
+							controls_state = 718 
+							controls_state = 888 
+							controls_state = 889 
+							controls_state = 890
+							controls_state = 796 
+							controls_state = 772 
+							} 
+
+						}
+						transfer_state = 295
+						transfer_state = 538
+						transfer_state = 718
+						transfer_state = 888
+						transfer_state = 889
+						transfer_state = 890
+						transfer_state = 796 
+						transfer_state = 772 
+					}
+				hidden_effect = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.5
+					}
+				}	
+			}
+						
+			set_country_flag = EGY_released_COG
+			EGY = { add_to_faction = COG }		
+	}		
+}
+
+country_event = {
+	id = EGY_south_africa.63
+	title = EGY_south_africa.63.t	# Freedom for ZIM
+	desc = EGY_south_africa.63.d	#
+	picture = GFX_report_event_african_soldiers
+	
+
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.63.a
+		ai_chance = {
+			base = 100
+		}
+			ZIM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+				limit = { 
+					EGY = { 
+						controls_state = 545  
+						} 
+
+					}
+						transfer_state = 545
+					}
+				}
+			EGY = { puppet = ZIM }
+			set_country_flag = EGY_released_ZIM
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.63.b
+		ai_chance = {
+			base = 0
+		}
+			ZIM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 545 
+							
+							} 
+
+						}
+						transfer_state = 545
+						
+					}
+				hidden_effect = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.5
+					}
+				}
+			}
+
+			set_country_flag = EGY_released_ZIM
+			EGY = { add_to_faction = ZIM }		
+	}
+	
+}
+
+country_event = {
+	id = EGY_south_africa.64
+	title = EGY_south_africa.64.t	# Freedom for KEN
+	desc = EGY_south_africa.64.d	#
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+			KEN = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+				limit = { 
+					EGY = { 
+						controls_state = 547
+						controls_state = 903
+						controls_state = 904
+						controls_state = 905
+						} 
+
+					}
+						transfer_state = 547
+						transfer_state = 903
+						transfer_state = 904
+						transfer_state = 905
+					}
+				}
+			EGY = { puppet = KEN }
+			set_country_flag = EGY_released_KEN
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+			KEN = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+				if = {
+					limit = { 
+						EGY = { 
+							controls_state = 547 
+							controls_state = 903
+							controls_state = 904
+							controls_state = 905
+							} 
+
+						}
+						transfer_state = 547
+						transfer_state = 903
+						transfer_state = 904
+						transfer_state = 905
+					}
+				hidden_effect = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.5
+					}
+				}
+			}			
+			set_country_flag = EGY_released_KEN
+			EGY = { add_to_faction = KEN }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.65
+	title = EGY_south_africa.65.t	# Freedom for MAD
+	desc = EGY_south_africa.65.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		MAD = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 543
+						controls_state = 706
+						controls_state = 708
+					} 
+				}
+				transfer_state = 543
+				transfer_state = 706
+				transfer_state = 708
+			}
+		}
+		EGY = { puppet = MAD }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		MAD = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 543
+						controls_state = 706
+						controls_state = 708 
+					} 
+				}
+				transfer_state = 543
+				transfer_state = 706
+				transfer_state = 708
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = MAD }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.66
+	title = EGY_south_africa.66.t	# Freedom for BOT
+	desc = EGY_south_africa.66.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		BOT = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 542
+					} 
+				}
+				transfer_state = 542
+			}
+		}
+		EGY = { puppet = BOT }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		BOT = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 542
+					}
+				}
+				transfer_state = 542
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = BOT }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.67
+	title = EGY_south_africa.67.t	# Freedom for ZAM
+	desc = EGY_south_africa.67.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		ZAM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 771
+					} 
+				}
+				transfer_state = 771
+			}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 981
+					} 
+				}
+				transfer_state = 981
+			}
+		}
+		EGY = { puppet = ZAM }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		ZAM = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 771
+					}
+				}
+				transfer_state = 771
+			}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 981
+					}
+				}
+				transfer_state = 981
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = ZAM }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.68
+	title = EGY_south_africa.68.t	# Freedom for MLW
+	desc = EGY_south_africa.68.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		MLW = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 770
+					} 
+				}
+				transfer_state = 770
+			}
+		}
+		EGY = { puppet = MLW }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		MLW = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 770
+					}
+				}
+				transfer_state = 770
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = MLW }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.69
+	title = EGY_south_africa.69.t	# Freedom for TZN
+	desc = EGY_south_africa.69.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		TZN = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 546
+					} 
+				}
+				transfer_state = 546
+			}
+		}
+		EGY = { puppet = TZN }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		TZN = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 546
+					}
+				}
+				transfer_state = 546
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = TZN }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.70
+	title = EGY_south_africa.70.t	# Freedom for UGA
+	desc = EGY_south_africa.70.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		UGA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 548
+					} 
+				}
+				transfer_state = 548
+			}
+		}
+		EGY = { puppet = UGA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		UGA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 548
+					}
+				}
+				transfer_state = 548
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = UGA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.71
+	title = EGY_south_africa.71.t	# Freedom for SUD
+	desc = EGY_south_africa.71.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		NMB = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 541
+						controls_state = 893
+						controls_state = 894
+						controls_state = 895
+					}
+				}
+				transfer_state = 541
+				transfer_state = 893
+				transfer_state = 894
+				transfer_state = 895
+			}
+		}
+		EGY = { puppet = NMB }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		NMB = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 541
+						controls_state = 893
+						controls_state = 894
+						controls_state = 895
+					}
+				}
+				transfer_state = 541
+				transfer_state = 893
+				transfer_state = 894
+				transfer_state = 895
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = NMB }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.72
+	title = EGY_south_africa.72.t	# Freedom for EGY
+	desc = EGY_south_africa.72.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		SAF = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 275
+						controls_state = 681
+						controls_state = 719
+					} 
+				}
+				transfer_state = 275
+				transfer_state = 681
+				transfer_state = 719
+			}
+		}
+		EGY = { puppet = SAF }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		SAF = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 275
+						controls_state = 681
+						controls_state = 719
+					}
+				}
+				transfer_state = 275
+				transfer_state = 681
+				transfer_state = 719
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = SAF }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.73
+	title = EGY_south_africa.73.t	# Freedom for ERI
+	desc = EGY_south_africa.73.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		ERI = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 550
+						controls_state = 842
+					} 
+				}
+				transfer_state = 550
+				transfer_state = 842
+			}
+		}
+		EGY = { puppet = ERI }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		ERI = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 550
+						controls_state = 842
+					} 
+				}
+				transfer_state = 550
+				transfer_state = 842
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = ERI }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.74
+	title = EGY_south_africa.74.t	# Freedom for ETH
+	desc = EGY_south_africa.74.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		ETH = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 271
+						controls_state = 835
+						controls_state = 836
+						controls_state = 837
+						controls_state = 838
+						controls_state = 839
+						controls_state = 840
+						controls_state = 841
+						controls_state = 842
+						controls_state = 843
+						controls_state = 268
+						controls_state = 908
+						controls_state = 550
+						controls_state = 269
+						controls_state = 559
+						controls_state = 844
+					} 
+				}
+				transfer_state = 271
+				transfer_state = 835
+				transfer_state = 836
+				transfer_state = 837
+				transfer_state = 838
+				transfer_state = 839
+				transfer_state = 840
+				transfer_state = 841
+				transfer_state = 842
+				transfer_state = 843
+				transfer_state = 268
+				transfer_state = 908
+				transfer_state = 550
+				transfer_state = 269
+				transfer_state = 559
+				transfer_state = 844
+			}
+		}
+		EGY = { puppet = ETH }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		ETH = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 271
+						controls_state = 835
+						controls_state = 836
+						controls_state = 837
+						controls_state = 838
+						controls_state = 839
+						controls_state = 840
+						controls_state = 841
+						controls_state = 842
+						controls_state = 843
+						controls_state = 268
+						controls_state = 908
+						controls_state = 550
+						controls_state = 269
+						controls_state = 559
+						controls_state = 844
+					} 
+				}
+				transfer_state = 271
+				transfer_state = 835
+				transfer_state = 836
+				transfer_state = 837
+				transfer_state = 838
+				transfer_state = 839
+				transfer_state = 840
+				transfer_state = 841
+				transfer_state = 842
+				transfer_state = 843
+				transfer_state = 268
+				transfer_state = 908
+				transfer_state = 550
+				transfer_state = 269
+				transfer_state = 559
+				transfer_state = 844
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = ETH }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.75
+	title = EGY_south_africa.75.t	# Freedom for AFA
+	desc = EGY_south_africa.75.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		AFA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 268
+						controls_state = 908
+						controls_state = 843
+					} 
+				}
+				transfer_state = 268
+				transfer_state = 908
+				transfer_state = 843
+			}
+		}
+		EGY = { puppet = AFA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		AFA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 268
+						controls_state = 908
+						controls_state = 843
+					} 
+				}
+				transfer_state = 268
+				transfer_state = 908
+				transfer_state = 843
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = AFA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.76
+	title = EGY_south_africa.76.t	# Freedom for SOM
+	desc = EGY_south_africa.76.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		SOM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 269
+						controls_state = 559
+						controls_state = 844
+					} 
+				}
+				transfer_state = 269
+				transfer_state = 559
+				transfer_state = 844
+			}
+		}
+		EGY = { puppet = SOM }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		SOM = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 269
+						controls_state = 559
+						controls_state = 844
+					}
+				}
+				transfer_state = 269
+				transfer_state = 559
+				transfer_state = 844
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = SOM }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.77
+	title = EGY_south_africa.77.t	# Freedom for RWA
+	desc = EGY_south_africa.77.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		RWA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 768
+					} 
+				}
+				transfer_state = 768
+			}
+		}
+		EGY = { puppet = RWA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		RWA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 768
+					}
+				}
+				transfer_state = 768
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = RWA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.78
+	title = EGY_south_africa.78.t	# Freedom for BRD
+	desc = EGY_south_africa.78.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		BRD = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 769
+					} 
+				}
+				transfer_state = 769
+			}
+		}
+		EGY = { puppet = BRD }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		BRD = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 769
+					}
+				}
+				transfer_state = 769
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = BRD }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.79
+	title = EGY_south_africa.79.t	# Freedom for RCG
+	desc = EGY_south_africa.79.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		RCG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 835
+					} 
+				}
+				transfer_state = 835
+			}
+		}
+		EGY = { puppet = RCG }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		RCG = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 835
+					}
+				}
+				transfer_state = 835
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = RCG }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.80
+	title = EGY_south_africa.80.t	# Freedom for GAB
+	desc = EGY_south_africa.80.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GAB = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 539
+					} 
+				}
+				transfer_state = 539
+			}
+		}
+		EGY = { puppet = GAB }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GAB = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 539
+					}
+				}
+				transfer_state = 539
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GAB }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.81
+	title = EGY_south_africa.81.t	# Freedom for EQG
+	desc = EGY_south_africa.81.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		EQG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 297
+					} 
+				}
+				transfer_state = 297
+			}
+		}
+		EGY = { puppet = EQG }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		EQG = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 297
+					}
+				}
+				transfer_state = 297
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = EQG }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.82
+	title = EGY_south_africa.82.t	# Freedom for CMR
+	desc = EGY_south_africa.82.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		CMR = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 773
+					} 
+				}
+				transfer_state = 773
+			}
+		}
+		EGY = { puppet = CMR }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		CMR = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 773
+					}
+				}
+				transfer_state = 773
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = CMR }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.83
+	title = EGY_south_africa.83.t	# Freedom for CAR
+	desc = EGY_south_africa.83.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		CAR = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 660
+					} 
+				}
+				transfer_state = 660
+			}
+		}
+		EGY = { puppet = CAR }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		CAR = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 660
+					}
+				}
+				transfer_state = 660
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = CAR }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.84
+	title = EGY_south_africa.84.t	# Freedom for CHA
+	desc = EGY_south_africa.84.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		CHA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 774
+						controls_state = 775
+					} 
+				}
+				transfer_state = 774
+				transfer_state = 775
+			}
+		}
+		EGY = { puppet = CHA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		CHA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 774
+						controls_state = 775
+					}
+				}
+				transfer_state = 774
+				transfer_state = 775
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = CHA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.85
+	title = EGY_south_africa.85.t	# Freedom for NGA
+	desc = EGY_south_africa.85.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		NGA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 558
+						controls_state = 900
+						controls_state = 901
+						controls_state = 902
+					} 
+				}
+				transfer_state = 558
+				transfer_state = 900
+				transfer_state = 901
+				transfer_state = 902
+			}
+		}
+		EGY = { puppet = NGA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		NGA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 558
+						controls_state = 900
+						controls_state = 901
+						controls_state = 902
+					}
+				}
+				transfer_state = 558
+				transfer_state = 900
+				transfer_state = 901
+				transfer_state = 902
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = NGA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.86
+	title = EGY_south_africa.86.t	# Freedom for NGR
+	desc = EGY_south_africa.86.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		NGR = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 781
+						controls_state = 515
+					} 
+				}
+				transfer_state = 781
+				transfer_state = 515
+			}
+		}
+		EGY = { puppet = NGR }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		NGR = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 781
+						controls_state = 515
+					}
+				}
+				transfer_state = 781
+				transfer_state = 515
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = NGR }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.87
+	title = EGY_south_africa.87.t	# Freedom for DAH
+	desc = EGY_south_africa.87.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		DAH = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 776
+					} 
+				}
+				transfer_state = 776
+			}
+		}
+		EGY = { puppet = DAH }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		DAH = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 776
+					}
+				}
+				transfer_state = 776
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = DAH }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.88
+	title = EGY_south_africa.88.t	# Freedom for TOG
+	desc = EGY_south_africa.88.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		TOG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 777
+					} 
+				}
+				transfer_state = 777
+			}
+		}
+		EGY = { puppet = TOG }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		TOG = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 777
+					}
+				}
+				transfer_state = 777
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = TOG }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.89
+	title = EGY_south_africa.89.t	# Freedom for GHA
+	desc = EGY_south_africa.89.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GHA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 274
+					} 
+				}
+				transfer_state = 274
+			}
+		}
+		EGY = { puppet = GHA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GHA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 274
+					}
+				}
+				transfer_state = 274
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GHA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.90
+	title = EGY_south_africa.90.t	# Freedom for IVO
+	desc = EGY_south_africa.90.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		IVO = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 779
+					} 
+				}
+				transfer_state = 779
+			}
+		}
+		EGY = { puppet = IVO }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		IVO = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 779
+					}
+				}
+				transfer_state = 779
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = IVO }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.91
+	title = EGY_south_africa.91.t	# Freedom for VOL
+	desc = EGY_south_africa.91.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		VOL = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 778
+					} 
+				}
+				transfer_state = 778
+			}
+		}
+		EGY = { puppet = VOL }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		VOL = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 778
+					}
+				}
+				transfer_state = 778
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = VOL }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.92
+	title = EGY_south_africa.92.t	# Freedom for MLI
+	desc = EGY_south_africa.92.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		MLI = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 556
+						controls_state = 782
+						controls_state = 898
+						controls_state = 899
+					} 
+				}
+				transfer_state = 556
+				transfer_state = 782
+				transfer_state = 898
+				transfer_state = 899
+			}
+		}
+		EGY = { puppet = MLI }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		MLI = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 556
+						controls_state = 782
+						controls_state = 898
+						controls_state = 899
+					}
+				}
+				transfer_state = 556
+				transfer_state = 782
+				transfer_state = 898
+				transfer_state = 899
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = MLI }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.93
+	title = EGY_south_africa.93.t	# Freedom for SIE
+	desc = EGY_south_africa.93.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		SIE = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 700
+					} 
+				}
+				transfer_state = 700
+			}
+		}
+		EGY = { puppet = SIE }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		SIE = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 700
+					}
+				}
+				transfer_state = 700
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = SIE }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.94
+	title = EGY_south_africa.94.t	# Freedom for GNA
+	desc = EGY_south_africa.94.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GNA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 780
+					} 
+				}
+				transfer_state = 780
+			}
+		}
+		EGY = { puppet = GNA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GNA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 780
+					}
+				}
+				transfer_state = 780
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GNA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.95
+	title = EGY_south_africa.95.t	# Freedom for GNB
+	desc = EGY_south_africa.95.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GNB = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 296
+					} 
+				}
+				transfer_state = 296
+			}
+		}
+		EGY = { puppet = GNB }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GNB = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 296
+					}
+				}
+				transfer_state = 296
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GNB }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.96
+	title = EGY_south_africa.96.t	# Freedom for SEN
+	desc = EGY_south_africa.96.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		SEN = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 272
+					} 
+				}
+				transfer_state = 272
+			}
+		}
+		EGY = { puppet = SEN }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		SEN = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 272
+					}
+				}
+				transfer_state = 272
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = SEN }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.97
+	title = EGY_south_africa.97.t	# Freedom for GAM
+	desc = EGY_south_africa.97.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GAM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 701
+					} 
+				}
+				transfer_state = 701
+			}
+		}
+		EGY = { puppet = GAM }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GAM = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 701
+					}
+				}
+				transfer_state = 701
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GAM }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.98
+	title = EGY_south_africa.98.t	# Freedom for LIB
+	desc = EGY_south_africa.98.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		LIB = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 298
+					} 
+				}
+				transfer_state = 298
+			}
+		}
+		EGY = { puppet = LIB }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		LIB = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 298
+					}
+				}
+				transfer_state = 298
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = LIB }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.99
+	title = EGY_south_africa.99.t	# Freedom for MRT
+	desc = EGY_south_africa.99.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		MRT = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 557
+						controls_state = 786
+					} 
+				}
+				transfer_state = 557
+				transfer_state = 786
+			}
+		}
+		EGY = { puppet = MRT }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		MRT = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 557
+						controls_state = 786
+					}
+				}
+				transfer_state = 557
+				transfer_state = 786
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = MRT }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.100
+	title = EGY_south_africa.100.t	# Freedom for QEM
+	desc = EGY_south_africa.100.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		QEM = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 841
+					} 
+				}
+				transfer_state = 841
+			}
+		}
+		EGY = { puppet = QEM }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		QEM = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 841
+					}
+				}
+				transfer_state = 841
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = QEM }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.101
+	title = EGY_south_africa.101.t	# Freedom for ALG
+	desc = EGY_south_africa.101.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		ALG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 459
+						controls_state = 460
+						controls_state = 513
+						controls_state = 514
+					} 
+				}
+				transfer_state = 459
+				transfer_state = 460
+				transfer_state = 513
+				transfer_state = 514
+			}
+		}
+		EGY = { puppet = ALG }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		ALG = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 459
+						controls_state = 460
+						controls_state = 513
+						controls_state = 514
+					}
+				}
+				transfer_state = 459
+				transfer_state = 460
+				transfer_state = 513
+				transfer_state = 514
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = ALG }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.102
+	title = EGY_south_africa.102.t	# Freedom for MOR
+	desc = EGY_south_africa.102.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		MOR = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 290
+						controls_state = 461
+						controls_state = 462
+						controls_state = 783
+						controls_state = 699
+					} 
+				}
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+				transfer_state = 699
+			}
+		}
+		EGY = { puppet = MOR }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		MOR = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 290
+						controls_state = 461
+						controls_state = 462
+						controls_state = 783
+						controls_state = 699
+					}
+				}
+				transfer_state = 290
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+				transfer_state = 699
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = MOR }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.103
+	title = EGY_south_africa.103.t	# Freedom for TUN
+	desc = EGY_south_africa.103.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		TUN = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 458
+						controls_state = 665
+					} 
+				}
+				transfer_state = 458
+				transfer_state = 665
+			}
+		}
+		EGY = { puppet = TUN }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		TUN = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 458
+						controls_state = 665
+					}
+				}
+				transfer_state = 458
+				transfer_state = 665
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = TUN }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.104
+	title = EGY_south_africa.104.t	# Freedom for LBA
+	desc = EGY_south_africa.104.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		LBA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 448
+						controls_state = 449
+						controls_state = 450
+						controls_state = 451
+						controls_state = 661
+						controls_state = 662
+						controls_state = 663
+						controls_state = 273
+						controls_state = 1035
+					} 
+				}
+				transfer_state = 448
+				transfer_state = 449
+				transfer_state = 450
+				transfer_state = 451
+				transfer_state = 661
+				transfer_state = 662
+				transfer_state = 663
+				transfer_state = 273
+				transfer_state = 1035
+			}
+		}
+		EGY = { puppet = LBA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		LBA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 448
+						controls_state = 449
+						controls_state = 450
+						controls_state = 451
+						controls_state = 661
+						controls_state = 662
+						controls_state = 663
+						controls_state = 273
+						controls_state = 1035
+					}
+				}
+				transfer_state = 448
+				transfer_state = 449
+				transfer_state = 450
+				transfer_state = 451
+				transfer_state = 661
+				transfer_state = 662
+				transfer_state = 663
+				transfer_state = 273
+				transfer_state = 1035
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = LBA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.105
+	title = EGY_south_africa.105.t	# Freedom for GAM
+	desc = EGY_south_africa.105.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		BEG = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 839
+						controls_state = 840
+					} 
+				}
+				transfer_state = 839
+				transfer_state = 840
+			}
+		}
+		EGY = { puppet = BEG }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		BEG = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 839
+						controls_state = 840
+					} 
+				}
+				transfer_state = 839
+				transfer_state = 840
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = BEG }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.106
+	title = EGY_south_africa.106.t	# Freedom for GAM
+	desc = EGY_south_africa.106.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		GBA = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 838
+					} 
+				}
+				transfer_state = 838
+			}
+		}
+		EGY = { puppet = GBA }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		GBA = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 838
+					}
+				}
+				transfer_state = 838
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = GBA }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.107
+	title = EGY_south_africa.107.t	# Freedom for GAM
+	desc = EGY_south_africa.107.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		SID = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 837
+					} 
+				}
+				transfer_state = 837
+			}
+		}
+		EGY = { puppet = SID }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		SID = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = {
+					EGY = {
+						controls_state = 837
+					}
+				}
+				transfer_state = 837
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = SID }		
+	}
+}
+
+country_event = {
+	id = EGY_south_africa.108
+	title = EGY_south_africa.108.t	# Freedom for GAM
+	desc = EGY_south_africa.108.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #puppet new state
+		name = EGY_south_africa.64.a
+		ai_chance = {
+			base = 100
+		}
+		ORO = { 
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 836
+						controls_state = 271
+					} 
+				}
+				transfer_state = 836
+				transfer_state = 271
+			}
+		}
+		EGY = { puppet = ORO }
+	}
+
+	option = { #full freedom
+		name = EGY_south_africa.64.b
+		ai_chance = {
+			base = 0
+		}
+		ORO = {
+				add_ideas = {
+					EGY_idea_strong_egypt
+				}
+			if = {
+				limit = { 
+					EGY = { 
+						controls_state = 836
+						controls_state = 271
+					} 
+				}
+				transfer_state = 836
+				transfer_state = 271
+			}
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+			}
+		}			
+		EGY = { add_to_faction = ORO }		
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.12
+	title = EGY_event.12.t	
+	desc = EGY_event.12.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.12.a
+        ai_chance = { factor = 100 }
+		EGY = {
+			country_event = {
+				id = EGY_event.13
+			}
+		}
+	}
+
+	option = { 
+		name = EGY_event.12.b
+        ai_chance = { factor = 0 }
+		add_war_support = -0.1
+		EGY = {
+			country_event = {
+				id = EGY_event.14
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.13
+	title = EGY_event.13.t	
+	desc = EGY_event.13.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.13.a
+        ai_chance = { factor = 100 }
+		white_peace = FROM
+		every_state = {
+			limit = {
+				is_on_continent = africa
+				is_owned_by = FROM
+			}
+			transfer_state_to = EGY
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.14
+	title = EGY_event.14.t	
+	desc = EGY_event.14.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.14.a
+        ai_chance = { factor = 100 }
+		add_war_support = 0.1
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.15
+	title = EGY_event.15.t	
+	desc = EGY_event.15.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.15.a
+        ai_chance = { factor = 0 }
+		EGY = {
+			country_event = {
+				id = EGY_event.16
+			}
+		}
+	}
+
+	option = { 
+		name = EGY_event.15.b
+        ai_chance = { factor = 100 }
+		EGY = {
+			country_event = {
+				id = EGY_event.17
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.16
+	title = EGY_event.16.t	
+	desc = EGY_event.16.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.16.a
+        ai_chance = { factor = 100 }
+		every_state = {
+			limit = {
+				is_core_of = LBA
+				is_controlled_by = ITA
+			}
+			transfer_state_to = LBA
+		}
+		EGY = {
+			add_to_faction = LBA
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.17
+	title = EGY_event.17.t	
+	desc = EGY_event.17.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.17.a
+        ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = liberate_wargoal
+			target = ITA
+		}
 	}
 }

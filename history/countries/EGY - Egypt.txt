@@ -255,3 +255,6 @@ add_ideas = {
 set_variable = {
 	EGY_Binah_health = 500
 }
+set_variable = {
+	EGY_suez_money_var = 15
+}

@@ -51,6 +51,14 @@ characters={
 				small="GFX_idea_EGY_farouk_army"
 			}
 		}
+		country_leader ={
+			ideology=despotism
+			expire="1965.1.1"
+			traits = {
+				EGY_farouk_i_of_egypt EGY_young_king
+			}
+			id=-1
+		}
 	}
 	EGY_mustafa_al_nahhas = {
 		name=Mustafa_ElNahhas
@@ -599,6 +607,9 @@ characters={
 			traits = {
 				democratic_reformer
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}
 	}
 	EGY_mohammed_ali_tewfik = {
@@ -712,6 +723,9 @@ characters={
 			}
 			traits = {
 				EGY_trait_sat_party
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 	}

@@ -16,3 +16,21 @@ EGY_descision_category_sudan = {
 	}
 	priority = 100
 }
+EGY_descision_category_suez = {
+
+	icon = GFX_decision_category_border_conflicts
+	
+	allowed = {
+		original_tag = EGY
+	}
+	priority = 100
+}
+EGY_anti_colonialist_crusade = {
+
+	icon = GFX_decision_category_border_conflicts
+	
+	allowed = {
+		original_tag = EGY
+	}
+	priority = 100
+}

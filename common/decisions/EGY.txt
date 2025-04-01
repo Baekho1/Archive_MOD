@@ -155,6 +155,9 @@ EGY_Binah_problem = {
 
 	EGY_binah_attack_ABYDOS = {
 		priority = 8
+		ai_will_do = {
+			factor = 200
+		}
 
 		visible = {
 			has_idea = EGY_Binah	
@@ -190,8 +193,10 @@ EGY_descision_category_sudan = {
 			}
 		}
 		available = {
-			any_controlled_state = {
-				NOT = { has_state_flag = EGY_sudan_rabel }
+			NOT = {
+				any_owned_state= {
+					has_state_flag = EGY_sudan_rabel
+				}
 			}
 		}
 		days_mission_timeout = 120
@@ -260,6 +265,9 @@ EGY_descision_category_sudan = {
 		fire_only_once = yes
 
 		days_remove = 100
+		ai_will_do = {
+			factor = 200
+		}
 
 		modifier = {
 		}
@@ -293,6 +301,9 @@ EGY_descision_category_sudan = {
         allowed = {
             tag = EGY
         }
+		ai_will_do = {
+			factor = 200
+		}
 
 		visible = {
 			tag = EGY
@@ -362,6 +373,9 @@ EGY_descision_category_sudan = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 200
+		}
 
         allowed = {
             tag = EGY
@@ -420,4 +434,1721 @@ EGY_descision_category_sudan = {
 			}
 		}
 	}
+}
+EGY_descision_category_suez = {
+	EGY_descision_suez_result = {
+		priority = 10
+		activation = {
+			has_country_flag = EGY_flag_suez
+			446 = {
+				is_controlled_by = ENG
+			}
+		}
+		available = {
+			446 = {
+				is_controlled_by = EGY
+			}
+		}
+		days_mission_timeout = 360
+		is_good = no
+		timeout_effect = {
+			country_event = {
+				id = EGY_event.11
+			}
+			ENG = {
+				country_event = {
+					id = EGY_event.10
+				}
+			}
+		}
+	}
+	EGY_descision_reduce_money = {
+		icon = GFX_decision_eng_trade_unions_support
+
+        allowed = {
+            tag = EGY
+        }
+
+		visible = {
+			has_country_flag = EGY_flag_suez
+			446 = {
+				is_controlled_by = ENG
+			}
+		}
+
+		available = {
+			has_country_flag = EGY_flag_suez
+			446 = {
+				is_controlled_by = ENG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+
+		cost = 50
+
+		days_remove = 30
+
+		modifier = {
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				EGY_suez_money_var = -1
+				tooltip = EGY_suez_money_tt
+			}
+		}
+	}
+}
+EGY_anti_colonialist_crusade = {
+
+	EGY_demend_peace = {
+		priority = 10000
+
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					NOT = { is_on_continent = africa }
+				}
+				has_war_with = EGY
+				is_puppet = no
+			}
+		}
+
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			FROM = {
+				has_war_with = EGY
+			}
+			NOT = {
+				any_state = {
+					is_on_continent = africa
+					is_controlled_by = FROM
+				}
+			}
+		}
+
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			FROM = {
+				country_event = { id = EGY_event.12 }
+			}
+		}
+		
+	}
+
+	EGY_liberate_angola = {
+
+		icon = generic_independence
+
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 540
+					controls_state = 892
+					controls_state = 891
+				}
+				ANG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.60 }
+		}
+		
+	}
+
+	EGY_liberate_mozambique = {
+
+		icon = generic_independence
+
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 544
+					controls_state = 896
+					controls_state = 897
+				}
+				MZB = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.61 }
+		}
+		
+	}
+
+	EGY_liberate_congo = {
+
+		icon = generic_independence
+
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 295
+					controls_state = 718
+					controls_state = 538
+					controls_state = 888
+					controls_state = 889
+					controls_state = 890
+					controls_state = 796 
+					controls_state = 772 
+				}
+				COG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.62 }
+		}
+		
+	}
+
+	EGY_liberate_zimbabwe = {
+
+		icon = generic_independence
+
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 545
+				}
+				ZIM = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.63 }
+		}
+		
+	}
+
+	EGY_liberate_kenya = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 547
+					controls_state = 903
+					controls_state = 904
+					controls_state = 905
+				}
+				KEN = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.64 }
+		}
+		
+	}
+
+	EGY_liberate_madagascar = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 543
+					controls_state = 706
+					controls_state = 708
+				}
+				MAD = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.65 }
+		}
+		
+	}
+
+	EGY_liberate_botswana = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 542
+				}
+				BOT = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.66 }
+		}
+		
+	}
+
+	EGY_liberate_zambia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 771
+					controls_state = 981
+				}
+				ZAM = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.67 }
+		}
+		
+	}
+
+	EGY_liberate_malawi = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 770
+				}
+				MLW = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.68 }
+		}
+		
+	}
+
+	EGY_liberate_tanzania = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 546
+				}
+				TZN = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.69 }
+		}
+		
+	}
+
+	EGY_liberate_uganda = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 548
+				}
+				UGA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.70 }
+		}
+		
+	}
+
+	EGY_liberate_sudan = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 541
+					controls_state = 893
+					controls_state = 894
+					controls_state = 895
+				}
+				NMB = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.71 }
+		}
+		
+	}
+	EGY_liberate_egypt = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 275
+					controls_state = 681
+					controls_state = 719
+				}
+				SAF = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.72 }
+		}
+		
+	}
+
+	EGY_liberate_ethiopia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_recognize_ethiopian_sovereignty
+			AND = {
+				EGY = {
+					controls_state = 271
+					controls_state = 835
+					controls_state = 836
+					controls_state = 837
+					controls_state = 838
+					controls_state = 839
+					controls_state = 840
+					controls_state = 841
+					controls_state = 842
+					controls_state = 843
+					controls_state = 268
+					controls_state = 908
+					controls_state = 550
+					controls_state = 269
+					controls_state = 559
+					controls_state = 844
+				}
+				ETH = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_recognize_ethiopian_sovereignty
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.74 }
+		}
+		
+	}
+
+	EGY_liberate_eritrea = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 550
+					controls_state = 842
+				}
+				ERI = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.73 }
+		}
+		
+	}
+
+	EGY_liberate_djibouti = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule			
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 268
+					controls_state = 908
+					controls_state = 843
+				}
+				AFA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule			
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.75 }
+		}
+		
+	}
+
+	EGY_liberate_somalia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 269
+					controls_state = 559
+					controls_state = 844
+				}
+				SOM = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.76 }
+		}
+		
+	}
+
+	EGY_liberate_western_sahara = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 841
+				}
+				QEM = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.100 }
+		}
+		
+	}
+
+	EGY_liberate_congo_brazzaville = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 835
+				}
+				HAR = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.79 }
+		}
+		
+	}
+
+	EGY_liberate_rwanda = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 768
+				}
+				RWA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.77 }
+		}
+		
+	}
+
+	EGY_liberate_burundi = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 769
+				}
+				BRD = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.78 }
+		}
+		
+	}
+
+	EGY_liberate_gabon = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 539
+				}
+				GAB = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.80 }
+		}
+		
+	}
+
+	EGY_liberate_equatorial_guinea = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 297
+				}
+				EQG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.81 }
+		}
+		
+	}
+
+	EGY_liberate_cameroon = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 773
+				}
+				CMR = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.82 }
+		}
+		
+	}
+
+	EGY_liberate_central_african_republic = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 660
+				}
+				CAR = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.83 }
+		}
+		
+	}
+
+	EGY_liberate_chad = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 774
+					controls_state = 775
+				}
+				CHA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.84 }
+		}
+		
+	}
+
+	EGY_liberate_nigeria = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 558
+					controls_state = 900
+					controls_state = 901
+					controls_state = 902
+				}
+				NGA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.85 }
+		}
+		
+	}
+
+	EGY_liberate_niger = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 781
+					controls_state = 515
+				}
+				NGR = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.86 }
+		}
+		
+	}
+
+	EGY_liberate_dahomey = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 776
+				}
+				DAH = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.87 }
+		}
+		
+	}
+
+	EGY_liberate_togo = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 777
+				}
+				TOG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.88 }
+		}
+		
+	}
+
+	EGY_liberate_ghana = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 274
+				}
+				GHA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.89 }
+		}
+		
+	}
+
+	EGY_liberate_ivory_coast = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 779
+				}
+				IVO = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.90 }
+		}
+		
+	}
+
+	EGY_liberate_upper_volta = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 778
+				}
+				VOL = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.91 }
+		}
+		
+	}
+
+	EGY_liberate_mali = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 556
+					controls_state = 782
+				}
+				MLI = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.92 }
+		}
+		
+	}
+
+	EGY_liberate_sierra_leone = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 700
+				}
+				SIE = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.93 }
+		}
+		
+	}
+
+	EGY_liberate_guinea = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 780
+				}
+				GNA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.94 }
+		}
+		
+	}
+
+	EGY_liberate_guinea_bissau = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 296
+				}
+				GNB = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.95 }
+		}
+		
+	}
+
+	EGY_liberate_senegal = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 272
+				}
+				SEN = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.96 }
+		}
+		
+	}
+
+	EGY_liberate_the_gambia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 701
+				}
+				GAM = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.97 }
+		}
+		
+	}
+
+	EGY_liberate_liberia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 298
+				}
+				LIB = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.98 }
+		}
+		
+	}
+
+	EGY_liberate_mauritania = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 557
+					controls_state = 786
+				}
+				MRT = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.99 }
+		}
+		
+	}
+
+	EGY_liberate_algeria = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 459
+					controls_state = 460
+					controls_state = 513
+					controls_state = 514
+				}
+				ALG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.101 }
+		}
+		
+	}
+
+	EGY_liberate_morocco = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 290
+					controls_state = 461
+					controls_state = 462
+					controls_state = 783
+					controls_state = 699
+				}
+				MOR = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.102 }
+		}
+		
+	}
+
+	EGY_liberate_tunisia = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 458
+					controls_state = 665
+				}
+				TUN = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.103 }
+		}
+		
+	}
+
+	EGY_liberate_libya = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			AND = {
+				EGY = {
+					controls_state = 448
+					controls_state = 449
+					controls_state = 450
+					controls_state = 451
+					controls_state = 661
+					controls_state = 662
+					controls_state = 663
+					controls_state = 273
+				}
+				LBA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.104 }
+		}
+		
+	}
+
+	EGY_liberate_BEG = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 839
+					controls_state = 840
+				}
+				BEG = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.105 }
+		}
+		
+	}
+
+	EGY_liberate_GBA = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 838
+				}
+				GBA = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.106 }
+		}
+		
+	}
+
+	EGY_liberate_SID = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 837
+				}
+				SID = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.107 }
+		}
+		
+	}
+
+	EGY_liberate_ORO = {
+
+		icon = generic_independence
+	
+		available = {
+			tag = EGY
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+			AND = {
+				EGY = {
+					controls_state = 836
+					controls_state = 271
+				}
+				ORO = { exists = no }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 200
+		}
+		days_remove = 180
+		visible = {
+			has_completed_focus = EGY_end_colonial_rule
+			has_completed_focus = EGY_minorities_first
+		}
+		remove_effect = {
+			country_event = { id = EGY_south_africa.108 }
+		}
+		
+	}
+
 }

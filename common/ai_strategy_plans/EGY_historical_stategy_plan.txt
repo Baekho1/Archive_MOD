@@ -1,0 +1,36 @@
+ABY_historical = {
+	name = "EGY historical plan"
+	desc = ""
+	allowed = {
+		original_tag = EGY
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		EGY_1935_revolution_success
+		EGY_consolidate_wafd_party
+		EGY_form_blue_shirts
+		EGY_sudanese_suffrage
+		EGY_allow_local_elections
+		EGY_activate_party_politics
+		EGY_strengthen_blue_shirts
+		EGY_mansoura_agreement
+		EGY_constitutional_monarchy
+		EGY_egyptian_democracy
+		EGY_reformist_monarch_farouk_i
+		EGY_suez_negotiation
+		EGY_cairo_pact
+		EGY_invite_turkey
+		EGY_accept_monarchist_demands
+		EGY_accept_socialist_demands
+		EGY_invite_arabia
+		EGY_suppress_blue_shirts
+		EGY_political_stabilization
+		EGY_end_colonial_rule
+		EGY_invite_saadabad
+	}
+}

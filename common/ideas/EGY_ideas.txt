@@ -23,11 +23,52 @@ ideas = {
 				democratic_drift = -0.15
 			}
 		}
+		EGY_idea_strong_egypt = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.25
+				AUTONOMY_GAIN = -0.1
+			}
+			targeted_modifier = {
+				tag = EGY
+				CIC_TO_TARGET_FACTOR = 0.25
+				MIC_TO_TARGET_FACTOR = 0.25
+			}
+		}
+		EGY_idea_anti_colonism = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.1
+				offensive_war_stability_factor = 0.1
+				generate_wargoal_tension = -0.5
+			}
+		}
 		EGY_idea_strong_democratic_movement = { #
 			picture = generic_democratic_drift_bonus
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
+				war_support_factor = -0.05
+				democratic_drift = 0.05
+			}
+		}
+		EGY_idea_strong_democratic_movement_2 = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				democratic_drift = 0.1
+			}
+		}
+		EGY_idea_strong_democratic_movement_3 = { #
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
 				war_support_factor = -0.05
 				democratic_drift = 0.15
 			}
@@ -128,6 +169,117 @@ ideas = {
 			}
 			modifier = {
 				naval_speed_factor = 0.10
+			}
+		}
+
+		EGY_idea_blue_shirts_1 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = -0.1
+				stability_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		EGY_idea_blue_shirts_2 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = -0.2
+				stability_factor = -0.25
+				political_power_factor = 0.15
+				war_support_factor = 0.1
+			}
+		}
+
+		EGY_idea_king_farouk = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			traits = {
+				EGY_farouk_i_of_egypt
+				EGY_young_king
+			}
+		}
+
+		EGY_idea_king_farouk_2 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			traits = {
+				EGY_farouk_i_of_egypt_2
+				EGY_young_king
+			}
+		}
+
+		EGY_idea_egypt_democratic = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				democratic_drift = 0.05
+				fascism_drift = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		EGY_idea_egypt_democratic_2 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				democratic_drift = 0.05
+				fascism_drift = -0.05
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+				communism_drift = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		EGY_idea_egypt_democratic_3 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				democratic_drift = 0.05
+				fascism_drift = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.15
+				neutrality_drift = 0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		EGY_idea_egypt_democratic_4 = {
+			picture = liberty_ships_focus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				democratic_drift = 0.05
+				fascism_drift = -0.05
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				political_power_factor = 0.15
+				neutrality_drift = 0.05
+				conscription_factor = 0.1
+				communism_drift = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 	}
