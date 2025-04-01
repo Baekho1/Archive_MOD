@@ -1247,12 +1247,12 @@ characters={
 		portraits = {
 			army = {
 				small = GFX_Z_TRM_alfred_rosenberg_idea
-				large = GFX_Z_TRM_alfred_rosenberg_idea
+				large = GFX_Z_TRN_alfred_rosenberg_Portrait
 			}
 		}
 		advisor = {
     		slot = political_advisor
-    		idea_token = TRM_hans_zehrer_idea
+    		idea_token = TRM_alfred_rosenberg_idea
 			allowed = {
 				original_tag = TRM
 			}
