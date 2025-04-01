@@ -9,7 +9,7 @@
 
  #공용
  GAEBALJUNG: "§YUnder Development!§!"
- BA_HISTORICAL_CHOICE_TT: "§gThis is a historical decision!"
+ BA_HISTORICAL_CHOICE_TT: "§gThis is a historical decision!§!"
  BA_kivotos_school_country_category: "Academy of Kivotos"
  BA_kivotos_school_country_category_desc: "Once an academy in the mysterious land of Kivotos, the nation maintains the esoteric culture of a foreign dimension. Their prominent 'halos' on the top of their heads starkly differentiates these foreigners from existing humans, becoming a basis for a rising sense of Kivotos nationalism."
  BA_decisions_give_me_the_COU: "[ROOT.GetLeader] inaugurated as GSC President"
@@ -23,7 +23,7 @@
  BA_from_southern_kivotos_desc: "Academies such as Hyakkiyako and Shanhaijing of outer Southern Kivotos are infamous for their isolationaist and xenophobic policies. Despite the drastic cultural and social shifts following the Great Displacement, the unique cultures of Southern Kivotos remain isolated from their counterparts. As the entirety of Southern Kivotos falls under our control, we are now able to embrace and emphasise our unique cultural supremacy."
  southern_kivoto_decision: "Unite Southern Kivotos"
 
- form_southern_kivotos_nation_flag: "§YSouthern Kivotos§!United."
+ form_southern_kivotos_nation_flag: "§YSouthern Kivotos§! United."
  
  tooltip_immediate_effect_upon_focus_start: "§YImmediate effect upon focus start:§!\n"
  tooltip_effect_upon_focus_completion: "\n§GEffect upon focus completion:§!\n"
@@ -32,12 +32,12 @@
 
  #공용 아이디어#
  BA_isolation: "Isolation"
- BA_isolation_desc: "Our Foreign Affairs and Trade system has been temporarirly paralysed in the chaos.\n\n"
+ BA_isolation_desc: "Our Foreign Affairs and Trade system has been temporarily paralysed in the chaos.\n\n"
  BA_can_remove_isolation_flag: "Conditions necessary to remove §YIsolation§! has been fulfilled"
  Aftermath_of_the_Second_Soviet_Polish_War: "Aftermath of the Second Soviet-Polish War"
- Aftermath_of_the_Second_Soviet_Polish_War_desc: "Following the mass appearance of strange beings claiming to be 'Kivotos' throughout the European Continent, the ensuing chaos on the Soviet-Polish border ultimately spiraled into a re-ignition of Soviet-Polish conflict. The sudden nature of the conflict resulted in mass casualties on both sides of the conflict, and the Second Soviet-Polish War was ultimately resolved with no gains for either side."
+ Aftermath_of_the_Second_Soviet_Polish_War_desc: "Following the mass appearance of strange beings claiming to be from 'Kivotos' throughout the European Continent, the ensuing chaos on the Soviet-Polish border ultimately spiraled into a re-ignition of Soviet-Polish conflict. The sudden nature of the conflict resulted in mass casualties on both sides of the conflict, and the Second Soviet-Polish War was ultimately resolved with no gains for either side."
  BA_soviet_puppet_idea: "Soviet Republic"
- BA_soviet_puppet_idea_desc: "(insert funny joke here)"
+ BA_soviet_puppet_idea_desc: "(insert funny joke here) [uhhh what did the crocodile say to the shark? "I will eat you", get it?]"
  BA_three_major_academies: "The Big three"
  BA_three_major_academies_desc: "Amongst the countlesss academies of Kivotos, there lie three powerful and prestigious academies known as the 'Big Three'. These academies are in posession of an impressively extensive standing army and student body."
  BA_three_major_academies_tt: "£GFX_unit_halo_infantry_icon_small §CHalo Infantry§! §YTemplate Restricted§!: §G+6§!"
@@ -57,8 +57,8 @@
  BA_nationalize_highlander_tt: "\n투자 §Y10§!마다 §Y민간 공장§!을 §G1§!씩 최대 §Y5§! 받습니다:\n\n"
  BA_press_highlander: "Pressure Highlander"
  BA_press_highlander_desc: "하이랜더 철도학원의 본사가 우리의 통제에 놓여있습니다. 우리는 이들에게 적절한 압력을 가할 수 있을 것입니다."
- BA_highlander_hide_list: "Hide Highlander users"
- BA_highlander_show_list: "Show Highlander users"
+ BA_highlander_hide_list: "Hide Highlander patrons"
+ BA_highlander_show_list: "Show Highlander patrons"
  BA_invest_highlander: "Invest in the Highlanders"
  Highlander.1.t: "Invest in the Highlanders"
  Highlander.1.d: "하이랜더에 투자함으로써 우리는 하이랜더에 대한 우리의 영향력을 늘릴 수 있습니다."
