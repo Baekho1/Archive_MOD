@@ -82,7 +82,7 @@ units = {
 			name_order = 1
 		}
 		location = 9692
-		division_template = "Rychlá divize" 
+		division_template = "Jezdecká brigáda" 
 		start_experience_factor = 0.1
 	}
 }

@@ -451,12 +451,12 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				air_chief_reform_2
+				air_chief_reform_3
 			}
 			ai_will_do  = {
 				factor  = 1.000
 			}
-			cost = 100
+			cost = 200
 		}
 	}
 	SLO_otto_smik={ #오토 스미크 / 공군
@@ -472,13 +472,13 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
+			slot = air_chief
 			idea_token = SLO_otto_smik
 			allowed = {
 				original_tag = SLO
 			}
 			traits  = {
-				air_air_superiority_2
+				air_chief_ground_support_2
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -505,7 +505,7 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				air_air_combat_training_1
+				air_air_superiority_1
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -708,12 +708,12 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				army_infantry_1
+				army_infantry_2
 			}
 			ai_will_do  = {
 				factor  = 1.000
 			}
-			cost = 50
+			cost = 100
 		}
 		corps_commander={
 			traits = {
@@ -746,6 +746,8 @@ characters={
 			allowed = {
 				original_tag = SLO
 			}
+			available = {
+			}
 			traits  = {
 				navy_chief_reform_1
 			}
@@ -753,6 +755,83 @@ characters={
 				factor  = 1.000
 			}
 			cost = 50
+		}
+	}
+	SLO_izidor_kovarik={ #이지도르 코바리크 / 공군
+		name="SLO_izidor_kovarik"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_26.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_26.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_26.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_26.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SLO_izidor_kovarik
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				air_air_combat_training_2
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 100
+		}
+	}
+	SLO_jan_gerthofer={ #얀 게르토퍼 / 공군
+		name="SLO_jan_gerthofer"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_27.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_27.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_27.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_27.tga"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = SLO_jan_gerthofer
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				air_warfare_theorist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 150
+		}
+	}
+	SLO_gustav_malar={ #구스타브 말라르 / 육군
+		name="SLO_gustav_malar"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_28.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_28.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_28.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_28.tga"
+			}
+		}
+		corps_commander={
+			traits = {
+				armor_officer
+			}
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
 		}
 	}
 }

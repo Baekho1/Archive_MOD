@@ -99,6 +99,9 @@ recruit_character = SLO_alexander_mach
 recruit_character = SLO_andrej_hlinka
 recruit_character = SLO_anton_pulanich
 recruit_character = SLO_navy_c
+recruit_character = SLO_izidor_kovarik
+recruit_character = SLO_jan_gerthofer
+recruit_character = SLO_gustav_malar
 
 set_stability = 0.35
 set_war_support = 0.50
