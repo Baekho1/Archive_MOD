@@ -58,8 +58,8 @@
  BA_press_highlander: "Pressure Highlander"
 
  BA_press_highlander_desc: "The headquarters of Highlander Railroad Academy is now under our direct control. We will now be able to apply direct pressure on their operations."
- BA_highlander_hide_list: "Hide Highlander users"
- BA_highlander_show_list: "Show Highlander users"
+ BA_highlander_hide_list: "Hide Highlander patrons"
+ BA_highlander_show_list: "Show Highlander patrons"
  BA_invest_highlander: "Invest in the Highlanders"
  Highlander.1.t: "Invest in the Highlanders"
  Highlander.1.d: "By investing in the Highlanders, we will be able to expand our influence on their operations."
