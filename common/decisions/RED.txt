@@ -6323,6 +6323,9 @@ RED_red_horse_category = {
 		complete_effect = {
 			set_country_flag = RED_horse_in_progress
 		}
+		ai_will_do = {
+			base = 10
+		}
 	}
 	RED_red_horse_pr = {
 		#증산의 불길
@@ -6376,6 +6379,9 @@ RED_red_horse_category = {
 		}
 		complete_effect = {
 			set_country_flag = RED_horse_in_progress
+		}
+		ai_will_do = {
+			base = 10
 		}
 	}
 	RED_red_horse_cr = {
@@ -6431,6 +6437,9 @@ RED_red_horse_category = {
 		complete_effect = {
 			set_country_flag = RED_horse_in_progress
 		}
+		ai_will_do = {
+			base = 10
+		}
 	}
 	RED_red_horse_in = {
 		#'산업의 언덕'
@@ -6438,6 +6447,9 @@ RED_red_horse_category = {
 		fire_only_once = yes
 		days_remove = 60
 		cost = 20
+		ai_will_do = {
+			base = 10
+		}
 		available = {
 			NOT = {
 				has_country_flag = RED_horse_in_progress
