@@ -7,17 +7,17 @@
  00_Gehenna_unification_academy_NAME: "United Gehenna"
  00_Gehenna_unification_academy_DESC: "Unify the School of Gehenna"
 
- kivotos_the_academy_city_NAME: "Kivotos, the Academic City"
+ kivotos_the_academy_city_NAME: "Kivotos, the Academy City"
  kivotos_the_academy_city_DESC: "Reclaim Kivotos as Schale"
 
 
  # 게헨나
  GEM_Nazi_Gernamy_NAME: "Establish Germany"
- GEM_Nazi_Gernamy_DESC: "As the Pandemonium Society, complete the $GEM_deutsches_reich$ focus and have the territories of 1936 Geramny"
+ GEM_Nazi_Gernamy_DESC: "As the Pandemonium Society, complete the $GEM_deutsches_reich$ focus and have the territories of 1936 Germany"
  GEM_Queen_ibuki_NAME: "The Empress of Gehenna"
- GEM_Queen_ibuki_DESC: "As Pandemonium Society, complete $GEM_ascend_to_the_throne$ and occupy the Prefect Team and Problem Solver 68"
+ GEM_Queen_ibuki_DESC: "As the Pandemonium Society, complete $GEM_ascend_to_the_throne$ and occupy the Prefect Team and Problem Solver 68"
  GEM_rising_lucifer_NAME: "Rise of Lucifer"
- GEM_rising_lucifer_DESC: "With $GEH_akzhxh$ as the leadeer, complete $GEM_great_duty$ and occupy the Prefect Team, Problem Solver 68 and the core states of Trinity without completing the focus $GEM_defend_gehenna$."
+ GEM_rising_lucifer_DESC: "With $GEH_akzhxh$ as the leader, complete $GEM_great_duty$ and occupy the Prefect Team, Problem Solver 68 and the core states of Trinity without completing the focus $GEM_defend_gehenna$."
  
  # 밀레니엄
  MIL_battle_is_over_NAME: "Zero Tolerance"
