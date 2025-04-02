@@ -1,4 +1,4 @@
-﻿ l_english: 
+ l_english: 
  kim_yong_ha_name: "Director Kim Yong Ha"
  kim_yong_ha_desc: "In the gentle stream of Cheonggyecheon, we shall reclaim the purity of our soul and mind from the evils of mediocrity"
 
@@ -52,7 +52,7 @@
  BA_highlander_academy_generic_desc: "The entire rail infrastructure of our academy is no longer under our control, but rather operated by Highlander. While we are currently obligated transport fees to Highlander and their largest investor, we may be able to explore alternative options."
  BA_nationalized_highlander: "§YDomestic Lines§! under Highlander control has been nationalised."
  BA_highlander: "Highlander Railroad Academy"
- BA_highlander_desc: " 하이랜더 철도학원은 키보토스 전역을 가로지르며 방대하게 펼쳐진 선로들을 운영하고 있습니다. 그러나 대전이 이후 하이랜더와 총학생회의 행정 역량은 예전과 같지 못하며, 학원들은 전이된 지역에 존재하는 철도들을 점유하게 되며 하이랜더 철도학원의 지위는 불안정합니다.\n\n 현재 상황에서 우리는 하이랜더가 보유한 선로들의 지분을 몰수하여 교통에 있어서의 자주를 이뤄내거나, 하이랜더 철도학원에 많은 자본을 투자하여 그들을 우리의 지배 하에 놓을 수 있습니다. 또한 철도학원은 투자할 때마다 교통에 관련해서 우리를 다양하게 지원할 것입니다.\n\n    [BA_highlander_best_invester]\n    @[this.gettag] §Y[THIS.getname]§!의 투자 : §Y[?THIS.BA_highlander_invest]§!\n    £GFX_HTA_FLAG   §Y하이랜더 이용 학원 목록§!\n[BA_highlander_use_list]\n"
+ BA_highlander_desc: "The Highlander Railroad Academy was once tasked with the operation of the massive rail networks that span the entirety of Kivotos. However, with the central administration of Highlander and GSC in disarray, the Highlander's authority over rail infrastructure has been significantly diminished as individual academies have seized control of local railways. \n\nAs of this moment, we are able to either attain emancipation from the bureaucratic oversight of the Highlanders by taking over their railways or submit the Highlanders under our influence by heavily investing in them. With every investment to the Highlanders, we will receive bonuses in transport in return.\n\n[BA_highlander_best_invester]\n@[this.gettag]§Y[THIS.getname]§! invests: §Y[?THIS.BA_highlander_invest]§!\n£GFX_HTA_FLAG §YHighlander Patrons§!\n[BA_highlander_use_list]\n"
  BA_nationalize_highlander: "Nationalise railways"
  BA_nationalize_highlander_tt: "\nFor every investment of §Y10§!, we will receive §G1§! §YCivilian Factory§! up to a maximum of §Y5§!:\n\n"
  BA_press_highlander: "Pressure Highlander"
