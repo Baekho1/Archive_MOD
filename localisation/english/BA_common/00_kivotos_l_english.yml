@@ -49,7 +49,7 @@
  NC_airship_department: "Chronos School"
  BA_train_school: "Highlander Railroad Academy"
  BA_highlander_academy_generic: "Highlander Railroad Academy"
- BA_highlander_academy_generic_desc: "The entire rail infrastructure of our academy is no longer under our control, but rather operated by Highlander. While we are currently obligated transport fees to Highlander and their largest investor, we may be able to explore alternative options."
+ BA_highlander_academy_generic_desc: "The entire rail infrastructure of our academy is no longer under our control, but rather operated by Highlander. While we are currently obligated to pay transport fees to Highlander and are their largest investor, we may be able to explore alternative options." #considering it's a generic, "and are their largest investor" may not be right
  BA_nationalized_highlander: "§YDomestic Lines§! under Highlander control has been nationalised."
  BA_highlander: "Highlander Railroad Academy"
  BA_highlander_desc: "The Highlander Railroad Academy was once tasked with the operation of the massive rail networks that span the entirety of Kivotos. However, with the central administration of Highlander and GSC in disarray, the Highlander's authority over rail infrastructure has been significantly diminished as individual academies have seized control of local railways. \n\nAs of this moment, we are able to either attain emancipation from the bureaucratic oversight of the Highlanders by taking over their railways or submit the Highlanders under our influence by heavily investing in them. With every investment to the Highlanders, we will receive bonuses in transport in return.\n\n[BA_highlander_best_invester]\n@[this.gettag]§Y[THIS.getname]§! invests: §Y[?THIS.BA_highlander_invest]§!\n£GFX_HTA_FLAG §YHighlander Patrons§!\n[BA_highlander_use_list]\n"
@@ -66,7 +66,7 @@
  Highlander.1.b: "Proceed with minor investments"
  Highlander.1.f: "Invest extensively."
  Highlander.3.t: "Railways expanded"
- Highlander.3.d: "Highlander has eleted to construct new rail lines within our territories."
+ Highlander.3.d: "Highlander has elected to construct new rail lines within our territories."
  Highlander.3.a: "Well worth the investment"
  Highlander.4.t: "Deploy Additional Trains"
  Highlander.4.d: "Highlander has agreed to deploy additional trains within our rail network."
@@ -94,7 +94,7 @@
  Highlander.13.t: "Price Loosened"
  Highlander.13.d: "Our investment costs for Highlander has decreased."
  Highlander.13.a: "Great."
- Highlander.13_tt: "§YCivilian Factory modifier§! required for §YLarge investment§! reduced"
+ Highlander.13_tt: "§YCivilian Factory modifier§! required for §YLarge investment§! reduced."
  
 
  BA_highlander_nozomi: "CCC Officer"
@@ -149,7 +149,7 @@
 
 
  BA_kiovotos_spain_event.1.t: "Chaos Downstairs"
- BA_kiovotos_spain_event.1.d: "There appears to be chaos brewing within our southern neighbour. According to information from Veritas, the military arm of [SPR.getname] government has launched a coup d'état that is currently facing firece resistance from government forces and civil organisations. Meanwhile, countless refugees are currently on their way to our territories to avoid the ongoing civil war. The situation must be placed under our control."
+ BA_kiovotos_spain_event.1.d: "There appears to be chaos brewing within our southern neighbour. According to information from Veritas, the military arm of the [SPR.getname] government has launched a coup d'état that is currently facing firece resistance from government forces and civil organisations. Meanwhile, countless refugees are currently on their way to our territories to avoid the ongoing civil war. The situation must be placed under our control."
  BA_kiovotos_spain_event.1.a: "Dammit."
  BA_kiovotos_spain_event.2.t: "The Refugee Dilemma"
  BA_kiovotos_spain_event.2.d: "We cannot stand by and watch the refugee crisis develop. Our citizens on the southern border are urgently demanding that these foreign refugees be expelled. However, progressive civil rights groups and student action groups are advocating for a humanitarian response."
@@ -160,7 +160,7 @@
  BA_kiovotos_spain_event.3.d: "Following the deployment of Millennium volunteers to the Spanish civil war, other nations of Kivotos are attempting to intervene in the conflict without restriction. We must establish an Interference Committee to uphold our relationship with other nations of Kivotos amidst their involvement in the conflict."
  BA_kiovotos_spain_event.3.a: "We must establish the committee"
  BA_kiovotos_spain_event.3.b: "Do we really need to control them?"
- BA_kiovotos_spain_event.3_tt: "£GFX_pol_power required to  £GFX_decision_icon_small §Ysecede from the Kivotos Cooperative§! will be reduced by 20 for members of the Kivotos Cooperative."
+ BA_kiovotos_spain_event.3_tt: "£GFX_pol_power required to £GFX_decision_icon_small §Ysecede from the Kivotos Cooperative§! will be reduced by 20 for members of the Kivotos Cooperative."
  BA_kiovotos_spain_event.4.t: "Establishment of the Interference Committee"
  BA_kiovotos_spain_event.4.d: "With the approval of the GSC and the cooperation of Kivotos academies, the Interference Committee has been installed. The committee will be responsible for limiting unrestricted involvement of member nations in the Spanish Civil War, and has been authorised to monitor volunteer forces at all times. However, given all restrictions are abided by, we will still be able to conduct independent military action within the conflict."
  BA_kiovotos_spain_event.4.a: "Back in chains."
@@ -188,7 +188,7 @@
  ####
  # あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをん  우리모드 히라가나/가타카나도 지원 안합니다.
  BA_generic_event.1.t: "British Colonies"
- BA_generic_event.1.desc: "The once invincible British Empire has capitulated, and what remains of the British forces in the Mediterranean and the Pacific are undergoind a disarrayed retreat. The absenece of a proper colonial authority has spiralled these colonies into abject anarchy."
+ BA_generic_event.1.desc: "The once invincible British Empire has capitulated, and what remains of the British forces in the Mediterranean and the Pacific are undergoind a disarrayed retreat. The absence of a proper colonial authority has spiralled these colonies into abject anarchy."
  BA_generic_event.1.a: "Conquest!"
  BA_generic_event.1.b: "Let sleeping dogs lie."
 
@@ -197,7 +197,7 @@
  BA_generic_event.2.a: "Great idea."
  BA_generic_event.2.b: "We cannot sell our future."
 
- BA_generic_event.3.t: "London Bridge is Falling Down"
+ BA_generic_event.3.t: "The London Bridge is Falling Down"
  BA_generic_event.3.desc: "With the decline of the great British Empire that once ruled the waves of the Pacific, there are no enemies left to oppose our expansion."
  BA_generic_event.3.a: "Banzai!"
  BA_generic_event.3.b: "We cannot sell our future."
@@ -239,7 +239,7 @@
  ENG_to_IRE_HAPPYCAT: "Assisted"
 
  BA_generic_event.12.t: "Glory of the Forgotten Outlaws"
- BA_generic_event.12.d: "As we surveyed the island of Tahiti, a number of graves were encountered. In their investigation, it was discovered that they belonged to a group of outlaws. Strangely, masses of gold bars were found in the graves, which were revealed to originate from the banks of Saint-Denis, meaning the gold bars had been stolen from  New Orleans.\n\nThe unsolved case of the 1899 New Orleans bank robbery was a noteworthy incident that signficantly influenced modern American culture.\nWhile the sudden disappearnce of the perpetrators appeared to conclude the case as an unsolved mystery, the unexpected discovery of their remains in Tahiti reinvigorated modern discourse on the robbers in the United States.\n\nIt is unclear whether they arrived in Tahiti via an accident or a planned relocation, but popular opinion seems to be swining in favour of a planned relocation to escape the eyes of the law.\n\nRegardless, the discovery seems to be acting as an unofficial ending sign for the era of the Wild West."
+ BA_generic_event.12.d: "As we surveyed the island of Tahiti, a number of graves were encountered. In their investigation, it was discovered that they belonged to a group of outlaws. Strangely, masses of gold bars were found in the graves, which were revealed to originate from the banks of Saint-Denis, meaning the gold bars had been stolen from New Orleans.\n\nThe unsolved case of the 1899 New Orleans bank robbery was a noteworthy incident that signficantly influenced modern American culture.\nWhile the sudden disappearnce of the perpetrators appeared to conclude the case as an unsolved mystery, the unexpected discovery of their remains in Tahiti reinvigorated modern discourse on the robbers in the United States.\n\nIt is unclear whether they arrived in Tahiti via an accident or a planned relocation, but popular opinion seems to be swining in favour of a planned relocation to escape the eyes of the law.\n\nRegardless, the discovery seems to be acting as an unofficial ending sign for the era of the Wild West."
  BA_generic_event.12.a: "Red Dead Redemption"
 
  BA_generic_event.13.t: "Nuclear fission discovered"
@@ -262,12 +262,12 @@
  
 
  BA_generic_event.402.t: "Red Flood"
- BA_generic_event.402.d: "The might of the Red Army was impossible for the Finnish Army to resist. The Red Army was no longer a paper tiger; discipline and competency had been forged into the very core of the organisation through the blood and steel of combat. But what about us Finns?\n\nDecades of peace made us Finns complacent, our army defanged and our people dismissive of the 'Red savages'. And when the vigiliant few warned us of the 'Red Flood', they were silenced by the laughter and music of the decadent masses.\n\nThere was not a warrior left to resist when the Reds came. Our spirit of Sisu was no longer a valiant battle cry it once was, and with the complete shattering of the Mannerheim Line, Helsinki, our beloved capital, our beacon of liberty and our home was silenced in a matter of days.\n\nThe situation is bleak. The victorious Red Army runs rampant down the streets of Helsinki, desecrating our homes with their flags of red. If we were to be given one more chance, one last chance to redeem our decadence, could we defend our homeland from the Red Plague?"
+ BA_generic_event.402.d: "The might of the Red Army was impossible for the Finnish Army to resist. The Red Army was no longer a paper tiger; discipline and competency had been forged into the very core of the organisation through the blood and steel of combat. But what about us Finns?\n\nDecades of peace made us Finns complacent, our army defanged and our people dismissive of the 'Red savages'. And when the vigiliant few warned us of the 'Red Flood', they were silenced by the laughter and music of the decadent masses.\n\nThere was not a warrior left to resist when the Reds came. Our spirit of Sisu was no longer the valiant battle cry it once was, and with the complete shattering of the Mannerheim Line, Helsinki, our beloved capital, our beacon of liberty and our home was silenced in a matter of days.\n\nThe situation is bleak. The victorious Red Army runs rampant down the streets of Helsinki, desecrating our homes with their flags of red. If we were to be given one more chance, one last chance to redeem our decadence, could we defend our homeland from the Red Plague?"
  BA_generic_event.402.a: "One Life, One Chance"
  BA_generic_event_402_TT: "So falls the §YDawn of Finland§!, being completely stained §Rred§!. Even if Finland had been given §CAnother Chance§!, the result would have been the §tsame§!\n\nThank you for choosing Finland!\nNext time, maybe choose a Kivotos faction."
 
  BA_generic_event.401.t: "A New New Year"
- BA_generic_event.401.d: "Despite our troubles with our new neighbours, the year has finally come to its end.\nSome may be in spite, and others may be in tears, but the vast majority have elected to bury the hatchet for this moment, embracing the awkward warmth of enemies and strangers of yesterday.\nThe students and the native humans may be set apart by their differenes, but the shared vision for a peaceful and prosperous future seems to be pointing towards a brighter New Year.\n\nSo far."
+ BA_generic_event.401.d: "Despite our troubles with our new neighbours, the year has finally come to its end.\nSome may be in spite, and others may be in tears, but the vast majority have elected to bury the hatchet for this moment, embracing the awkward warmth of enemies and strangers of yesterday.\nThe students and the native humans may be set apart by their differences, but the shared vision for a peaceful and prosperous future seems to be pointing towards a brighter New Year.\n\nSo far."
  BA_generic_event.401.a: "Maybe it'll get better this year."
 
 
