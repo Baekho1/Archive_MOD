@@ -115,10 +115,7 @@ characters={
 			logistics_skill=1
 			desc = TRN_Seia_advisor_desc
             visible = {
-				OR = {
-					NOT = { has_character_flag = TRN_fake_death_flag }
-                	NOT = { has_country_flag = TRM_event_59_flag }
-				}
+				NOT = { has_character_flag = TRN_fake_death_flag }
             }
 		}
 		country_leader={
