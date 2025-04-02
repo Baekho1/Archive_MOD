@@ -250,6 +250,7 @@ add_ideas = {
 	EGY_stewart_symes_advisor
 	EGY_aziz_ezzat_advisor
 }
+set_variable = { country_intro_page_count = 2 } #Intro screen
 
 # Binah Problem
 set_variable = {

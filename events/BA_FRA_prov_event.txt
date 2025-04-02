@@ -4770,6 +4770,7 @@ country_event = {
 		add_stability = -0.1
 		add_war_support = -0.1
 		hidden_effect = {
+			set_global_flag = FRA_flag_last_promise_end
 			every_state = {
 				limit = {
 					is_on_continent = africa

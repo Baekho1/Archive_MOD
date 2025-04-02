@@ -528,6 +528,15 @@ EGY_anti_colonialist_crusade = {
 					is_controlled_by = FROM
 				}
 			}
+			NOT = {
+				any_other_country = {
+					is_puppet_of = FROM
+					any_state = {
+						is_on_continent = africa
+						is_controlled_by = PREV
+					}
+				}
+			}
 		}
 
 		cost = 0

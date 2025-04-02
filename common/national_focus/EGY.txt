@@ -2732,6 +2732,9 @@ focus_tree = {
 			add_ideas = {
 				EGY_idea_blue_shirts_1
 			}
+			hidden_effect = {
+				news_event = EGY_news.1
+			}
 			# Add effects for completing "푸른 셔츠단 결성"
 		}
 	}
@@ -2908,8 +2911,10 @@ focus_tree = {
 			add_ideas = {
 				EGY_idea_king_farouk
 			}
+			hidden_effect = {
+				news_event = EGY_news.2
+			}
 			add_stability = 0.15
-			set_country_flag = EGY_flag_suez
 			custom_effect_tooltip = EGY_suez_negotiate_tt
 			# Add effects for completing "만수라 협정"
 		}
@@ -3294,6 +3299,9 @@ focus_tree = {
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = EGY_democratic_faction
+			hidden_effect = {
+				news_event = EGY_news.4
+			}
 			# Add effects for completing "카이로 협약"
 		}
 	}
@@ -4078,6 +4086,9 @@ focus_tree = {
 			add_ideas = {
 				EGY_idea_anti_colonism
 			}
+			hidden_effect = {
+				news_event = EGY_news.3
+			}
 			custom_effect_tooltip = EGY_anti_colonism_tt
 			# Add effects for completing "식민통치 종식"
 		}
@@ -4358,6 +4369,11 @@ focus_tree = {
 
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			FRA = {
+				country_event = {
+					id = EGY_event.18
+				}
+			}
 			# Add effects for completing "아프리카 독립국 초대"
 		}
 	}
