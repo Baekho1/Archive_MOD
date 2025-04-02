@@ -1010,6 +1010,67 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/HEU/HEU_news_aru_hina.dds"
 	}
 
+	## 게헨나 선도부 ##
+	spriteType = {
+		name = "GFX_report_event_ako_amau_crying_1"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_crying_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_crying_2"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_crying_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_crying_3"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_crying_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_crying_crash"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_crying_crash.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_dress_1"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_dress_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_dress_2"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_dress_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_generic_1"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_generic_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_generic_2"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_generic_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_smile_1"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_smile_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ako_amau_smile_2"
+		texturefile = "gfx/event_pictures/GEH/ako_amau_smile_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_generic_1"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_generic_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hina_sorasaki_generic_2"
+		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_generic_2.dds"
+	}
+
 
 
 	# 밀레니엄 - 아리스루트
