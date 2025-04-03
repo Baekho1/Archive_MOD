@@ -1,7 +1,7 @@
 ﻿ l_english:
 #총학생회
  COU_dictator: "Student Council President\n§gThe position of Student Council President must not be taken lightly.§!"
- COU_arona_notgood: "Overworked\n§gThe Student Council President is on the edge of a precipice. Not only has the governance system been completely disrupted by the Great Displacement, but the academies have refused GSC coordination and oversight despite attempts to exert control over the last two months. The Student Council President has been willing to work overtime to regain control of Kivotos... She's a little workaholic. No, very workaholi.§!"
+ COU_arona_notgood: "Overworked\n§gThe Student Council President is on the edge of a precipice. Not only has the governance system been completely disrupted by the Great Displacement, but the academies have refused GSC coordination and oversight despite attempts to exert control over the last two months. The Student Council President has been willing to work overtime to regain control of Kivotos... She's a little workaholic. No, very workaholic.§!"
  COU_dictator_rin: "Acting Student Council President\n§gThe position of Student Council President is not one to be taken lightly, even if it is an acting one.§!"
  COU_vacancy: "Empty Student Council"
  COU_power_struggle: "Power struggle"
@@ -78,7 +78,7 @@
  GEH_bauhaus: "Bauhaus"
  GEH_degenerate_art: "Degenerate Artist"
  GEH_composer: "Classical Composer"
- GEH_paranoia_ako: "Paranoid Hinasexual" #is this right!?!? yes
+ GEH_paranoia_ako: "Paranoid Hinasexual" #is this right!?!? yes | :nonomi_thumbs_up:
  GEM_leader_hater_trait: "Prefect-phobe"
  GEM_trait_gourmet_research_society: "Gourmet Research Society"
  GEM_trait_hot_spring_department: "Hot Spring Development Department"
