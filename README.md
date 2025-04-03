@@ -1,3 +1,8 @@
+Hey, did you come across this randomly while going through the Blue Archive Github and wanna help out with the KR>EN translation? Join the Discord and ask around, I'll hear about it eventually!
+
+
+Steam Description v
+
 ## The English Translation
 
 Our miraculous story, Blue Archive \
@@ -29,3 +34,10 @@ Community links: \
 Discord : https://discord.gg/kddrRNS6dt \
 GitHub : https://github.com/SKYcat-lang/Archive_MOD \
 Youtube : https://www.youtube.com/@HOI4BlueArchiveMod 
+
+Credit: \
+Skoober - Team Leader (Self-proclaimed) - Translation Chief of Staff, Head of Proofreading Department, Director of Programming Committee, Director of Organisation and Planning commitee, and the Secretary General of the Central English Translation comittee and General Secretary of the Translation Team \
+Saturn - Main Translator (Does basically all the work) - High Commissar of the Translation Team \
+나는 이부키 - Translator (Has been a great help) - Captain of the Translation team \
+Lasgun - Translator -  [strike] Slave [/strike] Intern of the Translation Team \
+And you, for waiting all this time.
