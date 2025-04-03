@@ -60,7 +60,9 @@ unique_id = BA_achievements_502384
     }
  
     happened = {
-        any_other_country = { has_country_flag = GEH_unified_gehenna_flag }
+		any_country = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
     }
 }
 
