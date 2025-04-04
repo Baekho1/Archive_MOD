@@ -60671,3 +60671,4 @@
 1035;special_project_facility_spawn;3159.00;9.70;1141.00;6.28;0
 1035;special_project_facility_spawn;3140.00;9.80;1125.00;1.76;0
 1035;rocket_site_spawn;3150.00;10.90;1003.00;5.82;0
+7;landmark_spawn;2883.72;9.60;1568.60;3.60;0
