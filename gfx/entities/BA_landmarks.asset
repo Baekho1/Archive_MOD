@@ -33,3 +33,13 @@ entity = {
 
 	scale = 1.5
 }
+
+entity = {
+	name = "building_landmark_COU_tower"
+	pdxmesh = "landmark_COU_tower_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 looping = no }
+
+	scale = 2.3
+}
