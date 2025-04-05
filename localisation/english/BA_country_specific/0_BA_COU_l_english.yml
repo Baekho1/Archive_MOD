@@ -1135,3 +1135,6 @@
  COU_cooperative_treaty_ratification_TT_FROM: "§R해당 국가는 평화 조약을 비준하고 있습니다.§!"
  COU_cooperative_treaty_ratification_TT_JOIN: "§R당신의 국가는 평화 조약을 비준하고 있기에, 협력기구 국가와 전쟁중인 국가의 전쟁에 참전할 수 없습니다.§!"
  COU_cooperative_treaty_ratification_TT_JOIN_FROM: "§R당신의 국가는 키보토스 협력기구 국가와 전쟁중이기에, 평화 조약을 비준한 국가를 호출할 수 없습니다.§!"
+
+ landmark_COU_tower:0 "생텀 타워"
+ landmark_COU_tower_desc:0 "생텀 타워는 키보토스의 중심부에 위치한 건물입니다. 이곳은 키보토스의 모든 학원과 학생들이 모여서 회의를 하고, 의사 결정을 내리는 장소입니다. 생텀 타워는 키보토스의 상징적인 건물로, 이곳에서 이루어지는 모든 결정은 키보토스의 미래에 큰 영향을 미칩니다."

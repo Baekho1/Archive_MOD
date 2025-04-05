@@ -285,12 +285,6 @@ music = {
     }
 }
 music = {
-    song = "Trinity_school_song"
-    chance = {
-        factor = 0
-    }
-}
-music = {
     song = "BA_showa_isin"
     chance = {
         factor = 0
