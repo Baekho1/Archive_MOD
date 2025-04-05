@@ -2472,6 +2472,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 } # Adjust AI factor as needed
 		completion_reward = {
 			add_stability = 0.25
+			country_event = {
+				id = EGY_event.24
+			}
 			# Add effects for completing "1935년 혁명의 성공"
 		}
 	}

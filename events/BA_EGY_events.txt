@@ -4321,3 +4321,47 @@ country_event = { #아비도스 대책위원회의 망명
 		set_country_flag = EGY_flag_suez
 	}
 }
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.22
+	title = EGY_event.22.t	
+	desc = EGY_event.22.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.22.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.23
+	title = EGY_event.23.t	
+	desc = EGY_event.23.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.23.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.24
+	title = EGY_event.24.t	
+	desc = EGY_event.24.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.24.a
+        ai_chance = { factor = 100 }
+		retire_character = EGY_victor_tait
+		add_political_power = 75
+	}
+}

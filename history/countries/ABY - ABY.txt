@@ -95,9 +95,9 @@ set_variable = {ABY_industry_progress_var = 0}
 set_variable = {ABY_rebuild_progress_var = 0}
 set_variable = {ABY_unite_progress_var = 0}
 
-set_variable = {ABY_industry_cost_var = 60}
-set_variable = {ABY_rebuild_cost_var = 35}
-set_variable = {ABY_unite_cost_var = 50}
+set_variable = {ABY_industry_cost_var = 15}
+set_variable = {ABY_rebuild_cost_var = 30}
+set_variable = {ABY_unite_cost_var = 25}
 set_variable = {ABY_government_cost_var = 75}
 set_variable = {ABY_government_var = 0}
 set_variable = {ABY_plan_cost_var = 25}
@@ -215,6 +215,7 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	sturmtruppe_battalion_tech = 1
 }
 
  recruit_character = ABY_german
