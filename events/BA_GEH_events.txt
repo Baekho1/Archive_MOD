@@ -303,6 +303,21 @@ country_event = { #
 	option = { 
 		name = hina.8.a
 		add_ideas = GEH_widespread_propaganda
+		country_event = { id = hina.9 hours = 12 }
+	}
+}
+country_event = { # 
+	id = hina.9
+	title = hina.9.t
+	desc = hina.9.desc
+	picture = GFX_report_event_hitler_parade
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = hina.9.a
+		add_war_support = -0.02
 	}
 }
 ##2차 총회##
