@@ -829,8 +829,8 @@ characters={
 			slot = high_command
 			idea_token = GEH_dkzkfl
 			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_logistics_2 }
-			cost = 150
+			traits = { army_infantry_1 }
+			cost = 50
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -991,7 +991,7 @@ characters={
 			slot = high_command
 			idea_token = GEH_wnfl_idea
 			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_chief_maneuver_1 }
+			traits = { army_CombinedArms_1 }
 			cost = 50
 			ai_will_do = { factor = 1.000 }
 		}
