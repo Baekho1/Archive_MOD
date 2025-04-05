@@ -45,6 +45,8 @@ ideas = {
 				offensive_war_stability_factor = 0.1
 				defensive_war_stability_factor = 0.3
 				generate_wargoal_tension = -0.5
+				supply_factor = 0.25
+				supply_node_range = 0.5
 			}
 		}
 		EGY_idea_strong_democratic_movement = { #

@@ -4072,6 +4072,13 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = EGY_ethiopia_divide_tt
+			ETH = {
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = -1000
+				}
+			}
 			# Add effects for completing "소수민족 우선"
 		}
 	}

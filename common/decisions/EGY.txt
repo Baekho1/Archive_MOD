@@ -48,6 +48,7 @@ EGY_Binah_problem = {
 						has_state_flag = EGY_Binah_is_here
 					}
 				}
+				set_demilitarized_zone = yes
 				set_state_flag = EGY_Binah_is_here
 			}
 			activate_mission = EGY_Binah_action_escalate
@@ -175,7 +176,7 @@ EGY_Binah_problem = {
 	EGY_binah_attack_ABYDOS = {
 		priority = 8
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		visible = {
@@ -281,17 +282,15 @@ EGY_descision_category_sudan = {
 
 		cost = 50
 
-		fire_only_once = yes
-
 		days_remove = 100
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
 				increase_state_category = yes
 				add_extra_state_shared_building_slots = 1
@@ -329,7 +328,7 @@ EGY_descision_category_sudan = {
             tag = EGY
         }
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		visible = {
@@ -352,14 +351,12 @@ EGY_descision_category_sudan = {
 
 		cost = 25
 
-		fire_only_once = yes
-
 		days_remove = 50
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
 				if = {
 					limit = {
@@ -401,7 +398,7 @@ EGY_descision_category_sudan = {
 			}
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
         allowed = {
@@ -428,14 +425,12 @@ EGY_descision_category_sudan = {
 
 		cost = 25
 
-		fire_only_once = yes
-
 		days_remove = 50
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
 				if = {
 					limit = {
@@ -510,7 +505,7 @@ EGY_descision_category_suez = {
 			}
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		cost = 50
@@ -535,6 +530,7 @@ EGY_anti_colonialist_crusade = {
 
 		target_trigger = {
 			FROM = {
+				owns_state
 				capital_scope = {
 					NOT = { is_on_continent = africa }
 				}
@@ -555,6 +551,12 @@ EGY_anti_colonialist_crusade = {
 					is_controlled_by = FROM
 				}
 			}
+			any_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				is_owned_by = FROM
+			}
 			NOT = {
 				any_other_country = {
 					is_puppet_of = FROM
@@ -569,7 +571,7 @@ EGY_anti_colonialist_crusade = {
 		cost = 0
 		days_remove = 0
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -604,7 +606,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -637,7 +639,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -675,7 +677,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -706,7 +708,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -740,7 +742,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -773,7 +775,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -804,7 +806,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -836,7 +838,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -867,7 +869,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -898,7 +900,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -929,7 +931,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -963,7 +965,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -995,7 +997,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30 
 		visible = {
@@ -1042,7 +1044,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1076,7 +1078,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1111,7 +1113,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1146,7 +1148,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1179,7 +1181,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1212,7 +1214,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1244,7 +1246,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1275,7 +1277,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1306,7 +1308,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1337,7 +1339,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1368,7 +1370,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1399,7 +1401,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1431,7 +1433,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1465,7 +1467,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1497,7 +1499,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1528,7 +1530,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1559,7 +1561,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1590,7 +1592,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1621,7 +1623,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1652,7 +1654,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1684,7 +1686,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1715,7 +1717,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1746,7 +1748,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1777,7 +1779,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1808,7 +1810,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1839,7 +1841,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1870,7 +1872,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1902,7 +1904,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1936,7 +1938,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -1971,7 +1973,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2003,7 +2005,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2041,7 +2043,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2074,7 +2076,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2107,7 +2109,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2140,7 +2142,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
@@ -2174,7 +2176,7 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		days_remove = 30
 		visible = {
