@@ -2896,7 +2896,11 @@ focus_tree = {
 		y = 1
 
 		available = {
-			democratic > 0.75
+			democratic > 0.6
+		}
+
+		bypass = {
+			has_government = democratic
 		}
 
 		prerequisite = {
