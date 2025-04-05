@@ -1060,7 +1060,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_hatami_ericha_portrait.tga"
-				large="gfx/interface/advisors/GEH/GEH_hatami_ericha_idea.tga"
+				small="gfx/interface/advisors/GEH/GEH_hatami_ericha_idea.tga"
 			}
 		}
 		gender = female
@@ -1083,7 +1083,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_kirara_portrait.tga"
-				large="gfx/interface/advisors/GEH/GEH_kirara_idea.tga"
+				small="gfx/interface/advisors/GEH/GEH_kirara_idea.tga"
 			}
 		}
 		gender = female
