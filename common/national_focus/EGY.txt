@@ -34,7 +34,7 @@ focus_tree = {
 		available = {
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_modernization_program"
@@ -58,7 +58,7 @@ focus_tree = {
 			focus = EGY_modernization_program
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_nile_dams"
 			random_owned_controlled_state = {
@@ -111,7 +111,7 @@ focus_tree = {
 			focus = EGY_nile_dams
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_oil"
 			add_resource = {
@@ -139,7 +139,7 @@ focus_tree = {
 			focus = EGY_modernization_program
 		}
 
-		ai_will_do = { factor = 200 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_industrialization"
 			# swap_ideas = {
@@ -164,7 +164,7 @@ focus_tree = {
 			focus = EGY_industrialization
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_textile_expansion"
 			add_one_random_civilian_factory = yes
@@ -186,7 +186,7 @@ focus_tree = {
 			focus = EGY_textile_expansion
 		}
 
-		ai_will_do = { factor = 120 }
+		
 		completion_reward = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
@@ -207,7 +207,7 @@ focus_tree = {
 			focus = EGY_textile_expansion
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
@@ -239,7 +239,7 @@ focus_tree = {
 			focus = EGY_state_enterprises
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			add_one_random_dockyard = yes
 		}
@@ -266,7 +266,7 @@ focus_tree = {
 			focus = EGY_industrialization
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_railroad_expansion"
 			random_owned_controlled_state = {
@@ -362,7 +362,7 @@ focus_tree = {
 			focus = EGY_railroad_expansion
 		}
 
-		ai_will_do = { factor = 100 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_steel"
 			random_owned_controlled_state = {
@@ -390,7 +390,7 @@ focus_tree = {
 			focus = EGY_industrialization
 		}
 
-		ai_will_do = { factor = 120 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_domestic_arms"
 			#446 = { prioritize_state = yes } #Cairo
@@ -416,7 +416,7 @@ focus_tree = {
 			focus = EGY_domestic_arms
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_dockyards_of_alexandria"
 			#447 = { prioritize_state = yes } #Alexandria
@@ -454,7 +454,7 @@ focus_tree = {
 			focus = EGY_domestic_arms
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_german_weapons"
 			add_one_random_military_factory = yes
@@ -510,7 +510,7 @@ focus_tree = {
 			focus = EGY_dockyards_of_alexandria
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_unify_electrical_standards"
 			add_tech_bonus = {
@@ -536,7 +536,7 @@ focus_tree = {
 			focus = EGY_modernization_program
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_cinema"
 			add_political_power = 100
@@ -561,7 +561,7 @@ focus_tree = {
 			focus = EGY_egyptian_cinema
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_radio"
 			add_tech_bonus = {
@@ -605,7 +605,7 @@ focus_tree = {
 			focus = EGY_egyptian_radio
 		}
 
-		ai_will_do = { factor = 120 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_blue_nile_dams"
 			#551 = { prioritize_state = yes } #Kassala-Sennar
@@ -630,7 +630,7 @@ focus_tree = {
 			focus = EGY_blue_nile_dams
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_synthetic_resources"
 			add_resource = {
@@ -674,7 +674,7 @@ focus_tree = {
 			focus = EGY_egyptian_oil
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_modernise_sudan"
 			add_tech_bonus = {
@@ -713,7 +713,7 @@ focus_tree = {
 			focus = EGY_modernise_sudan
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_expand_railroads"
 			every_owned_state = {
@@ -760,7 +760,7 @@ focus_tree = {
 			focus = EGY_modernise_sudan
 		}
 
-		ai_will_do = { factor = 120 }
+		
 		completion_reward = {
 			every_owned_state = {
 				display_individual_scopes = yes
@@ -801,7 +801,7 @@ focus_tree = {
 			focus = EGY_modernise_sudan
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_airports_for_sudan"
 			every_owned_state = {
@@ -862,7 +862,7 @@ focus_tree = {
 			focus = EGY_expand_railroads
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_resources_of_the_south"
 			
@@ -919,7 +919,7 @@ focus_tree = {
 			focus = EGY_egyptian_oil
 		}
 
-		ai_will_do = { factor = 300 }
+		
 		completion_reward = {
 			# log = "[GetDateText]: [Root.GetName]: Focus EGY_new_universities"
 			# # 다섯개가 될 때 까지 늘이기
@@ -945,7 +945,7 @@ focus_tree = {
 			focus = EGY_new_universities
 		}
 
-		ai_will_do = { factor = 80 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_airports"
 			random_owned_controlled_state = {
@@ -1012,7 +1012,7 @@ focus_tree = {
 
 		relative_position_id = EGY_modernization_program
 
-		ai_will_do = { factor = 300 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_new_economy"
 			#remove_ideas = EGY_backwards_economy_2
@@ -1040,11 +1040,7 @@ focus_tree = {
 			trigger = { is_subject = yes }
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_army_reforms"
@@ -1070,11 +1066,7 @@ focus_tree = {
 			focus = EGY_grand_battle_plan
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_mobile_warfare"
@@ -1106,11 +1098,7 @@ focus_tree = {
 			focus = EGY_mobile_warfare
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			# log = "[GetDateText]: [Root.GetName]: Focus EGY_shendi_horses"
@@ -1132,11 +1120,7 @@ focus_tree = {
 			focus = EGY_mobile_warfare
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_royal_camel_corps"
@@ -1162,11 +1146,7 @@ focus_tree = {
 			focus = EGY_shendi_horses
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_motorized_efforts"
@@ -1205,11 +1185,7 @@ focus_tree = {
 			focus = EGY_motorized_efforts
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_desert_mobility"
@@ -1242,11 +1218,7 @@ focus_tree = {
 			focus = EGY_grand_battle_plan
 		}
 
-		ai_will_do = {
-			base = 20
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_domestic_gunsmiths"
@@ -1289,11 +1261,7 @@ focus_tree = {
 			focus = EGY_domestic_gunsmiths
 		}
 
-		ai_will_do = {
-			base = 20
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			# log = "[GetDateText]: [Root.GetName]: Focus EGY_desert_training"
@@ -1319,11 +1287,7 @@ focus_tree = {
 			focus = EGY_desert_training
 		}
 
-		ai_will_do = {
-			base = 20
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_labour_corps"
@@ -1349,18 +1313,6 @@ focus_tree = {
 		prerequisite = {
 			focus = EGY_desert_training
 		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 5
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				alliance_strength_ratio < 0.5
-			}
-		}
 		completion_reward = {
 			add_ideas = EGY_royal_gendarmerie
 		}
@@ -1383,11 +1335,7 @@ focus_tree = {
 			focus = EGY_mobile_warfare
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_grand_battle_plan"
@@ -1419,11 +1367,7 @@ focus_tree = {
 			focus = EGY_grand_battle_plan
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_expand_military_academy"
@@ -1445,11 +1389,7 @@ focus_tree = {
 			focus = EGY_grand_battle_plan
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			# log = "[GetDateText]: [Root.GetName]: Focus EGY_planning_schools"
@@ -1474,11 +1414,7 @@ focus_tree = {
 			focus = EGY_planning_schools
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_improve_officer_corps"
@@ -1510,11 +1446,7 @@ focus_tree = {
 			focus = EGY_improve_officer_corps
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_general_staff"
@@ -1547,11 +1479,7 @@ focus_tree = {
 			focus = EGY_general_staff
 		}
 
-		ai_will_do = {
-			base = 30
-			modifier = { factor = 10	date > 1938.1.1 }
-			modifier = { factor = 5		has_war = yes }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_new_army"
@@ -1595,13 +1523,7 @@ focus_tree = {
 			x = -13
 			trigger = { is_subject = yes }
 		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_naval_reforms"
 			navy_experience = 10
@@ -1628,13 +1550,7 @@ focus_tree = {
 			focus = EGY_naval_reforms
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		search_filters = { FOCUS_FILTER_PRODUCTION FOCUS_FILTER_NAVY_BONUS }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_naval_companies"
@@ -1655,13 +1571,7 @@ focus_tree = {
 			focus = EGY_naval_reforms
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_navy"
 			navy_experience = 10
@@ -1698,13 +1608,7 @@ focus_tree = {
 			focus = EGY_naval_reforms
 		}
 
-		ai_will_do = {
-			factor = 60
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_expand_dockyards"
 			447 = {
@@ -1749,13 +1653,7 @@ focus_tree = {
 			focus = EGY_grand_navy
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_defend_the_coasts"
 			add_tech_bonus = {
@@ -1787,13 +1685,7 @@ focus_tree = {
 			focus = EGY_defend_the_coasts
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_light_cruisers"
 			add_tech_bonus = {
@@ -1819,13 +1711,7 @@ focus_tree = {
 			focus = EGY_light_cruisers
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_submarines"
 			add_tech_bonus = {
@@ -1852,13 +1738,7 @@ focus_tree = {
 			focus = EGY_grand_navy
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_marine_focus"
 			add_tech_bonus = {
@@ -1893,13 +1773,7 @@ focus_tree = {
 			focus = EGY_defend_the_coasts
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_grand_navy"
 			add_tech_bonus = {
@@ -1931,13 +1805,7 @@ focus_tree = {
 			focus = EGY_grand_navy
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_heavy_cruisers"
 			add_tech_bonus = {
@@ -1969,13 +1837,7 @@ focus_tree = {
 			focus = EGY_heavy_cruisers
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_destroyers"
 			add_tech_bonus = {
@@ -2005,13 +1867,7 @@ focus_tree = {
 			focus = EGY_marine_focus
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 5
-				alliance_naval_strength_ratio < 0.5
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_the_queen_of_the_mediteranian"
 			navy_experience = 25
@@ -2044,13 +1900,7 @@ focus_tree = {
 			x = -12
 			trigger = { is_subject = yes }
 		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 30
-				has_war = yes
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_aviation_reforms"
 			air_experience = 10
@@ -2077,7 +1927,7 @@ focus_tree = {
 			focus = EGY_aviation_reforms
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_pilot_training"
 			air_experience = 25
@@ -2108,7 +1958,7 @@ focus_tree = {
 			focus = EGY_aviation_reforms
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_expand_air_ports"
 			447 = {
@@ -2148,13 +1998,7 @@ focus_tree = {
 			focus = EGY_aviation_reforms
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 30
-				has_war = yes
-			}
-		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_aviation_industry"
 			447 = {
@@ -2191,7 +2035,7 @@ focus_tree = {
 			focus = EGY_battle_ground_support
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_dominate_the_sky"
 			add_doctrine_cost_reduction = {
@@ -2217,7 +2061,7 @@ focus_tree = {
 			focus = EGY_dominate_the_sky
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_fighters"
 			add_tech_bonus = {
@@ -2252,7 +2096,7 @@ focus_tree = {
 			focus = EGY_dominate_the_sky
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_battle_ground_support"
 			add_doctrine_cost_reduction = {
@@ -2278,7 +2122,7 @@ focus_tree = {
 			focus = EGY_battle_ground_support
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_bombers"
 			add_tech_bonus = {
@@ -2372,7 +2216,7 @@ focus_tree = {
 			focus = EGY_bombers
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_aviation_industry_investment"
 			551 = {
@@ -2400,7 +2244,7 @@ focus_tree = {
 			focus = EGY_bombers
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_egyptian_paratroopers"
 			add_tech_bonus = {
@@ -2432,7 +2276,7 @@ focus_tree = {
 			focus = EGY_air_defence_force
 		}
 
-		ai_will_do = { factor = 10 }
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_rule_the_skies"
 			air_experience = 10
@@ -2469,7 +2313,7 @@ focus_tree = {
 
 		# No prerequisite, starting point
 
-		ai_will_do = { factor = 1 } # Adjust AI factor as needed
+		 # Adjust AI factor as needed
 		completion_reward = {
 			add_stability = 0.25
 			country_event = {
@@ -2495,7 +2339,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_1935_revolution_success }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "군부 회유"
 		}
@@ -2512,7 +2356,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_appease_military }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "지방 주둔지 확대"
 		}
@@ -2529,7 +2373,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_appease_military }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "군사 개혁 법안 추진"
 		}
@@ -2546,7 +2390,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_appease_military }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "샤리아 집행 지원"
 		}
@@ -2563,7 +2407,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_appease_military }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "부패귀족 토지 몰수"
 		}
@@ -2580,7 +2424,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_expand_local_garrisons }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "치안 업무 이양"
 		}
@@ -2597,7 +2441,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_expand_local_garrisons }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "국경수비대 지원 확대"
 		}
@@ -2614,7 +2458,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_push_military_reform_bill }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "군수 산업 현대화"
 		}
@@ -2631,7 +2475,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_support_sharia_enforcement }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "종교 방위군 특별보상"
 		}
@@ -2648,7 +2492,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_confiscate_corrupt_lands }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "군부 토지 재분배"
 		}
@@ -2665,7 +2509,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_confiscate_corrupt_lands }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "군사 병원 설립"
 		}
@@ -2690,7 +2534,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = EGY_mansoura_agreement focus = EGY_march_on_cairo }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "의회 정지"
 		}
@@ -2708,7 +2552,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_1935_revolution_success }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -2730,7 +2574,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_consolidate_wafd_party }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_ideas = {
 				EGY_idea_blue_shirts_1
@@ -2753,7 +2597,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_consolidate_wafd_party }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -2794,7 +2638,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -2833,7 +2677,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -2876,7 +2720,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_form_blue_shirts focus = EGY_sudanese_suffrage }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = EGY_idea_blue_shirts_1
@@ -2910,7 +2754,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = EGY_suspend_parliament focus = EGY_march_on_cairo }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			set_politics = {
 				ruling_party = democratic
@@ -2924,6 +2768,16 @@ focus_tree = {
 			add_stability = 0.15
 			custom_effect_tooltip = EGY_suez_negotiate_tt
 			# Add effects for completing "만수라 협정"
+		}
+		bypass_effect = {
+			add_ideas = {
+				EGY_idea_king_farouk
+			}
+			hidden_effect = {
+				news_event = EGY_news.2
+			}
+			add_stability = 0.15
+			custom_effect_tooltip = EGY_suez_negotiate_tt
 		}
 	}
 
@@ -2943,7 +2797,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_1935_revolution_success }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이집트 제일주의"
 		}
@@ -2960,7 +2814,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_egypt_first }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이집트 형제단 강화"
 		}
@@ -2977,7 +2831,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_egypt_first }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "녹색 셔츠단 결집"
 		}
@@ -2994,7 +2848,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "귀족층 타파"
 		}
@@ -3011,7 +2865,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이슬람 신앙 전파"
 		}
@@ -3028,7 +2882,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_strengthen_muslim_brotherhood focus = EGY_rally_green_shirts }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "종교 민족주의"
 		}
@@ -3050,7 +2904,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = EGY_suspend_parliament focus = EGY_mansoura_agreement }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "카이로 진군"
 		}
@@ -3071,7 +2925,7 @@ focus_tree = {
 			focus = EGY_suspend_parliament
 		}
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "1930년 헌법 복원"
 		}
@@ -3088,7 +2942,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_march_on_cairo }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "로마 협약 가입"
 		}
@@ -3105,7 +2959,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_march_on_cairo }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "식민지 거래 제안"
 		}
@@ -3122,7 +2976,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_join_rome_pact }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "에티오피아 공동통치 제안"
 		}
@@ -3139,7 +2993,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_propose_colonial_trade }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "수에즈 중재"
 		}
@@ -3158,7 +3012,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_restore_1930_constitution }
 		mutually_exclusive = { focus = EGY_revolution_for_freedom }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "국왕에 충성하는 군대"
 		}
@@ -3175,7 +3029,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_army_loyal_to_king }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "왕권 강화"
 		}
@@ -3192,7 +3046,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_strengthen_monarchy }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "의회 꼭두각시화"
 		}
@@ -3209,7 +3063,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_puppet_parliament }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "펠라 동원"
 		}
@@ -3226,7 +3080,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_puppet_parliament }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이집트 철위대"
 		}
@@ -3243,7 +3097,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_puppet_parliament }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "수에즈 요구"
 		}
@@ -3260,7 +3114,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_mobilize_fellaheen focus = EGY_egyptian_iron_guard focus = EGY_demand_suez }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "수단 왕위 확보"
 		}
@@ -3277,7 +3131,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_secure_sudanese_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "알바니아 왕위 주장"
 		}
@@ -3302,7 +3156,7 @@ focus_tree = {
 			focus = EGY_reformist_monarch_farouk_i
 		}
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = EGY_democratic_faction
@@ -3324,7 +3178,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_cairo_pact }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -3339,6 +3193,16 @@ focus_tree = {
 						original_tag = KUW
 						original_tag = UAE
 					}
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
 				}
 				country_event = {
 					id = EGY_event.7
@@ -3359,7 +3223,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_cairo_pact }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -3370,6 +3234,11 @@ focus_tree = {
 						original_tag = AFG
 						original_tag = PER
 					}
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
 				}
 				country_event = {
 					id = EGY_event.7
@@ -3390,7 +3259,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_cairo_pact }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -3424,7 +3293,7 @@ focus_tree = {
 			has_country_flag = EGY_flag_ABYDOS_kingdom
 		}
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "선택받은 호루스"
 		}
@@ -3441,7 +3310,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_chosen_horus }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "새 왕좌의 주인"
 		}
@@ -3458,7 +3327,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_new_master_of_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "인민의 영도자"
 		}
@@ -3475,7 +3344,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_new_master_of_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "키보토스인 이민 수용"
 		}
@@ -3492,7 +3361,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_new_master_of_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "제2의 클레오파트라"
 		}
@@ -3509,7 +3378,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_new_master_of_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "아비도스 왕조 계승"
 		}
@@ -3526,7 +3395,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_leader_of_the_people focus = EGY_accept_kivotos_immigrants }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "노동자 농민의 여왕"
 		}
@@ -3543,7 +3412,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_leader_of_the_people focus = EGY_accept_kivotos_immigrants }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "키보토스인 동원"
 		}
@@ -3560,7 +3429,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_second_cleopatra focus = EGY_inherit_abydos_dynasty }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "새로운 이집트 왕조"
 		}
@@ -3577,7 +3446,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_second_cleopatra focus = EGY_inherit_abydos_dynasty }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "현현한 호루스"
 		}
@@ -3599,7 +3468,7 @@ focus_tree = {
 			focus = EGY_manifested_horus
 		}
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "황제 즉위"
 		}
@@ -3617,7 +3486,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_propose_ethiopian_condominium focus = EGY_suez_mediation }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이집트 제국의 부활"
 		}
@@ -3635,7 +3504,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_revive_egyptian_empire }
 		mutually_exclusive = { focus = EGY_claim_ethiopian_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "에티오피아 총독부"
 		}
@@ -3653,7 +3522,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_revive_egyptian_empire }
 		mutually_exclusive = { focus = EGY_ethiopian_governorate }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "에티오피아 제위 주장"
 		}
@@ -3670,7 +3539,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_revive_egyptian_empire }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "레반트로 진군"
 		}
@@ -3687,7 +3556,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_ethiopian_governorate focus = EGY_claim_ethiopian_throne }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "리비아 해방"
 		}
@@ -3704,7 +3573,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_march_on_levant }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "헤자즈 주장"
 		}
@@ -3721,7 +3590,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_liberate_libya }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "펠로폰네소스 주장"
 		}
@@ -3738,7 +3607,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_claim_hejaz }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "튀르키예 지배"
 		}
@@ -3756,7 +3625,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_dominate_turkey }
 		prerequisite = { focus = EGY_claim_peloponnese }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "총독부 설치"
 		}
@@ -3775,7 +3644,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_restore_1930_constitution }
 		mutually_exclusive = { focus = EGY_army_loyal_to_king }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "자유를 위한 혁명"
 		}
@@ -3792,7 +3661,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_revolution_for_freedom }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "국왕 추방"
 		}
@@ -3809,7 +3678,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_exile_king }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "아랍어권 단결"
 		}
@@ -3826,7 +3695,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_unite_arab_speakers }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "아랍 통일 논의"
 		}
@@ -3843,7 +3712,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_unite_arab_speakers }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "수에즈 탈환"
 		}
@@ -3860,7 +3729,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_unite_arab_speakers }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "쿠르드인과 화해"
 		}
@@ -3877,7 +3746,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_discuss_arab_unification focus = EGY_retake_suez focus = EGY_reconcile_with_kurds }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "마그레브 해방"
 		}
@@ -3894,7 +3763,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_liberate_maghreb }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "아프리카의 뿔 해방"
 		}
@@ -3912,7 +3781,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_mansoura_agreement }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			remove_ideas = {
 				EGY_idea_albanian_kings
@@ -3933,7 +3802,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_mansoura_agreement }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_ideas = {
 				EGY_idea_egypt_democratic
@@ -3953,7 +3822,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_constitutional_monarchy }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = EGY_idea_king_farouk
@@ -3994,7 +3863,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_egyptian_democracy }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_political_power = -100
 			884 = {add_core_of = EGY}
@@ -4016,7 +3885,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -4053,7 +3922,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -4088,7 +3957,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_reformist_monarch_farouk_i focus = EGY_suez_negotiation }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_ideas = {
 				EGY_idea_anti_colonism
@@ -4117,7 +3986,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_accept_monarchist_demands }
 		prerequisite = { focus = EGY_accept_socialist_demands }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			add_war_support = 0.1
 			if = {
@@ -4151,7 +4020,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_end_colonial_rule }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			ITA = {
 				country_event = {
@@ -4174,9 +4043,16 @@ focus_tree = {
 		prerequisite = { focus = EGY_end_colonial_rule }
 		mutually_exclusive = { focus = EGY_minorities_first }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			custom_effect_tooltip = EGY_ethiopia_unite_tt
+			ETH = {
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
+			}
 			# Add effects for completing "에티오피아 영유권 인정"
 		}
 	}
@@ -4193,7 +4069,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_end_colonial_rule }
 		mutually_exclusive = { focus = EGY_recognize_ethiopian_sovereignty }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			custom_effect_tooltip = EGY_ethiopia_divide_tt
 			# Add effects for completing "소수민족 우선"
@@ -4215,7 +4091,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_suppress_blue_shirts }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			remove_ideas = {
 				EGY_unhappy_parliament
@@ -4246,9 +4122,14 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_demand_libyan_liberation }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			COG = {
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
 				country_event = {
 					id = EGY_event.7
 				}
@@ -4279,9 +4160,14 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_recognize_ethiopian_sovereignty focus = EGY_minorities_first }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			LIB = {
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
 				country_event = {
 					id = EGY_event.7
 				}
@@ -4301,7 +4187,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_attack_french_colonial_empire }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -4316,6 +4202,11 @@ focus_tree = {
 							original_tag = BEL
 						}
 					}
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
 				}
 				country_event = {
 					id = EGY_event.7
@@ -4347,9 +4238,14 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_invite_liberia }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			SAF = {
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
 				country_event = {
 					id = EGY_event.7
 				}
@@ -4374,7 +4270,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_liberate_west_africa }
 		prerequisite = { focus = EGY_support_south_african_independence }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			FRA = {
 				country_event = {
@@ -4400,7 +4296,7 @@ focus_tree = {
 		x = 3 # Right of March on Levant
 		y = 0 # Same level
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "아라비아 지배"
 		}
@@ -4420,7 +4316,7 @@ focus_tree = {
 			focus = EGY_suez_mediation
 		}
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "페르시아 진출"
 		}
@@ -4438,7 +4334,7 @@ focus_tree = {
 		prerequisite = { focus = EGY_advance_into_persia }
 		prerequisite = { focus = EGY_dominate_arabia }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "이집트의 영광"
 		}
@@ -4455,7 +4351,7 @@ focus_tree = {
 
 		prerequisite = { focus = EGY_glory_of_egypt }
 
-		ai_will_do = { factor = 1 }
+		
 		completion_reward = {
 			# Add effects for completing "늙은 사자 사냥"
 		}

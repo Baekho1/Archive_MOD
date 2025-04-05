@@ -4280,6 +4280,11 @@ country_event = { #아비도스 대책위원회의 망명
 					}
 					is_puppet_of = FRA
 				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
 			}
 			release = PREV
 			EGY = {

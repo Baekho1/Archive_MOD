@@ -251,6 +251,11 @@ add_ideas = {
 	EGY_aziz_ezzat_advisor
 }
 set_variable = { country_intro_page_count = 2 } #Intro screen
+add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 20000
+}
+add_manpower = 500000
 
 # Binah Problem
 set_variable = {
