@@ -46,7 +46,6 @@ unique_id = BA_achievements_502384
 			}	
 		}
 		is_subject = no 
-		Eden_alliance_created_already = no 
     }
 }
 
