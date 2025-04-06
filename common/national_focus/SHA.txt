@@ -1313,6 +1313,17 @@ focus_tree = {
 				add_idea =SHA_suppressed_Black_Tortoise_Promenade
 			}
 			remove_mission = SHA_BTP_revolt_mission
+			if = {
+				limit = {
+					has_country_leader = {
+						character = SHA_KAI
+						ruling_only = yes
+					}
+				}
+				hidden_effect = {
+					country_event = { id = shafla.3 days = 04 }
+				}
+			}
 		}
 	}
 
