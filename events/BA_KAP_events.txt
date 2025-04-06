@@ -4,7 +4,7 @@ news_event = {
 	id = KAP_event.1
 	title = KAP_event.1.t
 	desc = KAP_event.1.desc
-	picture = GFX_event_KAP_declared
+	picture = GFX_news_KAP_Animated_kapila
 
 	is_triggered_only = yes
 	major = yes

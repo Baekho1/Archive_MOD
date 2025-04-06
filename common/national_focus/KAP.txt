@@ -596,6 +596,7 @@ focus_tree = {
 	focus = {
 		id = KAP_social_democracy
 		icon = GFX_goal_focus_KAP_kv4
+		available = { has_country_flag = GAEBALJUNG }
 		prerequisite = { focus = KAP_strengthen_the_central_secretariat }
 		mutually_exclusive = { focus = KAP_agrarian_socialism focus = KAP_marxist_orthodoxy }
 		x = 2
@@ -806,7 +807,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			remove_ideas = KAP_gongsadamang
 		}
 	}
 
@@ -884,7 +885,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = KAP_reload
+				days = 180
+			}
 		}
 	}
 
@@ -915,7 +919,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			set_technology = {
+				armored_car1 = 1
+			} 
 		}
 	}
 
@@ -947,7 +953,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
+			set_technology = {
+				early_fighter = 1
+			} 
 		}
 	}
 
@@ -1015,7 +1023,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			set_technology = {
+				basic_ship_hull_heavy = 1
+			} 
 		}
 	}
 
@@ -1362,7 +1372,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_focus_on_KAPna
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_parliament2
 		prerequisite = { focus = KAP_the_yanan_base_area }
 		x = 1
 		y = 1
@@ -1398,7 +1408,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_exploit_the_weak_neighbours
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_CAN_banking_legislation
 		prerequisite = { focus = KAP_focus_on_KAPna }
 		x = 1
 		y = 1
@@ -1430,7 +1440,7 @@ focus_tree = {
 
 	focus = {
 		id = KAP_infiltration
-		icon = GFX_focus_PRC_infiltration
+		icon = GFX_goal_authority
 		prerequisite = { focus = KAP_focus_on_KAPna }
 		x = 0
 		y = 2
@@ -1454,7 +1464,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-
+			KAP = {
+			    set_rule = { can_declare_war_without_wargoal_when_in_war = yes }
+            }
 		}
 	}
 
@@ -1486,7 +1498,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-
+			remove_ideas = KAP_gongsadamang2
 		}
 	}
 
@@ -1518,7 +1530,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-
+			remove_ideas = KAP_gongsadamang3
 		}
 	}
 
@@ -1550,7 +1562,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_stability = 0.05
+			remove_ideas = KAP_gongsadamang4
 		}
 	}
 
@@ -1583,7 +1595,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-
+			add_ideas = KAP_together
 		}
 	}
 

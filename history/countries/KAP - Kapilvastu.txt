@@ -59,6 +59,9 @@ add_ideas = {
 	undisturbed_isolation
 	BA_isolation
 	KAP_gongsadamang
+	KAP_gongsadamang2
+	KAP_gongsadamang3
+	KAP_gongsadamang4
 }
 
 add_opinion_modifier = { target = CHI modifier = hostile_status }
