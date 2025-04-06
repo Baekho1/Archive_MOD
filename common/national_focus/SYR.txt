@@ -1466,6 +1466,11 @@ focus_tree = {
 			focus = SYR_focus_com_0
 			focus = SYR_focus_12
 		}
+		available = {
+			NOT = {
+				has_government = democratic
+			}
+		}
 		completion_reward = {
 			if = {
 				limit = {
