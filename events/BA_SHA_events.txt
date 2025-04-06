@@ -757,3 +757,29 @@ country_event = {
 
 	}
 }
+
+# 앗! 아케시로 루미! 코코나보다 어리다!
+country_event = {
+	id = shafla.3
+	title = shafla.3.t
+	desc = shafla.3.desc
+	picture = GFX_report_event_akeshiro_rumi_child
+
+    is_triggered_only = yes
+
+	option = {
+		name = shafla.3.a
+		custom_effect_tooltip = shafla_3_tt
+		set_portraits = {
+			character = SHA_ROUMI
+			army = { 
+				large = GFX_Portrait_SHA_Akeshiro_Rumi_Child
+				small = GFX_idea_SHA_Akeshiro_Rumi_Child
+			}
+			civilian={
+				large= GFX_Portrait_SHA_Akeshiro_Rumi_Child
+				small= GFX_idea_SHA_Akeshiro_Rumi_Child
+			}
+		}
+	}
+}

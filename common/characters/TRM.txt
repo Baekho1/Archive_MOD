@@ -115,10 +115,7 @@ characters={
 			logistics_skill=1
 			desc = TRN_Seia_advisor_desc
             visible = {
-				OR = {
-					NOT = { has_character_flag = TRN_fake_death_flag }
-                	NOT = { has_country_flag = TRM_event_59_flag }
-				}
+				NOT = { has_character_flag = TRN_fake_death_flag }
             }
 		}
 		country_leader={
@@ -1247,12 +1244,12 @@ characters={
 		portraits = {
 			army = {
 				small = GFX_Z_TRM_alfred_rosenberg_idea
-				large = GFX_Z_TRM_alfred_rosenberg_idea
+				large = GFX_Z_TRN_alfred_rosenberg_Portrait
 			}
 		}
 		advisor = {
     		slot = political_advisor
-    		idea_token = TRM_hans_zehrer_idea
+    		idea_token = TRM_alfred_rosenberg_idea
 			allowed = {
 				original_tag = TRM
 			}

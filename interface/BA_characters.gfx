@@ -396,6 +396,11 @@ spriteTypes = {
 
 #밀레니엄
 	spriteType = { 
+		name = "GFX_MIL_AL_1S_Fanmade_Portrait"
+		textureFile = "gfx/leaders/MIL/MIL_AL_1S_Portrait_2.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = { 
 		name = "GFX_HUB"
 		textureFile = "gfx/interface/advisors/MIL/허브.tga"
 	}
@@ -510,7 +515,7 @@ spriteTypes = {
 	}
 	spriteType = { 
 		name = "GFX_AL_1S"
-		textureFile = "gfx/interface/advisors/MIL/AL_1S.tga"
+		textureFile = "gfx/interface/advisors/MIL/아리스.tga"
 	}
 	spriteType = { 
 		name = "GFX_Priesthood"
@@ -937,6 +942,120 @@ spriteTypes = {
 		textureFile = "gfx/leaders/HEU/HEU_aru_rikuhachima_communist.dds"
 		legacy_lazy_load = no
 	}
+## 산해경 ##
+	spriteType = {
+		name = "GFX_Portrait_SHA_Ryuuge_Kisaki"
+		textureFile = "gfx/leaders/SHA/SHA_pot_1.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Konoe_Mina"
+		textureFile = "gfx/leaders/SHA/SHA_pot_2.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Shintani_Kai"
+		textureFile = "gfx/leaders/SHA/SHA_pot_3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Yakushi_Saya"
+		textureFile = "gfx/leaders/SHA/SHA_pot_4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Sunohara_Shun"
+		textureFile = "gfx/leaders/SHA/SHA_pot_5.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Sunohara_Shun_Child"
+		textureFile = "gfx/leaders/SHA/SHA_pot_6.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Sunohara_Kokona"
+		textureFile = "gfx/leaders/SHA/SHA_pot_7.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Akeshiro_Rumi"
+		textureFile = "gfx/leaders/SHA/SHA_pot_8.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Akeshiro_Rumi_Child"
+		textureFile = "gfx/leaders/SHA/Portrait_SHA_Akeshiro_Rumi_Child.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Kayama_Reijo"
+		textureFile = "gfx/leaders/SHA/SHA_pot_9.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Portrait_SHA_Urushibara_Kaguya"
+		textureFile = "gfx/leaders/SHA/SHA_pot_11.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SHA_Akeshiro_Rumi_Child"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Akeshiro_Rumi.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Akeshiro_Rumi"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_8.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Kisaki"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_1.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Mina"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_2.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Kai"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Saya"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Shun"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_5.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Shun_Child"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_6.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Kokona"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_7.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Reijyo"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_9.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_SHA_Kaguya"
+		textureFile = "gfx/interface/advisors/SHA/SHA_Spot_11.tga"
+		legacy_lazy_load = no
+	}
+
+
 # 김용하 #
 	spriteType = {
 		name = "GFX_KIM_YONG_HA"
@@ -946,12 +1065,7 @@ spriteTypes = {
 		name = "GFX_portrait_kiyosmi_akira"
 		textureFile = "gfx/leaders/KSP/Kiyosmi_Akira.tga"
 	}
-	#
-	spriteType = { 
-		name = "GFX_MIL_AL_1S_Fanmade_Portrait"
-		textureFile = "gfx/leaders/MIL/MIL_AL_1S_Portrait_2.tga"
-		legacy_lazy_load = no
-	}
+#
 	spriteType = {
 		name = "GFX_GEI_Portrait_HP_Lovecraft"
 		textureFile = "gfx/leaders/GEI/GEI_Portrait_HP_Lovecraft.tga"

@@ -1,4 +1,32 @@
 EGY_Binah_problem = {
+	EGY_Binah_rebuild = {
+		priority = 10
+		activation = {
+			NOT = {has_idea = EGY_Binah}
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 360
+		is_good = no
+		fire_only_once = yes
+		timeout_effect = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			every_state = {
+				limit = { 
+					is_core_of = EGY 
+				}
+				increase_state_category = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 	EGY_Binah_action_escalate = {
 		priority = 10
 		activation = {
@@ -9,11 +37,10 @@ EGY_Binah_problem = {
 				has_idea = EGY_Binah
 			}
 		}
-		days_mission_timeout = 35
+		days_mission_timeout = 75
 		is_good = no
 		timeout_effect = {
 			add_stability = -0.05
-			add_political_power = -25
 			random_owned_controlled_state = {
 				limit = { 
 					is_core_of = EGY 
@@ -40,7 +67,7 @@ EGY_Binah_problem = {
 				has_idea = EGY_Binah
 			}
 		}
-		days_mission_timeout = 70
+		days_mission_timeout = 50
 		is_good = no
 		timeout_effect = {
 			random_owned_controlled_state = {
@@ -49,7 +76,7 @@ EGY_Binah_problem = {
 					has_state_flag = EGY_Binah_is_here
 					infrastructure > 0
 				}
-				add_manpower = -25000
+				add_manpower = -5000
 				damage_building = {
 					type = infrastructure
 					damage = 1
@@ -58,13 +85,6 @@ EGY_Binah_problem = {
 					limit = { industrial_complex > 0 }
 					damage_building = {
 						type = industrial_complex
-						damage = 1
-					}
-				}
-				if = {
-					limit = { arms_factory > 0 }
-					damage_building = {
-						type = arms_factory
 						damage = 1
 					}
 				}
@@ -156,7 +176,7 @@ EGY_Binah_problem = {
 	EGY_binah_attack_ABYDOS = {
 		priority = 8
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		visible = {
@@ -260,22 +280,28 @@ EGY_descision_category_sudan = {
 			}
 		}
 
-		cost = 100
-
-		fire_only_once = yes
+		cost = 50
 
 		days_remove = 100
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
+				increase_state_category = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 				clr_state_flag = EGY_sudan_rabel
 			}
+			custom_effect_tooltip = EGY_stop_rabel_tt
 		}
 	}
 	EGY_descision_low_rabel = {
@@ -302,7 +328,7 @@ EGY_descision_category_sudan = {
             tag = EGY
         }
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		visible = {
@@ -325,14 +351,12 @@ EGY_descision_category_sudan = {
 
 		cost = 25
 
-		fire_only_once = yes
-
 		days_remove = 50
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
 				if = {
 					limit = {
@@ -374,7 +398,7 @@ EGY_descision_category_sudan = {
 			}
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
         allowed = {
@@ -401,14 +425,12 @@ EGY_descision_category_sudan = {
 
 		cost = 25
 
-		fire_only_once = yes
-
 		days_remove = 50
 
 		modifier = {
 		}
 
-		complete_effect = {
+		remove_effect = {
 			FROM = {
 				if = {
 					limit = {
@@ -483,7 +505,7 @@ EGY_descision_category_suez = {
 			}
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 
 		cost = 50
@@ -508,6 +530,7 @@ EGY_anti_colonialist_crusade = {
 
 		target_trigger = {
 			FROM = {
+				owns_state
 				capital_scope = {
 					NOT = { is_on_continent = africa }
 				}
@@ -528,12 +551,27 @@ EGY_anti_colonialist_crusade = {
 					is_controlled_by = FROM
 				}
 			}
+			any_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				is_owned_by = FROM
+			}
+			NOT = {
+				any_other_country = {
+					is_puppet_of = FROM
+					any_state = {
+						is_on_continent = africa
+						is_controlled_by = PREV
+					}
+				}
+			}
 		}
 
 		cost = 0
 		days_remove = 0
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -566,9 +604,9 @@ EGY_anti_colonialist_crusade = {
 
 		cost = 0
 		fire_only_once = yes
-		days_remove = 180
+		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -599,9 +637,9 @@ EGY_anti_colonialist_crusade = {
 
 		cost = 0
 		fire_only_once = yes
-		days_remove = 180
+		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -637,9 +675,9 @@ EGY_anti_colonialist_crusade = {
 
 		cost = 0
 		fire_only_once = yes
-		days_remove = 180
+		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -668,9 +706,9 @@ EGY_anti_colonialist_crusade = {
 
 		cost = 0
 		fire_only_once = yes
-		days_remove = 180
+		days_remove = 30
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
 		
 		visible = {
@@ -704,9 +742,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -737,9 +775,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -768,9 +806,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -800,9 +838,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -831,9 +869,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -862,9 +900,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -893,9 +931,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -927,9 +965,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -959,9 +997,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30 
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1006,9 +1044,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_recognize_ethiopian_sovereignty
@@ -1040,9 +1078,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -1075,9 +1113,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule			
 			has_completed_focus = EGY_minorities_first
@@ -1110,9 +1148,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -1143,9 +1181,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -1176,9 +1214,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -1208,9 +1246,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1239,9 +1277,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1270,9 +1308,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1301,9 +1339,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1332,9 +1370,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1363,9 +1401,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1395,9 +1433,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1429,9 +1467,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1461,9 +1499,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1492,9 +1530,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1523,9 +1561,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1554,9 +1592,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1585,9 +1623,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1616,9 +1654,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1648,9 +1686,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1679,9 +1717,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1710,9 +1748,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1741,9 +1779,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1772,9 +1810,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1803,9 +1841,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1834,9 +1872,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1866,9 +1904,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1900,9 +1938,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1935,9 +1973,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -1967,9 +2005,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -2005,9 +2043,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 		}
@@ -2038,9 +2076,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -2071,9 +2109,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -2104,9 +2142,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first
@@ -2138,9 +2176,9 @@ EGY_anti_colonialist_crusade = {
 		fire_only_once = yes
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1000
 		}
-		days_remove = 180
+		days_remove = 30
 		visible = {
 			has_completed_focus = EGY_end_colonial_rule
 			has_completed_focus = EGY_minorities_first

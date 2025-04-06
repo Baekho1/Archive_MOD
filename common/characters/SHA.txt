@@ -4,12 +4,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_1.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_1.tga"
+				large= GFX_Portrait_SHA_Ryuuge_Kisaki
+				small= GFX_idea_SHA_Kisaki
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_1.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_1.tga"
+				large= GFX_Portrait_SHA_Ryuuge_Kisaki
+				small= GFX_idea_SHA_Kisaki
 			}
 		}
 		country_leader={
@@ -72,12 +72,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_2.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_2.tga"
+				large= GFX_Portrait_SHA_Konoe_Mina
+				small= GFX_idea_SHA_Mina
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_2.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_2.tga"
+				large= GFX_Portrait_SHA_Konoe_Mina
+				small= GFX_idea_SHA_Mina
 			}
 		}
 		corps_commander={
@@ -98,12 +98,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_3.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_3.tga"
+				large= GFX_Portrait_SHA_Shintani_Kai
+				small= GFX_idea_SHA_Kai
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_3.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_3.tga"
+				large= GFX_Portrait_SHA_Shintani_Kai
+				small= GFX_idea_SHA_Kai
 			}
 		}
 		advisor={	
@@ -151,12 +151,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_4.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_4.tga"
+				large= GFX_Portrait_SHA_Yakushi_Saya
+				small= GFX_idea_SHA_Saya
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_4.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_4.tga"
+				large= GFX_Portrait_SHA_Yakushi_Saya
+				small= GFX_idea_SHA_Saya
 			}
 		}
 		corps_commander={
@@ -209,12 +209,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_5.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_5.tga"
+				large= GFX_Portrait_SHA_Sunohara_Shun
+				small= GFX_idea_SHA_Shun
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_5.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_5.tga"
+				large= GFX_Portrait_SHA_Sunohara_Shun
+				small= GFX_idea_SHA_Shun
 			}
 		}
 		corps_commander={
@@ -262,12 +262,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_6.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_6.tga"
+				large= GFX_Portrait_SHA_Sunohara_Shun_Child
+				small= GFX_idea_SHA_Shun_Child
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_6.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_6.tga"
+				large= GFX_Portrait_SHA_Sunohara_Shun_Child
+				small= GFX_idea_SHA_Shun_Child
 			}
 		}
 		advisor={
@@ -317,12 +317,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_7.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_7.tga"
+				large= GFX_Portrait_SHA_Sunohara_Kokona
+				small= GFX_idea_SHA_Kokona
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_7.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_7.tga"
+				large= GFX_Portrait_SHA_Sunohara_Kokona
+				small= GFX_idea_SHA_Kokona
 			}
 		}
 		corps_commander={
@@ -356,12 +356,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_8.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_8.tga"
+				large= GFX_Portrait_SHA_Akeshiro_Rumi
+				small= GFX_idea_SHA_Akeshiro_Rumi
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_8.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_8.tga"
+				large= GFX_Portrait_SHA_Akeshiro_Rumi
+				small= GFX_idea_SHA_Akeshiro_Rumi
 			}
 		}
 		corps_commander={
@@ -418,12 +418,12 @@ characters={
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_9.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_9.tga"
+				large= GFX_Portrait_SHA_Kayama_Reijo
+				small= GFX_idea_SHA_Reijyo
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_9.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_9.tga"
+				large= GFX_Portrait_SHA_Kayama_Reijo
+				small= GFX_idea_SHA_Reijyo
 			}
 		}
 		corps_commander={
@@ -454,57 +454,18 @@ characters={
 				factor = 1.000
 			}
 		}
-	}	
-	SHA_PAY ={
-		name = SHA_PAY
-		gender = female
-		portraits={
-			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_10.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_10.tga"
-			}
-			army={
-				large= "gfx/leaders/SHA/SHA_pot_10.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_10.tga"
-			}
-		}
-		corps_commander={
-			traits = {
-				Infantry_Officer
-			}
-			skill=1
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-		advisor={	
-			slot = theorist
-			idea_token = SHA_PAY_1
-			allowed = {
-				original_tag = SHA
-			}
-			traits = {
-				military_theorist
-			}
-			cost = 150
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}	
+	}
 	SHA_KAGUYA ={
 		name = SHA_KAGUYA
 		gender = female
 		portraits={
 			civilian={
-				large= "gfx/leaders/SHA/SHA_pot_11.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_11.tga"
+				large= GFX_Portrait_SHA_Urushibara_Kaguya
+				small= GFX_idea_SHA_Kaguya
 			}
 			army={
-				large= "gfx/leaders/SHA/SHA_pot_11.tga"
-				small="gfx/interface/advisors/SHA/SHA_Spot_11.tga"
+				large= GFX_Portrait_SHA_Urushibara_Kaguya
+				small= GFX_idea_SHA_Kaguya
 			}
 		}
 		country_leader={

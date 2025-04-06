@@ -857,7 +857,6 @@ ideas = {
 						days = 3
 					}
 				}
-				set_global_flag = FRA_flag_last_promise_end
 			}
 		}
 		FRA_lib_army_4 = {

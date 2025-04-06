@@ -29,6 +29,14 @@ state={
 				naval_base = 5
 
 			}
+			391 = {
+				landmark_COU_tower = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+				}
+			}
 
 		}
 

@@ -23,6 +23,7 @@ defined_text = {
 	text = { trigger = { original_tag = SOV }  localization_key = "GFX_SOV_intro" }
 	text = { trigger = { original_tag = ENG }  localization_key = "GFX_ENG_intro" }
 	text = { trigger = { original_tag = MEX }  localization_key = "GFX_MEX_intro" }
+	text = { trigger = { original_tag = EGY }  localization_key = "GFX_EGY_intro" }
 
 	text = { localization_key = "GFX_KR_default_intro" }
 }
@@ -65,6 +66,9 @@ defined_text = {
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 2 } }  localization_key = MEX_country_intro_header_2 } # 계속되는 혁명
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 3 } }  localization_key = MEX_country_intro_header_3 } # 끝나지 않은 혁명
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 4 } }  localization_key = MEX_country_intro_header_4 } # 로스 키보토스
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 0 } }  localization_key = EGY_country_intro_header }
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 1 } }  localization_key = EGY_country_intro_header_1 }
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 2 } }  localization_key = EGY_country_intro_header_2 }
 }
 
 defined_text = {
@@ -104,6 +108,9 @@ defined_text = {
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 2 } }  localization_key = MEX_country_intro_content_2 }
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 3 } }  localization_key = MEX_country_intro_content_3 }
 	text = { trigger = { original_tag = MEX check_variable = { curr_page = 4 } }  localization_key = MEX_country_intro_content_4 }
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 0 } }  localization_key = EGY_country_intro_content }
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 1 } }  localization_key = EGY_country_intro_content_1 }
+	text = { trigger = { original_tag = EGY check_variable = { curr_page = 2 } }  localization_key = EGY_country_intro_content_2 }
 }
 
 defined_text = {
@@ -132,5 +139,6 @@ defined_text = {
 	text = { trigger = { original_tag = YUG }  localization_key = YUG_guide }
 	text = { trigger = { original_tag = ENG }  localization_key = ENG_guide }
 	text = { trigger = { original_tag = MEX }  localization_key = MEX_guide }
+	text = { trigger = { original_tag = EGY }  localization_key = EGY_guide }
 }
 

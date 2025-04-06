@@ -1,5 +1,60 @@
 add_namespace = EGY_event
 add_namespace = EGY_south_africa
+add_namespace = EGY_news
+
+
+news_event = {
+	id = EGY_news.1
+	title = EGY_news.1.t
+	desc = EGY_news.1.desc
+	#picture = GFX_news_event_EGY_news_aru_hina
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_news.1.a
+	}
+}
+news_event = {
+	id = EGY_news.2
+	title = EGY_news.2.t
+	desc = EGY_news.2.desc
+	#picture = GFX_news_event_EGY_news_aru_hina
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_news.2.a
+	}
+}
+news_event = {
+	id = EGY_news.3
+	title = EGY_news.3.t
+	desc = EGY_news.3.desc
+	#picture = GFX_news_event_EGY_news_aru_hina
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_news.3.a
+	}
+}
+news_event = {
+	id = EGY_news.4
+	title = EGY_news.4.t
+	desc = EGY_news.4.desc
+	#picture = GFX_news_event_EGY_news_aru_hina
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_news.4.a
+	}
+}
 
 
 country_event = { #아비도스 대책위원회의 망명
@@ -4082,6 +4137,18 @@ country_event = { #아비도스 대책위원회의 망명
 			}
 			transfer_state_to = EGY
 		}
+		every_other_country = {
+			limit = {
+				is_puppet_of = FROM
+			}
+			every_state = {
+				limit = {
+					is_on_continent = africa
+					is_controlled_by = PREV
+				}
+				transfer_state_to = EGY
+			}
+		}
 	}
 }
 country_event = { #아비도스 대책위원회의 망명
@@ -4164,5 +4231,142 @@ country_event = { #아비도스 대책위원회의 망명
 			type = liberate_wargoal
 			target = ITA
 		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.18
+	title = EGY_event.18.t	
+	desc = EGY_event.18.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.18.a
+        ai_chance = { factor = 100 }
+		EGY = {
+			country_event = {
+				id = EGY_event.19
+			}
+		}
+	}
+
+	option = { 
+		name = EGY_event.18.b
+        ai_chance = { factor = 0 }
+		EGY = {
+			country_event = {
+				id = EGY_event.20
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.19
+	title = EGY_event.19.t	
+	desc = EGY_event.19.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.19.a
+        ai_chance = { factor = 100 }
+		FRA = {
+			every_other_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = africa
+					}
+					is_puppet_of = FRA
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = EGY
+					value = 1000
+				}
+			}
+			release = PREV
+			EGY = {
+				add_to_faction = PREV
+			}
+		}
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.20
+	title = EGY_event.20.t	
+	desc = EGY_event.20.d
+	picture = GFX_COU_subway
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.20.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.21
+	title = EGY_event.21.t	
+	desc = EGY_event.21.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	trigger = {
+		tag = EGY
+		EGY = {
+			industrial_complex > 29
+		}
+	}
+
+	option = { 
+		name = EGY_event.21.a
+        ai_chance = { factor = 100 }
+		set_country_flag = EGY_flag_suez
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.22
+	title = EGY_event.22.t	
+	desc = EGY_event.22.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.22.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.23
+	title = EGY_event.23.t	
+	desc = EGY_event.23.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.23.a
+        ai_chance = { factor = 100 }
+	}
+}
+country_event = { #아비도스 대책위원회의 망명
+	id = EGY_event.24
+	title = EGY_event.24.t	
+	desc = EGY_event.24.d
+	picture = GFX_COU_subway
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = EGY_event.24.a
+        ai_chance = { factor = 100 }
+		retire_character = EGY_victor_tait
+		add_political_power = 75
 	}
 }

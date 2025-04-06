@@ -1410,7 +1410,7 @@ country_event = {
 					ideology = marxism
 				}
 			}
-        	set_country_flag = TRM_event_59_flag
+			TRN_tpdldk = { set_character_flag = TRN_fake_death_flag }
 			add_to_variable = { TRM_sanctus_popularity = -30 }
 			TRM_internal_factions_popularity_change = yes
 			country_event = { id = TRM_event.71 hours = 480 }
@@ -8521,7 +8521,6 @@ country_event = { # 가슴에 3발
 				id = trinitynews.1
 			}
 		}
-        set_country_flag = TRM_event_59_flag
 		custom_effect_tooltip = TRM_sanctus_popularity__20_tt
 		add_to_variable = { TRM_sanctus_popularity = -20 }
 		TRM_internal_factions_popularity_change = yes

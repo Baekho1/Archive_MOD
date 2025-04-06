@@ -151,4 +151,9 @@ spriteTypes = {
 		texturefile = "gfx/introscreen/MEX_intro.tga"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	spriteType = {
+		name = "GFX_EGY_intro"
+		texturefile = "gfx/introscreen/EGY_intro.tga"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 }

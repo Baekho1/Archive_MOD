@@ -11,6 +11,9 @@ ABY_historical = {
 
 	}
 	ai_national_focuses = {
+		EGY_modernization_program
+		EGY_industrialization
+		EGY_domestic_arms
 		EGY_1935_revolution_success
 		EGY_consolidate_wafd_party
 		EGY_form_blue_shirts

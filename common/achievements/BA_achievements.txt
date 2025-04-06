@@ -26,18 +26,27 @@ unique_id = BA_achievements_502384
     }
  
     happened = {
-        any_allied_country = {
-            NOT = { tag = ROOT }
-            OR = {
-                original_tag = TRM
-                original_tag = TRC
-                original_tag = ARI
-                original_tag = GEH
-                original_tag = GEM
-                original_tag = HEU
-            }
-            is_subject = no
-        }
+		is_faction_leader = yes 
+		if = {
+			limit = { 
+				Eden_is_eden_country_gehenna_classification = yes
+			}
+			any_allied_country = {
+				Eden_is_eden_country_trinity_classification = yes
+				is_subject = no
+			}	
+		}
+		if = {
+			limit = { 
+				Eden_is_eden_country_trinity_classification = yes
+			}
+			any_allied_country = {
+				Eden_is_eden_country_gehenna_classification = yes
+				is_subject = no
+			}	
+		}
+		is_subject = no 
+		Eden_alliance_created_already = yes
     }
 }
 
@@ -51,7 +60,9 @@ unique_id = BA_achievements_502384
     }
  
     happened = {
-        any_other_country = { has_country_flag = GEH_unified_gehenna_flag }
+		any_country = {
+			has_country_flag = GEH_unified_gehenna_flag
+		}
     }
 }
 

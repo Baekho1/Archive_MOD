@@ -195,6 +195,7 @@ tag_has_country_intro = {
 		original_tag = YUG
 		original_tag = ENG
 		original_tag = MEX
+		original_tag = EGY
 	}
 }
 tag_has_path_guide = {
@@ -224,6 +225,7 @@ tag_has_path_guide = {
 		original_tag = YUG
 		original_tag = ENG
 		original_tag = MEX
+		original_tag = EGY
 	}
 }
 MIL_has_semina = {

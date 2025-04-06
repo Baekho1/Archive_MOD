@@ -282,6 +282,44 @@ country_event = { # 연방 창설하면 발작함
         }
 	}
 }
+country_event = { # 
+	id = hina.8
+	title = hina.8.t
+	desc = hina.8.desc
+	picture = GFX_report_event_hitler_parade
+	
+    fire_only_once = yes
+
+	trigger = {
+		has_country_flag = GEH_unified_gehenna_flag
+		has_completed_focus = GEH_expulsion_of_pandemonium
+		NOT = { has_country_flag = hina_event_8_flag }
+	}
+
+	immediate = {
+		set_country_flag = hina_event_8_flag
+	}
+	
+	option = { 
+		name = hina.8.a
+		add_ideas = GEH_widespread_propaganda
+		country_event = { id = hina.9 hours = 12 }
+	}
+}
+country_event = { # 
+	id = hina.9
+	title = hina.9.t
+	desc = hina.9.desc
+	picture = GFX_report_event_hitler_parade
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = hina.9.a
+		add_war_support = -0.02
+	}
+}
 ##2차 총회##
 country_event = { # 
 	id = hina_assembly.1
