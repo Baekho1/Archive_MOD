@@ -36,8 +36,14 @@ GitHub : https://github.com/SKYcat-lang/Archive_MOD \
 Youtube : https://www.youtube.com/@HOI4BlueArchiveMod 
 
 Credit: \
-Skoober - Team Leader (Self-proclaimed) - Translation Chief of Staff, Head of Proofreading Department, Director of Programming Committee, Director of Organisation and Planning commitee, and the Secretary General of the Central English Translation comittee and General Secretary of the Translation Team \
-Saturn - Main Translator (Does basically all the work) - High Commissar of the Translation Team \
-나는 이부키 - Translator (Has been a great help) - Captain of the Translation team \
-Lasgun - Translator -  [strike] Slave [/strike] Intern of the Translation Team \
+Skoober - Team Leader (Self-proclaimed) - Translation Chief of Staff, Head of Proofreading Department, Director of Programming Committee, Director of Organisation and Planning commitee, and the Secretary General of the Central English Translation comittee and General Secretary of the Translation Team 
+
+Saturn - Main Translator (Does basically all the work) - High Commissar of the Translation Team 
+
+나는 이부키 - Translator (Has been a great help) - Captain of the Translation team 
+
+Lasgun - Translator -  [strike] Slave [/strike] Intern of the Translation Team 
+
+FrancePatriot - Translator - Vive la France, et dans la dépendance! 
+
 And you, for waiting all this time.
