@@ -394,8 +394,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_domestic_arms"
 			#446 = { prioritize_state = yes } #Cairo
-			add_one_random_military_factory = yes
-			add_one_random_military_factory = yes
+			# 비나로 추정되는 찐빠를 수정하기 위한 임시조치
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -457,7 +460,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_german_weapons"
-			add_one_random_military_factory = yes
+			# 비나로 추정되는 찐빠를 수정하기 위한 임시조치
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
 			custom_effect_tooltip = tooltip_white_line
 			#country_event = egy.23
 			custom_effect_tooltip = tooltip_white_line
