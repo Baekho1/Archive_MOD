@@ -829,8 +829,8 @@ characters={
 			slot = high_command
 			idea_token = GEH_dkzkfl
 			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_logistics_2 }
-			cost = 150
+			traits = { army_infantry_1 }
+			cost = 50
 			ai_will_do = { factor = 1.000 }
 		}
 	}
@@ -950,6 +950,23 @@ characters={
 			}
 		}
 		gender = female
+		corps_commander={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = GEH_gndnzk_idea
+			allowed = { OR = { original_tag = GEH original_tag = GEM } }
+			traits = { army_logistics_2 }
+			cost = 100
+			ai_will_do = { factor = 24.000 }
+		}
 	}
 
 	GEH_wnfl={ #주리
@@ -961,6 +978,23 @@ characters={
 			}
 		}
 		gender = female
+		corps_commander={
+			traits={  }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = GEH_wnfl_idea
+			allowed = { OR = { original_tag = GEH original_tag = GEM } }
+			traits = { army_CombinedArms_1 }
+			cost = 50
+			ai_will_do = { factor = 1.000 }
+		}
 	}
 	GEH_kinugawa_kasumi={ #카스미
 		name=GEH_kinugawa_kasumi
@@ -1026,6 +1060,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_hatami_ericha_portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_hatami_ericha_idea.tga"
 			}
 		}
 		gender = female
@@ -1034,15 +1069,32 @@ characters={
 			traits={  }
 			expire="1965.1.1.1"
 		}
+		advisor={
+			slot = air_chief
+			idea_token = GEH_kirara_idea
+			allowed = { OR = { original_tag = GEH original_tag = GEM } }
+			traits = { air_chief_safety_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
 	}
 	GEH_kirara={ #키라라
 		name=GEH_kirara
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_kirara_portrait.tga"
+				small="gfx/interface/advisors/GEH/GEH_kirara_idea.tga"
 			}
 		}
 		gender = female
+		advisor={
+			slot = air_chief
+			idea_token = GEH_kirara_idea
+			allowed = { OR = { original_tag = GEH original_tag = GEM } }
+			traits = { air_chief_night_operations_2 }
+			cost = 100
+			ai_will_do = { factor = 24.000 }
+		}
 	}
 
 	GEH_theorist_idea={ # 선도부 회의

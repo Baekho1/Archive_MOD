@@ -4037,6 +4037,9 @@ news_event = {
 			tag = EGY
 		}
 		add_stability = 0.25
+		hidden_effect = {
+			EGY_Binah_destroyed = yes
+		}
 	}
 	
 	option = {

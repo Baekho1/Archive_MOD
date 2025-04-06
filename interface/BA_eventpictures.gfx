@@ -329,6 +329,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_akeshiro_rumi_child"
+		texturefile = "gfx/event_pictures/report_event_akeshiro_rumi_child.tga"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_sha_shintani_kai"
 		texturefile = "gfx/event_pictures/report_event_sha_shintani_kai.png"
 	}

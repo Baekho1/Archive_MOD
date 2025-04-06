@@ -1390,6 +1390,10 @@ ABY_posup_tt:0 "포섭한 파벌 §Y1§! 증가"
 ABY_flag_collapse_start:0 "연방정부 내전이 시작됨"
 ABY_flag_collapse_end:0 "연방정부 내전이 끝남"
 
+ABY_decision_cost_CP:0 "£GFX_texticon_BA_command_power §Y[?var:ABY_rebuild_cost_var]§!"
+ABY_decision_cost_CP_blocked: "£GFX_texticon_BA_command_power §R[?var:ABY_rebuild_cost_var]§!"
+ABY_decision_cost_CP_tooltip: "이 결정을 위해서는 $ABY_decision_cost_CP_blocked$이 필요합니다."
+
 ABY_every_month_tt:0 "매월:"
 ABY_70_days_tt:0 "70일 후:"
 ABY_30_days_tt:0 "30일 후:"

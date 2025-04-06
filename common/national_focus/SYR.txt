@@ -17,7 +17,7 @@ focus_tree = {
 		id = SYR_focus_dom_0
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 4
-		x = 0
+		x = -3
 		y = 0
 		completion_reward = {
 			add_ideas = SYR_general_strike
@@ -27,7 +27,7 @@ focus_tree = {
 		id = SYR_focus_0
 		icon = GFX_focus_chi_reach_out_to_france
 		cost = 2
-		x = -3
+		x = 0
 		y = 1
 		ai_will_do = {
 			base = 100
@@ -339,6 +339,14 @@ focus_tree = {
 			focus = SYR_focus_9
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			SYR_unity_up = yes
 		}
 	}
@@ -353,6 +361,14 @@ focus_tree = {
 			focus = SYR_focus_dem_0
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			if = {
 				limit = {
 					has_country_flag = SYR_landowner_in_gov
@@ -393,6 +409,14 @@ focus_tree = {
 			focus = SYR_focus_dem_4
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			if = {
 				limit = {
 					has_country_flag = SYR_landowner_in_gov
@@ -417,6 +441,14 @@ focus_tree = {
 			focus = SYR_focus_dem_0
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			custom_effect_tooltip = SYR_focus_dem_3_tt
 			if = {
 				limit = {
@@ -491,6 +523,14 @@ focus_tree = {
 			focus = SYR_focus_9
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			add_ideas = SYR_replublicanism
 			unlock_decision_tooltip = SYR_intervent_conflict
 		}
@@ -506,6 +546,14 @@ focus_tree = {
 			focus = SYR_focus_dem_5
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			swap_ideas = {
 				remove_idea = SYR_replublicanism
 				add_idea = SYR_replublicanism_1
@@ -525,6 +573,14 @@ focus_tree = {
 			focus = SYR_focus_dem_6
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			if = {
 				limit = {
 					has_country_flag = SYR_landowner_in_gov
@@ -550,6 +606,14 @@ focus_tree = {
 			focus = SYR_focus_dem_7
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			if = {
 				limit = {
 					has_country_flag = SYR_capitalist_in_gov
@@ -599,6 +663,14 @@ focus_tree = {
 				}
 				SYR_unity_up = yes
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			remove_mission = SYR_class_conflict
 		}
@@ -617,6 +689,14 @@ focus_tree = {
 			focus = SYR_focus_dem_7
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			add_war_support = 0.05
 		}
 	}
@@ -1061,6 +1141,14 @@ focus_tree = {
 			focus = SYR_focus_dem_1
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SYR_unity_up = yes
+				}
+			}
 			custom_effect_tooltip = SYR_focus_dem_8_tt
 			if = {
 				limit = {

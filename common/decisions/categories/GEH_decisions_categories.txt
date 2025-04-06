@@ -46,7 +46,10 @@ GEH_basking_in_the_brilliance_of_their_serenade = {
     }
     visible = {
         has_country_flag = GEH_start_focus_flag
-        NOT = { has_completed_focus = GEH_gehenna_leader }
+        NOT = {
+            has_completed_focus = GEH_gehenna_leader
+            has_completed_focus = GEH_three_congress_focus
+        }
     }
     visible_when_empty = yes
 }

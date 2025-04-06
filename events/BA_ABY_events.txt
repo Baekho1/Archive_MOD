@@ -3321,7 +3321,7 @@ country_event = {
 
 	option = {
 		name = ABY_new_event.95.a
-		ai_chance = { factor = 65 }
+		ai_chance = { factor = 100 }
 		every_country = {
 			limit = {
 				original_tag = HYA
@@ -3338,7 +3338,7 @@ country_event = {
 	
 	option = {
 		name = ABY_new_event.95.b
-		ai_chance = { factor = 35 }
+		ai_chance = { factor = 0 }
 	}
 }
 

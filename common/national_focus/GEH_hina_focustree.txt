@@ -18,6 +18,807 @@ focus_tree = {
     shared_focus = BA_new_world_technology
 	shared_focus = Eden_formation_of_alliance_treaty_organization
 
+
+### /선도부 문화/산업 중점 트리 시작 ###
+	
+	focus = {
+		id = GEH_luxembourg_problem
+		icon = GFX_goal_HEU_question_of_succession_law
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available = {
+		}
+
+		allow_branch = {
+			
+		}
+
+		x = 25
+		y = 0
+
+		completion_reward = {
+			remove_ideas = GEH_luxembourg_rules
+
+			add_dynamic_modifier = {
+				modifier = GEH_prefect_team_culture
+			}
+		}
+	}
+	
+	focus = {
+		id = GEH_internet_network_recovery
+		icon = GFX_focus_AFG_telegraph
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		cost = 3
+
+        ai_will_do = {
+            base = 100
+        }
+
+		available = {
+		}
+
+		allow_branch = {
+			
+		}
+
+		x = -4
+		y = 0
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GEH_centre_of_culture
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			IF = {
+				limit = { NOT = { has_tech = radio } }
+				set_technology = { radio = 1 }
+			}
+
+			country_event = { id = GEH.flavor_event.1 }
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_Perfect_team_zero_congress
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = -2
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GEH_centre_of_culture_idea
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_a
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_PER_national_bank
+		
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_b
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+			has_idea_with_trait = GEH_bauhaus
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = -1
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_bauhaus_idea
+			}
+			country_event = { id = GEH.flavor_event.6 }
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_b
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_RAJ_enrollment_of_dali_children
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_a
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+			has_idea_with_trait = GEH_degenerate_art
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 1
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_degenerate_art_idea
+			}
+			country_event = { id = GEH.flavor_event.7 }
+		}
+	}
+
+	focus = {
+		id = GEH_centre_of_culture_c
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_COU_open_the_music
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_b
+		}
+
+		mutually_exclusive = {
+			focus = GEH_centre_of_culture_a
+		}
+
+		available = {
+			has_idea_with_trait = GEH_composer
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 3
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEH_centre_of_culture_idea
+				add_idea = GEH_centre_of_culture_composer_idea
+			}
+			country_event = { id = GEH.flavor_event.8 }
+		}
+	}
+
+
+	focus = {
+		id = GEH_centre_of_culture_end
+		
+		relative_position_id = GEH_centre_of_culture
+
+		icon = GFX_focus_PER_shiraz_university
+
+		prerequisite = { 
+			focus = GEH_centre_of_culture_a
+			focus = GEH_centre_of_culture_b
+			focus = GEH_centre_of_culture_c
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 0
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_completed_focus = GEH_centre_of_culture_a }
+						NOT = { has_completed_focus = GEH_centre_of_culture_b }
+						NOT = { has_completed_focus = GEH_centre_of_culture_c }
+					}
+				}
+				custom_effect_tooltip = GEH_centre_of_culture_end_tt
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_a
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_bauhaus_idea
+					add_idea = GEH_centre_of_culture_bauhaus_end_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_b
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_degenerate_art_idea
+					add_idea = GEH_centre_of_culture_degenerate_art_end_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GEH_centre_of_culture_c
+				}
+				swap_ideas = {
+					remove_idea = GEH_centre_of_culture_composer_idea
+					add_idea = GEH_centre_of_culture_composer_end_idea
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_68_rev
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_Prefect_Team_muster
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		mutually_exclusive = {
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 2
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industrial_concern_cost_factor = 0.05
+				tooltip = industrial_concern_cost_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+
+		}
+	}
+
+	focus = {
+		id = GEH_68_rev_for_prefect_team
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_SWI_neutrality_on_the_move
+
+		prerequisite = { 
+			focus = GEH_68_rev
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 3
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			mio:GEH_maintenance_department_organization = {
+				add_mio_size = 2
+			}
+
+			add_tech_bonus = {
+				name = mystic_engineering_bonus
+				bonus = 1.0
+				uses = 2
+				category = mystic_engineering
+			}
+
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_cultural_exchange_education
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_NOR_approach_kretsen
+
+		prerequisite = { 
+			focus = GEH_68_rev
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		prerequisite = { 
+			focus = GEH_civil_rights_act
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 3.00
+
+		x = 5
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industry_repair_factor = 0.03
+				tooltip = industry_repair_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_industrial_concern_cost_factor = -0.05
+				tooltip = industrial_concern_cost_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_political_correctness
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_ARG_defense_and_democracy
+
+		prerequisite = { 
+			focus = GEH_cultural_exchange_education
+		}
+
+		available = {
+
+		}
+
+		mutually_exclusive = {
+			focus = GEH_local_autonomy
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 4
+		y = 3
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_start_efficiency_factor = 0.03
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			
+			division_template = { #선도부 자경단
+				name = "Prefect Team's Vigilante Crew" 
+				division_names_group = KIV_SEC_01
+				#template_counter = 68
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 0
+
+				regiments = { 
+					halo_militia = { x = 0 y = 0 }
+					halo_militia = { x = 0 y = 1 }
+					halo_militia = { x = 0 y = 2 }
+					halo_militia = { x = 1 y = 0 }
+					halo_militia = { x = 1 y = 1 }
+					halo_militia = { x = 1 y = 2 }
+				}
+				support = { 
+					halo_recon = { x = 0 y = 0 }
+				}
+			}
+			set_division_template_cap = {
+				division_template = "Prefect Team's Vigilante Crew"
+				division_cap = halo_militia_cap
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Prefect Team's Vigilante Crew\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_local_autonomy
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_DEN_civilian_preparations
+
+		prerequisite = { 
+			focus = GEH_cultural_exchange_education
+		}
+
+		available = {
+
+		}
+
+		mutually_exclusive = {
+			focus = GEH_political_correctness
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 6
+		y = 3
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.02
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_gradual_gehenna_culture
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_HEU_gehenna
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		mutually_exclusive = {
+			focus = GEH_68_rev
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 4
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_gradual_gehenna_culture_for_prefect_team
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_goal_GEH_flag
+
+		prerequisite = { 
+			focus = GEH_gradual_gehenna_culture
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 7
+		y = 2
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.02
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.03
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GEH_civil_rights_act
+		
+		relative_position_id = GEH_luxembourg_problem
+
+		icon = GFX_focus_generic_court
+
+		prerequisite = { 
+			focus = GEH_luxembourg_problem
+		}
+
+		prerequisite = { 
+			focus = GEH_internet_network_recovery
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = {  }
+
+		cost = 4.00
+
+		x = 6
+		y = 1
+
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GEH_prefect_team_culture_intro
+			add_to_variable = {
+				GEH_prefect_team_culture_industry_repair_factor = 0.05
+				tooltip = industry_repair_factor_tt
+			}
+
+			country_event = { id = GEH.flavor_event.9 }
+		}
+	}
+
+### 선도부 문화/산업 중점 트리 끝/ ###
+
+### /정치 루트 시작
+
 	focus = {
 		id = GEH_start_focus
 		icon = GFX_focus_rom_parties_end
@@ -42,6 +843,8 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+
+## /1차 선도부 총회
 
 	focus = {
 		id = GEH_zero_congress_focus
@@ -136,7 +939,9 @@ focus_tree = {
             country_event = { id = hina.6 }
 		}
 	}
-	# 2차 선도부 총회
+	
+## 1차 선도부 총회 끝/
+## /2차 선도부 총회
 	focus = {
 		id = GEH_second_congress_focus
 		icon = GFX_goal_Perfect_team_first_congress
@@ -655,7 +1460,7 @@ focus_tree = {
 		}
 	}
 
-#이오리 중점 시작
+# /이오리 중점 시작
 	focus = {
         id = GEH_iori_route_focus
         icon = GFX_goal_PrefectTeam_muster_Iori
@@ -950,9 +1755,9 @@ focus_tree = {
             factor = 1
         }
     }
-#이오리 중점 끝
+# 이오리 중점 끝/
 
-#히나 독재
+# /히나 독재
 	focus = {
 		id = GEH_hina_route_focus
 		icon = GFX_goal_GEH_shorasaki_hina
@@ -1346,9 +2151,9 @@ focus_tree = {
             factor = 1
         }
     }
-#히나 독재 끝
+# 히나 독재 끝/
 
-#아코 중점 시작
+# /아코 중점 시작
 
 	focus = {
 		id = GEH_ako_route_focus
@@ -1646,9 +2451,9 @@ focus_tree = {
 		}
 	}
 
-#아코 중점 끝
+# 아코 중점 끝/
 
-#노말 중점 시작
+# /노말 중점 시작
 
 	focus = {
 		id = GEH_main_route_focus
@@ -2072,9 +2877,9 @@ focus_tree = {
 		}
 	}
 
-#노말 중점 끝
+# 노말 중점 끝/
 
-#행정력 부족이나 이문화 유입쪽 시작
+# /행정력 부족이나 이문화 유입쪽 시작
 	focus = {
         id = GEH_additional_leadership_personnel_employment
         icon = GFX_goal_generic_propaganda
@@ -2158,9 +2963,9 @@ focus_tree = {
             factor = 1
         }
     }
-#끝
+# 행정력 부족이나 이문화 유입쪽 끝/
 
-#공용 중점 시작
+# /공용 중점 시작
 	focus = {
         id = GEH_stabilization_of_gehenna_nation
         icon = GFX_goal_generic_production2
@@ -2260,8 +3065,9 @@ focus_tree = {
             factor = 0
         }
     }
-#공용 중점 끝
-	# 3차 선도부 총회
+# 공용 중점 끝/
+## 2차 선도부 총회 끝/
+## /3차 선도부 총회
     focus = {
 		id = GEH_first_congress_focus
 		icon = GFX_goal_Perfect_team_first_congress
@@ -4142,8 +4948,10 @@ focus_tree = {
             add_to_variable = { GEH_CH_conscription_factor = 0.05 }
 		}
 	}
+## 3차 선도부 총회 끝/
 
-    #최종장
+## /최종장
+# /최종장 공용 시작
     focus = {
 		id = GEH_three_congress_focus
 		icon = GFX_goal_GEH_newgehenna
@@ -4222,172 +5030,6 @@ focus_tree = {
 		completion_reward = {
 			GEH_popular_support_up_effect = yes
 			custom_effect_tooltip = GEH_three_congress_focus_tt
-		}
-	}
-    focus = {
-		id = GEH_three_congress_focus_no_hina
-		icon = GFX_goal_GEH_sad_hina
-		cost = 5
-
-		relative_position_id = GEH_three_congress_focus
-		x = 3
-		y = 0
-		text_icon = GER_inner_circle_focus_style
-
-		mutually_exclusive = {
-			focus = GEH_three_congress_focus
-		}
-
-		allow_branch = {
-			OR = {
-				is_debug = yes
-				has_completed_focus = GEH_start_focus
-			}
-		}
-
-		available = {
-			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
-				limit = {
-					has_country_flag = GEH_three_congress_focus_no_hina_in_progress_flag
-				}
-				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
-				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = GER_inner_circle_focus_in_progress_tt
-						CHARACTER = GEH_dkzh
-						FLAG_DAYS = [?GEH_three_congress_focus_no_hina_in_progress_flag:days]
-					}
-					always = no 
-				}
-			}
-			else = { #NOT BEEN WORKED ON (Just Explain)
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = GEH_three_congress_focus_no_hina_can_only_be_completed_by_focus_tt
-						CHARACTER = GEH_dkzh
-						FOCUS = GEH_zero_congress_focus
-					}
-					always = no
-				}
-			}
-		}
-        
-		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 2
-				has_war = no
-			}
-			modifier = {
-				factor = 0.5
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { has_country_flag = hina_assembly_h_flag }
-				custom_effect_tooltip = GEH_three_congress_focus_no_hina_htt
-			}
-			else_if = {
-				limit = { has_country_flag = hina_assembly_a_flag }
-				custom_effect_tooltip = GEH_three_congress_focus_no_hina_att
-			}
-			else_if = {
-				limit = { has_country_flag = hina_assembly_c_flag }
-				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ctt
-			}
-			else_if = {
-				limit = { has_country_flag = hina_assembly_normal_flag }
-				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ntt
-			}
-			else = {
-				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ftt
-				if = { 
-					limit = {
-						is_subject = no
-						any_other_country = {
-							OR = {
-								has_country_flag = GEH_unified_gehenna_flag
-								original_tag = GEM
-							}
-						}
-					}
-					if = {
-						limit = {
-							any_other_country = {
-								original_tag = GEM
-							}
-						}
-						random_country = {
-							limit = { original_tag = GEM }
-							annex_country = {
-								target = ROOT
-								transfer_troops = yes
-							}
-						}
-					}
-					else = {
-						random_country = {
-							limit = { has_country_flag = GEH_unified_gehenna_flag }
-							annex_country = {
-								target = ROOT
-								transfer_troops = yes
-							}
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						is_subject = no
-						has_capitulated = no
-					}
-					every_enemy_country = {
-						set_country_flag = GEH_create_dynamic_country_enemy_flag
-					}
-					create_dynamic_country = {
-						original_tag = GEH
-						set_cosmetic_tag = gehenna_unification_cosmetic
-						hidden_effect = {
-							add_popularity = {
-								ideology = neutrality
-								popularity = 1
-							}
-							set_politics = {
-								ruling_party = neutrality
-							}
-							add_ideas = BA_student_conscription_idea
-							kill_ideology_leader = neutrality
-							kill_ideology_leader = democratic
-							kill_ideology_leader = fascism
-							kill_ideology_leader = communism
-						}
-						annex_country = {
-							target = ROOT
-							transfer_troops = yes
-						}
-						every_country = {
-							limit = { has_country_flag = GEH_create_dynamic_country_enemy_flag }
-							declare_war_on = {
-								target = PREV
-								type = annex_everything
-							}
-							clr_country_flag = GEH_create_dynamic_country_enemy_flag
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						annex_country = {
-							target = ROOT
-							transfer_troops = yes
-						}
-					}
-				}
-			}
 		}
 	}
     focus = {
@@ -4850,6 +5492,8 @@ focus_tree = {
 			unlock_decision_category_tooltip = GEH_trinity_integration
 		}
 	}
+
+
     focus = {
 		id = GEH_last_focus_3
 		icon = GFX_goal_GEH_bureaucracy
@@ -4860,9 +5504,6 @@ focus_tree = {
 		y = 2
 
 		available = {
-            NOT = {
-			    has_country_flag = TRM_start_bop_flag
-            }
 		}
         prerequisite = {
             focus = GEH_three_congress_focus
@@ -4883,18 +5524,28 @@ focus_tree = {
 			if = {
 				limit = { has_country_flag = hina_assembly_h_flag }
 				set_country_flag = hina_assembly_h_next_flag
+				custom_effect_tooltip = GEH_last_focus_3_h_tt
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_a_flag }
 				set_country_flag = hina_assembly_a_next_flag
+				custom_effect_tooltip = GEH_last_focus_3_a_tt
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_c_flag }
 				set_country_flag = hina_assembly_c_next_flag
+				custom_effect_tooltip = GEH_last_focus_3_c_tt
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_normal_flag }
 				set_country_flag = hina_assembly_normal_next_flag
+				custom_effect_tooltip = GEH_last_focus_3_n_tt
+			}
+
+			#이벤트 검증
+			if = {
+				limit = { NOT = { has_country_flag = hina_event_8_flag } }
+				country_event = { id = hina.8 days = 10 }
 			}
 		}
 	}
@@ -4946,6 +5597,8 @@ focus_tree = {
 			custom_effect_tooltip = GEH_last_focus_effect_tt2
 		}
 	}
+# 최종장 공용 끝/
+# /히나 독재 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_h_rout
 		icon = GFX_focus_GEH_last_focus_effect
@@ -4991,6 +5644,9 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+	
+# 히나 독재 최종장 끝/
+# /아코 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_a_rout
 		icon = GFX_focus_GEH_last_focus_effect
@@ -5036,6 +5692,8 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+# 아코 중점 최종장 끝/
+# /이오리 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_c_rout
 		icon = GFX_focus_GEH_last_focus_effect
@@ -5082,6 +5740,129 @@ focus_tree = {
 		}
 	}
     focus = {
+		id = GEH_gradual_dismantling_of_conscription_system
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_effect_c_rout
+		x = -1
+		y = 1
+
+		available = {
+		}
+        prerequisite = {
+            focus = GEH_last_focus_effect_c_rout
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+    focus = {
+		id = GEH_dismantling_of_militarized_system
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_effect_c_rout
+		x = 1
+		y = 1
+
+		available = {
+		}
+        prerequisite = {
+            focus = GEH_last_focus_effect_c_rout
+        }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			remove_ideas = GEH_widespread_propaganda
+		}
+	}
+    focus = {
+		id = GEH_indefinite_extension_of_emergency_powers
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_effect_c_rout
+		x = 2
+		y = 2
+
+		available = {
+		}
+        prerequisite = {
+            focus = GEH_gradual_dismantling_of_conscription_system
+            focus = GEH_dismantling_of_militarized_system
+        }
+		mutually_exclusive = {
+			focus = GEH_investigation_of_shirokami_ioris_war_crimes
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+    focus = {
+		id = GEH_investigation_of_shirokami_ioris_war_crimes
+		icon = GFX_focus_GEH_last_focus_effect
+		cost = 5
+
+		relative_position_id = GEH_last_focus_effect_c_rout
+		x = -2
+		y = 2
+
+		available = {
+		}
+        prerequisite = {
+            focus = GEH_gradual_dismantling_of_conscription_system
+            focus = GEH_dismantling_of_militarized_system
+        }
+		mutually_exclusive = {
+			focus = GEH_indefinite_extension_of_emergency_powers
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+		}
+	}
+# 이오리 중점 최종장 끝/
+# /노말 중점 최종장 시작
+    focus = {
 		id = GEH_last_focus_effect_normal_rout
 		icon = GFX_focus_GEH_last_focus_effect
 		cost = 5
@@ -5126,801 +5907,176 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-
-	### 선도부 문화/산업 중점 트리 ###
-	
-	focus = {
-		id = GEH_luxembourg_problem
-		icon = GFX_goal_HEU_question_of_succession_law
-		cost = 3
-
-        ai_will_do = {
-            base = 100
-        }
-
-		available = {
-		}
-
-		allow_branch = {
-			
-		}
-
-		x = 25
-		y = 0
-
-		completion_reward = {
-			remove_ideas = GEH_luxembourg_rules
-
-			add_dynamic_modifier = {
-				modifier = GEH_prefect_team_culture
-			}
-		}
-	}
-	
-	focus = {
-		id = GEH_internet_network_recovery
-		icon = GFX_focus_AFG_telegraph
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		cost = 3
-
-        ai_will_do = {
-            base = 100
-        }
-
-		available = {
-		}
-
-		allow_branch = {
-			
-		}
-
-		x = -4
-		y = 0
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = GEH_centre_of_culture
-				bonus = 0.5
-				uses = 1
-				category = electronics
-			}
-			IF = {
-				limit = { NOT = { has_tech = radio } }
-				set_technology = { radio = 1 }
-			}
-
-			country_event = { id = GEH.flavor_event.1 }
-		}
-	}
-
-	focus = {
-		id = GEH_centre_of_culture
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_goal_Perfect_team_zero_congress
-
-		prerequisite = { 
-			focus = GEH_luxembourg_problem
-		}
-
-		prerequisite = { 
-			focus = GEH_internet_network_recovery
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 3.00
-
-		x = -2
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_ideas = GEH_centre_of_culture_idea
-		}
-	}
-
-	focus = {
-		id = GEH_centre_of_culture_a
-		
-		relative_position_id = GEH_centre_of_culture
-
-		icon = GFX_focus_PER_national_bank
-		
-		prerequisite = { 
-			focus = GEH_centre_of_culture
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_b
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_c
-		}
-
-		available = {
-			has_idea_with_trait = GEH_bauhaus
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 3.00
-
-		x = -1
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = GEH_centre_of_culture_idea
-				add_idea = GEH_centre_of_culture_bauhaus_idea
-			}
-			country_event = { id = GEH.flavor_event.6 }
-		}
-	}
-
-	focus = {
-		id = GEH_centre_of_culture_b
-		
-		relative_position_id = GEH_centre_of_culture
-
-		icon = GFX_focus_RAJ_enrollment_of_dali_children
-
-		prerequisite = { 
-			focus = GEH_centre_of_culture
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_a
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_c
-		}
-
-		available = {
-			has_idea_with_trait = GEH_degenerate_art
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 3.00
-
-		x = 1
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = GEH_centre_of_culture_idea
-				add_idea = GEH_centre_of_culture_degenerate_art_idea
-			}
-			country_event = { id = GEH.flavor_event.7 }
-		}
-	}
-
-	focus = {
-		id = GEH_centre_of_culture_c
-		
-		relative_position_id = GEH_centre_of_culture
-
-		icon = GFX_focus_COU_open_the_music
-
-		prerequisite = { 
-			focus = GEH_centre_of_culture
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_b
-		}
-
-		mutually_exclusive = {
-			focus = GEH_centre_of_culture_a
-		}
-
-		available = {
-			has_idea_with_trait = GEH_composer
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 3.00
-
+# 노말 중점 최종장 끝/
+## 최종장 끝/
+
+## /히나 탈주 중점 시작
+    focus = {
+		id = GEH_three_congress_focus_no_hina
+		icon = GFX_goal_GEH_sad_hina
+		cost = 5
+
+		relative_position_id = GEH_three_congress_focus
 		x = 3
-		y = 1
+		y = 0
+		text_icon = GER_inner_circle_focus_style
 
-		select_effect = {
-
+		mutually_exclusive = {
+			focus = GEH_three_congress_focus
 		}
 
-		bypass = {
-
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = GEH_centre_of_culture_idea
-				add_idea = GEH_centre_of_culture_composer_idea
+		allow_branch = {
+			OR = {
+				is_debug = yes
+				has_completed_focus = GEH_start_focus
 			}
-			country_event = { id = GEH.flavor_event.8 }
-		}
-	}
-
-
-	focus = {
-		id = GEH_centre_of_culture_end
-		
-		relative_position_id = GEH_centre_of_culture
-
-		icon = GFX_focus_PER_shiraz_university
-
-		prerequisite = { 
-			focus = GEH_centre_of_culture_a
-			focus = GEH_centre_of_culture_b
-			focus = GEH_centre_of_culture_c
 		}
 
 		available = {
-
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = GEH_three_congress_focus_no_hina_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = GEH_dkzh
+						FLAG_DAYS = [?GEH_three_congress_focus_no_hina_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GEH_three_congress_focus_no_hina_can_only_be_completed_by_focus_tt
+						CHARACTER = GEH_dkzh
+						FOCUS = GEH_zero_congress_focus
+					}
+					always = no
+				}
+			}
 		}
-
+        
 		ai_will_do = {
-			factor = 10
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
 		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 0
-		y = 2
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
 		completion_reward = {
 			if = {
-				limit = {
-					AND = {
-						NOT = { has_completed_focus = GEH_centre_of_culture_a }
-						NOT = { has_completed_focus = GEH_centre_of_culture_b }
-						NOT = { has_completed_focus = GEH_centre_of_culture_c }
+				limit = { has_country_flag = hina_assembly_h_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_htt
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_a_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_att
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_c_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ctt
+			}
+			else_if = {
+				limit = { has_country_flag = hina_assembly_normal_flag }
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ntt
+			}
+			else = {
+				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ftt
+				if = { 
+					limit = {
+						is_subject = no
+						any_other_country = {
+							OR = {
+								has_country_flag = GEH_unified_gehenna_flag
+								original_tag = GEM
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_other_country = {
+								original_tag = GEM
+							}
+						}
+						random_country = {
+							limit = { original_tag = GEM }
+							annex_country = {
+								target = ROOT
+								transfer_troops = yes
+							}
+						}
+					}
+					else = {
+						random_country = {
+							limit = { has_country_flag = GEH_unified_gehenna_flag }
+							annex_country = {
+								target = ROOT
+								transfer_troops = yes
+							}
+						}
 					}
 				}
-				custom_effect_tooltip = GEH_centre_of_culture_end_tt
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = GEH_centre_of_culture_a
+				else_if = {
+					limit = {
+						is_subject = no
+						has_capitulated = no
+					}
+					every_enemy_country = {
+						set_country_flag = GEH_create_dynamic_country_enemy_flag
+					}
+					create_dynamic_country = {
+						original_tag = GEH
+						set_cosmetic_tag = gehenna_unification_cosmetic
+						hidden_effect = {
+							add_popularity = {
+								ideology = neutrality
+								popularity = 1
+							}
+							set_politics = {
+								ruling_party = neutrality
+							}
+							add_ideas = BA_student_conscription_idea
+							kill_ideology_leader = neutrality
+							kill_ideology_leader = democratic
+							kill_ideology_leader = fascism
+							kill_ideology_leader = communism
+						}
+						annex_country = {
+							target = ROOT
+							transfer_troops = yes
+						}
+						every_country = {
+							limit = { has_country_flag = GEH_create_dynamic_country_enemy_flag }
+							declare_war_on = {
+								target = PREV
+								type = annex_everything
+							}
+							clr_country_flag = GEH_create_dynamic_country_enemy_flag
+						}
+					}
 				}
-				swap_ideas = {
-					remove_idea = GEH_centre_of_culture_bauhaus_idea
-					add_idea = GEH_centre_of_culture_bauhaus_end_idea
-				}
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = GEH_centre_of_culture_b
-				}
-				swap_ideas = {
-					remove_idea = GEH_centre_of_culture_degenerate_art_idea
-					add_idea = GEH_centre_of_culture_degenerate_art_end_idea
-				}
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = GEH_centre_of_culture_c
-				}
-				swap_ideas = {
-					remove_idea = GEH_centre_of_culture_composer_idea
-					add_idea = GEH_centre_of_culture_composer_end_idea
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_68_rev
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_goal_Prefect_Team_muster
-
-		prerequisite = { 
-			focus = GEH_luxembourg_problem
-		}
-
-		prerequisite = { 
-			focus = GEH_internet_network_recovery
-		}
-
-		mutually_exclusive = {
-			focus = GEH_gradual_gehenna_culture
-		}
-
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 2
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_industrial_concern_cost_factor = 0.05
-				tooltip = industrial_concern_cost_factor_tt
-			}
-			add_to_variable = {
-				GEH_prefect_team_culture_consumer_goods_factor = -0.1
-				tooltip = consumer_goods_factor_tt
-			}
-
-		}
-	}
-
-	focus = {
-		id = GEH_68_rev_for_prefect_team
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_focus_SWI_neutrality_on_the_move
-
-		prerequisite = { 
-			focus = GEH_68_rev
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 3
-		y = 2
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			mio:GEH_maintenance_department_organization = {
-				add_mio_size = 2
-			}
-
-			add_tech_bonus = {
-				name = mystic_engineering_bonus
-				bonus = 1.0
-				uses = 2
-				category = mystic_engineering
-			}
-
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
-				tooltip = production_speed_industrial_complex_factor_tt
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_cultural_exchange_education
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_focus_NOR_approach_kretsen
-
-		prerequisite = { 
-			focus = GEH_68_rev
-			focus = GEH_gradual_gehenna_culture
-		}
-
-		prerequisite = { 
-			focus = GEH_civil_rights_act
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 3.00
-
-		x = 5
-		y = 2
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_industry_repair_factor = 0.03
-				tooltip = industry_repair_factor_tt
-			}
-			add_to_variable = {
-				GEH_prefect_team_culture_industrial_concern_cost_factor = -0.05
-				tooltip = industrial_concern_cost_factor_tt
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_political_correctness
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_focus_ARG_defense_and_democracy
-
-		prerequisite = { 
-			focus = GEH_cultural_exchange_education
-		}
-
-		available = {
-
-		}
-
-		mutually_exclusive = {
-			focus = GEH_local_autonomy
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 4
-		y = 3
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_production_factory_start_efficiency_factor = 0.03
-				tooltip = production_factory_start_efficiency_factor_tt
-			}
-			
-			division_template = { #선도부 자경단
-				name = "Prefect Team's Vigilante Crew" 
-				division_names_group = KIV_SEC_01
-				#template_counter = 68
-				is_locked = yes
-				force_allow_recruiting = yes
-				division_cap = 0
-
-				regiments = { 
-					halo_militia = { x = 0 y = 0 }
-					halo_militia = { x = 0 y = 1 }
-					halo_militia = { x = 0 y = 2 }
-					halo_militia = { x = 1 y = 0 }
-					halo_militia = { x = 1 y = 1 }
-					halo_militia = { x = 1 y = 2 }
-				}
-				support = { 
-					halo_recon = { x = 0 y = 0 }
-				}
-			}
-			set_division_template_cap = {
-				division_template = "Prefect Team's Vigilante Crew"
-				division_cap = halo_militia_cap
-			}
-
-			capital_scope = {
-				create_unit = {
-					division = "division_template = \"Prefect Team's Vigilante Crew\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 3
+				else_if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						annex_country = {
+							target = ROOT
+							transfer_troops = yes
+						}
+					}
 				}
 			}
 		}
 	}
-
-	focus = {
-		id = GEH_local_autonomy
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_focus_DEN_civilian_preparations
-
-		prerequisite = { 
-			focus = GEH_cultural_exchange_education
-		}
-
-		available = {
-
-		}
-
-		mutually_exclusive = {
-			focus = GEH_political_correctness
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 6
-		y = 3
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.02
-				tooltip = production_factory_max_efficiency_factor_tt
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}	
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_gradual_gehenna_culture
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_goal_HEU_gehenna
-
-		prerequisite = { 
-			focus = GEH_luxembourg_problem
-		}
-
-		prerequisite = { 
-			focus = GEH_internet_network_recovery
-		}
-
-		mutually_exclusive = {
-			focus = GEH_68_rev
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 4
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
-			}
-			add_to_variable = {
-				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.03
-				tooltip = production_speed_industrial_complex_factor_tt
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_gradual_gehenna_culture_for_prefect_team
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_goal_GEH_flag
-
-		prerequisite = { 
-			focus = GEH_gradual_gehenna_culture
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 7
-		y = 2
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.05
-
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_production_speed_industrial_complex_factor = 0.02
-				tooltip = production_speed_industrial_complex_factor_tt
-			}
-			add_to_variable = {
-				GEH_prefect_team_culture_production_factory_max_efficiency_factor = 0.03
-				tooltip = production_factory_max_efficiency_factor_tt
-			}
-		}
-	}
-
-	focus = {
-		id = GEH_civil_rights_act
-		
-		relative_position_id = GEH_luxembourg_problem
-
-		icon = GFX_focus_generic_court
-
-		prerequisite = { 
-			focus = GEH_luxembourg_problem
-		}
-
-		prerequisite = { 
-			focus = GEH_internet_network_recovery
-		}
-
-		available = {
-
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		search_filters = {  }
-
-		cost = 4.00
-
-		x = 6
-		y = 1
-
-		select_effect = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GEH_prefect_team_culture_intro
-			add_to_variable = {
-				GEH_prefect_team_culture_industry_repair_factor = 0.05
-				tooltip = industry_repair_factor_tt
-			}
-
-			country_event = { id = GEH.flavor_event.9 }
-		}
-	}
-
+## 히나 탈주 중점 끝/
+### 정치 루트 끝/
 }

@@ -1137,7 +1137,7 @@ characters={
 			available = {
 				#has_completed_focus = EGY_victor_taits_legacy
 				NOT = {
-					has_war_with = CAN
+					has_completed_focus = EGY_1935_revolution_success
 				}
 			}
 			traits = {

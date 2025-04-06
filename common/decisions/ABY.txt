@@ -20031,8 +20031,9 @@ ABY_descision_category_abydos_highschool = {
 			}
 			controls_state = 9
         }
-
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20092,9 +20093,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 9
+			9 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20125,7 +20136,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 74
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20185,9 +20198,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 74
+			74 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20218,7 +20241,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 72
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20278,9 +20303,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 72
+			72 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20311,7 +20346,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 75
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20371,9 +20408,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 75
+			75 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20404,7 +20451,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 972
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20464,9 +20513,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 972
+			972 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20497,7 +20556,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 1021
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20557,9 +20618,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 1021
+			1021 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20590,7 +20661,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 4
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20650,9 +20723,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 4
+			4 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20683,7 +20766,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 152
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20743,9 +20828,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 152
+			152 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20776,7 +20871,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 153
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20836,9 +20933,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 153
+			153 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20869,7 +20976,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 976
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -20929,9 +21038,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 976
+			976 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -20962,7 +21081,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 848
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -21022,9 +21143,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 848
+			848 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 
@@ -21055,7 +21186,9 @@ ABY_descision_category_abydos_highschool = {
 			controls_state = 975
         }
 
-		cost = ABY_industry_cost_var
+		modifier = {
+			civilian_factory_use = 15
+		}
 
 		days_remove = 70
 
@@ -21115,9 +21248,19 @@ ABY_descision_category_abydos_highschool = {
 				tooltip = ABY_tt_rebuild_full
 			}
 			controls_state = 975
+			975 = {
+				is_core_of = ABY
+			}
         }
+		
+		custom_cost_trigger = {
+		 	command_power > 34
+		}
 
-		cost = ABY_rebuild_cost_var
+		custom_cost_text = ABY_decision_cost_CP 
+		complete_effect = {
+			add_command_power = -35
+		}
 
 		days_remove = 70
 

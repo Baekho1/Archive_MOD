@@ -275,14 +275,11 @@ ABY_69_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			69 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -292,47 +289,12 @@ ABY_69_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			69 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_69_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -482,14 +444,11 @@ ABY_9_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			9 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -499,47 +458,12 @@ ABY_9_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			9 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_9_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -689,14 +613,11 @@ ABY_74_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			74 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -706,47 +627,12 @@ ABY_74_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			74 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_74_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -896,14 +782,11 @@ ABY_72_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			72 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -913,47 +796,12 @@ ABY_72_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			72 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_72_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -1103,14 +951,11 @@ ABY_75_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			75 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -1120,47 +965,12 @@ ABY_75_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			75 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_75_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -1310,14 +1120,11 @@ ABY_972_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			972 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -1327,47 +1134,12 @@ ABY_972_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			972 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_972_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -1517,14 +1289,11 @@ ABY_1021_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			1021 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -1534,47 +1303,12 @@ ABY_1021_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			1021 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_1021_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -1724,14 +1458,11 @@ ABY_975_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			975 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -1741,47 +1472,12 @@ ABY_975_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			975 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_975_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -1931,14 +1627,11 @@ ABY_4_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			4 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -1948,47 +1641,12 @@ ABY_4_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			4 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_4_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -2138,14 +1796,11 @@ ABY_976_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			976 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -2155,47 +1810,12 @@ ABY_976_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			976 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_976_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -2345,14 +1965,11 @@ ABY_152_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			152 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -2362,47 +1979,12 @@ ABY_152_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			152 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_152_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -2552,14 +2134,11 @@ ABY_153_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			153 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -2569,47 +2148,12 @@ ABY_153_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			153 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_153_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -2759,14 +2303,11 @@ ABY_848_rebuild_effect = {
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
 			848 = {
-				add_core_of = ABY
-			}
-			add_to_variable = {ABY_var_conscription_factor = -0.05}
-			add_to_variable = {ABY_var_surrender_limit = -0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_02
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_1
+				}
+				add_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 		}
@@ -2776,47 +2317,12 @@ ABY_848_rebuild_effect = {
 			}
 			add_to_variable = { ABY_selected_state:ABY_rebuild_var = 1 }
 			add_to_variable = { ABY_rebuild_progress_var = 1 }
-			add_to_variable = {ABY_var_conscription_factor = 0.05}
-			add_to_variable = {ABY_var_surrender_limit = 0.05}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = ABY_idea_two_00
-					add_idea = ABY_idea_two_03
+			848 = {
+				remove_dynamic_modifier = {
+					modifier = ABY_modifier_rebuild_2
 				}
 			}
 			set_country_flag = ABY_flag_848_complete
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ABY_flag_pro_halo
-					}
-				}
-				custom_effect_tooltip = kivotos_halo_add1_tt
-				hidden_effect = {
-					set_variable = { BA_halo_infantry_cap_edit_var = 1 }
-					BA_halo_infantry_cap_edit_effect = yes
-				}
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Infantry Division\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = ABY_flag_pro_halo
-				}
-				custom_effect_tooltip = kivotos_halo_special_forces_add1_tt
-				set_variable = { BA_halo_special_forces_cap_edit_var = 1 }
-				BA_halo_special_forces_cap_edit_effect = yes
-				random_owned_state = {
-					create_unit = {
-						division = "name = \"Halo Special Forces\" division_template = \"Halo Special Forces\" start_experience_factor = 0.3 start_equipment_factor = 1"
-						owner = ABY
-					}
-				}
-			}
 		}
 		else_if = {
 			limit = {
