@@ -1410,10 +1410,19 @@ country_event = {
 					ideology = marxism
 				}
 			}
-			TRN_tpdldk = { set_character_flag = TRN_fake_death_flag }
 			add_to_variable = { TRM_sanctus_popularity = -30 }
 			TRM_internal_factions_popularity_change = yes
 			country_event = { id = TRM_event.71 hours = 480 }
+			remove_trait = {
+				character = TRN_tpdldk
+				slot = political_advisor
+				trait = b_dPdjsdmleocjstk
+			}
+		}
+		add_trait = {
+			character = TRN_tpdldk
+			slot = political_advisor
+			trait = TRN_Hurt_Seia
 		}
 	}
 }
@@ -6713,6 +6722,18 @@ country_event = {
 				}
 			}
 		}
+		add_trait = {
+			character = TRN_tpdldk
+			slot = political_advisor
+			trait = b_dPdjsdmleocjstk
+		}
+		hidden_effect = {
+			remove_trait = {
+				character = TRN_tpdldk
+				slot = political_advisor
+				trait = TRN_Hurt_Seia
+			}
+		}
 	}
 	
 	option = { #
@@ -6733,6 +6754,7 @@ country_event = {
 					check_variable = { TRM_internal_factions_slot_three_var = 1 }
 				}
 			}
+			TRN_tpdldk = { clr_character_flag = TRN_fake_death_flag }
 			custom_effect_tooltip = TRM_sanctus_loyalty_5_tt
 			add_to_variable = { TRM_sanctus_loyalty = 5 }
 			TRM_internal_factions_loyalty_change = yes
@@ -6769,6 +6791,19 @@ country_event = {
 			}
 		}
 		add_stability = -0.02
+
+		add_trait = {
+			character = TRN_tpdldk
+			slot = political_advisor
+			trait = b_dPdjsdmleocjstk
+		}
+		hidden_effect = {
+			remove_trait = {
+				character = TRN_tpdldk
+				slot = political_advisor
+				trait = TRN_Hurt_Seia
+			}
+		}
 	}
 }
 
@@ -8781,6 +8816,32 @@ country_event = { # 파테르 분파 내부의 불충
 		custom_effect_tooltip = TRM_pater_union_tt
 		set_variable = { TRM_internal_factions_remove_var = 0 } #지울 세력 코드
 		TRM_internal_factions_slot_remove = yes #지우는 스크립티드이펙트
+		
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		hidden_effect = {
+			add_country_leader_role = {
+				character = TRN_alzk
+				promote_leader = yes
+				country_leader = {
+					ideology = tea_party_fascism_ideology
+					expire = "1978.1.1.1"
+					traits = { 
+						TRN_mika_trait_1
+						TRM_supreme_commander
+					}
+					desc = TRN_alzk_leader_desc
+				}
+			}
+			add_country_leader_role = {
+				character = TRN_empty
+				promote_leader = yes
+				country_leader = {
+					ideology = tea_party_ideology
+					expire = "1978.1.1.1"
+					traits = {  }
+				}
+			}
+		}
     }
 }
 unit_leader_event = { # 기사단국 선포
@@ -9093,7 +9154,7 @@ country_event = { # 여성 인권에 대한 논의
     }
 }
 
-country_event = { # 
+country_event = { # 독일 문화의 운명
 	id = trinity.31
 	title = trinity.31.t
 	desc = trinity.31.desc
@@ -9122,11 +9183,11 @@ country_event = { #
 	
 }
 
-country_event = { # '생존권' 개념
+country_event = { # 젋은 길잡이
 	id = trinity.32
 	title = trinity.32.t
 	desc = trinity.32.desc
-	picture = GFX_report_event_SWE_summer_government
+	picture = GFX_report_event_BRA_departamento_femininio
 	
 	is_triggered_only = yes
     fire_only_once = no
@@ -9136,16 +9197,7 @@ country_event = { # '생존권' 개념
 		ai_chance = { 
 			base = 10
 		}
-		add_popularity = { ideology = fascism popularity = 0.03 }
-		TRM_bop_very_low_decrease_effect = yes
-    }
-
-	option = {
-		name = trinity.32.b
-		ai_chance = { 
-			base = 2
-		}
-		TRM_bop_very_low_increase_effect = yes
+		add_political_power = 25
     }
 }
 
@@ -9177,6 +9229,26 @@ country_event = { # '호스트 선출제'
 			base = 0
 		}
 		custom_effect_tooltip = TRN_sorry_Nagisa_branch_is_NOT_work
+    }
+}
+
+country_event = { # 학원경제개발부 부장은 누구로 할까요
+	id = trinity.34
+	title = trinity.34.t
+	desc = trinity.34.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { # 우이
+		name = trinity.34.a
+
+    }
+
+	option = { # 독일인 (미정)
+		name = trinity.34.b
+
     }
 }
 
@@ -9607,17 +9679,17 @@ unit_leader_event = { # 침울한 하늘 아래에서
 		
 	}
 }
-country_event = { # 침울한 하늘 아래에서
+country_event = { # 트리니티 버전 나치 유겐트
 	id = trnfla.18
 	title = trnfla.18.t
 	desc = trnfla.18.desc
-	picture = GFX_event_teaparty
+	picture = GFX_report_event_BRA_departamento_femininio
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trnfla.18.a 
-		
+		add_political_power = 25
 	}
 }

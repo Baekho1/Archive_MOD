@@ -175,19 +175,6 @@ focus_tree = {
 				remove_idea = TRM_safe_trinity
 				add_idea = TRM_great_depression
 			}
-			hidden_effect = {
-				add_trait = {
-					character = TRN_tpdldk
-					slot = political_advisor
-					trait = TRN_Hurt_Seia
-				}
-				remove_trait = {
-					character = TRN_tpdldk
-					slot = political_advisor
-					trait = b_dPdjsdmleocjstk
-				}
-				activate_advisor = TRN_Seia_political_advisor
-			}
 		}
 		relative_position_id = TRM_newfocus_4
 		x = 0
@@ -454,6 +441,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
+			TRN_tpdldk = { set_character_flag = TRN_fake_death_flag }
 			add_to_variable = {
 				global.NSD_country_collapse_decisions_value = -10
 				tooltip = NSD_country_collapse_value_tt
@@ -2220,6 +2208,8 @@ focus_tree = {
 
 			hidden_effect = {
 				country_event = { id = TRM_event.16 } # 미카의 집권
+				TRN_tpdldk = { set_character_flag = TRN_fake_death_flag } # 세이아 숨기는 플래그
+
 			}
 		}
 
@@ -6980,34 +6970,12 @@ focus_tree = {
 			
 			effect_tooltip = { country_event = trinity.20 }
 			hidden_effect = {
+				set_country_leader_ideology = pater_nazism
 				TRN_alzk = { 
 					unit_leader_event = trinity.20 
 				}
-				add_country_leader_role = {
-					character = TRN_alzk
-					promote_leader = yes
-					country_leader = {
-						ideology = pater_nazism
-						expire = "1978.1.1.1"
-						traits = { 
-							TRN_mika_trait_1
-							TRM_supreme_commander
-						}
-						desc = TRN_alzk_leader_desc
-					}
-				}
-				add_country_leader_role = {
-					character = TRN_empty
-					promote_leader = yes
-					country_leader = {
-						ideology = tea_party_ideology
-						expire = "1978.1.1.1"
-						traits = {  }
-					}
-				}
 			}
 			hidden_effect = {
-				set_politics = { ruling_party = fascism elections_allowed = no }
 				set_party_name = {
 	    			ideology = fascism
     				long_name = MIKA_FASCISM_LONG
@@ -7069,10 +7037,8 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			country_event = trinity.27
 			custom_effect_tooltip = TRN_cult_of_Mika_tt
-			# 그리고 스카우트 같은 조직이 설립 되었다는 사건 하나?
-			# -> 위 사건의 효과 add_political_power = 25
 			hidden_effect = {
-				
+				country_event = { id = trinity.32 days = 30 }
 			}
 		}
 	}
@@ -7100,6 +7066,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = TRN_new_trinity_culture_tt
+			hidden_effect = {
+
+			}
 		}
 	}
 	
@@ -7215,13 +7184,13 @@ focus_tree = {
 
 	focus = {
 		id = TRN_improving_academy_industry
-		icon = GFX_focus_TRN_improving_academy_industry
+		icon = GFX_focus_generic_low_cost_housing
 		prerequisite = { 
 			focus = TRN_reconstruction_of_collapsed_industry 
 			focus = TRN_Justice_Task_Force_on_leash
 			focus = TRN_necessary_revenge
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = TRN_reconstruction_of_collapsed_industry
 		cost = 5
@@ -7236,16 +7205,21 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = trnfla.5 days = 14 }
 			}
+			add_timed_idea = {
+				idea = TRN_rebuild_ns
+				days = 365
+			}
+			add_political_power = 50
 
 		}
 	}
 
 	focus = {
 		id = TRN_ministry_of_industrial_development
-		icon = GFX_focus_DEN_limited_regulations
+		icon = GFX_focus_TRN_improving_academy_industry
 		prerequisite = { focus = TRN_improving_academy_industry }
 		prerequisite = { focus = TRN_declare_trinity_order_state }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = TRN_improving_academy_industry
 		cost = 5
@@ -7257,6 +7231,86 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = TRM_industries_dynamic
+			}
+			unlock_decision_tooltip = {
+				decision = TRN_Industrial_Regions
+				show_effect_tooltip = yes
+				show_modifiers = no
+			}
+			hidden_effect = {
+				activate_targeted_decision = { target = 63 decision = TRN_Industrial_Regions }
+				activate_targeted_decision = { target = 68 decision = TRN_Industrial_Regions }
+				activate_targeted_decision = { target = 66 decision = TRN_Industrial_Regions }
+			}
+		}
+	}
+
+	focus = {
+		id = TRN_expanded_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		prerequisite = { focus = TRN_ministry_of_industrial_development }
+		x = 1
+		y = 1
+		relative_position_id = TRN_ministry_of_industrial_development
+		cost = 5
+
+		available = {
+		}
+
+		ai_will_do = {
+
+		}
+		mutually_exclusive = { focus = TRN_planned_economy }
+		completion_reward = {
+			custom_effect_tooltip = TRM_industry_change
+			add_to_variable = {
+				TRM_industries_dynamic_production_lack_of_resource_penalty_factor = -0.05
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_production_speed_industrial_complex_factor = 0.05
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_production_speed_buildings_factor = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TRN_planned_economy
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = TRN_ministry_of_industrial_development }
+		x = -1
+		y = 1
+		relative_position_id = TRN_ministry_of_industrial_development
+		cost = 5
+
+		available = {
+		}
+
+		ai_will_do = {
+
+		}
+		mutually_exclusive = { focus = TRN_expanded_corporatism }
+		completion_reward = {
+			add_ideas = TRN_Sie_merger
+			custom_effect_tooltip = TRM_industry_change
+			add_to_variable = {
+				TRM_industries_dynamic_production_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				TRM_industries_dynamic_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
 
 		}
 	}

@@ -1247,31 +1247,6 @@ characters={
 				large = GFX_Z_TRN_alfred_rosenberg_Portrait
 			}
 		}
-		advisor = {
-    		slot = political_advisor
-    		idea_token = TRM_alfred_rosenberg_idea
-			allowed = {
-				original_tag = TRM
-			}
-			available = {
-				if = { limit = { has_character_flag = TRM_forced_dismissal_flag }
-					NOT = { has_character_flag = TRM_forced_dismissal_flag }
-				}
-				OR = { 
-					has_completed_focus = TMR_support_with_germany 
-					has_completed_focus = TRN_hiring_german_thinkers
-				}
-			}
-			visible = { 
-				OR = { 
-					has_completed_focus = TMR_support_with_germany 
-					has_completed_focus = TRN_hiring_german_thinkers
-				}
-			}
-    		traits = { KR_schleicher_mouthpiece }
-			cost = 75
-			ai_will_do = { base = 4000 }
-		}
 	}
 	TRM_Fritz_Todt = {
 		name = TRM_Fritz_Todt

@@ -70,6 +70,7 @@ set_variable = { TRM_industries_dynamic_production_factory_efficiency_gain_facto
 set_variable = { TRM_industries_dynamic_production_factory_max_efficiency_factor = 0 }
 set_variable = { TRM_industries_dynamic_production_factory_start_efficiency_factor = 0 }
 set_variable = { TRM_industries_dynamic_production_lack_of_resource_penalty_factor = 0 }
+set_variable = { TRM_industries_dynamic_local_resources_factor = 0 }
 set_variable = { TRM_industries_dynamic_conversion_cost_civ_to_mil_factor = 0 }
 set_variable = { TRM_industrial_capacity_factory_factor = 0 }
 

@@ -7132,6 +7132,37 @@ TRN_economic_decisions_category = {
 			}
 		}
 	}
+	TRN_Industrial_Regions= {
+		icon = GFX_decision_generic_factory
+
+		allowed = { always = no } #activated by effect
+
+		visible = {
+			has_full_control_of_state = FROM
+			has_completed_focus = TRN_ministry_of_industrial_development
+			FROM = {
+				NOT = { has_dynamic_modifier = { modifier =TRM_industrial_region_state } }
+			}
+			has_government = fascism
+		}
+
+		cost = 25
+		fire_only_once = yes
+		state_target = yes
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_political_power < 250
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = { modifier = TRM_industrial_region_state }
+			}
+		}
+	}
 }
 
 

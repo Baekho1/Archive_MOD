@@ -1379,7 +1379,8 @@ TRM_industries_dynamic = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_idea_SOV_third_five_year_plan
+
+	icon = GFX_idea_TRM_industries_ns
 	consumer_goods_factor = TRM_industries_dynamic_consumer_goods_factor
 	production_speed_arms_factory_factor = TRM_industries_dynamic_production_speed_arms_factory_factor
 	production_speed_industrial_complex_factor = TRM_industries_dynamic_production_speed_industrial_complex_factor
@@ -1389,7 +1390,9 @@ TRM_industries_dynamic = {
 	production_factory_max_efficiency_factor  = TRM_industries_dynamic_production_factory_max_efficiency_factor #생산 효율 한도
 	production_factory_start_efficiency_factor = TRM_industries_dynamic_production_factory_start_efficiency_factor #시작 생산 효율
 	production_lack_of_resource_penalty_factor = TRM_industries_dynamic_production_lack_of_resource_penalty_factor #자원부족 패널티
+	local_resources_factor = TRM_industries_dynamic_local_resources_factor # 현지 자원 변동치
     conversion_cost_civ_to_mil_factor = TRM_industries_dynamic_conversion_cost_civ_to_mil_factor # 민간공장에서 군수공장으로 전환하는 비용
+
 }
 TRM_develop_the_heer_modifier = { # 트리니티 육군
 	
