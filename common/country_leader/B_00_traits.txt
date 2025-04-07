@@ -1546,6 +1546,11 @@ leader_traits = {
 		resistance_decay = 0.1
 		surrender_limit = 0.1
 	}
+	GEH_blame_director = { #비난받을 만한 일
+		random = no
+		ai_desired_divisions_factor = -0.10
+        war_support_factor = -0.05
+	}
 	GEH_military_chairman = { #군인 행정관
 		random = no
 		hidden_modifier = {

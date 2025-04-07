@@ -1505,6 +1505,11 @@ focus_tree = {
 					}
 				}
 			}
+			set_party_name = {
+				ideology = fascism
+				long_name = GEH_executive_department_long
+				name = GEH_executive_department
+			}
         }
         ai_will_do = {
             factor = 1
@@ -1574,6 +1579,23 @@ focus_tree = {
         }
         completion_reward = {
 			add_political_power = 100
+			add_country_leader_trait = GEH_blame_director
+			if = {
+				limit = {
+					has_country_leader = {
+						character = GEH_hina
+						ruling_only = yes
+					}
+					has_character = GEH_dldhfl
+					has_country_leader = {
+						character = GEH_dldhfl
+						ruling_only = no
+					}
+				}
+				GEH_dldhfl = {
+					add_country_leader_trait = GEH_blame_director
+				}
+			}
         }
         ai_will_do = {
             factor = 1
@@ -2208,6 +2230,11 @@ focus_tree = {
 						GEH_ako_trait_1
 					}
 				}
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = GEH_planning_department_long
+				name = GEH_planning_department
 			}
 		}
 		ai_will_do = {
@@ -5544,15 +5571,18 @@ focus_tree = {
 
 			#이벤트 검증
 			if = {
-				limit = { NOT = { has_country_flag = hina_event_8_flag } }
-				country_event = { id = hina.8 days = 10 }
+				limit = { has_country_flag = hina_assembly_c_flag NOT = { has_country_flag = hina_event_8_flag } }
+				hidden_effect = {
+					country_event = { id = hina.8 days = 10 }
+				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
     focus = {
 		id = GEH_last_focus_effect
 		icon = GFX_focus_GEH_last_focus_effect
-		cost = 5
+		cost = 0
 
 		relative_position_id = GEH_last_focus_3
 		x = 0
@@ -5602,7 +5632,7 @@ focus_tree = {
     focus = {
 		id = GEH_last_focus_effect_h_rout
 		icon = GFX_focus_GEH_last_focus_effect
-		cost = 5
+		cost = 2
 
 		relative_position_id = GEH_last_focus_3
 		x = 0
@@ -5650,7 +5680,7 @@ focus_tree = {
     focus = {
 		id = GEH_last_focus_effect_a_rout
 		icon = GFX_focus_GEH_last_focus_effect
-		cost = 5
+		cost = 2
 
 		relative_position_id = GEH_last_focus_3
 		x = 0
@@ -5696,8 +5726,8 @@ focus_tree = {
 # /이오리 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_c_rout
-		icon = GFX_focus_GEH_last_focus_effect
-		cost = 5
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 2
 
 		relative_position_id = GEH_last_focus_3
 		x = 0
@@ -5737,11 +5767,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_stability = 0.10
+			add_war_support = -0.10
 		}
 	}
     focus = {
 		id = GEH_gradual_dismantling_of_conscription_system
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_hol_abandon_the_gold_standard
 		cost = 5
 
 		relative_position_id = GEH_last_focus_effect_c_rout
@@ -5769,7 +5801,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_dismantling_of_militarized_system
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_ARG_crackdown_on_corruption
 		cost = 5
 
 		relative_position_id = GEH_last_focus_effect_c_rout
@@ -5798,7 +5830,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_indefinite_extension_of_emergency_powers
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_ARG_keep_it_in_the_party
 		cost = 5
 
 		relative_position_id = GEH_last_focus_effect_c_rout
@@ -5830,7 +5862,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_investigation_of_shirokami_ioris_war_crimes
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_focus_fra_fascist_threat
 		cost = 5
 
 		relative_position_id = GEH_last_focus_effect_c_rout
@@ -5858,6 +5890,20 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					all_character = {
+						NOT = { has_trait = GEH_blame_director }
+					}
+				}
+				effect_tooltip = {
+					remove_country_leader_trait = GEH_blame_director
+				}
+			}
+			every_character = {
+				limit = { has_trait = GEH_blame_director }
+				remove_country_leader_trait = GEH_blame_director
+			}
 		}
 	}
 # 이오리 중점 최종장 끝/
@@ -5865,7 +5911,7 @@ focus_tree = {
     focus = {
 		id = GEH_last_focus_effect_normal_rout
 		icon = GFX_focus_GEH_last_focus_effect
-		cost = 5
+		cost = 2
 
 		relative_position_id = GEH_last_focus_3
 		x = 0
