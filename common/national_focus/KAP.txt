@@ -21,7 +21,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 20 y = 1000 }
+	continuous_focus_position = { x = 20 y = 1500 }
 
 	
 
@@ -1288,89 +1288,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = KAP_military_intelligence_department
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = KAP_revolutionary_military_commission }
-		x = 4
-		y = 1
-		relative_position_id = KAP_revolutionary_military_commission
-		allow_branch = {
-		has_country_flag =   KAP_revolutionary_military_commission      
-		}
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = KAP_central_security_bureau
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = KAP_military_intelligence_department }
-		x = 0
-		y = 1
-		relative_position_id = KAP_military_intelligence_department
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			set_cosmetic_tag = KAP_carrot
-
-			promote_character = KAP_seia
-
-			set_party_name = {
-				ideology = communism
-				long_name = seia
-				name = seia
-			}
-
-			set_politics = {
-				ruling_party = communism
-			}
-
-			add_popularity = {
-				ideology = communism
-				popularity = 3
-			}
-		}
-	}
-
-	focus = {
 		id = KAP_focus_on_KAPna
 		icon = GFX_goal_generic_parliament2
 		prerequisite = { focus = KAP_the_yanan_base_area }
@@ -1668,8 +1585,8 @@ focus_tree = {
 		icon = GFX_goal_focus_KAP_kv26
 		prerequisite = { focus = KAP_KAPna_medical_university }
 		x = 0
-		y = 2
-		relative_position_id = KAP_literacy_programs
+		y = 1
+		relative_position_id = KAP_KAPna_medical_university
 
 		cost = 10
 
@@ -1692,7 +1609,62 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
+		}
+	}
 
+	focus = {
+		id = KAP_central_security_bureau
+		icon = GFX_focus_unknown_2
+		prerequisite = { focus = KAP_form_the_academy_of_sciences }
+		x = 0
+		y = 1
+		relative_position_id = KAP_form_the_academy_of_sciences
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			num_of_factories > 300
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			custom_effect_tooltip = "별을 찾아."
+
+			hidden_effect = {
+				set_cosmetic_tag = KAP_carrot
+
+				promote_character = KAP_ame
+
+				set_party_name = {
+					ideology = communism
+					long_name = VKProject
+					name = VKProject
+				}
+	
+				set_politics = {
+					ruling_party = communism
+				}
+	
+				add_popularity = {
+					ideology = communism
+					popularity = 3
+				}		
+
+				news_event = { id = KAP_event.2 days = 3 random_days = 3 }
+			}
+			
 		}
 	}
 }

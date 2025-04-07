@@ -1310,8 +1310,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_portrait_KAP_seia"
-		textureFile = "gfx/leaders/KAP/portrait_KAP_seia.dds"
+		name = "GFX_portrait_KAP_ame"
+		textureFile = "gfx/leaders/KAP/portrait_KAP_ame.dds"
 		legacy_lazy_load = no
 	}
 }

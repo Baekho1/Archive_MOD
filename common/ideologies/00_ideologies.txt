@@ -171,9 +171,9 @@ ideologies = {
 				color = { 204 41 66 }
 			}
 
-			seia = {
+			VKProject = {
 				can_be_randomly_selected = no
-				color = { 242  205  94 }
+				color = { 49 60 94 }
 			}
 
 		#/BA_MOD_FIX

@@ -1164,4 +1164,16 @@ spriteTypes = {
 		play_on_show = yes
 		pause_on_loop = 0.0
 	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_news_KAP_Animated_VKP"
+		texturefile = "gfx/event_animate_pictures/news_KAP_Animated_VKP.png"
+		noOfFrames = 32
+		loadType = "INGAME"
+		allwaystransparent = no
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
 }

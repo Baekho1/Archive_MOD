@@ -62,11 +62,9 @@
  KAP_government_of_national_defense_desc:0 "이 곳의 사람들도 여럿 탈 것들을 타고 다니는 모양입니다. \n우리도 마냥 걸어다닐수는 없겠죠!"
  KAP_confrontation_with_the_warlords:0 "하늘에서 흩날리는 천본앵"
  KAP_confrontation_with_the_warlords_desc:0 "어느 날 하늘에 처음보는 새의 형상이 보였습니다. 수소문 끝에 얻은 정보로는 저것은 "비행기" 라고 불리우는 강철의 새. 이곳의 사람들은 저것을 통해 하늘을 누빈다고 합니다. 우리도 저 새를 만들어 낼 수 있다면 분명 아주 멋질겁니다."
- #세이아 이스터에그
- KAP_military_intelligence_department:0 "상상도 못한 만남"
- KAP_military_intelligence_department_desc:0 "어느 날 코하네는 꿈에서 정체모를 이상하리 만치 깨어있는듯한 \n느낌을 느끼며 수상한 공간에서 눈을 뜹니다. \n그리고는 인간이라는 존재들 보단 우리쪽에 가까워 보이는 소녀를 만납니다. \n그녀는 자신을 키보토스에서 왔다고 설명함과 동시에 자신을 \n"유리조노 세이아"라고 덫붙였습니다."
+ #VK프로젝트 이스터에그
  KAP_central_security_bureau:0 "왠지 모를 이끌림"
- KAP_central_security_bureau_desc:0 "뭔가 그녀라면... 그녀라면 믿고 맡겨도 될 것 같아....."
+ KAP_central_security_bureau_desc:0 "너희들은 실패했다..."
  KAP_revolutionary_military_commission:0 "제1형 수면베기"
  KAP_revolutionary_military_commission_desc:0 "바다 근처로 교류를 나가면 항상 수면 위에는 정체모를 구조물 위에 사람들과 짐을 가득 실어 가는것을 목격하곤 합니다. 물 위에서 풍류를 즐기는 것이 \n드디어 가능한 걸까요."
  KAP_central_military_commission:0 "현장실습"
@@ -96,8 +94,8 @@
  KAP_reconnaissance_Kaoru: "감시한다"
  KAP_in_jang_jujack_Kaoru: "인장주작은 뭐야"
  KAP_Zotdam_Kaoru: "좆됐네"
- KAP_seia: "유리조노 세이아"
- KAP_SEIA_DESC: "왠지 불쌍해 보이는 초짜 모더입니다, 항상 얻어맞는 포지션이라 이래저래 당근을 흔들어 보지만 아무래도 여전히 모딩하라고 협박을 당하고 있는 것 같습니다."
+ KAP_ame: "아메"
+ KAP_AME_DESC: "세 번째 대전이로 온 정체불명의 소녀.\n하루 일과 대부분을 물범 인형과 뒹굴거리며 게임을 하는 것이 일상이다.\n게임을 좋아하지만, 경험 부족으로 실력이 처참하여 무슨 게임을 하든 밑바닥을 긴다.\n다만 여러모로 그녀의 실력은 확실해서 무엇이든 다룰 수 있다.\n홀로그램 드론부터 해킹, 그리고 소꿉친구 에□□을 놀려먹는것 까지도."
  #국민정신
  KAP_gongsadamang:0 "불"
  KAP_gongsadamang2:0 "좀"
@@ -109,11 +107,11 @@
  KAP_gongsadamang4_desc:0 "내 램 좀 보게"
  KAP_together:0 "강한 결속"
  KAP_together_desc:0 "우리는 누가 뭐래도 하나! \n...근대 왜 아직도 불타는거야..?"
- KAP_kohane_vanjyai:0 "동경하는 소녀, 코하네"
- KAP_kohane_vanjyai_desc:0 "이것은 장르를 초월해 교차하는 말도 안 되는 이야기.\n
- 하지만 이건 우리가 이미 알고 있는 이야기.\n\n지금 시작합니다!"
  KAP_halo_and_sword:0 "빛을내는 광륜, 찬란한 칼날"
  KAP_halo_and_sword_desc:0 "광륜의 빛에 칼날이 찬란한 물결 내뿜으면, 두려움 없이 앞으로 전진하리라."
- KAP_2nd_sin_B:0 "두 번째 신비"
- KAP_2nd_sin_B_desc:0 "우와 이스터에그 발견☆"
+ KAP_3nd_sin_B:0 "세 번째 대전이"
+ KAP_3nd_sin_B_desc:0 "우와 이스터에그 발견"
  KAP_reload:0 "재정비"
+
+ #지도자 특성
+ KAP_kohane_vanjyai:0 "동경하는 소녀, 코하네"

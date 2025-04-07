@@ -22,7 +22,7 @@ characters={
 		}
 		country_leader={
 			ideology = yunowka
-			traits={ cornered_fox }
+			traits={  }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -179,18 +179,18 @@ characters={
 		}
 	}
 
-	KAP_seia={
-		name=KAP_seia
+	KAP_ame={
+		name=KAP_ame
 		portraits={
 			civilian={
-				large=GFX_portrait_KAP_seia
+				large=GFX_portrait_KAP_ame
 			}
 		}
 		country_leader={
-			ideology = seia
-			traits={ KAP_2nd_sin_B }
+			ideology = VKProject
+			traits={ KAP_3nd_sin_B }
 			expire="1949.1.1.12"
-			desc = "KAP_SEIA_DESC"
+			desc = KAP_AME_DESC
 		}
 	}
 
