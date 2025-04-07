@@ -2081,6 +2081,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = GEH_gehenna_leader_tt
+			set_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
 			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission
 			country_event = GEH_BTBOTS.100
@@ -5057,6 +5058,7 @@ focus_tree = {
 		completion_reward = {
 			GEH_popular_support_up_effect = yes
 			custom_effect_tooltip = GEH_three_congress_focus_tt
+			set_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
 		}
 	}
     focus = {
