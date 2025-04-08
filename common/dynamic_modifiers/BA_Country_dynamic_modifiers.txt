@@ -745,6 +745,16 @@ GEH_prefect_team_culture = { #게헨나 선도부-도이치계 관계
 	industry_repair_factor = GEH_prefect_team_culture_industry_repair_factor
 }
 
+geh_discipline_idea = { # 게헨나 규율
+
+	enable = { always = yes }
+	remove_trigger = { }
+
+	army_attack_factor = geh_discipline_army_attack_factor #사단 공격
+	army_defence_factor = geh_discipline_army_defence_factor # 사단 방어
+    	breakthrough_factor = geh_discipline_breakthrough_factor # 돌파
+}
+
 ##총학##
 
 COU_RIN_policy_lead_idea = { #린 루트 - 행정관의 주도 [행정관의 정책]
