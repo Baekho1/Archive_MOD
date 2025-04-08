@@ -94,7 +94,7 @@ GEH_discipline_system_category = {
     }
 
     visible = {
-        is_debug = yes
+        
     }
 
     visible_when_empty = yes
