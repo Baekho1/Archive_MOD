@@ -2,6 +2,11 @@
 #### BA MOD
 ####
 
+focus = {
+	current = "MEX_focus_purge_of_calles"
+	progress = 0
+}
+
 set_variable = { country_intro_page_count = 4 } #Intro screen
 
 recruit_character = MEX_adolfo_lopez_mateos
