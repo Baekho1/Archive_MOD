@@ -1406,4 +1406,22 @@ spriteTypes = {
         texturefile = "gfx/interface/decisions/heu_benriya_decisions/HEU_hiori_kazano_icon.dds"
         legacy_lazy_load = no
     }
+
+	## 선도부 디시전들 ##
+
+	### 풍기집행 시스템 ###
+
+	progressbartype = {
+		name = GFX_geh_discipline_system_progressbar
+		horizontal = no
+		textureFile1 = "gfx/interface/decisions/GEH_prefect_team_decisions/geh_discipline_system_progressbar.dds"
+		textureFile2 = "gfx/interface/decisions/GEH_prefect_team_decisions/geh_discipline_system_background.dds"
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		size = { 
+			x = 140
+			y = 400
+		}
+	}
+
 }

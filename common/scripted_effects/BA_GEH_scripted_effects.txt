@@ -82,3 +82,120 @@ GEH_ako_love_very_low_decrease_effect = {
 		value = -0.05
 	}
 }
+
+GEH_ako_love_very_low_decrease_effect = {
+	add_power_balance_value = {
+		id = GEH_ako_love_balance
+		value = -0.05
+	}
+}
+
+geh_discipline_system_setting_effect = {
+	clamp_variable = {
+		var = geh_discipline_var
+		min = 0
+		max = 100
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = 0.15 }
+		set_variable = { geh_discipline_army_defence_factor = 0.15 }
+		set_variable = { geh_discipline_breakthrough_factor = 0.2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 80
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = 0.11 }
+		set_variable = { geh_discipline_army_defence_factor = 0.11 }
+		set_variable = { geh_discipline_breakthrough_factor = 0.15 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = 0.07 }
+		set_variable = { geh_discipline_army_defence_factor = 0.07 }
+		set_variable = { geh_discipline_breakthrough_factor = 0.10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = 0.03 }
+		set_variable = { geh_discipline_army_defence_factor = 0.03 }
+		set_variable = { geh_discipline_breakthrough_factor = 0.05 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = 0 }
+		set_variable = { geh_discipline_army_defence_factor = 0 }
+		set_variable = { geh_discipline_breakthrough_factor = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = -0.03 }
+		set_variable = { geh_discipline_army_defence_factor = -0.03 }
+		set_variable = { geh_discipline_breakthrough_factor = -0.05 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = -0.07 }
+		set_variable = { geh_discipline_army_defence_factor = -0.07 }
+		set_variable = { geh_discipline_breakthrough_factor = -0.1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = geh_discipline_var
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { geh_discipline_army_attack_factor = -0.11 }
+		set_variable = { geh_discipline_army_defence_factor = -0.11 }
+		set_variable = { geh_discipline_breakthrough_factor = -0.15 }
+	}
+	else = {
+		set_variable = { geh_discipline_army_attack_factor = -0.15 }
+		set_variable = { geh_discipline_army_defence_factor = -0.15 }
+		set_variable = { geh_discipline_breakthrough_factor = -0.20 }
+	}
+}

@@ -1,0 +1,15 @@
+
+scripted_gui = {
+	GEH_discipline_system_gui = {
+		context_type = decision_category
+		window_name = "geh_discipline_system_gui_window"
+		
+		properties = {
+			geh_discipline_system_progressbar = {
+				frame = geh_discipline_var
+			}
+		}
+
+	}
+
+}
