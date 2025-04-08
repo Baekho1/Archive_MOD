@@ -935,6 +935,14 @@ GEH_discipline_system_category = {
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				add = 15
+				check_variable = { geh_discipline_var < 50 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
 		}
 
 		cost = 15
@@ -974,12 +982,26 @@ GEH_discipline_system_category = {
 		available = {
 
 		}
+		
+		custom_cost_trigger = {
+			command_power > 4.9
+		}
+
+		custom_cost_text = decision_cost_5_cp
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				add = 15
+				check_variable = { geh_discipline_var < 50 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
 		}
 
-		cost = 10
+		cost = 0
 
 		days_remove = 7
 
@@ -1002,6 +1024,12 @@ GEH_discipline_system_category = {
 			}
 			geh_discipline_system_setting_effect = yes
 		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -5
+			}
+		}
 	}
 
 	GEH_discipline_system_attack_helmet = {
@@ -1019,6 +1047,14 @@ GEH_discipline_system_category = {
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				add = 15
+				check_variable = { geh_discipline_var < 50 }
+			}
+			modifier = {
+				add = 10
+				has_political_power > 200
+			}
 		}
 
 		cost = 5
@@ -1119,9 +1155,7 @@ GEH_discipline_system_category = {
 
 		cost = 35
 
-		days_remove = 7
-
-		remove_effect = {
+		complete_effect = {
 			add_to_variable = {
 				geh_discipline_var = 10
 				tooltip = geh_discipline_system_tt
