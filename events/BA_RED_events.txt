@@ -1491,6 +1491,38 @@ country_event = { #군정청 공업화 어케 하실?
 		add_political_power = -30
 	}
 }
+country_event = { #전시상황 해제
+	id = RED_generic.27
+	title = RED_generic.27.t
+	desc = RED_generic.27.d
+	picture = GFX_report_event_vienna_award_hungary
+	is_triggered_only = yes
+	option = { #다행이군
+		name = RED_generic.27.a
+		country_event = {
+			id = RED_generic.28
+			days = 2
+		}
+	}
+}
+country_event = { #총파업의 위협
+	id = RED_generic.28
+	title = RED_generic.28.t
+	desc = RED_generic.28.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	option = { #적당히 타협해라.
+		name = RED_generic.28.a
+		remove_ideas = RED_strike
+		add_political_power = -30
+	}
+	option = { #진압해라.
+		name = RED_generic.28.b
+		remove_ideas = RED_strike
+		add_stability = -0.03
+	}
+}
+
 
 
 country_event = { #피로한 마리나 - 1
@@ -6536,6 +6568,95 @@ unit_leader_event = { #
 		activate_mission = RED_demand_europe
 	}
 }
+
+add_namespace = RED_revolution
+country_event = { #용역부의 일상
+	id = RED_revolution.1
+	title = RED_revolution.1.t
+	desc = RED_revolution.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.1.a
+		swap_ideas = {
+			remove_idea = RED_threat_of_coup
+			add_idea = RED_threat_of_coup_5
+		}
+	}
+}
+country_event = { #용역부의 가담
+	id = RED_revolution.2
+	title = RED_revolution.2.t
+	desc = RED_revolution.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.2.a
+		swap_ideas = {
+			remove_idea = RED_strike
+			add_idea = RED_february_strike_1
+		}
+		hidden_effect = {
+			load_oob = RED_for_minori_1
+		}
+	}
+}
+country_event = { #현지 노동조합연맹 가담
+	id = RED_revolution.3
+	title = RED_revolution.3.t
+	desc = RED_revolution.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.3.a
+		swap_ideas = {
+			remove_idea = RED_february_strike_1
+			add_idea = RED_february_strike_2
+		}
+		hidden_effect = {
+			load_oob = RED_for_minori_2
+		}
+	}
+}
+country_event = { #1936년 결의안 제5호
+	id = RED_revolution.4
+	title = RED_revolution.4.t
+	desc = RED_revolution.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.4.a
+		custom_effect_tooltip =  RED_revolution.4_tt
+		swap_ideas = {
+			remove_idea = RED_february_strike_2
+			add_idea = RED_february_strike_3
+		}
+		hidden_effect = {
+			load_oob = RED_for_minori_4
+		}
+	}
+}
+country_event = { #사회민주노동자당
+	id = RED_revolution.5
+	title = RED_revolution.5.t
+	desc = RED_revolution.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.5.a
+	}
+}
+country_event = { #사회민주노동자당
+	id = RED_revolution.6
+	title = RED_revolution.6.t
+	desc = RED_revolution.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.6.a
+	}
+}
+
 
 add_namespace = RED_bop_event
 country_event = { #트로츠키와의 첫 만남

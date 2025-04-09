@@ -249,6 +249,7 @@ add_ideas = {
 	RED_doomed_economy_idea
 	RED_doomed_army_idea
 	RED_threat_of_coup
+	RED_strike
 }
 
 set_rule = {

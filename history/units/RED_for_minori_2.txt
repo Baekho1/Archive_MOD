@@ -1,0 +1,4 @@
+focus = {
+	current = RED_RMC
+	progress = 0
+}

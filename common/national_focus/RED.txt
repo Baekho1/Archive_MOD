@@ -204,11 +204,8 @@ focus_tree = {
 			NOT = {
 				has_country_flag = RED_there_is_coup_flag
 			}
-			if = {
-				limit = {
-					has_completed_focus = RED_accept_trotskism
-				}
-				has_completed_focus = RED_redwinter_office
+			NOT = {
+				has_idea = RED_strike
 			}
 		}
 		offset = {
@@ -3965,6 +3962,10 @@ focus_tree = {
 			}
 			add_to_variable = {
 				snake_strengthen_security_measures_var = -10
+			}
+			country_event = {
+				id = RED_generic.27
+				days = 2
 			}
 		}
 	}
@@ -9318,8 +9319,8 @@ focus_tree = {
 				change_state_after_war = yes
 				attacker = {
 					state = 912
-					on_win = RED_minori_event.21
-					on_lose = RED_minori_event.20
+					on_win = RED_generic.21
+					on_lose = RED_generic.20
 					num_provinces = 2
 				}
 				defender = {
@@ -10735,12 +10736,19 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = RED_our_leader_cherino
 		}
+		cancelable = no
 		ai_will_do = {
 			base = 100
 		}
 		x = 32
 		y = 0
 		relative_position_id = RED_our_leader_cherino
+		select_effect = {
+			country_event = {
+				id =  RED_revolution.1
+				days = 25
+			}
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -10775,11 +10783,9 @@ focus_tree = {
 			date < 1936.1.9
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RED_threat_of_coup
-				add_idea = RED_threat_of_coup_1
+			country_event = {
+				id =  RED_revolution.2
 			}
-			activate_mission = RED_feburary_strike_1
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -10792,6 +10798,7 @@ focus_tree = {
 		}
 		x = -2
 		y = 1
+		cancelable = no
 		available = {
 			NOT = {
 				has_completed_focus = RED_the_threats_abound
@@ -10803,8 +10810,8 @@ focus_tree = {
 			base = 9999
 		}
 		completion_reward = {
-			add_command_power = 15
-			custom_effect_tooltip = RED_native_leftists_tt
+			add_command_power = 10
+			country_event = RED_revolution.3
 		}
 	}
 	focus = {
@@ -10853,9 +10860,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 9999
 		}
+		select_effect = {
+			country_event = {
+				id = RED_revolution.5
+				days = 1
+			}
+		}
 		completion_reward = {
-			RED_population_solve = yes
-			custom_effect_tooltip = RED_labor_world_tt
+			country_event = RED_revolution.6
 		}
 	}
 	focus = {
@@ -10873,17 +10885,13 @@ focus_tree = {
 				has_completed_focus = RED_the_threats_abound
 			}
 		}
+		cancelable = no
 		cost = 3
 		ai_will_do = {
 			base = 9999
 		}
 		completion_reward = {
-			army_experience = 15
-			add_equipment_to_stockpile = {
-				type = kivotos_infantry_equipment
-				amount = 1000
-			}
-			custom_effect_tooltip = RED_RMC_tt
+			add_political_power = 20
 		}
 	}
 	focus = {
@@ -10937,7 +10945,7 @@ focus_tree = {
 		#'메이데이'
 		id = RED_the_threats_abound
 		available = {
-			always = no
+			has_country_flag =  unlock_focuses
 		}
 		bypass = {
 		}
@@ -11049,6 +11057,55 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = RED_communist_diplo_tt
+		}
+	}
+	focus = {
+		#청년-생도 평의회
+		id = RED_freedom_of_thought
+		prerequisite = {
+			focus = RED_RMC
+		}
+		prerequisite = {
+			focus = RED_the_threats_abound
+		}
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 999
+		}
+		relative_position_id = RED_the_threats_abound
+		cost = 2.9
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_command_power = 200
+			}
+			add_command_power = 10
+			swap_ideas = {
+				remove_idea = RED_fire_of_revolution
+				add_idea = RED_fire_of_revolution_1
+			}
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					add_command_power = 1000
+				}
+			}
+			141 = {
+				create_unit = {
+					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+					owner = RED
+					count = 4
+				}
+			}
 		}
 	}
 	focus = {
@@ -11280,55 +11337,6 @@ focus_tree = {
 				}
 				hidden_effect = {
 					add_command_power = 1000
-				}
-			}
-		}
-	}
-	focus = {
-		#청년-생도 평의회
-		id = RED_freedom_of_thought
-		prerequisite = {
-			focus = RED_RMC
-		}
-		prerequisite = {
-			focus = RED_the_threats_abound
-		}
-		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		x = 2
-		y = 2
-		ai_will_do = {
-			factor = 999
-		}
-		relative_position_id = RED_the_threats_abound
-		cost = 2.9
-		available_if_capitulated = yes
-		completion_reward = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_command_power = 200
-			}
-			add_command_power = 10
-			swap_ideas = {
-				remove_idea = RED_fire_of_revolution
-				add_idea = RED_fire_of_revolution_1
-			}
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = yes
-					}
-				}
-				hidden_effect = {
-					add_command_power = 1000
-				}
-			}
-			141 = {
-				create_unit = {
-					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
-					owner = RED
-					count = 4
 				}
 			}
 		}
