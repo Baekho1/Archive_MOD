@@ -933,6 +933,10 @@ GEH_discipline_system_category = {
 
 		}
 
+		visible = {
+			NOT = { has_country_flag = GEH_end_discipline }
+		}
+
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -985,6 +989,10 @@ GEH_discipline_system_category = {
 		
 		custom_cost_trigger = {
 			command_power > 4.9
+		}
+
+		visible = {
+			NOT = { has_country_flag = GEH_end_discipline }
 		}
 
 		custom_cost_text = decision_cost_5_cp
@@ -1045,6 +1053,10 @@ GEH_discipline_system_category = {
 
 		}
 
+		visible = {
+			NOT = { has_country_flag = GEH_end_discipline }
+		}
+
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -1090,7 +1102,10 @@ GEH_discipline_system_category = {
 		}
 
 		visible = {
-			NOT = { has_country_flag = GEH_discipline_system_weapons_flag }
+			AND = {
+				NOT = { has_country_flag = GEH_discipline_system_weapons_flag }
+				NOT = { has_country_flag = GEH_end_discipline }
+			}
 		}
 
 		fire_only_once = yes
@@ -1146,7 +1161,10 @@ GEH_discipline_system_category = {
 		}
 
 		visible = {
-			NOT = { has_country_flag = GEH_discipline_system_weapons_flag }
+			AND = {
+				NOT = { has_country_flag = GEH_discipline_system_weapons_flag }
+				NOT = { has_country_flag = GEH_end_discipline }
+			}
 		}
 
 		ai_will_do = {

@@ -6029,7 +6029,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
+
 		completion_reward = {
 			if = {
 				limit = { has_country_flag = hina_assembly_h_flag }
@@ -6071,6 +6071,11 @@ focus_tree = {
 							}
 						}
 					}
+				}
+
+				set_portraits = {
+					character = GEH_dkzh
+					civilian = { large ="gfx/leaders/GEH/GEH_ako_amau_leader.dds" }
 				}
 
 				set_country_leader_description = {
@@ -6126,6 +6131,11 @@ focus_tree = {
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
+				}
+
+				set_portraits = {
+					character = GEH_dkzh
+					civilian = { large ="gfx/leaders/GEH/GEH_ako_amau_leader.dds" }
 				}
 
 				GEH_dkzh = {
