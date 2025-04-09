@@ -1,0 +1,19 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			every_country = {
+				if = {
+					limit = { tag = GEH }
+
+					#선도부 풍기
+					geh_discipline_system_setting_effect = yes
+					add_dynamic_modifier = {
+						modifier = geh_discipline_idea
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -2290,6 +2290,12 @@ focus_tree = {
 				HYA = { is_in_faction_with = SHA }
 			}
 		}
+		bypass_effect = {
+			if = {
+				limit = { has_idea = SHA_shanhaijing_isolation }
+				remove_ideas = SHA_shanhaijing_isolation
+			}
+		}
 
 		relative_position_id = SHA_emergency_measures
 		
