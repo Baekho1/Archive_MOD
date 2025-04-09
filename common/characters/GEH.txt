@@ -1,269 +1,5 @@
 characters={
 
-	GEH_akzhxh={  # 마코토
-		name=GEH_akzhxh
-		portraits={
-			civilian={
-				large="gfx/leaders/GEH/GEH_hanuma_makoto_portrait.tga"
-			}
-			army={
-				large="gfx/leaders/GEH/GEH_hanuma_makoto_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_Hanuma_Makoto_idea.tga"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=pandemonium
-			traits={ b_dkagmrdmlchdxhd GEM_leader_hater_trait }
-			expire="1965.1.1.1"
-		}
-		field_marshal={
-			traits={ urban_assault_specialist media_personality harsh_leader politically_connected }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-
-	GEH_dlfhgk={ #이로하
-		name=GEH_dlfhgk
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_Natsume_Iroha_portrait.tga"
-				small="gfx/interface/advisors/GEH/Natsume_Iroha_idea.tga"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=neopandemonium
-			traits={ GEH_Iroha_trait }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ armor_officer panzer_leader politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_dlfhgk1
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			available = {
-				if = {
-					limit = { tag = GEH }
-					has_completed_focus = GEH_personnel_retraining
-				}
-				if = {
-					limit = { tag = GEM }
-					NOT = { has_completed_focus = GEM_iroha_suppression }
-				}
-			}
-			traits = {
-				war_industrialist
-				economic_reformer
-			}
-			visible = {
-				is_country_leader = no
-				NOT = {
-					has_country_flag = GEH_hina_donotusemanmajun
-				}
-			}
-			ai_will_do = {
-				factor = 24.000
-			}
-		}
-		advisor={
-			cost = 200
-			slot = theorist
-			idea_token = GEH_dlfhgk3
-			ledger = army
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			visible = {
-				NOT = {
-					has_country_flag = GEH_hina_donotusemanmajun
-				}
-			}
-			traits = {
-				blitzkrieg_theorist
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = GEH_dlfhgk3
-			ledger = army
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM original_tag = HEU }
-			}
-			visible = {
-				NOT = {
-					has_country_flag = GEH_hina_donotusemanmajun
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = GEH }
-					has_completed_focus = GEH_personnel_retraining
-				}
-			}
-			traits = {
-				army_armored_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 8.000
-			}
-		}
-	}
-	GEH_dlqnzl={ #이부키
-		name=GEH_dlqnzl
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_dlqnzl.dds"
-				small="gfx/interface/advisors/GEH/dlqnzl.dds"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=neopandemonium
-			traits={ GEH_tanga_ibuki_A_trait GEH_tanga_ibuki_B_trait }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ politically_connected }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_dlqnzl
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			visible = {
-				is_country_leader = no
-				NOT = {
-					has_country_flag = GEH_hina_donotusemanmajun
-				}
-			}
-			available = {
-				if = {
-					limit = { tag = GEH }
-					has_completed_focus = GEH_personnel_retraining
-				}
-			}
-			traits = {
-				fascist_demagogue propaganda_expert 
-			}
-			ai_will_do = {
-				factor = 24.000
-			}
-		}
-	}
-	GEH_satsuki={ #사츠키
-		name=GEH_satsuki
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_satsuki.dds"
-				small="gfx/interface/advisors/GEH/satsuki.dds"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=pandemonium
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ politically_connected }
-			skill=2
-			attack_skill=4
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	GEH_motomiya_chiaki={ #모토미야 치아키
-		name=GEH_motomiya_chiaki
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_motomiya_chiaki.dds"
-				small="gfx/interface/advisors/GEH/motomiya_chiaki.dds"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=pandemonium
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ politically_connected infantry_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	
-	GEH_gkfnsk={ # 하루나
-		name=GEH_gkfnsk
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_gkfnsk.dds"
-				small= "gfx/interface/advisors/GEH/gkfnsk.dds"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=anarchist_communism
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ GEM_trait_gourmet_research_society }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_gkfnsk
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			available = {
-				has_gourmet_research_society = yes
-			}
-			traits = {
-				b_dlsrldlTsmsaltlrrk
-			}
-			ai_will_do = {
-				factor = 24.000
-			}
-		}
-	}
-
-
 	GEH_hina={ # 히나
 		name=GEH_hina
 		portraits={
@@ -306,10 +42,11 @@ characters={
 		advisor={
 			slot = army_chief
 			idea_token = GEH_hina_idea
-			allowed = { OR = { 
-				original_tag = GEH 
-				original_tag = GEM 
-				original_tag = HEU 
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
 				} 
 			}
 			traits = { army_chief_offensive_2 }
@@ -625,6 +362,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/advisors/GEH/GEH_theorist_idea.tga"
+				large="gfx/leaders/GEH/GEH_intel_prefect_team.dds"
 			}
 		}
 
@@ -646,6 +384,17 @@ characters={
 			}
 		}
 
+		corps_commander = {
+			traits={ } #정보부
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
 	}
 
 	GEH_piet_mondrian = {  # 몬드리안 (바우하우스)
@@ -713,40 +462,6 @@ characters={
 			traits = { GEH_artist GEH_composer }
 		}
 	}
-
-	GEH_Himuro_Sena = { # 히무로 세나
-		name=GEH_Himuro_Sena_name
-		portraits={
-			army={
-				large= "gfx/leaders/GEH/GEH_Himuro_Sena_Portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_Himuro_Sena_idea.tga"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ infantry_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=-1
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_Himuro_Sena_high_command
-			allowed = { OR = { original_tag = GEH original_tag = GEM original_tag = HEU } }
-			traits = { GEH_Emergency_Medicine_Sena_Club }
-			available = { 
-				OR = {
-					has_completed_focus = GEH_emergency_medicine_department_support 
-					has_completed_focus = HEU_emergency_medicine_department_support 
-				}
-			}
-			cost = 50
-			ai_will_do = { factor = 80.000 }
-		}
-	}
 	
 	GEH_prefect_team_maritime_police = { # 게헨나 해양경찰
 		name=GEH_prefect_team_maritime_police
@@ -803,109 +518,8 @@ characters={
 			}
 		}
 	}
-
-
-
-
-	GEH_dkzkfl={ #아카리
-		name=GEH_dkzkfl
-		portraits={
-			army={
-				large= "gfx/leaders/GEH/GEH_dkzkfl.dds"
-				small="gfx/interface/advisors/GEH/dkzkfl.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ GEM_trait_gourmet_research_society career_officer trickster }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=120
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_dkzkfl
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_infantry_1 }
-			cost = 50
-			ai_will_do = { factor = 1.000 }
-		}
-	}
-	GEH_dlwmal={ #이즈미
-		name=GEH_dlwmal
-		portraits={
-			army={
-				large= "gfx/leaders/GEH/GEH_dlwmal.dds"
-				small="gfx/interface/advisors/GEH/dlwmal.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ GEM_trait_gourmet_research_society }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-		}
-		advisor={	
-			slot = high_command
-			idea_token = GEH_dlwmal
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			available = {
-				
-			}
-			traits = {
-				army_artillery_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	GEH_wnszh={  # 준코
-		name=GEH_wnszh
-		portraits={
-			army={
-				large= "gfx/leaders/GEH/GEH_wnszh.dds"
-				small="gfx/interface/advisors/GEH/wnszh.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ GEM_trait_gourmet_research_society career_officer inflexible_strategist }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-		
-		advisor={
-			slot = army_chief
-			idea_token = GEH_wnszh
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
 	
-	GEH_wlskcm={ #지나츠
+	GEH_wlskcm={ #치나츠
 		name=GEH_wlskcm
 		portraits={
 			army={
@@ -918,8 +532,12 @@ characters={
 			slot = theorist
 			idea_token = GEH_wlskcm
 			ledger = navy
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
 			}
 			traits = {
 				submarine_specialist
@@ -928,8 +546,12 @@ characters={
 		advisor={	
 			slot = army_chief
 			idea_token = GEH_wlskcm
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
+			allowed = { 
+				OR = { 
+					original_tag = GEH 
+					original_tag = GEM 
+					original_tag = HEU 
+				} 
 			}
 			traits = {
 				army_chief_defensive_1
@@ -938,162 +560,6 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-	}
-
-	GEH_gndnzk={ #후우카
-		name=GEH_gndnzk
-		portraits={
-			army={
-				large="gfx/leaders/GEH/gndnzk.dds"
-				small="gfx/interface/advisors/GEH/gndnzk.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ infantry_officer }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=-1
-		}
-		advisor={
-			slot = high_command
-			idea_token = GEH_gndnzk_idea
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_logistics_2 }
-			cost = 100
-			ai_will_do = { factor = 24.000 }
-		}
-	}
-
-	GEH_wnfl={ #주리
-		name=GEH_wnfl
-		portraits={
-			army={
-				large="gfx/leaders/GEH/wnfl.dds"
-				small="gfx/interface/advisors/GEH/wnfl.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={  }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-		advisor={
-			slot = high_command
-			idea_token = GEH_wnfl_idea
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { army_CombinedArms_1 }
-			cost = 50
-			ai_will_do = { factor = 1.000 }
-		}
-	}
-	GEH_kinugawa_kasumi={ #카스미
-		name=GEH_kinugawa_kasumi
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_kinugawa_kasumi_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_kinugawa_kasumi_idea.tga"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=technocracy
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		corps_commander={
-			traits={ GEM_trait_hot_spring_department }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GEH_kinugawa_kasumi_political_advisor
-			allowed = {
-				OR = { original_tag = GEH original_tag = GEM }
-			}
-			available = {
-				has_hot_spring_department = yes
-			}
-			traits = {
-				captain_of_industry
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	GEH_shimokura_megu={ #메구
-		name=GEH_shimokura_megu
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_shimokura_megu_portrait.tga"
-				small="gfx/interface/advisors/GEH/megu.dds"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ GEM_trait_hot_spring_department }
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	GEH_hatami_ericha={ #하타미 에리카
-		name=GEH_hatami_ericha
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_hatami_ericha_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_hatami_ericha_idea.tga"
-			}
-		}
-		gender = female
-		country_leader={
-			ideology=centrism
-			traits={  }
-			expire="1965.1.1.1"
-		}
-		advisor={
-			slot = air_chief
-			idea_token = GEH_kirara_idea
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { air_chief_safety_2 }
-			cost = 100
-			ai_will_do = { factor = 1.000 }
-		}
-	}
-	GEH_kirara={ #키라라
-		name=GEH_kirara
-		portraits={
-			army={
-				large="gfx/leaders/GEH/GEH_kirara_portrait.tga"
-				small="gfx/interface/advisors/GEH/GEH_kirara_idea.tga"
-			}
-		}
-		gender = female
-		advisor={
-			slot = air_chief
-			idea_token = GEH_kirara_idea
-			allowed = { OR = { original_tag = GEH original_tag = GEM } }
-			traits = { air_chief_night_operations_2 }
-			cost = 100
-			ai_will_do = { factor = 24.000 }
 		}
 	}
 
@@ -1114,18 +580,15 @@ characters={
 			ai_will_do = { factor = 1.000 }
 		}
 	}
-	GEH_pandemonium_society={ #만마전
-		name=GEH_pandemonium_society
+
+	GEH_prefect_team_planning_department={ #기획부 평의회
+		name=GEH_prefect_team_planning_department
 		portraits={
 			army={
-				large="gfx/leaders/GEH/pandemonium_society.dds"
+				large="gfx/leaders/GEH/GEH_prefect_team.dds"
 			}
 		}
+
 		gender = female
-		country_leader={
-			ideology=pandemonium
-			traits={ GEH_pandemonium_society_trait }
-			expire="1965.1.1.1"
-		}
 	}
 }

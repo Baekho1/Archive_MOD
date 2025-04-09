@@ -28,6 +28,10 @@ focus_tree = {
 
         ai_will_do = {
             base = 100
+			modifier = {
+				factor = 5
+				has_completed_focus = GEH_zero_congress_focus
+			}
         }
 
 		available = {
@@ -4217,6 +4221,12 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+
+			set_country_flag = GEH_end_discipline
+			set_variable = {
+				geh_discipline_var = 100
+			}
+			geh_discipline_system_setting_effect = yes
         }
 	}
     focus = {
@@ -6027,6 +6037,43 @@ focus_tree = {
 			else_if = {
 				limit = { has_country_flag = hina_assembly_a_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_att
+
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.6
+				}
+	
+				set_politics = {
+					ruling_party = democratic #아코 리더
+					elections_allowed = no
+				}            
+				
+				if = {
+					limit = {
+						NOT = { 
+							has_country_leader = {
+								 character = GEH_dkzh 
+							} 
+						}
+					}
+	
+					GEH_dkzh = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = socialism
+								expire = "1980.1.1"
+								traits = {
+									GEH_ako_trait_1
+								}
+							}
+						}
+					}
+				}
+
+				set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
+				set_rule = { can_only_justify_war_on_threat_country = no }
+				set_rule = { can_join_opposite_factions = yes }
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_c_flag }

@@ -980,7 +980,7 @@ GEH_discipline_system_category = {
 		fire_only_once = no
 
 		available = {
-
+			command_power > 4.9
 		}
 		
 		custom_cost_trigger = {
@@ -997,7 +997,7 @@ GEH_discipline_system_category = {
 			}
 			modifier = {
 				add = 10
-				has_political_power > 200
+				has_war = no
 			}
 		}
 
