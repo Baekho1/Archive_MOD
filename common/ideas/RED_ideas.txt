@@ -2562,8 +2562,7 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
-						NOT = { has_completed_focus = RED_dipose_cherino }
-						NOT = { has_completed_focus = RED_no_error_at_ideology }
+						has_completed_focus = RED_club_focus_2
 					}
 					country_event = {
 						id = RED_event.28
@@ -2571,7 +2570,6 @@ ideas = {
 					}
 				}
 			}
-		}
 		}
 		RED_threat_of_coup_CUT = { #대숙청
 			picture = officers_purged
