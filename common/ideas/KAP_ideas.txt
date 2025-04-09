@@ -182,3 +182,26 @@ ideas = {
 		}
 	}
 }
+
+#현장실습
+ideas = {
+	country = {
+		KAP_Fieldtraining = {
+			picture = KAP_zotdam
+			
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+	}
+}

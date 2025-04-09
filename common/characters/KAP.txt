@@ -190,7 +190,7 @@ characters={
 			ideology = VKProject
 			traits={ KAP_3nd_sin_B }
 			expire="1949.1.1.12"
-			desc = KAP_AME_DESC
+			desc = "KAP_AME_DESC"
 		}
 	}
 

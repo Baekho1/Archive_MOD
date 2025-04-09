@@ -992,7 +992,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = KAP_anti_japanese_expedition
+				bonus = 0.25
+				uses = 3
+				category = infantry_weapons
+			}
 		}
 	}
 
@@ -1064,7 +1069,11 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			
+			set_technology = {
+				artillery1 = 1
+				interwar_antiair = 1
+				interwar_antitank = 1
+			}
 		}
 	}
 
@@ -1126,7 +1135,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			set_technology = {
+				armored_car_at_upgrade = 1
+			}
 		}
 	}
 
@@ -1188,7 +1199,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			set_technology = {
+				basic_heavy_tank_chassis = 1
+			}
 		}
 	}
 
@@ -1219,7 +1232,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_ideas = KAP_Fieldtraining
 		}
 	}
 

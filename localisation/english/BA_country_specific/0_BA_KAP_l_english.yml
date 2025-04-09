@@ -112,6 +112,7 @@
  KAP_3nd_sin_B:0 "세 번째 대전이"
  KAP_3nd_sin_B_desc:0 "우와 이스터에그 발견"
  KAP_reload:0 "재정비"
+ KAP_Fieldtraining:0 "현장실습"
 
  #지도자 특성
  KAP_kohane_vanjyai:0 "동경하는 소녀, 코하네"
