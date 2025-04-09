@@ -1505,7 +1505,7 @@ focus_tree = {
 					ideology = fascism_ideology
 					expire = "1980.1.1"
 					traits = {
-						dictator_1
+						dictator_1 
 					}
 				}
 			}
@@ -2229,7 +2229,7 @@ focus_tree = {
 				character = GEH_dkzh
 				promote_leader = yes
 				country_leader = {
-					ideology = socialism
+					ideology = technocracy
 					expire = "1980.1.1"
 					traits = {
 						GEH_ako_trait_1
@@ -6029,6 +6029,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+		
 		completion_reward = {
 			if = {
 				limit = { has_country_flag = hina_assembly_h_flag }
@@ -6061,7 +6062,8 @@ focus_tree = {
 						add_country_leader_role = {
 							promote_leader = yes
 							country_leader = {
-								ideology = socialism
+								ideology = technocracy
+								
 								expire = "1980.1.1"
 								traits = {
 									GEH_ako_trait_1
@@ -6071,6 +6073,10 @@ focus_tree = {
 					}
 				}
 
+				set_country_leader_description = {
+					desc = GEH_ako_amau_bad_ending_leader_desc
+				}
+
 				set_rule = { CAN_DECLARE_WAR_ON_SAME_IDEOLOGY = yes }
 				set_rule = { can_only_justify_war_on_threat_country = no }
 				set_rule = { can_join_opposite_factions = yes }
@@ -6078,10 +6084,53 @@ focus_tree = {
 			else_if = {
 				limit = { has_country_flag = hina_assembly_c_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ctt
+				
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.6
+				}
+	
+				set_politics = {
+					ruling_party = fascism #이오리 리더
+					elections_allowed = no
+				}            
+				
+				if = {
+					limit = {
+						NOT = { 
+							has_country_leader = {
+								 character = GEH_dldhfl
+							} 
+						}
+					}
+	
+					GEH_dldhfl = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1980.1.1"
+								traits = {
+									dictator_1
+									GEH_blame_director
+								}
+							}
+						}
+					}
+				}
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_normal_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ntt
+
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+
+				GEH_dkzh = {
+					promote_leader = yes
+				}
 			}
 			else = {
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_ftt
