@@ -20,6 +20,9 @@ characters={
 			planning_skill=5
 			logistics_skill= 5
 			legacy_id=250
+			visible = {
+				NOT = { has_global_flag = GEH_BTBOTS_END_flag }
+			}
 		}
 		advisor={
 			slot = political_advisor
@@ -375,6 +378,10 @@ characters={
 				original_tag = GEH 
 			}
 
+			available  = {
+				has_intelligence_agency  = yes 
+			}
+
 			traits = {
 				head_of_intelligence
 			}
@@ -583,6 +590,17 @@ characters={
 
 	GEH_prefect_team_planning_department={ #기획부 평의회
 		name=GEH_prefect_team_planning_department
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_prefect_team.dds"
+			}
+		}
+
+		gender = female
+	}
+
+	GEH_prefect_team_emergency_committee={ #(공석)
+		name=GEH_prefect_team_emergency_committee
 		portraits={
 			army={
 				large="gfx/leaders/GEH/GEH_prefect_team.dds"
