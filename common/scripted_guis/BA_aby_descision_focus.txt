@@ -1,0 +1,278 @@
+scripted_gui = {
+	aby_focus_ui = {
+		context_type = decision_category
+		window_name = "decisionfocusview"
+
+		effects = {
+			ABY_descision_focus_first_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_1_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_2_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_3_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_4_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_5_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_6_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_7_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_8_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_9_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_10_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_11_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_12_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_13_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_14_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_abydos_15_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_1_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_2_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_3_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_4_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_5_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_6_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_7_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_8_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_9_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_10_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_11_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_german_12_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_1_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_2_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_3_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_4_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_5_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_6_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_7_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_8_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_9_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_10_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_11_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+			ABY_descision_focus_czecho_12_unavailable_click = {
+				set_country_flag = ABY_flag_open_focus
+			}
+		}
+
+		triggers = {
+			ABY_descision_focus_first_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_1_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_2_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_3_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_4_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_5_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_6_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_7_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_8_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_9_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_10_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_11_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_12_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_13_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_14_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_abydos_15_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_1_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_2_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_3_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_4_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_5_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_6_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_7_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_8_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_9_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_10_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_11_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_german_12_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_1_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_2_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_3_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_4_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_5_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_6_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_7_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_8_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_9_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_10_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_11_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+			ABY_descision_focus_czecho_12_unavailable_visible = {
+				NOT = {has_country_flag = GAEBALJUNG}
+			}
+		}
+	}
+	aby_focus_popup = {
+		window_name = "ABY_national_focus_detail_view"
+		context_type = player_context
+	
+		visible = {
+			ROOT = {
+				has_country_flag = ABY_flag_open_focus
+			}
+		}
+
+		effects = {
+			close_click = {
+				clr_country_flag = ABY_flag_open_focus
+			}
+			start_click = {
+				clr_country_flag = ABY_flag_open_focus
+			}
+		}
+		
+		properties = {
+			ABY_focus_progressbar = {
+				frame = ABY_focus_time_flag:days_left
+			}
+		}
+	}
+}
+

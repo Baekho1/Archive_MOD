@@ -1424,4 +1424,115 @@ spriteTypes = {
 		}
 	}
 
+	progressbartype = {
+		name = "GFX_ABY_focus_progressbar"
+		textureFile1 = "gfx/interface/research_progressbar.dds"
+		textureFile2 = "gfx/interface/research_progressbar_bg.dds"
+		size = { x = 175 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 49
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_focus_bg_small"
+		size= { x=800 y=800 }
+		textureFile = "gfx/interface/decisions/icon/tiled_focus_bg_small.tga"
+		borderSize = { x=400 y=400 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}	
+
+	spriteType = {
+		name = "GFX_ABY_portrait_base"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_base.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_portrait_czech"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_czech.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_portrait_german"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_portrait_german.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_first"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_first.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_unavailble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_unavailble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_unavailble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_unavailble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_unavailble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_unavailble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_availble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_availble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_availble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_availble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_availble"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_availble.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_german_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_german_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_czech_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_czech_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_ABY_focus_abydos_base_completed"
+		texturefile = "gfx/interface/decisions/ABY_focus_gui/ABY_focus_abydos_base_completed.tga"
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
 }
