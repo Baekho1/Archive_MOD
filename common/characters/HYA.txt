@@ -16,7 +16,9 @@ characters={
 			ideology=liberalism
 			traits={
 				HYA_T1a
+				HYA_trait_niya
 			}
+			desc = HYA_NIYA_DESC
 			expire="1965.1.1.1"
 		}
 		field_marshal={

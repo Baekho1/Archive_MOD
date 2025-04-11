@@ -1710,6 +1710,24 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		army_defence_against_major_factor = 0.1
 	}
+	
+	GEH_paranoia_ako_bad = { # 무너진 선임행정관
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.15
+		training_time_army_factor = -0.05
+		army_defence_against_major_factor = 0.05
+	}
+
+	GEH_paranoia_ako_good = { # 히나의 영원한 반려자
+		random = no
+		sprite = 12
+		war_support_factor = 0.2
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+		non_core_manpower = 0.05
+	}
 
 	GEH_artist = { # 예술가
 		random = no
@@ -3195,17 +3213,29 @@ leader_traits = {
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
-		political_power_factor = -0.30
+		political_power_factor = -0.3
+		stability_factor = 0.1
+		political_advisor_cost_factor = 0.10
+		hidden_modifier = {
+			ai_desired_divisions_factor = 1.2
+			ai_focus_defense_factor = 0.5
+		}
+	}
+	HYA_T1a_up = { #백귀야행의 음양부장
+		random = no
+		political_power_factor = -0.15
 		stability_factor = 0.15
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
 		}
 	}
-	HYA_T1a_up = { #낙천적인 음양부장
+	HYA_trait_niya = { #인간적인 무도회
 		random = no
-		political_power_factor = -0.15
-		stability_factor = 0.15
+		political_power_gain = 0.15
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
