@@ -3,8 +3,8 @@
 oob = "HYA_1936"
 
 set_research_slots = 3
-set_stability = 0.20
-set_war_support = 0.40
+set_stability = 0.56
+set_war_support = 0.43
 add_command_power = 10
 
 add_breakthrough_progress = {
