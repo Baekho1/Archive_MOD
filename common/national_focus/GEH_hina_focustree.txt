@@ -27,9 +27,9 @@ focus_tree = {
 		cost = 3
 
         ai_will_do = {
-            base = 100
+            base = 300
 			modifier = {
-				factor = 5
+				factor = 3
 				has_completed_focus = GEH_zero_congress_focus
 			}
         }
@@ -885,6 +885,10 @@ focus_tree = {
             custom_effect_tooltip = tooltip_effect_upon_focus_completion
             country_event=hina.5
 			mark_focus_tree_layout_dirty = yes
+
+			hidden_effect = {
+				news_event = { id = GEH_news.2 }
+			}
 		}
 	}
 	focus = {
@@ -1007,6 +1011,10 @@ focus_tree = {
 				effect_tooltip = { unlock_national_focus = GEH_main_route_focus }
 			}
 			mark_focus_tree_layout_dirty = yes
+			
+			hidden_effect = {
+				news_event = { id = GEH_news.3 }
+			}
 		}
 	}
 
@@ -3153,6 +3161,10 @@ focus_tree = {
 				custom_effect_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_mission_return_tt
 				add_to_variable = { GEH_basking_in_the_brilliance_of_their_serenade_clock_val = -1 }
 			}
+			
+			hidden_effect = {
+				news_event = { id = GEH_news.4 }
+			}
 		}
 	}
     focus = {
@@ -4227,6 +4239,10 @@ focus_tree = {
 				geh_discipline_var = 100
 			}
 			geh_discipline_system_setting_effect = yes
+			
+			hidden_effect = {
+				news_event = { id = GEH_news.1 }
+			}
         }
 	}
     focus = {
@@ -5069,6 +5085,10 @@ focus_tree = {
 			GEH_popular_support_up_effect = yes
 			custom_effect_tooltip = GEH_three_congress_focus_tt
 			set_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
+			
+			hidden_effect = {
+				news_event = { id = GEH_news.5 }
+			}
 		}
 	}
     focus = {
@@ -5691,7 +5711,7 @@ focus_tree = {
 # /아코 중점 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_a_rout
-		icon = GFX_focus_GEH_last_focus_effect
+		icon = GFX_focus_PER_national_museum
 		cost = 2
 
 		relative_position_id = GEH_last_focus_3
@@ -5732,6 +5752,83 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = GEH_amau_administrative_officer
+		icon = GFX_focus_generic_low_cost_housing
+		cost = 3
+
+		relative_position_id = GEH_last_focus_effect_a_rout
+		x = -1
+		y = 1
+
+		available = {
+			OR = {
+				has_country_flag = GEH_ako_route_bad_ending_flag
+				has_country_flag = GEH_ako_route_amau_ending_flag
+			}
+		}
+
+        prerequisite = {
+            focus = GEH_last_focus_effect_a_rout
+        }
+
+		mutually_exclusive = {
+			focus = GEH_ako_sorasaki_administrative_officer
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+    focus = {
+		id = GEH_ako_sorasaki_administrative_officer
+		icon = GFX_goal_PrefectTeam_muster_Ako
+		cost = 3
+
+		relative_position_id = GEH_last_focus_effect_a_rout
+		x = 1
+		y = 1
+
+		available = {
+			has_country_flag = GEH_ako_route_ako_sorasaki_ending_flag
+		}
+
+        prerequisite = {
+            focus = GEH_last_focus_effect_a_rout
+        }
+
+		mutually_exclusive = {
+			focus = GEH_amau_administrative_officer
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+		completion_reward = {
+
 		}
 	}
 # 아코 중점 최종장 끝/
