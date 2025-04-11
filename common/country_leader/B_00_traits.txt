@@ -1720,7 +1720,7 @@ leader_traits = {
 		army_defence_against_major_factor = 0.05
 	}
 
-	GEH_paranoia_ako = { # 히나의 영원한 반려자
+	GEH_paranoia_ako_good = { # 히나의 영원한 반려자
 		random = no
 		sprite = 12
 		war_support_factor = 0.2
