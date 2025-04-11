@@ -1710,6 +1710,24 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		army_defence_against_major_factor = 0.1
 	}
+	
+	GEH_paranoia_ako_bad = { # 무너진 선임행정관
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.15
+		training_time_army_factor = -0.05
+		army_defence_against_major_factor = 0.05
+	}
+
+	GEH_paranoia_ako = { # 히나의 영원한 반려자
+		random = no
+		sprite = 12
+		war_support_factor = 0.2
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+		non_core_manpower = 0.05
+	}
 
 	GEH_artist = { # 예술가
 		random = no
