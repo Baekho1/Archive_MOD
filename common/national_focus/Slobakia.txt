@@ -82,6 +82,14 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 			add_stability = 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -111,6 +119,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_country_leader_trait = SLO_low_support
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -168,7 +184,7 @@ focus_tree = {
 			focus = SLO_foc_1-3
 		}
 		available = {
-			democratic > 0.40
+			democratic > 0.30
 		}
 		bypass = {
 		}
@@ -238,7 +254,14 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_stability = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			SLO_economy_chaos_down = yes
 		}
 	}
@@ -247,7 +270,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-3
 		icon = GFX_focus_PER_embrace_opulence
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -282,6 +305,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+		select_effect = {
+			modify_timed_idea = {
+				idea = SLO_cze_exile_idea
+				days = 35
 			}
 		}
 	}
@@ -337,7 +366,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-5
 		icon = GFX_goal_generic_alliance
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -353,7 +382,7 @@ focus_tree = {
 			is_in_faction = no
 			OR = {
 				is_major = yes
-				num_of_factories > 25
+				num_of_factories > 15
 			}
 		}
 		bypass = {
@@ -419,7 +448,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SLO_czk_reform_idea
-				days = 180
+				days = 360
 			}
 			SLO_economy_chaos_down = yes
 		}
@@ -525,9 +554,38 @@ focus_tree = {
 	focus = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-53
+		icon = GFX_focus_AFG_a_modern_economy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 7
+		prerequisite = {
+			focus = SLO_foc_1-4-9
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			num_of_factories > 15
+		}
+		bypass = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SLO_fast_industrialization_idea
+				add_idea = SLO_fast_industrialization2_idea
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-10
 		icon = GFX_focus_generic_polish_deal
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -547,6 +605,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
+			is_in_faction_with = POL
 		}
 		completion_reward = {
 			POL = {
@@ -561,7 +620,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-11
 		icon = GFX_focus_research
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -588,7 +647,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-12
 		icon = GFX_focus_generic_university_1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -779,7 +838,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-16
 		icon = GFX_focus_generic_attack_hungary
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -868,7 +927,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-18
 		icon = GFX_focus_BRA_the_polaca
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -917,7 +976,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-19
 		icon = GFX_focus_generic_befriend_hungary
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1261,7 +1320,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-26
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1280,10 +1339,9 @@ focus_tree = {
 			has_war_with = SOV
 		}
 		completion_reward = {
-			add_political_power = 120
 			add_popularity = {
 				ideology = communism
-				popularity = -0.15
+				popularity = -0.20
 			}
 			send_embargo = SOV
 			SOV = {
@@ -1497,7 +1555,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-32
 		icon = GFX_focus_generic_befriend_czechoslovakia
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1531,7 +1589,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-33
 		icon = GFX_focus_POL_beck_ribbentrop
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1602,7 +1660,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-34
 		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1666,7 +1724,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-35
 		icon = GFX_goal_generic_special_forces 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1707,7 +1765,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-36
 		icon = GFX_goal_generic_occupy_states_ongoing_war 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2006,7 +2064,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-41
 		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2169,7 +2227,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-44
 		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2243,10 +2301,10 @@ focus_tree = {
 				set_state_category = large_town
 			}
 			972 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_category = large_town
@@ -2448,7 +2506,7 @@ focus_tree = {
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4-51
 		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}

@@ -15,6 +15,7 @@
  SLO_newborn_army_idea2:0 "신생 군대"
  SLO_newborn_army_idea2_desc:0 "슬로바키아군은 나날히 발전해나가고 있으나 아직 완전하다고 보기는 어렵습니다. 더욱더 진보해야 할 것입니다."
  SLO_fast_industrialization_idea:0 "급속 산업화"
+ SLO_fast_industrialization2_idea:0 "안정적인 산업화"
  SLO_czk_reform_idea:0 "코루나 개혁"
  SLO_bratislava_university_idea:0 "브라티슬라바 공과대학"
  SLO_bratislava_university2_idea:0 "브라티슬라바 대학가"
@@ -86,6 +87,7 @@
  SLO_foc_1-4-50:0 "수도권에 대학 유치"
  SLO_foc_1-4-51:0 "경공업 확충"
  SLO_foc_1-4-52:0 "브라티슬라바의 기적"
+ SLO_foc_1-4-53: "안정적인 산업화"
  SLO_foc_2:0 "우익과 가톨릭의 연합"
 
  ##이벤트##
@@ -281,6 +283,10 @@
  SLO_izidor_kovarik:0 "이지도르 코바리크"
  SLO_jan_gerthofer:0 "얀 게르토퍼"
  SLO_gustav_malar:0 "구스타브 말라르"
+ SLO_karol_sidor:0 "카롤 시도르"
+ SLO_frano_kral:0 "프라노 크랄"
+ SLO_jozef_turanec:0 "요제프 투라네츠"
+ SLO_stefan_jurech:0 "스테판 유레흐"
 
  great_musician:0 "뛰어난 음악가"
  SLO_ice_guy:0 "시베리아의 생존자"

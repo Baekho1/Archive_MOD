@@ -102,6 +102,10 @@ recruit_character = SLO_navy_c
 recruit_character = SLO_izidor_kovarik
 recruit_character = SLO_jan_gerthofer
 recruit_character = SLO_gustav_malar
+recruit_character = SLO_karol_sidor
+recruit_character = SLO_frano_kral
+recruit_character = SLO_jozef_turanec
+recruit_character = SLO_stefan_jurech
 
 set_stability = 0.35
 set_war_support = 0.50

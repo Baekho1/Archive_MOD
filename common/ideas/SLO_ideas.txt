@@ -7,7 +7,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				political_power_cost = 0.15
-				weekly_manpower = 250
+				weekly_manpower = 400
 				production_speed_buildings_factor = 0.10
 			}
 		}
@@ -67,11 +67,24 @@ ideas = {
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
 			modifier = {
-				stability_factor = 0.05			
+				political_power_cost = 0.15
+				stability_factor = -0.05	
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_industrial_complex_factor = 0.07
 				production_speed_infrastructure_factor = 0.07
+			}
+		}
+		SLO_fast_industrialization2_idea = {
+			picture = ARG_public_works_investment
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.07
+				production_speed_infrastructure_factor = 0.07
+				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
 		SLO_czk_reform_idea = {
@@ -80,7 +93,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = -0.10	
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 		SLO_bratislava_university_idea = {

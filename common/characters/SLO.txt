@@ -165,7 +165,7 @@ characters={
 				original_tag = SLO
 			}
 			traits  = {
-				army_CombinedArms_2
+				army_CombinedArms_1
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -209,7 +209,7 @@ characters={
 				factor  = 1.000
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits = {
 				politically_connected
 				infantry_officer
@@ -831,6 +831,119 @@ characters={
 			attack_skill=3
 			defense_skill=1
 			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	SLO_karol_sidor={ #카롤 시도르 / 정치
+		name="SLO_karol_sidor"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_29.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_29.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_29.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_29.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_karol_sidor
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				nationalist_journalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 150
+		}
+	}
+	SLO_frano_kral={ #프라노 크랄 / 정치
+		name="SLO_frano_kral"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_30.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_30.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_30.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_30.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SLO_frano_kral
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				revolutionary_poet
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 150
+		}
+	}
+	SLO_jozef_turanec={ #요제프 투라네츠 / 육군
+		name="SLO_jozef_turanec"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_31.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_31.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_31.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_31.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SLO_jozef_turanec
+			allowed = {
+				original_tag = SLO
+			}
+			traits  = {
+				army_artillery_2
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			cost = 100
+		}
+		corps_commander={
+			traits = {
+				war_hero
+			}
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+	SLO_stefan_jurech={ #스테판 유레흐 / 육군
+		name="SLO_stefan_jurech"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/SLO_pot_32.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_32.tga"
+			}
+			army={
+				large="gfx/leaders/SLO/SLO_pot_32.tga"
+				small="gfx/interface/advisors/SLO/SLO_Spot_32.tga"
+			}
+		}
+		corps_commander={
+			traits = {
+			}
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
 			logistics_skill=1
 		}
 	}
