@@ -37,7 +37,7 @@ focus_tree = {
 	}
 	shortcut = {
 		name = RED_focus_politic_3
-		target = RED_the_threats_abound
+		target = RED_dipose_cherino
 		scroll_wheel_factor = 1
 	}
 	shortcut = {
@@ -10744,9 +10744,11 @@ focus_tree = {
 		y = 0
 		relative_position_id = RED_our_leader_cherino
 		select_effect = {
-			country_event = {
-				id =  RED_revolution.1
-				days = 25
+			RED_minori = {
+				unit_leader_event = {
+					id =  RED_revolution.1
+					days = 25
+				}
 			}
 		}
 		allow_branch = {
@@ -10888,7 +10890,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 20
-			country_event = RED_revolution.4
+			RED_minori = {
+				unit_leader_event = RED_revolution.4
+			}
 			hidden_effect = {
 				country_event = {
 					id = RED_revolution.5
@@ -10942,6 +10946,13 @@ focus_tree = {
 			base = 9999
 		}
 		completion_reward = {
+			RED_yakumo = {
+				unit_leader_event = {
+					id = RED_revolution.7
+					days = 1
+				}
+			}
+			custom_effect_tooltip = RED_take_publish_club_tt
 		}
 	}
 	focus = {
@@ -10977,6 +10988,7 @@ focus_tree = {
 				long_name = RED_revolutionary_committee_long
 				name = RED_revolutionary_committee
 			}
+			unlock_decision_tooltip = RED_ousting_office
 		}
 	}
 	focus = {
@@ -11088,10 +11100,6 @@ focus_tree = {
 				add_command_power = 200
 			}
 			add_command_power = 10
-			swap_ideas = {
-				remove_idea = RED_fire_of_revolution
-				add_idea = RED_fire_of_revolution_1
-			}
 			if = {
 				limit = {
 					ROOT = {
@@ -11106,18 +11114,18 @@ focus_tree = {
 				create_unit = {
 					division = "name = \"Student Organisation\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
 					owner = RED
-					count = 4
+					count = 3
 				}
 			}
 		}
 	}
 	focus = {
-		#방위위원회 포섭
+		#혁명방위전선
 		id = RED_deal_with_ger
 		prerequisite = {
 			focus = RED_freedom_of_thought
 		}
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_HUN_reinstate_the_lenin_boys
 		x = 1
 		y = 1
 		ai_will_do = {
@@ -11126,7 +11134,10 @@ focus_tree = {
 		relative_position_id = RED_freedom_of_thought
 		cost = 2.9
 		completion_reward = {
-			unlock_decision_tooltip = RED_ousting_office
+			country_event = {
+				id = RED_minori_event.7
+				days = 1
+			}
 		}
 	}
 	focus = {
@@ -11144,23 +11155,13 @@ focus_tree = {
 			factor = 999
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RED_threat_of_coup_4
-				add_idea = RED_threat_of_coup_5
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-				}
-			}
 			if = {
 				limit = {
 					is_ai = yes
 				}
 				add_command_power = 200
 			}
+			custom_effect_tooltip = RED_back_to_workplace_tt
 		}
 	}
 	focus = {

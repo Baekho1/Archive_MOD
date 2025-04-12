@@ -438,6 +438,21 @@ country_event = { # 1차 총회 - 1
 
 	option = { 
 		name = hina_assembly.8.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
 		custom_effect_tooltip = hina_assembly_a_1_tt
 		add_to_variable = { GEH_hina_a_var = 1 }
 
@@ -448,6 +463,22 @@ country_event = { # 1차 총회 - 1
 	
 	option = { 
 		name = hina_assembly.8.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		custom_effect_tooltip = hina_assembly_h_1_tt
 		set_country_flag = GEH_event_hina_route_flag1
 		add_stability = 0.05
@@ -455,6 +486,21 @@ country_event = { # 1차 총회 - 1
 	
 	option = { 
 		name = hina_assembly.8.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
 		custom_effect_tooltip = hina_assembly_c_1_tt
 		add_to_variable = { GEH_hina_c_var = 1 }
 
@@ -472,6 +518,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = { 
 		name = hina_assembly.9.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+		
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 0 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -487,6 +549,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = {
 		name = hina_assembly.9.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag1 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -499,6 +577,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = {
 		name = hina_assembly.9.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_c_var > 0 } }
 			custom_effect_tooltip = hina_assembly_c_2_tt
@@ -533,6 +627,28 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag2 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -550,6 +666,16 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag2 }
 			custom_effect_tooltip = hina_assembly_n_tt
@@ -559,6 +685,16 @@ country_event = { # 1차 총회 - 3
 	}
 	
 	option = {
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		trigger = {
 			NOT = { has_country_flag = hina_assembly_9_flag }
 		}
@@ -586,6 +722,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 1 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -599,6 +751,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag3 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -612,6 +780,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_c_var > 1 } }
 			custom_effect_tooltip = hina_assembly_c_2_tt
@@ -623,6 +807,7 @@ country_event = { # 1차 총회 - 4
 		set_country_flag = hina_assembly_11_c_flag
 	}
 }
+
 country_event = { # 1차 총회 - 5
 	id = hina_assembly.12
 	title = hina_assembly.12.t
@@ -633,11 +818,37 @@ country_event = { # 1차 총회 - 5
 	
 	option = { 
 		name = hina_assembly.12.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		custom_effect_tooltip = hina_assembly_n_tt
 	}
 	
 	option = { 
 		name = hina_assembly.12.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 2 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -655,6 +866,16 @@ country_event = { # 1차 총회 - 5
 	
 	option = { 
 		name = hina_assembly.12.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+		}
+
 		trigger = {
 			has_country_flag = GEH_event_hina_route_flag1
 			has_country_flag = GEH_event_hina_route_flag2
@@ -1196,7 +1417,6 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	}
 }
 
-
 country_event = { #
 	id = GEH.event.1
 	title = GEH.event.1.t
@@ -1355,7 +1575,8 @@ country_event = { # 죽어가는 계절의 나는
 	option = { 
 		name = GEH.event.11.a 
 		set_country_flag = GEH_ako_route_ako_sorasaki_ending_flag
-
+		set_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
+		
 		custom_effect_tooltip = GEH_ako_route_ako_sorasaki_ending_flag_tt
 	}
 }
@@ -1442,28 +1663,30 @@ news_event = {
 	desc = {
 		text = GEH_news.2.desc.hina
 		trigger = { 
-			GEH = { has_country_flag = hina_assembly_h_flag }
+			GEH = { has_country_flag = hina_assembly_12_flag }
 		}
 	}
 
 	desc = {
 		text = GEH_news.2.desc.iori
 		trigger = { 
-			GEH = { has_country_flag = hina_assembly_c_flag }
+			GEH = { check_variable = { GEH_hina_c_var > 3 } }
 		}
 	}
 
 	desc = {
 		text = GEH_news.2.desc.ako
 		trigger = { 
-			GEH = { has_country_flag = hina_assembly_a_flag }
+			GEH = { check_variable = { GEH_hina_a_var > 3 } }
 		}
 	}
 
 	desc = {
 		text = GEH_news.2.desc.generic
 		trigger = { 
-			GEH = { has_country_flag = hina_assembly_normal_flag }
+			NOT = { GEH = { has_country_flag = hina_assembly_12_flag } }
+			NOT = { GEH = { check_variable = { GEH_hina_c_var > 3 } } }
+			NOT = { GEH = { check_variable = { GEH_hina_a_var > 3 } } }
 		}
 	}
 
@@ -1800,6 +2023,38 @@ news_event = {
 	}
 	option = {
 		name = GEH_news.10.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 두 번째 뇌제의 통치
+news_event = {
+	id = GEH_news.11
+	title = GEH_news.11.t
+	desc = GEH_news.11.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.11.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.11.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.11.c
 		trigger = {
 			Kivotos_tag = no
 		}

@@ -615,11 +615,11 @@ COU_decision_the_student_council = {
 		      if = {
 			     limit = {
 				     OR = {
-			        	check_variable = { global.aru_schedule_point = 6 }
-				        check_variable = { global.aru_schedule_point < 6 }
+			        	check_variable = { global.cou_schedule_point = 6 }
+				        check_variable = { global.cou_schedule_point < 6 }
 			         }
 			     }
-				 add_to_variable = { global.aru_schedule_point = 1 }
+				 add_to_variable = { global.cou_schedule_point = 1 }
 				 custom_effect_tooltip = COU_tooltip_gain_one_schedule_ticket
 			 }
 			 hidden_effect = { activate_mission = COU_regain_schedule_ticket }
@@ -632,7 +632,7 @@ COU_decision_the_student_council = {
 		icon = icon_schedule_ticke
 
 		available = {
-			 check_variable = { global.aru_schedule_point > 0 }
+			 check_variable = { global.cou_schedule_point > 0 }
 			 NOT = { has_country_flag = COU_flag_mission_clearing }
 		}
 
@@ -645,7 +645,7 @@ COU_decision_the_student_council = {
 		days_remove = 30
 
 		custom_cost_trigger = {
-			check_variable = { global.aru_schedule_point > 0 }
+			check_variable = { global.cou_schedule_point > 0 }
 		}
 
 		custom_cost_text = aru_schedule_1
@@ -659,7 +659,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
-			 add_to_variable = { global.aru_schedule_point = -1 }
+			 add_to_variable = { global.cou_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -672,7 +672,7 @@ COU_decision_the_student_council = {
 		icon = icon_schedule_ticke
 
 		available = {
-			 check_variable = { global.aru_schedule_point > 0 }
+			 check_variable = { global.cou_schedule_point > 0 }
 			 NOT = { has_country_flag = COU_flag_mission_clearing }
 		}
 
@@ -685,7 +685,7 @@ COU_decision_the_student_council = {
 		days_remove = 30
 
 		custom_cost_trigger = {
-			check_variable = { global.aru_schedule_point > 0 }
+			check_variable = { global.cou_schedule_point > 0 }
 		}
 
 		custom_cost_text = aru_schedule_1
@@ -699,7 +699,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
-			 add_to_variable = { global.aru_schedule_point = -1 }
+			 add_to_variable = { global.cou_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -712,7 +712,7 @@ COU_decision_the_student_council = {
 		icon = icon_schedule_ticke
 
 		available = {
-			 check_variable = { global.aru_schedule_point > 0 }
+			 check_variable = { global.cou_schedule_point > 0 }
 			 NOT = { has_country_flag = COU_flag_mission_clearing }
 		}
 
@@ -725,7 +725,7 @@ COU_decision_the_student_council = {
 		days_remove = 30
 
 		custom_cost_trigger = {
-			check_variable = { global.aru_schedule_point > 0 }
+			check_variable = { global.cou_schedule_point > 0 }
 		}
 
 		custom_cost_text = aru_schedule_1
@@ -739,7 +739,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
-			 add_to_variable = { global.aru_schedule_point = -1 }
+			 add_to_variable = { global.cou_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -752,7 +752,7 @@ COU_decision_the_student_council = {
 		icon = icon_schedule_ticke
 
 		available = {
-			 check_variable = { global.aru_schedule_point > 0 }
+			 check_variable = { global.cou_schedule_point > 0 }
 			 NOT = { has_country_flag = COU_flag_mission_clearing }
 		}
 
@@ -765,7 +765,7 @@ COU_decision_the_student_council = {
 		days_remove = 30
 
 		custom_cost_trigger = {
-			check_variable = { global.aru_schedule_point > 0 }
+			check_variable = { global.cou_schedule_point > 0 }
 		}
 
 		custom_cost_text = aru_schedule_1
@@ -781,7 +781,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
-			 add_to_variable = { global.aru_schedule_point = -1 }
+			 add_to_variable = { global.cou_schedule_point = -1 }
 		}
 
 		remove_effect = {
@@ -794,7 +794,7 @@ COU_decision_the_student_council = {
 		icon = icon_schedule_ticke
 
 		available = {
-			 check_variable = { global.aru_schedule_point > 0 }
+			 check_variable = { global.cou_schedule_point > 0 }
 			 NOT = { has_country_flag = COU_flag_mission_clearing }
 		}
 
@@ -807,7 +807,7 @@ COU_decision_the_student_council = {
 		days_remove = 30
 
 		custom_cost_trigger = {
-			check_variable = { global.aru_schedule_point > 0 }
+			check_variable = { global.cou_schedule_point > 0 }
 		}
 
 		custom_cost_text = aru_schedule_1
@@ -821,7 +821,7 @@ COU_decision_the_student_council = {
 		
 		complete_effect = { 
 		     set_country_flag = COU_flag_mission_clearing
-			 add_to_variable = { global.aru_schedule_point = -1 }
+			 add_to_variable = { global.cou_schedule_point = -1 }
 		}
 
 		remove_effect = {

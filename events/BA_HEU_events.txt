@@ -4568,6 +4568,60 @@ country_event = { #네덜란드 행정관
 	}
 }
 
+country_event = { #좋아하고좋아하고좋아하고좋아해서
+	id = HEU_event.285
+	title = HEU_event.285.t
+	desc = HEU_event.285.desc
+
+	picture = GFX_report_event_generic_reloading
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.285.a 
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = HEU_aru_sad_tt
+	}
+}
+
+country_event = { #심야의 쿠데타 - 1
+	id = HEU_event.286
+	title = HEU_event.286.t
+	desc = HEU_event.286.desc
+
+	picture = GFX_report_event_luxembourg_army_2
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.286.a 
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
+country_event = { #심야의 쿠데타 - 2
+	id = HEU_event.287
+	title = HEU_event.287.t
+	desc = HEU_event.287.desc
+
+	picture = GFX_report_event_luxembourg_army_1
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU_event.287.a 
+		ai_chance = {
+			base = 10
+		}
+
+	}
+}
+
 country_event = { #룩셈부르크 대공국의 멸망
 	id = HEU_event.2000
 	title = HEU_event.2000.t
@@ -6487,6 +6541,7 @@ country_event = { #소라사키 히나 방문
 		}
 		NOT = { has_completed_focus = HEU_germany_union }
 		has_completed_focus = HEU_luxembourg_military_police
+		NOT = { has_global_flag = GEH_BTBOTS_END_flag }
 	}
 
 	option = { 
@@ -6790,6 +6845,20 @@ country_event = { #나를 두고 가지 마
 
 	option = { 
 		name = HEU.flavor_event.108.a 
+
+	}
+}
+
+country_event = { #티파티?
+	id = HEU.flavor_event.109
+	title = HEU.flavor_event.109.t
+	desc = HEU.flavor_event.109.desc
+	picture = GFX_event_TRN_mika_event_picture
+
+    is_triggered_only = yes
+
+	option = { 
+		name = HEU.flavor_event.109.a 
 
 	}
 }

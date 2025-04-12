@@ -967,7 +967,7 @@
  
  ##공용 디시전 
  COU_decision_the_student_council:0 "총학생회"
- COU_decision_the_student_council_desc:0 "\n\n£GFX_COU_decision_gsc\n\n\n\n\n\n§Y총학생회§!는 §Y생텀 타워§!를 중심으로 키보토스 전역을 다스렸습니다. 그러한 총학생회는 §Y행정위원회§!로 구성되어 있는데, §Y행정위원회§!는 §g공식적으로는§! §Y11개의 부서§!를 두어 관리를 원할하게 하고 권력을 분산시키게 하여 총학생회의 통제를 단단히 합니다. §Y대전이§! 이후 추가적으로 창설된 몇 가지의 §g임시 부서§!들은 공식적으론 §R집계되지 않습니다.§!\n\n총학생회에서의 안건은 보통 §Y재무실, 교통실, 조정실, 방위실, 체육실§!, 이 §g5개§!의 부서가 제출하며 서로가 자신의 안건을 우선적으로 제출하기 위해 다툽니다. 안건을 활성화하기 위해서는 §Y스케줄 티켓§! £schedule_ticket_texticon 을 필요로 합니다. §Y스케줄 티켓§! £schedule_ticket_texticon 은 3달마다 §g1개§!씩 보충됩니다. §g6개§! 이상으로는 보충되지 않습니다.\n\n현재 §Y스케줄 티켓§! £schedule_ticket_texticon 의 개수는 [?global.aru_schedule_point|+0]/6 개 입니다.\n"
+ COU_decision_the_student_council_desc:0 "\n\n£GFX_COU_decision_gsc\n\n\n\n\n\n§Y총학생회§!는 §Y생텀 타워§!를 중심으로 키보토스 전역을 다스렸습니다. 그러한 총학생회는 §Y행정위원회§!로 구성되어 있는데, §Y행정위원회§!는 §g공식적으로는§! §Y11개의 부서§!를 두어 관리를 원할하게 하고 권력을 분산시키게 하여 총학생회의 통제를 단단히 합니다. §Y대전이§! 이후 추가적으로 창설된 몇 가지의 §g임시 부서§!들은 공식적으론 §R집계되지 않습니다.§!\n\n총학생회에서의 안건은 보통 §Y재무실, 교통실, 조정실, 방위실, 체육실§!, 이 §g5개§!의 부서가 제출하며 서로가 자신의 안건을 우선적으로 제출하기 위해 다툽니다. 안건을 활성화하기 위해서는 §Y스케줄 티켓§! £schedule_ticket_texticon 을 필요로 합니다. §Y스케줄 티켓§! £schedule_ticket_texticon 은 3달마다 §g1개§!씩 보충됩니다. §g6개§! 이상으로는 보충되지 않습니다.\n\n현재 §Y스케줄 티켓§! £schedule_ticket_texticon 의 개수는 [?global.cou_schedule_point|+0]/6 개 입니다.\n"
  COU_tooltip_gain_one_schedule_ticket:0 "§Y스케줄 티켓§! £schedule_ticket_texticon 이 §g1 개§! 보충됩니다."
  COU_flag_mission_clearing:0 "§g안건이 제출된 상태가 아님.§!"
  COU_the_srt_problem:0 "SRT 특수학원의 재판 회부"

@@ -2097,6 +2097,10 @@ focus_tree = {
 			unlock_decision_category_tooltip = GEH_basking_in_the_brilliance_of_their_serenade_FUCK
 			activate_mission = GEH_basking_in_the_brilliance_of_their_serenade_FUCK_mission
 			country_event = GEH_BTBOTS.100
+
+			hidden_effect = {
+				news_event = { id = GEH_news.11 }
+			}
         }
         ai_will_do = {
             factor = 1
