@@ -17,3 +17,16 @@ BLM_gang_thugs_war = {
 	}
 	priority = 200
 }
+
+BLM_bretagne_revolution_decision = {
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	icon = GFX_decision_category_border_conflicts
+
+	allowed = {
+		original_tag = BLM
+	}
+	visible = {
+		has_completed_focus = BLM_bretagne_revolution
+	}
+	priority = 200
+}
