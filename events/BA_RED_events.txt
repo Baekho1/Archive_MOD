@@ -2382,7 +2382,8 @@ country_event = { #사무국 재건
 	}
 }
 
-country_event = { #안 씀
+unit_leader_event = {
+	#"폭음"
 	id = RED_minori_event.1
 	title = RED_minori_event.1.t
 	desc = RED_minori_event.1.d
@@ -2390,9 +2391,16 @@ country_event = { #안 씀
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.1.a
+		RED_shigure = {
+			unit_leader_event = {
+				id = RED_minori_event.2
+				hours = 2
+			}
+		}
 	}
 }
-country_event = { #안 씀
+unit_leader_event = {
+	#용역부
 	id = RED_minori_event.2
 	title = RED_minori_event.2.t
 	desc = RED_minori_event.2.d
@@ -2401,6 +2409,7 @@ country_event = { #안 씀
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.2.a
+		complete_national_focus = RED_club_focus_4
 	}
 }
 country_event = { #안 씀
@@ -2535,137 +2544,27 @@ country_event = { #엄습하는 반혁명
 					communism = 100
 				}
 			}
+			country_event = {
+				id = RED_minori_event.6
+				days = 18
+			}
 		}
 	}
 }
-country_event = { #빈농
+country_event = { #진압된 오슬로 봉기
 	id = RED_minori_event.6
 	title = RED_minori_event.6.t
 	desc = RED_minori_event.6.d
 	picture = GFX_report_event_sanation_revolt
-	trigger = {
-		has_completed_focus = RED_labor_world
-		date > 1936.6.1
-		919 = {
-			is_demilitarized_zone = no
-		}
-		916 = {
-			is_demilitarized_zone = no
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.6.a
-		add_stability = 0.15
-		if = {
-			limit = {NOT={
-				has_template = "militia"}
-			}
-			division_template = {
-				priority = 0
-				name = "militia"
-				regiments = {
-					irregular_infantry = {
-						x = 0
-						y = 0
-					}
-					irregular_infantry = {
-						x = 0
-						y = 1
-					}
-					irregular_infantry = {
-						x = 0
-						y = 2
-					}
-					irregular_infantry = {
-						x = 1
-						y = 0
-					}
-					irregular_infantry = {
-						x = 1
-						y = 1
-					}
-					irregular_infantry = {
-						x = 1
-						y = 2
-					}
-				}
-			}
-		}
-		919 = {
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-		}
-		916 = {
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
+		add_war_support = 0.05
+		110 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
 			}
 		}
 	}
@@ -2679,10 +2578,6 @@ country_event = { #혁명방위전선
 	picture = GFX_report_event_spain_civil_war_volunteers_02
 	option = {
 		name = RED_minori_event.7.a
-		swap_ideas = {
-			remove_idea = RED_the_threats_abound_idea
-			add_idea = RED_RMC_idea
-		}
 		army_experience = 15
 		add_command_power = 15
 		141 = {
@@ -3014,7 +2909,7 @@ country_event = { #덴마크 군정청 좆바름
 		}
 	}
 }
-country_event = { #조선노동자
+country_event = { #구교사 해방
 	id = RED_minori_event.15
 	title = RED_minori_event.15.t
 	desc = RED_minori_event.15.d
@@ -3023,57 +2918,13 @@ country_event = { #조선노동자
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	option = {
 		name = RED_minori_event.15.a
-		if = {
-			limit = {NOT={
-				has_template = "militia"}
-			}
-			division_template = {
-				priority = 0
-				name = "militia"
-				regiments = {
-					irregular_infantry = {
-						x = 0
-						y = 0
-					}
-					irregular_infantry = {
-						x = 0
-						y = 1
-					}
-					irregular_infantry = {
-						x = 0
-						y = 2
-					}
-					irregular_infantry = {
-						x = 1
-						y = 0
-					}
-					irregular_infantry = {
-						x = 1
-						y = 1
-					}
-					irregular_infantry = {
-						x = 1
-						y = 2
-					}
-				}
-			}
+		916 = {
+			set_demilitarized_zone = no
 		}
-		140 = {
-			create_unit = {
-				division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Shipbuilding Workers\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
-				owner = RED
+		RED_nodoka = {
+			unit_leader_event = {
+				id = RED_minori_event.1
+				days = 1
 			}
 		}
 	}
@@ -5278,6 +5129,7 @@ country_event = { #인구 문제
 	desc = RED_event.32.d
 	fire_only_once = yes
 	is_triggered_only = yes
+	picture = GFX_report_event_tanks_mexico_city
 	option = {
 		name = RED_event.32.a
 		add_ideas = RED_population_saturation
@@ -6579,14 +6431,16 @@ country_event = { #용역부의 가담
 	picture = GFX_report_event_bul_muraviev_protest
 	is_triggered_only = yes
 	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			load_oob = RED_for_minori_1
+		}
+	}
 	option = {
 		name = RED_revolution.2.a
 		swap_ideas = {
 			remove_idea = RED_strike
 			add_idea = RED_february_strike_1
-		}
-		hidden_effect = {
-			load_oob = RED_for_minori_1
 		}
 	}
 }
@@ -6597,14 +6451,16 @@ country_event = { #현지 노동조합연맹 가담
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_report_event_worker_protests
+	immediate = {
+		hidden_effect = {
+			load_oob = RED_for_minori_2
+		}
+	}
 	option = {
 		name = RED_revolution.3.a
 		swap_ideas = {
 			remove_idea = RED_february_strike_1
 			add_idea = RED_february_strike_2
-		}
-		hidden_effect = {
-			load_oob = RED_for_minori_2
 		}
 	}
 }
@@ -6614,15 +6470,17 @@ unit_leader_event = { #1936년 결의안 제5호
 	desc = RED_revolution.4.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			load_oob = RED_for_minori_4
+		}
+	}
 	option = {
 		name = RED_revolution.4.a
 		custom_effect_tooltip =  RED_revolution.4_tt
 		swap_ideas = {
 			remove_idea = RED_february_strike_2
 			add_idea = RED_february_strike_3
-		}
-		hidden_effect = {
-			load_oob = RED_for_minori_4
 		}
 	}
 }

@@ -2180,24 +2180,6 @@ ideas = {
 			}
 		}
 
-		RED_the_threats_abound_idea = { #주변의 위협
-			picture = MEX_revolutionary_army
-
-			removal_cost = -1
-
-			modifier = {
-				army_core_defence_factor = 0.15
-			}
-		}
-		RED_RMC_idea = { #혁명군사평의회
-			picture = MEX_revolutionary_army
-			removal_cost = -1
-			modifier = {
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
-			}
-		}
-
 		RED_publishing_idea = { #출판부
 			name = RED_publishing_idea
 			picture = RED_press
