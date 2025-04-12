@@ -2382,7 +2382,7 @@ country_event = { #사무국 재건
 	}
 }
 
-country_event = { #용역부 가담
+country_event = { #안 씀
 	id = RED_minori_event.1
 	title = RED_minori_event.1.t
 	desc = RED_minori_event.1.d
@@ -2390,13 +2390,9 @@ country_event = { #용역부 가담
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.1.a
-		swap_ideas = {
-			remove_idea = RED_threat_of_coup_1
-			add_idea = RED_threat_of_coup_2
-		}
 	}
 }
-country_event = { #조선노동자 가담
+country_event = { #안 씀
 	id = RED_minori_event.2
 	title = RED_minori_event.2.t
 	desc = RED_minori_event.2.d
@@ -2405,13 +2401,9 @@ country_event = { #조선노동자 가담
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.2.a
-		swap_ideas = {
-			remove_idea = RED_threat_of_coup_2
-			add_idea = RED_threat_of_coup_3
-		}
 	}
 }
-country_event = { #비정규직 가담
+country_event = { #안 씀
 	id = RED_minori_event.3
 	title = RED_minori_event.3.t
 	desc = RED_minori_event.3.d
@@ -2420,10 +2412,6 @@ country_event = { #비정규직 가담
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.3.a
-		swap_ideas = {
-			remove_idea = RED_threat_of_coup_3
-			add_idea = RED_threat_of_coup_4
-		}
 	}
 }
 country_event = { #노동절 집회
@@ -2460,6 +2448,16 @@ country_event = { #노동절 집회
 		}
 		RED_lev_trotsky = {
 			set_nationality = RE2
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = RED_take_publish_club
+				}
+			}
+			RED_yakumo = {
+				set_nationality = RE2
+			}
 		}
 		hidden_effect = {
 			country_event = {
@@ -2672,7 +2670,7 @@ country_event = { #빈농
 		}
 	}
 }
-country_event = { #혁명군사평의회
+country_event = { #혁명방위전선
 	id = RED_minori_event.7
 	title = RED_minori_event.7.t
 	desc = RED_minori_event.7.d
@@ -2689,25 +2687,14 @@ country_event = { #혁명군사평의회
 		add_command_power = 15
 		141 = {
 			create_unit = {
-				division = "name = \"Workers' and Peasants' Red Army\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+				division = "name = \"Revolutionary Defense Front\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
 				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Workers' and Peasants' Red Army\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Workers' and Peasants' Red Army\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
-				owner = RED
-			}
-			create_unit = {
-				division = "name = \"Workers' and Peasants' Red Army\" division_template = \"Halo Infantry Division\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
-				owner = RED
+				count = 3
 			}
 		}
 	}
 }
-country_event = { #출판부의 운명
+country_event = { #공장위원회
 	id = RED_minori_event.8
 	title = RED_minori_event.8.t
 	desc = RED_minori_event.8.d
@@ -2850,26 +2837,12 @@ country_event = { #출판부의 운명
 			}
 		}
 	}
-	option = { #출판부장을 처형해라
+	option = { #굿
 		name = RED_minori_event.8.a
-		random_list = {
-			1 = {
-				RED_yakumo = {
-					retire = yes
-				}
-			}
-			1 = {
-				RED_yakumo = {
-					set_nationality = RE2
-				}
-			}
+		swap_ideas = {
+			remove_idea = RED_february_strike_3
+			add_idea = RED_factory_committees
 		}
-		add_stability = 0.1
-	}
-	option = { #높은 급여를 제시하고 언론을 정상화하자.
-		name = RED_minori_event.8.b
-		activate_advisor = RED_yakumo
-		add_political_power = -150
 	}
 }
 country_event = { #아무 효과도 없지만 쓰이는 이벤트
@@ -5860,6 +5833,21 @@ country_event = { #산업 호황의 맹아
 		}
 	}
 }
+country_event = { #적색테러에 희생된 현지 우익
+	id = RED_event.39
+	title = RED_event.39.t
+	desc = RED_event.39.d
+	fire_only_once = yes
+	picture = GFX_report_event_ITA_italian_civil_war
+	trigger = {
+		tag = RED
+	}
+	option = {
+		name = RED_event.39.a
+		add_stability = -0.01
+		add_war_support = -0.01
+	}
+}
 
 country_event = { #주 3일제 실시 요구
 	id = RED_missions.1
@@ -6570,7 +6558,7 @@ unit_leader_event = { #
 }
 
 add_namespace = RED_revolution
-country_event = { #용역부의 일상
+unit_leader_event = { #용역부의 일상
 	id = RED_revolution.1
 	title = RED_revolution.1.t
 	desc = RED_revolution.1.d
@@ -6588,6 +6576,7 @@ country_event = { #용역부의 가담
 	id = RED_revolution.2
 	title = RED_revolution.2.t
 	desc = RED_revolution.2.d
+	picture = GFX_report_event_bul_muraviev_protest
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -6607,6 +6596,7 @@ country_event = { #현지 노동조합연맹 가담
 	desc = RED_revolution.3.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_report_event_worker_protests
 	option = {
 		name = RED_revolution.3.a
 		swap_ideas = {
@@ -6618,7 +6608,7 @@ country_event = { #현지 노동조합연맹 가담
 		}
 	}
 }
-country_event = { #1936년 결의안 제5호
+unit_leader_event = { #1936년 결의안 제5호
 	id = RED_revolution.4
 	title = RED_revolution.4.t
 	desc = RED_revolution.4.d
@@ -6642,8 +6632,15 @@ country_event = { #사회민주노동자당
 	desc = RED_revolution.5.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_report_event_SWE_summer_government
 	option = {
 		name = RED_revolution.5.a
+		clr_country_flag = BA_ban_democratic_parties_flag
+		set_party_name = {
+			ideology = democratic
+			long_name = SWE_democratic_party
+			name = SWE_democratic_party
+		}
 	}
 }
 country_event = { #사회민주노동자당
@@ -6652,10 +6649,46 @@ country_event = { #사회민주노동자당
 	desc = RED_revolution.6.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_report_event_SWE_defense_act
 	option = {
 		name = RED_revolution.6.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
 	}
 }
+unit_leader_event = { #야쿠모 회유
+	id = RED_revolution.7
+	title = RED_revolution.7.t
+	desc = RED_revolution.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.7.a
+		add_political_power = -100
+		activate_advisor = RED_yakumo
+	}
+}
+unit_leader_event = { #안 슴 
+	id = RED_revolution.8
+	title = RED_revolution.8.t
+	desc = RED_revolution.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = RED_revolution.8.a
+		add_political_power = -30
+		141 = {
+			create_unit = {
+				division = "name = \"Regional Committee\" division_template = \"Redwinter Garde populaire\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+				owner = RED
+				count = 3
+			}
+		}
+	}
+}
+
 
 
 add_namespace = RED_bop_event
