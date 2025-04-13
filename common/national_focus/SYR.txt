@@ -26,11 +26,11 @@ focus_tree = {
 	focus = { #프랑스와의 회담
 		id = SYR_focus_0
 		icon = GFX_focus_chi_reach_out_to_france
-		cost = 2
+		cost = 4
 		x = 0
 		y = 1
 		ai_will_do = {
-			base = 100
+			base = 10
 		}
 		relative_position_id = SYR_focus_dom_0
 		prerequisite = {

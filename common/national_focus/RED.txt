@@ -10794,6 +10794,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id =  RED_revolution.2
+				hours = 2
 			}
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
@@ -10848,7 +10849,7 @@ focus_tree = {
 		available = {
 			has_war = no
 		}
-		cost = 3
+		cost = 2
 		ai_will_do = {
 			base = 9999
 		}
@@ -11035,9 +11036,11 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RED_the_threats_abound
-		cost = 2.9
+		cost = 2
 		available_if_capitulated = yes
 		completion_reward = {
+			add_command_power = 10
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			if = {
 				limit = {
 					is_ai = yes
@@ -11047,24 +11050,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = RED_redwinter_idea
 				add_idea = RED_fire_of_revolution
-			}
-			capital_scope = {
-				create_unit = {
-					division = "division_template = \"Redwinter Garde populaire\" start_experience_factor = 1 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 3
-				}
-			}
-			add_war_support = 0.1
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = yes
-					}
-				}
-				hidden_effect = {
-					add_command_power = 1000
-				}
 			}
 		}
 	}
@@ -11086,6 +11071,7 @@ focus_tree = {
 		}
 		cost = 3
 		completion_reward = {
+			add_command_power = 10
 			if = {
 				limit = {
 					NOT = {
@@ -11178,6 +11164,7 @@ focus_tree = {
 		cost = 3
 		available_if_capitulated = yes
 		completion_reward = {
+			add_command_power = 10
 			if = {
 				limit = {
 					is_ai = yes
@@ -11239,15 +11226,17 @@ focus_tree = {
 			factor = 999
 		}
 		available = {
-			has_war = no
 			140 = {
 				is_demilitarized_zone = no
+				is_controlled_by = RED
 			}
 			915 = {
 				is_demilitarized_zone = no
+				is_controlled_by = RED
 			}
 		}
 		completion_reward = {
+			add_command_power = 10
 			if = {
 				limit = {
 					is_ai = yes
@@ -11367,6 +11356,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_command_power = 10
 			start_border_war = {
 				change_state_after_war = yes
 				attacker = {
