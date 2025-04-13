@@ -11,30 +11,43 @@
  # 프롤로그
  GEH_start_focus: "철인의 길"
  GEH_start_focus_desc: "결국, 선도부는 해당 사태에 대비해야 합니다. 아니, 소라사키 히나는 해당 사태를 책임지고 수습해야만 합니다. 그렇지 않다면, 소라사키 히나와 그를 믿고 따르는 수많은 게헨나의 학생들의 이상과 선도부 임원들의 운명을 꺾어버리는 것일 뿐입니다. 그러기에 소라사키 히나는 밖으로 나와야만 합니다."
+
  GEH_zero_congress_focus: "제1차 선도부 총회"
  GEH_zero_congress_focus_desc: "사태가 어느정도 진정되고 노력끝에 일상을 되찾아가고 있습니다. 선도부원들은 우리의 미래를 정하기 위해 총회를 개최하고 향후 계획을 세워야 한다고 목소리를 높히고 있습니다."
+
  GEH_Nuremberg_Wehrmacht: "뉘른베르크 수색"
- GEH_Nuremberg_Wehrmacht_desc: "정보부의 정보에 의하면 뉘른베르크에 국방군 잔당이 비밀리에 활동하고 있다고 합니다. 도시를 샅샅히 뒤져봐야 합니다."
+ GEH_Nuremberg_Wehrmacht_desc: "나치 잔당과 국방군과 협력하려는 마음이 가득한 만마전의 너구리들과는 달리, 선도부는 도덕적 무결성을 위해 국가사회주의자들과 일절의 협력도 하지 않을 것입니다. 정보부의 정보에 의하면 뉘른베르크에 국방군 잔당의 지하 조직이 비밀리에 활동하고 있다고 합니다. 시가전을 하는 한이 있더라도 그들은 모두 제거되어야 합니다."
+
  GEH_Regensburg_Wehrmacht: "레겐스부르크 수색"
- GEH_Regensburg_Wehrmacht_desc: "정보부의 정보에 의하면 레겐스부르크에 국방군 잔당이 비밀리에 활동하고 있다고 합니다. 도시를 샅샅히 뒤져봐야 합니다."
+ GEH_Regensburg_Wehrmacht_desc: "나치 잔당과 국방군과 협력하려는 마음이 가득한 만마전의 너구리들과는 달리, 선도부는 도덕적 무결성을 위해 국가사회주의자들과 일절의 협력도 하지 않을 것입니다. 정보부의 정보에 의하면 레겐스부르크에 국방군 잔당의 지하 조직이 비밀리에 활동하고 있다고 합니다. 시가전을 하는 한이 있더라도 그들은 모두 제거되어야 합니다."
+
  GEH_focus_111111: "되찾은 안정"
- GEH_focus_111111_desc: "국방군 잔당들을 모조리 무장 해제함으로써 우리는 위협에 시달리지 않게 되었습니다. 외부의 위협이 없는 한 우리는 계속 안전할 것입니다."
+ GEH_focus_111111_desc: "나치들과 결코 협력은 없을 것입니다. 게헨나 선도부는 전통적 질서와 도덕을 위해 싸울 것이며, 아돌프 히틀러에게 충성했던 조직화된 국방군을 철저하게 짓밟았습니다. 국방군 잔당들을 모조리 무장 해제함으로써 우리는 국내에서의 가장 큰 안보 문제를 해결했습니다. 점조직으로 움직이는 나치 당원 게릴라들과 헬멧단원들 문제는 국방군만큼 중대한 위협은 아닙니다."
+
  # 챕터 : 1
  GEH_Prefect_Team_muster: "선도부 소집"
- GEH_Prefect_Team_muster_desc: ""
+ GEH_Prefect_Team_muster_desc: "대전이 이후 2개월여간의 혼란 속에서, 많은 선도부원들이 질서 유지와 게헨나 수호라는 정의로운 명분을 버리고 도주를 선택했습니다. 하지만 비관주의자들의 생각과 달리 우리는 질서 있게 지난 두 달을 견뎌내었으며, 제1차 총회에 맞춰 흔들렸던 선도부 부서들도 다시 조직화되며 규율을 되찾기 시작했습니다."
+
  GEH_focus_can_only_be_completed_by_focus_tt: "이 중점은 §Y$FOCUS$§! 중점이 진행되는 도중 자동으로 시작될 수 있습니다."
+ 
  GEH_rework_focus_1: "기획부"
  GEH_rework_focus_1_desc: "아마우 아코가 이끄는 기획부는 선도부의 행정과 전략 수립을 담당하는 핵심 부서입니다. 이들은 뛰어난 서류 작업 능력을 바탕으로 선도부의 운영을 체계화하고, 다양한 작전과 정책을 수립하여 선도부의 효율적인 운영을 지원합니다."
+
  GEH_rework_focus_2: "의료부"
- GEH_rework_focus_2_desc: "히노미야 치나츠가 이끄는 의료부는 선도부의 의료 지원을 담당하는 중요한 부서로, 전투 인원의 치료와 건강 관리를 전문적으로 수행합니다"
+ GEH_rework_focus_2_desc: "히노미야 치나츠가 이끄는 의료부는 선도부의 의료 지원을 담당하는 중요한 부서로, 전투 인원의 치료와 건강 관리를 전문적으로 수행합니다. 의료부는 기획부와 실행부 두 부서에 비해 정치적 입지가 약하기 때문에, 단독으로 권력을 쥘 가능성은 없습니다."
+
  GEH_rework_focus_3: "실행부"
  GEH_rework_focus_3_desc: "시로미 이오리가 지휘하는 실행부는 선도부의 군사력을 관리하고 전투 훈련을 담당하는 핵심 부서입니다. 이들은 엄격한 훈련 프로그램을 통해 선도부원들의 전투 능력을 향상시키고, 필요시 신속하고 효과적인 군사 작전을 수행하여 선도부의 안전과 목표 달성을 보장합니다."
+
  GEH_fear_eyes: "풍기집행"
  GEH_fear_eyes_desc: "만마전이 우리를 적대시함은 확실해졌습니다.\n이렇게 된 이상 게헨나의 가장 문젯거리였던 만마전에게 \"풍기집행\"을 할 때가 되었습니다."
+
  GEH_fear_eyes_tt: "우리는 $GEH_operation_countenance$ 시작과 동시에 [GEM.GetNameDef]에 선전포고하기 전까지 §Y30일§! 동안 준비할 수 있을 것입니다. \n$GEH_fear_eyes_mission_tt$\n"
  GEH_fear_eyes_mission_tt: "§Y$GEH_operation_countenance$§! 임무가 활성화되면 [GetOperationCountenanceTooltip] 부대가 [GEM.GetNameDef]측을 항복시키기까지 §Y60 일§!을 갖게 됩니다. 만약 이 기한이 지날 경우 그들은 다른 세력에 가담하려고 시도할 것이고, 우리 국민들은 우리의 군사력에 대해 걱정하기 시작할 것입니다."
+
  GEH_shocked_by_surprise_attack: "기습 공격에 놀람"
  GEH_shocked_by_surprise_attack_desc: "우리에 대항한 선도부의 전략, 풍기집행은 우리 만마전 전체를 충격에 빠지게 하였습니다. 우리 군은 압도되었고, 우리 연락망은 단절되었으며, 상대 측 책임자들을 불러 해명을 요구하는 것도 의미 없다는 것을 알았습니다. 우리 측이 이 사태를 파악하려는 동안, 우리의 외교 관계는 무력화 될 것입니다."
+
  GEH_preparations_for_operation_countenance: "풍기집행 준비"
  GEH_operation_countenance: "풍기집행"
  GEH_external_activities: "선도부의 대외 활동"
@@ -50,11 +63,14 @@
 
  GEH_additional_leadership_personnel_employment: "추가적인 선도부원 모집"
  GEH_additional_leadership_personnel_employment_desc: "행정 인력 부족이 확인된 지난 총회 이후, 게헨나 선도부의 행정 부담은 지속되어 왔습니다. 우리는 이제 이 문제를 해결하기 위한 다양한 모집 방안을 추구해야 합니다."
+
  GEH_establishment_of_german_autonomous_government: "독일 자치정부 수립"
  GEH_establishment_of_german_autonomous_government_desc: "독일 민족의 자치 정부 위원회, 약칭 독일 자치정부는 우리가 독일인들을 행정부로 등용하기 시작하면서 추진되기 시작한 독일 주 정부를 우리 아래에 통합하기 위한 기관입니다."
+
  GEH_establishment_of_german_militia: "독일인 민병대"
  GEH_establishment_of_german_militia_desc: "강제로 해산된 국방군, 또는 탈영병, 그 외 수많은 좌우를 가리지 않는 전 민병대원들까지. 이들을 동원한다면 간편하게 선도부의 인력을 확충할 수 있을 것입니다."
 
+ ## 이오리 루트 ##
  GEH_iori_route_focus: "시로미 이오리의 중점"
  GEH_preparation_of_war_with_pantemonium: "[GEM.GetAdjective] 측과의 전쟁 준비"
  GEH_indiscriminate_conscription: "무차별 징병제 도입"
@@ -77,6 +93,7 @@
  GEH_war_department_desc: "선도부는 이제 광범위한 전쟁을 준비해야 하며, 이러한 행동을 돕기 위해 실행부와 비슷한 역할을 하지만 조금 더 실험적이고 대비적인 핵심 인물들을 모은 전쟁부를 신설할 것입니다."
  GEH_military_leadership_committee_desc: "선도부의 통치는 선도부원이 선행되어야 합니다. 군사적 영광과 교리의 정립이 선도부의 존재 이유이자 선도부 이데올로기의 근간입니다."
 
+ ## 히나 루트 ##
  GEH_hina_route_focus: "소라사키 히나의 영도"
  GEH_one_person_leadership_system: "일인 지도 체제"
  GEH_firm_leadership: "확고한 지도력"
@@ -101,6 +118,7 @@
  GEH_sorasaki_hina_quotes_compilation_desc: "\"게헨나의 모두가 알 수 있도록 소라사키 히나 선도부장 님의 위대한 어록을 편찬한 책\" - 소라사키 히나 어록 설명"
  GEH_prefect_team_fanaticism_desc: "선도부장님이야말로 이 선도부를 구원할 아주 강인한 초인이 분명합니다. 우리는 선도부장님을 더 강력하게 받들고 충성해야 합니다. 그 어떤 존재도 선도부장님의 권위에 도전하지 못하도록 말이죠!"
 
+ ## 아코 루트 ##
  GEH_ako_route_focus: "아마우 아코의 계획"
  GEH_ako_route_focus_desc: "\"다들 솔직해져보자고요. 대전이 이후 히나 부장님이 얼마나 많은 업무로 무리하고 있는지 알고 있잖아요? 그저 그 주제를 꺼내면 부장님의 업무를 나눠받을까 무서워서 입을 다물고 있는 거 뿐이죠. 지금 우리가 부장님을 도와야 해요. 이러다가 히나 부장님이 쓰러지시기라도 하면 책임 지실 거예요?\""
 
@@ -125,16 +143,31 @@
  GEH_sword_defending_gehenna_peoples: "민중을 수호하는 검"
  GEH_sword_defending_gehenna_peoples_desc: "아코 선임행정관은 선도부를 단순한 군벌에서 개혁된 관료제 학원국가로 만들었으며, 게헨나 학생들과 도이치 현지인들의 지지를 이끌어냈습니다. 과로로 시달리던 히나의 부담을 축소한 것 역시 큰 성과이고요. 물론 가장 중대한 성과는 우리의 노력으로 인해 국민들이 우리를 '군벌'이 아닌 '사회의 수호자'로 보기 시작했다는 점입니다."
 
+ ## 노멀 루트 ##
  GEH_main_route_focus: "선도부의 통치"
- GEH_fortress_preparing_for_war: "전쟁을 대비하는 요새"
- GEH_continuing_rule: "통치 지속"
+ GEH_main_route_focus_desc: "군국주의 체제를 원하던 선도부 실행부의 강경한 주장과, 선도부 기획부를 구성하는 기술관료들의 온건한 주장은 끊임 없는 평행선을 이루었습니다. 결국 [GEH.GetLeader]의 결정으로 인해 '현상유지'라는 결정이 내려졌지만... 대전이라는 미증유의 사건 속에서 현상유지가 정말 옳은 선택일까요?"
+
+ GEH_fortress_preparing_for_war: "대트리니티 요새"
+ GEH_fortress_preparing_for_war_desc: "우리의 가장 위협적인 적은 만마전일까요, 아니면 트리니티일까요? 아마 둘 다 위협적인 적이겠지만, 만마전과의 국경을 요새화하는 것보다는 트리니티와의 국경을 요새화하는 것이 훨씬 정치적인 부담이 적습니다. 새로운 요새는 완벽하지는 않지만, 적어도 전쟁이 발발하면 짧은 시간 트리니티의 공격을 저지해 줄 것입니다."
+
+ GEH_continuing_rule: "내부 갈등 조화"
+ GEH_continuing_rule_desc: "실행부와 기획부 두 조직의 충돌로 인해 일어난 현상유지 정책과 그로 인한 개혁의 좌절은 심각한 정치적 갈등을 만들었습니다. 선도부장은 개혁의 실패가 두 부서의 잘못이 아닌 자신의 지도력이 부족했기 때문에 일어난 일이라고 인정하고, 부서들간의 대립과 내부 파벌 싸움을 중재할 것입니다."
+
  GEH_improving_relationships_with_manmajeon: "만마전과의 관계 개선"
+ GEH_improving_relationships_with_manmajeon_desc: "아코는 '그들과의 관계 개선에는 1 키보토스 엔을 쓰는 것도 아깝다'며 관계 개선안을 냉소적으로 바라보고 있지만, 정보부는 대전이 이후 만마전이 선도부보다 훨씬 강력한 국력을 갖게 되었다는 점을 우려스럽게 생각합니다. 우리가 지금 게헨나 중앙구로 전차를 밀고 들어갈 능력이 없다면, 전쟁을 미루는 것이 훨씬 낫습니다."
+
  GEH_pursuing_peaceful_unification: "평화적인 통합 추구"
+
  GEH_preparing_for_civil_war: "내전을 대비"
+
  GEH_bavaria_governance_method: "바이에른의 선도부"
- GEH_negotiation_with_german_delegation: "독일인 대표단과 협상"
+
+ GEH_negotiation_with_german_delegation: "도이치 대표단과 협상"
+ GEH_negotiation_with_german_delegation_desc: "[GEH.GetLeader] 선도부장은 만마전의 너구리가 아니며, 만마전과 달리 절대로 나치와 협력하지 않을 것입니다. 절대로! 우리는 대신 도이치 사회민주당 잔당들과 접촉할 것입니다. 선도부는 도이치 노동자들을 위한 근로기준법 개정안을 추진하는 대신, 사회민주당 당원 조직은 만마전과 트리니티라는 두 악을 물리치기 위해 현지인들이 우리 군에 입대하도록 독려할 것입니다."
+
  GEH_institutional_stabilization: "제도적 안정화"
  GEH_industrial_development: "산업 개발"
+ 
 
  # 챕터 : 2
  GEH_Conquer_the_Central: "중앙구 공세"
@@ -235,10 +268,13 @@
  GEH_Army_focus_7: "전장의 여왕"
  dldhfl_flag: "$BA_news.52.t$"
  #챕터 4
- GEH_Trinity_war: "트리니티와의 전쟁"
- GEH_Trinity_war_desc: "전쟁이 발생하였습니다. 적들이 게헨나를 침공하기 시작하였고 우리 군대는 기습을 당하여 패퇴하고 있습니다. 전열을 가다듬고 반격의 때를 기다려야합니다."
+ 
+ GEH_Trinity_war: "트리니티 침공 계획"
+ GEH_Trinity_war_desc: "게헨나와 [TRM.GetName] 측은 전통적인 적대국이었으며, 특히 [TRM.GetLeader]의 존재가 우리에게 심각한 안보 위협이 된다는 것은 분명합니다. 만약 그들이 우리를 침공할 준비를 하고 있다면, 우리는 그녀들을 먼저 공격할 필요가 있습니다."
+
  GEH_war_factory_focus_1: "군수시설 확장"
  GEH_war_factory_focus_1_desc: "전쟁을 진행하던 중 게헨나 국가는 전쟁을 지속할 역량이 부족하다는 것을 알아차렸습니다. 지금이라도 확장하여 장기전을 수행할 역량을 키워내야합니다."
+ 
  GEH_war_factory_focus_3: "지하 산업"
  GEH_war_factory_focus_3_desc: ""
  GEH_war_factory_focus_4: "게헨나 야포"
