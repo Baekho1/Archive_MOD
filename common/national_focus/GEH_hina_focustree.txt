@@ -3788,8 +3788,8 @@ focus_tree = {
 		}
 	}
     focus = {
-		id = GEH_control_market_investment
-		icon = GFX_goal_generic_positive_trade_relations
+		id = GEH_vertical_integration
+		icon = GFX_focus_SOV_merge_plants
 		cost = 5
 		x = -2
 		y = 1
@@ -3805,8 +3805,8 @@ focus_tree = {
             focus = GEH_factory_focus_6
         }
 		mutually_exclusive = {
+			focus = GEH_control_market_investment
 			focus = GEH_prefect_team_priority
-			focus = GEH_vertical_integration
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -3815,13 +3815,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-            custom_effect_tooltip = GEH_control_market_investment_tt
-            add_to_variable = { GEH_PL_production_factory_efficiency_gain_factor = 0.05 }
-            add_to_variable = { GEH_PL_idea_production_speed_industrial_complex_factor = 0.05 }
+            custom_effect_tooltip = GEH_vertical_integration_tt
+            add_to_variable = { GEH_PL_consumer_goods_factor = -0.05 }
+            add_to_variable = { GEH_PL_local_building_slots_factor = 0.05 }
+			add_stability = -0.05
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -3829,7 +3830,7 @@ focus_tree = {
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -3884,8 +3885,8 @@ focus_tree = {
 		}
 	}
     focus = {
-		id = GEH_vertical_integration
-		icon = GFX_focus_SOV_merge_plants
+		id = GEH_control_market_investment
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
 		x = 2
 		y = 1
@@ -3901,8 +3902,8 @@ focus_tree = {
             focus = GEH_factory_focus_6
         }
 		mutually_exclusive = {
-			focus = GEH_control_market_investment
 			focus = GEH_prefect_team_priority
+			focus = GEH_vertical_integration
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -3911,14 +3912,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-            custom_effect_tooltip = GEH_vertical_integration_tt
-            add_to_variable = { GEH_PL_consumer_goods_factor = -0.05 }
-            add_to_variable = { GEH_PL_local_building_slots_factor = 0.05 }
-			add_stability = -0.05
+            custom_effect_tooltip = GEH_control_market_investment_tt
+            add_to_variable = { GEH_PL_production_factory_efficiency_gain_factor = 0.05 }
+            add_to_variable = { GEH_PL_idea_production_speed_industrial_complex_factor = 0.05 }
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -3926,7 +3926,7 @@ focus_tree = {
 			random_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
