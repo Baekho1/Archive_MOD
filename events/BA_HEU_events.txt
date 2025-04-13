@@ -4639,6 +4639,7 @@ country_event = { #룩셈부르크 대공국의 멸망
 	trigger = {
 		AND = {
 			NOT = { original_tag = HEU }
+			NOT = { original_tag = GEH }
 			NOT = { country_exists = HEU }
 			ROOT = { owns_state = 8 }
 			NOT = { has_global_flag = HEU_game_over_flag }
@@ -4708,6 +4709,7 @@ country_event = { #룩셈부르크 대공국의 멸망
 	trigger = {
 		AND = {
 			NOT = { original_tag = HEU }
+			NOT = { original_tag = GEH }
 			NOT = { country_exists = HEU }
 			ROOT = { owns_state = 8 }
 			NOT = { has_global_flag = HEU_game_over_flag }

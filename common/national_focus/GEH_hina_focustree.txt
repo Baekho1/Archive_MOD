@@ -3116,7 +3116,7 @@ focus_tree = {
 		id = GEH_first_congress_focus
 		icon = GFX_goal_Perfect_team_first_congress
 		cost = 6
-		x = 18
+		x = 20
 		y = 0
 		prerequisite = {
 			focus = GEH_start_focus
@@ -3937,7 +3937,7 @@ focus_tree = {
 		id = GEH_Army_Reformation
 		icon = GFX_goal_Perfect_team_iori_focus
 		cost = 5
-		x = -6
+		x = -8
 		y = 1
         relative_position_id = GEH_first_congress_focus
 		ai_will_do = {
@@ -4916,6 +4916,95 @@ focus_tree = {
 			}
 		}
 	}
+
+    focus = {
+		id = GEH_benriya_annex
+		icon = GFX_goal_HEU_fnrtpa
+		cost = 0
+		x = -6
+		y = 1
+
+        relative_position_id = GEH_first_congress_focus
+
+        prerequisite = { focus = GEH_first_congress_focus }
+
+        mutually_exclusive = { focus = GEH_benriya_tolerate }
+
+        available = { 
+            custom_trigger_tooltip = {
+                tooltip = GEH_benriya_dominate_tt
+			    always = no
+            }
+        }
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		completion_reward = {
+			8 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				country_event = { id = GEH.event.1001 }
+			}
+		}
+	}
+
+    focus = {
+		id = GEH_benriya_tolerate
+		icon = GFX_goal_HEU_question_of_succession_law
+		cost = 0
+		x = -4
+		y = 1
+
+        relative_position_id = GEH_first_congress_focus
+
+        prerequisite = { focus = GEH_first_congress_focus }
+
+        mutually_exclusive = { focus = GEH_benriya_annex }
+
+        available = { 
+            custom_trigger_tooltip = {
+                tooltip = GEH_benriya_dominate_tt
+			    always = no
+            }
+        }
+
+		allow_branch = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		completion_reward = {
+			HEU = {
+				HEU_aru = {
+					set_nationality = GEH
+				}
+				HEU_zkdyzh = {
+					set_nationality = GEH
+				}
+				HEU_ancmzl = {
+					set_nationality = GEH
+				}
+				HEU_gkfnzk = {
+					set_nationality = GEH
+				}
+				set_cosmetic_tag = HEU_luxembourg
+			}
+
+			hidden_effect = {
+				country_event = { id = GEH.event.1002 }
+			}
+		}
+	}
+
     focus = {
 		id = GEH_chinatsu_focus_1
 		icon = GFX_goal_Perfect_team_chinatsu_focus
