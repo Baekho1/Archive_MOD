@@ -1623,6 +1623,130 @@ country_event = { # 선도부장 임명식 - 오니카타 카요코
 	}
 }
 
+country_event = { #[GEH.GetName]의 [HEU.GetName] 병합
+	id = GEH.event.1000
+	title = GEH.event.1000.t
+
+	desc = {
+		text = GEH.event.1000.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1000.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = HEU_game_over_flag
+		}
+	}
+
+    fire_only_once = yes
+
+	trigger = {
+		AND = {
+			NOT = { original_tag = HEU }
+			original_tag = GEH
+			NOT = { country_exists = HEU }
+			ROOT = { owns_state = 8 }
+			NOT = { has_global_flag = HEU_game_over_flag }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = { 
+		name = GEH.event.1000.a
+		complete_national_focus = GEH_benriya_annex
+	}
+
+	option = { 
+		name = GEH.event.1000.b
+		complete_national_focus = GEH_benriya_tolerate
+	}
+}
+
+country_event = { #룩셈부르크 대공국의 해산
+	id = GEH.event.1001
+	title = GEH.event.1001.t
+
+	desc = {
+		text = GEH.event.1001.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1001.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1001.a
+		trigger = {
+			has_global_flag = HEU_68_route_flag
+		}
+
+	}
+
+	option = { 
+		name = GEH.event.1001.b
+		trigger = {
+			has_global_flag = HEU_com_route_flag
+		}
+		HEU = {
+			retire_character = HEU_aru
+			retire_character = HEU_zkdyzh
+			retire_character = HEU_ancmzl
+			retire_character = HEU_gkfnzk
+			set_cosmetic_tag = HEU_luxembourg
+		}
+
+	}
+}
+
+country_event = { #선도부장 직속 흥신소 68
+	id = GEH.event.1002
+	title = GEH.event.1002.t
+
+	desc = {
+		text = GEH.event.1002.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1002.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1002.a
+
+	}
+}
+
 # 완전한 규율을 장악한 게헨나 선도부
 news_event = {
 	id = GEH_news.1
@@ -1752,7 +1876,7 @@ news_event = {
 
 	picture = GFX_news_event_GEH_news_congress_2
 	
-	major = yes
+	#major = yes
 	is_triggered_only = yes
 
 	option = {

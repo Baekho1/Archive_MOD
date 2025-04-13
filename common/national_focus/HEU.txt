@@ -442,6 +442,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = HEU_luxembourg_benriya
+			set_global_flag = HEU_com_route_flag
 			HEU_bop_high_increase_effect = yes
 			add_popularity = {
 				ideology = communism
@@ -2648,7 +2649,8 @@ focus_tree = {
 					civilian = { large ="GFX_HEU_aru_rikuhachima_fascist_Portrait" }
 				}
 			}
-
+			
+			set_global_flag = HEU_68_route_flag
 			HEU_bop_high_decrease_effect = yes
 			add_popularity = {
 				ideology = fascism
