@@ -25,18 +25,18 @@ focus_tree = {
 		#relative_position_id = SLO_foc_
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1
-		icon = GFX_goal_support_democracy
-		cost = 5
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-		x = 15
+		x = 30
 		y = 0
 		prerequisite = {
 			#focus = SLO_foc_
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_2
+			#focus = SLO_foc_2
 		}
 		available = {
 
@@ -45,14 +45,37 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.10
+			hidden_effect = {
+				country_event = {
+					id = SLO_event.140
+				}
 			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
+			custom_effect_tooltip = SLO_vote_tt
+		}
+		select_effect = {
+			country_event = {
+				id = SLO_event.141
+				days = 5
+			}
+			country_event = {
+				id = SLO_event.142
+				days = 15
+			}
+			country_event = {
+				id = SLO_event.143
+				days = 25
+			}
+			country_event = {
+				id = SLO_event.144
+				days = 35
+			}
+			country_event = {
+				id = SLO_event.145
+				days = 45
+			}
+			country_event = {
+				id = SLO_event.146
+				days = 55
 			}
 		}
 	}
@@ -65,13 +88,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -1
+		x = 1
 		y = 1
 		prerequisite = {
 			focus = SLO_foc_1
 		}
 		mutually_exclusive = {	
-			#focus = SLO_foc_
+			focus = SLO_foc_2
 		}
 		available = {
 
@@ -80,16 +103,8 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -101,7 +116,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = {
 			focus = SLO_foc_1
@@ -110,23 +125,16 @@ focus_tree = {
 			#focus = SLO_foc_
 		}
 		available = {
-			has_government = neutrality
+			OR = {
+				has_completed_focus = SLO_foc_1-3
+				has_completed_focus = SLO_foc_1-4
+				has_completed_focus = SLO_foc_1-5
+			}
 		}
 		bypass = {
-			NOT = {
-				has_government = neutrality
-			}
 		}
 		completion_reward = {
-			remove_country_leader_trait = SLO_low_support
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
+			add_stability = 0.15
 		}
 	}
 	focus = {
@@ -138,36 +146,50 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -5
+		x = -20
 		y = 2
 		prerequisite = {
 			focus = SLO_foc_1-1
 		}
-		prerequisite = {
-			focus = SLO_foc_1-2
-		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-4
 		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-5
+		}
 		available = {
 			has_country_flag = GAEBALJUNG
+			OR = {
+				has_country_flag = SLO_vote_flag_win_com
+				has_country_flag = SLO_vote_flag_win_comdem
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SLO_gustav_husak
+			show_ideas_tooltip = SLO_frano_kral
+			activate_advisor = SLO_gustav_husak
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = SLO_vote_flag_win_comdem
+					}
+					complete_national_focus = SLO_foc_1-6
+				}
+			}
 		}
 	}
 	focus = {
 		relative_position_id = SLO_foc_1
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_1-4
-		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		icon = GFX_goal_support_democracy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -177,25 +199,36 @@ focus_tree = {
 		prerequisite = {
 			focus = SLO_foc_1-1
 		}
-		prerequisite = {
-			focus = SLO_foc_1-2
-		}
 		mutually_exclusive = {	
 			focus = SLO_foc_1-3
 		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-5
+		}
 		available = {
-			democratic > 0.30
+			OR = {
+				has_country_flag = SLO_vote_flag_win_dem
+				has_country_flag = SLO_vote_flag_win_demcom
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.15
-			}
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SLO_ivan_derer
+			show_ideas_tooltip = SLO_vavro_srobar
+			activate_advisor = SLO_vavro_srobar
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = SLO_vote_flag_win_demcom
+					}
+					complete_national_focus = SLO_foc_1-6
+				}
 			}
 		}
 	}
@@ -208,7 +241,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = -1
+		x = 1
 		y = 3
 		prerequisite = {
 			focus = SLO_foc_1-4
@@ -603,6 +636,9 @@ focus_tree = {
 				has_completed_focus = POL_the_between_the_seas_concept
 				is_faction_leader = yes
 			}
+			NOT = {
+				has_country_flag = SLO_love_yes
+			}
 		}
 		bypass = {
 			is_in_faction_with = POL
@@ -959,8 +995,11 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			POL = {
-				exists = no
+			OR = {
+				POL = {
+					exists = no
+				}
+				has_global_flag = POL_cut_of_HUN_no
 			}
 		}
 		completion_reward = {
@@ -1200,6 +1239,46 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SLO_aluminum_withhun_idea
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-4-54
+		icon = GFX_focus_generic_democratic_europe
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		x = 6
+		y = 11
+		prerequisite = {
+			focus = SLO_foc_1-4-21
+			focus = SLO_foc_1-4-22
+		}
+		mutually_exclusive = {	
+			#focus = SLO_foc_
+		}
+		available = {
+			OR = {
+				is_major = yes
+				has_war_with_major = yes
+				threat > 0.75
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			set_rule = {
+				can_only_justify_war_on_threat_country = no
+			}
+			set_rule = {
+				can_declare_war_on_same_ideology = yes
+			}
+			set_rule = {
+				can_puppet = yes
+			}
 		}
 	}
 	focus = {
@@ -2597,37 +2676,592 @@ focus_tree = {
 			SLO_economy_chaos_down = yes
 		}
 	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-5
+		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-1
+			focus = SLO_foc_2
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-3
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-4
+		}
+		available = {
+			has_country_flag = GAEBALJUNG
+			OR = {
+				has_completed_focus = SLO_foc_2
+				has_country_flag = SLO_vote_flag_win_fac
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SLO_alexander_mach
+			show_ideas_tooltip = SLO_vojtech_tuka
+			show_ideas_tooltip = SLO_jozef_tiso
+			show_ideas_tooltip = SLO_karol_sidor
+			activate_advisor = SLO_vojtech_tuka
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 0
+		ai_will_do = {
+			factor = 1
+		}
+		x = -8
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_1-3
+			focus = SLO_foc_1-4
+		}
+		available = {
+			OR = {
+				has_country_flag = SLO_vote_flag_win_comdem
+				has_country_flag = SLO_vote_flag_win_demcom
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = SLO_love_modifier
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+				}
+				activate_advisor = SLO_gustav_husak
+				if = {
+					limit = {
+						has_government = communism
+					}
+				}
+				activate_advisor = SLO_vavro_srobar
+				set_country_flag = SLO_love_yes
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-1
+		icon = GFX_focus_generic_red_flags
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SLO_foc_1-6
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-3
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = -3
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-6-1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			custom_effect_tooltip = SLO_love_tt_2
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			add_to_variable = {
+				SLO_love_production_factory_efficiency_gain_factor = 0.05
+			}
+			add_to_variable = {
+				SLO_love_production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-4
+		icon = GFX_focus_generic_military_industry
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = -3
+		y = 4
+		prerequisite = {
+			focus = SLO_foc_1-6-3
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			custom_effect_tooltip = SLO_love_tt_3
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			add_to_variable = {
+				SLO_love_production_speed_arms_factory_factor = 0.05
+			}
+			add_to_variable = {
+				SLO_love_industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-5
+		icon = GFX_focus_generic_monetary_union
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_1-6-1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			SLO_economy_chaos_down = yes
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-2
+		icon = GFX_focus_generic_blue_flags
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SLO_foc_1-6
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-6
+		icon = GFX_focus_generic_farmland
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-6-2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			custom_effect_tooltip = SLO_love_tt_4
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			add_to_variable = {
+				SLO_love_consumer_goods_factor = -0.075
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-7
+		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = SLO_foc_1-6-2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			SLO_economy_chaos_down = yes
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-8
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 4
+		prerequisite = {
+			focus = SLO_foc_1-6-6
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-7
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			custom_effect_tooltip = SLO_love_tt_5
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			add_to_variable = {
+				SLO_love_research_speed_factor = 0.05
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-9
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-6-1
+			focus = SLO_foc_1-6-2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_6
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.12
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.08
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.12
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.08
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-10
+		icon = GFX_focus_generic_women_in_military
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SLO_foc_1-6-1
+			focus = SLO_foc_1-6-2
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_1
+			custom_effect_tooltip = SLO_love_tt_7
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_stability_factor = 0.02
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.04
+			}
+			add_to_variable = {
+				SLO_love_surrender_limit = 0.02
+			}
+			add_to_variable = {
+				SLO_love_conscription_factor = 0.10
+			}
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-11
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = 1
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-6-9
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-10
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-4
+			focus = SLO_foc_1-6-8
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-6-12
+		}
+		available = {
+			date > 1940.1.1
+			OR = {
+				NOT = {
+					has_completed_focus = SLO_foc_1-6-4
+				}
+				NOT = {
+					has_completed_focus = SLO_foc_1-6-8
+				}
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			remove_dynamic_modifier = {
+				modifier = SLO_love_modifier
+			}
+			add_political_power = 150
+			add_stability = 0.10
+			clr_country_flag = SLO_love_yes
+		}
+	}
+	focus = {
+		relative_position_id = SLO_foc_1-6
+		#search_filters = {FOCUS_FILTER_}
+		id = SLO_foc_1-6-12
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		x = -1
+		y = 5
+		prerequisite = {
+			focus = SLO_foc_1-6-9
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-10
+		}
+		prerequisite = {
+			focus = SLO_foc_1-6-4
+			focus = SLO_foc_1-6-8
+		}
+		mutually_exclusive = {	
+			focus = SLO_foc_1-6-11
+		}
+		available = {
+			has_completed_focus = SLO_foc_1-6-4
+			has_completed_focus = SLO_foc_1-6-8
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.20
+			}
+			custom_effect_tooltip = SLO_love_tt_0
+			custom_effect_tooltip = SLO_love_tt_8
+			add_to_variable = {
+				SLO_love_political_power_factor = 0.15
+			}
+			add_to_variable = {
+				SLO_love_drift_defence_factor = 0.20
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = SLO_party_2
+				name = SLO_party_1
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = SLO_party_3
+				name = SLO_party_1
+			}
+		}
+	}
 	### 파시, 파시즘, 파시스트 루트 ###
 	focus = {
 		#relative_position_id = SLO_foc_
 		#search_filters = {FOCUS_FILTER_}
 		id = SLO_foc_2
-		icon = GFX_focus_por_concordat
+		icon = GFX_focus_usa_voter_registration_act
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		x = 50
-		y = 0
+		x = 59
+		y = 1
 		prerequisite = {
-			#focus = SLO_foc_
+			focus = SLO_foc_1
 		}
 		mutually_exclusive = {	
-			focus = SLO_foc_1
+			focus = SLO_foc_1-1
 		}
 		available = {
 			has_country_flag = GAEBALJUNG
+			OR = {
+				has_country_flag = SLO_vote_flag_win_demcom
+				has_country_flag = SLO_vote_flag_win_comdem
+				has_country_flag = SLO_vote_flag_win_com
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			add_stability = 0.05
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SLO_vojtech_tuka
 		}
 	}
 }

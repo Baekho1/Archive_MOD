@@ -24,7 +24,13 @@ SLO_economy_chaos_down = {
 		remove_ideas = SLO_economy_chaos_idea3
 	}
 	else = {
-		add_stability = 0.10
+		add_tech_bonus = {
+			bonus = 1
+			ahead_reduction = 2
+			uses = 1
+			category = industry
+			category = electronics
+		}
 	}
 }
 SLO_influence_check = {

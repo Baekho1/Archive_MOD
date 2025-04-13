@@ -149,7 +149,7 @@ ideas = {
 				has_war_with = SLO
 			}
 		}
-		SLO_slo_economic_dependence_idea = {
+		SLO_slo_economic_dependence_idea_ROM = {
 			picture = ARG_political_corruption_modifier
 			allowed = {	always = no	}
 			allowed_civil_war = { always = yes }
@@ -170,6 +170,87 @@ ideas = {
 					}
 					check_variable = { 
 						var = var:gloval.SLO_ROM_influence
+						value = 70
+						compare = less_than 
+					}
+				}
+			}
+		}
+		SLO_slo_economic_dependence_idea_YUG = {
+			picture = ARG_political_corruption_modifier
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = SLO
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.25
+				custom_modifier_tooltip = SLO_tt_7
+			}
+			cancel = {
+				OR = {
+					has_war_with = SLO
+					NOT = {
+						has_idea = SLO_slo_trade_idea
+					}
+					check_variable = { 
+						var = var:gloval.SLO_YUG_influence
+						value = 70
+						compare = less_than 
+					}
+				}
+			}
+		}
+		SLO_slo_economic_dependence_idea_POL = {
+			picture = ARG_political_corruption_modifier
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = SLO
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.25
+				custom_modifier_tooltip = SLO_tt_7
+			}
+			cancel = {
+				OR = {
+					has_war_with = SLO
+					NOT = {
+						has_idea = SLO_slo_trade_idea
+					}
+					check_variable = { 
+						var = var:gloval.SLO_POL_influence
+						value = 70
+						compare = less_than 
+					}
+				}
+			}
+		}
+		SLO_slo_economic_dependence_idea_HUN = {
+			picture = ARG_political_corruption_modifier
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = SLO
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.25
+				custom_modifier_tooltip = SLO_tt_7
+			}
+			cancel = {
+				OR = {
+					has_war_with = SLO
+					NOT = {
+						has_idea = SLO_slo_trade_idea
+					}
+					check_variable = { 
+						var = var:gloval.SLO_HUN_influence
 						value = 70
 						compare = less_than 
 					}
@@ -266,6 +347,15 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.20
 				industrial_factory_donations = 5
 				military_industrial_organization_funds_gain = 0.10
+			}
+		}
+		SLO_strike_idea = {
+			picture = FRA_factory_strikes
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.15
+				communism_drift = 0.05
 			}
 		}
 	}
