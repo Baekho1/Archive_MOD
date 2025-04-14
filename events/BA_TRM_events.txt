@@ -9243,11 +9243,34 @@ country_event = { # 학원경제개발부 부장은 누구로 할까요
 
 	option = { # 우이
 		name = trinity.34.a
+		add_trait = {
+			character = TRN_Kozeki_Ui
+			slot = political_advisor
+			trait = TRN_AED_club_manager
+		}
+		effect_tooltip = { country_event = trnfla.18 }
+		hidden_effect = {
+			TRN_Kozeki_Ui = {
+				unit_leader_event = { id = trnfla.18 }
+			}
+		}
 
     }
 
-	option = { # 독일인 (미정)
+	option = { # 독일인 (미정) - > 얄마르 샤흐트
 		name = trinity.34.b
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = TRN_hjalmar_schacht_political_advisor
+
+		add_trait = {
+			character = TRN_hjalmar_schacht
+			slot = political_advisor
+			trait = TRN_AED_club_manager
+		}
+		set_country_flag = TRN_hjalmar_schacht_flag
+		hidden_effect = {
+			
+		}
 
     }
 }
@@ -9679,17 +9702,16 @@ unit_leader_event = { # 침울한 하늘 아래에서
 		
 	}
 }
-country_event = { # 트리니티 버전 나치 유겐트
+unit_leader_event = { # 우이 당황
 	id = trnfla.18
 	title = trnfla.18.t
 	desc = trnfla.18.desc
-	picture = GFX_report_event_BRA_departamento_femininio
+	picture = GFX_event_kozeki_ui
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trnfla.18.a 
-		add_political_power = 25
 	}
 }

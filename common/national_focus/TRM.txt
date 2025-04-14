@@ -644,12 +644,12 @@ focus_tree = {
 			}
             hidden_effect = {
 				remove_trait = {
-					character = uyi
+					character = TRN_Kozeki_Ui
 					slot = political_advisor
 					trait = TRN_economist_ui
 				}
 				add_trait = {
-					character = uyi
+					character = TRN_Kozeki_Ui
 					slot = political_advisor
 					trait = TRN_economist_ui_2
 				}
@@ -750,12 +750,12 @@ focus_tree = {
 			add_research_slot = 1
             hidden_effect = {
 				remove_trait = {
-					character = uyi
+					character = TRN_Kozeki_Ui
 					slot = political_advisor
 					trait = TRN_economist_ui_2
 				}
 				add_trait = {
-					character = uyi
+					character = TRN_Kozeki_Ui
 					slot = political_advisor
 					trait = TRN_economist_ui_3
 				}
@@ -6739,112 +6739,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TRN_bring_in_vigilantes
-		icon = GFX_focus_AUS_frontmiliz_focus
-		prerequisite = { focus = TRN_control_tea_party }
-		x = 3
-		y = 1
-		relative_position_id = TRN_control_tea_party
-		cost = 5
-
-		available = {
-			OR = {
-				AND = {
-					country_exists = NSD
-					NOT = { owns_state = 66 }
-				}
-				AND = {
-					country_exists = KPD
-					NOT = { owns_state = 61 }
-				}
-			}
-		}
-		bypass = {
-			owns_state = 66
-			NOT = { country_exists = NSD }
-			owns_state = 61
-			NOT = { country_exists = KPD }
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			add_to_variable = {
-				global.NSD_country_collapse_decisions_value = -5
-				tooltip = NSD_country_collapse_value_tt
-			}
-			add_to_variable = {
-				global.KPD_country_collapse_decisions_value = -5
-				tooltip = KPD_country_collapse_value_tt
-			}
-			hidden_effect = {
-				TRN_tmwmal = { 
-					unit_leader_event = { id = trnfla.17 days = 14 } 
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = TRN_reconstruction_of_collapsed_industry
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = TRN_bring_in_vigilantes }
-		x = 1
-		y = 1
-		relative_position_id = TRN_bring_in_vigilantes
-		cost = 5
-
-		available = {
-			owns_state = 61
-			owns_state = 66
-		}
-
-		ai_will_do = {
-
-		}
-		completion_reward = {
-			add_stability = 0.03
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 61 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 66 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = TRN_Mika_basic_law
 		icon = GFX_focus_TRN_MisonoMika
 		prerequisite = { focus = TRN_control_tea_party }
@@ -6938,7 +6832,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = TRN_declare_trinity_order_state
+		id = TRN_second_trintiy
 		icon = GFX_focus_TRN_declare_trinity_order_state
 		prerequisite = { focus = TRN_necessary_revenge }
 		prerequisite = { focus = TRN_Justice_Task_Force_on_leash }
@@ -6983,13 +6877,13 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				news_event = { id = trinitynews.2 days = 3 }
+				news_event = { id = trinitynews.2 days = 2 }
 				BA_ban_democratic_effect = yes
 				BA_ban_communism_effect = yes
 				BA_ban_neutrality_effect = yes
 
 				country_event = { id = trinity.23 days = 150 } # 내부 및 외부 국경 통제 법령
-				country_event = { id = trnfla.12 days = 365 } # 내부 및 외부 국경 통제 법령
+				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 			}
 		}
 	}
@@ -7020,7 +6914,7 @@ focus_tree = {
 		id = TRN_cult_of_Mika
 		icon = GFX_focus_TRN_cult_of_Mika
 		prerequisite = { focus = TRN_The_nature_of_the_united_front }
-		prerequisite = { focus = TRN_declare_trinity_order_state }
+		prerequisite = { focus = TRN_second_trintiy }
 		x = 0
 		y = 1
 		relative_position_id = TRN_The_nature_of_the_united_front
@@ -7046,7 +6940,7 @@ focus_tree = {
 	focus = {
 		id = TRN_new_trinity_culture
 		icon = GFX_focus_SWI_establish_pro_helvetia
-		prerequisite = { focus = TRN_declare_trinity_order_state }
+		prerequisite = { focus = TRN_second_trintiy }
 		x = 2
 		y = 1
 		relative_position_id = TRN_The_nature_of_the_united_front
@@ -7165,10 +7059,10 @@ focus_tree = {
 	focus = {
 		id = TRN_fate_of_small_club
 		icon = GFX_focus_TRN_fate_of_small_club
-		prerequisite = { focus = TRN_declare_trinity_order_state }
+		prerequisite = { focus = TRN_second_trintiy }
 		x = 2
 		y = 1
-		relative_position_id = TRN_declare_trinity_order_state
+		relative_position_id = TRN_second_trintiy
 		cost = 5
 
 		available = {
@@ -7186,13 +7080,12 @@ focus_tree = {
 		id = TRN_improving_academy_industry
 		icon = GFX_focus_generic_low_cost_housing
 		prerequisite = { 
-			focus = TRN_reconstruction_of_collapsed_industry 
 			focus = TRN_Justice_Task_Force_on_leash
 			focus = TRN_necessary_revenge
 		}
-		x = -1
+		x = 2
 		y = 1
-		relative_position_id = TRN_reconstruction_of_collapsed_industry
+		relative_position_id = TRN_necessary_revenge
 		cost = 5
 
 		available = {
@@ -7214,11 +7107,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 학원경제개발부 설립
 		id = TRN_ministry_of_industrial_development
 		icon = GFX_focus_TRN_improving_academy_industry
 		prerequisite = { focus = TRN_improving_academy_industry }
-		prerequisite = { focus = TRN_declare_trinity_order_state }
+		prerequisite = { focus = TRN_second_trintiy }
 		x = 1
 		y = 1
 		relative_position_id = TRN_improving_academy_industry
@@ -7244,12 +7137,13 @@ focus_tree = {
 				activate_targeted_decision = { target = 68 decision = TRN_Industrial_Regions }
 				activate_targeted_decision = { target = 66 decision = TRN_Industrial_Regions }
 			}
+			country_event = trinity.34 
 		}
 	}
 
 	focus = {
 		id = TRN_expanded_corporatism
-		icon = GFX_focus_ICE_state_corporatism
+		icon = GFX_focus_BEL_christian_corporatism
 		prerequisite = { focus = TRN_ministry_of_industrial_development }
 		x = 1
 		y = 1
@@ -7286,7 +7180,7 @@ focus_tree = {
 
 	focus = {
 		id = TRN_planned_economy
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_generic_central_planning
 		prerequisite = { focus = TRN_ministry_of_industrial_development }
 		x = -1
 		y = 1
@@ -7312,6 +7206,285 @@ focus_tree = {
 				tooltip = local_resources_factor_tt
 			}
 
+		}
+	}
+	
+
+	focus = {
+		id = TRN_bring_in_vigilantes
+		icon = GFX_focus_AUS_frontmiliz_focus
+		#prerequisite = { focus = TRN_control_tea_party }
+		x = 17
+		y = 1
+		cost = 5
+
+		available = {
+			OR = {
+				AND = {
+					country_exists = NSD
+					NOT = { owns_state = 66 }
+				}
+				AND = {
+					country_exists = KPD
+					NOT = { owns_state = 61 }
+				}
+			}
+		}
+		bypass = {
+			owns_state = 66
+			NOT = { country_exists = NSD }
+			owns_state = 61
+			NOT = { country_exists = KPD }
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_to_variable = {
+				global.NSD_country_collapse_decisions_value = -5
+				tooltip = NSD_country_collapse_value_tt
+			}
+			add_to_variable = {
+				global.KPD_country_collapse_decisions_value = -5
+				tooltip = KPD_country_collapse_value_tt
+			}
+			hidden_effect = {
+				TRN_tmwmal = { 
+					unit_leader_event = { id = trnfla.17 days = 14 } 
+				}
+			}
+		}
+	}
+
+	focus = { # 융커와의 투쟁
+		id = TRN_fight_with_junker
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		#prerequisite = { focus = TRN_bring_in_vigilantes }
+		x = 4
+		y = 0
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 2
+
+		available = {
+			has_full_control_of_state = 68
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			68 = { add_building_construction = { type = infrastructure level = 1 } } #오스트마르크
+		}
+	}
+
+	focus = { # 몰수, 분배, 집단화
+		id = TRN_confiscation_distribution_collectivization
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = TRN_fight_with_junker }
+		x = -1
+		y = 1
+		relative_position_id = TRN_fight_with_junker
+		cost = 5
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = TRN_cooperation_with_junker }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # 융커와의 협력
+		id = TRN_cooperation_with_junker
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		prerequisite = { focus = TRN_fight_with_junker }
+		x = 1
+		y = 1
+		relative_position_id = TRN_fight_with_junker
+		cost = 5
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = TRN_confiscation_distribution_collectivization }
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # 농업 현대화
+		id = TRN_agricultural_modernization
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { 
+			focus = TRN_cooperation_with_junker 
+			focus = TRN_confiscation_distribution_collectivization
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_fight_with_junker
+		cost = 5
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # 무너진 산업 복구
+		id = TRN_reconstruction_of_collapsed_industry
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = TRN_bring_in_vigilantes }
+		x = -1
+		y = 1
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		available = {
+			owns_state = 61
+			owns_state = 66
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_stability = 0.03
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 61 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 66 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { # 카이저 빌헬름 협회
+		id = TRN_KWG_open
+		icon = GFX_focus_generic_university_3
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+			focus = TRN_fight_with_junker
+		}
+		x = 1
+		y = 1
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 6
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_research_slot_until_six = yes
+		}
+	}
+
+	focus = { # 통신망 확대
+		id = TRN_Reconnect_network_and_power
+		icon = GFX_focus_generic_energy
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+			focus = TRN_fight_with_junker
+		}
+		x = 0
+		y = 2
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = TRN_Reconnect_network_and_power
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = { # 
+		id = TRN_railway_improvement
+		icon = GFX_focus_generic_railroad
+		prerequisite = { 
+			focus = TRN_bring_in_vigilantes 
+			focus = TRN_fight_with_junker
+		}
+		x = 2
+		y = 2
+		relative_position_id = TRN_bring_in_vigilantes
+		cost = 5
+
+		ai_will_do = {
+
+		}
+
+
+		available = {
+			has_idea = BA_railway_gauge_issue
+		}
+		bypass = {
+			NOT = { has_idea = BA_railway_gauge_issue }
+		}
+
+		completion_reward = {
+			modify_timed_idea = {
+				idea = BA_railway_gauge_issue
+				days = -365
+			}
 		}
 	}
 }

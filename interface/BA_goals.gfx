@@ -2336,6 +2336,10 @@ spriteTypes = {
 		name = "GFX_goal_generic_air_CAS_russian"
 		texturefile = "gfx/interface/goals/thxKRteam/generic_air_CAS_russian.tga"  
 	}
+	SpriteType = {
+		name = "GFX_goal_brain"
+		texturefile = "gfx/interface/goals/thxKRteam/brain.tga"
+	}
 
 	#아비도스 중점
 	SpriteType = { 	

@@ -1193,18 +1193,17 @@ TRM_UKRINE_RK = {
 				}
                 save_global_event_target_as = Trinity_Puppet_UKR
                 TRM = {
-                    TRM_Erich_Koch = {
+                    TRN_Sayaka_Ohara = {
                         set_nationality = event_target:Trinity_Puppet_UKR
                     }
                 }
                 add_country_leader_role = {
-                    character = TRM_Erich_Koch
+                    character = TRN_Sayaka_Ohara
                     country_leader = {
 				    expire = "1974.6.18"
                         ideology = pater_nazism
 			            traits = { 
                             TRM_histroy_loser
-							prince_of_terror
                         }
                     }
                     promote_leader = yes
@@ -1267,19 +1266,18 @@ TRM_BELARUS_RK = {
 						target = PREV
 						autonomy_state = autonomy_holy_dminion
 					}
-                    TRM_Hinrich_Lohse = {
+                    TRN_Kurusu_Rin = {
                         set_nationality = event_target:Trinity_Puppet_BLR
                     }
                 	transfer_state = 97
                 }
                 add_country_leader_role = {
-                    character = TRM_Hinrich_Lohse
+                    character = TRN_Kurusu_Rin
                     country_leader = {
 				        expire = "1974.6.18"
                         ideology = pater_nazism
 			            traits = { 
 							TRM_histroy_loser 
-							prince_of_terror
 						}
                     }
                     promote_leader = yes
@@ -1371,7 +1369,6 @@ TRM_RUSSIA_RK = {
                                 ideology = pater_nazism
                                 traits = {
                                     TRM_histroy_loser
-									prince_of_terror
                                 }
                             }
                             promote_leader = yes
@@ -1493,7 +1490,7 @@ TRM_MIL_RK = {
                 		remove_ideas = BA_three_major_academies
 					hidden_effect = {
 						create_country_leader = {
-							name = "uyi"
+							name = "TRN_Kozeki_Ui"
 							desc = ""
 							picture = "gfx/leaders/TRN/TRN_Kozeki_Ui_Portrait.tga"
 							expire = "1965.1.1"
@@ -1654,12 +1651,12 @@ TRM_POL_RK = {
 				}
                 save_global_event_target_as = Trinity_Puppet_POL
                 TRM = {
-                    TRM_Hans_Frank = {
+                    TRN_Ayaka_Ohashi = {
                         set_nationality = event_target:Trinity_Puppet_POL
                     }
                 }
                 add_country_leader_role = {
-                    character = TRM_Hans_Frank
+                    character = TRN_Ayaka_Ohashi
                         country_leader = {
     				        expire = "1965.1.1"
                             ideology = pater_nazism

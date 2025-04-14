@@ -153,7 +153,7 @@ recruit_character = TRN_skcm
 recruit_character = TRN_akfl # 이오치 마리
 recruit_character = TRN_tlalzh
 #recruit_character = freegirl
-recruit_character = uyi
+recruit_character = TRN_Kozeki_Ui
 recruit_character = hihume
 recruit_character = hinata
 #recruit_character = suzusa
@@ -171,6 +171,9 @@ recruit_character = TRN_Shirasu_Azusa_Swim
 # 가상 인물
 recruit_character = TRN_chika_amabe 
 recruit_character = TRN_Natsuki_Kato
+recruit_character = TRN_Sayaka_Ohara
+recruit_character = TRN_Kurusu_Rin
+recruit_character = TRN_Ayaka_Ohashi
 
 # 독일
 recruit_character = TRN_hjalmar_schacht
