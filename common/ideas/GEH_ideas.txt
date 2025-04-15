@@ -70,7 +70,22 @@ ideas = {
 				custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
 			}
 		}
-        
+        	
+		GEH_widespread_propaganda = { # 만연한 포퓰리즘
+ 			picture = ETH_customs_barrier_ITA
+ 			allowed = { always = no }
+ 			allowed_civil_war = { always = yes } 
+ 			
+ 			modifier = {
+ 				political_power_gain = 0.05
+ 				global_building_slots_factor = -0.05
+ 				production_speed_buildings_factor = -0.10
+ 				production_factory_efficiency_gain_factor = -0.02
+ 				production_speed_arms_factory_factor = 0.05
+ 				production_speed_industrial_complex_factor = -0.10
+ 			}
+ 		}
+
 		GEH_negotiation_with_german_delegation_idea = { # 바이에른 협상
 			picture = ger_rebuild_the_nation
 			allowed = { always = no }
