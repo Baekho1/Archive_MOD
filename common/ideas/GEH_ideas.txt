@@ -71,21 +71,6 @@ ideas = {
 			}
 		}
         
-		GEH_widespread_propaganda = { # 만연한 포퓰리즘
-			picture = ETH_customs_barrier_ITA
-			allowed = { always = no }
-			allowed_civil_war = { always = yes } 
-			
-			modifier = {
-				political_power_gain = 0.05
-				global_building_slots_factor = -0.05
-				production_speed_buildings_factor = -0.10
-				production_factory_efficiency_gain_factor = -0.02
-				production_speed_arms_factory_factor = 0.05
-				production_speed_industrial_complex_factor = -0.10
-			}
-		}
-        
 		GEH_negotiation_with_german_delegation_idea = { # 바이에른 협상
 			picture = ger_rebuild_the_nation
 			allowed = { always = no }
@@ -316,11 +301,11 @@ ideas = {
 				#research_speed_factor = -0.2
 			}
 
-			targeted_modifier = {
-				tag = GEM
-				attack_bonus_against = -0.30
-				defense_bonus_against = -0.30
-			}
+			#targeted_modifier = {
+			#	tag = GEM
+			#	attack_bonus_against = -0.30
+			#	defense_bonus_against = -0.30
+			#}
 		}
 		GEH_popular_support_2 = { # 선도부의 정통성
 			picture = GEH_prefect_team_armband
@@ -337,8 +322,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = -0.20
-				defense_bonus_against = -0.25
+				attack_bonus_against = 0.05
+				#defense_bonus_against = 0.05
 			}
 		}
 		GEH_popular_support_3 = { # 선도부의 정통성
@@ -356,8 +341,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.20
+				attack_bonus_against =- 0.1
+				defense_bonus_against = 0.05
 			}
 		}
         GEH_popular_support_4 = { # 선도부의 정통성
@@ -372,8 +357,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = -0.10
-				defense_bonus_against = -0.15
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -388,7 +373,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GEM
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.15
 			}
 		}
 
@@ -408,7 +394,7 @@ ideas = {
 		}
 
 		GEH_centre_of_culture_idea = { # 문화의 중심
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -425,7 +411,7 @@ ideas = {
 		GEH_centre_of_culture_bauhaus_idea = { # 문화의 중심 (바우하우스)
 			name = GEH_centre_of_culture_idea
 
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -443,7 +429,7 @@ ideas = {
 		GEH_centre_of_culture_bauhaus_end_idea = { # 문화의 중심 (바우하우스 강화)
 			name = GEH_centre_of_culture_idea
 
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -461,7 +447,7 @@ ideas = {
 		GEH_centre_of_culture_degenerate_art_idea = { # 문화의 중심 (퇴폐미술)
 			name = GEH_centre_of_culture_idea
 
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -478,7 +464,7 @@ ideas = {
 		GEH_centre_of_culture_degenerate_art_end_idea = { # 문화의 중심 (퇴폐미술 강화)
 			name = GEH_centre_of_culture_idea
 			
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -495,7 +481,7 @@ ideas = {
 		GEH_centre_of_culture_composer_idea = { # 문화의 중심 (클래식)
 			name = GEH_centre_of_culture_idea
 
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
@@ -512,7 +498,7 @@ ideas = {
 		GEH_centre_of_culture_composer_end_idea = { # 문화의 중심 (클래식 강화)
 			name = GEH_centre_of_culture_idea
 			
-			picture = HEU_grand_duchy_of_luxembourg
+			picture = HEU_gehenna
 
 			allowed = { always = no }
 
