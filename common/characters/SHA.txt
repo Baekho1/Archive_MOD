@@ -85,6 +85,7 @@ characters={
 				politically_connected
 				Brilliant_Strategist
 				SHA_Genryumon_t
+				front_line_general
 			}
 			skill=4
 			attack_skill=4
@@ -162,6 +163,7 @@ characters={
 		corps_commander={
 			traits = {
 				Organizer
+				trait_reckless
 			}
 			skill=2
 			attack_skill=2

@@ -239,7 +239,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={  infantry_officer   }
+			traits={}
 			skill=2
 			attack_skill=1
 			defense_skill=3
