@@ -6264,12 +6264,12 @@ focus_tree = {
 						}
 
 						add_corps_commander_role = {
-							traits = { BA_robot_general infantry_officer war_hero trait_cautious }
-							attack_skill = 1
-							defense_skill = 1
-							planning_skill = 1
-							logistics_skill = 1
-							skill = 1
+							traits = { BA_robot_general infantry_officer war_hero trait_cautious urban_assault_specialist }
+							attack_skill=4
+							defense_skill=5
+							planning_skill=5
+							logistics_skill= 5
+							skill=5
 							legacy_id=-1
 						}
 					}
