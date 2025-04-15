@@ -6236,6 +6236,45 @@ focus_tree = {
 			if = {
 				limit = { has_country_flag = hina_assembly_h_flag }
 				custom_effect_tooltip = GEH_three_congress_focus_no_hina_htt
+				
+				hidden_effect = {
+					GEH_robot_hina = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = emergency_military_government
+								desc = "GEH_hina_fake_leader_desc"
+								expire = "1980.1.1"
+								traits = {
+									b_tjsehqnwkd3 GEH_friendly_sociopath
+								}
+							}
+						}
+
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								desc = "GEH_hina_fake_leader_desc"
+								expire = "1980.1.1"
+								traits = {
+									b_tjsehqnwkd3 GEH_friendly_sociopath
+								}
+							}
+						}
+
+						add_corps_commander_role = {
+							traits = { BA_robot_general infantry_officer war_hero trait_cautious }
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 1
+							logistics_skill = 1
+							skill = 1
+							legacy_id=-1
+						}
+					}
+					country_event = { id = GEH.event.1004 }
+				}
 			}
 			else_if = {
 				limit = { has_country_flag = hina_assembly_a_flag }

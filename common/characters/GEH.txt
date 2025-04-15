@@ -609,4 +609,53 @@ characters={
 
 		gender = female
 	}
+
+	GEH_robot_hina={ #히나 (가짜)
+		name=GEH_robot_hina
+		portraits={
+			army={
+				large="gfx/leaders/GEH/GEH_fake_hina_sorasaki.dds"
+				small="gfx/interface/advisors/GEH/GEH_fake_hina_sorasaki.dds"
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = GEH_robot_hina
+			allowed = { 
+                original_tag = GEH 
+            }
+			visible = {
+				has_country_leader = {
+					character = GEH_robot_hina
+					ruling_only = yes
+				}
+			}
+			traits = { army_chief_offensive_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = GEH_robot_hina
+			ledger = army
+			allowed = { 
+                original_tag = GEH 
+            }
+			traits = { 
+                BA_category_halo_2 
+            }
+			visible = {
+				has_country_leader = {
+					character = GEH_robot_hina
+					ruling_only = yes
+				}
+			}
+			cost = 100
+			ai_will_do = { factor = 14.000 }
+		}
+
+		gender = female
+	}
 }

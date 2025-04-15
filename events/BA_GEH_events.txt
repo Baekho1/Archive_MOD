@@ -1747,6 +1747,36 @@ country_event = { #선도부장 직속 흥신소 68
 	}
 }
 
+country_event = { #의심하지 말지어다
+	id = GEH.event.1003
+	title = GEH.event.1003.t
+	desc = GEH.event.1003.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1003.a
+		
+	}
+}
+
+country_event = { #기계의 몸을 한 신
+	id = GEH.event.1004
+	title = GEH.event.1004.t
+	desc = GEH.event.1004.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1004.a
+		country_event = { id = GEH.event.1003 days = 3 }
+	}
+}
+
 # 완전한 규율을 장악한 게헨나 선도부
 news_event = {
 	id = GEH_news.1

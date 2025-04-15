@@ -1759,8 +1759,18 @@ leader_traits = {
 	GEH_composer = { # 클래식 작곡가
 		random = no
 		stability_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		improve_relations_maintain_cost_factor = -0.1
 	}
 
+	GEH_friendly_sociopath = { # 다정한 소시오패스
+		random = no
+		improve_relations_maintain_cost_factor = 0.25
+		opinion_gain_monthly_factor = -0.25
+		war_support_factor = 0.1
+		subjects_autonomy_gain = -0.3
+		justify_war_goal_time = -0.25
+	}
 
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
@@ -2393,13 +2403,6 @@ leader_traits = {
         Production_factory_efficiency_gain_factor = 0.05
 		consumer_goods_factor = -0.10
 		research_speed_factor = 0.15
-	}
-	TRN_AED_club_manager = { # 학원경제개발부
-		sprite = 13
-		random = no
-
-		production_factory_efficiency_gain_factor = 0.05
-		line_change_production_efficiency_factor = 0.05
 	}
 	TRN_queen_of_the_night = { # 무력의 대천사
 		sprite = 13
