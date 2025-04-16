@@ -211,5 +211,19 @@ ideas = {
                 political_power_cost = 0.01
             }
         }
+        BLM_idea_bretagne_revolution = { # 브르타뉴 혁명
+            picture = generic_fascism_drift_bonus
+            allowed = {
+                tag = BLM
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                war_support_factor = -0.10
+                fascism_drift = 0.01
+            }
+        }
     }
 }

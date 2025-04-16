@@ -1,0 +1,4 @@
+focus = {
+	current = RED_swe_sdwp
+	progress = 0
+}

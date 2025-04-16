@@ -3496,24 +3496,19 @@ RED_minori_revolution_decision = {
 			original_tag = RED
 		}
 		available = {
-			command_power > 9
+			command_power > 19
 		}
 		custom_cost_trigger = {
-			command_power > 9
+			command_power > 19
 		}
 		visible = {
-			OR = {
-				has_completed_focus = RED_deal_with_ger
-				AND = {
-					is_ai = yes
-					has_completed_focus = RED_the_threats_abound
-				}
-			}
+			has_completed_focus = RED_the_threats_abound
 		}
 		days_remove = 5
+		
 		custom_cost_text = RED_ousting_office_tt
 		complete_effect = {
-			add_command_power = -10
+			add_command_power = -20
 		}
 		remove_effect = {
 			FROM = {
@@ -3521,13 +3516,55 @@ RED_minori_revolution_decision = {
 			}
 			if = {
 				limit = {
+					has_completed_focus = RED_labor_world
 					FROM = {
-						state = 140
+						OR = {
+							has_state_category = rural
+							has_state_category = town
+						}
 					}
 				}
-				country_event = {
-					id = RED_minori_event.15
-					days = 3
+				if = {
+					limit = {NOT={
+						has_template = "militia"}
+					}
+					division_template = {
+						priority = 0
+						name = "militia"
+						regiments = {
+							irregular_infantry = {
+								x = 0
+								y = 0
+							}
+							irregular_infantry = {
+								x = 0
+								y = 1
+							}
+							irregular_infantry = {
+								x = 0
+								y = 2
+							}
+							irregular_infantry = {
+								x = 1
+								y = 0
+							}
+							irregular_infantry = {
+								x = 1
+								y = 1
+							}
+							irregular_infantry = {
+								x = 1
+								y = 2
+							}
+						}
+					}
+				}
+				FROM = {
+					create_unit = {
+						division = "name = \"poor farmer\" division_template = \"militia\" start_experience_factor = 0.05 start_equipment_factor = 0.5"
+						owner = RED
+						count = 2
+					}
 				}
 			}
 		}

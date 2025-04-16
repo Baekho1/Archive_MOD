@@ -16,7 +16,9 @@ characters={
 			ideology=liberalism
 			traits={
 				HYA_T1a
+				HYA_trait_niya
 			}
+			desc = HYA_NIYA_DESC
 			expire="1965.1.1.1"
 		}
 		field_marshal={
@@ -24,11 +26,11 @@ characters={
 				politically_connected
 				media_personality
 			}
-			skill=5
-			attack_skill=3
+			skill=4
+			attack_skill=2
 			defense_skill=4
 			planning_skill=5
-			logistics_skill=5
+			logistics_skill=4
 		}
 	}
 	HYA_KAHO={ #카호
@@ -259,9 +261,10 @@ characters={
 			traits = {
 				inflexible_strategist
 				brilliant_strategist
+				politically_connected
 			}
 			skill=1
-			attack_skill=2
+			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
@@ -405,7 +408,8 @@ characters={
 		field_marshal={
 			traits = {
 				Career_Officer
-				Inflexible_Strategist	
+				Inflexible_Strategist
+				front_line_general
 			}
 			skill=4
 			attack_skill=3
@@ -445,6 +449,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
+				trait_cautious
 			}
 			skill=1
 			attack_skill=1

@@ -46,7 +46,10 @@ characters = {
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
-			visible = { NOT = { has_completed_focus = RED_dipose_cherino } }
+			#visible = { NOT = { has_completed_focus = RED_dipose_cherino } }
+			visible = { #중복 인물 처단
+				always = no
+			}
 		}
 	}
 
@@ -109,7 +112,7 @@ characters = {
 			legacy_id=-1
 
 			visible = {
-				#has_completed_focus = RED_227_speicial_class
+				has_completed_focus = RED_club_focus_4
 			}
 		}
 		scientist = {
@@ -358,12 +361,12 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { media_personality winter_specialist infantry_officer }
-			skill = 5
+			traits = { media_personality winter_specialist infantry_officer politically_connected trait_reckless }
+			skill = 4
 			attack_skill = 5
 			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 5
+			planning_skill = 2
+			logistics_skill = 4
 			legacy_id = 0
 		}
 
@@ -404,7 +407,7 @@ characters = {
 			legacy_id = 0
 			
 			visible = {
-				#has_completed_focus = RED_227_speicial_class
+				has_completed_focus = RED_club_focus_4
 			}
 		}
 	}

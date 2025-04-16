@@ -948,3 +948,26 @@ BLM_gang_thugs_war = {
 		}
 	}
 }
+BLM_bretagne_revolution_decision = {
+	BLM_bretagne_revolution_decision_1 = {
+		
+		priority = 100
+		icon = GFX_decision_revolt
+		activation = {
+			original_tag = BLM
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		days_mission_timeout = 190
+
+		timeout_effect = {
+			country_event = BLM_event.5
+		}
+	}
+}

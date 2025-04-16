@@ -1942,3 +1942,67 @@ defined_text = {
         localization_key = SYR_women_class_invalid
     }
 }
+
+defined_text = {
+    name = ABY_czech_head
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_flag_retired_masaryk}
+        }
+        localization_key = ABY_czech_head_1
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_retired_masaryk
+        }
+        localization_key = ABY_czech_head_2
+    }
+}
+
+defined_text = {
+    name = ABY_german_head
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_flag_died_czech}
+        }
+        localization_key = ABY_german_head_1
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_died_czech
+        }
+        localization_key = ABY_german_head_2
+    }
+}
+
+defined_text = {
+    name = ABY_czech_head_trait
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_flag_retired_masaryk}
+        }
+        localization_key = ABY_czech_head_1_trait
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_retired_masaryk
+        }
+        localization_key = ABY_czech_head_2_trait
+    }
+}
+
+defined_text = {
+    name = ABY_german_head_trait
+    text = {
+        trigger = {
+            NOT = {has_country_flag = ABY_flag_died_czech}
+        }
+        localization_key = ABY_german_head_1_trait
+    }
+    text = {
+        trigger = {
+            has_country_flag = ABY_flag_died_czech
+        }
+        localization_key = ABY_german_head_2_trait
+    }
+}

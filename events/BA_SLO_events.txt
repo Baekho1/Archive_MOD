@@ -303,6 +303,7 @@ country_event = {
 				hours = 6
 			}
 		}
+		set_global_flag = POL_cut_of_HUN_no
 	}
 }
 country_event = { 
@@ -398,7 +399,7 @@ country_event = {
 	option = {
 		name = SLO_event.8.a
 		effect_tooltip = {
-			add_ideas = SLO_slo_economic_dependence_idea
+			add_ideas = SLO_slo_economic_dependence_idea_ROM
 		}
 	}
 }
@@ -430,7 +431,22 @@ country_event = {
 		}
 		add_political_power = -200
 		add_stability = -0.10
-		remove_ideas = SLO_slo_economic_dependence_idea
+		if = {
+			limit = {tag = ROM}
+			remove_ideas = SLO_slo_economic_dependence_idea_ROM
+		}
+		if = {
+			limit = {tag = YUG}
+			remove_ideas = SLO_slo_economic_dependence_idea_YUG
+		}
+		if = {
+			limit = {tag = POL}
+			remove_ideas = SLO_slo_economic_dependence_idea_POL
+		}
+		if = {
+			limit = {tag = HUN}
+			remove_ideas = SLO_slo_economic_dependence_idea_HUN
+		}
 		add_timed_idea = {
 			idea = SLO_slo_economic_chaos_idea
 			days = 720
@@ -816,5 +832,220 @@ country_event = {
 				days = 180
 			}
 		}
+	}
+}
+country_event = { 
+	id = SLO_event.140
+	title = SLO_event.140.t
+	desc = SLO_event.140.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.140.a
+		trigger = {
+            communism > 0.24
+			communism < 0.50
+			fascism < 0.50
+        }
+		set_country_flag = SLO_vote_flag_win_comdem
+	}
+	option = {
+		name = SLO_event.140.aa
+		trigger = {
+            communism > 0.49
+        }
+		set_country_flag = SLO_vote_flag_win_com
+	}
+	option = {
+		name = SLO_event.140.b
+		trigger = {
+            democratic > 0.24
+			democratic < 0.50
+			fascism < 0.50
+        }
+		set_country_flag = SLO_vote_flag_win_demcom
+	}
+	option = {
+		name = SLO_event.140.bb
+		trigger = {
+            democratic > 0.49
+        }
+		set_country_flag = SLO_vote_flag_win_dem
+	}
+	option = {
+		name = SLO_event.140.c
+		trigger = {
+            fascism > 0.49
+        }
+		set_country_flag = SLO_vote_flag_win_fac
+	}
+}
+country_event = { 
+	id = SLO_event.141
+	title = SLO_event.141.t
+	desc = SLO_event.141.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.141.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_timed_idea = {
+			idea = SLO_strike_idea
+			days = 30
+		}
+	}
+	option = {
+		name = SLO_event.141.b
+		add_stability = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = -0.10
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.142
+	title = SLO_event.142.t
+	desc = SLO_event.142.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.142.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+	}
+	option = {
+		name = SLO_event.142.b
+		add_political_power = 30
+	}
+}
+country_event = { 
+	id = SLO_event.143
+	title = SLO_event.143.t
+	desc = SLO_event.143.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.143.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+	}
+	option = {
+		name = SLO_event.143.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+	}
+	option = {
+		name = SLO_event.143.c
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.144
+	title = SLO_event.144.t
+	desc = SLO_event.144.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.144.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = SLO_event.144.b
+		add_political_power = -30
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.145
+	title = SLO_event.145.t
+	desc = SLO_event.145.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.145.a
+		add_political_power = -30
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+	}
+	option = {
+		name = SLO_event.145.b
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+}
+country_event = { 
+	id = SLO_event.146
+	title = SLO_event.146.t
+	desc = SLO_event.146.e
+	picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+
+	option = {
+		name = SLO_event.146.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	option = {
+		name = SLO_event.146.b
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+		add_stability = 0.05
+	}
+	option = {
+		name = SLO_event.146.c
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		add_war_support = 0.05
 	}
 }

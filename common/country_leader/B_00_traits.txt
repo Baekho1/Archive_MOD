@@ -161,6 +161,14 @@ leader_traits = {
 		army_core_attack_factor = 0.20
 		army_core_defence_factor = 0.20 
 	}
+	BLM_kurihama_akemi_traits = {
+		random = no
+		stability_factor = 0.10
+		war_support_factor = 0.10
+		consumer_goods_factor = 0.05
+		war_stability_factor = 0.20
+		army_org_factor = 0.10
+	}
 	BLA_crime_syndicate_traits = {
 		random = no
 		stability_factor = -0.15
@@ -1710,6 +1718,24 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		army_defence_against_major_factor = 0.1
 	}
+	
+	GEH_paranoia_ako_bad = { # 무너진 선임행정관
+		random = no
+		sprite = 12
+		war_support_factor = 0.1
+		political_power_factor = -0.15
+		training_time_army_factor = -0.05
+		army_defence_against_major_factor = 0.05
+	}
+
+	GEH_paranoia_ako_good = { # 히나의 영원한 반려자
+		random = no
+		sprite = 12
+		war_support_factor = 0.2
+		training_time_army_factor = -0.1
+		army_defence_against_major_factor = 0.1
+		non_core_manpower = 0.05
+	}
 
 	GEH_artist = { # 예술가
 		random = no
@@ -1733,8 +1759,18 @@ leader_traits = {
 	GEH_composer = { # 클래식 작곡가
 		random = no
 		stability_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		improve_relations_maintain_cost_factor = -0.1
 	}
 
+	GEH_friendly_sociopath = { # 다정한 소시오패스
+		random = no
+		improve_relations_maintain_cost_factor = 0.25
+		opinion_gain_monthly_factor = -0.25
+		war_support_factor = 0.1
+		subjects_autonomy_gain = -0.3
+		justify_war_goal_time = -0.25
+	}
 
 	GEH_School_Lunch_Club_Juri = { # 급양부 - 주리
 		sprite = 13
@@ -2368,6 +2404,13 @@ leader_traits = {
 		consumer_goods_factor = -0.10
 		research_speed_factor = 0.15
 	}
+	TRN_AED_club_manager = { # 학원경제개발부
+ 		sprite = 13
+ 		random = no
+ 
+ 		production_factory_efficiency_gain_factor = 0.05
+ 		line_change_production_efficiency_factor = 0.05
+ 	}
 	TRN_queen_of_the_night = { # 무력의 대천사
 		sprite = 13
 		random = no
@@ -3195,17 +3238,29 @@ leader_traits = {
 	}
 	HYA_T1a = { #낙천적인 음양부장
 		random = no
-		political_power_factor = -0.30
+		political_power_factor = -0.3
+		stability_factor = 0.1
+		political_advisor_cost_factor = 0.10
+		hidden_modifier = {
+			ai_desired_divisions_factor = 1.2
+			ai_focus_defense_factor = 0.5
+		}
+	}
+	HYA_T1a_up = { #백귀야행의 음양부장
+		random = no
+		political_power_factor = -0.15
 		stability_factor = 0.15
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
 		}
 	}
-	HYA_T1a_up = { #낙천적인 음양부장
+	HYA_trait_niya = { #인간적인 무도회
 		random = no
-		political_power_factor = -0.15
-		stability_factor = 0.15
+		political_power_gain = 0.15
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
 		hidden_modifier = {
 			ai_desired_divisions_factor = 1.2
 			ai_focus_defense_factor = 0.5
@@ -4335,6 +4390,11 @@ leader_traits = {
 		random = no
 		political_power_factor = -0.15
 		stability_factor = -0.10
+	}
+	SLO_incomplete = {
+		random = no
+		stability_weekly = -0.002
+		disabled_ideas = 1
 	}
 	SLO_war_hero_dem = {
 		random = no

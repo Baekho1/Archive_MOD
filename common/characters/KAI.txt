@@ -71,7 +71,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ defensive_doctrine }
+			traits={ BA_robot_general defensive_doctrine }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -102,7 +102,7 @@ characters={
 		corps_commander = {
 			skill = 4
 			traits = {
-				thorough_planner politically_connected logistics_wizard expert_delegator
+				BA_robot_general thorough_planner politically_connected logistics_wizard expert_delegator
 			}
 			attack_skill = 4
 			defense_skill = 3
@@ -126,7 +126,7 @@ characters={
 		corps_commander = {
 			skill = 2
 			traits = {
-				trait_reckless
+				trait_reckless BA_robot_general
 			}
 			attack_skill = 2
 			defense_skill = 3
@@ -150,7 +150,7 @@ characters={
 		corps_commander = {
 			skill = 2
 			traits = {
-				infantry_officer
+				infantry_officer BA_robot_general
 			}
 			attack_skill = 3
 			defense_skill = 2

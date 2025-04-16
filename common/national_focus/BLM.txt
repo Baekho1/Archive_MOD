@@ -1066,6 +1066,16 @@ focus_tree = {
                 add_to_variable = { ROOT.halo_militia_cap_skevan = 3 }
                 set_division_template_cap = {  division_template = "Skevan" division_cap = ROOT.halo_militia_cap_skevan }
             }
+            custom_effect_tooltip = BLM_increasing_numbers_tt
+            hidden_effect = {
+                add_units_to_division_template = {
+                    template_name = "Skevan"
+					regiments = {
+						halo_militia = 0
+						halo_militia = 1
+					}
+                }
+            }
         }
     }
 
@@ -1172,6 +1182,15 @@ focus_tree = {
         }
 
         completion_reward = {
+            add_country_leader_role = {
+                character = BLM_Kurihama_Akemi
+                promote_leader = yes
+                country_leader = {
+                    ideology = criminal_state
+                    expire = "1965.1.1.1"
+                    traits = { BLM_kurihama_akemi_traits }
+                }
+            }
         }
     }
 
@@ -1375,7 +1394,7 @@ focus_tree = {
 
     focus = { #
         id = BLM_centralized_criminal_organization
-        icon = GFX_focus_generic_national_security
+        icon = GFX_focus_RAJ_a_private_military
         prerequisite = {
             focus = BLM_election_of_leader
             focus = BLM_helmet_group_committee
@@ -1427,6 +1446,65 @@ focus_tree = {
             if = {
                 limit = { has_idea = BLM_anarchy }
                 remove_ideas = BLM_anarchy
+            }
+
+            add_ideas = BLM_idea_bretagne_revolution
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_revolution_lv1
+        icon = GFX_focus_generic_national_security
+        prerequisite = {
+            focus = BLM_bretagne_revolution
+        }
+        x = 0
+        y = 2
+        relative_position_id = BLM_bretagne_revolution
+        cost = 2
+        available = {
+            fascism > 0.25
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_revolution_lv2
+        icon = GFX_focus_AUS_raid_military_storages
+        prerequisite = {
+            focus = BLM_bretagne_revolution_lv1
+        }
+        x = 0
+        y = 4
+        relative_position_id = BLM_bretagne_revolution
+        cost = 2
+        available = {
+            fascism > 0.35
+        }
+
+        completion_reward = {
+        }
+    }
+
+    focus = { #
+        id = BLM_bretagne_revolution_lv3
+        icon = GFX_focus_AUS_frontmiliz_focus
+        prerequisite = {
+            focus = BLM_bretagne_revolution_lv2
+        }
+        x = 0
+        y = 6
+        relative_position_id = BLM_bretagne_revolution
+        cost = 2
+        available = {
+            fascism > 0.45
+        }
+
+        completion_reward = {
+            set_politics = {
+                ruling_party = fascism
             }
         }
     }

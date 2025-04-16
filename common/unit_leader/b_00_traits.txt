@@ -880,5 +880,45 @@ leader_traits = {
 			factor = 0
         }
     }
+
+    BA_robot_general = {
+        type = all
+        trait_type = personality_trait
+
+        gain_xp = {
+			always = no # not gainable
+		}
+        
+        non_shared_modifier = {	
+            sickness_chance = -2.00
+            wounded_chance_factor = -0.5
+            reassignment_duration_factor = -0.7
+        }
+
+        modifier = {
+            
+        }
+		
+		field_marshal_modifier = {
+
+		}
+		
+		corps_commander_modifier = {
+
+		}
+
+        new_commander_weight = {
+			factor = 0
+            modifier = {
+				FROM = { 
+                    AND = {
+                        tag = GEI
+                        has_completed_focus = GEI_DEC_otomaton
+                    }    
+                }
+				add = 1000
+			}
+        }
+    }
 }
      

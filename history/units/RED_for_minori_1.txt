@@ -1,0 +1,4 @@
+focus = {
+	current = RED_native_leftists
+	progress = 0
+}

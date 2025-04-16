@@ -132,7 +132,7 @@ TRM_story_archive = {
 }
 
 TRN_economic_decisions_category = {
-	icon = generic_industry
+	icon = GFX_decision_category_SOV_merge_designers
 	picture = GFX_decision_cat_picture_soviet_comecon
 	
 	priority = 80
@@ -140,4 +140,14 @@ TRN_economic_decisions_category = {
 	allowed = {
 		original_tag = TRM
 	}
+}
+
+TRN_Mika_honor_decision_cat = {
+	icon = GFX_decision_cat_generic_austria_hungary_icon
+	priority = 300
+
+	allowed = { original_tag = TRM }
+	visible = { always = no }
+	visible_when_empty = yes
+	
 }

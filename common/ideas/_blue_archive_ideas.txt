@@ -106,6 +106,14 @@ ideas = {
 		}
 	}
 	country = {
+		generic_research_advances = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = jap_duplicate_research
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
         BA_interference_committee_1 = { #간섭위원회
 			name = BA_interference_committee
             picture = generic_secret_police

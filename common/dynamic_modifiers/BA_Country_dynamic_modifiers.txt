@@ -2432,3 +2432,28 @@ SLO_air_modifier = {
 	air_fuel_consumption_factor = SLO_air_air_fuel_consumption_factor
 	air_doctrine_cost_factor = SLO_air_air_doctrine_cost_factor
 }
+SLO_love_modifier = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_generic_disjointed_gov
+	political_power_factor = SLO_love_political_power_factor
+	stability_factor = SLO_love_stability_factor
+	drift_defence_factor = SLO_love_drift_defence_factor
+	surrender_limit = SLO_love_surrender_limit
+
+	war_support_factor = SLO_love_war_support_factor
+	communism_drift = SLO_love_communism_drift
+	democratic_drift = SLO_love_democratic_drift
+	fascism_drift = SLO_love_fascism_drift
+	production_factory_efficiency_gain_factor = SLO_love_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = SLO_love_production_factory_max_efficiency_factor
+	production_speed_buildings_factor = SLO_love_production_speed_buildings_factor
+	production_speed_industrial_complex_factor = SLO_love_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = SLO_love_production_speed_arms_factory_factor
+	consumer_goods_factor = SLO_love_consumer_goods_factor
+	industrial_capacity_factory = SLO_love_industrial_capacity_factory
+	conscription_factor = SLO_love_conscription_factor
+	training_time_factor = SLO_love_training_time_factor
+	research_speed_factor = SLO_love_research_speed_factor
+}

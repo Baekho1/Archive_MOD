@@ -944,6 +944,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/RED/RED_syndicalism.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_RED_syndicalism_color"
+		textureFile = "gfx/interface/ideas/RED/RED_syndicalism_color.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_RED_isolationism"
 		textureFile = "gfx/interface/ideas/RED/RED_isolationism.tga"
 	}

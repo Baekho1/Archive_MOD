@@ -13,6 +13,8 @@ add_namespace = GEH_BTBOTS
 add_namespace = GEH.flavor_event
 #기본 중점 이벤트
 add_namespace = GEH.event
+#선도부 뉴스 이벤트
+add_namespace = GEH_news
 
 country_event = { # 선도부 소집
 	id = NextPhase.0
@@ -436,6 +438,21 @@ country_event = { # 1차 총회 - 1
 
 	option = { 
 		name = hina_assembly.8.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
 		custom_effect_tooltip = hina_assembly_a_1_tt
 		add_to_variable = { GEH_hina_a_var = 1 }
 
@@ -446,6 +463,22 @@ country_event = { # 1차 총회 - 1
 	
 	option = { 
 		name = hina_assembly.8.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		custom_effect_tooltip = hina_assembly_h_1_tt
 		set_country_flag = GEH_event_hina_route_flag1
 		add_stability = 0.05
@@ -453,6 +486,21 @@ country_event = { # 1차 총회 - 1
 	
 	option = { 
 		name = hina_assembly.8.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
 		custom_effect_tooltip = hina_assembly_c_1_tt
 		add_to_variable = { GEH_hina_c_var = 1 }
 
@@ -470,6 +518,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = { 
 		name = hina_assembly.9.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+		
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 0 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -485,6 +549,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = {
 		name = hina_assembly.9.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag1 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -497,6 +577,22 @@ country_event = { # 1차 총회 - 2
 	
 	option = {
 		name = hina_assembly.9.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_c_var > 0 } }
 			custom_effect_tooltip = hina_assembly_c_2_tt
@@ -531,6 +627,28 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag2 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -548,6 +666,16 @@ country_event = { # 1차 총회 - 3
 	
 	option = {
 		name = hina_assembly.10.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag2 }
 			custom_effect_tooltip = hina_assembly_n_tt
@@ -557,6 +685,16 @@ country_event = { # 1차 총회 - 3
 	}
 	
 	option = {
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		trigger = {
 			NOT = { has_country_flag = hina_assembly_9_flag }
 		}
@@ -584,6 +722,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 1 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -597,6 +751,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { has_country_flag = GEH_event_hina_route_flag3 }
 			custom_effect_tooltip = hina_assembly_h_2_tt
@@ -610,6 +780,22 @@ country_event = { # 1차 총회 - 4
 	
 	option = { 
 		name = hina_assembly.11.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_c_var > 1 } }
 			custom_effect_tooltip = hina_assembly_c_2_tt
@@ -621,6 +807,7 @@ country_event = { # 1차 총회 - 4
 		set_country_flag = hina_assembly_11_c_flag
 	}
 }
+
 country_event = { # 1차 총회 - 5
 	id = hina_assembly.12
 	title = hina_assembly.12.t
@@ -631,11 +818,37 @@ country_event = { # 1차 총회 - 5
 	
 	option = { 
 		name = hina_assembly.12.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 3 # 기본 루트
+				}
+			}
+		}
+
 		custom_effect_tooltip = hina_assembly_n_tt
 	}
 	
 	option = { 
 		name = hina_assembly.12.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 1 # 이오리 루트
+				}
+			}
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 2 # 아코 루트
+				}
+			}
+		}
+
 		if = {
 			limit = { check_variable = { GEH_hina_a_var > 2 } }
 			custom_effect_tooltip = hina_assembly_a_2_tt
@@ -653,6 +866,16 @@ country_event = { # 1차 총회 - 5
 	
 	option = { 
 		name = hina_assembly.12.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				check_variable = {
+					GEH_route_random = 0 # 히나 독재정
+				}
+			}
+		}
+
 		trigger = {
 			has_country_flag = GEH_event_hina_route_flag1
 			has_country_flag = GEH_event_hina_route_flag2
@@ -961,11 +1184,25 @@ country_event = { #
 			remove_country_leader_role = {
 				ideology = despotism
 			}
+			remove_any_country_role_from_character = yes
 		}
+
+		add_country_leader_role = {
+			character = GEH_prefect_team_emergency_committee
+			promote_leader = yes
+			country_leader = {
+				ideology = oligarchism
+				desc = "GEH_prefect_team_emergency_committee_leader_desc"
+				#expire = "1965.1.1.1"
+				traits = { cabinet_crisis }
+			}
+		}
+
 		hidden_effect = {
 			activate_shine_on_focus = GEH_three_congress_focus_no_hina
 			set_country_flag = { flag = GEH_three_congress_focus_no_hina_in_progress_flag days = 35 value = 1 }
 			country_event = { id = GEH_hidden.3 days = 35 }
+			news_event = { id = GEH_news.6 }
 		}
 	}
 }
@@ -1180,7 +1417,6 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	}
 }
 
-
 country_event = { #
 	id = GEH.event.1
 	title = GEH.event.1.t
@@ -1224,5 +1460,798 @@ country_event = { #
 	}
 }
 
+country_event = { # 죽어가는 계절의 너에게
+	id = GEH.event.8
+	title = GEH.event.8.t
+	desc = GEH.event.8.desc
+	picture = GFX_report_event_ako_amau_crying_crash
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.8.a 
 
+		GEH_dkzh = {
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 60
+			}
 
+			remove_trait = {
+				trait = trait_cautious
+			}
+
+			add_trait = {
+				trait = trait_reckless
+			}
+		}
+
+		set_country_flag = GEH_ako_route_bad_ending_flag
+		
+		custom_effect_tooltip = GEH_ako_route_bad_ending_tt
+	}
+}
+
+country_event = { # 실연
+	id = GEH.event.9
+	title = GEH.event.9.t
+	desc = GEH.event.9.desc
+	picture = GFX_report_event_ako_amau_smile_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.9.a 
+		GEH_dkzh = {
+			add_defense = 2
+		}
+		set_country_flag = GEH_ako_route_amau_ending_flag
+
+		custom_effect_tooltip = GEH_ako_route_amau_ending_tt
+	}
+}
+
+country_event = { # 아코 내각의 붕괴
+	id = GEH.event.10
+	title = GEH.event.10.t
+	desc = GEH.event.10.desc
+	picture = GFX_report_event_ako_amau_crying_1
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.10.a 
+		GEH_dkzh = {
+			remove_trait = {
+				trait = trait_cautious
+			}
+			#add_attack = 2
+
+			remove_trait = {
+				slot = political_advisor
+				trait = GEH_paranoia_ako
+			}
+			add_trait = {
+				slot = political_advisor
+				trait = GEH_paranoia_ako_bad
+			}
+		}
+
+		retire_country_leader = yes
+
+		GEH_prefect_team_planning_department = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = technocracy
+					desc = "GEH_prefect_team_planning_department_generic_leader_desc"
+					expire = "1980.1.1"
+					traits = {
+						
+					}
+				}
+			}
+		}
+
+		set_country_flag = GEH_ako_route_no_hina_ending_flag
+		clr_country_flag = GEH_ako_route_amau_ending_flag
+
+		hidden_effect = {
+			news_event = { id = GEH_news.7 }
+		}
+
+		custom_effect_tooltip = GEH_ako_route_no_hina_ending_flag_tt
+	}
+}
+
+country_event = { # 죽어가는 계절의 나는
+	id = GEH.event.11
+	title = GEH.event.11.t
+	desc = GEH.event.11.desc
+	picture = GFX_report_event_ako_amau_smile_1
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.11.a 
+		set_country_flag = GEH_ako_route_ako_sorasaki_ending_flag
+		set_global_flag = GEH_basking_in_the_brilliance_of_their_serenade_mission_STOP_flag
+		
+		custom_effect_tooltip = GEH_ako_route_ako_sorasaki_ending_flag_tt
+	}
+}
+
+country_event = { # 아코도 히나도 없는 선도부장실
+	id = GEH.event.12
+	title = GEH.event.12.t
+	desc = GEH.event.12.desc
+	picture = GFX_event_mega_cities_GEH_2
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.12.a 
+
+	}
+}
+
+country_event = { # 선도부장 임명식 - 나츠메 이로하
+	id = GEH.event.13
+	title = GEH.event.13.t
+	desc = GEH.event.13.desc
+	picture = GFX_report_event_generic_building
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.13.a 
+		
+	}
+}
+
+country_event = { # 선도부장 임명식 - 오니카타 카요코
+	id = GEH.event.14
+	title = GEH.event.14.t
+	desc = GEH.event.14.desc
+	picture = GFX_report_event_kayoko_onikata
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.event.14.a 
+		
+	}
+}
+
+country_event = { #[GEH.GetName]의 [HEU.GetName] 병합
+	id = GEH.event.1000
+	title = GEH.event.1000.t
+
+	desc = {
+		text = GEH.event.1000.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1000.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = HEU_game_over_flag
+		}
+	}
+
+    fire_only_once = yes
+
+	trigger = {
+		AND = {
+			NOT = { original_tag = HEU }
+			original_tag = GEH
+			NOT = { country_exists = HEU }
+			ROOT = { owns_state = 8 }
+			NOT = { has_global_flag = HEU_game_over_flag }
+			Kivotos_tag = yes
+		}
+	}
+
+	option = { 
+		name = GEH.event.1000.a
+		complete_national_focus = GEH_benriya_annex
+	}
+
+	option = { 
+		name = GEH.event.1000.b
+		complete_national_focus = GEH_benriya_tolerate
+	}
+}
+
+country_event = { #룩셈부르크 대공국의 해산
+	id = GEH.event.1001
+	title = GEH.event.1001.t
+
+	desc = {
+		text = GEH.event.1001.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1001.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1001.a
+		trigger = {
+			has_global_flag = HEU_68_route_flag
+		}
+
+	}
+
+	option = { 
+		name = GEH.event.1001.b
+		trigger = {
+			has_global_flag = HEU_com_route_flag
+		}
+		HEU = {
+			retire_character = HEU_aru
+			retire_character = HEU_zkdyzh
+			retire_character = HEU_ancmzl
+			retire_character = HEU_gkfnzk
+			set_cosmetic_tag = HEU_luxembourg
+		}
+
+	}
+}
+
+country_event = { #선도부장 직속 흥신소 68
+	id = GEH.event.1002
+	title = GEH.event.1002.t
+
+	desc = {
+		text = GEH.event.1002.desc.a
+		trigger = { 
+			has_global_flag = HEU_68_route_flag
+		}
+	}
+
+	desc = {
+		text = GEH.event.1002.desc.b
+		trigger = { 
+			has_global_flag = HEU_com_route_flag
+		}
+	}
+
+	picture = GFX_report_event_Problem_Solver_68
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1002.a
+
+	}
+}
+
+country_event = { #의심하지 말지어다
+	id = GEH.event.1003
+	title = GEH.event.1003.t
+	desc = GEH.event.1003.desc
+
+	picture = GFX_report_event_ako_amau_generic_2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1003.a
+		
+	}
+}
+
+country_event = { #기계의 몸을 한 신
+	id = GEH.event.1004
+	title = GEH.event.1004.t
+	desc = GEH.event.1004.desc
+
+	picture = GFX_report_event_hina_sorasaki_generic_1
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.1004.a
+		country_event = { id = GEH.event.1003 days = 3 }
+	}
+}
+
+country_event = { #선도부 해외 방문 계획
+	id = GEH.event.2000
+	title = GEH.event.2000.t
+	desc = GEH.event.2000.desc
+
+	picture = GFX_event_GEH_hina_eventpicture
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.2000.a
+		trigger = {
+			AND = {
+				country_exists = ITA
+				NOT = { ITA = { has_war_with = ROOT } }
+			}
+		}
+	}
+
+	option = { 
+		name = GEH.event.2000.b
+		trigger = {
+			AND = {
+				country_exists = EGY
+				NOT = { EGY = { has_war_with = ROOT } }
+			}
+		}
+	}
+
+	option = { 
+		name = GEH.event.2000.c
+		trigger = {
+			AND = {
+				country_exists = JAP
+				NOT = { JAP = { has_war_with = ROOT } }
+				NOT = { JAP = { has_government = communism } }
+			}
+		}
+	}
+}
+
+# 완전한 규율을 장악한 게헨나 선도부
+news_event = {
+	id = GEH_news.1
+	title = GEH_news.1.t
+	desc = GEH_news.1.desc
+	picture = GFX_news_event_GEH_news_end_discipline
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.1.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.1.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.1.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 제1차 선도부 총회 개최
+news_event = {
+	id = GEH_news.2
+	title = GEH_news.2.t
+
+	desc = {
+		text = GEH_news.2.desc.hina
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_12_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.2.desc.iori
+		trigger = { 
+			GEH = { check_variable = { GEH_hina_c_var > 3 } }
+		}
+	}
+
+	desc = {
+		text = GEH_news.2.desc.ako
+		trigger = { 
+			GEH = { check_variable = { GEH_hina_a_var > 3 } }
+		}
+	}
+
+	desc = {
+		text = GEH_news.2.desc.generic
+		trigger = { 
+			NOT = { GEH = { has_country_flag = hina_assembly_12_flag } }
+			NOT = { GEH = { check_variable = { GEH_hina_c_var > 3 } } }
+			NOT = { GEH = { check_variable = { GEH_hina_a_var > 3 } } }
+		}
+	}
+
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.2.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.2.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.2.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 제2차 선도부 총회 개최
+news_event = {
+	id = GEH_news.3
+	title = GEH_news.3.t
+
+	desc = {
+		text = GEH_news.3.desc.hina
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_h_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.3.desc.iori
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_c_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.3.desc.ako
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_a_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.3.desc.generic
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_normal_flag }
+		}
+	}
+
+	picture = GFX_news_event_GEH_news_congress_2
+	
+	#major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.3.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.3.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.3.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 제3차 선도부 총회 개최
+news_event = {
+	id = GEH_news.4
+	title = GEH_news.4.t
+	desc = GEH_news.4.desc
+	picture = GFX_news_event_GEH_news_congress_3
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.4.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.4.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.4.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 게헨나 제4차 선도부 총회 개최
+news_event = {
+	id = GEH_news.5
+	title = GEH_news.5.t
+	desc = GEH_news.5.desc
+	picture = GFX_news_event_GEH_news_congress_4
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.5.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.5.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.5.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 선도부장직을 사임한 소라사키 히나
+news_event = {
+	id = GEH_news.6
+	title = GEH_news.6.t
+
+	desc = {
+		text = GEH_news.6.desc.hina
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_h_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.6.desc.iori
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_c_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.6.desc.ako
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_a_flag }
+		}
+	}
+
+	desc = {
+		text = GEH_news.6.desc.generic
+		trigger = { 
+			GEH = { has_country_flag = hina_assembly_normal_flag }
+		}
+	}
+
+	picture = GFX_news_event_GEH_news_goodbye_hina
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.6.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.6.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.6.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 아마우 아코 선도부장의 사임
+news_event = {
+	id = GEH_news.7
+	title = GEH_news.7.t
+	desc = GEH_news.7.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.7.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.7.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.7.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 이로하 내각 출범
+news_event = {
+	id = GEH_news.8
+	title = GEH_news.8.t
+	desc = GEH_news.8.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.8.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.8.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.8.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 카요코 내각 출범
+news_event = {
+	id = GEH_news.9
+	title = GEH_news.9.t
+	desc = GEH_news.9.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.9.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.9.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.9.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 소라사키 히나의 결혼식
+news_event = {
+	id = GEH_news.10
+	title = GEH_news.10.t
+	desc = GEH_news.10.desc
+	picture = GFX_news_event_GEH_news_ako_sorasaki
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.10.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.10.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.10.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}
+
+# 두 번째 뇌제의 통치
+news_event = {
+	id = GEH_news.11
+	title = GEH_news.11.t
+	desc = GEH_news.11.desc
+	picture = GFX_news_event_GEH_news_congress_1
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GEH_news.11.a
+		trigger = {
+			tag = GEH
+		}
+	}
+
+	option = {
+		name = GEH_news.11.b
+		trigger = {
+			Kivotos_tag = yes
+			NOT = { tag = GEH }
+		}
+	}
+	option = {
+		name = GEH_news.11.c
+		trigger = {
+			Kivotos_tag = no
+		}
+	}
+}

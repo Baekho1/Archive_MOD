@@ -606,17 +606,17 @@ ideas = {
 				}
 			}
 		TRN_Kanpeki_air = { # 안 미숙한 비행
-		picture = generic_air_bonus
-		allowed = {
-			always = no
-		}
-		modifier = {
-			air_accidents_factor = -0.35
-			air_ace_generation_chance_factor = 0.1
-			air_night_penalty = -0.3
-			air_weather_penalty = -0.3
-			air_mission_xp_gain_factor = 0.1
-			air_training_xp_gain_factor = 0.1
+			picture = generic_air_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				air_accidents_factor = -0.35
+				air_ace_generation_chance_factor = 0.1
+				air_night_penalty = -0.3
+				air_weather_penalty = -0.3
+				air_mission_xp_gain_factor = 0.1
+				air_training_xp_gain_factor = 0.1
 			}
 		}
 		TRN_Sie_Contracts = {
@@ -802,6 +802,7 @@ ideas = {
 					NOT = {
 						original_tag = KPD
 						original_tag = NSD
+						original_tag = AIR
 						AND = {
 							original_tag = TRM
 							is_dynamic_country = yes
@@ -1154,7 +1155,7 @@ ideas = {
 			}
 		}
         TRM_kozeki_ui = {
-			name = uyi
+			name = TRN_Kozeki_Ui
 			modifier = {
 		        production_factory_max_efficiency_factor = 0.05
 		        consumer_goods_factor = -0.10
@@ -1162,7 +1163,7 @@ ideas = {
 			}
         }
         TRM_kozeki_ui_yungu_e_tuja = {
-			name = uyi
+			name = TRN_Kozeki_Ui
 			modifier = {
 		        production_factory_max_efficiency_factor = 0.05
 		        consumer_goods_factor = -0.10
@@ -1170,7 +1171,7 @@ ideas = {
 			}
         }
         TRM_kozeki_ui_2 = {
-			name = uyi
+			name = TRN_Kozeki_Ui
 			modifier = {
 		        production_factory_max_efficiency_factor = 0.07
                 Production_factory_efficiency_gain_factor = 0.05

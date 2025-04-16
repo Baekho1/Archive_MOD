@@ -7,6 +7,85 @@ ideas = {
 		}
 	}
     country = {
+		RED_strike = { #산발적인 파업
+			picture = ICE_general_strike
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		RED_february_strike_1 = { #2월 총파업
+			name = RED_february_strike
+			picture = ICE_general_strike
+			removal_cost = -1
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		RED_february_strike_2 = { #현지 노총 가담
+			name = RED_february_strike
+			picture = ICE_general_strike
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.2
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		RED_february_strike_3 = { #용역부 전원 가담
+			name = RED_february_strike
+			picture = ICE_general_strike
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.35
+				consumer_goods_expected_value = 0.15
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		RED_factory_committees = { #공장위원회
+			picture = ICE_general_strike
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = -0.03
+				production_factory_start_efficiency_factor = -0.03
+				production_factory_max_efficiency_factor = -0.03
+				production_speed_buildings_factor = -0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		RED_threat_of_coup_5 = { #정치적 불안정
+			picture = RED_minori_protest
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.25
+				war_support_factor = -0.3
+				surrender_limit = -0.2
+			}
+		}
 		RED_cherino_idea = { #렌카와 체리노
 			name = RED_cherino
 			picture = RED_cherino_small
@@ -1334,21 +1413,6 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
-		RED_fire_of_revolution_1 = { #혁명의 불꽃
-			name = RED_fire_of_revolution
-			picture = generic_communism_drift_bonus
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-			modifier = {
-				drift_defence_factor = 0.05
-				communism_drift = 0.05
-				political_power_factor = 0.05
-				research_speed_factor = 0.035
-			}
-		}
 		RED_syndicalism_idea = { #생디칼리즘
 			name = RED_syndicalism_idea
 			picture = RED_syndicalism
@@ -2116,24 +2180,6 @@ ideas = {
 			}
 		}
 
-		RED_the_threats_abound_idea = { #주변의 위협
-			picture = MEX_revolutionary_army
-
-			removal_cost = -1
-
-			modifier = {
-				army_core_defence_factor = 0.15
-			}
-		}
-		RED_RMC_idea = { #혁명군사평의회
-			picture = MEX_revolutionary_army
-			removal_cost = -1
-			modifier = {
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
-			}
-		}
-
 		RED_publishing_idea = { #출판부
 			name = RED_publishing_idea
 			picture = RED_press
@@ -2479,93 +2525,13 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
-						NOT = { has_completed_focus = RED_dipose_cherino }
-						NOT = { has_completed_focus = RED_no_error_at_ideology }
+						has_completed_focus = RED_club_focus_2
 					}
 					country_event = {
 						id = RED_event.28
 						days = 3
 					}
 				}
-			}
-		}
-		RED_threat_of_coup_1 = { #2월 총파업
-			picture = RED_minori_protest
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.3
-				stability_factor = -0.3
-				war_support_factor = -0.50
-				surrender_limit = -0.25
-				consumer_goods_expected_value = 0.15
-			}
-		}
-		RED_threat_of_coup_2 = { #용역부의 가담
-			name = RED_threat_of_coup_1
-			picture = RED_minori_protest
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.3
-				stability_factor = -0.3
-				war_support_factor = -0.50
-				surrender_limit = -0.25
-				consumer_goods_expected_value = 0.17
-				production_speed_buildings_factor = -0.45
-			}
-		}
-		RED_threat_of_coup_3 = { #조선노동자 가담
-			name = RED_threat_of_coup_1
-			picture = RED_minori_protest
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.3
-				stability_factor = -0.3
-				war_support_factor = -0.50
-				surrender_limit = -0.25
-				consumer_goods_expected_value = 0.19
-				production_speed_buildings_factor = -0.45
-				industrial_capacity_dockyard = -0.3
-			}
-		}
-		RED_threat_of_coup_4 = { #현지인 노동자 참여
-			name = RED_threat_of_coup_1
-			picture = RED_minori_protest
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.3
-				stability_factor = -0.3
-				war_support_factor = -0.50
-				surrender_limit = -0.25
-				consumer_goods_expected_value = 0.21
-				production_speed_buildings_factor = -0.45
-				industrial_capacity_dockyard = -0.3
-				production_factory_efficiency_gain_factor = -0.7
-				production_factory_start_efficiency_factor = -0.3
-			}
-		}
-		RED_threat_of_coup_5 = { #정치적 불안정
-			picture = RED_minori_protest
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.2
-				stability_factor = -0.25
-				war_support_factor = -0.1
-				surrender_limit = -0.2
 			}
 		}
 		RED_threat_of_coup_CUT = { #대숙청

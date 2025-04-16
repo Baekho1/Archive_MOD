@@ -743,7 +743,7 @@ SLO_decisions_1 = {
 			ROM = {
 				has_idea = SLO_slo_trade_idea
 				NOT = {
-					has_idea = SLO_slo_economic_dependence_idea
+					has_idea = SLO_slo_economic_dependence_idea_ROM
 				}
 			}
 			check_variable = { 
@@ -755,7 +755,7 @@ SLO_decisions_1 = {
 		cost = 100
 		complete_effect = {
 			ROM = {
-				add_ideas = SLO_slo_economic_dependence_idea
+				add_ideas = SLO_slo_economic_dependence_idea_ROM
 				hidden_effect = {
 					country_event = {
 						id = SLO_event.8
@@ -785,7 +785,7 @@ SLO_decisions_1 = {
 			YUG = {
 				has_idea = SLO_slo_trade_idea
 				NOT = {
-					has_idea = SLO_slo_economic_dependence_idea
+					has_idea = SLO_slo_economic_dependence_idea_YUG
 				}
 			}
 			check_variable = { 
@@ -797,7 +797,7 @@ SLO_decisions_1 = {
 		cost = 100
 		complete_effect = {
 			YUG = {
-				add_ideas = SLO_slo_economic_dependence_idea
+				add_ideas = SLO_slo_economic_dependence_idea_YUG
 				hidden_effect = {
 					country_event = {
 						id = SLO_event.8
@@ -827,7 +827,7 @@ SLO_decisions_1 = {
 			POL = {
 				has_idea = SLO_slo_trade_idea
 				NOT = {
-					has_idea = SLO_slo_economic_dependence_idea
+					has_idea = SLO_slo_economic_dependence_idea_POL
 				}
 			}
 			check_variable = { 
@@ -839,7 +839,7 @@ SLO_decisions_1 = {
 		cost = 100
 		complete_effect = {
 			POL = {
-				add_ideas = SLO_slo_economic_dependence_idea
+				add_ideas = SLO_slo_economic_dependence_idea_POL
 				hidden_effect = {
 					country_event = {
 						id = SLO_event.8
@@ -869,7 +869,7 @@ SLO_decisions_1 = {
 			HUN = {
 				has_idea = SLO_slo_trade_idea
 				NOT = {
-					has_idea = SLO_slo_economic_dependence_idea
+					has_idea = SLO_slo_economic_dependence_idea_HUN
 				}
 			}
 			check_variable = { 
@@ -881,7 +881,7 @@ SLO_decisions_1 = {
 		cost = 100
 		complete_effect = {
 			HUN = {
-				add_ideas = SLO_slo_economic_dependence_idea
+				add_ideas = SLO_slo_economic_dependence_idea_HUN
 				hidden_effect = {
 					country_event = {
 						id = SLO_event.8
@@ -910,7 +910,7 @@ SLO_decisions_1 = {
 		visible = {
 			ROM = {
 				has_idea = SLO_slo_trade_idea
-				has_idea = SLO_slo_economic_dependence_idea
+				has_idea = SLO_slo_economic_dependence_idea_ROM
 			}
 		}
 		cost = 200
@@ -953,7 +953,7 @@ SLO_decisions_1 = {
 		visible = {
 			YUG = {
 				has_idea = SLO_slo_trade_idea
-				has_idea = SLO_slo_economic_dependence_idea
+				has_idea = SLO_slo_economic_dependence_idea_YUG
 			}
 		}
 		cost = 200
@@ -996,7 +996,7 @@ SLO_decisions_1 = {
 		visible = {
 			POL = {
 				has_idea = SLO_slo_trade_idea
-				has_idea = SLO_slo_economic_dependence_idea
+				has_idea = SLO_slo_economic_dependence_idea_POL
 			}
 		}
 		cost = 200
@@ -1039,7 +1039,7 @@ SLO_decisions_1 = {
 		visible = {
 			HUN = {
 				has_idea = SLO_slo_trade_idea
-				has_idea = SLO_slo_economic_dependence_idea
+				has_idea = SLO_slo_economic_dependence_idea_HUN
 			}
 		}
 		cost = 200
@@ -1090,19 +1090,19 @@ SLO_decisions_1 = {
 		timeout_effect = {
 			subtract_from_variable = {
 				var = var:global.SLO_ROM_influence
-				value = 5
+				value = 2
 			}
 			subtract_from_variable = {
 				var = var:global.SLO_YUG_influence
-				value = 5
+				value = 2
 			}
 			subtract_from_variable = {
 				var = var:global.SLO_POL_influence
-				value = 5
+				value = 2
 			}
 			subtract_from_variable = {
 				var = var:global.SLO_HUN_influence
-				value = 5
+				value = 2
 			}
 			custom_effect_tooltip = SLO_tt_allremove_2
 			SLO_influence_check = yes
@@ -1283,7 +1283,22 @@ SLO_decisions_2 = {
 			has_idea = SLO_slo_trade_idea
 			NOT = {
 				is_in_faction_with = SLO
-				has_idea = SLO_slo_economic_dependence_idea
+				if = {
+					limit = {tag = ROM}
+					has_idea = SLO_slo_economic_dependence_idea_ROM
+				}
+				if = {
+					limit = {tag = YUG}
+					has_idea = SLO_slo_economic_dependence_idea_YUG
+				}
+				if = {
+					limit = {tag = POL}
+					has_idea = SLO_slo_economic_dependence_idea_POL
+				}
+				if = {
+					limit = {tag = HUN}
+					has_idea = SLO_slo_economic_dependence_idea_HUN
+				}
 			}
 		}
 		cost = 200

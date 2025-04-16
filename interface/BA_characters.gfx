@@ -638,10 +638,6 @@ spriteTypes = {
 		name = "GFX_TRN_Enduo_Shimiko_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Enduo_Shimiko_Portrait.tga"
 	}
-	spriteType = {  # 카즈사
-		name = "GFX_TRN_Kyoyama_Kazusa_Portrait"
-		textureFile = "gfx/leaders/TRN/TRN_Kyoyama_Kazusa_Portrait.tga"
-	}
 	spriteType = {  # 츠루기
 		name = "GFX_TRN_KenzakiTsurugi_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_KenzakiTsurugi_Portrait.tga"
@@ -657,10 +653,6 @@ spriteTypes = {
 	spriteType = { # 수영복 히후미
 		name = "GFX_TRN_Ajitani_Hifumi_Swim_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Ajitani_Hifumi_Swim_Portrait.tga"
-	}
-	spriteType = {  # 나츠
-		name = "GFX_TRN_Yutori_Natsu_Portrait"
-		textureFile = "gfx/leaders/TRN/TRN_Yutori_Natsu_Portrait.tga"
 	}
 	spriteType = {  # 수영복 아즈사
 		name = "GFX_TRN_Shirasu_Azusa_Swim_Portrait"
@@ -690,13 +682,30 @@ spriteTypes = {
 		name = "GFX_TRN_Iochi_Mari_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Iochi_Mari_Portrait.tga"
 	}
-	spriteType = {  # 요시미쟝~~
+	spriteType = {  # 마리 - 아이돌!
+		name = "GFX_TRN_Iochi_Mari_Idol_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Iochi_Mari_Idol_Portrait.tga"
+	}
+	
+	# 요시미쟝~~ 하이~! 나니가 스키? 쿳키이 안도 크리이무 요리모 아 나 타~
+	spriteType = { # 요시미
 		name = "GFX_TRN_Ibaraki_Yoshimi_Portrait"
 		textureFile = "gfx/leaders/TRN/TRN_Ibaraki_Yoshimi_Portrait.tga"
 	}
+	# 아이리쟝~~ 하이~! 나니가 스키? 쵸코민토~ 요리모 아 나 타~
 	spriteType = {  # 아이리
 		name = "GFX_TRN_Kurimura_Airi"
 		textureFile = "gfx/leaders/TRN/TRN_Kurimura_Airi.tga"
+	}
+	# 카즈사쟝~~ 하이~! 나니가 스키? 스트로베리이 후레이바아 요리모 아 나 타~
+	spriteType = {  # 카즈사
+		name = "GFX_TRN_Kyoyama_Kazusa_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Kyoyama_Kazusa_Portrait.tga"
+	}
+	# 나츠쟝~~ 하이~! 나니가 스키? 모치론 다이스키 아이스크림~~
+	spriteType = { # 나츠
+		name = "GFX_TRN_Yutori_Natsu_Portrait"
+		textureFile = "gfx/leaders/TRN/TRN_Yutori_Natsu_Portrait.tga"
 	}
 
 
@@ -801,6 +810,10 @@ spriteTypes = {
 		name = "GFX_TRN_Iochi_Mari_2_idea"
 		textureFile = "gfx/interface/advisors/TRN/TRN_Iochi_Mari_2_idea.tga"
 	}
+	spriteType = { # 마리 - 아이돌!
+		name = "GFX_TRN_Iochi_Mari_idol_idea"
+		textureFile = "gfx/interface/advisors/TRN/TRN_Iochi_Mari_idol.tga"
+	}
 	spriteType = { # 요시미
 		name = "GFX_TRN_Ibaraki_Yoshimi_idea"
 		textureFile = "gfx/interface/advisors/TRN/TRN_Ibaraki_Yoshimi_idea.tga"
@@ -826,10 +839,34 @@ spriteTypes = {
 		textureFile = "gfx/leaders/TRN/kon_ka_TRN_Yurizono_Seia_Portrait.tga"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_TRN_Governor_Generala_1"
+		textureFile = "gfx/leaders/TRN/1_신성통치령.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_TRN_Governor_Generala_2"
+		textureFile = "gfx/leaders/TRN/2_신성통치령.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_TRN_Governor_Generala_3"
+		textureFile = "gfx/leaders/TRN/3_신성통치령.tga"
+		legacy_lazy_load = no
+	}
+	
 	#### 독일 인물 ####	
 	spriteType = { # 
 		name = "GFX_TRN_Schacht_idea"
 		textureFile = "gfx/interface/advisors/TRN/얄마르_샤흐트.tga"
+	}
+
+	spriteType = { # 
+		name = "GFX_Z_TRN_Hjalmar_Schachte_Portrait"
+		textureFile = "gfx/leaders/TRN/Z_TRN_Hjalmar_Schachte_Portrait.tga"
 	}
 
 	spriteType = { # 장관

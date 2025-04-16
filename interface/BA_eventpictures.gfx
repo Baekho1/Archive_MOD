@@ -1076,6 +1076,40 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/GEH/hina_sorasaki_generic_2.dds"
 	}
 
+	spriteType = {
+		name = "GFX_news_event_GEH_news_ako_sorasaki"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_ako_sorasaki.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_congress_1"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_congress_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_congress_2"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_congress_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_congress_3"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_congress_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_congress_4"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_congress_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_end_discipline"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_end_discipline.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_GEH_news_goodbye_hina"
+		texturefile = "gfx/event_pictures/GEH/GEH_news_goodbye_hina.dds"
+	}
 
 
 	# 밀레니엄 - 아리스루트

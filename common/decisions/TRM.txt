@@ -7053,6 +7053,9 @@ debug_decisions = {
 		}
     }
 }
+TRN_Mika_honor_decision_cat = {
+
+}
 TRN_economic_decisions_category = {
 	TRN_Infrastructure_Development = {
 		icon = GFX_decision_generic_construction

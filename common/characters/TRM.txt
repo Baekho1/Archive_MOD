@@ -554,8 +554,8 @@ characters={
 			}
 		}
 	}
-	uyi={ #우이쨩
-		name=uyi
+	TRN_Kozeki_Ui={ #우이쨩
+		name=TRN_Kozeki_Ui
 		portraits={
 			army={
 				large= GFX_TRN_Kozeki_Ui_Portrait
@@ -584,7 +584,7 @@ characters={
 		advisor={
 			slot = political_advisor
 			desc = TRN_Kozeki_Ui_advisor_desc
-			idea_token = uyi_political_advisor
+			idea_token = TRN_Kozeki_Ui_political_advisor
 			allowed = {
 				original_tag = TRM
 			}
@@ -596,28 +596,13 @@ characters={
 			on_add = {
 				if = {
 					limit = {
-						owner = { has_government = fascism }
+						owner = { 
+							has_government = fascism 
+							NOT = { has_completed_focus = TRN_ministry_of_industrial_development }
+						}
 					}
 					owner = {
-						country_event = { id = TRM_event.49 }
-					}
-					hidden_effect = {
-						ROOT = { 
-							set_country_flag = TRM_event.49.a
-							set_country_flag = TRM_uyi_recruit_once
-						}
-					}
-				}
-			}
-			on_remove = {
-				if = {
-					limit = {
-						owner = { has_government = fascism }
-					}
-					hidden_effect = {
-						ROOT = { 
-							clr_country_flag = TRM_event.49.a
-						}
+						TRN_Kozeki_Ui = { unit_leader_event = trnfla.18 } 
 					}
 				}
 			}
@@ -1150,6 +1135,9 @@ characters={
 			}
 		}
 	}
+	#############
+	### 가상 인물 ###
+	#############
 	TRN_chika_amabe={
 		name=TRN_chika_amabe
 		portraits={
@@ -1166,13 +1154,56 @@ characters={
 			}
 		}
 	}
+	TRN_Sayaka_Ohara ={
+		name=TRN_Sayaka_Ohara
+		portraits={
+			civilian = {
+				large = GFX_TRN_Governor_Generala_2
+			}
+		}
+	}
+	TRN_Kurusu_Rin={
+		name=TRN_Kurusu_Rin
+		portraits={
+			civilian = {
+				large = GFX_TRN_Governor_Generala_3
+			}
+		}
+	}
+	TRN_Ayaka_Ohashi ={
+		name=TRN_Ayaka_Ohashi
+		portraits={
+			civilian = {
+				large = GFX_TRN_Governor_Generala_1
+			}
+		}
+	}
 	###독일인 장군###
 	TRN_hjalmar_schacht={
 		name=GER_hjalmar_schacht
 		portraits={
 			army={
-				small= GFX_TRN_Schacht_idea
+				large = GFX_Z_TRN_Hjalmar_Schachte_Portrait
+				small= GFX_idea_hjalmar_schacht
 			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = TRN_hjalmar_schacht_advisor_desc
+			idea_token = TRN_hjalmar_schacht_political_advisor
+			allowed = {
+				original_tag = TRM
+			}
+			available = {
+
+			}
+			visible = {
+				has_country_flag = TRN_hjalmar_schacht_flag
+			}
+			traits = {
+				GER_mefo_bills_architect
+			}
+			ai_will_do = { factor = 30 }
 		}
 	}
 	TRN_Carl_Schmitt={

@@ -9243,11 +9243,34 @@ country_event = { # 학원경제개발부 부장은 누구로 할까요
 
 	option = { # 우이
 		name = trinity.34.a
+		add_trait = {
+			character = TRN_Kozeki_Ui
+			slot = political_advisor
+			trait = TRN_AED_club_manager
+		}
+		effect_tooltip = { country_event = trnfla.18 }
+		hidden_effect = {
+			TRN_Kozeki_Ui = {
+				unit_leader_event = { id = trnfla.18 }
+			}
+		}
 
     }
 
-	option = { # 독일인 (미정)
+	option = { # 얄마르 샤흐트
 		name = trinity.34.b
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = TRN_hjalmar_schacht_political_advisor
+
+		add_trait = {
+			character = TRN_hjalmar_schacht
+			slot = political_advisor
+			trait = TRN_AED_club_manager
+		}
+		set_country_flag = TRN_hjalmar_schacht_flag
+		hidden_effect = {
+			
+		}
 
     }
 }
@@ -9382,13 +9405,102 @@ news_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+	}
+	option = {
+		name = trinitynews.3.a
+		trigger = { NOT = { original_tag = TRM } }
 		
 	}
 	option = {
 		name = trinitynews.3.a
-		
+		trigger = { original_tag = TRM }
+		TRM = {
+			TRN_akfl = {
+				unit_leader_event = { id = trnfla.1000 }
+			}
+		}
 	}
 }
+
+unit_leader_event = { # 아이돌 마리 - 1
+	id = trnfla.1000
+	title = trnfla.1000.t
+	desc = trnfla.1000.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { # 바꾸죠?
+		name = trnfla.1000.a
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = trn_idol_portrait_tt
+		TRN_akfl = {
+			set_portraits = {
+				army = { 
+					large = GFX_TRN_Iochi_Mari_Idol_Portrait 
+					small = GFX_TRN_Iochi_Mari_idol_idea
+				}
+			}
+			unit_leader_event = trnfla.1001
+		}
+
+    }
+
+	option = { # 기본이 더 낫네요
+		name = trnfla.1000.b
+		ai_chance = {
+			base = 90
+		}
+		TRN_akfl = {
+			set_portraits = {
+				army = { 
+					large = GFX_TRN_Iochi_Mari_Portrait 
+					small = GFX_TRN_Iochi_Mari_2_idea
+				}
+			}
+			unit_leader_event = trnfla.1002
+		}
+
+    }
+}
+
+unit_leader_event = { # 아이돌 마리 - 2
+	id = trnfla.1001
+	title = trnfla.1001.t
+	desc = trnfla.1001.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { # 좋아해 줘! 좀 더! 나를 바라봐 줘! 좀 더!
+		name = trnfla.1001.a
+		add_trait = { 
+			character = TRN_akfl
+			trait = media_personality 
+		}
+		custom_effect_tooltip = trnfla_1001_tt
+    }
+}
+
+unit_leader_event = { # 아이돌 마리 - 3
+	id = trnfla.1002
+	title = trnfla.1002.t
+	desc = trnfla.1002.desc
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+    fire_only_once = no
+
+	option = { #  
+		name = trnfla.1002.a
+		custom_effect_tooltip = trnfla_1002_tt
+    }
+}
+
 country_event = {
 	id = trnfla.0
 	title = trnfla.0.t
@@ -9679,17 +9791,16 @@ unit_leader_event = { # 침울한 하늘 아래에서
 		
 	}
 }
-country_event = { # 트리니티 버전 나치 유겐트
+unit_leader_event = { # 우이 당황
 	id = trnfla.18
 	title = trnfla.18.t
 	desc = trnfla.18.desc
-	picture = GFX_report_event_BRA_departamento_femininio
+	picture = GFX_event_kozeki_ui
 	
 	is_triggered_only = yes
     fire_only_once = no
 
 	option = {
 		name = trnfla.18.a 
-		add_political_power = 25
 	}
 }
