@@ -1777,6 +1777,47 @@ country_event = { #기계의 몸을 한 신
 	}
 }
 
+country_event = { #선도부 해외 방문 계획
+	id = GEH.event.2000
+	title = GEH.event.2000.t
+	desc = GEH.event.2000.desc
+
+	picture = GFX_event_GEH_hina_eventpicture
+
+	is_triggered_only = yes
+
+	option = { 
+		name = GEH.event.2000.a
+		trigger = {
+			AND = {
+				country_exists = ITA
+				NOT = { ITA = { has_war_with = ROOT } }
+			}
+		}
+	}
+
+	option = { 
+		name = GEH.event.2000.b
+		trigger = {
+			AND = {
+				country_exists = EGY
+				NOT = { EGY = { has_war_with = ROOT } }
+			}
+		}
+	}
+
+	option = { 
+		name = GEH.event.2000.c
+		trigger = {
+			AND = {
+				country_exists = JAP
+				NOT = { JAP = { has_war_with = ROOT } }
+				NOT = { JAP = { has_government = communism } }
+			}
+		}
+	}
+}
+
 # 완전한 규율을 장악한 게헨나 선도부
 news_event = {
 	id = GEH_news.1
