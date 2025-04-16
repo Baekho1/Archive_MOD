@@ -205,3 +205,26 @@ ideas = {
 		}
 	}
 }
+
+ideas = {
+	country = {
+		KAP_solo_assignment = {
+			picture = KAP_zotdam
+
+			allowed = {
+				tag = KAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.5
+				annex_cost_factor = -0.3
+			}
+		}
+	}
+}

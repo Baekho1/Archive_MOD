@@ -1264,7 +1264,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_ideas = KAP_solo_assignment
 		}
 	}
 
@@ -1640,7 +1640,7 @@ focus_tree = {
 		}
 
 		available = {
-			num_of_factories > 300
+			num_of_factories > 500
 		}
 
 		bypass = {
