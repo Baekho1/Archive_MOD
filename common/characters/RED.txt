@@ -46,10 +46,10 @@ characters = {
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
-			visible = { NOT = { has_completed_focus = RED_dipose_cherino } }
-		}
-		visible = { #중복 인물 처단
-			always = no
+			#visible = { NOT = { has_completed_focus = RED_dipose_cherino } }
+			visible = { #중복 인물 처단
+				always = no
+			}
 		}
 	}
 
