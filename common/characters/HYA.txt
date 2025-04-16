@@ -26,11 +26,11 @@ characters={
 				politically_connected
 				media_personality
 			}
-			skill=5
-			attack_skill=3
+			skill=4
+			attack_skill=2
 			defense_skill=4
 			planning_skill=5
-			logistics_skill=5
+			logistics_skill=4
 		}
 	}
 	HYA_KAHO={ #카호
@@ -261,6 +261,7 @@ characters={
 			traits = {
 				inflexible_strategist
 				brilliant_strategist
+				politically_connected
 			}
 			skill=1
 			attack_skill=1
@@ -448,6 +449,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
+				trait_cautious
 			}
 			skill=1
 			attack_skill=1
