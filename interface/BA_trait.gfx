@@ -128,4 +128,8 @@ spriteTypes = {
 		name = "GFX_trait_SHA_Black_Tortoise_Promenade_t"
 		textureFile = "gfx/interface/traits/trait_SHA_Black_Tortoise_Promenade.tga"
 	}
+	spriteType = {
+		name = "GFX_trait_medical_officer"
+		textureFile = "gfx/interface/traits/medical_officer.dds"
+	}
 }

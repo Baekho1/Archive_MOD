@@ -322,7 +322,7 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
-			traits={ front_line_general infantry_officer TRN_guhogisadan politically_connected }
+			traits={ front_line_general medical_officer TRN_guhogisadan politically_connected }
 
 			desc = TRN_Mine_advisor_desc
 		}
@@ -989,7 +989,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ TRN_guhogisadan }
+			traits={ TRN_guhogisadan medical_officer }
 			skill=1
 			attack_skill=1
 			defense_skill=2
@@ -1008,7 +1008,7 @@ characters={
 		}
 		gender = female
 		corps_commander={
-			traits={ TRN_guhogisadan }
+			traits={ TRN_guhogisadan medical_officer }
 			skill=1
 			attack_skill=1
 			defense_skill=2

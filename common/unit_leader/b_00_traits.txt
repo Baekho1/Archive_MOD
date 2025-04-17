@@ -920,5 +920,34 @@ leader_traits = {
 			}
         }
     }
+
+    medical_officer = { 
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+            supply_consumption_factor = 0.02
+			army_morale_factor = 0.05
+            experience_loss_factor = -0.10
+		}
+
+		new_commander_weight = {
+			factor = 1
+
+			modifier = {
+				FROM = { has_idea = best_of_the_best_spirit }
+				factor = 0
+			}
+			modifier = {
+				FROM = { has_idea = academy_scholarships_spirit }
+				factor = 0
+			}
+			modifier = { #Purged Junior Army Officers
+				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
+				factor = 0
+			}
+		}
+		
+	}
 }
      
