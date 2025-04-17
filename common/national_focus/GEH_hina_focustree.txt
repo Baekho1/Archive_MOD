@@ -944,6 +944,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			add_to_variable = {
+				geh_discipline_var = 10
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
+
             country_event = { id = hina.6 }
 		}
 	}
@@ -1015,6 +1021,8 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.3 }
 			}
+
+			add_research_slot = 1 #4개
 		}
 	}
 
@@ -1433,7 +1441,12 @@ focus_tree = {
 			add_manpower = 10000
 			add_stability = 0.05
 			add_war_support = 0.10
-			add_command_power = 50
+			
+			add_to_variable = {
+				geh_discipline_var = 10
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
 		}
 	}
 	focus = {
@@ -1479,13 +1492,14 @@ focus_tree = {
         relative_position_id = GEH_second_congress_focus
         x = 3
         y = 1
-        cost = 10
+        cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
 				has_country_flag = hina_assembly_c_flag
 			}
 		}
+		text_icon = GER_inner_circle_focus_style
         prerequisite = {
             focus = GEH_second_congress_focus
         }
@@ -1798,13 +1812,14 @@ focus_tree = {
 		relative_position_id = GEH_second_congress_focus
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
 				has_country_flag = hina_assembly_h_flag
 			}
 		}
+		text_icon = GER_inner_circle_focus_style
 		offset = {
 			trigger = {
 				is_debug = yes
@@ -2200,13 +2215,14 @@ focus_tree = {
 		relative_position_id = GEH_second_congress_focus
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
 				has_country_flag = hina_assembly_a_flag
 			}
 		}
+		text_icon = GER_inner_circle_focus_style
 		offset = {
 			trigger = {
 				is_debug = yes
@@ -2260,7 +2276,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_deterioration_of_manmajeon_authority
-		icon = GFX_focus_SWI_neutrality_on_the_move
+		icon = GFX_goal_hmmngshinso_broken
 		relative_position_id = GEH_ako_route_focus
 		x = 1
 		y = 1
@@ -2283,7 +2299,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_abolition_of_authority
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_GER_the_peoples_victory
 		relative_position_id = GEH_ako_route_focus
 		x = -1
 		y = 1
@@ -2319,7 +2335,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_prefect_team_democracy
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_AUS_lawmaking_leniency
 		relative_position_id = GEH_ako_route_focus
 		x = 0
 		y = 2
@@ -2511,13 +2527,14 @@ focus_tree = {
 		relative_position_id = GEH_second_congress_focus
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		allow_branch = {
 			OR = {
 				is_debug = yes
 				has_country_flag = hina_assembly_normal_flag
 			}
 		}
+		text_icon = GER_inner_circle_focus_style
 		offset = {
 			trigger = {
 				is_debug = yes
@@ -2654,7 +2671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_negotiation_with_german_delegation
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_deal_with_spd
 		relative_position_id = GEH_bavaria_governance_method
 		x = -3
 		y = 1
@@ -2678,7 +2695,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_institutional_stabilization
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_currency_reforms
 		relative_position_id = GEH_bavaria_governance_method
 		x = -1
 		y = 1
@@ -2701,7 +2718,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_industrial_development
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_road_investment
 		relative_position_id = GEH_bavaria_governance_method
 		x = 1
 		y = 1
@@ -3008,6 +3025,17 @@ focus_tree = {
         }
         completion_reward = {
 			add_ideas = GEH_establishment_of_german_militia_idea
+
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GEH_Army_focus_7 }
+				}
+				add_to_variable = {
+					geh_discipline_var = -4
+					tooltip = geh_discipline_system_tt
+				}
+				geh_discipline_system_setting_effect = yes
+			}
         }
         ai_will_do = {
             factor = 1
@@ -3085,6 +3113,17 @@ focus_tree = {
 						}
 					}
 				}
+			}
+
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GEH_Army_focus_7 }
+				}
+				add_to_variable = {
+					geh_discipline_var = -3
+					tooltip = geh_discipline_system_tt
+				}
+				geh_discipline_system_setting_effect = yes
 			}
         }
         ai_will_do = {
@@ -3175,6 +3214,8 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = GEH_news.4 }
 			}
+			
+			add_research_slot = 1 #5개
 		}
 	}
     focus = {
@@ -3212,6 +3253,9 @@ focus_tree = {
 						has_intelligence_agency = no
 					}
 					create_intelligence_agency = yes
+				}
+				else = {
+					upgrade_intelligence_agency = upgrade_army_department 
 				}
 			}
 		}
@@ -3615,6 +3659,22 @@ focus_tree = {
                     modifier =  TRN_eden_railway_modifier days = 365 scope = GEH
                 }
             }
+
+			add_tech_bonus = {
+				name = GEH_nationalise_railways
+				bonus = 0.5
+				uses = 1
+				category = train_tech
+			}
+	
+			custom_effect_tooltip = generic_skip_one_line_tt
+	
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
+			}
+	
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
     focus = {
@@ -3677,7 +3737,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_factory_focus_4
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_GER_wirtschaftswunder
 		cost = 10
 		x = -1
 		y = 2
@@ -3721,7 +3781,7 @@ focus_tree = {
     focus = {
 		id = GEH_factory_focus_5
         text = SOV_shift_to_armaments_production
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_mass_production
 		cost = 10
 		x = 1
 		y = 2
@@ -3973,6 +4033,12 @@ focus_tree = {
 				specialization = specialization_land
 				value = 0.5
 			}
+			
+			add_to_variable = {
+				geh_discipline_var = 5
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
 		}
 	}
     focus = {
@@ -4037,7 +4103,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_Army_focus_1
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_focus_generic_motor_cycle
 		cost = 5
 		x = -5
 		y = 1
@@ -4058,6 +4124,7 @@ focus_tree = {
 			}
 		}
 		available = { }
+
 		completion_reward = { 
 		    add_one_random_military_factory = yes
 		    add_tech_bonus = {
@@ -4066,15 +4133,43 @@ focus_tree = {
 			    uses = 2
     			category = infantry_weapons
 		    }
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.5
+			
+			add_tech_bonus = {
+				name = GER_all_terrain_military_motorcycle
+				uses = 1
+				bonus = 0.5
+				category = military_police_tech
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = sp_armored_motorized_military_police_tech }
+					}
+					add_tech_bonus = {
+						name = GEH_Army_focus_1
+						uses = 1
+						bonus = 1
+						technology = sp_armored_motorized_military_police_tech
+					}
+				}
+				#add_equipment_bonus = {
+				#	name = GER_all_terrain_military_motorcycle
+				#	bonus = {
+				#		motorbike_equipment_1 = {
+				#			build_cost_ic = -0.25
+				#		}
+				#	}
+				#}
 			}
         }
 	}
     focus = {
 		id = GEH_Army_focus_2
-		icon = GFX_focus_generic_winter_warfare
+		icon = GFX_focus_PER_wether_the_storm
 		cost = 5
 		x = -3
 		y = 1
@@ -4299,8 +4394,8 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_west_army_focus_2
-		icon = GFX_focus_FIN_strengthen_military_administration
-		cost = 5
+		icon = GFX_focus_generic_tank_assembly
+		cost = 3
 		x = 1
 		y = 2
         prerequisite = {
@@ -4318,39 +4413,110 @@ focus_tree = {
 				has_war = no
 			}
 		}
+
 		available = { }
+
 		completion_reward = { 
-            custom_effect_tooltip = GEH_west_army_focus_2_tt
-            add_to_variable = { GEH_RU_modifier_army_sub_unit_cavalry_speed_factor = 0.1 }
-            add_to_variable = { GEH_RU_cavalry_attack_factor = 0.1 }
+			add_doctrine_cost_reduction = {
+				name = GEH_west_army_focus_2
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+
             custom_effect_tooltip = GEH_west_army_focus_2_ttt
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+
+				add_tech_bonus = {
+					name = GEH_west_army_focus_2
+					bonus = 0.5
+					uses = 1
+					category = cat_mechanized_equipment
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Panzer IV Ausf.F2"
+					type = medium_tank_chassis_2
+					design_team = mio:GEH_tank_department_organization
+					modules = {
+						main_armament_slot = tank_medium_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = wet_ammo_storage
+						special_type_slot_2 = tank_radio_1
+						special_type_slot_3 = sloped_armor
+						special_type_slot_4 = easy_maintenance
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_GER_improved_medium_tank_medium"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				create_equipment_variant = {
+					name = "Tiger I Ausf. A"
+					type = heavy_tank_chassis_2
+					design_team = mio:GEH_tank_department_organization
+					modules = {
+						main_armament_slot = tank_heavy_cannon
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = smoke_launchers
+						special_type_slot_3 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 8
+						tank_nsb_armor_upgrade = 6
+					}
+					icon = "GFX_GER_advanced_heavy_tank_medium"
+				}
+			}
+
             hidden_effect = {
 				division_template = {
-					name = "Gehenna Cavalry"
+					name = "Gehenna Panzer-Division"
 					division_names_group = GEH_INF_01
 
 					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						cavalry = { x = 1 y = 2 }
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 3 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+					}
+					
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
 					}
 				}
+
 				capital_scope = {
-					#Cossack Cavalry
 					create_unit = { 
-						division = "name = \"Gehenna Cavalry 1st\" division_template = \"Gehenna Cavalry\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+						division = "name = \"1st Gehenna Panzer-Division\" division_template = \"Gehenna Panzer-Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
 					}
 					create_unit = { 
-						division = "name = \"Gehenna Cavalry 2nd\" division_template = \"Gehenna Cavalry\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+						division = "name = \"2nd Gehenna Panzer-Division \" division_template = \"Gehenna Panzer-Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
 					}
 					create_unit = { 
-						division = "name = \"Gehenna Cavalry 3rd\" division_template = \"Gehenna Cavalry\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+						division = "name = \"3rd Gehenna Panzer-Division\" division_template = \"Gehenna Panzer-Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
 					}
 					create_unit = { 
-						division = "name = \"Gehenna Cavalry 4th\" division_template = \"Gehenna Cavalry\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+						division = "name = \"4th Gehenna Panzer-Division\" division_template = \"Gehenna Panzer-Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
 					}
 				}
             }
@@ -4382,9 +4548,10 @@ focus_tree = {
             add_ideas = GEH_west_army_focus_idea
         }
 	}
+
     focus = {
 		id = GEH_west_DNVP_focus_3
-		icon = GFX_focus_SOV_restore_cossack_units
+		icon = GFX_goal_GEH_prefect_team_charge_gray
 		cost = 5
 		x = -0
 		y = 3
@@ -4413,6 +4580,11 @@ focus_tree = {
             #add_to_variable = { GEH_RU_army_sub_unit_halo_infantry_defence_factor = 0.05 }
             add_to_variable = { GEH_RU_army_org_factor = 0.05 }
             add_to_variable = { GEH_RU_army_morale_factor = 0.05 }
+			
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
         }
 	}
     focus = {
@@ -4442,7 +4614,9 @@ focus_tree = {
             custom_effect_tooltip = GEH_prefect_army_focus_2_tt
             add_to_variable = { GEH_RU_conscription_factor = -0.10 }
             add_to_variable = { GEH_RU_army_defence_factor = 0.05 }
+
 			army_experience = 20
+
 			add_doctrine_cost_reduction = {
 				name = GEH_prefect_army_focus_1
 				cost_reduction = 0.5
@@ -4478,6 +4652,13 @@ focus_tree = {
             add_to_variable = { GEH_RU_conscription_factor = -0.10 }
             add_to_variable = { GEH_RU_experience_loss_factor = -0.1 }
             add_to_variable = { GEH_RU_army_attack_factor = 0.05 }
+			
+			add_doctrine_cost_reduction = {
+				name = GER_form_the_jagdwaffe
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
         }
 	}
     focus = {
@@ -4506,6 +4687,7 @@ focus_tree = {
             custom_effect_tooltip = GEH_prefect_army_focus_3_tt
             add_to_variable = { GEH_RU_army_morale_factor = 0.10 }
             add_to_variable = { GEH_RU_conscription_factor = -0.10 }
+
 			add_doctrine_cost_reduction = {
 				name = GEH_prefect_army_focus_3
 				cost_reduction = 0.5
@@ -4651,6 +4833,12 @@ focus_tree = {
 					add_ideas = GEM_ethnic_hatred_idea_2
 				}
 			}
+			
+			add_to_variable = {
+				geh_discipline_var = 5
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
 		}
 	}
     focus = {
@@ -4783,6 +4971,12 @@ focus_tree = {
 		completion_reward = {
             add_one_random_military_factory = yes
             add_one_random_military_factory = yes
+			
+			add_to_variable = {
+				geh_discipline_var = 5
+				tooltip = geh_discipline_system_tt
+			}
+			geh_discipline_system_setting_effect = yes
 		}
 	}
     focus = {

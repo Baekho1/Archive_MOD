@@ -290,6 +290,7 @@
  GEH_Army_focus_2_desc: "멋지게 다져진 게헨나 자치구의 넓은 도로에서 헬멧단을 상대로 시가전만을 벌이면 되었던 아름다웠던 시절은 끝났습니다. 이제 선도부는 산에서, 언덕에서, 숲에서, 평야에서의 교전을 염두에 두고 움직여야만 합니다. 전직 SRT 소속 졸업생 등을 초빙해 다양한 지형에서의 싸움을 고려한 전술 교본을 만들 필요가 있습니다."
 
  GEH_DNVP_focus_3: "[GEH_DNVP_focus_3_text]"
+ GEH_DNVP_focus_3_desc: "우리는 전쟁의 교훈을 통하여 실행부에 대한 개혁을 진행할 것입니다."
 
  GEH_DNVP_focus_3_1: "실행부 확대"
  GEH_DNVP_focus_3_1_desc: "실행부는 우리 게헨나의 국방부이며, 이번 전쟁을 통해 실행부가 더 크고 막대한 규모를 가져야 한다는 것이 드러났습니다. 더 많은 실행부원들을 모집하고 그 규모를 확대시킨다면 미래의 안보 위기를 해소할 수 있을 것입니다."
@@ -313,12 +314,17 @@
  GEH_Army_focus_6_desc: "선도부는 대전이 이후 지속적으로 도이칠란트 현지인들과 거리를 두어 왔습니다. 하지만 만마전과의 전쟁을 통해 키보토스계가 게헨나의 소수 인구가 된 지금, 더 많은 현지인 인력의 모집 없이는 게헨나를 방어할 수 있는 국방력을 갖추는 것이 불가능하다는 결론이 내려졌습니다."
 
  GEH_west_army_focus_2: "새로운 병과의 활용"
+ GEH_west_army_focus_2_desc: "게헨나 통일 전쟁에서 최후까지 맞서 싸우다 우리 군에게 완파된 만마전의 전차 토라마루는 선도부 임원들에게 큰 인상을 남겼습니다. 기갑사단은 미래 선도부를 이끌 새로운 병과이며 아무리 비용이 비싸다고 하더라도 투자할 만한 가치가 있습니다."
 
  GEH_west_army_focus_3: "실행부와 기획부 갈등 중재"
  GEH_west_army_focus_3_desc: "대전이 이후 사실상의 국방부 역할을 맡은 실행부와, 행정과 경제를 담당하는 기술관료 조직인 기획부는 사실 그렇게 사이가 좋지 않습니다. 두 조직의 리더인 이오리와 아코 두 사람의 개인적 관계와 무관하게, 조직간의 파벌 갈등은 효율적인 군 예산 배정을 어렵게 만듭니다. 파벌 갈등을 완전히 없앨 수는 없겠지만, 적어도 '완화'시키도록 노력하는 건 가능할 것입니다."
 
- GEH_west_DNVP_focus_3: "\"적응\""
- GEH_Army_focus_7: "전장의 여왕"
+ GEH_west_DNVP_focus_3: "학원 안의 사관학교"
+ GEH_west_DNVP_focus_3_desc: "대전이 이후 우리는 새로운 전장에서 어떻게 병사들을 통솔해야 하는지 깨달았으며, 선도부 실행부 일반 사병들을 위한 적응 훈련 과정을 새롭게 창설했습니다. 병사 하나하나를 정예로 만들 수는 없겠지만, 그들이 한 사람 몫을 하도록 도울 수는 있겠죠!"
+
+ GEH_Army_focus_7: "게헨나의 새로운 군대"
+ GEH_Army_focus_7_desc: "게헨나의 깃발을 올리고, 선도부가 다가왔음을 적에게 알립시다! 우리의 군사적인 발전은 지금까지 그 어떤 게헨나의 지도자들도 이루지 못했던 업적입니다. 게헨나 선도부라는 존재는 주변 국가들을 공포에 떨게 하는 이름으로 역사에 남을 것입니다."
+
  dldhfl_flag: "$BA_news.52.t$"
  #챕터 4
  
@@ -561,7 +567,7 @@
  GEH_chinatsu_focus_1_tt: "$GEH_CH$$MODIFIER_CONSCRIPTION_FACTOR$: §G+5.00%§!\n$MODIFIER_MOBILIZATION_SPEED$: §G+10.00%§!\n\n"
  GEH_chinatsu_focus_4_tt: "$GEH_CH$$MODIFIER_CONSCRIPTION_FACTOR$: §G+5.00%§!\n\n"
  GEH_chinatsu_focus_5_tt: "$GEH_CH$$MODIFIER_ARMY_ORG_REGAIN$: §G+10.00%§!\n\n"
- GEH_west_army_focus_2_ttt: "§Y4개 기병사단§!이 §Y[ROOT.Capital.GetName]§!에서 창설됩니다."
+ GEH_west_army_focus_2_ttt: "§Y4개 기갑사단§!이 §Y[ROOT.Capital.GetName]§!에서 창설됩니다."
 
 
  GEH_decision_cost_ie_250:0 "£infantry_equipment_text_icon  §Y250§!"
