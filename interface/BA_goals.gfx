@@ -1769,6 +1769,40 @@ spriteTypes = {
 		name = "GFX_goal_HEU_unwelcome_school"
 		textureFile = "gfx/interface/goals/HEU/HEU_unwelcome_school.dds"
 	}
+	### 선도부 중점 ###
+	spriteType = {
+		name = "GFX_goal_GEH_economic_reactivation"
+		textureFile = "gfx/interface/goals/GEH/GEH_economic_reactivation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_prefect_team_army_training"
+		textureFile = "gfx/interface/goals/GEH/GEH_prefect_team_army_training.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_prefect_team_charge"
+		textureFile = "gfx/interface/goals/GEH/GEH_prefect_team_charge.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_prefect_team_charge_gray"
+		textureFile = "gfx/interface/goals/GEH/GEH_prefect_team_charge_gray.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_GEH_remove_nsdap"
+		textureFile = "gfx/interface/goals/GEH/GEH_remove_nsdap.dds"
+	}	
+	spriteType = {
+		name = "GFX_goal_GEH_remove_wehrmacht"
+		textureFile = "gfx/interface/goals/GEH/GEH_remove_wehrmacht.dds"
+	}	
+	spriteType = {
+		name = "GFX_goal_GEH_remove_wehrmacht_plan_a"
+		textureFile = "gfx/interface/goals/GEH/GEH_remove_wehrmacht_plan_a.dds"
+	}	
+	spriteType = {
+		name = "GFX_goal_GEH_remove_wehrmacht_plan_b"
+		textureFile = "gfx/interface/goals/GEH/GEH_remove_wehrmacht_plan_b.dds"
+	}	
+	### 산해경 중점 ###
 	SpriteType = { 	
 		name = "GFX_goal_SHA_KISAKI"
 		texturefile = "gfx/interface/goals/SHA/키사키.tga"  
