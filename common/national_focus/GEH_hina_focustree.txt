@@ -893,7 +893,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_Nuremberg_Wehrmacht
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_goal_GEH_remove_wehrmacht_plan_b
 		cost = 2
 		available = {
 		}
@@ -912,7 +912,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_Regensburg_Wehrmacht
-		icon = GFX_focus_generic_conspiracy
+		icon = GFX_goal_GEH_remove_wehrmacht_plan_a
 		cost = 2
 		available = {
 		}
@@ -931,7 +931,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_focus_111111
-		icon = GFX_focus_SOV_penal_battalions
+		icon = GFX_goal_GEH_remove_nsdap
 		cost = 2
 		available = {
 		}
@@ -1280,7 +1280,7 @@ focus_tree = {
 	focus = {
 		id = GEH_attack_plan_ONE_FOUR_TWO
         text = GEH_no_more_Heer
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_goal_GEH_prefect_team_charge_gray
 		cost = 3
 		available = {
 			is_subject = no
@@ -1891,7 +1891,7 @@ focus_tree = {
     }
     focus = {
         id = GEH_prefect_team_fanaticism
-        icon = GFX_focus_generic_workers
+        icon = GFX_goal_GEH_prefect_team_charge_gray
         relative_position_id = GEH_hina_route_focus
         x = 0
         y = 3
@@ -3261,7 +3261,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_HID_trinity
-		icon = GFX_focus_SWI_embrace_rote_drei
+		icon = GFX_goal_HEU_don_arancino_2 
 		cost = 5
 		x = -1
 		y = 2
@@ -3293,7 +3293,7 @@ focus_tree = {
     focus = {
 		id = GEH_HID_millennium
         text = SOV_swap_to_political_advisors
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SWI_embrace_rote_drei
 		cost = 5
 		x = 1
 		y = 2
@@ -3364,7 +3364,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GEH_hit_wehrmacht
-		icon = GFX_focus_attack_germany
+		icon = GFX_goal_GEH_remove_wehrmacht
 		cost = 3
 		available = {
 			has_completed_focus = GEH_Regensburg_Wehrmacht
@@ -3438,7 +3438,7 @@ focus_tree = {
 	focus = {
 		id = GEH_hit_wehrmacht_2
         #text = GEM_dissolution_of_state_government
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_goal_GEH_remove_nsdap
 		cost = 3
 		available = {
             custom_trigger_tooltip = {
@@ -3512,7 +3512,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_approve_plan
-		icon = GFX_focus_ITA_devaluate_the_lire
+		icon = GFX_goal_GEH_economic_reactivation
 		cost = 5
 		x = 0
 		y = 1
@@ -3977,7 +3977,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_look_to_the_west
-		icon = GFX_focus_ger_return_of_the_kaiser
+		icon = GFX_goal_HEU_gehenna
 		cost = 5
 		x = -5
 		y = 1
@@ -4267,7 +4267,7 @@ focus_tree = {
     focus = {
 		id = GEH_west_army_focus_1
         text = GEH_Army_focus_6
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_GEH_prefect_team_army_training
 		cost = 5
 		x = 0
 		y = 1
@@ -4586,7 +4586,7 @@ focus_tree = {
     focus = {
 		id = GEH_war_focus_1
         text = GEM_defend_gehenna
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_war_with_gehenna
 		cost = 5
 		x = 2
 		y = 1
@@ -4656,7 +4656,7 @@ focus_tree = {
     focus = {
 		id = GEH_war_focus_6
         text = GEM_march_of_the_demons
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_TRM_invasion_of_devils
 		cost = 5
 		x = 0
 		y = 2
@@ -4695,7 +4695,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_war_focus_7
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_shutup
 		cost = 2
 		x = 3
 		y = 1
@@ -4861,7 +4861,7 @@ focus_tree = {
 	}
     focus = {
 		id = GEH_war_focus_2
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_lock_the_news
 		cost = 3
 		x = 1
 		y = 1
@@ -5070,24 +5070,25 @@ focus_tree = {
 			}
 		}
 	}
-    focus = {
-		id = GEH_chinatsu_focus_5
-		icon = GFX_goal_GEH_gooho
-		cost = 5
-        x = 0
-        y = 1
-        relative_position_id = GEH_chinatsu_focus_2
-		ai_will_do = { base = 1 }
-        available = {
-            
-        }
-        prerequisite = {
-            focus = GEH_chinatsu_focus_2
-        }
-		completion_reward = {
-            custom_effect_tooltip = GEH_chinatsu_focus_5_tt
-		}
-	}
+	# 아무 효과 없는 공갈중점이잖아요...
+    #focus = {
+	#	id = GEH_chinatsu_focus_5
+	#	icon = GFX_goal_GEH_gooho
+	#	cost = 5
+    #    x = 0
+    #    y = 1
+    #    relative_position_id = GEH_chinatsu_focus_2
+	#	ai_will_do = { base = 1 }
+    #    available = {
+    #        
+    #    }
+    #    prerequisite = {
+    #        focus = GEH_chinatsu_focus_2
+    #    }
+	#	completion_reward = {
+    #        custom_effect_tooltip = GEH_chinatsu_focus_5_tt
+	#	}
+	#}
     focus = {
 		id = GEH_chinatsu_focus_4
 		icon = GFX_focus_generic_women_in_military
