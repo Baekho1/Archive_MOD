@@ -435,12 +435,13 @@ focus_tree = {
 			#중점 통과 조건
 		}
 		available = {
-			SHA = {
-				any_controlled_state = {
-					any_neighbor_state = {
-						is_controlled_by = ABY
-					}
+			any_state = {
+				OR = {
+					state = 9
+					state = 75
+					state = 72
 				}
+				is_controlled_by = SHA
 			}
 			#중점 선행조건
 		}

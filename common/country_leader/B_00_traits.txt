@@ -976,9 +976,9 @@ leader_traits = {
 	}
  	ABY_trait_dog = { #"맹견"
 		random = no
-		war_support_factor = 0.10
-		stability_factor = -0.1
-		conscription = 0.02
+		party_popularity_stability_factor = 0.2
+		army_core_defence_factor = 0.1
+		army_attack_factor = 0.05
 	}
  	ABY_trait_resistance = { #"저항운동가"
 		random = no
@@ -1000,8 +1000,7 @@ leader_traits = {
 	}
  	ABY_trait_abydos_leader = { #"아비도스 학생대표"
 		random = no
-		stability_factor = 0.05
-		war_support_factor = 0.05
+		war_support_factor = 0.1
 		conscription = 0.01
 	}
  	ABY_trait_eotlqk = { #"아량넓은 신사"
@@ -1167,12 +1166,9 @@ leader_traits = {
 	}
  	ABY_trait_deplomacy = { #"외무장관"
 		random = no
-		improve_relations_maintain_cost_factor = -0.25
-		trade_opinion_factor = 0.10
-		democratic_acceptance = 20
-		communism_acceptance = 20
-		fascism_acceptance = 20
-		neutrality_acceptance = 20
+		improve_relations_maintain_cost_factor = -0.5
+		stability_factor = 0.1
+		political_power_factor = 0.1
 	}
  	ABY_trait_hard_government = { #"혼란스러운 정부"
 		random = no
