@@ -917,9 +917,8 @@ GEH_discipline_system_category = {
 					}
 				}
 			}
+			activate_mission = GEH_discipline_system_weak_discipline
 		}
-
-		activate_mission = GEH_discipline_system_weak_discipline
 	}
 
 	GEH_discipline_system_attack_nazi = {
