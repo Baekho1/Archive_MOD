@@ -2507,6 +2507,18 @@ country_event = { #엄습하는 반혁명
 			hidden_effect={remove_ideas = { RED_democratic_resistancel_idea RED_democratic_resistancel_week_idea RED_academic_regime_dominance_idea RED_military_government_idea_1 RED_military_government_idea_2 RED_military_government_idea_3 RED_military_government_idea_4 RED_military_government_idea_exit }}
 			set_cosmetic_tag = RE2_antirevolution
 		}
+		hidden_effect = {
+			RE1 = {
+				add_ideas = RED_doomed_army_idea
+			}
+			RE2 = {
+				add_ideas = RED_doomed_army_idea
+			}
+			RE3 = {
+				add_ideas = RED_doomed_army_idea
+			}
+		}
+		
 		swap_ideas = {
 			remove_idea = RED_office_ss_idea
 			add_idea = RED_office_ss_sabo_idea
@@ -2571,7 +2583,6 @@ country_event = { #진압된 오슬로 봉기
 	fire_only_once = yes
 	option = {
 		name = RED_minori_event.6.a
-		add_war_support = 0.05
 		110 = {
 			damage_building = {
 				type = infrastructure
@@ -2580,7 +2591,13 @@ country_event = { #진압된 오슬로 봉기
 		}
 		add_days_mission_timeout = {
 			mission = RED_aproaching_anti_revolution
-			days = 30
+			days = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = RED_minori_event.32
+				days = 10
+			}
 		}
 	}
 }
@@ -3368,6 +3385,27 @@ country_event = { #미노리 은퇴
 				}
 			}
 		}
+	}
+}
+country_event = { #통일전선
+	id = RED_minori_event.32
+	title = RED_minori_event.32.t
+	desc = RED_minori_event.32.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_ANZAC_day
+	option = { #굿
+		name = RED_minori_event.32.a
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = RED_minori_bop
+			value = 0.1
+		}
+		add_ideas = RED_anti_cherino_popular_front
 	}
 }
 
