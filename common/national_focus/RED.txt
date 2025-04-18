@@ -10744,6 +10744,7 @@ focus_tree = {
 			focus = RED_our_leader_cherino
 		}
 		cancelable = no
+		cancel_if_invalid = no
 		ai_will_do = {
 			base = 100
 		}
@@ -10789,7 +10790,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			date < 1936.2.15
+			date < 1936.1.5
 		}
 		completion_reward = {
 			country_event = {
