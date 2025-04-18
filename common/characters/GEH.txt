@@ -312,6 +312,9 @@ characters={
 					original_tag = HEU 
                 }
 			}
+			available = {
+				NOT = { has_country_flag = GEH_ako_route_bad_ending_flag }
+			}
 			traits = {
 				air_tactical_bombing_2
 			}
@@ -336,12 +339,13 @@ characters={
 					limit = { tag = GEM }
 					has_completed_focus = GEH_top_and_bottom_clothes
 				}
+				NOT = { has_country_flag = GEH_ako_route_bad_ending_flag }
 			}
 			traits = {
 				GEH_paranoia_ako
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 24.000
 			}
 		}
 
@@ -452,7 +456,8 @@ characters={
 		name=GEH_richard_strauss
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
+				large="gfx/leaders/GEH/GEH_richard_strauss.dds"
+				small="gfx/interface/advisors/GEH/GEH_richard_strauss.dds"
 			}
 		}
 
