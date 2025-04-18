@@ -6714,6 +6714,10 @@ focus_tree = {
 	continuous_focus_position = { x = 0 y = 2300 }
 
 	
+	shared_focus = TRN_Luftwaffe
+	shared_focus = TRN_research_rifle
+
+	
 	focus = {
 		id = TRN_control_tea_party
 		icon = GFX_focus_TRN_control_tea_party
@@ -6882,7 +6886,7 @@ focus_tree = {
 				BA_ban_communism_effect = yes
 				BA_ban_neutrality_effect = yes
 
-				country_event = { id = trinity.23 days = 150 } # 내부 및 외부 국경 통제 법령
+				country_event = { id = trinity.35 days = 120 }
 				country_event = { id = trnfla.12 days = 365 } # 세이아 음모론
 			}
 		}
@@ -6893,7 +6897,7 @@ focus_tree = {
 		icon = GFX_focus_AFG_royal_guard
 		prerequisite = { focus = TRN_Justice_Task_Force_on_leash }
 		prerequisite = { focus = TRN_necessary_revenge }
-		x = -4
+		x = -3
 		y = 2
 		relative_position_id = TRN_Mika_basic_law
 		cost = 5
@@ -6971,7 +6975,7 @@ focus_tree = {
 		text = TRM_invite_dignitary
 		icon = GFX_focus_TRN_invite_of_carl_schmitt
 		prerequisite = { focus = TRN_new_trinity_culture }
-		#prerequisite = { focus = TRN_cult_of_Mika }
+		prerequisite = { focus = TRN_cult_of_Mika }
 		x = -1
 		y = 1
 		relative_position_id = TRN_cult_of_Mika
@@ -7016,7 +7020,7 @@ focus_tree = {
 		id = TRN_alliance_of_faith
 		icon = GFX_focus_TRN_alliance_of_faith
 		prerequisite = { focus = TRN_new_trinity_culture }
-		#prerequisite = { focus = TRN_cult_of_Mika }
+		prerequisite = { focus = TRN_cult_of_Mika }
 		x = 1
 		y = 1
 		relative_position_id = TRN_cult_of_Mika
@@ -7056,11 +7060,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 소규모 동아리들의 운명
 		id = TRN_fate_of_small_club
 		icon = GFX_focus_TRN_fate_of_small_club
 		prerequisite = { focus = TRN_second_trintiy }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = TRN_second_trintiy
 		cost = 5
@@ -7076,7 +7080,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 트리니티 재산업화
 		id = TRN_improving_academy_industry
 		icon = GFX_focus_generic_low_cost_housing
 		prerequisite = { 
@@ -7112,7 +7116,7 @@ focus_tree = {
 		icon = GFX_focus_TRN_improving_academy_industry
 		prerequisite = { focus = TRN_improving_academy_industry }
 		prerequisite = { focus = TRN_second_trintiy }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = TRN_improving_academy_industry
 		cost = 5
@@ -7141,7 +7145,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 협동조합주의적 대표성을 향햐여
 		id = TRN_expanded_corporatism
 		icon = GFX_focus_BEL_christian_corporatism
 		prerequisite = { focus = TRN_ministry_of_industrial_development }
@@ -7178,9 +7182,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # 학원경제개발부 권한 강화
 		id = TRN_planned_economy
-		icon = GFX_focus_generic_central_planning
+		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = TRN_ministry_of_industrial_development }
 		x = -1
 		y = 1
@@ -7205,16 +7209,160 @@ focus_tree = {
 				TRM_industries_dynamic_local_resources_factor = 0.1
 				tooltip = local_resources_factor_tt
 			}
+		}
+	}
+
+	focus = { # 트리니티의 대의
+		id = TRN_cause_of_trinity
+		icon = GFX_focus_TRN_cause_of_trinity
+		prerequisite = { focus = TRN_second_trintiy }
+		x = 0
+		y = 2
+		relative_position_id = TRN_second_trintiy
+		cost = 5
+
+		available = {
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
 
 		}
 	}
+
+	focus = { # 키보토스의 구세주
+		id = TRN_savior_of_kivotos
+		icon = GFX_focus_TRN_savior_of_kivotos
+		prerequisite = { focus = TRN_cause_of_trinity }
+		mutually_exclusive = {
+			focus = TRN_supreme_leader
+			focus = TRN_codification_of_regime
+		}
+		x = 0
+		y = 1
+		relative_position_id = TRN_cause_of_trinity
+		cost = 5
+
+		available = {
+			OR = {
+				NOT = { country_exists = GEH }
+				NOT = { country_exists = HEU }
+			}
+			NOT = { country_exists = GEM }
+			owns_state = 55
+			OR = {
+				owns_state = 52
+				owns_state = 8
+			}
+			OR = {
+				is_power_balance_in_range = {
+					id = TRM_power_balance
+					range = TRM_bop_balanced
+				}
+				is_power_balance_in_range = {
+					id = TRM_power_balance
+					range < TRM_bop_balanced
+				}
+			}
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 정권의 성문화
+		id = TRN_codification_of_regime
+		icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = { focus = TRN_cause_of_trinity }
+		mutually_exclusive = {
+			focus = TRN_savior_of_kivotos
+			focus = TRN_supreme_leader
+		}
+		x = -2
+		y = 0
+		relative_position_id = TRN_savior_of_kivotos
+		cost = 5
+
+		available = {
+			OR = {
+				NOT = { country_exists = GEH }
+				NOT = { country_exists = HEU }
+			}
+			NOT = { country_exists = GEM }
+			owns_state = 55
+			OR = {
+				owns_state = 52
+				owns_state = 8
+			}
+			has_government = fascism
+			is_power_balance_in_range = {
+				id = TRM_power_balance
+				range < TRM_bop_balanced
+			}
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # 최고지도자
+		id = TRN_supreme_leader
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = TRN_cause_of_trinity }
+		mutually_exclusive = {
+			focus = TRN_savior_of_kivotos
+			focus = TRN_codification_of_regime
+		}
+		x = 2
+		y = 0
+		relative_position_id = TRN_savior_of_kivotos
+		cost = 5
+
+		available = {
+			OR = {
+				NOT = { country_exists = GEH }
+				NOT = { country_exists = HEU }
+			}
+			NOT = { country_exists = GEM }
+			owns_state = 55
+			OR = {
+				owns_state = 52
+				owns_state = 8
+			}
+			is_power_balance_in_range = {
+				id = TRM_power_balance
+				range > TRM_bop_balanced
+			}
+		}
+
+		ai_will_do = {
+
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_country_leader_trait = TRM_Misono_the_tyrant
+
+		}
+	}
+
+	
 	
 
 	focus = {
 		id = TRN_bring_in_vigilantes
-		icon = GFX_focus_AUS_frontmiliz_focus
+		icon = GFX_focus_TRN_Suzumi
 		#prerequisite = { focus = TRN_control_tea_party }
-		x = 17
+		x = 13
 		y = 1
 		cost = 5
 
@@ -7261,20 +7409,47 @@ focus_tree = {
 		id = TRN_fight_with_junker
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		#prerequisite = { focus = TRN_bring_in_vigilantes }
-		x = 4
+		x = 5
 		y = 0
 		relative_position_id = TRN_bring_in_vigilantes
 		cost = 2
 
 		available = {
 			has_full_control_of_state = 68
+			has_full_control_of_state = 63
 		}
 
 		ai_will_do = {
 
 		}
 		completion_reward = {
-			68 = { add_building_construction = { type = infrastructure level = 1 } } #오스트마르크
+			63 = { #힌터포메른
+				BA_increase_state_category_by_one_level = yes
+			}
+			if = {
+				limit = { 
+					63 = { infrastructure < 5 }  # 힌터포메른
+				}
+				63 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					68 = { infrastructure < 5 }  # 오스트마르크
+				}
+				68 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -7285,7 +7460,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TRN_fight_with_junker
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -7307,7 +7482,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TRN_fight_with_junker
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -7447,12 +7622,17 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_air_radar } }
+				complete_special_project = sp:sp_air_radar
+			}
 			add_tech_bonus = {
 				name = TRN_Reconnect_network_and_power
 				bonus = 0.5
 				uses = 2
 				category = electronics
 			}
+
 		}
 	}
 
@@ -8211,9 +8391,21 @@ focus_tree = {
 		prerequisite = {
 			#focus = TRM_localization
 		}
-		relative_position_id = TRN_kickstart_the_civilian_industry
-		x = -9
-		y = 0
+		#relative_position_id = TRN_kickstart_the_civilian_industry
+		x = 11
+		y = 1
+		offset = {
+			trigger = { has_completed_focus = TRM_newfocus_7 }
+			x = 3
+		}
+		offset = {
+			trigger = { has_completed_focus = TRN_nagisa_gyehek }
+			x = 1
+		}
+		offset = {
+			trigger = { has_focus_tree = Trinity_focus }
+			y = 8
+		}
         ai_will_do = {
 		    factor = 2
 		    modifier = {
@@ -8943,9 +9135,21 @@ focus_tree = {
 			#focus = TRM_localization 
 		}
 
-		x = -20
-		y = 0
-		relative_position_id = TRN_kickstart_the_civilian_industry
+		x = 0
+		y = 1
+		offset = {
+			trigger = { has_completed_focus = TRM_newfocus_7 }
+			x = 3
+		}
+		offset = {
+			trigger = { has_completed_focus = TRN_nagisa_gyehek }
+			x = 1
+		}
+		offset = {
+			trigger = { has_focus_tree = Trinity_focus }
+			y = 8
+		}
+		#relative_position_id = TRN_kickstart_the_civilian_industry
 		cost = 5.00
 		completion_reward = {
 			add_tech_bonus = {
@@ -9413,7 +9617,7 @@ focus_tree = {
 			}
             custom_effect_tooltip = tooltip_white_line
 	        every_army_leader = {
-	    		limit = { skill < 3 }
+	    		limit = { skill < 4 }
     		    random_select_amount = 4
 		    	add_skill_level = 1
 	    		add_attack = 1
