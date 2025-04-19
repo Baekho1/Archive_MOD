@@ -1238,7 +1238,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}
@@ -1292,7 +1292,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}
@@ -1346,7 +1346,7 @@ GEH_military_power_category = {
 		
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 			}
 		}
 	}

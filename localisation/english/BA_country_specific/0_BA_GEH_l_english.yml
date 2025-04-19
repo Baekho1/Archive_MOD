@@ -373,6 +373,37 @@
  GEH_war_focus_9: "트리니티 공세 계획"
  GEH_war_focus_9_desc: "우리는 [TRM.GetLeader]의 군대를 패퇴시키고 적의 심장부로 칼을 꽂을 준비를 마쳤습니다. 게헨나의 영광을 위하여 공세를 실시합시다. [ROOT.GetLeader] 만세! 게헨나의 자유가 영원히 사그라지지 않도록 하기를!"
 
+ # 해군 개혁
+ GEH_prefect_team_navy: "게헨나 해상경찰 군사화"
+ GEH_prefect_team_navy_desc: "선도부는 내륙국에서 해안가를 접한 해양국가로 발돋움하였으며, 지금까지 단순히 강과 호수를 지키던 해상경찰에 불과했던 게헨나 선도부의 해양 병력을 조직화된 '군대화'하기 위한 첫 번째 기획이 시작되었습니다."
+ 
+ GEH_prefect_team_navy_marine: "해병대"
+ GEH_prefect_team_navy_marine_desc: "바다 건너에 있는 적을 타격하기 위하여, 현지인들을 중심으로 소규모의 해병대를 양성하기 위한 논의가 진행되었습니다. 우리는 가장 위험한 시기 [GEI.GetName]와(과) 같은 키보토스의 적을 상대로 단호한 국제적 조치를 취할 수 있을 것입니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee: "실행부 해군과"
+ GEH_prefect_team_navy_disciplinary_committee_desc: "선도부 해상경찰이 군대화되면서 이들이 독립적인 부서가 되어야 하는지에 대한 논의가 진행되었습니다. 게헨나 해군의 규모가 크지 않을 것으로 판단되는 지금, 우리는 해군을 별도의 조직으로 구분짓지 않은 채 기존에 존재하던 실행부의 하위 '해군과' 소속으로 편입할 것입니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_transport: "튜브를 넘어서"
+ GEH_prefect_team_navy_disciplinary_committee_transport_desc: "선도부는 대전이 이전에도 바닷가에서 사용하기 위한 특수 튜브를 이용하고 있었습니다만... 이제 더 이상 튜브만으로 바다에 둥둥 떠서 선도부원들을 운송할 수는 없게 되었습니다. 수송선의 충원은 우리가 조금 더 먼곳으로 나아갈 수 있도록 하는 원동력이 될 것입니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_submarine: "안전한 접근법"
+ GEH_prefect_team_navy_disciplinary_committee_submarine_desc: "대전이 이전의 해양 훈련 시간, 소라사키 히나 부장이 전투수영을 위해 바다에 힘차게 뛰어들었다 그대로 가라앉는 모습을 보면서 선도부는 아무리 강한 힘을 가진 자도 대양 밑바닥의 힘을 이길 수 없다는 것을 알게 되었습니다. 히나 부장을 딱히 모욕하려는 의미는 아니었지만, 실행부는 그 때의 경험을 토대로 '바다 밑의 힘'을 우리가 더 적극적으로 활용할 필요가 있다고 주장하고 있습니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_destroyer: "연안해군"
+ GEH_prefect_team_navy_disciplinary_committee_destroyer_desc: "게헨나 선도부의 활동은 어디까지나 지상에서만 이루어졌습니다. 실행부에는 바다에 대해 깊이 아는 전문가가 없으며, 우리의 해군이 연안해군 이상으로 벗어나기 쉽지 않으리라는 현실을 받아들여야 합니다. 가장 작고 저렴한 소형 구축함을 만들어낸다 하더라도, 당장 그 구축함을 몰 장교들을 교육할 기관조차 전무한 상태이니까요. 우리는 작은 구축함들을 몇 척 정도 만들어낼 수 있겠지만, 그 이상을 기대하지는 않을 것입니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_defense: "해안 방어"
+ GEH_prefect_team_navy_disciplinary_committee_defense_desc: "솔직하게 말해서, 우리 실행부가 운용하는 해군이 다른 해군을 상대로 이길 수 있으리라고 자신할 수 있는 사람은 없습니다. 오디세이아 학원의 관광용 크루즈선과 해전을 벌여도 우리 구축함이 먼저 격침당할 것이 분명하거든요. [ROOT.GetLeader]의 동의를 얻어, 우리는 해전에서 결국 패배할 것을 가정하고, 적의 상륙을 거부하기 위한 해상요새 건설에 집중하기로 결정했습니다."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_officer: "전직 발키리 해상경찰 영입"
+ GEH_prefect_team_navy_disciplinary_committee_officer_desc: "우리들 중 배를 몰아본 적 있는 사람? 아니, 하츠 오브 키보토스 인가 하는 재미 없는 그 밀레니엄 게임에서 조종해본 건 예외로 두고 말이야. 그래. 아무도 없지? 발키리 경찰학교에서 교관을 모집해 오는 게 유일한 대안이야. 돈을 좀 많이 줘야 하겠지만... 게임 콘솔로밖에 배를 몰아본 적 없는 너희보다야 낫겠지."
+ 
+ GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD: "발키리 BD 구매"
+ GEH_prefect_team_navy_disciplinary_committee_valkyrie_BD_desc: "우리에게 정상적인 해군 교리를 운용할 능력이 없는 만큼, 발키리 해양경찰이 교육용으로 사용하던 BD를 구매해 그들을 똑같이 따라하는 것이 제격일 것입니다. 물론 해양경찰의 교육 프로그램인 만큼, 대규모 해전에는 알맞지 않겠지만요."
+ 
+ GEH_prefect_team_independent_navy: "게헨나 크릭스마리네"
+ GEH_prefect_team_independent_navy_desc: "겁쟁이들은 우리 게헨나가 해군을 양성한 적이 없으며 그렇기 때문에 대양해군을 만드는 것이 공상되었다고 말합니다. 하지만 위대한 영도자인 소라사키 히나 부장께서 이끄시는 게헨나가 연안해군 따위를 운용하는 것은 부끄러울 뿐만이 아니라 [ROOT.GetLeader]에 대한 모욕이기까지 합니다. 위대한 조국에게는 위대한 해군이 필요하며, 겁 많은 반대파들은 팔다리가 묶여 북해 바다로 던져질 것입니다."
+
 #챕터5
  GEH_three_congress_focus: "제4차 선도부 총회"
  GEH_three_congress_focus_desc: "파도가 휩쓴 자리에는 두 발을 딛고 서있는 선도부와 게헨나가 남아있었으며, 어느새 키보토스에서의 하루가 까마득히 먼 옛날이 되었습니다.\n수많은 선도부원들이 제4차 선도부 총회를 개최해야 한다며 목소리를 높히고 있습니다. 그리고 이 총회에서 우리들의 미래가 정해질 것입니다."
