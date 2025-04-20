@@ -383,3 +383,4 @@ if = {
 country_event = { id = GEH.flavor_event.2 days = 10 }
 country_event = { id = GEH.flavor_event.5 days = 40 }
 country_event = { id = GEH.flavor_event.10 days = 110 }
+country_event = { id = GEH.flavor_event.23 days = 440 random_days = 40 }

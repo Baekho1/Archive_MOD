@@ -2352,6 +2352,7 @@ focus_tree = {
 
 			hidden_effect = {
 				country_event = { id = GEH.event.1 }
+				country_event = { id = GEH.flavor_event.14 days = 30 random_days = 30 }
 			}
 		}
 		ai_will_do = {
@@ -7091,6 +7092,142 @@ focus = {
 }
 
 # 해군 중점 끝/
+# /공군 중점 시작
+
+focus = {
+	id = GEH_prefect_team_luftwaffe
+	icon = GFX_focus_GER_airforce
+	cost = 5
+
+	x = 11
+	y = 0
+
+	relative_position_id = GEH_prefect_team_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
+
+	available = {
+		has_completed_focus = GEH_second_congress_focus
+	}
+
+	completion_reward = {
+		air_experience = 25
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_doctrine_cost_reduction = {
+			name = GEH_prefect_team_luftwaffe
+			uses = 2
+			cost_reduction = 0.5
+			category = air_doctrine
+		}
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_luftwaffe_primitive_helicopter
+	icon = GFX_focus_generic_air_research_boost
+	cost = 5
+
+	x = -2
+	y = 1
+
+	relative_position_id = GEH_prefect_team_luftwaffe
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_luftwaffe
+	}
+
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+
+	completion_reward = {
+		air_experience = 20
+		complete_special_project = {
+			project = sp:sp_air_helicopter
+		}
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_luftwaffe_true_helicopter
+	icon = GFX_goal_Helicopter
+	cost = 5
+
+	x = 0
+	y = 2
+
+	relative_position_id = GEH_prefect_team_luftwaffe_primitive_helicopter
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+
+	available = {
+		has_completed_focus = GEH_first_congress_focus
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_luftwaffe
+	}
+
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+
+	completion_reward = {
+		complete_special_project = {
+			project = sp:BA_sp_air_helicopter
+		}
+		division_template = {
+			name = "Gehenna Helicopter Regiment"
+			priority = 1
+			division_names_group = GEH_INF_01
+			is_locked = no
+
+			regiments = {
+				attack_heli = { x = 0 y = 0 }
+				attack_heli = { x = 0 y = 1 }
+				attack_heli = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+		}
+	}
+}
+
+# 공군 중점 끝/
 # /히나 독재 최종장 시작
     focus = {
 		id = GEH_last_focus_effect_h_rout

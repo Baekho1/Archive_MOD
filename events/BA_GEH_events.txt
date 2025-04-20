@@ -1544,6 +1544,24 @@ country_event = { # 선도부는 뭐 하는 거야?!
 	}
 }
 
+country_event = { # 리쿠하치마 아루의 정신 질환 치료
+	id = GEH.flavor_event.13
+	title = GEH.flavor_event.13.t
+	desc = GEH.flavor_event.13.desc
+	picture = GFX_report_event_aru_rikuhachima_dress
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.13.a 
+		HEU_aru = {
+			add_trait = {
+				trait = trait_cautious
+			}
+		}
+	}
+}
+
 country_event = { # 아마우 아코, 만취 상태의 전화
 	id = GEH.flavor_event.14
 	title = GEH.flavor_event.14.t
@@ -1597,6 +1615,43 @@ unit_leader_event = { #정보부 조사 - 협력적 현지인
 			ideology = fascism
 			popularity = 0.04
 		}
+	}
+}
+
+country_event = { # 게헨나-밀레니엄 야구 친선경기
+	id = GEH.flavor_event.23
+	title = GEH.flavor_event.23.t
+	desc = GEH.flavor_event.23.desc
+	picture = GFX_report_event_generic_city
+
+	trigger = {
+		NOT = { has_war_with = MIL }
+		country_exists = MIL
+	}
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.23.a 
+		hidden_effect = {
+			MIL = { country_event = { id = GEH.flavor_event.24 } }
+		}
+
+		add_political_power = 5
+	}
+}
+
+country_event = { # 게헨나-밀레니엄 야구 친선경기
+	id = GEH.flavor_event.24
+	title = GEH.flavor_event.23.t
+	desc = GEH.flavor_event.23.desc
+	picture = GFX_report_event_generic_city
+
+    is_triggered_only = yes
+	
+	option = { 
+		name = GEH.flavor_event.24.a 
+
 	}
 }
 
@@ -2124,7 +2179,12 @@ country_event = { #선도부장 직속 흥신소 68
 
 	option = { 
 		name = GEH.event.1002.a
-
+		if = {
+			limit = {
+				has_global_flag = HEU_com_route_flag
+			}
+			country_event = { id = GEH.flavor_event.13 days = 14 }
+		}
 	}
 }
 
