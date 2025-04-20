@@ -374,8 +374,8 @@
  GEH_war_focus_9_desc: "우리는 [TRM.GetLeader]의 군대를 패퇴시키고 적의 심장부로 칼을 꽂을 준비를 마쳤습니다. 게헨나의 영광을 위하여 공세를 실시합시다. [ROOT.GetLeader] 만세! 게헨나의 자유가 영원히 사그라지지 않도록 하기를!"
 
  # 해군 개혁
- GEH_prefect_team_navy: "게헨나 해상경찰 군사화"
- GEH_prefect_team_navy_desc: "선도부는 내륙국에서 해안가를 접한 해양국가로 발돋움하였으며, 지금까지 단순히 강과 호수를 지키던 해상경찰에 불과했던 게헨나 선도부의 해양 병력을 조직화된 '군대화'하기 위한 첫 번째 기획이 시작되었습니다."
+ GEH_prefect_team_navy: "게헨나 해상선도부 군사화"
+ GEH_prefect_team_navy_desc: "선도부는 내륙국에서 해안가를 접한 해양국가로 발돋움하였으며, 지금까지 단순히 강과 호수를 지키던 경비대에 불과했던 선도부 해양 병력을 조직화된 '군대화'하기 위한 첫 번째 기획이 시작되었습니다."
  
  GEH_prefect_team_navy_marine: "해병대"
  GEH_prefect_team_navy_marine_desc: "바다 건너에 있는 적을 타격하기 위하여, 현지인들을 중심으로 소규모의 해병대를 양성하기 위한 논의가 진행되었습니다. 우리는 가장 위험한 시기 [GEI.GetName]와(과) 같은 키보토스의 적을 상대로 단호한 국제적 조치를 취할 수 있을 것입니다."
@@ -403,6 +403,24 @@
  
  GEH_prefect_team_independent_navy: "게헨나 크릭스마리네"
  GEH_prefect_team_independent_navy_desc: "겁쟁이들은 우리 게헨나가 해군을 양성한 적이 없으며 그렇기 때문에 대양해군을 만드는 것이 공상되었다고 말합니다. 하지만 위대한 영도자인 소라사키 히나 부장께서 이끄시는 게헨나가 연안해군 따위를 운용하는 것은 부끄러울 뿐만이 아니라 [ROOT.GetLeader]에 대한 모욕이기까지 합니다. 위대한 조국에게는 위대한 해군이 필요하며, 겁 많은 반대파들은 팔다리가 묶여 북해 바다로 던져질 것입니다."
+ 
+ GEH_prefect_team_independent_navy_carrier: "소라사키급 항공모함"
+ GEH_prefect_team_independent_navy_carrier_desc: "우리는 현지인들에 비해 더 발전한 기술을 가지고 있으며, 그렇기 때문에 웅장한 전함이 장기적으로 '어떤' 결말을 맞는지도 알고 있습니다. 가장 합리적인 대양해군의 시작은 항모전단에서부터 시작되어야 합니다. 그리고 위대한 게헨나의 어머니이신 소라사키 히나의 이름을 딴 소라사키급 항공모함의 건조 계획이 승인되었습니다."
+ 
+ GEH_prefect_team_independent_navy_navalized_aircraft: "함재기 계획"
+ GEH_prefect_team_independent_navy_navalized_aircraft_desc: "우리는 더 발전한 함재기 기술의 도입을 통하여 게헨나의 항공모함들이 더욱 멀리 진출할 수 있도록 할 것입니다."
+ 
+ GEH_prefect_team_independent_navy_destroyer: "함대 확장"
+ GEH_prefect_team_independent_navy_destroyer_desc: "우리가 대양해군을 구축하기까지 주변 국가들은 영원히 기다려주지 않을 것입니다. 막대한 예산을 투자하더라도, 우리는 빠른 속도로 함대를 확장해야만 합니다."
+ 
+ GEH_prefect_team_independent_navy_dockyard: "게헨나 조선소 지구"
+ GEH_prefect_team_independent_navy_dockyard_desc: "우리의 위대한 함대는 더욱 많은 예산을 필요로 합니다! 가능한 가장 크고 위대한 조선소 지구가 우리 해안 도시들에 건설될 것입니다."
+ 
+ GEH_prefect_team_independent_navy_german_officer: "도이치식 장교 훈련"
+ GEH_prefect_team_independent_navy_german_officer_desc: "게헨나 영토 내에 거주하는 도이치 해군 장교들의 도움을 받아, 우리 게헨나의 새로운 해군을 이끌 젊고 유능한 장교를 육성해 낼 필요가 있습니다."
+ 
+ GEH_prefect_team_independent_navy_oil: "기적의 원유"
+ GEH_prefect_team_independent_navy_oil_desc: "대양해군은 막대한 원유를 필요로 합니다. 하지만 이 도이칠란트 땅에서는 석유를 채굴할 수 없습니다. 적절한 외국에서 원유를 수입하는 것도 합리적인 방법이지만, 전시 상황을 가정했을 때 원유 수입에 타격이 생길 가능성이 있습니다. 이것이 우리가 합성 원유 산업에 투자해야 할 합리적인 이유입니다."
 
 #챕터5
  GEH_three_congress_focus: "제4차 선도부 총회"

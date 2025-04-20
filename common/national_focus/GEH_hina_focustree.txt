@@ -6659,7 +6659,7 @@ focus = {
 	id = GEH_prefect_team_independent_navy
 	icon = GFX_focus_generic_navy_battleship2
 	cost = 3
-	x = 4
+	x = 5
 	y = 1
 
 	relative_position_id = GEH_prefect_team_navy
@@ -6711,6 +6711,381 @@ focus = {
 				level = 2
 				instant_build = yes
 			}
+		}
+		
+		add_doctrine_cost_reduction = {
+			name = GEH_prefect_team_independent_navy
+			cost_reduction = 0.25
+			uses = 2
+			category = cat_base_strike
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				set_technology = {
+					trade_interdiction = 0
+					base_strike = 1
+				}
+			}
+		}
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_independent_navy_oil
+	icon = GFX_focus_generic_stockpile_fuel
+	cost = 5
+	x = -1
+	y = 1
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+	
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+
+	available = {
+		
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy
+	}
+
+	completion_reward = {
+		add_political_power = -50
+
+		add_one_random_synthetic_refinery = yes
+		add_one_random_synthetic_refinery = yes
+		add_one_random_synthetic_refinery = yes
+
+		add_one_random_fuel_silo = yes
+		add_one_random_fuel_silo = yes
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_independent_navy_carrier
+	icon = GFX_focus_GER_graf_zeppelin
+	cost = 5
+	x = 1
+	y = 1
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+	
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+	available = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy
+	}
+
+	completion_reward = {
+		add_political_power = -50
+		navy_experience = 15
+		add_tech_bonus = {
+			name = GEH_prefect_team_independent_navy_carrier
+			bonus = 1.0
+			uses = 1
+			category = cv_tech
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_tech = early_ship_hull_carrier }
+			}
+			set_technology = { early_ship_hull_carrier = 1 }
+		}
+
+		if = {
+			limit = {
+				NOT = { has_tech = basic_ship_hull_carrier }
+			}
+			set_technology = { basic_ship_hull_carrier = 1 }
+		}
+
+		#Equipment Variant
+		create_equipment_variant = {
+			name = "Sorasaki Class"
+			type = ship_hull_carrier_1
+			name_group = GER_CV_HISTORICAL
+			parent_version = 0
+			allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				front_1_custom_slot = ship_deck_space
+			}
+			design_team = mio:GEK_deutsche_werke_organization
+		}
+		#Line Production
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_1
+				creator = "GEH"
+				version_name = "Sorasaki Class"
+			}
+			name = "Hina"
+			requested_factories = 2
+			progress = 0.45
+			amount = 1
+		}
+			
+		random_owned_controlled_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_coastal = yes
+			}
+			prioritize = { 58 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		if = {
+			limit = { controls_state = 58 }
+			mio:GEK_deutsche_werke_organization = {
+				add_mio_size = 1
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_independent_navy_navalized_aircraft
+	icon = GFX_focus_generic_air_carrier
+	cost = 5
+	x = 0
+	y = 2
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+	
+	search_filters = {FOCUS_FILTER_RESEARCH}
+
+	available = {
+		
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy_carrier
+	}
+
+	completion_reward = {
+		navy_experience = 25
+		air_experience = 25
+		add_tech_bonus = {
+			name = GEH_prefect_team_independent_navy_navalized_aircraft
+			bonus = 1
+			uses = 2
+			category = cv_tech
+			category = naval_air
+		}
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_independent_navy_destroyer
+	icon = GFX_goal_generic_navy_cruiser
+	cost = 5
+	x = 2
+	y = 2
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+ 
+	search_filters = { }
+
+	available = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy_carrier
+	}
+
+	completion_reward = {
+		create_equipment_variant = {
+			name = "Judgment Class"
+			type = ship_hull_light_1
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_2
+				mid_1_custom_slot = ship_mine_layer_1
+				rear_1_custom_slot = ship_depth_charge_2
+			}
+		}
+
+		create_ship = { name = "01-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+		create_ship = { name = "02-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+		create_ship = { name = "03-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+		create_ship = { name = "04-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+		create_ship = { name = "05-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+		create_ship = { name = "06-Prefect Team" type = ship_hull_light_1 equipment_variant = "Judgment Class" creator = GEH }
+
+		add_political_power =  -100
+	}
+}
+
+focus = {
+	id = GEH_prefect_team_independent_navy_dockyard
+	icon = GFX_goal_generic_construct_naval_dockyard
+	cost = 5
+	x = -2
+	y = 2
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+ 
+	search_filters = { }
+
+	available = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy_carrier
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy_oil
+	}
+
+	completion_reward = {
+		add_one_random_dockyard = yes
+		add_one_random_dockyard = yes
+		add_one_random_dockyard = yes
+		add_one_random_dockyard = yes
+
+		add_political_power =  -100
+	}
+}
+
+
+focus = {
+	id = GEH_prefect_team_independent_navy_german_officer
+	icon = GFX_focus_GER_seeherrschaft
+	cost = 5
+	x = -1
+	y = 3
+	
+	relative_position_id = GEH_prefect_team_independent_navy
+
+	ai_will_do = { 
+		base = 1
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
+		}
+	}
+
+	available = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+	}
+
+	prerequisite = {
+		focus = GEH_prefect_team_independent_navy_oil
+	}
+
+	search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+	completion_reward = {
+		create_navy_leader = {
+			skill = 3
+			female = yes
+			traits = { bold air_controller }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
 		}
 	}
 }
